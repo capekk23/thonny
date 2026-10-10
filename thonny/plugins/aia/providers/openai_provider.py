@@ -57,9 +57,11 @@ class OpenAIProvider(LLMProvider):
         return "OpenAI"
 
     def get_default_model(self) -> str:
-        return "gpt-4o-mini"
+        # Cheapest current model, enough for a mentor (Jakub, 2026-10-10: "definitely not 4o mini").
+        # Chat Completions and streaming are supported (model page, read 2026-10-10).
+        return "gpt-6-luna"
 
     def get_available_models(self) -> List[str]:
-        # Per developers.openai.com/api/docs/models (2026-09). gpt-4.1-nano is
-        # scheduled for shutdown on 2026-10-23, so it is no longer offered.
-        return ["gpt-4o-mini", "gpt-6-luna", "gpt-6-sol", "gpt-4.1-mini"]
+        # Per developers.openai.com/api/docs/models (read 2026-10-10): Luna is the efficient
+        # model, 6.1 Sol the balanced one (20x Luna's price), Astra the most capable.
+        return ["gpt-6-luna", "gpt-6.1-sol", "gpt-6-astra"]

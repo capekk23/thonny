@@ -58,15 +58,13 @@ class GeminiProvider(LLMProvider):
         return "Google Gemini"
 
     def get_default_model(self) -> str:
-        # Alias that Google moves to the newest Flash release, so the default
-        # does not go stale again (gemini-2.0-flash is shut down).
-        return "gemini-flash-latest"
+        # Google's recommendation for new projects is 3.5 Flash-Lite or 3.8 Flash, with a pinned
+        # stable ID rather than a -latest alias (ai.google.dev/gemini-api/docs/models, 2026-10-10).
+        return "gemini-3.5-flash-lite"
 
     def get_available_models(self) -> List[str]:
-        # Per ai.google.dev/gemini-api/docs/models (2026-09).
+        # Per ai.google.dev/gemini-api/docs/models (read 2026-10-10), stable models only.
         return [
-            "gemini-flash-latest",
-            "gemini-3.8-flash",
-            "gemini-3.5-flash",
             "gemini-3.5-flash-lite",
+            "gemini-3.8-flash",
         ]

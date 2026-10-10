@@ -555,35 +555,6 @@ msgstr "Standardní"
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (jednoduché)"
 
-#: thonny/first_run.py:27
-msgid "Claude Sonnet 5.5 (API key)"
-msgstr "Claude Sonnet 5.5 (API klíč)"
-
-#: thonny/first_run.py:28
-msgid "Local model (Ollama, gpt-oss:20b)"
-msgstr "Lokální model (Ollama, gpt-oss:20b)"
-
-#: thonny/first_run.py:37
-msgid ""
-"Answers come from Claude by Anthropic. You need an API key from your "
-"teacher or from the Anthropic console. You can also enter it later in "
-"Tools > Options > AI Assistant."
-msgstr ""
-"Odpovídá Claude od firmy Anthropic. Potřebujete API klíč od učitele nebo "
-"z konzole Anthropic. Zadat ho můžete i později v Nástroje > Volby > AI "
-"asistent."
-
-#: thonny/first_run.py:45
-msgid ""
-"The model runs on this computer, without an API key and without the "
-"internet. Install Ollama and run 'ollama pull gpt-oss:20b' (13 GB). It "
-"needs about 14 GB of free RAM; without a strong graphics card an answer "
-"takes 20-70 seconds."
-msgstr ""
-"Model běží na tomto počítači, bez API klíče a bez internetu. Nainstalujte"
-" Ollamu a spusťte „ollama pull gpt-oss:20b“ (13 GB). Potřebuje asi 14 GB "
-"volné paměti RAM; bez výkonné grafické karty trvá odpověď 20–70 sekund."
-
 #: thonny/first_run.py:84
 msgid "Language:"
 msgstr "Jazyk:"
@@ -2428,3 +2399,42 @@ msgstr "nalezena chyba"
 msgid "cancelled"
 msgstr "zrušeno"
 
+#: thonny/first_run.py
+msgid "Local model (Ollama, %s)"
+msgstr "Lokální model (Ollama, %s)"
+
+#: thonny/first_run.py
+msgid "I will set it up later"
+msgstr "Nastavím později"
+
+#: thonny/first_run.py
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
+msgstr "Odpovědi poskytuje %s. Potřebujete API klíč: vytvořte si ho na odkazu níže, nebo vám ho dá vyučující. Zadat ho můžete i později v Nástroje > Možnosti > AI asistent."
+
+#: thonny/first_run.py
+msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
+msgstr "Ollama na tomto počítači nebyla nalezena. Nainstalujte ji z odkazu níže, pak v příkazovém řádku spusťte „ollama pull %s“ (13 GB) a klikněte na Zkontrolovat znovu."
+
+#: thonny/first_run.py
+msgid "Ollama is installed, but it is not running. Start it, then click Check again."
+msgstr "Ollama je nainstalovaná, ale neběží. Spusťte ji a klikněte na Zkontrolovat znovu."
+
+#: thonny/first_run.py
+msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
+msgstr "Ollama běží, ale model ještě není stažený. V příkazovém řádku spusťte „ollama pull %s“ (13 GB) a klikněte na Zkontrolovat znovu."
+
+#: thonny/first_run.py
+msgid "Ollama is running and the model %s is downloaded."
+msgstr "Ollama běží a model %s je stažený."
+
+#: thonny/first_run.py
+msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
+msgstr "Model běží na tomto počítači, bez API klíče a bez internetu. Potřebuje asi 14 GB volné paměti RAM; bez výkonné grafické karty trvá odpověď 20–70 sekund."
+
+#: thonny/first_run.py
+msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
+msgstr "AIA zůstane zapnutá, ale odpovídat začne, až v Nástroje > Možnosti > AI asistent vyberete poskytovatele."
+
+#: thonny/first_run.py
+msgid "Check again"
+msgstr "Zkontrolovat znovu"

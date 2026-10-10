@@ -2066,3 +2066,42 @@ msgstr ""
 msgid "Open system shell..."
 msgstr ""
 
+#: thonny/first_run.py
+msgid "Local model (Ollama, %s)"
+msgstr ""
+
+#: thonny/first_run.py
+msgid "I will set it up later"
+msgstr ""
+
+#: thonny/first_run.py
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
+msgstr ""
+
+#: thonny/first_run.py
+msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
+msgstr ""
+
+#: thonny/first_run.py
+msgid "Ollama is installed, but it is not running. Start it, then click Check again."
+msgstr ""
+
+#: thonny/first_run.py
+msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
+msgstr ""
+
+#: thonny/first_run.py
+msgid "Ollama is running and the model %s is downloaded."
+msgstr ""
+
+#: thonny/first_run.py
+msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
+msgstr ""
+
+#: thonny/first_run.py
+msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
+msgstr ""
+
+#: thonny/first_run.py
+msgid "Check again"
+msgstr ""

@@ -56,7 +56,7 @@ API_KEY_ENV_VARS = {
 }
 
 API_KEY_URLS = {
-    "anthropic": "https://console.anthropic.com/settings/keys",
+    "anthropic": "https://platform.claude.com/settings/keys",  # console.anthropic.com redirects here
     "gemini": "https://aistudio.google.com/apikey",
     "openai": "https://platform.openai.com/api-keys",
 }
@@ -71,6 +71,7 @@ RETIRED_MODELS = {
     "gemini-2.5-flash-preview-05-20",
     "gemini-2.5-pro-preview-05-06",
     "gpt-4.1-nano",  # shutdown 2026-10-23
+    "gpt-4o-mini",  # no longer offered, too weak for a mentor (Jakub, 2026-10-10)
 }
 
 # Limits that keep requests (and student bills) bounded

@@ -1,5 +1,8 @@
+import json
 import os.path
+import shutil
 import tkinter as tk
+import urllib.request
 import webbrowser
 from tkinter import ttk
 
@@ -12,9 +15,58 @@ DEFAULT_LANGUAGE_CODE = "cs_CZ"
 STD_MODE = "standard"
 RPI_MODE = "rpi"
 
-# AI Assistant (thonny.plugins.aia): what the welcome dialog offers, as provider ids
-AI_CLOUD = "anthropic"
+# AI Assistant (thonny.plugins.aia): what the welcome dialog offers, as provider ids.
+# "later" keeps AIA on with the default provider and no key; the panel then asks for one.
+AI_CLOUD = ("anthropic", "openai", "gemini")
 AI_LOCAL = "ollama"
+AI_LATER = "later"
+AI_DEFAULT = "anthropic"
+COMPANY = {"anthropic": "Anthropic", "openai": "OpenAI", "gemini": "Google"}
+
+OLLAMA_URL = "https://ollama.com/download"
+OLLAMA_API = "http://127.0.0.1:11434"
+OLLAMA_TIMEOUT = 1.5  # seconds, the check runs on the UI thread
+
+
+def _default_models():
+    """Provider id -> default model, taken from the AIA providers (one place to change it)."""
+    from thonny.plugins.aia.providers.anthropic_provider import AnthropicProvider
+    from thonny.plugins.aia.providers.gemini_provider import GeminiProvider
+    from thonny.plugins.aia.providers.ollama_provider import OllamaProvider
+    from thonny.plugins.aia.providers.openai_provider import OpenAIProvider
+
+    none = lambda: None
+    return {
+        "anthropic": AnthropicProvider(get_api_key=none).get_default_model(),
+        "openai": OpenAIProvider(get_api_key=none).get_default_model(),
+        "gemini": GeminiProvider(get_api_key=none).get_default_model(),
+        "ollama": OllamaProvider().get_default_model(),
+    }
+
+
+def _key_urls():
+    from thonny.plugins.aia._common import API_KEY_URLS
+
+    return API_KEY_URLS
+
+
+def ollama_state(model):
+    """'missing' (not installed), 'stopped' (installed, server not answering),
+    'no_model' (running, model not downloaded) or 'ready'."""
+    exe = shutil.which("ollama") or os.path.exists(
+        os.path.join(os.environ.get("LOCALAPPDATA", ""), "Programs", "Ollama", "ollama.exe")
+    )
+    # no proxy: a school proxy from the Windows registry answers 127.0.0.1 with 503
+    opener = urllib.request.build_opener(urllib.request.ProxyHandler({}))
+    try:
+        with opener.open(OLLAMA_API + "/api/tags", timeout=OLLAMA_TIMEOUT) as resp:
+            tags = json.loads(resp.read().decode("utf-8"))
+    except Exception:
+        return "stopped" if exe else "missing"
+    names = set()
+    for m in tags.get("models", []):
+        names.update({m.get("name"), m.get("model")})
+    return "ready" if model in names else "no_model"
 
 
 def _mode_labels():
@@ -22,29 +74,58 @@ def _mode_labels():
     return {STD_MODE: tr("Standard"), RPI_MODE: tr("Raspberry Pi (simple)")}
 
 
-def _ai_labels():
-    return {
-        AI_CLOUD: tr("Claude Sonnet 5.5 (API key)"),
-        AI_LOCAL: tr("Local model (Ollama, gpt-oss:20b)"),
-    }
-
-CLOUD_KEY_URL = "https://console.anthropic.com/settings/keys"
-LOCAL_URL = "https://ollama.com/download"
+# Readable names of the default models; an ID not listed here is shown as it is
+MODEL_NAMES = {
+    "claude-sonnet-5-5": "Claude Sonnet 5.5",
+    "gpt-6-luna": "GPT-6 Luna",
+    "gemini-3.5-flash-lite": "Gemini 3.5 Flash-Lite",
+}
 
 
-def _cloud_note():
+def _ai_labels(models):
+    labels = {p: "%s (%s)" % (COMPANY[p], MODEL_NAMES.get(models[p], models[p])) for p in AI_CLOUD}
+    labels[AI_LOCAL] = tr("Local model (Ollama, %s)") % models[AI_LOCAL]
+    labels[AI_LATER] = tr("I will set it up later")
+    return labels
+
+
+def _cloud_note(provider):
     return tr(
-        "Answers come from Claude by Anthropic. You need an API key from your teacher "
-        "or from the Anthropic console. You can also enter it later in "
-        "Tools > Options > AI Assistant."
+        "Answers come from %s. You need an API key: create it at the link below, or get one "
+        "from your teacher. You can also enter it later in Tools > Options > AI Assistant."
+    ) % COMPANY[provider]
+
+
+def _local_note(state, model):
+    if state == "missing":
+        text = tr(
+            "Ollama was not found on this computer. Install it from the link below, then run "
+            "'ollama pull %s' in a command prompt (13 GB) and click Check again."
+        ) % model
+    elif state == "stopped":
+        text = tr("Ollama is installed, but it is not running. Start it, then click Check again.")
+    elif state == "no_model":
+        text = tr(
+            "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a "
+            "command prompt (13 GB), then click Check again."
+        ) % model
+    else:
+        text = tr("Ollama is running and the model %s is downloaded.") % model
+    return (
+        text
+        + " "
+        + tr(
+            "The model runs on this computer, without an API key and without the internet. "
+            "It needs about 14 GB of free RAM; without a strong graphics card an answer takes "
+            "20-70 seconds."
+        )
     )
 
 
-def _local_note():
+def _later_note():
     return tr(
-        "The model runs on this computer, without an API key and without the internet. "
-        "Install Ollama and run 'ollama pull gpt-oss:20b' (13 GB). It needs about 14 GB "
-        "of free RAM; without a strong graphics card an answer takes 20-70 seconds."
+        "AIA stays switched on, but it will answer only after you choose a provider in "
+        "Tools > Options > AI Assistant."
     )
 
 
@@ -57,6 +138,9 @@ class FirstRunWindow(tk.Tk):
         self.ok = False
 
         self.conf = configuration_manager
+        self.models = _default_models()
+        self.key_urls = _key_urls()
+        self.ollama = None  # last ollama_state(), checked when the local model is chosen
 
         self.main_frame = ttk.Frame(self)
         self.main_frame.grid(row=1, column=1, sticky="nsew")
@@ -67,6 +151,7 @@ class FirstRunWindow(tk.Tk):
 
         logo_file = os.path.join(os.path.dirname(__file__), "res", "thonny.png")
         self.logo = tk.PhotoImage(file=logo_file)
+        self.iconphoto(True, self.logo)  # not the Tk feather in the title bar
 
         logo_label = ttk.Label(self.main_frame, image=self.logo)
         logo_label.grid(row=1, rowspan=6, column=1, sticky="nsew")
@@ -93,14 +178,14 @@ class FirstRunWindow(tk.Tk):
         )
         self.mode_combo.bind("<<ComboboxSelected>>", self.on_change_mode, True)
 
-        self.ai = AI_CLOUD
+        self.ai = AI_DEFAULT
         self.ai_variable = tk.StringVar()
         self.ai_combo = self.add_combo(
             3, lambda: tr("AI assistant:"), self.ai_variable, [], self._update_ai_values
         )
         self.ai_combo.bind("<<ComboboxSelected>>", self.on_change_ai, True)
 
-        self.ai_note = ttk.Label(self.main_frame, wraplength=380, justify="left")
+        self.ai_note = ttk.Label(self.main_frame, wraplength=400, justify="left")
         self.ai_note.grid(row=4, column=2, columnspan=2, sticky="nw", padx=(0, self.padx), pady=(7, 0))
 
         self.key_frame = ttk.Frame(self.main_frame)
@@ -109,12 +194,16 @@ class FirstRunWindow(tk.Tk):
         key_label.grid(row=1, column=1, sticky="w")
         self._translatable.append((key_label, lambda: tr("API key:")))
         self.key_variable = tk.StringVar(value="")
-        key_entry = ttk.Entry(self.key_frame, textvariable=self.key_variable, show="*", width=32)
+        key_entry = ttk.Entry(self.key_frame, textvariable=self.key_variable, show="*", width=36)
         key_entry.grid(row=1, column=2, sticky="w", padx=(10, 0))
 
-        self._link_url = CLOUD_KEY_URL
+        self.check_button = ttk.Button(self.main_frame, command=self.on_check_ollama)
+        self.check_button.grid(row=5, column=2, columnspan=2, sticky="nw", pady=(7, 0))
+        self._translatable.append((self.check_button, lambda: tr("Check again")))
+
+        self._link_url = ""
         self.link = ui_utils.create_action_label(
-            self.main_frame, CLOUD_KEY_URL, lambda e: webbrowser.open(self._link_url)
+            self.main_frame, "", lambda e: webbrowser.open(self._link_url)
         )
         self.link.grid(row=6, column=2, columnspan=2, sticky="nw", padx=(0, self.padx), pady=(3, 0))
 
@@ -137,7 +226,16 @@ class FirstRunWindow(tk.Tk):
         self.mode = list(_mode_labels())[self.mode_combo.current()]
 
     def on_change_ai(self, event=None):
-        self.ai = list(_ai_labels())[self.ai_combo.current()]
+        new = list(_ai_labels(self.models))[self.ai_combo.current()]
+        if new != self.ai:
+            self.key_variable.set("")  # a key belongs to one provider
+        self.ai = new
+        if self.ai == AI_LOCAL and self.ollama is None:
+            self.ollama = ollama_state(self.models[AI_LOCAL])
+        self._retranslate()
+
+    def on_check_ollama(self):
+        self.ollama = ollama_state(self.models[AI_LOCAL])
         self._retranslate()
 
     def _update_mode_values(self, combo):
@@ -146,7 +244,7 @@ class FirstRunWindow(tk.Tk):
         self.mode_variable.set(labels[self.mode])
 
     def _update_ai_values(self, combo):
-        labels = _ai_labels()
+        labels = _ai_labels(self.models)
         combo.configure(values=list(labels.values()))
         self.ai_variable.set(labels[self.ai])
 
@@ -158,18 +256,32 @@ class FirstRunWindow(tk.Tk):
             else:
                 widget.configure(text=text())
 
-        if self.ai == AI_LOCAL:
-            self.ai_note.configure(text=_local_note())
-            self.key_frame.grid_remove()
-            self._set_link(LOCAL_URL)
-        else:
-            self.ai_note.configure(text=_cloud_note())
+        if self.ai in AI_CLOUD:
+            self.ai_note.configure(text=_cloud_note(self.ai))
             self.key_frame.grid()
-            self._set_link(CLOUD_KEY_URL)
+            self.check_button.grid_remove()
+            self._set_link(self.key_urls[self.ai])
+        elif self.ai == AI_LOCAL:
+            self.ai_note.configure(text=_local_note(self.ollama, self.models[AI_LOCAL]))
+            self.key_frame.grid_remove()
+            if self.ollama == "ready":
+                self.check_button.grid_remove()
+            else:
+                self.check_button.grid()
+            self._set_link(OLLAMA_URL if self.ollama in ("missing", "stopped") else "")
+        else:
+            self.ai_note.configure(text=_later_note())
+            self.key_frame.grid_remove()
+            self.check_button.grid_remove()
+            self._set_link("")
 
     def _set_link(self, url):
         self._link_url = url
         self.link.configure(text=url)
+        if url:
+            self.link.grid()
+        else:
+            self.link.grid_remove()
 
     def add_combo(self, row, label_text, variable, values, update_values=None):
         pady = 7
@@ -183,7 +295,7 @@ class FirstRunWindow(tk.Tk):
             textvariable=variable,
             state="readonly",
             height=15,
-            width=32,
+            width=36,
             values=values,
         )
         combobox.grid(row=row, column=3, padx=(10, self.padx), sticky="sw", pady=(pady, 0))
@@ -218,12 +330,13 @@ class FirstRunWindow(tk.Tk):
             "general.language", languages.get_language_code_by_name(self.language_variable.get())
         )
 
-        provider = self.ai
+        provider = AI_DEFAULT if self.ai == AI_LATER else self.ai
         self.conf.set_option("aia.enabled", True)
         self.conf.set_option("aia.provider", provider)
         key = self.key_variable.get().strip()
-        if provider == AI_CLOUD and key:
-            self.conf.set_option("aia.anthropic_api_key", key)
+        if provider in AI_CLOUD and key:
+            # Thonny 5 has no secrets store: the AIA panel reads aia.<provider>_api_key
+            self.conf.set_option("aia.%s_api_key" % provider, key)
 
         self.conf.save()
 
