@@ -54,3 +54,11 @@ def _load_panel(wb):
     wb.add_view(AIAView, tr("AI Assistant"), "ne", visible_by_default=False)
     wb.add_configuration_page("aia", tr("AI Assistant"), AIAPanelConfigPage, 81)
     install_switching_logic(wb)
+
+    # Ollama: load the model at startup so the first error explanation does not wait for it
+    from thonny.plugins.aia._common import AIACore
+    from thonny.plugins.aia.local_model import LocalModelKeeper
+
+    core = AIACore()
+    core.register_providers()
+    LocalModelKeeper(wb, core).install()

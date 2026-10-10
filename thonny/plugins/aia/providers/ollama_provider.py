@@ -13,6 +13,13 @@ LIST_TIMEOUT = 3.0
 # processing the prompt up to 40 s more (2026-10-10). REQUEST_TIMEOUT (60 s) cut it off.
 LOCAL_TIMEOUT = 300.0
 
+# How long Ollama keeps the model loaded after a request. Thonny AIA renews it while it
+# runs (thonny.plugins.aia.local_model), so the model stays loaded for the whole lesson.
+KEEP_ALIVE = "10m"
+
+# Loading gpt-oss:20b from disk took 35-55 s on CPU (2026-10-10)
+LOAD_TIMEOUT = 300.0
+
 LOCAL_HOSTS = {"localhost", "127.0.0.1", "::1", "0.0.0.0"}
 
 
@@ -62,7 +69,11 @@ class OllamaProvider(LLMProvider):
     ) -> Iterator[str]:
         api_messages = [{"role": "system", "content": system_prompt}] + list(messages)
         stream = self._client(max(REQUEST_TIMEOUT, LOCAL_TIMEOUT)).chat(
-            model=model, messages=api_messages, stream=True, think=think_setting(model)
+            model=model,
+            messages=api_messages,
+            stream=True,
+            think=think_setting(model),
+            keep_alive=KEEP_ALIVE,
         )
         try:
             for chunk in stream:
@@ -73,6 +84,15 @@ class OllamaProvider(LLMProvider):
             close = getattr(stream, "close", None)
             if close is not None:
                 close()
+
+    def preload(self, model: str) -> None:
+        """Load the model into memory (or renew its keep_alive). Blocks - worker thread only."""
+        # A request without a prompt only loads the model (Ollama API docs, "Load a model")
+        self._client(LOAD_TIMEOUT).generate(model=model, keep_alive=KEEP_ALIVE)
+
+    def unload(self, model: str, timeout: float = LIST_TIMEOUT) -> None:
+        """Free the model's memory now. Blocks."""
+        self._client(timeout).generate(model=model, keep_alive=0)
 
     def is_available(self) -> bool:
         # No key needed. Whether the server runs is found out by the request

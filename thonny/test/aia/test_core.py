@@ -194,6 +194,9 @@ def _fake_ollama(monkeypatch, chunks, closed, calls):
             calls[-1].update(kwargs)
             return FakeStream()
 
+        def generate(self, **kwargs):
+            calls[-1].update(kwargs, request="generate")
+
     monkeypatch.setitem(sys.modules, "ollama", types.SimpleNamespace(Client=FakeClient))
 
 
@@ -216,6 +219,7 @@ def test_ollama_provider_streams_and_closes_stream(fake_thonny, monkeypatch):
     assert calls[0]["think"] is False  # no silent reasoning before the first token
     assert calls[0]["messages"][0] == {"role": "system", "content": "sys"}
     assert calls[0]["client_kwargs"] == {}  # a remote server may need the proxy
+    assert calls[0]["keep_alive"] == "10m"  # every request renews the loaded model
 
 
 def test_ollama_provider_closes_stream_when_consumer_stops(fake_thonny, monkeypatch):
