@@ -2158,3 +2158,7 @@ msgstr "Ollama இயங்குகிறது, %s மாதிரி தய�
 
 msgid "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, answers in 20-70 s."
 msgstr "இணையம் இல்லாமல் இயங்குகிறது, சுமார் 14 GB காலியான RAM தேவை; சக்திவாய்ந்த கிராபிக்ஸ் அட்டை இல்லையெனில் 20-70 வினாடிகளில் பதிலளிக்கும்."
+
+#: thonny/plugins/aia/_common.py
+msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
+msgstr "இன்னும் AI வழங்குநர் தேர்ந்தெடுக்கப்படவில்லை. கருவிகள் > விருப்பங்கள் > AI உதவியாளர் என்பதில் ஒன்றைத் தேர்ந்தெடுக்கவும்."

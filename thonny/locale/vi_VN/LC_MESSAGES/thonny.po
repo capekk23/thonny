@@ -2164,3 +2164,7 @@ msgstr "Ollama đang chạy và mô hình %s đã sẵn sàng."
 
 msgid "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, answers in 20-70 s."
 msgstr "Chạy ngoại tuyến, cần khoảng 14 GB RAM trống; nếu không có card đồ họa mạnh, mỗi câu trả lời mất 20-70 giây."
+
+#: thonny/plugins/aia/_common.py
+msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
+msgstr "Chưa chọn nhà cung cấp AI. Hãy chọn một nhà cung cấp trong Công cụ > Thiết lập > Trợ lý AI."

@@ -2158,3 +2158,7 @@ msgstr "Ollama kjører, og modellen %s er klar."
 
 msgid "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, answers in 20-70 s."
 msgstr "Kjører uten internett, trenger omtrent 14 GB ledig RAM og svarer på 20–70 s uten et kraftig grafikkort."
+
+#: thonny/plugins/aia/_common.py
+msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
+msgstr "Ingen KI-leverandør er valgt ennå. Velg en under Verktøy > Alternativer > KI-assistent."

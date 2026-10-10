@@ -2160,3 +2160,7 @@ msgstr "Ollama beží a model %s je pripravený."
 
 msgid "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, answers in 20-70 s."
 msgstr "Beží bez internetu, potrebuje asi 14 GB voľnej pamäte RAM a bez výkonnej grafickej karty odpovedá za 20–70 s."
+
+#: thonny/plugins/aia/_common.py
+msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
+msgstr "Zatiaľ nie je vybraný poskytovateľ AI. Vyberte ho v Nástroje > Možnosti > AI asistent."

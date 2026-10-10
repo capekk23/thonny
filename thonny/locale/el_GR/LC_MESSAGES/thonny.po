@@ -2156,3 +2156,7 @@ msgstr "Το Ollama εκτελείται και το μοντέλο %s είνα�
 
 msgid "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, answers in 20-70 s."
 msgstr "Λειτουργεί χωρίς διαδίκτυο, χρειάζεται περίπου 14 GB ελεύθερης μνήμης RAM και, χωρίς ισχυρή κάρτα γραφικών, απαντά σε 20–70 δευτ."
+
+#: thonny/plugins/aia/_common.py
+msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
+msgstr "Δεν έχει επιλεγεί ακόμη πάροχος ΤΝ. Επιλέξτε έναν στο Εργαλεία > Επιλογές > Βοηθός ΤΝ."

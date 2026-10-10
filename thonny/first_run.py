@@ -17,11 +17,12 @@ STD_MODE = "standard"
 RPI_MODE = "rpi"
 
 # AI Assistant (thonny.plugins.aia): what the welcome dialog offers, as provider ids.
-# "later" keeps AIA on with the default provider and no key; the panel then asks for one.
+# The local model is preselected: the only choice that works and costs nothing (Jakub 2026-10-10).
+# "later" keeps AIA on and saves no provider: the choice is made later in Tools > Options.
 AI_CLOUD = ("anthropic", "openai", "gemini")
 AI_LOCAL = "ollama"
 AI_LATER = "later"
-AI_DEFAULT = "anthropic"
+AI_DEFAULT = AI_LOCAL
 COMPANY = {"anthropic": "Anthropic", "openai": "OpenAI", "gemini": "Google"}
 
 OLLAMA_URL = "https://ollama.com/download"
@@ -141,7 +142,8 @@ class FirstRunWindow(tk.Tk):
         self.conf = configuration_manager
         self.models = _default_models()
         self.key_urls = _key_urls()
-        self.ollama = None  # last ollama_state(), checked when the local model is chosen
+        # last ollama_state(); checked right away, because the local model is preselected
+        self.ollama = ollama_state(self.models[AI_LOCAL]) if AI_DEFAULT == AI_LOCAL else None
 
         self.main_frame = ttk.Frame(self)
         self.main_frame.grid(row=1, column=1, sticky="nsew")
@@ -373,13 +375,13 @@ class FirstRunWindow(tk.Tk):
             "general.language", languages.get_language_code_by_name(self.language_variable.get())
         )
 
-        provider = AI_DEFAULT if self.ai == AI_LATER else self.ai
         self.conf.set_option("aia.enabled", True)
-        self.conf.set_option("aia.provider", provider)
-        key = self.key_variable.get().strip()
-        if provider in AI_CLOUD and key:
-            # Thonny 5 has no secrets store: the AIA panel reads aia.<provider>_api_key
-            self.conf.set_option("aia.%s_api_key" % provider, key)
+        if self.ai != AI_LATER:  # "later" saves no provider: the AIA panel asks for the choice
+            self.conf.set_option("aia.provider", self.ai)
+            key = self.key_variable.get().strip()
+            if self.ai in AI_CLOUD and key:
+                # Thonny 5 has no secrets store: the AIA panel reads aia.<provider>_api_key
+                self.conf.set_option("aia.%s_api_key" % self.ai, key)
 
         self.conf.save()
 

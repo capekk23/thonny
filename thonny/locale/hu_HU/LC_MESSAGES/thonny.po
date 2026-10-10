@@ -2143,3 +2143,7 @@ msgstr "Az Ollama fut, és a(z) %s modell készen áll."
 
 msgid "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, answers in 20-70 s."
 msgstr "Internet nélkül fut, körülbelül 14 GB szabad RAM kell hozzá, és erős videokártya nélkül 20–70 másodperc alatt válaszol."
+
+#: thonny/plugins/aia/_common.py
+msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
+msgstr "Még nincs kiválasztva MI-szolgáltató. Válasszon egyet az Eszközök > Beállítások > MI-asszisztens menüpontban."

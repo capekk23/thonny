@@ -2148,3 +2148,7 @@ msgstr "Ollama працює, і модель %s готова."
 
 msgid "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, answers in 20-70 s."
 msgstr "Працює без інтернету, потребує близько 14 ГБ вільної оперативної пам’яті й без потужної відеокарти відповідає за 20–70 с."
+
+#: thonny/plugins/aia/_common.py
+msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
+msgstr "Постачальника ШІ ще не вибрано. Виберіть постачальника в Інструменти > Параметри > ШІ-асистент."

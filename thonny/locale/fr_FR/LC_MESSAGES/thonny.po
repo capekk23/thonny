@@ -2150,3 +2150,7 @@ msgstr "Ollama est lancé et le modèle %s est prêt."
 
 msgid "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, answers in 20-70 s."
 msgstr "Il fonctionne hors ligne, nécessite environ 14 Go de RAM libre et, sans carte graphique puissante, répond en 20 à 70 s."
+
+#: thonny/plugins/aia/_common.py
+msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
+msgstr "Aucun fournisseur d’IA n’a encore été choisi. Choisissez-en un dans Outils > Options > Assistant IA."

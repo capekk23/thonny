@@ -46,9 +46,10 @@ class AIAPanelConfigPage(ConfigurationPage):
         # --- Provider + API Key on same row ---
         ttk.Label(self, text=tr("LLM Provider:")).grid(row=row, column=0, sticky="w", pady=2)
 
-        # Combobox shows display names; we sync with the config var manually
+        # Combobox shows display names; we sync with the config var manually.
+        # No provider chosen yet ("I will set it up later") = empty combobox.
         self._provider_display_var = tk.StringVar(
-            value=PROVIDER_DISPLAY.get(wb.get_option("aia.provider"), "OpenAI")
+            value=PROVIDER_DISPLAY.get(wb.get_option("aia.provider"), "")
         )
         provider_combo = ttk.Combobox(
             self,
@@ -139,14 +140,15 @@ class AIAPanelConfigPage(ConfigurationPage):
 
     def _get_provider_id(self) -> str:
         """Get internal provider ID from the display combobox."""
-        return PROVIDER_NAMES.get(self._provider_display_var.get(), "openai")
+        return PROVIDER_NAMES.get(self._provider_display_var.get(), "")
 
     def _on_provider_changed(self, event=None, initial: bool = False):
         """Update UI when provider changes: sync config, show/hide API key, update models."""
         provider_id = self._get_provider_id()
 
-        # Sync display name → config variable
-        get_workbench().set_option("aia.provider", provider_id)
+        # Sync display name → config variable (opening the page chooses nothing)
+        if provider_id:
+            get_workbench().set_option("aia.provider", provider_id)
 
         # Show/hide API key button
         if provider_id in PROVIDERS_NEEDING_KEY:
@@ -189,5 +191,6 @@ class AIAPanelConfigPage(ConfigurationPage):
     def apply(self, changed_options=None):
         # 4.x/5.0 call apply() without arguments, newer Thonny passes changed_options
         # Ensure provider config is synced from display name
-        get_workbench().set_option("aia.provider", self._get_provider_id())
+        if self._get_provider_id():
+            get_workbench().set_option("aia.provider", self._get_provider_id())
         return True

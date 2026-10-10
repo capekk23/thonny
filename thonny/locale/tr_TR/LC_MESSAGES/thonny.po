@@ -2164,3 +2164,7 @@ msgstr "Ollama çalışıyor ve %s modeli hazır."
 
 msgid "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, answers in 20-70 s."
 msgstr "İnternetsiz çalışır, yaklaşık 14 GB boş RAM gerektirir ve güçlü bir ekran kartı yoksa 20-70 saniyede yanıt verir."
+
+#: thonny/plugins/aia/_common.py
+msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
+msgstr "Henüz bir AI sağlayıcısı seçilmedi. Araçlar > Seçenekler > AI Yardımcısı bölümünden bir sağlayıcı seçin."

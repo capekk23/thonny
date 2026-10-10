@@ -140,6 +140,17 @@ def test_register_providers_skips_missing_packages(fake_thonny, monkeypatch):
     assert "Reinstall Thonny AIA" in core.check_ready()
 
 
+def test_no_provider_chosen_asks_for_the_choice(fake_thonny):
+    """The welcome dialog's "I will set it up later" leaves aia.provider empty."""
+    from thonny.plugins.aia._common import AIACore
+
+    fake_thonny.options["aia.provider"] = ""
+    core = AIACore()
+    core.register_providers()
+    assert core.get_current_provider() is None
+    assert "No AI provider is chosen yet" in core.check_ready()
+
+
 def test_retired_model_falls_back_to_default(fake_thonny):
     from thonny.plugins.aia._common import AIACore
     from thonny.plugins.aia.providers.anthropic_provider import AnthropicProvider

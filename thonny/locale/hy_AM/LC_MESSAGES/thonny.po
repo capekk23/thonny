@@ -2156,3 +2156,7 @@ msgstr "Ollama֊ն աշխատում է, և %s մոդելը պատրաստ է։"
 
 msgid "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, answers in 20-70 s."
 msgstr "Աշխատում է առանց համացանցի, պահանջում է մոտ 14 GB ազատ RAM և առանց հզոր վիդեոքարտի պատասխանում է 20-70 վայրկյանում։"
+
+#: thonny/plugins/aia/_common.py
+msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
+msgstr "ԱԲ մատակարար դեռ ընտրված չէ։ Ընտրեք մատակարար Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"

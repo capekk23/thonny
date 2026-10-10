@@ -22,7 +22,9 @@ def load_plugin():
     wb = get_workbench()
 
     wb.set_default("aia.enabled", True)
-    wb.set_default("aia.provider", "anthropic")
+    # "" = not chosen yet: the welcome dialog's "I will set it up later" saves no provider
+    # (Jakub 2026-10-10), the panel then asks for the choice
+    wb.set_default("aia.provider", "")
     wb.set_default("aia.model", "")  # empty = use provider default
     wb.set_default("aia.mentoring_level", DEFAULT_STYLE)
     wb.set_default("aia.auto_attach_context", True)

@@ -2153,3 +2153,7 @@ msgstr "Ollama 正在运行，模型 %s 已就绪。"
 
 msgid "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, answers in 20-70 s."
 msgstr "离线运行，需要约 14 GB 可用内存；如果没有性能强的显卡，回答需要 20-70 秒。"
+
+#: thonny/plugins/aia/_common.py
+msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
+msgstr "尚未选择 AI 提供商。请在“工具 > 选项 > AI 助手”中选择一个。"

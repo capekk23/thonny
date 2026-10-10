@@ -2143,3 +2143,7 @@ msgstr "Ollama on käynnissä ja malli %s on valmis."
 
 msgid "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, answers in 20-70 s."
 msgstr "Toimii ilman internetiä, tarvitsee noin 14 Gt vapaata RAM-muistia ja vastaa ilman tehokasta näytönohjainta 20–70 sekunnissa."
+
+#: thonny/plugins/aia/_common.py
+msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
+msgstr "Tekoälypalveluntarjoajaa ei ole vielä valittu. Valitse se kohdassa Työkalut > Asetukset > Tekoälyavustaja."

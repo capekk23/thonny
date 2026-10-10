@@ -2158,3 +2158,7 @@ msgstr "Ollama po ekzekutohet dhe modeli %s është gati."
 
 msgid "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, answers in 20-70 s."
 msgstr "Funksionon pa internet, i duhen rreth 14 GB RAM të lirë dhe, pa një kartë grafike të fuqishme, përgjigjet për 20–70 s."
+
+#: thonny/plugins/aia/_common.py
+msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
+msgstr "Ende nuk është zgjedhur asnjë ofrues AI. Zgjidhni një te Mjete > Opsione > Asistenti AI."

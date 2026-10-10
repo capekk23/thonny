@@ -2165,3 +2165,7 @@ msgstr "Ollama martxan dago eta %s eredua prest dago."
 
 msgid "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, answers in 20-70 s."
 msgstr "Internetik gabe dabil, 14 GB inguru RAM libre behar ditu eta, txartel grafiko indartsurik gabe, 20-70 segundotan erantzuten du."
+
+#: thonny/plugins/aia/_common.py
+msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
+msgstr "Oraindik ez da AA hornitzailerik hautatu. Hautatu bat hemen: Tresnak > Aukerak > AA laguntzailea."

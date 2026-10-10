@@ -2147,3 +2147,7 @@ msgstr "Ollama veikia, o modelis %s paruoštas."
 
 msgid "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, answers in 20-70 s."
 msgstr "Veikia be interneto, reikia apie 14 GB laisvos RAM, o be galingos vaizdo plokštės atsako per 20–70 s."
+
+#: thonny/plugins/aia/_common.py
+msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
+msgstr "DI teikėjas dar nepasirinktas. Pasirinkite jį skiltyje Įrankiai > Nustatymai > DI asistentas."

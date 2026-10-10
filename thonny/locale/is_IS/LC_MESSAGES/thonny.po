@@ -2165,3 +2165,7 @@ msgstr "Ollama er í gangi og líkanið %s er tilbúið."
 
 msgid "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, answers in 20-70 s."
 msgstr "Keyrir án internets, þarf um 14 GB af lausu vinnsluminni (RAM) og svarar á 20-70 sekúndum án öflugs skjákorts."
+
+#: thonny/plugins/aia/_common.py
+msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
+msgstr "Enginn gervigreindarþjónustuaðili hefur verið valinn enn. Veldu einn í Tól > Valkostir > Gervigreindaraðstoð."

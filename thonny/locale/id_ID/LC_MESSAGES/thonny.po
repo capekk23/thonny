@@ -2155,3 +2155,7 @@ msgstr "Ollama berjalan dan model %s sudah siap."
 
 msgid "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, answers in 20-70 s."
 msgstr "Berjalan tanpa internet, memerlukan sekitar 14 GB RAM kosong dan, tanpa kartu grafis yang kuat, menjawab dalam 20-70 detik."
+
+#: thonny/plugins/aia/_common.py
+msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
+msgstr "Belum ada penyedia AI yang dipilih. Pilih penyedia di Tools > Options > Asisten AI."

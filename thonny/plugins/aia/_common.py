@@ -354,6 +354,8 @@ class AIACore:
     def check_ready(self) -> Optional[str]:
         """Return None if the current provider can be used, else a user-facing reason."""
         provider_id = self.get_current_provider_id()
+        if not provider_id:
+            return tr("No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant.")
         provider = self._providers.get(provider_id)
         if provider is None:
             if provider_id in PROVIDER_PACKAGES:
