@@ -84,8 +84,10 @@ MODEL_NAMES = {
 
 
 def _ai_labels(models):
-    labels = {p: "%s (%s)" % (COMPANY[p], MODEL_NAMES.get(models[p], models[p])) for p in AI_CLOUD}
-    labels[AI_LOCAL] = tr("Local model (Ollama, %s)") % models[AI_LOCAL]
+    # Order of the choice (Jakub 2026-10-10): local model first, providers by company name, "later" last
+    labels = {AI_LOCAL: tr("Local model (Ollama, %s)") % models[AI_LOCAL]}
+    for p in sorted(AI_CLOUD, key=lambda p: COMPANY[p].lower()):
+        labels[p] = "%s (%s)" % (COMPANY[p], MODEL_NAMES.get(models[p], models[p]))
     labels[AI_LATER] = tr("I will set it up later")
     return labels
 
