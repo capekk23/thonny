@@ -9,14 +9,21 @@ import ast
 import importlib.util
 import logging
 import os
+import re
 from typing import Dict, List, Optional
 
 from thonny import get_workbench
-from thonny.languages import tr
+from thonny.languages import LANGUAGES_DICT, tr
 
 from thonny.plugins.aia.providers.base import LLMProvider
 
 logger = logging.getLogger(__name__)
+
+
+def interface_language(code: Optional[str]) -> str:
+    """Name of Thonny's interface language for the prompt ("Čeština"), without "[BETA]" tags."""
+    name = LANGUAGES_DICT.get(code or "", "English")
+    return re.sub(r"\s*\[[^\]]*\]\s*", " ", name).strip() or "English"
 
 
 # Providers that require an API key (Ollama is local, no key needed)

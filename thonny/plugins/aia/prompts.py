@@ -124,18 +124,73 @@ def answer_style(value: str) -> str:
     return value if value in ANSWER_STYLES else DEFAULT_STYLE
 
 
+# A local model (gpt-oss:20b) follows the style prompts loosely: in the same Socratic case it
+# once guided with questions, once listed both fixes and switched to the formal "vy" (Jakub,
+# 2026-10-10: it must get a more specific prompt). It gets the rules again, concrete and at
+# the end of the prompt, where a small model weighs them most.
+LOCAL_COMMON_RULES = """\
+- Reply in {language}, also when the student's message is the automatic error report \
+("I ran my code and got this error ...") that Thonny writes in English for them.
+- Speak to the student informally, as to one person, in every sentence: in Czech tykání \
+("snažíš se", "tvůj seznam", "zkus", "napsal jsi"), never vykání ("snažíte se", "váš", \
+"zkuste", "byste"); in other languages the informal singular form as well (du, tu, ты ...).
+"""
+
+LOCAL_STYLE_RULES = {
+    "socratic": """\
+- Do NOT give the fix. No corrected code, no corrected line, no expression the student \
+should type, no list of possible fixes, and no sentence that says what to change ("you \
+should add i to the sum", "use range(len(x))"). Finding the change is the student's step.
+- First, in 2-3 short sentences, explain what happens in THEIR code and why: for an error, on \
+which line and why Python fails there; for a question, what their code does instead of what \
+they expect.
+- Then ask exactly ONE question that leads the student to find the fix themselves, and stop. \
+Nothing comes after the question.
+- No headings, no bullet points, no bold.
+
+Example of the shape only - do not reuse its wording (for NameError: name 'pritn' is not \
+defined on line 2): "On line 2 you call pritn, but Python knows no such name. Names it does \
+not know are usually typos or things that were never created. Look closely at that word: \
+which command did you want to call?"
+""",
+    "explanatory": """\
+- First explain the context (why it happened in their code), then give the fix or answer.
+- Do not ask the student any questions back.
+""",
+    "direct": """\
+- Give only the answer: a code block, or one short sentence. No explanation, no question.
+""",
+}
+
+
+def local_rules(style: str, language: str = None) -> str:
+    """Extra rules for a local model, appended at the very end of the system prompt."""
+    common = LOCAL_COMMON_RULES.format(
+        language=language or "the language of the student's own messages"
+    )
+    return (
+        "\n\nRULES THAT MATTER MOST - follow them exactly:\n"
+        + common
+        + LOCAL_STYLE_RULES[answer_style(style)]
+    )
+
+
 def build_system_prompt(
     mentoring_level: str,
     current_code: str = None,
     current_file_name: str = None,
     execution_output: str = None,
     imported_files: dict = None,
+    local: bool = False,
+    language: str = None,
 ) -> str:
     """Build the full system prompt with runtime context injected.
 
     Args:
         mentoring_level: answer style (socratic / explanatory / direct, old names accepted)
         imported_files: dict of {filename: source_code} for local imports
+        local: the answer comes from a local model, which gets the rules again (local_rules)
+        language: name of Thonny's interface language, for the local model's reply
     """
     base_prompt = ANSWER_STYLES[answer_style(mentoring_level)]
 
@@ -164,5 +219,8 @@ def build_system_prompt(
 
     if context_parts:
         base_prompt += "\n\nCURRENT CONTEXT:\n" + "\n\n".join(context_parts)
+
+    if local:
+        base_prompt += local_rules(mentoring_level, language)
 
     return base_prompt

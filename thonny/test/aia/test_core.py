@@ -80,6 +80,20 @@ def test_build_system_prompt_includes_context(fake_thonny):
     assert "a.py" in prompt and "print(x)" in prompt and "b.py" in prompt
 
 
+def test_local_model_gets_the_rules_again_at_the_end(fake_thonny):
+    from thonny.plugins.aia import prompts
+
+    cloud = prompts.build_system_prompt("socratic", current_code="print(x)", current_file_name="a.py")
+    local = prompts.build_system_prompt(
+        "socratic", current_code="print(x)", current_file_name="a.py", local=True, language="Čeština"
+    )
+    assert local.startswith(cloud)  # cloud providers get the prompt unchanged
+    tail = local[len(cloud):]
+    assert "Reply in Čeština" in tail and "tykání" in tail and "Do NOT give the fix" in tail
+    assert "Do NOT give the fix" not in prompts.build_system_prompt("explanatory", local=True)
+    assert "the language of the student's own messages" in prompts.build_system_prompt("direct", local=True)
+
+
 # --- API keys and provider registry --------------------------------------------
 
 

@@ -21,6 +21,7 @@ from thonny.languages import tr
 from thonny.plugins.aia._common import (
     AIACore,
     friendly_error,
+    interface_language,
     prepare_messages,
     snapshot_editor_context,
 )
@@ -34,6 +35,8 @@ POLL_MS = 50
 # 35-55 s and processing the prompt up to 40 s more, with nothing in the panel (Jakub 2026-10-10)
 def local_loading_text() -> str:
     return tr("Loading the local model...")
+
+
 
 
 class AIAView(ttk.Frame):
@@ -236,6 +239,8 @@ class AIAView(ttk.Frame):
             current_code=ctx["code"],
             current_file_name=ctx["file_name"],
             imported_files=ctx["imported_files"],
+            local=provider_id == "ollama",
+            language=interface_language(wb.get_option("general.language")),
         )
         api_messages = prepare_messages(self._conversation)
 
