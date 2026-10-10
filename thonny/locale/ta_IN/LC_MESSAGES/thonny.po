@@ -2162,3 +2162,11 @@ msgstr "இணையம் இல்லாமல் இயங்குகிற�
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "இன்னும் AI வழங்குநர் தேர்ந்தெடுக்கப்படவில்லை. கருவிகள் > விருப்பங்கள் > AI உதவியாளர் என்பதில் ஒன்றைத் தேர்ந்தெடுக்கவும்."
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "I ran my code and got this error: %s"
+msgstr "நான் என் குறியீட்டை இயக்கியபோது இந்தப் பிழை வந்தது: %s"
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "(line %s)"
+msgstr "(வரி %s)"

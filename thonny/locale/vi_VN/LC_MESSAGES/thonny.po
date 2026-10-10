@@ -2168,3 +2168,11 @@ msgstr "Chạy ngoại tuyến, cần khoảng 14 GB RAM trống; nếu không c
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Chưa chọn nhà cung cấp AI. Hãy chọn một nhà cung cấp trong Công cụ > Thiết lập > Trợ lý AI."
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "I ran my code and got this error: %s"
+msgstr "Tôi đã chạy mã và gặp lỗi này: %s"
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "(line %s)"
+msgstr "(dòng %s)"

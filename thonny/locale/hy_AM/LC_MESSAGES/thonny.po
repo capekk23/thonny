@@ -2160,3 +2160,11 @@ msgstr "Աշխատում է առանց համացանցի, պահանջում է
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "ԱԲ մատակարար դեռ ընտրված չէ։ Ընտրեք մատակարար Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "I ran my code and got this error: %s"
+msgstr "Գործարկեցի իմ կոդը և ստացա այս սխալը՝ %s"
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "(line %s)"
+msgstr "(տող %s)"

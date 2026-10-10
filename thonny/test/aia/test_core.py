@@ -94,6 +94,15 @@ def test_local_model_gets_the_rules_again_at_the_end(fake_thonny):
     assert "the language of the student's own messages" in prompts.build_system_prompt("direct", local=True)
 
 
+def test_every_provider_gets_the_interface_language(fake_thonny):
+    from thonny.plugins.aia import prompts
+
+    cloud = prompts.build_system_prompt("socratic", language="Čeština")
+    assert "Thonny is set to Čeština. Reply in Čeština" in cloud
+    assert "RULES THAT MATTER MOST" not in cloud  # the local rules stay local
+    assert "Thonny is set to" not in prompts.build_system_prompt("socratic")
+
+
 # --- API keys and provider registry --------------------------------------------
 
 

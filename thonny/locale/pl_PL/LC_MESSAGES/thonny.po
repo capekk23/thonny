@@ -2173,3 +2173,11 @@ msgstr "Działa bez internetu, potrzebuje około 14 GB wolnej pamięci RAM i bez
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Nie wybrano jeszcze dostawcy AI. Wybierz go w Narzędzia > Opcje > Asystent AI."
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "I ran my code and got this error: %s"
+msgstr "Po uruchomieniu kodu pojawił się ten błąd: %s"
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "(line %s)"
+msgstr "(wiersz %s)"

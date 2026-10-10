@@ -2169,3 +2169,11 @@ msgstr "オフラインで動作し、約14 GBの空きRAMが必要です。高�
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "AIプロバイダーがまだ選択されていません。ツール > オプション > AIアシスタント で選択してください。"
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "I ran my code and got this error: %s"
+msgstr "コードを実行したら、次のエラーが出ました: %s"
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "(line %s)"
+msgstr "(%s 行目)"

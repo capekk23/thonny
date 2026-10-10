@@ -2119,3 +2119,11 @@ msgstr "ഇന്റർനെറ്റ് ഇല്ലാതെ പ്രവർ�
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "ഇതുവരെ AI ദാതാവിനെ തിരഞ്ഞെടുത്തിട്ടില്ല. ഉപകരണങ്ങൾ > ഐച്ഛികങ്ങൾ > AI സഹായി എന്നതിൽ ഒന്ന് തിരഞ്ഞെടുക്കുക."
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "I ran my code and got this error: %s"
+msgstr "ഞാൻ എന്റെ കോഡ് പ്രവർത്തിപ്പിച്ചപ്പോൾ ഈ പിശക് ലഭിച്ചു: %s"
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "(line %s)"
+msgstr "(വരി %s)"

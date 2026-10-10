@@ -2147,3 +2147,11 @@ msgstr "Toimii ilman internetiä, tarvitsee noin 14 Gt vapaata RAM-muistia ja va
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Tekoälypalveluntarjoajaa ei ole vielä valittu. Valitse se kohdassa Työkalut > Asetukset > Tekoälyavustaja."
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "I ran my code and got this error: %s"
+msgstr "Suoritin koodini ja sain tämän virheen: %s"
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "(line %s)"
+msgstr "(rivi %s)"

@@ -2183,3 +2183,11 @@ msgstr "Deluje brez interneta, potrebuje približno 14 GB prostega pomnilnika RA
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Ponudnik AI še ni izbran. Izberite ga v Orodja > Opcije > Pomočnik AI."
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "I ran my code and got this error: %s"
+msgstr "Po zagonu kode se je pojavila ta napaka: %s"
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "(line %s)"
+msgstr "(vrstica %s)"

@@ -2153,3 +2153,11 @@ msgstr "Het werkt offline, heeft ongeveer 14 GB vrij RAM-geheugen nodig en antwo
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Er is nog geen AI-provider gekozen. Kies er een in Hulpmiddelen > Opties > AI-assistent."
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "I ran my code and got this error: %s"
+msgstr "Ik heb mijn code uitgevoerd en kreeg deze fout: %s"
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "(line %s)"
+msgstr "(regel %s)"

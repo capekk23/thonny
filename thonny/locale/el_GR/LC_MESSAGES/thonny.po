@@ -2160,3 +2160,11 @@ msgstr "Λειτουργεί χωρίς διαδίκτυο, χρειάζεται
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Δεν έχει επιλεγεί ακόμη πάροχος ΤΝ. Επιλέξτε έναν στο Εργαλεία > Επιλογές > Βοηθός ΤΝ."
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "I ran my code and got this error: %s"
+msgstr "Εκτέλεσα τον κώδικά μου και πήρα αυτό το σφάλμα: %s"
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "(line %s)"
+msgstr "(γραμμή %s)"

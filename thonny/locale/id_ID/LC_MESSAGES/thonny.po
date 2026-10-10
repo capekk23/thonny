@@ -2159,3 +2159,11 @@ msgstr "Berjalan tanpa internet, memerlukan sekitar 14 GB RAM kosong dan, tanpa 
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Belum ada penyedia AI yang dipilih. Pilih penyedia di Tools > Options > Asisten AI."
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "I ran my code and got this error: %s"
+msgstr "Saya menjalankan kode saya dan mendapatkan error ini: %s"
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "(line %s)"
+msgstr "(baris %s)"

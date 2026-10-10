@@ -2168,3 +2168,11 @@ msgstr "İnternetsiz çalışır, yaklaşık 14 GB boş RAM gerektirir ve güçl
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Henüz bir AI sağlayıcısı seçilmedi. Araçlar > Seçenekler > AI Yardımcısı bölümünden bir sağlayıcı seçin."
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "I ran my code and got this error: %s"
+msgstr "Kodumu çalıştırdım ve şu hatayı aldım: %s"
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "(line %s)"
+msgstr "(satır %s)"

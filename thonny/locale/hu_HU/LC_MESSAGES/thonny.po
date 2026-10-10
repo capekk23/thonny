@@ -2147,3 +2147,11 @@ msgstr "Internet nélkül fut, körülbelül 14 GB szabad RAM kell hozzá, és e
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Még nincs kiválasztva MI-szolgáltató. Válasszon egyet az Eszközök > Beállítások > MI-asszisztens menüpontban."
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "I ran my code and got this error: %s"
+msgstr "Futtattam a kódomat, és ezt a hibát kaptam: %s"
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "(line %s)"
+msgstr "(%s. sor)"

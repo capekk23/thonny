@@ -2152,3 +2152,11 @@ msgstr "Працює без інтернету, потребує близько 
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Постачальника ШІ ще не вибрано. Виберіть постачальника в Інструменти > Параметри > ШІ-асистент."
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "I ran my code and got this error: %s"
+msgstr "Після запуску коду з'явилася ця помилка: %s"
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "(line %s)"
+msgstr "(рядок %s)"

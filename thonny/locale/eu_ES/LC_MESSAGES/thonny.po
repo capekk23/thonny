@@ -2169,3 +2169,11 @@ msgstr "Internetik gabe dabil, 14 GB inguru RAM libre behar ditu eta, txartel gr
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Oraindik ez da AA hornitzailerik hautatu. Hautatu bat hemen: Tresnak > Aukerak > AA laguntzailea."
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "I ran my code and got this error: %s"
+msgstr "Nire kodea exekutatu dut eta errore hau jaso dut: %s"
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "(line %s)"
+msgstr "(%s. lerroa)"

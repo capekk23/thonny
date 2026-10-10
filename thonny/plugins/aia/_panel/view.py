@@ -166,9 +166,11 @@ class AIAView(ttk.Frame):
         message = error_info.get("message", "")
         lineno = error_info.get("lineno")
 
-        parts = [f"I ran my code and got this error: {type_name}: {message}"]
+        # In the interface language: the student sees it in the panel, and an English report
+        # made the model answer in English although Thonny was set to Czech (Jakub 2026-10-10)
+        parts = [tr("I ran my code and got this error: %s") % f"{type_name}: {message}"]
         if lineno:
-            parts.append(f"(line {lineno})")
+            parts.append(tr("(line %s)") % lineno)
 
         traceback_text = error_info.get("traceback_text", "")
         if traceback_text:

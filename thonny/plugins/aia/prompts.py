@@ -16,6 +16,15 @@ English, but that is no reason to answer in English: a student who writes in Cze
 Czech answer.
 """
 
+# Thonny's interface language, for every provider (Jakub 2026-10-10: with Czech set, the
+# automatic error report went out in English and the model answered in English). The report
+# is written by Thonny, not by the student, so it says nothing about the student's language.
+INTERFACE_LANGUAGE_RULE = """\
+LANGUAGE: the student's Thonny is set to {language}. Reply in {language}, unless the student \
+writes their own message in another language. Messages that Thonny sends for the student \
+(the automatic error report and its traceback) do not count: answer them in {language}.
+"""
+
 CONTEXT_RULES = """\
 CONTEXT AWARENESS:
 - You can see the student's current code if it's attached.
@@ -129,8 +138,7 @@ def answer_style(value: str) -> str:
 # 2026-10-10: it must get a more specific prompt). It gets the rules again, concrete and at
 # the end of the prompt, where a small model weighs them most.
 LOCAL_COMMON_RULES = """\
-- Reply in {language}, also when the student's message is the automatic error report \
-("I ran my code and got this error ...") that Thonny writes in English for them.
+- Reply in {language}, also to the automatic error report that Thonny sends for them.
 - Speak to the student informally, as to one person, in every sentence: in Czech tykání \
 ("snažíš se", "tvůj seznam", "zkus", "napsal jsi"), never vykání ("snažíte se", "váš", \
 "zkuste", "byste"); in other languages the informal singular form as well (du, tu, ты ...).
@@ -190,7 +198,7 @@ def build_system_prompt(
         mentoring_level: answer style (socratic / explanatory / direct, old names accepted)
         imported_files: dict of {filename: source_code} for local imports
         local: the answer comes from a local model, which gets the rules again (local_rules)
-        language: name of Thonny's interface language, for the local model's reply
+        language: name of Thonny's interface language, the language of the reply
     """
     base_prompt = ANSWER_STYLES[answer_style(mentoring_level)]
 
@@ -219,6 +227,9 @@ def build_system_prompt(
 
     if context_parts:
         base_prompt += "\n\nCURRENT CONTEXT:\n" + "\n\n".join(context_parts)
+
+    if language:
+        base_prompt += "\n\n" + INTERFACE_LANGUAGE_RULE.format(language=language)
 
     if local:
         base_prompt += local_rules(mentoring_level, language)

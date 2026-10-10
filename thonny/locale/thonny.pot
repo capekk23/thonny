@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-10-10 20:11+0200\n"
+"POT-Creation-Date: 2026-10-10 20:40+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2322,19 +2322,29 @@ msgstr ""
 msgid "Type a question below (Enter sends, Shift+Enter = new line)."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:211
-msgid "You (auto)"
+#: thonny/plugins/aia/_panel/view.py:171
+#, python-format
+msgid "I ran my code and got this error: %s"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:211
-msgid "You"
+#: thonny/plugins/aia/_panel/view.py:173
+#, python-format
+msgid "(line %s)"
 msgstr ""
 
 #: thonny/plugins/aia/_panel/view.py:213
+msgid "You (auto)"
+msgstr ""
+
+#: thonny/plugins/aia/_panel/view.py:213
+msgid "You"
+msgstr ""
+
+#: thonny/plugins/aia/_panel/view.py:215
 msgid "error detected"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:222 thonny/plugins/aia/_panel/view.py:281
+#: thonny/plugins/aia/_panel/view.py:224 thonny/plugins/aia/_panel/view.py:283
 msgid "cancelled"
 msgstr ""
 

@@ -2161,3 +2161,11 @@ msgstr "यह बिना इंटरनेट के चलता है, �
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "अभी तक कोई AI प्रोवाइडर नहीं चुना गया है। टूल्स > ऑप्शनस > AI असिस्टेंट में कोई प्रोवाइडर चुनें।"
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "I ran my code and got this error: %s"
+msgstr "मैंने अपना कोड रन किया और मुझे यह एरर मिला: %s"
+
+#: thonny/plugins/aia/_panel/view.py
+msgid "(line %s)"
+msgstr "(लाइन %s)"
