@@ -9,16 +9,25 @@ from thonny.languages import tr
 # Thonny AIA starts in Czech; the other languages stay one click away
 DEFAULT_LANGUAGE_CODE = "cs_CZ"
 
-STD_MODE = "Standard"
-RPI_MODE = "Raspberry Pi (simple)"
+STD_MODE = "standard"
+RPI_MODE = "rpi"
 
-# AI Assistant (thonny.plugins.aia): what the welcome dialog offers, provider id -> label
+# AI Assistant (thonny.plugins.aia): what the welcome dialog offers, as provider ids
 AI_CLOUD = "anthropic"
 AI_LOCAL = "ollama"
-AI_CHOICES = {
-    AI_CLOUD: "Claude Sonnet 5.5 (API key)",
-    AI_LOCAL: "Local model (Ollama, gpt-oss:20b)",
-}
+
+
+def _mode_labels():
+    """Choice -> label in the current language (the combos keep the choice, not the text)"""
+    return {STD_MODE: tr("Standard"), RPI_MODE: tr("Raspberry Pi (simple)")}
+
+
+def _ai_labels():
+    return {
+        AI_CLOUD: tr("Claude Sonnet 5.5 (API key)"),
+        AI_LOCAL: tr("Local model (Ollama, gpt-oss:20b)"),
+    }
+
 CLOUD_KEY_URL = "https://console.anthropic.com/settings/keys"
 LOCAL_URL = "https://ollama.com/download"
 
@@ -77,12 +86,15 @@ class FirstRunWindow(tk.Tk):
             list(languages.LANGUAGES_DICT.values()),
         )
 
-        self.mode_variable = tk.StringVar(value=STD_MODE)
+        self.mode = STD_MODE
+        self.mode_variable = tk.StringVar()
         self.mode_combo = self.add_combo(
             2, lambda: tr("Initial settings:"), self.mode_variable, [], self._update_mode_values
         )
+        self.mode_combo.bind("<<ComboboxSelected>>", self.on_change_mode, True)
 
-        self.ai_variable = tk.StringVar(value=AI_CLOUD)
+        self.ai = AI_CLOUD
+        self.ai_variable = tk.StringVar()
         self.ai_combo = self.add_combo(
             3, lambda: tr("AI assistant:"), self.ai_variable, [], self._update_ai_values
         )
@@ -121,26 +133,22 @@ class FirstRunWindow(tk.Tk):
         )
         self._retranslate()
 
+    def on_change_mode(self, event=None):
+        self.mode = list(_mode_labels())[self.mode_combo.current()]
+
     def on_change_ai(self, event=None):
+        self.ai = list(_ai_labels())[self.ai_combo.current()]
         self._retranslate()
 
-    def _ai_choice(self):
-        """Provider id of the selected AI option (the combo shows translated labels)."""
-        shown = self.ai_variable.get()
-        for provider_id, label in AI_CHOICES.items():
-            if shown in (provider_id, label, tr(label)):
-                return provider_id
-        return AI_CLOUD
-
     def _update_mode_values(self, combo):
-        mode = RPI_MODE if self.mode_variable.get() in (RPI_MODE, tr(RPI_MODE)) else STD_MODE
-        combo.configure(values=[tr(STD_MODE), tr(RPI_MODE)])
-        self.mode_variable.set(tr(mode))
+        labels = _mode_labels()
+        combo.configure(values=list(labels.values()))
+        self.mode_variable.set(labels[self.mode])
 
     def _update_ai_values(self, combo):
-        choice = self._ai_choice()
-        combo.configure(values=[tr(label) for label in AI_CHOICES.values()])
-        self.ai_variable.set(tr(AI_CHOICES[choice]))
+        labels = _ai_labels()
+        combo.configure(values=list(labels.values()))
+        self.ai_variable.set(labels[self.ai])
 
     def _retranslate(self):
         self.title(tr("Welcome to %s!") % APP_NAME + ("   [portable]" if is_portable() else ""))
@@ -150,7 +158,7 @@ class FirstRunWindow(tk.Tk):
             else:
                 widget.configure(text=text())
 
-        if self._ai_choice() == AI_LOCAL:
+        if self.ai == AI_LOCAL:
             self.ai_note.configure(text=_local_note())
             self.key_frame.grid_remove()
             self._set_link(LOCAL_URL)
@@ -201,7 +209,7 @@ class FirstRunWindow(tk.Tk):
         self.geometry("+{}+{}".format(left, top))
 
     def on_ok(self):
-        if self.mode_variable.get() in (RPI_MODE, tr(RPI_MODE)):
+        if self.mode == RPI_MODE:
             self.conf.set_option("debugger.preferred_debugger", "faster")
             self.conf.set_option("view.ui_theme", "Raspberry Pi")
             self.conf.set_option("general.ui_mode", "simple")
@@ -210,7 +218,7 @@ class FirstRunWindow(tk.Tk):
             "general.language", languages.get_language_code_by_name(self.language_variable.get())
         )
 
-        provider = self._ai_choice()
+        provider = self.ai
         self.conf.set_option("aia.enabled", True)
         self.conf.set_option("aia.provider", provider)
         key = self.key_variable.get().strip()

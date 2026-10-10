@@ -16,6 +16,7 @@ from tkinter import ttk
 from typing import Dict, List, Optional
 
 from thonny import get_workbench
+from thonny.languages import tr
 
 from thonny.plugins.aia._common import (
     AIACore,
@@ -31,7 +32,8 @@ POLL_MS = 50
 
 # Shown until the first token of a local model arrives: on CPU, loading gpt-oss:20b took
 # 35-55 s and processing the prompt up to 40 s more, with nothing in the panel (Jakub 2026-10-10)
-LOCAL_LOADING = "Loading the local model..."
+def local_loading_text() -> str:
+    return tr("Loading the local model...")
 
 
 class AIAView(ttk.Frame):
@@ -49,7 +51,7 @@ class AIAView(ttk.Frame):
         self._cancel_event: Optional[threading.Event] = None
         self._partial: List[str] = []
         self._polling = False
-        self._loading = False  # LOCAL_LOADING is in the messages area
+        self._loading = False  # local_loading_text() is in the messages area
 
         self._build_ui()
 
@@ -97,15 +99,15 @@ class AIAView(ttk.Frame):
         button_frame = ttk.Frame(input_frame)
         button_frame.grid(row=0, column=1, sticky="ns")
 
-        self._send_button = ttk.Button(button_frame, text="Send", width=7, command=self._on_send)
+        self._send_button = ttk.Button(button_frame, text=tr("Send"), width=9, command=self._on_send)
         self._send_button.pack(side="top", pady=(0, 2))
 
         self._cancel_button = ttk.Button(
-            button_frame, text="Cancel", width=7, command=self._on_cancel, state="disabled"
+            button_frame, text=tr("Cancel"), width=9, command=self._on_cancel, state="disabled"
         )
         self._cancel_button.pack(side="top", pady=(0, 2))
 
-        ttk.Button(button_frame, text="Clear", width=7, command=self.clear_conversation).pack(
+        ttk.Button(button_frame, text=tr("Clear"), width=9, command=self.clear_conversation).pack(
             side="top"
         )
 
@@ -123,8 +125,10 @@ class AIAView(ttk.Frame):
 
     def _show_welcome(self):
         self._insert(
-            "AIA - AI Mentor Assistant\n"
-            "Type a question below (Enter sends, Shift+Enter = new line).\n",
+            tr("AIA - AI Mentor Assistant")
+            + "\n"
+            + tr("Type a question below (Enter sends, Shift+Enter = new line).")
+            + "\n",
             "system_text",
         )
 
@@ -201,9 +205,9 @@ class AIAView(ttk.Frame):
 
     def _add_user_message(self, text: str, auto: bool = False):
         self._conversation.append({"role": "user", "content": text})
-        self._insert("\nYou (auto): " if auto else "\nYou: ", "user_header")
+        self._insert("\n" + (tr("You (auto)") if auto else tr("You")) + ": ", "user_header")
         if auto:
-            self._insert("(error detected) ", "auto_label")
+            self._insert("(" + tr("error detected") + ") ", "auto_label")
         self._insert(f"{text}\n")
 
     def _abort_current_request(self):
@@ -212,7 +216,7 @@ class AIAView(ttk.Frame):
             return
         self._cancel_event.set()
         self._request_id += 1  # drop its remaining events
-        self._finish(" [cancelled]")
+        self._finish(" [" + tr("cancelled") + "]")
 
     def _request_llm_response(self):
         """Collect everything on the UI thread, then stream in a worker thread."""
@@ -241,7 +245,7 @@ class AIAView(ttk.Frame):
         self._set_busy(True)
         self._insert("\nAIA: ", "assistant_header")
         if provider_id == "ollama":
-            self._insert(LOCAL_LOADING, "loading_text")
+            self._insert(local_loading_text(), "loading_text")
             self._loading = True
 
         threading.Thread(
@@ -269,7 +273,7 @@ class AIAView(ttk.Frame):
             stream = provider.stream_chat(system_prompt, api_messages, model)
             for chunk_text in stream:
                 if cancel_event.is_set():
-                    put((request_id, "done", " [cancelled]"))
+                    put((request_id, "done", " [" + tr("cancelled") + "]"))
                     return
                 put((request_id, "chunk", chunk_text))
             put((request_id, "done", ""))
@@ -314,7 +318,7 @@ class AIAView(ttk.Frame):
             self._polling = False
 
     def _hide_loading(self):
-        """Remove LOCAL_LOADING once the answer (or an error, or Cancel) takes its place."""
+        """Remove the loading note once the answer (or an error, or Cancel) takes its place."""
         if not getattr(self, "_loading", False):
             return
         self._loading = False

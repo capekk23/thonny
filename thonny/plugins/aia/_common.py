@@ -12,6 +12,7 @@ import os
 from typing import Dict, List, Optional
 
 from thonny import get_workbench
+from thonny.languages import tr
 
 from thonny.plugins.aia.providers.base import LLMProvider
 
@@ -90,12 +91,11 @@ def package_installed(import_name: str) -> bool:
 
 
 def install_hint(provider_id: str) -> str:
-    return (
-        f"The '{provider_id}' provider needs the Python package "
-        f"'{PROVIDER_PACKAGES.get(provider_id, provider_id)}'.\n"
-        f"Install it with: pip install thonny-aia[{provider_id}] "
-        "(or via Tools > Manage plug-ins), then restart Thonny."
-    )
+    # Thonny AIA bundles every provider's package, so this means a broken installation
+    return tr(
+        "The '%s' provider needs the Python package '%s', which is missing. "
+        "Reinstall Thonny AIA."
+    ) % (provider_display_name(provider_id), PROVIDER_PACKAGES.get(provider_id, provider_id))
 
 
 def find_local_imports(file_path: str, source_code: str) -> Optional[Dict[str, str]]:
@@ -217,23 +217,27 @@ def friendly_error(exc: BaseException, provider_id: str = "", model: str = "") -
     if isinstance(exc, ImportError):
         return install_hint(provider_id)
     if status in (401, 403) or "Authentication" in name or "PermissionDenied" in name:
-        return (
+        return tr(
             "The API key was rejected. Check it in Tools > Options > AI Assistant "
             "(Set API Key...)."
         )
     if status == 404 or "NotFound" in name:
-        return (
-            f"Model '{model}' was not found or is no longer available. "
+        return tr(
+            "Model '%s' was not found or is no longer available. "
             "Choose another model in Tools > Options > AI Assistant."
-        )
+        ) % model
     if status == 429 or "RateLimit" in name:
-        return "Too many requests or the account's quota is used up. Wait a moment and try again."
+        return tr(
+            "Too many requests or the account's quota is used up. Wait a moment and try again."
+        )
     if "Timeout" in name:
-        return "The AI service did not answer in time. Try again."
+        return tr("The AI service did not answer in time. Try again.")
     if "Connect" in name or isinstance(exc, OSError):
         if provider_id == "ollama":
-            return "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
-        return "Cannot connect to the AI service. Check the internet connection."
+            return tr(
+                "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
+            )
+        return tr("Cannot connect to the AI service. Check the internet connection.")
 
     text = str(exc).strip() or name
     if len(text) > 300:
@@ -347,13 +351,16 @@ class AIACore:
             if provider_id in PROVIDER_PACKAGES:
                 return install_hint(provider_id)
             if provider_id == "claude_code":
-                return (
+                return tr(
                     "Claude Code (the 'claude' command) was not found. Install Claude Code, "
                     "sign in by running 'claude' once, then restart Thonny."
                 )
-            return f"Unknown provider '{provider_id}'. Choose one in Tools > Options > AI Assistant."
+            return (
+                tr("Unknown provider '%s'. Choose one in Tools > Options > AI Assistant.")
+                % provider_id
+            )
         if not provider.is_available():
-            return "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
+            return tr("API key not set. Go to Tools > Options > AI Assistant > Set API Key...")
         return None
 
     @property

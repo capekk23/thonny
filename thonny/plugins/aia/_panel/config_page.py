@@ -4,6 +4,7 @@ import tkinter as tk
 from tkinter import ttk
 
 from thonny import get_workbench
+from thonny.languages import tr
 from thonny.config_ui import ConfigurationPage
 
 from thonny.plugins.aia._common import (
@@ -13,7 +14,13 @@ from thonny.plugins.aia._common import (
     PROVIDERS_NEEDING_KEY,
     RETIRED_MODELS,
 )
-from thonny.plugins.aia.prompts import ANSWER_STYLES
+from thonny.plugins.aia.prompts import answer_style
+
+
+
+def style_names():
+    """Answer style id -> name in the current language."""
+    return {"socratic": tr("Socratic"), "explanatory": tr("Explanatory"), "direct": tr("Direct")}
 
 
 class AIAPanelConfigPage(ConfigurationPage):
@@ -31,13 +38,13 @@ class AIAPanelConfigPage(ConfigurationPage):
         self._enabled_var = wb.get_variable("aia.enabled")
         ttk.Checkbutton(
             self,
-            text="Use AI-based AIA instead of the built-in Assistant",
+            text=tr("Use AI-based AIA instead of the built-in Assistant"),
             variable=self._enabled_var,
         ).grid(row=row, column=0, columnspan=3, sticky="w", pady=(0, 10))
         row += 1
 
         # --- Provider + API Key on same row ---
-        ttk.Label(self, text="LLM Provider:").grid(row=row, column=0, sticky="w", pady=2)
+        ttk.Label(self, text=tr("LLM Provider:")).grid(row=row, column=0, sticky="w", pady=2)
 
         # Combobox shows display names; we sync with the config var manually
         self._provider_display_var = tk.StringVar(
@@ -54,13 +61,13 @@ class AIAPanelConfigPage(ConfigurationPage):
         provider_combo.bind("<<ComboboxSelected>>", self._on_provider_changed)
 
         self._api_key_button = ttk.Button(
-            self, text="Set API Key...", width=16, command=self._on_set_api_key
+            self, text=tr("Set API Key..."), width=16, command=self._on_set_api_key
         )
         self._api_key_button.grid(row=row, column=2, sticky="w", pady=2)
         row += 1
 
         # --- Model dropdown (populated dynamically) ---
-        ttk.Label(self, text="Model:").grid(row=row, column=0, sticky="w", pady=2)
+        ttk.Label(self, text=tr("Model:")).grid(row=row, column=0, sticky="w", pady=2)
 
         self._model_var = wb.get_variable("aia.model")
         self._model_combo = ttk.Combobox(
@@ -73,23 +80,30 @@ class AIAPanelConfigPage(ConfigurationPage):
         row += 1
 
         # --- Answer style ---
-        ttk.Label(self, text="Answer style:").grid(row=row, column=0, sticky="w", pady=2)
+        ttk.Label(self, text=tr("Answer style:")).grid(row=row, column=0, sticky="w", pady=2)
 
+        # The combobox shows translated names, the option keeps the style id
         self._mentoring_var = wb.get_variable("aia.mentoring_level")
-        ttk.Combobox(
+        self._style_names = style_names()
+        self._style_display_var = tk.StringVar(
+            value=self._style_names.get(answer_style(self._mentoring_var.get()))
+        )
+        style_combo = ttk.Combobox(
             self,
-            textvariable=self._mentoring_var,
-            values=list(ANSWER_STYLES),
+            textvariable=self._style_display_var,
+            values=list(self._style_names.values()),
             state="readonly",
             width=18,
-        ).grid(row=row, column=1, sticky="w", padx=(5, 0), pady=2)
+        )
+        style_combo.grid(row=row, column=1, sticky="w", padx=(5, 0), pady=2)
+        style_combo.bind("<<ComboboxSelected>>", self._on_style_changed)
         row += 1
 
         ttk.Label(
             self,
-            text=(
-                "socratic = guides you to the answer, explanatory = explains and answers, "
-                "direct = short answer only"
+            text=tr(
+                "Socratic = guides you to the answer, Explanatory = explains and answers, "
+                "Direct = short answer only"
             ),
             foreground="#7f8c8d",
         ).grid(row=row, column=0, columnspan=3, sticky="w", pady=(0, 8))
@@ -101,21 +115,21 @@ class AIAPanelConfigPage(ConfigurationPage):
         )
         row += 1
 
-        ttk.Label(self, text="Context:", font="TkDefaultFont 9 bold").grid(
+        ttk.Label(self, text=tr("Context:"), font="TkDefaultFont 9 bold").grid(
             row=row, column=0, columnspan=3, sticky="w", pady=(0, 2)
         )
         row += 1
 
         ttk.Checkbutton(
             self,
-            text="Automatically include current file as context",
+            text=tr("Automatically include current file as context"),
             variable=wb.get_variable("aia.auto_attach_context"),
         ).grid(row=row, column=0, columnspan=3, sticky="w")
         row += 1
 
         ttk.Checkbutton(
             self,
-            text="Also include locally imported files",
+            text=tr("Also include locally imported files"),
             variable=wb.get_variable("aia.include_local_imports"),
         ).grid(row=row, column=0, columnspan=3, sticky="w")
         row += 1
@@ -156,6 +170,12 @@ class AIAPanelConfigPage(ConfigurationPage):
                 self._model_var.set(provider.get_default_model())
         else:
             self._model_combo.configure(values=[])
+
+    def _on_style_changed(self, event=None):
+        shown = self._style_display_var.get()
+        for style, name in self._style_names.items():
+            if name == shown:
+                self._mentoring_var.set(style)
 
     def _on_set_api_key(self):
         provider_id = self._get_provider_id()

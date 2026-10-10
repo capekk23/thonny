@@ -67,7 +67,7 @@ def test_friendly_error_hides_auth_details(fake_thonny):
     assert "no longer available" in friendly_error(_StatusError(404), "anthropic", "old-model")
     assert "quota" in friendly_error(_StatusError(429))
     assert "Ollama" in friendly_error(ConnectionRefusedError("x"), "ollama")
-    assert "pip install thonny-aia[gemini]" in friendly_error(ImportError("x"), "gemini")
+    assert "'google.genai', which is missing" in friendly_error(ImportError("x"), "gemini")
 
 
 def test_build_system_prompt_includes_context(fake_thonny):
@@ -123,7 +123,7 @@ def test_register_providers_skips_missing_packages(fake_thonny, monkeypatch):
     core = _common.AIACore()
     core.register_providers()
     assert set(core.providers) == {"ollama"}
-    assert "pip install thonny-aia[anthropic]" in core.check_ready()
+    assert "Reinstall Thonny AIA" in core.check_ready()
 
 
 def test_retired_model_falls_back_to_default(fake_thonny):

@@ -7,6 +7,7 @@ import tkinter as tk
 from tkinter import ttk
 
 from thonny import get_workbench
+from thonny.languages import tr
 
 from thonny.plugins.aia._common import API_KEY_URLS, AIACore, provider_display_name
 
@@ -19,7 +20,7 @@ class AIAApiKeyDialog(tk.Toplevel):
         self.provider_name = provider_name
         self.result_key = None
 
-        self.title(f"AIA - {provider_display_name(provider_name)} API Key")
+        self.title(tr("AIA - %s API key") % provider_display_name(provider_name))
         self.resizable(False, False)
         self.transient(master)
         self.grab_set()
@@ -35,17 +36,17 @@ class AIAApiKeyDialog(tk.Toplevel):
 
         ttk.Label(
             main,
-            text=f"Enter your {provider_display_name(self.provider_name)} API key:",
+            text=tr("Enter your %s API key:") % provider_display_name(self.provider_name),
         ).pack(anchor="w", pady=(0, 2))
 
         if url:
-            ttk.Label(main, text=f"Get one at: {url}", foreground="#7f8c8d").pack(
+            ttk.Label(main, text=tr("Get one at:") + " " + url, foreground="#7f8c8d").pack(
                 anchor="w", pady=(0, 2)
             )
         self._has_stored_key = AIACore().has_stored_api_key(self.provider_name)
-        note = "The key is stored in plain text in Thonny's configuration file."
+        note = tr("The key is stored in plain text in Thonny's configuration file.")
         if self._has_stored_key:
-            note += " A key is already stored;\nentering a new one replaces it."
+            note += "\n" + tr("A key is already stored; entering a new one replaces it.")
         ttk.Label(main, text=note, foreground="#7f8c8d").pack(anchor="w", pady=(0, 8))
 
         # Key entry row
@@ -58,18 +59,18 @@ class AIAApiKeyDialog(tk.Toplevel):
         # The stored key is deliberately not pre-filled (it would be readable
         # via copy/paste from the masked field).
 
-        ttk.Button(entry_frame, text="Paste", command=self._paste).pack(side="left")
+        ttk.Button(entry_frame, text=tr("Paste"), command=self._paste).pack(side="left")
 
         # Buttons
         btn_frame = ttk.Frame(main)
         btn_frame.pack()
 
-        ttk.Button(btn_frame, text="OK", width=10, command=self._ok).pack(side="left", padx=5)
-        ttk.Button(btn_frame, text="Cancel", width=10, command=self.destroy).pack(
+        ttk.Button(btn_frame, text=tr("OK"), width=10, command=self._ok).pack(side="left", padx=5)
+        ttk.Button(btn_frame, text=tr("Cancel"), width=10, command=self.destroy).pack(
             side="left", padx=5
         )
         if self._has_stored_key:
-            ttk.Button(btn_frame, text="Remove key", command=self._remove).pack(
+            ttk.Button(btn_frame, text=tr("Remove key"), command=self._remove).pack(
                 side="left", padx=5
             )
 
