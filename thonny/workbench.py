@@ -302,7 +302,7 @@ class Workbench(tk.Tk):
         languages.set_language(self.get_option("general.language"))
 
     def _init_window(self) -> None:
-        self.title("Thonny")
+        self.title(thonny.APP_NAME)
 
         self.set_default("layout.zoomed", False)
         self.set_default("layout.top", 50)
@@ -2493,9 +2493,9 @@ class Workbench(tk.Tk):
     def update_title(self, event=None) -> None:
         editor = self.get_editor_notebook().get_current_editor()
         if self._is_portable:
-            title_text = "Portable Thonny"
+            title_text = "Portable " + thonny.APP_NAME
         else:
-            title_text = "Thonny"
+            title_text = thonny.APP_NAME
         if editor is not None:
             title_text += "  -  " + editor.get_long_description()
 

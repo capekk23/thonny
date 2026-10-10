@@ -76,6 +76,11 @@ def _get_local_appdata_dir():
     return _get_known_folder(28)
 
 
+# Thonny AIA (fork of Thonny with the AI Assistant) keeps its own settings, so it can be
+# installed next to the regular Thonny and starts with its own welcome dialog
+APP_NAME = "Thonny AIA"
+
+
 def _compute_thonny_user_dir():
     if os.environ.get("THONNY_USER_DIR", ""):
         return os.path.expanduser(os.environ["THONNY_USER_DIR"])
@@ -92,15 +97,15 @@ def _compute_thonny_user_dir():
     elif running_in_virtual_environment() and not is_private_python(sys.executable):
         return os.path.join(sys.prefix, ".thonny")
     elif sys.platform == "win32":
-        return os.path.join(_get_roaming_appdata_dir(), "Thonny")
+        return os.path.join(_get_roaming_appdata_dir(), APP_NAME)
     elif sys.platform == "darwin":
-        return os.path.expanduser("~/Library/Thonny")
+        return os.path.expanduser("~/Library/" + APP_NAME)
     else:
         # https://specifications.freedesktop.org/basedir-spec/latest/ar01s02.html
         data_home = os.environ.get(
             "XDG_CONFIG_HOME", os.path.expanduser(os.path.join("~", ".config"))
         )
-        return os.path.join(data_home, "Thonny")
+        return os.path.join(data_home, APP_NAME)
 
 
 def _read_configured_debug_mode():

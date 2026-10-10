@@ -4,7 +4,7 @@ build-backend = "uv_build"
 
 [project]
 name = "thonny"
-version = "5.0.0"
+version = "5.5.0"
 description = "Python IDE for beginners"
 readme = "README.rst"
 license = "MIT"
@@ -53,6 +53,11 @@ dependencies = [
     "asttokens>=2.0",
     "Send2Trash>=1.5",
     "wheel",
+    # Thonny AIA: SDKs of the AI Assistant's providers (thonny.plugins.aia.providers)
+    "anthropic>=0.70",
+    "openai>=1.0",
+    "google-genai>=1.0",
+    "ollama>=0.5",
 ]
 
 [project.urls]

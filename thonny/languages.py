@@ -13,7 +13,7 @@ LANGUAGES_DICT = {
     "be_BY": "Беларуская мова [BETA]",
     "bg_BG": "Български [BETA]",
     "ca_ES": "Català",
-    "cs_CZ": "Čeština [BETA]",
+    "cs_CZ": "Čeština",
     "de_DE": "Deutsch",
     "et_EE": "Eesti",
     "en_GB": "English (UK)",

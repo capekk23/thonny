@@ -21,16 +21,28 @@ class AboutDialog(CommonDialogEx):
     def __init__(self, master):
         super().__init__(master)
 
-        self.title(tr("About Thonny"))
+        self.title(tr("About Thonny AIA"))
         self.resizable(height=tk.FALSE, width=tk.FALSE)
 
         default_heading_font = tkinter.font.nametofont("TkHeadingFont")
         heading_font = default_heading_font.copy()
         heading_font.configure(size=int(default_heading_font["size"] * 1.7), weight="bold")
         heading_label = ttk.Label(
-            self.main_frame, text="Thonny " + thonny.get_version(), font=heading_font
+            self.main_frame, text=thonny.APP_NAME + " " + thonny.get_version(), font=heading_font
         )
         heading_label.grid(pady=(self.get_large_padding(), self.get_small_padding()))
+
+        based_on_label = ttk.Label(
+            self.main_frame,
+            text=tr("Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."),
+            justify=tk.CENTER,
+        )
+        based_on_label.grid()
+
+        fork_url_label = create_url_label(
+            self.main_frame, "https://github.com/senkyr/thonny", justify=tk.CENTER
+        )
+        fork_url_label.grid()
 
         url_label = create_url_label(self.main_frame, "https://thonny.org", justify=tk.CENTER)
         url_label.grid()
