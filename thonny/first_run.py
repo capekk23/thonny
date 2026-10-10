@@ -2,6 +2,7 @@ import json
 import os.path
 import shutil
 import tkinter as tk
+import types
 import urllib.request
 import webbrowser
 from tkinter import ttk
@@ -186,31 +187,17 @@ class FirstRunWindow(tk.Tk):
         )
         self.ai_combo.bind("<<ComboboxSelected>>", self.on_change_ai, True)
 
-        # Detail of the AI choice (note, key or "Check again", link) in a frame of fixed size
-        self.detail = ttk.Frame(self.main_frame)
-        self.detail.grid(row=4, column=2, columnspan=2, sticky="nw", padx=(0, self.padx), pady=(7, 0))
-
-        self.ai_note = ttk.Label(self.detail, wraplength=400, justify="left")
-        self.ai_note.grid(row=1, column=1, sticky="nw")
-
-        self.key_frame = ttk.Frame(self.detail)
-        self.key_frame.grid(row=2, column=1, sticky="nw", pady=(7, 0))
-        key_label = ttk.Label(self.key_frame)
-        key_label.grid(row=1, column=1, sticky="w")
-        self._translatable.append((key_label, lambda: tr("API key:")))
+        # Detail of the AI choice (note, key or "Check again", link) in a frame of fixed size.
+        # The same widgets once more in a frame that is never shown: the size of every variant
+        # is measured there, so measuring redraws nothing on screen.
         self.key_variable = tk.StringVar(value="")
-        key_entry = ttk.Entry(self.key_frame, textvariable=self.key_variable, show="*", width=36)
-        key_entry.grid(row=1, column=2, sticky="w", padx=(10, 0))
-
-        self.check_button = ttk.Button(self.detail, command=self.on_check_ollama)
-        self.check_button.grid(row=2, column=1, sticky="nw", pady=(7, 0))
-        self._translatable.append((self.check_button, lambda: tr("Check again")))
-
         self._link_url = ""
-        self.link = ui_utils.create_action_label(
-            self.detail, "", lambda e: webbrowser.open(self._link_url)
+        self.detail = self._make_detail(ttk.Frame(self.main_frame))
+        self.detail.frame.grid(
+            row=4, column=2, columnspan=2, sticky="nw", padx=(0, self.padx), pady=(7, 0)
         )
-        self.link.grid(row=3, column=1, sticky="nw", pady=(3, 0))
+        self.probe = self._make_detail(ttk.Frame(self.main_frame))  # never gridded
+        self._sized_for = None  # language the detail size was measured for
 
         self.ok_button = ttk.Button(self.main_frame, command=self.on_ok)
         self.ok_button.grid(
@@ -237,11 +224,11 @@ class FirstRunWindow(tk.Tk):
         self.ai = new
         if self.ai == AI_LOCAL and self.ollama is None:
             self.ollama = ollama_state(self.models[AI_LOCAL])
-        self._retranslate()
+        self._show_detail(self.detail, self.ai, self.ollama)
 
     def on_check_ollama(self):
         self.ollama = ollama_state(self.models[AI_LOCAL])
-        self._retranslate()
+        self._show_detail(self.detail, self.ai, self.ollama)
 
     def _update_mode_values(self, combo):
         labels = _mode_labels()
@@ -261,52 +248,71 @@ class FirstRunWindow(tk.Tk):
             else:
                 widget.configure(text=text())
 
-        self._fix_detail_size()
-        self._show_detail(self.ai, self.ollama)
+        language = languages.get_language_code_by_name(self.language_variable.get())
+        if language != self._sized_for:
+            self._fix_detail_size()
+            self._sized_for = language
+        self._show_detail(self.detail, self.ai, self.ollama)
 
-    def _show_detail(self, ai, ollama):
-        """Fill the detail area for one AI choice (and one Ollama state for the local model)."""
+    def _make_detail(self, frame):
+        d = types.SimpleNamespace(frame=frame)
+        d.note = ttk.Label(frame, wraplength=400, justify="left")
+        d.note.grid(row=1, column=1, sticky="nw")
+        d.key_frame = ttk.Frame(frame)
+        d.key_frame.grid(row=2, column=1, sticky="nw", pady=(7, 0))
+        d.key_label = ttk.Label(d.key_frame)
+        d.key_label.grid(row=1, column=1, sticky="w")
+        entry = ttk.Entry(d.key_frame, textvariable=self.key_variable, show="*", width=36)
+        entry.grid(row=1, column=2, sticky="w", padx=(10, 0))
+        d.check_button = ttk.Button(frame, command=self.on_check_ollama)
+        d.check_button.grid(row=2, column=1, sticky="nw", pady=(7, 0))
+        d.link = ui_utils.create_action_label(frame, "", lambda e: webbrowser.open(self._link_url))
+        d.link.grid(row=3, column=1, sticky="nw", pady=(3, 0))
+        return d
+
+    def _show_detail(self, d, ai, ollama):
+        """Fill a detail area for one AI choice (and one Ollama state for the local model)."""
+        d.key_label.configure(text=tr("API key:"))
+        d.check_button.configure(text=tr("Check again"))
         if ai in AI_CLOUD:
-            self.ai_note.configure(text=_cloud_note(ai))
-            self.key_frame.grid()
-            self.check_button.grid_remove()
-            self._set_link(self.key_urls[ai])
+            d.note.configure(text=_cloud_note(ai))
+            d.key_frame.grid()
+            d.check_button.grid_remove()
+            link = self.key_urls[ai]
         elif ai == AI_LOCAL:
-            self.ai_note.configure(text=_local_note(ollama, self.models[AI_LOCAL]))
-            self.key_frame.grid_remove()
+            d.note.configure(text=_local_note(ollama, self.models[AI_LOCAL]))
+            d.key_frame.grid_remove()
             if ollama == "ready":
-                self.check_button.grid_remove()
+                d.check_button.grid_remove()
             else:
-                self.check_button.grid()
-            self._set_link(OLLAMA_URL if ollama in ("missing", "stopped") else "")
+                d.check_button.grid()
+            link = OLLAMA_URL if ollama in ("missing", "stopped") else ""
         else:
-            self.ai_note.configure(text=_later_note())
-            self.key_frame.grid_remove()
-            self.check_button.grid_remove()
-            self._set_link("")
+            d.note.configure(text=_later_note())
+            d.key_frame.grid_remove()
+            d.check_button.grid_remove()
+            link = ""
+        d.link.configure(text=link)
+        if link:
+            d.link.grid()
+        else:
+            d.link.grid_remove()
+        if d is self.detail:
+            self._link_url = link
 
     def _fix_detail_size(self):
-        """Size the detail area for its largest variant in the current language, so that
-        switching the AI choice moves nothing (only a language change may resize the window)."""
+        """Size the detail area for its largest variant in the current language, measured on
+        the hidden probe, so that switching the AI choice moves and redraws nothing."""
         variants = [(p, None) for p in AI_CLOUD] + [(AI_LATER, None)]
         variants += [(AI_LOCAL, s) for s in ("missing", "stopped", "no_model", "ready")]
-        self.detail.grid_propagate(True)
         width = height = 0
         for ai, ollama in variants:
-            self._show_detail(ai, ollama)
-            self.detail.update_idletasks()
-            width = max(width, self.detail.winfo_reqwidth())
-            height = max(height, self.detail.winfo_reqheight())
-        self.detail.configure(width=width, height=height)
-        self.detail.grid_propagate(False)
-
-    def _set_link(self, url):
-        self._link_url = url
-        self.link.configure(text=url)
-        if url:
-            self.link.grid()
-        else:
-            self.link.grid_remove()
+            self._show_detail(self.probe, ai, ollama)
+            self.probe.frame.update_idletasks()
+            width = max(width, self.probe.frame.winfo_reqwidth())
+            height = max(height, self.probe.frame.winfo_reqheight())
+        self.detail.frame.configure(width=width, height=height)
+        self.detail.frame.grid_propagate(False)
 
     def add_combo(self, row, label_text, variable, values, update_values=None):
         pady = 7
