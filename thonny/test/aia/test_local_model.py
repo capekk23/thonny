@@ -37,7 +37,15 @@ def keeper(fake_thonny, monkeypatch):
     fake_thonny.after = lambda ms, func: ("timer", ms)
     fake_thonny.after_cancel = lambda timer: None
     # run the HTTP requests on the test thread
-    monkeypatch.setattr(local_model.LocalModelKeeper, "_run", lambda self, func, model: func(model))
+    def run(self, func, model, load=False):
+        self._failed = False if load else self._failed
+        try:
+            func(model)
+        except Exception:
+            if load:
+                self._failed = True
+
+    monkeypatch.setattr(local_model.LocalModelKeeper, "_run", run)
     fake_thonny.options.update({"aia.enabled": True, "aia.provider": "ollama", "aia.model": ""})
     ollama = _FakeOllama()
     k = local_model.LocalModelKeeper(fake_thonny, _Core({"ollama": ollama}))
@@ -48,6 +56,8 @@ def keeper(fake_thonny, monkeypatch):
 def test_model_is_loaded_at_startup_and_renewed(keeper, fake_thonny):
     keeper._tick()
     assert keeper.ollama.requests == [("preload", "gpt-oss:20b")]
+    assert keeper._timer == ("timer", 15 * 1000)  # checks the load
+    keeper._check()
     assert keeper._timer == ("timer", 4 * 60 * 1000)  # renewed before keep_alive runs out
 
     keeper._tick()
@@ -108,3 +118,28 @@ def test_preload_and_unload_requests(fake_thonny, monkeypatch):
     provider.unload("gpt-oss:20b", timeout=2.0)
     assert calls[0] == {"timeout": 300.0, "model": "gpt-oss:20b", "keep_alive": "10m"}
     assert calls[1] == {"timeout": 2.0, "model": "gpt-oss:20b", "keep_alive": 0}
+
+
+def test_failed_load_is_retried_soon(keeper, fake_thonny):
+    """Ollama may start after Thonny (Windows startup): retry in seconds, not in minutes."""
+    calls = []
+
+    def preload(model):
+        calls.append(model)
+        if len(calls) == 1:
+            raise ConnectionError("Ollama not running yet")
+
+    keeper.ollama.preload = preload
+    keeper._tick()
+    keeper._check()
+    assert len(calls) == 2  # retried at the first check
+    assert keeper._timer == ("timer", 15 * 1000)
+    keeper._check()
+    assert keeper._timer == ("timer", 4 * 60 * 1000)
+
+
+def test_check_waits_while_the_model_loads(keeper):
+    keeper._tick()
+    keeper._loading = True  # the load takes ~30 s
+    keeper._check()
+    assert keeper._timer == ("timer", 15 * 1000) and len(keeper.ollama.requests) == 1

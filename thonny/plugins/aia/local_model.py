@@ -7,6 +7,10 @@ renewed periodically; every chat request renews it too (``KEEP_ALIVE`` in the
 provider). A refresh instead of ``keep_alive=-1`` means a crashed Thonny frees
 the memory (about 13 GB) within ``KEEP_ALIVE`` - a clean exit frees it at once.
 
+A failed load (Ollama not started yet - its tray app starts with Windows and may come
+up after Thonny - or the model not pulled) is retried after ``RETRY_MS``, not after
+``REFRESH_MS``: otherwise the first error of a lesson waited for the whole load anyway.
+
 Threading: the timer and option reads run on the UI thread, the HTTP requests in
 a daemon thread with a frozen provider.
 """
@@ -21,6 +25,7 @@ logger = logging.getLogger(__name__)
 # Renew well before KEEP_ALIVE (10 min) runs out
 REFRESH_MS = 4 * 60 * 1000
 FIRST_LOAD_DELAY_MS = 1000
+RETRY_MS = 15 * 1000
 
 
 class LocalModelKeeper:
@@ -29,6 +34,9 @@ class LocalModelKeeper:
         self._core = core
         self._loaded = None  # (frozen provider, model) that we asked Ollama to keep
         self._timer = None
+        # State of the last load, written by its worker thread, read by the timer
+        self._loading = False
+        self._failed = False
 
     def install(self):
         try:
@@ -49,13 +57,13 @@ class LocalModelKeeper:
             return None
         return provider.frozen(), self._core.get_current_model(provider)
 
-    def _schedule(self, delay_ms):
+    def _schedule(self, delay_ms, func=None):
         if self._timer is not None:
             try:
                 self._wb.after_cancel(self._timer)
             except Exception:
                 pass
-        self._timer = self._wb.after(delay_ms, self._tick)
+        self._timer = self._wb.after(delay_ms, func or self._tick)
 
     def _on_settings_changed(self, *_args):
         # The options may change several at once (Options dialog OK) - react once
@@ -69,16 +77,35 @@ class LocalModelKeeper:
             self._run(previous[0].unload, previous[1])
         self._loaded = wanted
         if wanted is not None:
-            self._run(wanted[0].preload, wanted[1])
+            self._run(wanted[0].preload, wanted[1], load=True)
+            self._schedule(RETRY_MS, self._check)
+
+    def _check(self):
+        """RETRY_MS after a load started: retry a failed load, else wait for the refresh."""
+        self._timer = None
+        if self._loading:
+            self._schedule(RETRY_MS, self._check)  # loading from disk takes ~30 s
+        elif self._failed:
+            self._tick()
+        else:
             self._schedule(REFRESH_MS)
 
-    def _run(self, func, model):
+    def _run(self, func, model, load=False):
+        if load:
+            self._loading = True
+            self._failed = False
+
         def work():
             try:
                 func(model)
             except Exception:
                 # Server not running or model not pulled - the chat request reports it
                 logger.info("AIA: local model %s: %s failed", model, func.__name__, exc_info=True)
+                if load:
+                    self._failed = True
+            finally:
+                if load:
+                    self._loading = False
 
         threading.Thread(target=work, daemon=True).start()
 

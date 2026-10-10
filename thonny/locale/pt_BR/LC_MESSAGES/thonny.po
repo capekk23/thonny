@@ -2139,10 +2139,6 @@ msgid "No provider is chosen: AIA stays switched on, but it does not answer."
 msgstr "Nenhum provedor foi escolhido: o AIA continua ativado, mas não responde."
 
 #: thonny/plugins/aia
-msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
-msgstr "Apenas para demonstração: as respostas vêm do Claude Code conectado neste computador, sem chave de API. Não é para alunos."
-
-#: thonny/plugins/aia
 msgid "API key not set. Enter it in Tools > Options > AI Assistant."
 msgstr "Chave de API não definida. Insira-a em Ferramentas > Opções > Assistente de IA."
 
@@ -2153,3 +2149,7 @@ msgstr "A chave de API foi recusada. Verifique-a em Ferramentas > Opções > Ass
 #: thonny/plugins/aia
 msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
 msgstr "O modelo '%s' não está mais disponível. Escolha outro provedor em Ferramentas > Opções > Assistente de IA ou instale uma versão mais recente do Thonny AIA."
+
+#: thonny/plugins/aia
+msgid "The local model is preparing the answer..."
+msgstr "O modelo local está preparando a resposta..."

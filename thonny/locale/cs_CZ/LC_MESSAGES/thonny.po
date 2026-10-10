@@ -2387,10 +2387,6 @@ msgid "No provider is chosen: AIA stays switched on, but it does not answer."
 msgstr "Není vybraný žádný poskytovatel: AIA zůstává zapnutá, ale neodpovídá."
 
 #: thonny/plugins/aia
-msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
-msgstr "Jen pro ukázky: odpovídá Claude Code přihlášený na tomto počítači, bez API klíče. Není pro žáky."
-
-#: thonny/plugins/aia
 msgid "API key not set. Enter it in Tools > Options > AI Assistant."
 msgstr "API klíč není nastavený. Zadejte ho v Nástroje > Volby > AI asistent."
 
@@ -2401,3 +2397,7 @@ msgstr "API klíč byl odmítnut. Zkontrolujte ho v Nástroje > Volby > AI asist
 #: thonny/plugins/aia
 msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
 msgstr "Model %s už není k dispozici. Vyberte jiného poskytovatele v Nástroje > Volby > AI asistent, nebo nainstalujte novější Thonny AIA."
+
+#: thonny/plugins/aia
+msgid "The local model is preparing the answer..."
+msgstr "Lokální model připravuje odpověď..."

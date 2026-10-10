@@ -33,12 +33,19 @@ logger = logging.getLogger(__name__)
 
 POLL_MS = 50
 SHELL_SETTLE_MS = 300  # the Shell draws the output of a run a little after the run ends
+LOAD_CHECK_S = 2.0  # while the local model loads, how often to ask Ollama whether it is in memory
+
 
 # Shown until the first token of a local model arrives: on CPU, loading gpt-oss:20b took
-# 35-55 s and processing the prompt up to 40 s more, with nothing in the panel (Jakub 2026-10-10)
+# 35-55 s and processing the prompt up to 40 s more, with nothing in the panel (Jakub 2026-10-10).
+# "Loading" only while the model is really not in memory (Jakub 2026-10-10: with the model
+# loaded at startup the note made it look as if it loaded only now).
 def local_loading_text() -> str:
     return tr("Loading the local model...")
 
+
+def local_working_text() -> str:
+    return tr("The local model is preparing the answer...")
 
 
 
@@ -57,7 +64,7 @@ class AIAView(ttk.Frame):
         self._cancel_event: Optional[threading.Event] = None
         self._partial: List[str] = []
         self._polling = False
-        self._loading = False  # local_loading_text() is in the messages area
+        self._note = False  # a local model note (loading / working) is in the messages area
 
         self._build_ui()
 
@@ -244,9 +251,6 @@ class AIAView(ttk.Frame):
         self._partial = []
         self._set_busy(True)
         self._insert("\nAIA: ", "assistant_header")
-        if provider_id == "ollama":
-            self._insert(local_loading_text(), "loading_text")
-            self._loading = True
 
         threading.Thread(
             target=self._stream_in_background,
@@ -270,6 +274,8 @@ class AIAView(ttk.Frame):
         put = self._events.put
         stream = None
         try:
+            if provider_id == "ollama":
+                self._report_local_model(request_id, cancel_event, provider, model)
             stream = provider.stream_chat(system_prompt, api_messages, model)
             for chunk_text in stream:
                 if cancel_event.is_set():
@@ -288,6 +294,33 @@ class AIAView(ttk.Frame):
                 except Exception:
                     logger.debug("Error closing stream", exc_info=True)
 
+    def _report_local_model(self, request_id, cancel_event, provider, model):
+        """Worker thread: tell the UI whether the model still loads; if it does, watch it."""
+        put = self._events.put
+        try:
+            loaded = provider.is_loaded(model)
+        except Exception:
+            # Ollama not reachable: the chat request reports it in a moment
+            logger.debug("AIA: could not ask Ollama for loaded models", exc_info=True)
+            return
+        if loaded:
+            put((request_id, "note", local_working_text()))
+            return
+        put((request_id, "note", local_loading_text()))
+
+        def watch():
+            while not cancel_event.wait(LOAD_CHECK_S):
+                if request_id != self._request_id:
+                    return  # superseded or finished
+                try:
+                    if provider.is_loaded(model):
+                        put((request_id, "note", local_working_text()))
+                        return
+                except Exception:
+                    return
+
+        threading.Thread(target=watch, daemon=True).start()
+
     def _start_polling(self):
         if not self._polling:
             self._polling = True
@@ -299,7 +332,12 @@ class AIAView(ttk.Frame):
                 request_id, kind, payload = self._events.get_nowait()
                 if request_id != self._request_id:
                     continue  # superseded request
-                if kind == "chunk":
+                if kind == "note":
+                    if self._cancel_event is not None and not self._partial:  # not started yet
+                        self._hide_loading()
+                        self._insert(payload, "loading_text")
+                        self._note = True
+                elif kind == "chunk":
                     self._hide_loading()
                     self._partial.append(payload)
                     self._insert(payload)
@@ -319,9 +357,9 @@ class AIAView(ttk.Frame):
 
     def _hide_loading(self):
         """Remove the loading note once the answer (or an error, or Cancel) takes its place."""
-        if not getattr(self, "_loading", False):
+        if not getattr(self, "_note", False):
             return
-        self._loading = False
+        self._note = False
         text = self._messages_text
         ranges = text.tag_ranges("loading_text")
         text.configure(state="normal")
@@ -338,6 +376,8 @@ class AIAView(ttk.Frame):
         if full_response:
             self._conversation.append({"role": "assistant", "content": full_response})
         self._partial = []
+        if self._cancel_event is not None:
+            self._cancel_event.set()  # stops the watch of a loading local model
         self._cancel_event = None
         self._set_busy(False)
 

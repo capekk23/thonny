@@ -2120,10 +2120,6 @@ msgid "No provider is chosen: AIA stays switched on, but it does not answer."
 msgstr "선택된 제공자가 없습니다. AIA는 켜진 상태로 유지되지만 답변하지 않습니다."
 
 #: thonny/plugins/aia
-msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
-msgstr "데모 전용: 이 컴퓨터에 로그인된 Claude Code가 API 키 없이 답변합니다. 학생용이 아닙니다."
-
-#: thonny/plugins/aia
 msgid "API key not set. Enter it in Tools > Options > AI Assistant."
 msgstr "API 키가 설정되지 않았습니다. 도구 > 옵션 > AI 도우미에서 입력하세요."
 
@@ -2134,3 +2130,7 @@ msgstr "API 키가 거부되었습니다. 도구 > 옵션 > AI 도우미에서 �
 #: thonny/plugins/aia
 msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
 msgstr "모델 '%s'은(는) 더 이상 사용할 수 없습니다. 도구 > 옵션 > AI 도우미에서 다른 제공자를 선택하거나 최신 버전의 Thonny AIA를 설치하세요."
+
+#: thonny/plugins/aia
+msgid "The local model is preparing the answer..."
+msgstr "로컬 모델이 답변을 준비하는 중..."

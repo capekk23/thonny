@@ -2123,10 +2123,6 @@ msgid "No provider is chosen: AIA stays switched on, but it does not answer."
 msgstr "未選擇服務供應商：AIA 會保持開啟，但不會回答。"
 
 #: thonny/plugins/aia
-msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
-msgstr "僅供示範：由這台電腦上已登入的 Claude Code 回答，不需要 API 金鑰。不適合學生使用。"
-
-#: thonny/plugins/aia
 msgid "API key not set. Enter it in Tools > Options > AI Assistant."
 msgstr "尚未設定 API 金鑰。請在「工具 > 選項 > AI 助理」中輸入。"
 
@@ -2137,3 +2133,7 @@ msgstr "API 金鑰遭拒。請在「工具 > 選項 > AI 助理」中檢查。"
 #: thonny/plugins/aia
 msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
 msgstr "模型「%s」已無法使用。請在「工具 > 選項 > AI 助理」中選擇其他服務供應商，或安裝較新版本的 Thonny AIA。"
+
+#: thonny/plugins/aia
+msgid "The local model is preparing the answer..."
+msgstr "本機模型正在準備回答..."

@@ -2133,10 +2133,6 @@ msgid "No provider is chosen: AIA stays switched on, but it does not answer."
 msgstr "எந்த வழங்குநரும் தேர்ந்தெடுக்கப்படவில்லை: AIA இயக்கத்தில் இருக்கும், ஆனால் பதிலளிக்காது."
 
 #: thonny/plugins/aia
-msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
-msgstr "செயல்விளக்கத்துக்கு மட்டும்: இந்தக் கணினியில் உள்நுழைந்துள்ள Claude Code, API விசை இல்லாமல் பதிலளிக்கிறது. மாணவர்களுக்கானது அல்ல."
-
-#: thonny/plugins/aia
 msgid "API key not set. Enter it in Tools > Options > AI Assistant."
 msgstr "API விசை அமைக்கப்படவில்லை. கருவிகள் > விருப்பங்கள் > AI உதவியாளர் என்பதில் அதை உள்ளிடவும்."
 
@@ -2147,3 +2143,7 @@ msgstr "API விசை நிராகரிக்கப்பட்டது.
 #: thonny/plugins/aia
 msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
 msgstr "'%s' மாதிரி இனி கிடைக்காது. கருவிகள் > விருப்பங்கள் > AI உதவியாளர் என்பதில் வேறொரு வழங்குநரைத் தேர்ந்தெடுக்கவும், அல்லது Thonny AIA-இன் புதிய பதிப்பை நிறுவவும்."
+
+#: thonny/plugins/aia
+msgid "The local model is preparing the answer..."
+msgstr "உள்ளூர் மாதிரி பதிலைத் தயாரிக்கிறது..."

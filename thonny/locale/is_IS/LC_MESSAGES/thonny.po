@@ -2140,10 +2140,6 @@ msgid "No provider is chosen: AIA stays switched on, but it does not answer."
 msgstr "Enginn þjónustuaðili er valinn: AIA er áfram virkt en svarar ekki."
 
 #: thonny/plugins/aia
-msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
-msgstr "Aðeins til sýnis: svörin koma frá Claude Code sem er innskráð á þessari tölvu, án API-lykils. Ekki fyrir nemendur."
-
-#: thonny/plugins/aia
 msgid "API key not set. Enter it in Tools > Options > AI Assistant."
 msgstr "API-lykill er ekki stilltur. Sláðu hann inn í Tól > Valkostir > Gervigreindaraðstoð."
 
@@ -2154,3 +2150,7 @@ msgstr "API-lyklinum var hafnað. Athugaðu hann í Tól > Valkostir > Gervigrei
 #: thonny/plugins/aia
 msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
 msgstr "Líkanið '%s' er ekki lengur í boði. Veldu annan þjónustuaðila í Tól > Valkostir > Gervigreindaraðstoð eða settu upp nýrri útgáfu af Thonny AIA."
+
+#: thonny/plugins/aia
+msgid "The local model is preparing the answer..."
+msgstr "Staðbundna líkanið er að undirbúa svarið..."

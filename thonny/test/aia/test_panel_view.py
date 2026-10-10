@@ -149,24 +149,116 @@ def test_local_loading_note_disappears_with_first_token(panel_view):
     view = make_view(panel_view)
     request_id, _ = start_request(view)
     view._messages_text = _FakeText()
-    view._loading = True  # set by _request_llm_response for the Ollama provider
+    view._note = True  # a local model note is shown
 
     view._events.put((request_id, "chunk", "Ahoj"))
     view._poll_events()
 
     assert view._messages_text.deleted == [("2.5", "2.31")]
-    assert view._loading is False and view.inserted[-1] == "Ahoj"
+    assert view._note is False and view.inserted[-1] == "Ahoj"
 
 
 def test_local_loading_note_disappears_on_cancel(panel_view):
     view = make_view(panel_view)
     start_request(view)
     view._messages_text = _FakeText()
-    view._loading = True
+    view._note = True
 
     view._on_cancel()
 
-    assert view._messages_text.deleted == [("2.5", "2.31")] and view._loading is False
+    assert view._messages_text.deleted == [("2.5", "2.31")] and view._note is False
+
+
+class _LocalModel:
+    """Ollama that reports the model as loaded after ``loaded_after`` checks."""
+
+    def __init__(self, loaded_after, answer=("Ahoj",)):
+        self.checks = 0
+        self.loaded_after = loaded_after
+        self.answer = answer
+        self.released = threading.Event()
+
+    def is_loaded(self, model):
+        self.checks += 1
+        return self.checks > self.loaded_after
+
+    def stream_chat(self, system_prompt, messages, model):
+        self.released.wait(5)
+        yield from self.answer
+
+
+def _drain(view):
+    events = []
+    while not view._events.empty():
+        events.append(view._events.get_nowait())
+    return events
+
+
+def test_loaded_local_model_is_not_said_to_load(panel_view):
+    """Jakub 2026-10-10: the model loaded at startup, yet the panel said it was loading."""
+    view = make_view(panel_view)
+    request_id, cancel_event = start_request(view)
+    ollama = _LocalModel(loaded_after=0)
+    ollama.released.set()
+
+    view._stream_in_background(request_id, cancel_event, ollama, "ollama", "", [], "gpt-oss:20b")
+
+    notes = [p for _, kind, p in _drain(view) if kind == "note"]
+    assert notes == [panel_view.local_working_text()]
+
+
+def test_loading_note_turns_into_working_note_once_loaded(panel_view, monkeypatch):
+    monkeypatch.setattr(panel_view, "LOAD_CHECK_S", 0.01)
+    view = make_view(panel_view)
+    request_id, cancel_event = start_request(view)
+    ollama = _LocalModel(loaded_after=3)
+    worker = threading.Thread(
+        target=view._stream_in_background,
+        args=(request_id, cancel_event, ollama, "ollama", "", [], "gpt-oss:20b"),
+        daemon=True,
+    )
+    worker.start()
+    for _ in range(500):
+        if ollama.checks > 3:
+            break
+        threading.Event().wait(0.01)
+    threading.Event().wait(0.05)
+    ollama.released.set()
+    worker.join(5)
+
+    notes = [p for _, kind, p in list(view._events.queue) if kind == "note"]
+    assert notes == [panel_view.local_loading_text(), panel_view.local_working_text()]
+    view._messages_text = _FakeText()
+    view._poll_events()
+    assert "Ahoj" in view.inserted and view._note is False
+
+
+def test_note_after_the_answer_is_ignored(panel_view):
+    view = make_view(panel_view)
+    request_id, cancel_event = start_request(view)
+    view._messages_text = _FakeText()
+    view._events.put((request_id, "chunk", "Ahoj"))
+    view._events.put((request_id, "done", ""))
+    view._poll_events()
+    assert cancel_event.is_set()  # stops the watch of a loading model
+
+    view._events.put((request_id, "note", panel_view.local_working_text()))
+    view._poll_events()
+    assert panel_view.local_working_text() not in view.inserted
+
+
+def test_unreachable_ollama_shows_no_note(panel_view):
+    view = make_view(panel_view)
+    request_id, cancel_event = start_request(view)
+
+    class _Down(_LocalModel):
+        def is_loaded(self, model):
+            raise ConnectionError("refused")
+
+    ollama = _Down(loaded_after=0)
+    ollama.released.set()
+    view._stream_in_background(request_id, cancel_event, ollama, "ollama", "", [], "gpt-oss:20b")
+    assert "note" not in {kind for _, kind, _ in _drain(view)}
 
 
 def test_error_is_reported_to_the_model_but_not_shown(panel_view, fake_thonny):

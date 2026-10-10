@@ -2139,10 +2139,6 @@ msgid "No provider is chosen: AIA stays switched on, but it does not answer."
 msgstr "Chưa chọn nhà cung cấp nào: AIA vẫn được bật, nhưng không trả lời."
 
 #: thonny/plugins/aia
-msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
-msgstr "Chỉ dành cho trình diễn: câu trả lời đến từ Claude Code đã đăng nhập trên máy tính này, không cần khóa API. Không dành cho học sinh."
-
-#: thonny/plugins/aia
 msgid "API key not set. Enter it in Tools > Options > AI Assistant."
 msgstr "Chưa đặt khóa API. Hãy nhập khóa trong Công cụ > Thiết lập > Trợ lý AI."
 
@@ -2153,3 +2149,7 @@ msgstr "Khóa API bị từ chối. Hãy kiểm tra trong Công cụ > Thiết l
 #: thonny/plugins/aia
 msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
 msgstr "Mô hình '%s' không còn khả dụng. Hãy chọn nhà cung cấp khác trong Công cụ > Thiết lập > Trợ lý AI, hoặc cài đặt phiên bản Thonny AIA mới hơn."
+
+#: thonny/plugins/aia
+msgid "The local model is preparing the answer..."
+msgstr "Mô hình cục bộ đang chuẩn bị câu trả lời..."

@@ -2090,10 +2090,6 @@ msgid "No provider is chosen: AIA stays switched on, but it does not answer."
 msgstr "ഒരു ദാതാവിനെയും തിരഞ്ഞെടുത്തിട്ടില്ല: AIA ഓണായിത്തന്നെ തുടരും, പക്ഷേ മറുപടി നൽകില്ല."
 
 #: thonny/plugins/aia
-msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
-msgstr "ഡെമോയ്ക്ക് മാത്രം: ഈ കമ്പ്യൂട്ടറിൽ സൈൻ ഇൻ ചെയ്ത Claude Code ആണ് API കീ ഇല്ലാതെ മറുപടി നൽകുന്നത്. വിദ്യാർത്ഥികൾക്കുള്ളതല്ല."
-
-#: thonny/plugins/aia
 msgid "API key not set. Enter it in Tools > Options > AI Assistant."
 msgstr "API കീ സജ്ജമാക്കിയിട്ടില്ല. ഉപകരണങ്ങൾ > ഐച്ഛികങ്ങൾ > AI സഹായി എന്നതിൽ അത് നൽകുക."
 
@@ -2104,3 +2100,7 @@ msgstr "API കീ നിരസിക്കപ്പെട്ടു. ഉപക�
 #: thonny/plugins/aia
 msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
 msgstr "'%s' എന്ന മോഡൽ ഇപ്പോൾ ലഭ്യമല്ല. ഉപകരണങ്ങൾ > ഐച്ഛികങ്ങൾ > AI സഹായി എന്നതിൽ മറ്റൊരു ദാതാവിനെ തിരഞ്ഞെടുക്കുക, അല്ലെങ്കിൽ Thonny AIA-യുടെ പുതിയ പതിപ്പ് ഇൻസ്റ്റാൾ ചെയ്യുക."
+
+#: thonny/plugins/aia
+msgid "The local model is preparing the answer..."
+msgstr "പ്രാദേശിക മോഡൽ ഉത്തരം തയ്യാറാക്കുന്നു..."

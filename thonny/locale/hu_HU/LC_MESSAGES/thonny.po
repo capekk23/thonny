@@ -2118,10 +2118,6 @@ msgid "No provider is chosen: AIA stays switched on, but it does not answer."
 msgstr "Nincs kiválasztva szolgáltató: az AIA bekapcsolva marad, de nem válaszol."
 
 #: thonny/plugins/aia
-msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
-msgstr "Csak bemutatóhoz: a válaszokat az ezen a számítógépen bejelentkezett Claude Code adja, API-kulcs nélkül. Diákoknak nem való."
-
-#: thonny/plugins/aia
 msgid "API key not set. Enter it in Tools > Options > AI Assistant."
 msgstr "Nincs beállítva API-kulcs. Adja meg az Eszközök > Beállítások > MI-asszisztens menüpontban."
 
@@ -2132,3 +2128,7 @@ msgstr "Az API-kulcsot elutasították. Ellenőrizze az Eszközök > Beállítá
 #: thonny/plugins/aia
 msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
 msgstr "A(z) „%s” modell már nem érhető el. Válasszon másik szolgáltatót az Eszközök > Beállítások > MI-asszisztens menüpontban, vagy telepítse a Thonny AIA újabb verzióját."
+
+#: thonny/plugins/aia
+msgid "The local model is preparing the answer..."
+msgstr "A helyi modell készíti a választ..."

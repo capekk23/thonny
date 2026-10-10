@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-10-10 22:11+0200\n"
+"POT-Creation-Date: 2026-10-10 22:47+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -273,7 +273,7 @@ msgid "OK"
 msgstr ""
 
 #: thonny/base_file_browser.py:1382 thonny/config_ui.py:42 thonny/export.py:28
-#: thonny/plugins/aia/_panel/view.py:112
+#: thonny/plugins/aia/_panel/view.py:119
 #: thonny/plugins/backend_config_page.py:288 thonny/plugins/pip_gui.py:1406
 #: thonny/ui_utils.py:161 thonny/ui_utils.py:1749 thonny/ui_utils.py:1835
 #: thonny/workdlg.py:205 thonny/workdlg.py:259
@@ -598,7 +598,7 @@ msgstr ""
 msgid "Initial settings:"
 msgstr ""
 
-#: thonny/first_run.py:189 thonny/plugins/aia/_panel/config_page.py:77
+#: thonny/first_run.py:189 thonny/plugins/aia/_panel/config_page.py:68
 msgid "AI assistant:"
 msgstr ""
 
@@ -611,11 +611,11 @@ msgstr ""
 msgid "Welcome to %s!"
 msgstr ""
 
-#: thonny/first_run.py:282 thonny/plugins/aia/_panel/config_page.py:162
+#: thonny/first_run.py:282 thonny/plugins/aia/_panel/config_page.py:153
 msgid "API key:"
 msgstr ""
 
-#: thonny/first_run.py:283 thonny/plugins/aia/_panel/config_page.py:173
+#: thonny/first_run.py:283 thonny/plugins/aia/_panel/config_page.py:164
 msgid "Check again"
 msgstr ""
 
@@ -705,7 +705,7 @@ msgstr ""
 msgid "Plotter"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:116 thonny/shell.py:319
+#: thonny/plugins/aia/_panel/view.py:123 thonny/shell.py:319
 msgid "Clear"
 msgstr ""
 
@@ -2225,86 +2225,84 @@ msgstr ""
 msgid "Open system shell..."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:26
+#: thonny/plugins/aia/_panel/config_page.py:25
 msgid "Socratic"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:26
+#: thonny/plugins/aia/_panel/config_page.py:25
 msgid "Explanatory"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:26
+#: thonny/plugins/aia/_panel/config_page.py:25
 msgid "Direct"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:31
+#: thonny/plugins/aia/_panel/config_page.py:30
 #, python-format
 msgid ""
 "Answers come from %s. You need an API key: create it at the link below, "
 "or get one from your teacher."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:37
+#: thonny/plugins/aia/_panel/config_page.py:36
 msgid "No provider is chosen: AIA stays switched on, but it does not answer."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:42
-msgid ""
-"Demo only: answers come from Claude Code signed in on this computer, "
-"without an API key. Not for students."
-msgstr ""
-
-#: thonny/plugins/aia/_panel/config_page.py:72
+#: thonny/plugins/aia/_panel/config_page.py:63
 msgid "Use AI-based AIA instead of the built-in Assistant"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:96
+#: thonny/plugins/aia/_panel/config_page.py:87
 msgid "Answer style:"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:116
+#: thonny/plugins/aia/_panel/config_page.py:107
 msgid ""
 "Socratic = guides you to the answer, Explanatory = explains and answers, "
 "Direct = short answer only"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:130
+#: thonny/plugins/aia/_panel/config_page.py:121
 msgid "Context:"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:137
+#: thonny/plugins/aia/_panel/config_page.py:128
 msgid "Automatically include current file as context"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:144
+#: thonny/plugins/aia/_panel/config_page.py:135
 msgid "Also include locally imported files"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:170
+#: thonny/plugins/aia/_panel/config_page.py:161
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:40
+#: thonny/plugins/aia/_panel/view.py:44
 msgid "Loading the local model..."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:108
+#: thonny/plugins/aia/_panel/view.py:48
+msgid "The local model is preparing the answer..."
+msgstr ""
+
+#: thonny/plugins/aia/_panel/view.py:115
 msgid "Send"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:133
+#: thonny/plugins/aia/_panel/view.py:140
 msgid "AIA - AI Mentor Assistant"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:135
+#: thonny/plugins/aia/_panel/view.py:142
 msgid "Type a question below (Enter sends, Shift+Enter = new line)."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:208
+#: thonny/plugins/aia/_panel/view.py:215
 msgid "You"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:217 thonny/plugins/aia/_panel/view.py:276
+#: thonny/plugins/aia/_panel/view.py:224 thonny/plugins/aia/_panel/view.py:282
 msgid "cancelled"
 msgstr ""
 

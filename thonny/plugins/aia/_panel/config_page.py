@@ -3,7 +3,8 @@
 The AI choice is the welcome dialog's choice (Jakub 2026-10-10: the options had other items
 than the dialog and a model choice that was quietly dropped): the same list in the same
 order, the same notes, the API key on the page. Each provider answers with its default
-model, so there is no model choice.
+model, so there is no model choice. The Claude Code demo provider is not offered (Jakub
+2026-10-10: "To demo tam nemá co dělat."): it is reachable only by editing configuration.ini.
 """
 
 import tkinter as tk
@@ -17,8 +18,6 @@ from thonny.config_ui import ConfigurationPage
 
 from thonny.plugins.aia._common import AIACore
 from thonny.plugins.aia.prompts import answer_style
-
-DEMO = "claude_code"  # the teacher's Claude Code account, only where the CLI is installed
 
 
 def style_names():
@@ -37,13 +36,6 @@ def _later_note():
     return tr("No provider is chosen: AIA stays switched on, but it does not answer.")
 
 
-def _demo_note():
-    return tr(
-        "Demo only: answers come from Claude Code signed in on this computer, without an API key. "
-        "Not for students."
-    )
-
-
 class AIAPanelConfigPage(ConfigurationPage):
     def __init__(self, master):
         super().__init__(master)
@@ -54,13 +46,12 @@ class AIAPanelConfigPage(ConfigurationPage):
         self._models = first_run._default_models()
         self._key_urls = first_run._key_urls()
         self._labels = first_run._ai_labels(self._models)
-        later = self._labels.pop(first_run.AI_LATER)
-        if DEMO in self._core.providers:
-            self._labels[DEMO] = "Claude Code (demo)"
-        self._labels[first_run.AI_LATER] = later
 
         stored = wb.get_option("aia.provider") or first_run.AI_LATER
         self._ai = stored if stored in self._labels else first_run.AI_LATER
+        # A provider set by hand in configuration.ini (e.g. claude_code) is not offered here:
+        # it stays until the choice is changed on the page
+        self._kept_provider = None if stored in self._labels else stored
         self._ollama = None  # last first_run.ollama_state(), checked when the local model is shown
         self._keys = {}  # provider -> key as edited on this page
         self._link_url = ""
@@ -194,7 +185,7 @@ class AIAPanelConfigPage(ConfigurationPage):
                 d.check_button.grid()
             link = first_run.OLLAMA_URL if ollama in ("missing", "stopped") else ""
         else:
-            d.note.configure(text=_demo_note() if ai == DEMO else _later_note())
+            d.note.configure(text=_later_note())
             d.key_frame.grid_remove()
             d.check_button.grid_remove()
         d.link.configure(text=link)
@@ -236,6 +227,7 @@ class AIAPanelConfigPage(ConfigurationPage):
         if self._ai in first_run.AI_CLOUD:
             self._keys[self._ai] = self._key_var.get()
         self._ai = list(self._labels)[self._ai_combo.current()]
+        self._kept_provider = None
         self._show(self._ai)
 
     def _on_check_ollama(self):
@@ -256,6 +248,7 @@ class AIAPanelConfigPage(ConfigurationPage):
         for provider, key in self._keys.items():
             if key.strip() != (self._core._get_stored_api_key(provider) or ""):
                 self._core.set_api_key(provider, key)
-        wb.set_option("aia.provider", "" if self._ai == first_run.AI_LATER else self._ai)
+        if self._kept_provider is None:
+            wb.set_option("aia.provider", "" if self._ai == first_run.AI_LATER else self._ai)
         wb.set_option("aia.model", "")  # a model chosen in earlier versions no longer applies
         return True

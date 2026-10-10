@@ -2140,10 +2140,6 @@ msgid "No provider is chosen: AIA stays switched on, but it does not answer."
 msgstr "Ez da hornitzailerik hautatu: AIA piztuta geratzen da, baina ez du erantzuten."
 
 #: thonny/plugins/aia
-msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
-msgstr "Erakustaldietarako soilik: ordenagailu honetan saioa hasita duen Claude Code-k erantzuten du, API gakorik gabe. Ez da ikasleentzat."
-
-#: thonny/plugins/aia
 msgid "API key not set. Enter it in Tools > Options > AI Assistant."
 msgstr "API gakoa ez dago ezarrita. Sartu hemen: Tresnak > Aukerak > AA laguntzailea."
 
@@ -2154,3 +2150,7 @@ msgstr "API gakoa baztertu egin da. Egiaztatu hemen: Tresnak > Aukerak > AA lagu
 #: thonny/plugins/aia
 msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
 msgstr "«%s» eredua jada ez dago erabilgarri. Hautatu beste hornitzaile bat hemen: Tresnak > Aukerak > AA laguntzailea, edo instalatu Thonny AIA-ren bertsio berriago bat."
+
+#: thonny/plugins/aia
+msgid "The local model is preparing the answer..."
+msgstr "Eredu lokala erantzuna prestatzen ari da..."

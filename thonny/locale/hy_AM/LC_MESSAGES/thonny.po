@@ -2131,10 +2131,6 @@ msgid "No provider is chosen: AIA stays switched on, but it does not answer."
 msgstr "Մատակարար ընտրված չէ․ AIA֊ն մնում է միացված, բայց չի պատասխանում։"
 
 #: thonny/plugins/aia
-msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
-msgstr "Միայն ցուցադրման համար․ պատասխանում է այս համակարգչում մուտք գործած Claude Code֊ը՝ առանց API բանալու։ Նախատեսված չէ աշակերտների համար։"
-
-#: thonny/plugins/aia
 msgid "API key not set. Enter it in Tools > Options > AI Assistant."
 msgstr "API բանալին սահմանված չէ։ Մուտքագրեք այն Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"
 
@@ -2145,3 +2141,7 @@ msgstr "API բանալին մերժվել է։ Ստուգեք այն Գործի�
 #: thonny/plugins/aia
 msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
 msgstr "«%s» մոդելն այլևս հասանելի չէ։ Ընտրեք այլ մատակարար Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում կամ տեղադրեք Thonny AIA֊ի ավելի նոր տարբերակ։"
+
+#: thonny/plugins/aia
+msgid "The local model is preparing the answer..."
+msgstr "Տեղային մոդելը պատրաստում է պատասխանը..."

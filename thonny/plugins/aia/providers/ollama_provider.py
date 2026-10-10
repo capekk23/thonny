@@ -31,6 +31,11 @@ def is_local_host(host: Optional[str]) -> bool:
     return name in LOCAL_HOSTS or name.startswith("127.")
 
 
+def _full_name(model: str) -> str:
+    """Ollama lists "gemma3" as "gemma3:latest"."""
+    return model if ":" in model else model + ":latest"
+
+
 def think_setting(model: str) -> Union[bool, str]:
     """Least thinking the model allows, because the student sees nothing while it thinks.
 
@@ -89,6 +94,15 @@ class OllamaProvider(LLMProvider):
         """Load the model into memory (or renew its keep_alive). Blocks - worker thread only."""
         # A request without a prompt only loads the model (Ollama API docs, "Load a model")
         self._client(LOAD_TIMEOUT).generate(model=model, keep_alive=KEEP_ALIVE)
+
+    def is_loaded(self, model: str, timeout: float = LIST_TIMEOUT) -> bool:
+        """Whether the model is in memory (/api/ps). Blocks - worker thread only."""
+        wanted = _full_name(model)
+        response = self._client(timeout).ps()
+        return any(
+            _full_name(m.get("model") or m.get("name") or "") == wanted
+            for m in response.get("models", [])
+        )
 
     def unload(self, model: str, timeout: float = LIST_TIMEOUT) -> None:
         """Free the model's memory now. Blocks."""

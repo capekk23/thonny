@@ -2132,10 +2132,6 @@ msgid "No provider is chosen: AIA stays switched on, but it does not answer."
 msgstr "Ingen leverandør er valt: AIA held fram med å vere slått på, men svarar ikkje."
 
 #: thonny/plugins/aia
-msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
-msgstr "Berre til demonstrasjon: svara kjem frå Claude Code som er pålogga på denne datamaskina, utan API-nøkkel. Ikkje for elevar."
-
-#: thonny/plugins/aia
 msgid "API key not set. Enter it in Tools > Options > AI Assistant."
 msgstr "API-nøkkelen er ikkje lagd inn. Skriv den inn under Verktøy > Alternativ > KI-assistent."
 
@@ -2146,3 +2142,7 @@ msgstr "API-nøkkelen vart avvist. Sjekk den under Verktøy > Alternativ > KI-as
 #: thonny/plugins/aia
 msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
 msgstr "Modellen «%s» er ikkje tilgjengeleg lenger. Vel ein annan leverandør under Verktøy > Alternativ > KI-assistent, eller installer ein nyare versjon av Thonny AIA."
+
+#: thonny/plugins/aia
+msgid "The local model is preparing the answer..."
+msgstr "Den lokale modellen førebur svaret..."

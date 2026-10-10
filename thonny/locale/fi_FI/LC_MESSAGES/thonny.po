@@ -2118,10 +2118,6 @@ msgid "No provider is chosen: AIA stays switched on, but it does not answer."
 msgstr "Palveluntarjoajaa ei ole valittu: AIA pysyy päällä, mutta ei vastaa."
 
 #: thonny/plugins/aia
-msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
-msgstr "Vain esittelyyn: vastaukset tulevat tällä tietokoneella kirjautuneesta Claude Codesta, ilman API-avainta. Ei oppilaille."
-
-#: thonny/plugins/aia
 msgid "API key not set. Enter it in Tools > Options > AI Assistant."
 msgstr "API-avainta ei ole asetettu. Syötä se kohdassa Työkalut > Asetukset > Tekoälyavustaja."
 
@@ -2132,3 +2128,7 @@ msgstr "API-avain hylättiin. Tarkista se kohdassa Työkalut > Asetukset > Teko�
 #: thonny/plugins/aia
 msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
 msgstr "Malli ”%s” ei ole enää saatavilla. Valitse toinen palveluntarjoaja kohdassa Työkalut > Asetukset > Tekoälyavustaja tai asenna uudempi Thonny AIA."
+
+#: thonny/plugins/aia
+msgid "The local model is preparing the answer..."
+msgstr "Paikallinen malli valmistelee vastausta..."
