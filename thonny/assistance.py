@@ -101,6 +101,10 @@ class AssistantView(tktextext.TextFrame):
     def handle_toplevel_response(self, msg: ToplevelResponse) -> None:
         # Can be called by event system or by Workbench
         # (if Assistant wasn't created yet but an error came)
+        if get_workbench().get_option("aia.enabled", False):
+            # Thonny AIA: the AI Assistant (thonny.plugins.aia) explains errors instead
+            return
+
         if not msg.get("user_exception") and msg.get("command_name") in [
             "execute_system_command",
             "execute_source",
