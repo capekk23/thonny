@@ -147,14 +147,15 @@ class FirstRunWindow(tk.Tk):
         self.columnconfigure(1, weight=1)
         self.rowconfigure(1, weight=1)
 
-        self.main_frame.rowconfigure(1, weight=1)
+        # No row stretches: the choices stay where they are whatever the AI note says
+        # (the detail area below them has a fixed size, see _fix_detail_size)
 
         logo_file = os.path.join(os.path.dirname(__file__), "res", "thonny.png")
         self.logo = tk.PhotoImage(file=logo_file)
         self.iconphoto(True, self.logo)  # not the Tk feather in the title bar
 
         logo_label = ttk.Label(self.main_frame, image=self.logo)
-        logo_label.grid(row=1, rowspan=6, column=1, sticky="nsew")
+        logo_label.grid(row=1, rowspan=4, column=1, sticky="n", pady=(7, 0))  # top level with the first choice
 
         self.padx = 50
         self.pady = 50
@@ -185,11 +186,15 @@ class FirstRunWindow(tk.Tk):
         )
         self.ai_combo.bind("<<ComboboxSelected>>", self.on_change_ai, True)
 
-        self.ai_note = ttk.Label(self.main_frame, wraplength=400, justify="left")
-        self.ai_note.grid(row=4, column=2, columnspan=2, sticky="nw", padx=(0, self.padx), pady=(7, 0))
+        # Detail of the AI choice (note, key or "Check again", link) in a frame of fixed size
+        self.detail = ttk.Frame(self.main_frame)
+        self.detail.grid(row=4, column=2, columnspan=2, sticky="nw", padx=(0, self.padx), pady=(7, 0))
 
-        self.key_frame = ttk.Frame(self.main_frame)
-        self.key_frame.grid(row=5, column=2, columnspan=2, sticky="nw", padx=(0, self.padx), pady=(7, 0))
+        self.ai_note = ttk.Label(self.detail, wraplength=400, justify="left")
+        self.ai_note.grid(row=1, column=1, sticky="nw")
+
+        self.key_frame = ttk.Frame(self.detail)
+        self.key_frame.grid(row=2, column=1, sticky="nw", pady=(7, 0))
         key_label = ttk.Label(self.key_frame)
         key_label.grid(row=1, column=1, sticky="w")
         self._translatable.append((key_label, lambda: tr("API key:")))
@@ -197,19 +202,19 @@ class FirstRunWindow(tk.Tk):
         key_entry = ttk.Entry(self.key_frame, textvariable=self.key_variable, show="*", width=36)
         key_entry.grid(row=1, column=2, sticky="w", padx=(10, 0))
 
-        self.check_button = ttk.Button(self.main_frame, command=self.on_check_ollama)
-        self.check_button.grid(row=5, column=2, columnspan=2, sticky="nw", pady=(7, 0))
+        self.check_button = ttk.Button(self.detail, command=self.on_check_ollama)
+        self.check_button.grid(row=2, column=1, sticky="nw", pady=(7, 0))
         self._translatable.append((self.check_button, lambda: tr("Check again")))
 
         self._link_url = ""
         self.link = ui_utils.create_action_label(
-            self.main_frame, "", lambda e: webbrowser.open(self._link_url)
+            self.detail, "", lambda e: webbrowser.open(self._link_url)
         )
-        self.link.grid(row=6, column=2, columnspan=2, sticky="nw", padx=(0, self.padx), pady=(3, 0))
+        self.link.grid(row=3, column=1, sticky="nw", pady=(3, 0))
 
         self.ok_button = ttk.Button(self.main_frame, command=self.on_ok)
         self.ok_button.grid(
-            row=7, column=3, padx=(0, self.padx), pady=(self.pady * 0.5, self.pady * 0.7), sticky="se"
+            row=5, column=3, padx=(0, self.padx), pady=(self.pady * 0.5, self.pady * 0.7), sticky="se"
         )
         self._translatable.append((self.ok_button, lambda: tr("Let's go!")))
 
@@ -256,24 +261,44 @@ class FirstRunWindow(tk.Tk):
             else:
                 widget.configure(text=text())
 
-        if self.ai in AI_CLOUD:
-            self.ai_note.configure(text=_cloud_note(self.ai))
+        self._fix_detail_size()
+        self._show_detail(self.ai, self.ollama)
+
+    def _show_detail(self, ai, ollama):
+        """Fill the detail area for one AI choice (and one Ollama state for the local model)."""
+        if ai in AI_CLOUD:
+            self.ai_note.configure(text=_cloud_note(ai))
             self.key_frame.grid()
             self.check_button.grid_remove()
-            self._set_link(self.key_urls[self.ai])
-        elif self.ai == AI_LOCAL:
-            self.ai_note.configure(text=_local_note(self.ollama, self.models[AI_LOCAL]))
+            self._set_link(self.key_urls[ai])
+        elif ai == AI_LOCAL:
+            self.ai_note.configure(text=_local_note(ollama, self.models[AI_LOCAL]))
             self.key_frame.grid_remove()
-            if self.ollama == "ready":
+            if ollama == "ready":
                 self.check_button.grid_remove()
             else:
                 self.check_button.grid()
-            self._set_link(OLLAMA_URL if self.ollama in ("missing", "stopped") else "")
+            self._set_link(OLLAMA_URL if ollama in ("missing", "stopped") else "")
         else:
             self.ai_note.configure(text=_later_note())
             self.key_frame.grid_remove()
             self.check_button.grid_remove()
             self._set_link("")
+
+    def _fix_detail_size(self):
+        """Size the detail area for its largest variant in the current language, so that
+        switching the AI choice moves nothing (only a language change may resize the window)."""
+        variants = [(p, None) for p in AI_CLOUD] + [(AI_LATER, None)]
+        variants += [(AI_LOCAL, s) for s in ("missing", "stopped", "no_model", "ready")]
+        self.detail.grid_propagate(True)
+        width = height = 0
+        for ai, ollama in variants:
+            self._show_detail(ai, ollama)
+            self.detail.update_idletasks()
+            width = max(width, self.detail.winfo_reqwidth())
+            height = max(height, self.detail.winfo_reqheight())
+        self.detail.configure(width=width, height=height)
+        self.detail.grid_propagate(False)
 
     def _set_link(self, url):
         self._link_url = url
