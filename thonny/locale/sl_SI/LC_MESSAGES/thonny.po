@@ -2102,18 +2102,6 @@ msgstr "Modela »%s« ni mogoče najti ali ni več na voljo. Izberite drug model
 msgid "Model:"
 msgstr "Model:"
 
-msgid "Ollama is installed, but it is not running. Start it, then click Check again."
-msgstr "Ollama je nameščena, vendar ne teče. Zaženite jo in kliknite Preveri znova."
-
-msgid "Ollama is running and the model %s is downloaded."
-msgstr "Ollama teče in model %s je prenesen."
-
-msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
-msgstr "Ollama teče, vendar model še ni prenesen. V ukazni vrstici zaženite »ollama pull %s« (13 GB) in kliknite Preveri znova."
-
-msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
-msgstr "Ollame ni bilo mogoče najti na tem računalniku. Namestite jo s spodnje povezave, nato v ukazni vrstici zaženite »ollama pull %s« (13 GB) in kliknite Preveri znova."
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (preprosto)"
 
@@ -2147,9 +2135,6 @@ msgstr "Ključ API je bil zavrnjen. Preverite ga v Orodja > Opcije > Pomočnik A
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Ključ je shranjen kot navadno besedilo v konfiguracijski datoteki programa Thonny."
 
-msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
-msgstr "Model teče na tem računalniku, brez ključa API in brez interneta. Potrebuje približno 14 GB prostega pomnilnika RAM; brez zmogljive grafične kartice traja odgovor 20–70 sekund."
-
 msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
 msgstr "Thonny s pomočnikom AI (AIA). Thonny je ustvaril Aivar Annamaa."
 
@@ -2179,3 +2164,18 @@ msgstr "preklicano"
 
 msgid "error detected"
 msgstr "zaznana napaka"
+
+msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
+msgstr "Ollama ni nameščena. Namestite jo s spodnje povezave in nato prenesite model: »ollama pull %s« (13 GB)."
+
+msgid "Ollama is installed but not running. Start it."
+msgstr "Ollama je nameščena, vendar ne teče. Zaženite jo."
+
+msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s' (13 GB)."
+msgstr "Ollama teče, vendar model manjka. Prenesite ga: »ollama pull %s« (13 GB)."
+
+msgid "Ollama is running and the model %s is ready."
+msgstr "Ollama teče in model %s je pripravljen."
+
+msgid "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, answers in 20-70 s."
+msgstr "Deluje brez interneta, potrebuje približno 14 GB prostega pomnilnika RAM in brez zmogljive grafične kartice odgovori v 20–70 s."

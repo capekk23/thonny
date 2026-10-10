@@ -2066,18 +2066,6 @@ msgstr "Mallia ”%s” ei löytynyt tai se ei ole enää saatavilla. Valitse to
 msgid "Model:"
 msgstr "Malli:"
 
-msgid "Ollama is installed, but it is not running. Start it, then click Check again."
-msgstr "Ollama on asennettu, mutta se ei ole käynnissä. Käynnistä se ja napsauta sitten ”Tarkista uudelleen”."
-
-msgid "Ollama is running and the model %s is downloaded."
-msgstr "Ollama on käynnissä ja malli %s on ladattu."
-
-msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
-msgstr "Ollama on käynnissä, mutta mallia ei ole vielä ladattu. Suorita komentorivillä ”ollama pull %s” (13 Gt) ja napsauta sitten ”Tarkista uudelleen”."
-
-msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
-msgstr "Ollamaa ei löytynyt tältä tietokoneelta. Asenna se alla olevasta linkistä, suorita sitten komentorivillä ”ollama pull %s” (13 Gt) ja napsauta ”Tarkista uudelleen”."
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (yksinkertainen)"
 
@@ -2111,9 +2099,6 @@ msgstr "API-avain hylättiin. Tarkista se kohdassa Työkalut > Asetukset > Teko�
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Avain tallennetaan tavallisena tekstinä Thonnyn asetustiedostoon."
 
-msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
-msgstr "Malli toimii tällä tietokoneella ilman API-avainta ja ilman internetiä. Se tarvitsee noin 14 Gt vapaata RAM-muistia; ilman tehokasta näytönohjainta vastaus kestää 20–70 sekuntia."
-
 msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
 msgstr "Thonny ja tekoälyavustaja (AIA). Thonnyn on tehnyt Aivar Annamaa."
 
@@ -2143,3 +2128,18 @@ msgstr "peruttu"
 
 msgid "error detected"
 msgstr "virhe havaittu"
+
+msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
+msgstr "Ollamaa ei ole asennettu. Asenna se alla olevasta linkistä ja lataa sitten malli: ”ollama pull %s” (13 Gt)."
+
+msgid "Ollama is installed but not running. Start it."
+msgstr "Ollama on asennettu, mutta se ei ole käynnissä. Käynnistä se."
+
+msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s' (13 GB)."
+msgstr "Ollama on käynnissä, mutta malli puuttuu. Lataa se: ”ollama pull %s” (13 Gt)."
+
+msgid "Ollama is running and the model %s is ready."
+msgstr "Ollama on käynnissä ja malli %s on valmis."
+
+msgid "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, answers in 20-70 s."
+msgstr "Toimii ilman internetiä, tarvitsee noin 14 Gt vapaata RAM-muistia ja vastaa ilman tehokasta näytönohjainta 20–70 sekunnissa."

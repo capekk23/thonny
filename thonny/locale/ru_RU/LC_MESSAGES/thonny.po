@@ -2088,18 +2088,6 @@ msgstr "Модель «%s» не найдена или больше недост
 msgid "Model:"
 msgstr "Модель:"
 
-msgid "Ollama is installed, but it is not running. Start it, then click Check again."
-msgstr "Ollama установлена, но не запущена. Запустите её, затем нажмите «Проверить снова»."
-
-msgid "Ollama is running and the model %s is downloaded."
-msgstr "Ollama запущена, и модель %s загружена."
-
-msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
-msgstr "Ollama запущена, но модель ещё не загружена. Выполните «ollama pull %s» в командной строке (13 ГБ), затем нажмите «Проверить снова»."
-
-msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
-msgstr "Ollama не найдена на этом компьютере. Установите её по ссылке ниже, затем выполните «ollama pull %s» в командной строке (13 ГБ) и нажмите «Проверить снова»."
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (простой)"
 
@@ -2133,9 +2121,6 @@ msgstr "API-ключ отклонён. Проверьте его в Инстру
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Ключ хранится открытым текстом в файле конфигурации Thonny."
 
-msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
-msgstr "Модель работает на этом компьютере, без API-ключа и без интернета. Ей нужно около 14 ГБ свободной оперативной памяти; без мощной видеокарты ответ занимает 20–70 секунд."
-
 msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
 msgstr "Thonny с ИИ-ассистентом (AIA). Автор Thonny — Aivar Annamaa."
 
@@ -2165,3 +2150,18 @@ msgstr "отменено"
 
 msgid "error detected"
 msgstr "обнаружена ошибка"
+
+msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
+msgstr "Ollama не установлена. Установите её по ссылке ниже и загрузите модель: «ollama pull %s» (13 ГБ)."
+
+msgid "Ollama is installed but not running. Start it."
+msgstr "Ollama установлена, но не запущена. Запустите её."
+
+msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s' (13 GB)."
+msgstr "Ollama запущена, но модель отсутствует. Загрузите её: «ollama pull %s» (13 ГБ)."
+
+msgid "Ollama is running and the model %s is ready."
+msgstr "Ollama запущена, и модель %s готова."
+
+msgid "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, answers in 20-70 s."
+msgstr "Работает без интернета, требует около 14 ГБ свободной оперативной памяти и без мощной видеокарты отвечает за 20–70 с."

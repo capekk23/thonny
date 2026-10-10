@@ -2076,18 +2076,6 @@ msgstr "未找到模型“%s”，或该模型已不可用。请在“工具 > �
 msgid "Model:"
 msgstr "模型："
 
-msgid "Ollama is installed, but it is not running. Start it, then click Check again."
-msgstr "Ollama 已安装，但没有运行。请启动它，然后点击“再次检查”。"
-
-msgid "Ollama is running and the model %s is downloaded."
-msgstr "Ollama 正在运行，模型 %s 已下载。"
-
-msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
-msgstr "Ollama 正在运行，但模型尚未下载。请在命令提示符中运行“ollama pull %s”（13 GB），然后点击“再次检查”。"
-
-msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
-msgstr "在这台电脑上未找到 Ollama。请通过下方链接安装，然后在命令提示符中运行“ollama pull %s”（13 GB），再点击“再次检查”。"
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi（简易）"
 
@@ -2121,9 +2109,6 @@ msgstr "API 密钥被拒绝。请在“工具 > 选项 > AI 助手”中检查�
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "密钥以明文形式保存在 Thonny 的配置文件中。"
 
-msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
-msgstr "模型在这台电脑上运行，无需 API 密钥，也无需联网。它需要约 14 GB 可用内存；如果没有性能强的显卡，每次回答需要 20-70 秒。"
-
 msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
 msgstr "带有 AI 助手（AIA）的 Thonny。Thonny 由 Aivar Annamaa 开发。"
 
@@ -2153,3 +2138,18 @@ msgstr "已取消"
 
 msgid "error detected"
 msgstr "检测到错误"
+
+msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
+msgstr "Ollama 未安装。请通过下方链接安装，然后下载模型：“ollama pull %s”（13 GB）。"
+
+msgid "Ollama is installed but not running. Start it."
+msgstr "Ollama 已安装，但没有运行。请启动它。"
+
+msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s' (13 GB)."
+msgstr "Ollama 正在运行，但缺少模型。请下载：“ollama pull %s”（13 GB）。"
+
+msgid "Ollama is running and the model %s is ready."
+msgstr "Ollama 正在运行，模型 %s 已就绪。"
+
+msgid "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, answers in 20-70 s."
+msgstr "离线运行，需要约 14 GB 可用内存；如果没有性能强的显卡，回答需要 20-70 秒。"

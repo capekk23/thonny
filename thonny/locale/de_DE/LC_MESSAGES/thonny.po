@@ -2078,18 +2078,6 @@ msgstr "Das Modell „%s“ wurde nicht gefunden oder ist nicht mehr verfügbar.
 msgid "Model:"
 msgstr "Modell:"
 
-msgid "Ollama is installed, but it is not running. Start it, then click Check again."
-msgstr "Ollama ist installiert, läuft aber nicht. Starten Sie es und klicken Sie dann auf „Erneut prüfen“."
-
-msgid "Ollama is running and the model %s is downloaded."
-msgstr "Ollama läuft und das Modell %s ist heruntergeladen."
-
-msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
-msgstr "Ollama läuft, aber das Modell ist noch nicht heruntergeladen. Führen Sie in einer Eingabeaufforderung „ollama pull %s“ aus (13 GB) und klicken Sie dann auf „Erneut prüfen“."
-
-msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
-msgstr "Ollama wurde auf diesem Computer nicht gefunden. Installieren Sie es über den Link unten, führen Sie dann in einer Eingabeaufforderung „ollama pull %s“ aus (13 GB) und klicken Sie auf „Erneut prüfen“."
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (einfach)"
 
@@ -2123,9 +2111,6 @@ msgstr "Der API-Schlüssel wurde abgelehnt. Prüfen Sie ihn unter Werkzeuge > Op
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Der Schlüssel wird als Klartext in der Konfigurationsdatei von Thonny gespeichert."
 
-msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
-msgstr "Das Modell läuft auf diesem Computer, ohne API-Schlüssel und ohne Internet. Es braucht etwa 14 GB freien Arbeitsspeicher (RAM); ohne leistungsstarke Grafikkarte dauert eine Antwort 20–70 Sekunden."
-
 msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
 msgstr "Thonny mit dem KI-Assistenten (AIA). Thonny wird von Aivar Annamaa entwickelt."
 
@@ -2155,3 +2140,18 @@ msgstr "abgebrochen"
 
 msgid "error detected"
 msgstr "Fehler erkannt"
+
+msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
+msgstr "Ollama ist nicht installiert. Installieren Sie es über den Link unten und laden Sie dann das Modell herunter: „ollama pull %s“ (13 GB)."
+
+msgid "Ollama is installed but not running. Start it."
+msgstr "Ollama ist installiert, läuft aber nicht. Starten Sie es."
+
+msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s' (13 GB)."
+msgstr "Ollama läuft, aber das Modell fehlt. Laden Sie es herunter: „ollama pull %s“ (13 GB)."
+
+msgid "Ollama is running and the model %s is ready."
+msgstr "Ollama läuft und das Modell %s ist bereit."
+
+msgid "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, answers in 20-70 s."
+msgstr "Läuft offline, braucht etwa 14 GB freien Arbeitsspeicher (RAM) und antwortet ohne leistungsstarke Grafikkarte in 20–70 s."

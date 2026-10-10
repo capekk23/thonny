@@ -2087,18 +2087,6 @@ msgstr "'%s' modeli bulunamadı veya artık kullanılamıyor. Araçlar > Seçene
 msgid "Model:"
 msgstr "Model:"
 
-msgid "Ollama is installed, but it is not running. Start it, then click Check again."
-msgstr "Ollama kurulu, ancak çalışmıyor. Başlatın, ardından Tekrar kontrol et düğmesine tıklayın."
-
-msgid "Ollama is running and the model %s is downloaded."
-msgstr "Ollama çalışıyor ve %s modeli indirilmiş."
-
-msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
-msgstr "Ollama çalışıyor, ancak model henüz indirilmemiş. Komut isteminde 'ollama pull %s' komutunu çalıştırın (13 GB), ardından Tekrar kontrol et düğmesine tıklayın."
-
-msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
-msgstr "Bu bilgisayarda Ollama bulunamadı. Aşağıdaki bağlantıdan kurun, ardından komut isteminde 'ollama pull %s' komutunu çalıştırın (13 GB) ve Tekrar kontrol et düğmesine tıklayın."
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (basit)"
 
@@ -2132,9 +2120,6 @@ msgstr "API anahtarı reddedildi. Araçlar > Seçenekler > AI Yardımcısı böl
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Anahtar, Thonny'nin yapılandırma dosyasında düz metin olarak saklanır."
 
-msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
-msgstr "Model bu bilgisayarda, API anahtarı ve internet olmadan çalışır. Yaklaşık 14 GB boş RAM gerekir; güçlü bir ekran kartı yoksa bir yanıt 20-70 saniye sürer."
-
 msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
 msgstr "AI Yardımcısı (AIA) ile Thonny. Thonny, Aivar Annamaa tarafından geliştirilmiştir."
 
@@ -2164,3 +2149,18 @@ msgstr "iptal edildi"
 
 msgid "error detected"
 msgstr "hata algılandı"
+
+msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
+msgstr "Ollama kurulu değil. Aşağıdaki bağlantıdan kurun, ardından modeli indirin: 'ollama pull %s' (13 GB)."
+
+msgid "Ollama is installed but not running. Start it."
+msgstr "Ollama kurulu, ancak çalışmıyor. Başlatın."
+
+msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s' (13 GB)."
+msgstr "Ollama çalışıyor, ancak model eksik. İndirin: 'ollama pull %s' (13 GB)."
+
+msgid "Ollama is running and the model %s is ready."
+msgstr "Ollama çalışıyor ve %s modeli hazır."
+
+msgid "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, answers in 20-70 s."
+msgstr "İnternetsiz çalışır, yaklaşık 14 GB boş RAM gerektirir ve güçlü bir ekran kartı yoksa 20-70 saniyede yanıt verir."

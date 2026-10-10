@@ -98,27 +98,25 @@ def _cloud_note(provider):
 
 
 def _local_note(state, model):
+    # Kept about as long as the cloud note (Jakub 2026-10-10): the detail area is sized for the
+    # longest variant, so a long local note left the usual dialog half empty.
     if state == "missing":
         text = tr(
-            "Ollama was not found on this computer. Install it from the link below, then run "
-            "'ollama pull %s' in a command prompt (13 GB) and click Check again."
+            "Ollama is not installed. Install it from the link below, then download the model: "
+            "'ollama pull %s' (13 GB)."
         ) % model
     elif state == "stopped":
-        text = tr("Ollama is installed, but it is not running. Start it, then click Check again.")
+        text = tr("Ollama is installed but not running. Start it.")
     elif state == "no_model":
-        text = tr(
-            "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a "
-            "command prompt (13 GB), then click Check again."
-        ) % model
+        text = tr("Ollama is running, but the model is missing. Download it: 'ollama pull %s' (13 GB).") % model
     else:
-        text = tr("Ollama is running and the model %s is downloaded.") % model
+        text = tr("Ollama is running and the model %s is ready.") % model
     return (
         text
         + " "
         + tr(
-            "The model runs on this computer, without an API key and without the internet. "
-            "It needs about 14 GB of free RAM; without a strong graphics card an answer takes "
-            "20-70 seconds."
+            "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, "
+            "answers in 20-70 s."
         )
     )
 
@@ -161,6 +159,7 @@ class FirstRunWindow(tk.Tk):
         self.padx = 50
         self.pady = 50
         self._translatable = []  # (widget, function giving its current text)
+        self._combo_labels = []  # labels of the choices, their width sets the note width
 
         languages.set_language(DEFAULT_LANGUAGE_CODE)
         self.language_variable = ui_utils.create_string_var(
@@ -201,7 +200,7 @@ class FirstRunWindow(tk.Tk):
 
         self.ok_button = ttk.Button(self.main_frame, command=self.on_ok)
         self.ok_button.grid(
-            row=5, column=3, padx=(0, self.padx), pady=(self.pady * 0.5, self.pady * 0.7), sticky="se"
+            row=5, column=3, padx=(0, self.padx), pady=(12, 20), sticky="se"
         )
         self._translatable.append((self.ok_button, lambda: tr("Let's go!")))
 
@@ -256,6 +255,10 @@ class FirstRunWindow(tk.Tk):
 
     def _make_detail(self, frame):
         d = types.SimpleNamespace(frame=frame)
+        # Empty rows 0 and 4 take the spare height of the fixed-size frame equally, so a shorter
+        # variant sits in the middle between the choices and the button (Jakub 2026-10-10)
+        frame.rowconfigure(0, weight=1)
+        frame.rowconfigure(4, weight=1)
         d.note = ttk.Label(frame, wraplength=400, justify="left")
         d.note.grid(row=1, column=1, sticky="nw")
         d.key_frame = ttk.Frame(frame)
@@ -305,6 +308,12 @@ class FirstRunWindow(tk.Tk):
         the hidden probe, so that switching the AI choice moves and redraws nothing."""
         variants = [(p, None) for p in AI_CLOUD] + [(AI_LATER, None)]
         variants += [(AI_LOCAL, s) for s in ("missing", "stopped", "no_model", "ready")]
+        # the note uses the full width of the choices above it (labels + combos), not a fixed
+        # 400 px: fewer lines, so the area reserved for the longest variant is lower
+        self.update_idletasks()
+        wrap = max(l.winfo_reqwidth() for l in self._combo_labels) + 10 + self.ai_combo.winfo_reqwidth()
+        for d in (self.detail, self.probe):
+            d.note.configure(wraplength=wrap)
         width = height = 0
         for ai, ollama in variants:
             self._show_detail(self.probe, ai, ollama)
@@ -319,6 +328,7 @@ class FirstRunWindow(tk.Tk):
         label = ttk.Label(self.main_frame)
         label.grid(row=row, column=2, sticky="sw", pady=(pady, 0))
         self._translatable.append((label, label_text))
+        self._combo_labels.append(label)
         assert isinstance(variable, tk.Variable)
         combobox = ttk.Combobox(
             self.main_frame,

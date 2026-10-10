@@ -2088,18 +2088,6 @@ msgstr "Modelul „%s” nu a fost găsit sau nu mai este disponibil. Alegeți a
 msgid "Model:"
 msgstr "Model:"
 
-msgid "Ollama is installed, but it is not running. Start it, then click Check again."
-msgstr "Ollama este instalat, dar nu rulează. Porniți-l, apoi faceți clic pe Verifică din nou."
-
-msgid "Ollama is running and the model %s is downloaded."
-msgstr "Ollama rulează și modelul %s este descărcat."
-
-msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
-msgstr "Ollama rulează, dar modelul nu este încă descărcat. Rulați „ollama pull %s” în linia de comandă (13 GB), apoi faceți clic pe Verifică din nou."
-
-msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
-msgstr "Ollama nu a fost găsit pe acest computer. Instalați-l de la linkul de mai jos, apoi rulați „ollama pull %s” în linia de comandă (13 GB) și faceți clic pe Verifică din nou."
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (simplu)"
 
@@ -2133,9 +2121,6 @@ msgstr "Cheia API a fost respinsă. Verificați-o în Instrumente > Opțiuni > A
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Cheia este salvată ca text simplu în fișierul de configurare al Thonny."
 
-msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
-msgstr "Modelul rulează pe acest computer, fără cheie API și fără internet. Are nevoie de aproximativ 14 GB de RAM liberă; fără o placă grafică puternică, un răspuns durează 20–70 de secunde."
-
 msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
 msgstr "Thonny cu Asistentul AI (AIA). Thonny este creat de Aivar Annamaa."
 
@@ -2165,3 +2150,18 @@ msgstr "anulat"
 
 msgid "error detected"
 msgstr "eroare detectată"
+
+msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
+msgstr "Ollama nu este instalat. Instalați-l de la linkul de mai jos, apoi descărcați modelul: „ollama pull %s” (13 GB)."
+
+msgid "Ollama is installed but not running. Start it."
+msgstr "Ollama este instalat, dar nu rulează. Porniți-l."
+
+msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s' (13 GB)."
+msgstr "Ollama rulează, dar lipsește modelul. Descărcați-l: „ollama pull %s” (13 GB)."
+
+msgid "Ollama is running and the model %s is ready."
+msgstr "Ollama rulează și modelul %s este pregătit."
+
+msgid "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, answers in 20-70 s."
+msgstr "Rulează fără internet, are nevoie de aproximativ 14 GB de RAM liberă și, fără o placă grafică puternică, răspunde în 20–70 s."

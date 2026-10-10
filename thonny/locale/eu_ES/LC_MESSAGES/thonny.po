@@ -2088,18 +2088,6 @@ msgstr "Ez da «%s» eredua aurkitu, edo jada ez dago erabilgarri. Hautatu beste
 msgid "Model:"
 msgstr "Eredua:"
 
-msgid "Ollama is installed, but it is not running. Start it, then click Check again."
-msgstr "Ollama instalatuta dago, baina ez dago martxan. Abiarazi, eta sakatu «Egiaztatu berriro»."
-
-msgid "Ollama is running and the model %s is downloaded."
-msgstr "Ollama martxan dago eta %s eredua deskargatuta dago."
-
-msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
-msgstr "Ollama martxan dago, baina eredua ez dago oraindik deskargatuta. Exekutatu «ollama pull %s» komando-lerroan (13 GB), eta sakatu «Egiaztatu berriro»."
-
-msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
-msgstr "Ez da Ollama aurkitu ordenagailu honetan. Instalatu beheko estekatik, exekutatu «ollama pull %s» komando-lerroan (13 GB) eta sakatu «Egiaztatu berriro»."
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (sinplea)"
 
@@ -2133,9 +2121,6 @@ msgstr "API gakoa baztertu egin da. Egiaztatu hemen: Tresnak > Aukerak > AA lagu
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Gakoa testu arrunt gisa gordetzen da Thonnyren konfigurazio-fitxategian."
 
-msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
-msgstr "Eredua ordenagailu honetan exekutatzen da, API gakorik eta Internetik gabe. 14 GB inguru RAM libre behar ditu; txartel grafiko indartsurik gabe, erantzun batek 20-70 segundo behar ditu."
-
 msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
 msgstr "Thonny AA laguntzailearekin (AIA). Thonnyren egilea Aivar Annamaa da."
 
@@ -2165,3 +2150,18 @@ msgstr "bertan behera utzita"
 
 msgid "error detected"
 msgstr "errorea detektatu da"
+
+msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
+msgstr "Ollama ez dago instalatuta. Instalatu beheko estekatik eta deskargatu eredua: «ollama pull %s» (13 GB)."
+
+msgid "Ollama is installed but not running. Start it."
+msgstr "Ollama instalatuta dago, baina ez dago martxan. Abiarazi."
+
+msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s' (13 GB)."
+msgstr "Ollama martxan dago, baina eredua falta da. Deskargatu: «ollama pull %s» (13 GB)."
+
+msgid "Ollama is running and the model %s is ready."
+msgstr "Ollama martxan dago eta %s eredua prest dago."
+
+msgid "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, answers in 20-70 s."
+msgstr "Internetik gabe dabil, 14 GB inguru RAM libre behar ditu eta, txartel grafiko indartsurik gabe, 20-70 segundotan erantzuten du."

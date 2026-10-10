@@ -2073,18 +2073,6 @@ msgstr "Le modèle « %s » est introuvable ou n'est plus disponible. Choisiss
 msgid "Model:"
 msgstr "Modèle :"
 
-msgid "Ollama is installed, but it is not running. Start it, then click Check again."
-msgstr "Ollama est installé, mais n'est pas lancé. Démarrez-le, puis cliquez sur « Vérifier à nouveau »."
-
-msgid "Ollama is running and the model %s is downloaded."
-msgstr "Ollama est lancé et le modèle %s est téléchargé."
-
-msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
-msgstr "Ollama est lancé, mais le modèle n'est pas encore téléchargé. Exécutez « ollama pull %s » dans une invite de commandes (13 Go), puis cliquez sur « Vérifier à nouveau »."
-
-msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
-msgstr "Ollama est introuvable sur cet ordinateur. Installez-le depuis le lien ci-dessous, puis exécutez « ollama pull %s » dans une invite de commandes (13 Go) et cliquez sur « Vérifier à nouveau »."
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (simple)"
 
@@ -2118,9 +2106,6 @@ msgstr "La clé API a été refusée. Vérifiez-la dans Outils > Options > Assis
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "La clé est enregistrée en texte brut dans le fichier de configuration de Thonny."
 
-msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
-msgstr "Le modèle fonctionne sur cet ordinateur, sans clé API et sans Internet. Il lui faut environ 14 Go de RAM libre ; sans carte graphique puissante, une réponse prend de 20 à 70 secondes."
-
 msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
 msgstr "Thonny avec l'Assistant IA (AIA). Thonny a été créé par Aivar Annamaa."
 
@@ -2150,3 +2135,18 @@ msgstr "annulé"
 
 msgid "error detected"
 msgstr "erreur détectée"
+
+msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
+msgstr "Ollama n'est pas installé. Installez-le depuis le lien ci-dessous, puis téléchargez le modèle : « ollama pull %s » (13 Go)."
+
+msgid "Ollama is installed but not running. Start it."
+msgstr "Ollama est installé, mais n'est pas lancé. Démarrez-le."
+
+msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s' (13 GB)."
+msgstr "Ollama est lancé, mais le modèle est absent. Téléchargez-le : « ollama pull %s » (13 Go)."
+
+msgid "Ollama is running and the model %s is ready."
+msgstr "Ollama est lancé et le modèle %s est prêt."
+
+msgid "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, answers in 20-70 s."
+msgstr "Il fonctionne hors ligne, nécessite environ 14 Go de RAM libre et, sans carte graphique puissante, répond en 20 à 70 s."

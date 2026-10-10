@@ -2088,18 +2088,6 @@ msgstr "Líkanið '%s' fannst ekki eða er ekki lengur í boði. Veldu annað l�
 msgid "Model:"
 msgstr "Líkan:"
 
-msgid "Ollama is installed, but it is not running. Start it, then click Check again."
-msgstr "Ollama er uppsett en ekki í gangi. Ræstu það og smelltu svo á Athuga aftur."
-
-msgid "Ollama is running and the model %s is downloaded."
-msgstr "Ollama er í gangi og líkanið %s hefur verið sótt."
-
-msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
-msgstr "Ollama er í gangi en líkanið hefur ekki verið sótt enn. Keyrðu 'ollama pull %s' í skipanalínu (13 GB) og smelltu svo á Athuga aftur."
-
-msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
-msgstr "Ollama fannst ekki á þessari tölvu. Settu það upp af tenglinum hér fyrir neðan, keyrðu síðan 'ollama pull %s' í skipanalínu (13 GB) og smelltu á Athuga aftur."
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (einfalt)"
 
@@ -2133,9 +2121,6 @@ msgstr "API-lyklinum var hafnað. Athugaðu hann í Tól > Valkostir > Gervigrei
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Lykillinn er vistaður sem venjulegur texti í stillingaskrá Thonny."
 
-msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
-msgstr "Líkanið keyrir á þessari tölvu, án API-lykils og án internets. Það þarf um 14 GB af lausu vinnsluminni (RAM); án öflugs skjákorts tekur svar 20-70 sekúndur."
-
 msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
 msgstr "Thonny með gervigreindaraðstoð (AIA). Aivar Annamaa bjó til Thonny."
 
@@ -2165,3 +2150,18 @@ msgstr "hætt við"
 
 msgid "error detected"
 msgstr "villa fannst"
+
+msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
+msgstr "Ollama er ekki uppsett. Settu það upp af tenglinum hér fyrir neðan og sæktu svo líkanið: 'ollama pull %s' (13 GB)."
+
+msgid "Ollama is installed but not running. Start it."
+msgstr "Ollama er uppsett en ekki í gangi. Ræstu það."
+
+msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s' (13 GB)."
+msgstr "Ollama er í gangi en líkanið vantar. Sæktu það: 'ollama pull %s' (13 GB)."
+
+msgid "Ollama is running and the model %s is ready."
+msgstr "Ollama er í gangi og líkanið %s er tilbúið."
+
+msgid "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, answers in 20-70 s."
+msgstr "Keyrir án internets, þarf um 14 GB af lausu vinnsluminni (RAM) og svarar á 20-70 sekúndum án öflugs skjákorts."

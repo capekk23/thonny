@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-10-10 16:19+0200\n"
+"POT-Creation-Date: 2026-10-10 18:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -558,71 +558,67 @@ msgid ""
 "Options > AI Assistant."
 msgstr ""
 
-#: thonny/first_run.py:103
+#: thonny/first_run.py:105
 #, python-format
 msgid ""
-"Ollama was not found on this computer. Install it from the link below, "
-"then run 'ollama pull %s' in a command prompt (13 GB) and click Check "
-"again."
+"Ollama is not installed. Install it from the link below, then download "
+"the model: 'ollama pull %s' (13 GB)."
 msgstr ""
 
-#: thonny/first_run.py:107
-msgid ""
-"Ollama is installed, but it is not running. Start it, then click Check "
-"again."
+#: thonny/first_run.py:109
+msgid "Ollama is installed but not running. Start it."
 msgstr ""
 
-#: thonny/first_run.py:110
+#: thonny/first_run.py:111
 #, python-format
 msgid ""
-"Ollama is running, but the model is not downloaded yet. Run 'ollama pull "
-"%s' in a command prompt (13 GB), then click Check again."
+"Ollama is running, but the model is missing. Download it: 'ollama pull "
+"%s' (13 GB)."
 msgstr ""
 
-#: thonny/first_run.py:114
+#: thonny/first_run.py:113
 #, python-format
-msgid "Ollama is running and the model %s is downloaded."
+msgid "Ollama is running and the model %s is ready."
 msgstr ""
 
-#: thonny/first_run.py:119
+#: thonny/first_run.py:118
 msgid ""
-"The model runs on this computer, without an API key and without the "
-"internet. It needs about 14 GB of free RAM; without a strong graphics "
-"card an answer takes 20-70 seconds."
+"It runs offline, needs about 14 GB of free RAM and, without a strong "
+"graphics card, answers in 20-70 s."
 msgstr ""
 
-#: thonny/first_run.py:128
+#: thonny/first_run.py:126
 msgid ""
 "AIA stays switched on, but it will answer only after you choose a "
 "provider in Tools > Options > AI Assistant."
 msgstr ""
 
-#: thonny/first_run.py:171
+#: thonny/first_run.py:170
 msgid "Language:"
 msgstr ""
 
-#: thonny/first_run.py:179
+#: thonny/first_run.py:178
 msgid "Initial settings:"
 msgstr ""
 
-#: thonny/first_run.py:186
+#: thonny/first_run.py:185
 msgid "AI assistant:"
 msgstr ""
 
-#: thonny/first_run.py:206
+#: thonny/first_run.py:205
 msgid "Let's go!"
 msgstr ""
 
-#: thonny/first_run.py:244
+#: thonny/first_run.py:243
 #, python-format
 msgid "Welcome to %s!"
 msgstr ""
 
-#: thonny/first_run.py:275
+#: thonny/first_run.py:278
 msgid "API key:"
 msgstr ""
 
-#: thonny/first_run.py:276
+#: thonny/first_run.py:279
 msgid "Check again"
 msgstr ""
 

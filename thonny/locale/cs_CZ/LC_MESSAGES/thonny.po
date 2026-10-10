@@ -2412,29 +2412,29 @@ msgid "Answers come from %s. You need an API key: create it at the link below, o
 msgstr "Odpovědi poskytuje %s. Potřebujete API klíč: vytvořte si ho na odkazu níže, nebo vám ho dá vyučující. Zadat ho můžete i později v Nástroje > Možnosti > AI asistent."
 
 #: thonny/first_run.py
-msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
-msgstr "Ollama na tomto počítači nebyla nalezena. Nainstalujte ji z odkazu níže, pak v příkazovém řádku spusťte „ollama pull %s“ (13 GB) a klikněte na Zkontrolovat znovu."
-
-#: thonny/first_run.py
-msgid "Ollama is installed, but it is not running. Start it, then click Check again."
-msgstr "Ollama je nainstalovaná, ale neběží. Spusťte ji a klikněte na Zkontrolovat znovu."
-
-#: thonny/first_run.py
-msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
-msgstr "Ollama běží, ale model ještě není stažený. V příkazovém řádku spusťte „ollama pull %s“ (13 GB) a klikněte na Zkontrolovat znovu."
-
-#: thonny/first_run.py
-msgid "Ollama is running and the model %s is downloaded."
-msgstr "Ollama běží a model %s je stažený."
-
-#: thonny/first_run.py
-msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
-msgstr "Model běží na tomto počítači, bez API klíče a bez internetu. Potřebuje asi 14 GB volné paměti RAM; bez výkonné grafické karty trvá odpověď 20–70 sekund."
-
-#: thonny/first_run.py
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA zůstane zapnutá, ale odpovídat začne, až v Nástroje > Možnosti > AI asistent vyberete poskytovatele."
 
 #: thonny/first_run.py
 msgid "Check again"
 msgstr "Zkontrolovat znovu"
+
+#: thonny/first_run.py
+msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
+msgstr "Ollama není nainstalovaná. Nainstalujte ji z odkazu níže a stáhněte model: „ollama pull %s“ (13 GB)."
+
+#: thonny/first_run.py
+msgid "Ollama is installed but not running. Start it."
+msgstr "Ollama je nainstalovaná, ale neběží. Spusťte ji."
+
+#: thonny/first_run.py
+msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s' (13 GB)."
+msgstr "Ollama běží, ale chybí model. Stáhněte ho: „ollama pull %s“ (13 GB)."
+
+#: thonny/first_run.py
+msgid "Ollama is running and the model %s is ready."
+msgstr "Ollama běží a model %s je připravený."
+
+#: thonny/first_run.py
+msgid "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, answers in 20-70 s."
+msgstr "Běží bez internetu, potřebuje asi 14 GB volné paměti RAM a bez výkonné grafické karty odpovídá za 20–70 s."

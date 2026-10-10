@@ -2050,18 +2050,6 @@ msgstr "Моделът „%s“ не е намерен или вече не е �
 msgid "Model:"
 msgstr "Модел:"
 
-msgid "Ollama is installed, but it is not running. Start it, then click Check again."
-msgstr "Ollama е инсталирана, но не работи. Стартирайте я и щракнете върху „Провери отново“."
-
-msgid "Ollama is running and the model %s is downloaded."
-msgstr "Ollama работи и моделът %s е изтеглен."
-
-msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
-msgstr "Ollama работи, но моделът още не е изтеглен. Изпълнете „ollama pull %s“ в командния ред (13 GB) и щракнете върху „Провери отново“."
-
-msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
-msgstr "Ollama не е намерена на този компютър. Инсталирайте я от връзката по-долу, след това изпълнете „ollama pull %s“ в командния ред (13 GB) и щракнете върху „Провери отново“."
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (опростен)"
 
@@ -2095,9 +2083,6 @@ msgstr "API ключът беше отхвърлен. Проверете го в
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Ключът се съхранява като обикновен текст в конфигурационния файл на Thonny."
 
-msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
-msgstr "Моделът работи на този компютър, без API ключ и без интернет. Нужни са му около 14 GB свободна RAM памет; без мощна видеокарта един отговор отнема 20–70 секунди."
-
 msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
 msgstr "Thonny с AI асистент (AIA). Thonny е създаден от Aivar Annamaa."
 
@@ -2127,3 +2112,18 @@ msgstr "отменено"
 
 msgid "error detected"
 msgstr "открита грешка"
+
+msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
+msgstr "Ollama не е инсталирана. Инсталирайте я от връзката по-долу и изтеглете модела: „ollama pull %s“ (13 GB)."
+
+msgid "Ollama is installed but not running. Start it."
+msgstr "Ollama е инсталирана, но не работи. Стартирайте я."
+
+msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s' (13 GB)."
+msgstr "Ollama работи, но моделът липсва. Изтеглете го: „ollama pull %s“ (13 GB)."
+
+msgid "Ollama is running and the model %s is ready."
+msgstr "Ollama работи и моделът %s е готов."
+
+msgid "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, answers in 20-70 s."
+msgstr "Работи без интернет, нужни са му около 14 GB свободна RAM памет, а без мощна видеокарта отговаря за 20–70 с."
