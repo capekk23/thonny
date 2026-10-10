@@ -1988,26 +1988,17 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "Një çelës është ruajtur tashmë; nëse futni një të ri, ai do ta zëvendësojë."
-
 msgid "AI Assistant"
 msgstr "Asistenti AI"
 
 msgid "AI assistant:"
 msgstr "Asistenti AI:"
 
-msgid "AIA - %s API key"
-msgstr "AIA – çelësi API për %s"
-
 msgid "AIA - AI Mentor Assistant"
 msgstr "AIA – asistent dhe mentor AI"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA mbetet e aktivizuar, por do të përgjigjet vetëm pasi të zgjidhni një ofrues te Mjete > Opsione > Asistenti AI."
-
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr "Çelësi API nuk është vendosur. Shkoni te Mjete > Opsione > Asistenti AI > Vendos çelësin API..."
 
 msgid "API key:"
 msgstr "Çelësi API:"
@@ -2045,23 +2036,14 @@ msgstr "Konteksti:"
 msgid "Direct"
 msgstr "I drejtpërdrejtë"
 
-msgid "Enter your %s API key:"
-msgstr "Futni çelësin API për %s:"
-
 msgid "Explanatory"
 msgstr "Shpjegues"
-
-msgid "Get one at:"
-msgstr "Merreni te:"
 
 msgid "I will set it up later"
 msgstr "Do ta konfiguroj më vonë"
 
 msgid "Initial settings:"
 msgstr "Cilësimet fillestare:"
-
-msgid "LLM Provider:"
-msgstr "Ofruesi LLM:"
 
 msgid "Language:"
 msgstr "Gjuha:"
@@ -2075,23 +2057,11 @@ msgstr "Po ngarkohet modeli lokal..."
 msgid "Local model (Ollama, %s)"
 msgstr "Model lokal (Ollama, %s)"
 
-msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
-msgstr "Modeli «%s» nuk u gjet ose nuk është më i disponueshëm. Zgjidhni një model tjetër te Mjete > Opsione > Asistenti AI."
-
-msgid "Model:"
-msgstr "Modeli:"
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (i thjeshtë)"
 
-msgid "Remove key"
-msgstr "Hiq çelësin"
-
 msgid "Send"
 msgstr "Dërgo"
-
-msgid "Set API Key..."
-msgstr "Vendos çelësin API..."
 
 msgid "Socratic"
 msgstr "Sokratik"
@@ -2107,9 +2077,6 @@ msgstr "Ofruesi «%s» ka nevojë për paketën Python «%s», e cila mungon. Ri
 
 msgid "The AI service did not answer in time. Try again."
 msgstr "Shërbimi AI nuk u përgjigj në kohë. Provoni përsëri."
-
-msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
-msgstr "Çelësi API u refuzua. Kontrollojeni te Mjete > Opsione > Asistenti AI (Vendos çelësin API...)."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Çelësi ruhet si tekst i thjeshtë në kartelën e konfigurimit të Thonny."
@@ -2156,3 +2123,27 @@ msgstr "Funksionon pa internet, i duhen rreth 14 GB RAM të lirë dhe, pa një k
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Ende nuk është zgjedhur asnjë ofrues AI. Zgjidhni një te Mjete > Opsione > Asistenti AI."
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "Përgjigjet vijnë nga %s. Ju duhet një çelës API: krijojeni te lidhja më poshtë ose merreni nga mësuesi."
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "Nuk është zgjedhur asnjë ofrues: AIA mbetet e aktivizuar, por nuk përgjigjet."
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "Vetëm për demonstrim: përgjigjet vijnë nga Claude Code i identifikuar në këtë kompjuter, pa çelës API. Jo për nxënësit."
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "Çelësi API nuk është vendosur. Futeni te Mjete > Opsione > Asistenti AI."
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "Çelësi API u refuzua. Kontrollojeni te Mjete > Opsione > Asistenti AI."
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "Modeli «%s» nuk është më i disponueshëm. Zgjidhni një ofrues tjetër te Mjete > Opsione > Asistenti AI ose instaloni një version më të ri të Thonny AIA."

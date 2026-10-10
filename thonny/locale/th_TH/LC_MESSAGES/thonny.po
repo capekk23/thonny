@@ -1995,26 +1995,17 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "มีคีย์บันทึกไว้แล้ว การใส่คีย์ใหม่จะแทนที่คีย์เดิม"
-
 msgid "AI Assistant"
 msgstr "ผู้ช่วย AI"
 
 msgid "AI assistant:"
 msgstr "ผู้ช่วย AI:"
 
-msgid "AIA - %s API key"
-msgstr "AIA - คีย์ API ของ %s"
-
 msgid "AIA - AI Mentor Assistant"
 msgstr "AIA - ผู้ช่วยและพี่เลี้ยง AI"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA ยังคงเปิดอยู่ แต่จะตอบได้ก็ต่อเมื่อคุณเลือกผู้ให้บริการใน เครื่องมือ > ตัวเลือก > ผู้ช่วย AI แล้ว"
-
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr "ยังไม่ได้ตั้งค่าคีย์ API ไปที่ เครื่องมือ > ตัวเลือก > ผู้ช่วย AI > ตั้งค่าคีย์ API..."
 
 msgid "API key:"
 msgstr "คีย์ API:"
@@ -2052,23 +2043,14 @@ msgstr "บริบท:"
 msgid "Direct"
 msgstr "แบบตรงประเด็น"
 
-msgid "Enter your %s API key:"
-msgstr "ใส่คีย์ API ของ %s:"
-
 msgid "Explanatory"
 msgstr "แบบอธิบาย"
-
-msgid "Get one at:"
-msgstr "ขอรับได้ที่:"
 
 msgid "I will set it up later"
 msgstr "ไว้ตั้งค่าทีหลัง"
 
 msgid "Initial settings:"
 msgstr "การตั้งค่าเริ่มต้น:"
-
-msgid "LLM Provider:"
-msgstr "ผู้ให้บริการ LLM:"
 
 msgid "Language:"
 msgstr "ภาษา:"
@@ -2082,23 +2064,11 @@ msgstr "กำลังโหลดโมเดลในเครื่อง...
 msgid "Local model (Ollama, %s)"
 msgstr "โมเดลในเครื่อง (Ollama, %s)"
 
-msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
-msgstr "ไม่พบโมเดล '%s' หรือโมเดลนี้ไม่มีให้ใช้แล้ว เลือกโมเดลอื่นใน เครื่องมือ > ตัวเลือก > ผู้ช่วย AI"
-
-msgid "Model:"
-msgstr "โมเดล:"
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (แบบง่าย)"
 
-msgid "Remove key"
-msgstr "ลบคีย์"
-
 msgid "Send"
 msgstr "ส่ง"
-
-msgid "Set API Key..."
-msgstr "ตั้งค่าคีย์ API..."
 
 msgid "Socratic"
 msgstr "แบบโสเครตีส"
@@ -2114,9 +2084,6 @@ msgstr "ผู้ให้บริการ '%s' ต้องใช้แพ็
 
 msgid "The AI service did not answer in time. Try again."
 msgstr "บริการ AI ไม่ตอบกลับภายในเวลาที่กำหนด ลองอีกครั้ง"
-
-msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
-msgstr "คีย์ API ถูกปฏิเสธ ตรวจสอบได้ใน เครื่องมือ > ตัวเลือก > ผู้ช่วย AI (ตั้งค่าคีย์ API...)"
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "คีย์ถูกเก็บเป็นข้อความธรรมดาในไฟล์การตั้งค่าของ Thonny"
@@ -2163,3 +2130,27 @@ msgstr "ทำงานแบบออฟไลน์ ต้องมี RAM ว
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "ยังไม่ได้เลือกผู้ให้บริการ AI เลือกผู้ให้บริการใน เครื่องมือ > ตัวเลือก > ผู้ช่วย AI"
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "คำตอบมาจาก %s คุณต้องมีคีย์ API: สร้างได้จากลิงก์ด้านล่าง หรือขอจากครูของคุณ"
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "ยังไม่ได้เลือกผู้ให้บริการ: AIA ยังคงเปิดอยู่ แต่จะไม่ตอบ"
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "สำหรับการสาธิตเท่านั้น: คำตอบมาจาก Claude Code ที่ลงชื่อเข้าใช้บนคอมพิวเตอร์เครื่องนี้ โดยไม่ต้องใช้คีย์ API ไม่เหมาะสำหรับนักเรียน"
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "ยังไม่ได้ตั้งค่าคีย์ API ใส่คีย์ได้ใน เครื่องมือ > ตัวเลือก > ผู้ช่วย AI"
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "คีย์ API ถูกปฏิเสธ ตรวจสอบได้ใน เครื่องมือ > ตัวเลือก > ผู้ช่วย AI"
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "โมเดล '%s' ไม่มีให้ใช้แล้ว เลือกผู้ให้บริการอื่นใน เครื่องมือ > ตัวเลือก > ผู้ช่วย AI หรือติดตั้ง Thonny AIA เวอร์ชันใหม่กว่า"

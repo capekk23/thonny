@@ -66,15 +66,16 @@ def test_nothing_is_loaded_for_other_providers(keeper, fake_thonny):
     assert keeper.ollama.requests == []
 
 
-def test_switching_model_or_provider_frees_the_previous_model(keeper, fake_thonny):
+def test_switching_provider_frees_the_model(keeper, fake_thonny):
     keeper._tick()
-    fake_thonny.options["aia.model"] = "qwen3:8b"
+    fake_thonny.options["aia.model"] = "qwen3:8b"  # stored by an earlier version: ignored
     keeper._tick()
-    assert keeper.ollama.requests[1:] == [("unload", "gpt-oss:20b"), ("preload", "qwen3:8b")]
+    assert ("preload", "qwen3:8b") not in keeper.ollama.requests
+    assert ("unload", "gpt-oss:20b") not in keeper.ollama.requests
 
     fake_thonny.options["aia.provider"] = "anthropic"
     keeper._tick()
-    assert keeper.ollama.requests[-1] == ("unload", "qwen3:8b")
+    assert keeper.ollama.requests[-1] == ("unload", "gpt-oss:20b")
 
 
 def test_closing_thonny_frees_the_model(keeper):

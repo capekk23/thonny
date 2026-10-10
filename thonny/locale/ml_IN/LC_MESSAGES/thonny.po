@@ -1945,26 +1945,17 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "ഒരു കീ ഇതിനകം സംഭരിച്ചിട്ടുണ്ട്; പുതിയത് നൽകിയാൽ അത് മാറ്റിസ്ഥാപിക്കപ്പെടും."
-
 msgid "AI Assistant"
 msgstr "AI സഹായി"
 
 msgid "AI assistant:"
 msgstr "AI സഹായി:"
 
-msgid "AIA - %s API key"
-msgstr "AIA - %s API കീ"
-
 msgid "AIA - AI Mentor Assistant"
 msgstr "AIA - AI മെന്റർ സഹായി"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA ഓണായിത്തന്നെ തുടരും, പക്ഷേ ഉപകരണങ്ങൾ > ഐച്ഛികങ്ങൾ > AI സഹായി എന്നതിൽ ഒരു ദാതാവിനെ തിരഞ്ഞെടുത്തതിനു ശേഷം മാത്രമേ അത് മറുപടി നൽകൂ."
-
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr "API കീ സജ്ജമാക്കിയിട്ടില്ല. ഉപകരണങ്ങൾ > ഐച്ഛികങ്ങൾ > AI സഹായി > API കീ സജ്ജമാക്കുക... എന്നതിലേക്ക് പോകുക."
 
 msgid "API key:"
 msgstr "API കീ:"
@@ -2002,23 +1993,14 @@ msgstr "സന്ദർഭം:"
 msgid "Direct"
 msgstr "നേരിട്ടുള്ളത്"
 
-msgid "Enter your %s API key:"
-msgstr "നിങ്ങളുടെ %s API കീ നൽകുക:"
-
 msgid "Explanatory"
 msgstr "വിശദീകരിക്കുന്നത്"
-
-msgid "Get one at:"
-msgstr "ഇവിടെ നിന്ന് നേടുക:"
 
 msgid "I will set it up later"
 msgstr "ഞാൻ പിന്നീട് സജ്ജമാക്കാം"
 
 msgid "Initial settings:"
 msgstr "പ്രാരംഭ ക്രമീകരണങ്ങൾ:"
-
-msgid "LLM Provider:"
-msgstr "LLM ദാതാവ്:"
 
 msgid "Language:"
 msgstr "ഭാഷ:"
@@ -2032,23 +2014,11 @@ msgstr "പ്രാദേശിക മോഡൽ ലോഡ് ചെയ്യു
 msgid "Local model (Ollama, %s)"
 msgstr "പ്രാദേശിക മോഡൽ (Ollama, %s)"
 
-msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
-msgstr "'%s' എന്ന മോഡൽ കണ്ടെത്തിയില്ല അല്ലെങ്കിൽ ഇപ്പോൾ ലഭ്യമല്ല. ഉപകരണങ്ങൾ > ഐച്ഛികങ്ങൾ > AI സഹായി എന്നതിൽ മറ്റൊരു മോഡൽ തിരഞ്ഞെടുക്കുക."
-
-msgid "Model:"
-msgstr "മോഡൽ:"
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (ലളിതം)"
 
-msgid "Remove key"
-msgstr "കീ നീക്കം ചെയ്യുക"
-
 msgid "Send"
 msgstr "അയയ്ക്കുക"
-
-msgid "Set API Key..."
-msgstr "API കീ സജ്ജമാക്കുക..."
 
 msgid "Socratic"
 msgstr "സോക്രട്ടിക്"
@@ -2064,9 +2034,6 @@ msgstr "'%s' ദാതാവിന് '%s' എന്ന Python പാക്ക�
 
 msgid "The AI service did not answer in time. Try again."
 msgstr "AI സേവനം സമയത്ത് മറുപടി നൽകിയില്ല. വീണ്ടും ശ്രമിക്കുക."
-
-msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
-msgstr "API കീ നിരസിക്കപ്പെട്ടു. ഉപകരണങ്ങൾ > ഐച്ഛികങ്ങൾ > AI സഹായി (API കീ സജ്ജമാക്കുക...) എന്നതിൽ അത് പരിശോധിക്കുക."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Thonny-യുടെ കോൺഫിഗറേഷൻ ഫയലിൽ കീ സാധാരണ ടെക്സ്റ്റായി സംഭരിക്കുന്നു."
@@ -2113,3 +2080,27 @@ msgstr "ഇന്റർനെറ്റ് ഇല്ലാതെ പ്രവർ�
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "ഇതുവരെ AI ദാതാവിനെ തിരഞ്ഞെടുത്തിട്ടില്ല. ഉപകരണങ്ങൾ > ഐച്ഛികങ്ങൾ > AI സഹായി എന്നതിൽ ഒന്ന് തിരഞ്ഞെടുക്കുക."
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "മറുപടികൾ %s-ൽ നിന്നാണ് വരുന്നത്. നിങ്ങൾക്ക് ഒരു API കീ വേണം: താഴെയുള്ള ലിങ്കിൽ അത് സൃഷ്ടിക്കുക, അല്ലെങ്കിൽ നിങ്ങളുടെ അധ്യാപകനിൽ നിന്ന് ഒന്ന് വാങ്ങുക."
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "ഒരു ദാതാവിനെയും തിരഞ്ഞെടുത്തിട്ടില്ല: AIA ഓണായിത്തന്നെ തുടരും, പക്ഷേ മറുപടി നൽകില്ല."
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "ഡെമോയ്ക്ക് മാത്രം: ഈ കമ്പ്യൂട്ടറിൽ സൈൻ ഇൻ ചെയ്ത Claude Code ആണ് API കീ ഇല്ലാതെ മറുപടി നൽകുന്നത്. വിദ്യാർത്ഥികൾക്കുള്ളതല്ല."
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "API കീ സജ്ജമാക്കിയിട്ടില്ല. ഉപകരണങ്ങൾ > ഐച്ഛികങ്ങൾ > AI സഹായി എന്നതിൽ അത് നൽകുക."
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "API കീ നിരസിക്കപ്പെട്ടു. ഉപകരണങ്ങൾ > ഐച്ഛികങ്ങൾ > AI സഹായി എന്നതിൽ അത് പരിശോധിക്കുക."
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "'%s' എന്ന മോഡൽ ഇപ്പോൾ ലഭ്യമല്ല. ഉപകരണങ്ങൾ > ഐച്ഛികങ്ങൾ > AI സഹായി എന്നതിൽ മറ്റൊരു ദാതാവിനെ തിരഞ്ഞെടുക്കുക, അല്ലെങ്കിൽ Thonny AIA-യുടെ പുതിയ പതിപ്പ് ഇൻസ്റ്റാൾ ചെയ്യുക."

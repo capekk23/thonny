@@ -2026,23 +2026,6 @@ msgstr ""
 "Poskytovatel %s potřebuje balíček Pythonu „%s“, který chybí. "
 "Přeinstalujte Thonny AIA."
 
-#: thonny/plugins/aia/_common.py:221
-msgid ""
-"The API key was rejected. Check it in Tools > Options > AI Assistant (Set"
-" API Key...)."
-msgstr ""
-"API klíč byl odmítnut. Zkontrolujte ho v Nástroje > Volby > AI asistent "
-"(Nastavit API klíč...)."
-
-#: thonny/plugins/aia/_common.py:226
-#, python-format
-msgid ""
-"Model '%s' was not found or is no longer available. Choose another model "
-"in Tools > Options > AI Assistant."
-msgstr ""
-"Model „%s“ nebyl nalezen nebo už není dostupný. Vyberte jiný v Nástroje >"
-" Volby > AI asistent."
-
 #: thonny/plugins/aia/_common.py:231
 msgid ""
 "Too many requests or the account's quota is used up. Wait a moment and "
@@ -2075,12 +2058,6 @@ msgstr ""
 #, python-format
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
 msgstr "Neznámý poskytovatel „%s“. Vyberte ho v Nástroje > Volby > AI asistent."
-
-#: thonny/plugins/aia/_common.py:363
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr ""
-"API klíč není nastavený. Zadejte ho v Nástroje > Volby > AI asistent > "
-"Nastavit API klíč..."
 
 #: thonny/plugins/circuitpython/__init__.py:10
 msgid "CircuitPython (generic)"
@@ -2289,31 +2266,9 @@ msgstr "Tisk..."
 msgid "Open system shell..."
 msgstr "Otevřít systémový shell"
 
-#: thonny/plugins/aia/_panel/api_key_dialog.py:23
-#, python-format
-msgid "AIA - %s API key"
-msgstr "AIA – API klíč pro %s"
-
-#: thonny/plugins/aia/_panel/api_key_dialog.py:39
-#, python-format
-msgid "Enter your %s API key:"
-msgstr "Zadejte API klíč pro %s:"
-
-#: thonny/plugins/aia/_panel/api_key_dialog.py:43
-msgid "Get one at:"
-msgstr "Získáte ho na:"
-
 #: thonny/plugins/aia/_panel/api_key_dialog.py:47
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Klíč se ukládá jako prostý text do konfiguračního souboru Thonny."
-
-#: thonny/plugins/aia/_panel/api_key_dialog.py:49
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "Klíč už je uložený; nový ho nahradí."
-
-#: thonny/plugins/aia/_panel/api_key_dialog.py:73
-msgid "Remove key"
-msgstr "Odstranit klíč"
 
 #: thonny/plugins/aia/_panel/config_page.py:23
 msgid "Socratic"
@@ -2330,18 +2285,6 @@ msgstr "Přímý"
 #: thonny/plugins/aia/_panel/config_page.py:41
 msgid "Use AI-based AIA instead of the built-in Assistant"
 msgstr "Používat AI asistenta (AIA) místo vestavěného Asistenta"
-
-#: thonny/plugins/aia/_panel/config_page.py:47
-msgid "LLM Provider:"
-msgstr "Poskytovatel AI:"
-
-#: thonny/plugins/aia/_panel/config_page.py:64
-msgid "Set API Key..."
-msgstr "Nastavit API klíč..."
-
-#: thonny/plugins/aia/_panel/config_page.py:70
-msgid "Model:"
-msgstr "Model:"
 
 #: thonny/plugins/aia/_panel/config_page.py:83
 msgid "Answer style:"
@@ -2434,3 +2377,27 @@ msgstr "Běží bez internetu, potřebuje asi 14 GB volné paměti RAM a bez vý
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Zatím není vybraný poskytovatel AI. Vyberte ho v Nástroje > Volby > AI asistent."
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "Odpovědi poskytuje %s. Potřebujete API klíč: vytvořte si ho na odkazu níže, nebo vám ho dá vyučující."
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "Není vybraný žádný poskytovatel: AIA zůstává zapnutá, ale neodpovídá."
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "Jen pro ukázky: odpovídá Claude Code přihlášený na tomto počítači, bez API klíče. Není pro žáky."
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "API klíč není nastavený. Zadejte ho v Nástroje > Volby > AI asistent."
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "API klíč byl odmítnut. Zkontrolujte ho v Nástroje > Volby > AI asistent."
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "Model %s už není k dispozici. Vyberte jiného poskytovatele v Nástroje > Volby > AI asistent, nebo nainstalujte novější Thonny AIA."

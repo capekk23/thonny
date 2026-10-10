@@ -1994,26 +1994,17 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "Đã có một khóa được lưu; nhập khóa mới sẽ thay thế khóa cũ."
-
 msgid "AI Assistant"
 msgstr "Trợ lý AI"
 
 msgid "AI assistant:"
 msgstr "Trợ lý AI:"
 
-msgid "AIA - %s API key"
-msgstr "AIA - Khóa API của %s"
-
 msgid "AIA - AI Mentor Assistant"
 msgstr "AIA - Trợ lý cố vấn AI"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA vẫn được bật, nhưng chỉ trả lời sau khi bạn chọn nhà cung cấp trong Công cụ > Thiết lập > Trợ lý AI."
-
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr "Chưa đặt khóa API. Hãy vào Công cụ > Thiết lập > Trợ lý AI > Đặt khóa API..."
 
 msgid "API key:"
 msgstr "Khóa API:"
@@ -2051,23 +2042,14 @@ msgstr "Ngữ cảnh:"
 msgid "Direct"
 msgstr "Trực tiếp"
 
-msgid "Enter your %s API key:"
-msgstr "Nhập khóa API %s của bạn:"
-
 msgid "Explanatory"
 msgstr "Giải thích"
-
-msgid "Get one at:"
-msgstr "Lấy khóa tại:"
 
 msgid "I will set it up later"
 msgstr "Tôi sẽ thiết lập sau"
 
 msgid "Initial settings:"
 msgstr "Cài đặt ban đầu:"
-
-msgid "LLM Provider:"
-msgstr "Nhà cung cấp LLM:"
 
 msgid "Language:"
 msgstr "Ngôn ngữ:"
@@ -2081,23 +2063,11 @@ msgstr "Đang tải mô hình cục bộ..."
 msgid "Local model (Ollama, %s)"
 msgstr "Mô hình cục bộ (Ollama, %s)"
 
-msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
-msgstr "Không tìm thấy mô hình '%s' hoặc mô hình không còn khả dụng. Hãy chọn mô hình khác trong Công cụ > Thiết lập > Trợ lý AI."
-
-msgid "Model:"
-msgstr "Mô hình:"
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (đơn giản)"
 
-msgid "Remove key"
-msgstr "Xóa khóa"
-
 msgid "Send"
 msgstr "Gửi"
-
-msgid "Set API Key..."
-msgstr "Đặt khóa API..."
 
 msgid "Socratic"
 msgstr "Kiểu Socrates"
@@ -2113,9 +2083,6 @@ msgstr "Nhà cung cấp '%s' cần gói Python '%s' nhưng gói này bị thiế
 
 msgid "The AI service did not answer in time. Try again."
 msgstr "Dịch vụ AI không trả lời kịp thời. Hãy thử lại."
-
-msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
-msgstr "Khóa API bị từ chối. Hãy kiểm tra trong Công cụ > Thiết lập > Trợ lý AI (Đặt khóa API...)."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Khóa được lưu dưới dạng văn bản thuần trong tệp cấu hình của Thonny."
@@ -2162,3 +2129,27 @@ msgstr "Chạy ngoại tuyến, cần khoảng 14 GB RAM trống; nếu không c
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Chưa chọn nhà cung cấp AI. Hãy chọn một nhà cung cấp trong Công cụ > Thiết lập > Trợ lý AI."
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "Câu trả lời đến từ %s. Bạn cần một khóa API: hãy tạo khóa tại liên kết bên dưới hoặc xin giáo viên của bạn."
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "Chưa chọn nhà cung cấp nào: AIA vẫn được bật, nhưng không trả lời."
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "Chỉ dành cho trình diễn: câu trả lời đến từ Claude Code đã đăng nhập trên máy tính này, không cần khóa API. Không dành cho học sinh."
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "Chưa đặt khóa API. Hãy nhập khóa trong Công cụ > Thiết lập > Trợ lý AI."
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "Khóa API bị từ chối. Hãy kiểm tra trong Công cụ > Thiết lập > Trợ lý AI."
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "Mô hình '%s' không còn khả dụng. Hãy chọn nhà cung cấp khác trong Công cụ > Thiết lập > Trợ lý AI, hoặc cài đặt phiên bản Thonny AIA mới hơn."

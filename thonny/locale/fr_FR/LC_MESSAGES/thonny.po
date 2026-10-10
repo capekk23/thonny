@@ -1980,26 +1980,17 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "Une clé est déjà enregistrée ; en saisir une nouvelle la remplacera."
-
 msgid "AI Assistant"
 msgstr "Assistant IA"
 
 msgid "AI assistant:"
 msgstr "Assistant IA :"
 
-msgid "AIA - %s API key"
-msgstr "AIA – clé API %s"
-
 msgid "AIA - AI Mentor Assistant"
 msgstr "AIA – assistant et mentor IA"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA reste activé, mais ne répondra qu'après que vous aurez choisi un fournisseur dans Outils > Options > Assistant IA."
-
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr "Clé API non définie. Allez dans Outils > Options > Assistant IA > Définir la clé API…"
 
 msgid "API key:"
 msgstr "Clé API :"
@@ -2037,23 +2028,14 @@ msgstr "Contexte :"
 msgid "Direct"
 msgstr "Direct"
 
-msgid "Enter your %s API key:"
-msgstr "Saisissez votre clé API %s :"
-
 msgid "Explanatory"
 msgstr "Explicatif"
-
-msgid "Get one at:"
-msgstr "Obtenez-en une ici :"
 
 msgid "I will set it up later"
 msgstr "Je configurerai plus tard"
 
 msgid "Initial settings:"
 msgstr "Paramètres initiaux :"
-
-msgid "LLM Provider:"
-msgstr "Fournisseur de LLM :"
 
 msgid "Language:"
 msgstr "Langue :"
@@ -2067,23 +2049,11 @@ msgstr "Chargement du modèle local…"
 msgid "Local model (Ollama, %s)"
 msgstr "Modèle local (Ollama, %s)"
 
-msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
-msgstr "Le modèle « %s » est introuvable ou n'est plus disponible. Choisissez un autre modèle dans Outils > Options > Assistant IA."
-
-msgid "Model:"
-msgstr "Modèle :"
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (simple)"
 
-msgid "Remove key"
-msgstr "Supprimer la clé"
-
 msgid "Send"
 msgstr "Envoyer"
-
-msgid "Set API Key..."
-msgstr "Définir la clé API…"
 
 msgid "Socratic"
 msgstr "Socratique"
@@ -2099,9 +2069,6 @@ msgstr "Le fournisseur « %s » nécessite le paquet Python « %s », qui es
 
 msgid "The AI service did not answer in time. Try again."
 msgstr "Le service d'IA n'a pas répondu à temps. Réessayez."
-
-msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
-msgstr "La clé API a été refusée. Vérifiez-la dans Outils > Options > Assistant IA (Définir la clé API…)."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "La clé est enregistrée en texte brut dans le fichier de configuration de Thonny."
@@ -2148,3 +2115,27 @@ msgstr "Il fonctionne hors ligne, nécessite environ 14 Go de RAM libre et, sans
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Aucun fournisseur d’IA n’a encore été choisi. Choisissez-en un dans Outils > Options > Assistant IA."
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "Les réponses viennent de %s. Il vous faut une clé API : créez-la via le lien ci-dessous ou demandez-la à votre enseignant."
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "Aucun fournisseur n'est choisi : AIA reste activé, mais ne répond pas."
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "Pour démonstration uniquement : les réponses viennent de Claude Code connecté sur cet ordinateur, sans clé API. Pas pour les élèves."
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "Clé API non définie. Saisissez-la dans Outils > Options > Assistant IA."
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "La clé API a été refusée. Vérifiez-la dans Outils > Options > Assistant IA."
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "Le modèle « %s » n'est plus disponible. Choisissez un autre fournisseur dans Outils > Options > Assistant IA, ou installez une version plus récente de Thonny AIA."

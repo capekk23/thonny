@@ -1995,26 +1995,17 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "キーはすでに保存されています。新しいキーを入力すると置き換えられます。"
-
 msgid "AI Assistant"
 msgstr "AIアシスタント"
 
 msgid "AI assistant:"
 msgstr "AIアシスタント:"
 
-msgid "AIA - %s API key"
-msgstr "AIA - %s APIキー"
-
 msgid "AIA - AI Mentor Assistant"
 msgstr "AIA - AIメンターアシスタント"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIAはオンのままですが、ツール > オプション > AIアシスタント でプロバイダーを選択するまで応答しません。"
-
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr "APIキーが設定されていません。ツール > オプション > AIアシスタント > APIキーを設定... から設定してください。"
 
 msgid "API key:"
 msgstr "APIキー:"
@@ -2052,23 +2043,14 @@ msgstr "コンテキスト:"
 msgid "Direct"
 msgstr "直接型"
 
-msgid "Enter your %s API key:"
-msgstr "%s のAPIキーを入力してください:"
-
 msgid "Explanatory"
 msgstr "説明型"
-
-msgid "Get one at:"
-msgstr "取得先:"
 
 msgid "I will set it up later"
 msgstr "後で設定する"
 
 msgid "Initial settings:"
 msgstr "初期設定:"
-
-msgid "LLM Provider:"
-msgstr "LLMプロバイダー:"
 
 msgid "Language:"
 msgstr "言語:"
@@ -2082,23 +2064,11 @@ msgstr "ローカルモデルを読み込んでいます..."
 msgid "Local model (Ollama, %s)"
 msgstr "ローカルモデル（Ollama、%s）"
 
-msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
-msgstr "モデル「%s」が見つからないか、利用できなくなりました。ツール > オプション > AIアシスタント で別のモデルを選択してください。"
-
-msgid "Model:"
-msgstr "モデル:"
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi（シンプル）"
 
-msgid "Remove key"
-msgstr "キーを削除"
-
 msgid "Send"
 msgstr "送信"
-
-msgid "Set API Key..."
-msgstr "APIキーを設定..."
 
 msgid "Socratic"
 msgstr "ソクラテス式"
@@ -2114,9 +2084,6 @@ msgstr "プロバイダー「%s」にはPythonパッケージ「%s」が必要�
 
 msgid "The AI service did not answer in time. Try again."
 msgstr "AIサービスが時間内に応答しませんでした。もう一度お試しください。"
-
-msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
-msgstr "APIキーが拒否されました。ツール > オプション > AIアシスタント（APIキーを設定...）で確認してください。"
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "キーはThonnyの設定ファイルに平文で保存されます。"
@@ -2163,3 +2130,27 @@ msgstr "オフラインで動作し、約14 GBの空きRAMが必要です。高�
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "AIプロバイダーがまだ選択されていません。ツール > オプション > AIアシスタント で選択してください。"
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "回答は %s から提供されます。APIキーが必要です。下のリンクから作成するか、先生からもらってください。"
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "プロバイダーが選択されていません。AIAはオンのままですが、応答しません。"
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "デモ専用：このコンピューターでサインインしている Claude Code が、APIキーなしで回答します。生徒向けではありません。"
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "APIキーが設定されていません。ツール > オプション > AIアシスタント で入力してください。"
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "APIキーが拒否されました。ツール > オプション > AIアシスタント で確認してください。"
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "モデル「%s」は利用できなくなりました。ツール > オプション > AIアシスタント で別のプロバイダーを選択するか、新しいバージョンの Thonny AIA をインストールしてください。"

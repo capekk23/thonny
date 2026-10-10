@@ -1973,26 +1973,17 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "Már van tárolt kulcs; ha újat ad meg, az felülírja."
-
 msgid "AI Assistant"
 msgstr "MI-asszisztens"
 
 msgid "AI assistant:"
 msgstr "MI-asszisztens:"
 
-msgid "AIA - %s API key"
-msgstr "AIA – %s API-kulcs"
-
 msgid "AIA - AI Mentor Assistant"
 msgstr "AIA – MI mentor és asszisztens"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "Az AIA bekapcsolva marad, de csak azután válaszol, hogy kiválasztott egy szolgáltatót az Eszközök > Beállítások > MI-asszisztens menüpontban."
-
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr "Nincs beállítva API-kulcs. Nyissa meg: Eszközök > Beállítások > MI-asszisztens > API-kulcs beállítása..."
 
 msgid "API key:"
 msgstr "API-kulcs:"
@@ -2030,23 +2021,14 @@ msgstr "Kontextus:"
 msgid "Direct"
 msgstr "Közvetlen"
 
-msgid "Enter your %s API key:"
-msgstr "Adja meg a(z) %s API-kulcsát:"
-
 msgid "Explanatory"
 msgstr "Magyarázó"
-
-msgid "Get one at:"
-msgstr "Beszerezhető itt:"
 
 msgid "I will set it up later"
 msgstr "Később állítom be"
 
 msgid "Initial settings:"
 msgstr "Kezdeti beállítások:"
-
-msgid "LLM Provider:"
-msgstr "LLM-szolgáltató:"
 
 msgid "Language:"
 msgstr "Nyelv:"
@@ -2060,23 +2042,11 @@ msgstr "A helyi modell betöltése..."
 msgid "Local model (Ollama, %s)"
 msgstr "Helyi modell (Ollama, %s)"
 
-msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
-msgstr "A(z) „%s” modell nem található, vagy már nem érhető el. Válasszon másik modellt az Eszközök > Beállítások > MI-asszisztens menüpontban."
-
-msgid "Model:"
-msgstr "Modell:"
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (egyszerű)"
 
-msgid "Remove key"
-msgstr "Kulcs eltávolítása"
-
 msgid "Send"
 msgstr "Küldés"
-
-msgid "Set API Key..."
-msgstr "API-kulcs beállítása..."
 
 msgid "Socratic"
 msgstr "Szókratészi"
@@ -2092,9 +2062,6 @@ msgstr "A(z) „%s” szolgáltatóhoz szükséges a(z) „%s” Python-csomag, 
 
 msgid "The AI service did not answer in time. Try again."
 msgstr "Az MI-szolgáltatás nem válaszolt időben. Próbálja újra."
-
-msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
-msgstr "Az API-kulcsot elutasították. Ellenőrizze az Eszközök > Beállítások > MI-asszisztens menüpontban (API-kulcs beállítása...)."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "A kulcs egyszerű szövegként tárolódik a Thonny konfigurációs fájljában."
@@ -2141,3 +2108,27 @@ msgstr "Internet nélkül fut, körülbelül 14 GB szabad RAM kell hozzá, és e
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Még nincs kiválasztva MI-szolgáltató. Válasszon egyet az Eszközök > Beállítások > MI-asszisztens menüpontban."
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "A válaszokat a(z) %s adja. API-kulcsra van szüksége: hozza létre az alábbi linken, vagy kérjen egyet a tanárától."
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "Nincs kiválasztva szolgáltató: az AIA bekapcsolva marad, de nem válaszol."
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "Csak bemutatóhoz: a válaszokat az ezen a számítógépen bejelentkezett Claude Code adja, API-kulcs nélkül. Diákoknak nem való."
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "Nincs beállítva API-kulcs. Adja meg az Eszközök > Beállítások > MI-asszisztens menüpontban."
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "Az API-kulcsot elutasították. Ellenőrizze az Eszközök > Beállítások > MI-asszisztens menüpontban."
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "A(z) „%s” modell már nem érhető el. Válasszon másik szolgáltatót az Eszközök > Beállítások > MI-asszisztens menüpontban, vagy telepítse a Thonny AIA újabb verzióját."

@@ -1982,26 +1982,17 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "يوجد مفتاح محفوظ بالفعل؛ إدخال مفتاح جديد سيستبدله."
-
 msgid "AI Assistant"
 msgstr "مساعد الذكاء الاصطناعي"
 
 msgid "AI assistant:"
 msgstr "مساعد الذكاء الاصطناعي:"
 
-msgid "AIA - %s API key"
-msgstr "AIA - مفتاح API لـ %s"
-
 msgid "AIA - AI Mentor Assistant"
 msgstr "AIA - المساعد والمرشد بالذكاء الاصطناعي"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "سيبقى AIA مفعّلًا، لكنه لن يجيب إلا بعد أن تختار مزوّدًا من أدوات > الخيارات > مساعد الذكاء الاصطناعي."
-
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr "لم يتم تعيين مفتاح API. انتقل إلى أدوات > الخيارات > مساعد الذكاء الاصطناعي > تعيين مفتاح API..."
 
 msgid "API key:"
 msgstr "مفتاح API:"
@@ -2039,23 +2030,14 @@ msgstr "السياق:"
 msgid "Direct"
 msgstr "مباشر"
 
-msgid "Enter your %s API key:"
-msgstr "أدخل مفتاح API الخاص بـ %s:"
-
 msgid "Explanatory"
 msgstr "توضيحي"
-
-msgid "Get one at:"
-msgstr "احصل عليه من:"
 
 msgid "I will set it up later"
 msgstr "سأعدّه لاحقًا"
 
 msgid "Initial settings:"
 msgstr "الإعدادات الأولية:"
-
-msgid "LLM Provider:"
-msgstr "مزوّد LLM:"
 
 msgid "Language:"
 msgstr "اللغة:"
@@ -2069,23 +2051,11 @@ msgstr "جارٍ تحميل النموذج المحلي..."
 msgid "Local model (Ollama, %s)"
 msgstr "نموذج محلي (Ollama، %s)"
 
-msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
-msgstr "لم يتم العثور على النموذج «%s» أو لم يعد متاحًا. اختر نموذجًا آخر من أدوات > الخيارات > مساعد الذكاء الاصطناعي."
-
-msgid "Model:"
-msgstr "النموذج:"
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (مبسّط)"
 
-msgid "Remove key"
-msgstr "إزالة المفتاح"
-
 msgid "Send"
 msgstr "إرسال"
-
-msgid "Set API Key..."
-msgstr "تعيين مفتاح API..."
 
 msgid "Socratic"
 msgstr "سقراطي"
@@ -2101,9 +2071,6 @@ msgstr "يحتاج المزوّد «%s» إلى حزمة Python «%s» وهي غ
 
 msgid "The AI service did not answer in time. Try again."
 msgstr "لم تستجب خدمة الذكاء الاصطناعي في الوقت المحدد. حاول مرة أخرى."
-
-msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
-msgstr "تم رفض مفتاح API. تحقق منه في أدوات > الخيارات > مساعد الذكاء الاصطناعي (تعيين مفتاح API...)."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "يُخزَّن المفتاح كنص عادي في ملف إعدادات Thonny."
@@ -2150,3 +2117,27 @@ msgstr "يعمل دون إنترنت، ويحتاج إلى نحو 14 GB من ذ�
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "لم يتم اختيار مزوّد ذكاء اصطناعي بعد. اختر مزوّدًا من أدوات > الخيارات > مساعد الذكاء الاصطناعي."
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "تأتي الإجابات من %s. تحتاج إلى مفتاح API: أنشئه من الرابط أدناه أو احصل عليه من معلمك."
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "لم يتم اختيار أي مزوّد: يبقى AIA مفعّلًا، لكنه لا يجيب."
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "للعرض التوضيحي فقط: تأتي الإجابات من Claude Code المسجَّل دخوله على هذا الحاسوب، دون مفتاح API. ليس مخصصًا للطلاب."
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "لم يتم تعيين مفتاح API. أدخله في أدوات > الخيارات > مساعد الذكاء الاصطناعي."
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "تم رفض مفتاح API. تحقق منه في أدوات > الخيارات > مساعد الذكاء الاصطناعي."
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "النموذج «%s» لم يعد متاحًا. اختر مزوّدًا آخر من أدوات > الخيارات > مساعد الذكاء الاصطناعي، أو ثبّت إصدارًا أحدث من Thonny AIA."

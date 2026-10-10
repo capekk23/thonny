@@ -1979,26 +1979,17 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "Er is al een sleutel opgeslagen; als u een nieuwe invoert, wordt die vervangen."
-
 msgid "AI Assistant"
 msgstr "AI-assistent"
 
 msgid "AI assistant:"
 msgstr "AI-assistent:"
 
-msgid "AIA - %s API key"
-msgstr "AIA – API-sleutel voor %s"
-
 msgid "AIA - AI Mentor Assistant"
 msgstr "AIA – AI-mentorassistent"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA blijft ingeschakeld, maar geeft pas antwoord nadat u een provider hebt gekozen in Hulpmiddelen > Opties > AI-assistent."
-
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr "Geen API-sleutel ingesteld. Ga naar Hulpmiddelen > Opties > AI-assistent > API-sleutel instellen..."
 
 msgid "API key:"
 msgstr "API-sleutel:"
@@ -2036,23 +2027,14 @@ msgstr "Context:"
 msgid "Direct"
 msgstr "Direct"
 
-msgid "Enter your %s API key:"
-msgstr "Voer uw API-sleutel voor %s in:"
-
 msgid "Explanatory"
 msgstr "Uitleggend"
-
-msgid "Get one at:"
-msgstr "Verkrijgbaar via:"
 
 msgid "I will set it up later"
 msgstr "Ik stel het later in"
 
 msgid "Initial settings:"
 msgstr "Begininstellingen:"
-
-msgid "LLM Provider:"
-msgstr "LLM-provider:"
 
 msgid "Language:"
 msgstr "Taal:"
@@ -2066,23 +2048,11 @@ msgstr "Lokaal model laden..."
 msgid "Local model (Ollama, %s)"
 msgstr "Lokaal model (Ollama, %s)"
 
-msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
-msgstr "Model '%s' is niet gevonden of niet meer beschikbaar. Kies een ander model in Hulpmiddelen > Opties > AI-assistent."
-
-msgid "Model:"
-msgstr "Model:"
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (eenvoudig)"
 
-msgid "Remove key"
-msgstr "Sleutel verwijderen"
-
 msgid "Send"
 msgstr "Verzenden"
-
-msgid "Set API Key..."
-msgstr "API-sleutel instellen..."
 
 msgid "Socratic"
 msgstr "Socratisch"
@@ -2098,9 +2068,6 @@ msgstr "De provider '%s' heeft het Python-pakket '%s' nodig, maar dat ontbreekt.
 
 msgid "The AI service did not answer in time. Try again."
 msgstr "De AI-dienst heeft niet op tijd geantwoord. Probeer het opnieuw."
-
-msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
-msgstr "De API-sleutel is geweigerd. Controleer de sleutel in Hulpmiddelen > Opties > AI-assistent (API-sleutel instellen...)."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "De sleutel wordt als platte tekst opgeslagen in het configuratiebestand van Thonny."
@@ -2147,3 +2114,27 @@ msgstr "Het werkt offline, heeft ongeveer 14 GB vrij RAM-geheugen nodig en antwo
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Er is nog geen AI-provider gekozen. Kies er een in Hulpmiddelen > Opties > AI-assistent."
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "De antwoorden komen van %s. U hebt een API-sleutel nodig: maak die aan via de onderstaande link of vraag er een aan uw docent."
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "Er is geen provider gekozen: AIA blijft ingeschakeld, maar geeft geen antwoord."
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "Alleen voor demonstraties: de antwoorden komen van Claude Code dat op deze computer is aangemeld, zonder API-sleutel. Niet voor leerlingen."
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "Geen API-sleutel ingesteld. Geef de sleutel op in Hulpmiddelen > Opties > AI-assistent."
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "De API-sleutel is geweigerd. Controleer de sleutel in Hulpmiddelen > Opties > AI-assistent."
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "Model '%s' is niet meer beschikbaar. Kies een andere provider in Hulpmiddelen > Opties > AI-assistent of installeer een nieuwere versie van Thonny AIA."

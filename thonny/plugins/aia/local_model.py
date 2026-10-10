@@ -33,7 +33,6 @@ class LocalModelKeeper:
     def install(self):
         try:
             self._wb.get_variable("aia.provider").trace_add("write", self._on_settings_changed)
-            self._wb.get_variable("aia.model").trace_add("write", self._on_settings_changed)
             self._wb.get_variable("aia.enabled").trace_add("write", self._on_settings_changed)
         except Exception:
             logger.debug("Could not trace AIA options", exc_info=True)

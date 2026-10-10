@@ -1994,26 +1994,17 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "Kayıtlı bir anahtar zaten var; yeni bir anahtar girerseniz eskisinin yerini alır."
-
 msgid "AI Assistant"
 msgstr "AI Yardımcısı"
 
 msgid "AI assistant:"
 msgstr "AI yardımcısı:"
 
-msgid "AIA - %s API key"
-msgstr "AIA - %s API anahtarı"
-
 msgid "AIA - AI Mentor Assistant"
 msgstr "AIA - AI Mentor Yardımcısı"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA açık kalır, ancak yalnızca Araçlar > Seçenekler > AI Yardımcısı bölümünde bir sağlayıcı seçtikten sonra yanıt verir."
-
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr "API anahtarı ayarlanmamış. Araçlar > Seçenekler > AI Yardımcısı > API Anahtarını Ayarla... bölümüne gidin."
 
 msgid "API key:"
 msgstr "API anahtarı:"
@@ -2051,23 +2042,14 @@ msgstr "Bağlam:"
 msgid "Direct"
 msgstr "Doğrudan"
 
-msgid "Enter your %s API key:"
-msgstr "%s API anahtarınızı girin:"
-
 msgid "Explanatory"
 msgstr "Açıklayıcı"
-
-msgid "Get one at:"
-msgstr "Buradan alabilirsiniz:"
 
 msgid "I will set it up later"
 msgstr "Daha sonra ayarlayacağım"
 
 msgid "Initial settings:"
 msgstr "Başlangıç ayarları:"
-
-msgid "LLM Provider:"
-msgstr "LLM sağlayıcısı:"
 
 msgid "Language:"
 msgstr "Dil:"
@@ -2081,23 +2063,11 @@ msgstr "Yerel model yükleniyor..."
 msgid "Local model (Ollama, %s)"
 msgstr "Yerel model (Ollama, %s)"
 
-msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
-msgstr "'%s' modeli bulunamadı veya artık kullanılamıyor. Araçlar > Seçenekler > AI Yardımcısı bölümünden başka bir model seçin."
-
-msgid "Model:"
-msgstr "Model:"
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (basit)"
 
-msgid "Remove key"
-msgstr "Anahtarı kaldır"
-
 msgid "Send"
 msgstr "Gönder"
-
-msgid "Set API Key..."
-msgstr "API Anahtarını Ayarla..."
 
 msgid "Socratic"
 msgstr "Sokratik"
@@ -2113,9 +2083,6 @@ msgstr "'%s' sağlayıcısı '%s' Python paketine ihtiyaç duyuyor, ancak bu pak
 
 msgid "The AI service did not answer in time. Try again."
 msgstr "AI hizmeti zamanında yanıt vermedi. Tekrar deneyin."
-
-msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
-msgstr "API anahtarı reddedildi. Araçlar > Seçenekler > AI Yardımcısı bölümünden kontrol edin (API Anahtarını Ayarla...)."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Anahtar, Thonny'nin yapılandırma dosyasında düz metin olarak saklanır."
@@ -2162,3 +2129,27 @@ msgstr "İnternetsiz çalışır, yaklaşık 14 GB boş RAM gerektirir ve güçl
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Henüz bir AI sağlayıcısı seçilmedi. Araçlar > Seçenekler > AI Yardımcısı bölümünden bir sağlayıcı seçin."
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "Yanıtlar %s tarafından sağlanır. Bir API anahtarına ihtiyacınız var: aşağıdaki bağlantıdan oluşturun veya öğretmeninizden alın."
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "Hiçbir sağlayıcı seçilmedi: AIA açık kalır, ancak yanıt vermez."
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "Yalnızca tanıtım için: yanıtlar bu bilgisayarda oturum açmış Claude Code'dan, API anahtarı olmadan gelir. Öğrenciler için değildir."
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "API anahtarı ayarlanmamış. Araçlar > Seçenekler > AI Yardımcısı bölümünde girin."
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "API anahtarı reddedildi. Araçlar > Seçenekler > AI Yardımcısı bölümünden kontrol edin."
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "'%s' modeli artık kullanılamıyor. Araçlar > Seçenekler > AI Yardımcısı bölümünden başka bir sağlayıcı seçin veya daha yeni bir Thonny AIA sürümü yükleyin."

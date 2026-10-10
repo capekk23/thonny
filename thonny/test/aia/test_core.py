@@ -160,16 +160,16 @@ def test_no_provider_chosen_asks_for_the_choice(fake_thonny):
     assert "No AI provider is chosen yet" in core.check_ready()
 
 
-def test_retired_model_falls_back_to_default(fake_thonny):
+def test_every_provider_answers_with_its_default_model(fake_thonny):
+    """No model choice (Jakub 2026-10-10): a model stored by an earlier version is ignored."""
     from thonny.plugins.aia._common import AIACore
     from thonny.plugins.aia.providers.anthropic_provider import AnthropicProvider
 
     provider = AnthropicProvider(get_api_key=lambda: "k")
     core = AIACore()
-    fake_thonny.options["aia.model"] = "claude-sonnet-4-20250514"
-    assert core.get_current_model(provider) == provider.get_default_model()
-    fake_thonny.options["aia.model"] = "my-custom-model"
-    assert core.get_current_model(provider) == "my-custom-model"
+    for stored in ("", "claude-sonnet-4-20250514", "my-custom-model"):
+        fake_thonny.options["aia.model"] = stored
+        assert core.get_current_model(provider) == provider.get_default_model()
 
 
 # --- providers with fake SDKs ---------------------------------------------------

@@ -1990,26 +1990,17 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "Kľúč je už uložený; nový ho nahradí."
-
 msgid "AI Assistant"
 msgstr "AI asistent"
 
 msgid "AI assistant:"
 msgstr "AI asistent:"
 
-msgid "AIA - %s API key"
-msgstr "AIA – API kľúč pre %s"
-
 msgid "AIA - AI Mentor Assistant"
 msgstr "AIA – AI asistent a mentor"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA zostane zapnutá, ale odpovedať začne, až v Nástroje > Možnosti > AI asistent vyberiete poskytovateľa."
-
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr "API kľúč nie je nastavený. Zadajte ho v Nástroje > Možnosti > AI asistent > Nastaviť API kľúč..."
 
 msgid "API key:"
 msgstr "API kľúč:"
@@ -2047,23 +2038,14 @@ msgstr "Kontext:"
 msgid "Direct"
 msgstr "Priamy"
 
-msgid "Enter your %s API key:"
-msgstr "Zadajte API kľúč pre %s:"
-
 msgid "Explanatory"
 msgstr "Vysvetľujúci"
-
-msgid "Get one at:"
-msgstr "Získate ho na:"
 
 msgid "I will set it up later"
 msgstr "Nastavím neskôr"
 
 msgid "Initial settings:"
 msgstr "Úvodné nastavenie:"
-
-msgid "LLM Provider:"
-msgstr "Poskytovateľ AI:"
 
 msgid "Language:"
 msgstr "Jazyk:"
@@ -2077,23 +2059,11 @@ msgstr "Načítavam lokálny model..."
 msgid "Local model (Ollama, %s)"
 msgstr "Lokálny model (Ollama, %s)"
 
-msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
-msgstr "Model „%s“ sa nenašiel alebo už nie je dostupný. Vyberte iný v Nástroje > Možnosti > AI asistent."
-
-msgid "Model:"
-msgstr "Model:"
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (jednoduché)"
 
-msgid "Remove key"
-msgstr "Odstrániť kľúč"
-
 msgid "Send"
 msgstr "Odoslať"
-
-msgid "Set API Key..."
-msgstr "Nastaviť API kľúč..."
 
 msgid "Socratic"
 msgstr "Sokratovský"
@@ -2109,9 +2079,6 @@ msgstr "Poskytovateľ %s potrebuje balík Pythonu „%s“, ktorý chýba. Prein
 
 msgid "The AI service did not answer in time. Try again."
 msgstr "AI služba neodpovedala včas. Skúste to znova."
-
-msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
-msgstr "API kľúč bol odmietnutý. Skontrolujte ho v Nástroje > Možnosti > AI asistent (Nastaviť API kľúč...)."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Kľúč sa ukladá ako obyčajný text do konfiguračného súboru Thonny."
@@ -2158,3 +2125,27 @@ msgstr "Beží bez internetu, potrebuje asi 14 GB voľnej pamäte RAM a bez výk
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Zatiaľ nie je vybraný poskytovateľ AI. Vyberte ho v Nástroje > Možnosti > AI asistent."
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "Odpovede poskytuje %s. Potrebujete API kľúč: vytvorte si ho na odkaze nižšie, alebo vám ho dá vyučujúci."
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "Nie je vybraný žiadny poskytovateľ: AIA zostáva zapnutá, ale neodpovedá."
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "Len na ukážky: odpovedá Claude Code prihlásený na tomto počítači, bez API kľúča. Nie je pre žiakov."
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "API kľúč nie je nastavený. Zadajte ho v Nástroje > Možnosti > AI asistent."
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "API kľúč bol odmietnutý. Skontrolujte ho v Nástroje > Možnosti > AI asistent."
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "Model „%s“ už nie je dostupný. Vyberte iného poskytovateľa v Nástroje > Možnosti > AI asistent, alebo nainštalujte novší Thonny AIA."

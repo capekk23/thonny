@@ -1977,26 +1977,17 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "Raktas jau išsaugotas; įvedus naują, jis bus pakeistas."
-
 msgid "AI Assistant"
 msgstr "DI asistentas"
 
 msgid "AI assistant:"
 msgstr "DI asistentas:"
 
-msgid "AIA - %s API key"
-msgstr "AIA - %s API raktas"
-
 msgid "AIA - AI Mentor Assistant"
 msgstr "AIA - DI asistentas ir mentorius"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA lieka įjungtas, bet atsakinės tik tada, kai pasirinksite teikėją skiltyje Įrankiai > Nustatymai > DI asistentas."
-
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr "API raktas nenustatytas. Eikite į Įrankiai > Nustatymai > DI asistentas > Nustatyti API raktą..."
 
 msgid "API key:"
 msgstr "API raktas:"
@@ -2034,23 +2025,14 @@ msgstr "Kontekstas:"
 msgid "Direct"
 msgstr "Tiesioginis"
 
-msgid "Enter your %s API key:"
-msgstr "Įveskite savo %s API raktą:"
-
 msgid "Explanatory"
 msgstr "Aiškinamasis"
-
-msgid "Get one at:"
-msgstr "Gaukite čia:"
 
 msgid "I will set it up later"
 msgstr "Nustatysiu vėliau"
 
 msgid "Initial settings:"
 msgstr "Pradiniai nustatymai:"
-
-msgid "LLM Provider:"
-msgstr "LLM teikėjas:"
 
 msgid "Language:"
 msgstr "Kalba:"
@@ -2064,23 +2046,11 @@ msgstr "Įkeliamas vietinis modelis..."
 msgid "Local model (Ollama, %s)"
 msgstr "Vietinis modelis (Ollama, %s)"
 
-msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
-msgstr "Modelis „%s“ nerastas arba nebepasiekiamas. Pasirinkite kitą modelį skiltyje Įrankiai > Nustatymai > DI asistentas."
-
-msgid "Model:"
-msgstr "Modelis:"
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (paprastas)"
 
-msgid "Remove key"
-msgstr "Pašalinti raktą"
-
 msgid "Send"
 msgstr "Siųsti"
-
-msgid "Set API Key..."
-msgstr "Nustatyti API raktą..."
 
 msgid "Socratic"
 msgstr "Sokratiškas"
@@ -2096,9 +2066,6 @@ msgstr "Teikėjui „%s“ reikia Python paketo „%s“, kurio trūksta. Iš na
 
 msgid "The AI service did not answer in time. Try again."
 msgstr "DI paslauga laiku neatsakė. Bandykite dar kartą."
-
-msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
-msgstr "API raktas atmestas. Patikrinkite jį skiltyje Įrankiai > Nustatymai > DI asistentas (Nustatyti API raktą...)."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Raktas saugomas paprastu tekstu Thonny konfigūracijos faile."
@@ -2145,3 +2112,27 @@ msgstr "Veikia be interneto, reikia apie 14 GB laisvos RAM, o be galingos vaizdo
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "DI teikėjas dar nepasirinktas. Pasirinkite jį skiltyje Įrankiai > Nustatymai > DI asistentas."
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "Atsakymus teikia %s. Jums reikia API rakto: susikurkite jį toliau pateiktoje nuorodoje arba gaukite iš mokytojo."
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "Nepasirinktas joks teikėjas: AIA lieka įjungtas, bet neatsako."
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "Tik demonstracijai: atsako šiame kompiuteryje prisijungęs Claude Code, be API rakto. Ne mokiniams."
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "API raktas nenustatytas. Įveskite jį skiltyje Įrankiai > Nustatymai > DI asistentas."
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "API raktas atmestas. Patikrinkite jį skiltyje Įrankiai > Nustatymai > DI asistentas."
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "Modelis „%s“ nebepasiekiamas. Pasirinkite kitą teikėją skiltyje Įrankiai > Nustatymai > DI asistentas arba įdiekite naujesnę Thonny AIA versiją."

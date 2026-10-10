@@ -1973,26 +1973,17 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "Avain on jo tallennettu; uuden syöttäminen korvaa sen."
-
 msgid "AI Assistant"
 msgstr "Tekoälyavustaja"
 
 msgid "AI assistant:"
 msgstr "Tekoälyavustaja:"
 
-msgid "AIA - %s API key"
-msgstr "AIA – API-avain: %s"
-
 msgid "AIA - AI Mentor Assistant"
 msgstr "AIA – tekoälymentori ja -avustaja"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA pysyy päällä, mutta vastaa vasta, kun valitset palveluntarjoajan kohdassa Työkalut > Asetukset > Tekoälyavustaja."
-
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr "API-avainta ei ole asetettu. Siirry kohtaan Työkalut > Asetukset > Tekoälyavustaja > Aseta API-avain..."
 
 msgid "API key:"
 msgstr "API-avain:"
@@ -2030,23 +2021,14 @@ msgstr "Konteksti:"
 msgid "Direct"
 msgstr "Suora"
 
-msgid "Enter your %s API key:"
-msgstr "Syötä API-avaimesi palveluun %s:"
-
 msgid "Explanatory"
 msgstr "Selittävä"
-
-msgid "Get one at:"
-msgstr "Hanki osoitteesta:"
 
 msgid "I will set it up later"
 msgstr "Määritän myöhemmin"
 
 msgid "Initial settings:"
 msgstr "Alkuasetukset:"
-
-msgid "LLM Provider:"
-msgstr "LLM-palveluntarjoaja:"
 
 msgid "Language:"
 msgstr "Kieli:"
@@ -2060,23 +2042,11 @@ msgstr "Ladataan paikallista mallia..."
 msgid "Local model (Ollama, %s)"
 msgstr "Paikallinen malli (Ollama, %s)"
 
-msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
-msgstr "Mallia ”%s” ei löytynyt tai se ei ole enää saatavilla. Valitse toinen malli kohdassa Työkalut > Asetukset > Tekoälyavustaja."
-
-msgid "Model:"
-msgstr "Malli:"
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (yksinkertainen)"
 
-msgid "Remove key"
-msgstr "Poista avain"
-
 msgid "Send"
 msgstr "Lähetä"
-
-msgid "Set API Key..."
-msgstr "Aseta API-avain..."
 
 msgid "Socratic"
 msgstr "Sokraattinen"
@@ -2092,9 +2062,6 @@ msgstr "Palveluntarjoaja ”%s” tarvitsee Python-paketin ”%s”, joka puuttu
 
 msgid "The AI service did not answer in time. Try again."
 msgstr "Tekoälypalvelu ei vastannut ajoissa. Yritä uudelleen."
-
-msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
-msgstr "API-avain hylättiin. Tarkista se kohdassa Työkalut > Asetukset > Tekoälyavustaja (Aseta API-avain...)."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Avain tallennetaan tavallisena tekstinä Thonnyn asetustiedostoon."
@@ -2141,3 +2108,27 @@ msgstr "Toimii ilman internetiä, tarvitsee noin 14 Gt vapaata RAM-muistia ja va
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Tekoälypalveluntarjoajaa ei ole vielä valittu. Valitse se kohdassa Työkalut > Asetukset > Tekoälyavustaja."
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "Vastaukset tulevat palvelusta %s. Tarvitset API-avaimen: luo se alla olevasta linkistä tai pyydä opettajaltasi."
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "Palveluntarjoajaa ei ole valittu: AIA pysyy päällä, mutta ei vastaa."
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "Vain esittelyyn: vastaukset tulevat tällä tietokoneella kirjautuneesta Claude Codesta, ilman API-avainta. Ei oppilaille."
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "API-avainta ei ole asetettu. Syötä se kohdassa Työkalut > Asetukset > Tekoälyavustaja."
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "API-avain hylättiin. Tarkista se kohdassa Työkalut > Asetukset > Tekoälyavustaja."
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "Malli ”%s” ei ole enää saatavilla. Valitse toinen palveluntarjoaja kohdassa Työkalut > Asetukset > Tekoälyavustaja tai asenna uudempi Thonny AIA."

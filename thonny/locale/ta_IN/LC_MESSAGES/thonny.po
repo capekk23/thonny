@@ -1988,26 +1988,17 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "ஒரு விசை ஏற்கனவே சேமிக்கப்பட்டுள்ளது; புதிய விசையை உள்ளிட்டால் அது மாற்றப்படும்."
-
 msgid "AI Assistant"
 msgstr "AI உதவியாளர்"
 
 msgid "AI assistant:"
 msgstr "AI உதவியாளர்:"
 
-msgid "AIA - %s API key"
-msgstr "AIA - %s API விசை"
-
 msgid "AIA - AI Mentor Assistant"
 msgstr "AIA - AI வழிகாட்டி உதவியாளர்"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA இயக்கத்தில் இருக்கும், ஆனால் கருவிகள் > விருப்பங்கள் > AI உதவியாளர் என்பதில் ஒரு வழங்குநரைத் தேர்ந்தெடுத்த பிறகே பதிலளிக்கும்."
-
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr "API விசை அமைக்கப்படவில்லை. கருவிகள் > விருப்பங்கள் > AI உதவியாளர் > API விசையை அமை... என்பதற்குச் செல்லவும்."
 
 msgid "API key:"
 msgstr "API விசை:"
@@ -2045,23 +2036,14 @@ msgstr "சூழல்:"
 msgid "Direct"
 msgstr "நேரடி"
 
-msgid "Enter your %s API key:"
-msgstr "உங்கள் %s API விசையை உள்ளிடவும்:"
-
 msgid "Explanatory"
 msgstr "விளக்கமான"
-
-msgid "Get one at:"
-msgstr "இங்கே பெறலாம்:"
 
 msgid "I will set it up later"
 msgstr "பின்னர் அமைக்கிறேன்"
 
 msgid "Initial settings:"
 msgstr "தொடக்க அமைப்புகள்:"
-
-msgid "LLM Provider:"
-msgstr "LLM வழங்குநர்:"
 
 msgid "Language:"
 msgstr "மொழி:"
@@ -2075,23 +2057,11 @@ msgstr "உள்ளூர் மாதிரி ஏற்றப்படுக�
 msgid "Local model (Ollama, %s)"
 msgstr "உள்ளூர் மாதிரி (Ollama, %s)"
 
-msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
-msgstr "'%s' மாதிரி கிடைக்கவில்லை அல்லது இனி கிடைக்காது. கருவிகள் > விருப்பங்கள் > AI உதவியாளர் என்பதில் வேறொரு மாதிரியைத் தேர்ந்தெடுக்கவும்."
-
-msgid "Model:"
-msgstr "மாதிரி:"
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (எளிமையானது)"
 
-msgid "Remove key"
-msgstr "விசையை நீக்கு"
-
 msgid "Send"
 msgstr "அனுப்பு"
-
-msgid "Set API Key..."
-msgstr "API விசையை அமை..."
 
 msgid "Socratic"
 msgstr "சாக்ரடிக்"
@@ -2107,9 +2077,6 @@ msgstr "'%s' வழங்குநருக்கு '%s' என்ற Python �
 
 msgid "The AI service did not answer in time. Try again."
 msgstr "AI சேவை நேரத்தில் பதிலளிக்கவில்லை. மீண்டும் முயற்சிக்கவும்."
-
-msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
-msgstr "API விசை நிராகரிக்கப்பட்டது. கருவிகள் > விருப்பங்கள் > AI உதவியாளர் (API விசையை அமை...) என்பதில் அதைச் சரிபார்க்கவும்."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "விசை Thonny-இன் உள்ளமைவுக் கோப்பில் சாதாரண உரையாகச் சேமிக்கப்படுகிறது."
@@ -2156,3 +2123,27 @@ msgstr "இணையம் இல்லாமல் இயங்குகிற�
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "இன்னும் AI வழங்குநர் தேர்ந்தெடுக்கப்படவில்லை. கருவிகள் > விருப்பங்கள் > AI உதவியாளர் என்பதில் ஒன்றைத் தேர்ந்தெடுக்கவும்."
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "பதில்கள் %s இலிருந்து வருகின்றன. உங்களுக்கு ஒரு API விசை தேவை: கீழே உள்ள இணைப்பில் அதை உருவாக்கவும், அல்லது உங்கள் ஆசிரியரிடமிருந்து பெறவும்."
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "எந்த வழங்குநரும் தேர்ந்தெடுக்கப்படவில்லை: AIA இயக்கத்தில் இருக்கும், ஆனால் பதிலளிக்காது."
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "செயல்விளக்கத்துக்கு மட்டும்: இந்தக் கணினியில் உள்நுழைந்துள்ள Claude Code, API விசை இல்லாமல் பதிலளிக்கிறது. மாணவர்களுக்கானது அல்ல."
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "API விசை அமைக்கப்படவில்லை. கருவிகள் > விருப்பங்கள் > AI உதவியாளர் என்பதில் அதை உள்ளிடவும்."
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "API விசை நிராகரிக்கப்பட்டது. கருவிகள் > விருப்பங்கள் > AI உதவியாளர் என்பதில் அதைச் சரிபார்க்கவும்."
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "'%s' மாதிரி இனி கிடைக்காது. கருவிகள் > விருப்பங்கள் > AI உதவியாளர் என்பதில் வேறொரு வழங்குநரைத் தேர்ந்தெடுக்கவும், அல்லது Thonny AIA-இன் புதிய பதிப்பை நிறுவவும்."

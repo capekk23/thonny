@@ -1985,26 +1985,17 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "Ein Schlüssel ist bereits gespeichert; ein neuer ersetzt ihn."
-
 msgid "AI Assistant"
 msgstr "KI-Assistent"
 
 msgid "AI assistant:"
 msgstr "KI-Assistent:"
 
-msgid "AIA - %s API key"
-msgstr "AIA – API-Schlüssel für %s"
-
 msgid "AIA - AI Mentor Assistant"
 msgstr "AIA – KI-Mentor-Assistent"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA bleibt eingeschaltet, antwortet aber erst, wenn Sie unter Werkzeuge > Optionen > KI-Assistent einen Anbieter auswählen."
-
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr "Kein API-Schlüssel festgelegt. Gehen Sie zu Werkzeuge > Optionen > KI-Assistent > API-Schlüssel festlegen..."
 
 msgid "API key:"
 msgstr "API-Schlüssel:"
@@ -2042,23 +2033,14 @@ msgstr "Kontext:"
 msgid "Direct"
 msgstr "Direkt"
 
-msgid "Enter your %s API key:"
-msgstr "Geben Sie Ihren API-Schlüssel für %s ein:"
-
 msgid "Explanatory"
 msgstr "Erklärend"
-
-msgid "Get one at:"
-msgstr "Erhältlich unter:"
 
 msgid "I will set it up later"
 msgstr "Ich richte es später ein"
 
 msgid "Initial settings:"
 msgstr "Anfangseinstellungen:"
-
-msgid "LLM Provider:"
-msgstr "LLM-Anbieter:"
 
 msgid "Language:"
 msgstr "Sprache:"
@@ -2072,23 +2054,11 @@ msgstr "Lokales Modell wird geladen..."
 msgid "Local model (Ollama, %s)"
 msgstr "Lokales Modell (Ollama, %s)"
 
-msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
-msgstr "Das Modell „%s“ wurde nicht gefunden oder ist nicht mehr verfügbar. Wählen Sie unter Werkzeuge > Optionen > KI-Assistent ein anderes Modell."
-
-msgid "Model:"
-msgstr "Modell:"
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (einfach)"
 
-msgid "Remove key"
-msgstr "Schlüssel entfernen"
-
 msgid "Send"
 msgstr "Senden"
-
-msgid "Set API Key..."
-msgstr "API-Schlüssel festlegen..."
 
 msgid "Socratic"
 msgstr "Sokratisch"
@@ -2104,9 +2074,6 @@ msgstr "Der Anbieter „%s“ benötigt das Python-Paket „%s“, das fehlt. In
 
 msgid "The AI service did not answer in time. Try again."
 msgstr "Der KI-Dienst hat nicht rechtzeitig geantwortet. Versuchen Sie es erneut."
-
-msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
-msgstr "Der API-Schlüssel wurde abgelehnt. Prüfen Sie ihn unter Werkzeuge > Optionen > KI-Assistent (API-Schlüssel festlegen...)."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Der Schlüssel wird als Klartext in der Konfigurationsdatei von Thonny gespeichert."
@@ -2153,3 +2120,27 @@ msgstr "Läuft offline, braucht etwa 14 GB freien Arbeitsspeicher (RAM) und antw
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Es wurde noch kein KI-Anbieter ausgewählt. Wählen Sie unter Werkzeuge > Optionen > KI-Assistent einen aus."
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "Die Antworten kommen von %s. Sie benötigen einen API-Schlüssel: Erstellen Sie ihn über den Link unten oder lassen Sie sich einen von Ihrer Lehrkraft geben."
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "Kein Anbieter ausgewählt: AIA bleibt eingeschaltet, antwortet aber nicht."
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "Nur für Vorführungen: Die Antworten kommen von Claude Code, das auf diesem Computer angemeldet ist, ohne API-Schlüssel. Nicht für Schülerinnen und Schüler."
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "Kein API-Schlüssel festgelegt. Geben Sie ihn unter Werkzeuge > Optionen > KI-Assistent ein."
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "Der API-Schlüssel wurde abgelehnt. Prüfen Sie ihn unter Werkzeuge > Optionen > KI-Assistent."
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "Das Modell „%s“ ist nicht mehr verfügbar. Wählen Sie unter Werkzeuge > Optionen > KI-Assistent einen anderen Anbieter oder installieren Sie eine neuere Version von Thonny AIA."

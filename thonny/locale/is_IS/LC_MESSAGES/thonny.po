@@ -1995,26 +1995,17 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "Lykill er þegar vistaður; ef þú slærð inn nýjan kemur hann í stað þess gamla."
-
 msgid "AI Assistant"
 msgstr "Gervigreindaraðstoð"
 
 msgid "AI assistant:"
 msgstr "Gervigreindaraðstoð:"
 
-msgid "AIA - %s API key"
-msgstr "AIA - API-lykill fyrir %s"
-
 msgid "AIA - AI Mentor Assistant"
 msgstr "AIA - Gervigreindarleiðbeinandi"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA er áfram virkt en svarar ekki fyrr en þú velur þjónustuaðila í Tól > Valkostir > Gervigreindaraðstoð."
-
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr "API-lykill er ekki stilltur. Farðu í Tól > Valkostir > Gervigreindaraðstoð > Stilla API-lykil..."
 
 msgid "API key:"
 msgstr "API-lykill:"
@@ -2052,23 +2043,14 @@ msgstr "Samhengi:"
 msgid "Direct"
 msgstr "Beint"
 
-msgid "Enter your %s API key:"
-msgstr "Sláðu inn API-lykilinn þinn fyrir %s:"
-
 msgid "Explanatory"
 msgstr "Útskýrandi"
-
-msgid "Get one at:"
-msgstr "Fáðu hann hér:"
 
 msgid "I will set it up later"
 msgstr "Ég stilli þetta seinna"
 
 msgid "Initial settings:"
 msgstr "Upphafsstillingar:"
-
-msgid "LLM Provider:"
-msgstr "LLM-þjónustuaðili:"
 
 msgid "Language:"
 msgstr "Tungumál:"
@@ -2082,23 +2064,11 @@ msgstr "Hleð inn staðbundnu líkani..."
 msgid "Local model (Ollama, %s)"
 msgstr "Staðbundið líkan (Ollama, %s)"
 
-msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
-msgstr "Líkanið '%s' fannst ekki eða er ekki lengur í boði. Veldu annað líkan í Tól > Valkostir > Gervigreindaraðstoð."
-
-msgid "Model:"
-msgstr "Líkan:"
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (einfalt)"
 
-msgid "Remove key"
-msgstr "Fjarlægja lykil"
-
 msgid "Send"
 msgstr "Senda"
-
-msgid "Set API Key..."
-msgstr "Stilla API-lykil..."
 
 msgid "Socratic"
 msgstr "Sókratískt"
@@ -2114,9 +2084,6 @@ msgstr "Þjónustuaðilinn '%s' þarf Python-pakkann '%s', sem vantar. Settu Tho
 
 msgid "The AI service did not answer in time. Try again."
 msgstr "Gervigreindarþjónustan svaraði ekki í tæka tíð. Reyndu aftur."
-
-msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
-msgstr "API-lyklinum var hafnað. Athugaðu hann í Tól > Valkostir > Gervigreindaraðstoð (Stilla API-lykil...)."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Lykillinn er vistaður sem venjulegur texti í stillingaskrá Thonny."
@@ -2163,3 +2130,27 @@ msgstr "Keyrir án internets, þarf um 14 GB af lausu vinnsluminni (RAM) og svar
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Enginn gervigreindarþjónustuaðili hefur verið valinn enn. Veldu einn í Tól > Valkostir > Gervigreindaraðstoð."
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "Svörin koma frá %s. Þú þarft API-lykil: búðu hann til á tenglinum hér fyrir neðan eða fáðu hann hjá kennaranum þínum."
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "Enginn þjónustuaðili er valinn: AIA er áfram virkt en svarar ekki."
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "Aðeins til sýnis: svörin koma frá Claude Code sem er innskráð á þessari tölvu, án API-lykils. Ekki fyrir nemendur."
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "API-lykill er ekki stilltur. Sláðu hann inn í Tól > Valkostir > Gervigreindaraðstoð."
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "API-lyklinum var hafnað. Athugaðu hann í Tól > Valkostir > Gervigreindaraðstoð."
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "Líkanið '%s' er ekki lengur í boði. Veldu annan þjónustuaðila í Tól > Valkostir > Gervigreindaraðstoð eða settu upp nýrri útgáfu af Thonny AIA."

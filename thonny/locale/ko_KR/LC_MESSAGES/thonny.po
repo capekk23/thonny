@@ -1975,26 +1975,17 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "키가 이미 저장되어 있습니다. 새 키를 입력하면 기존 키를 대체합니다."
-
 msgid "AI Assistant"
 msgstr "AI 도우미"
 
 msgid "AI assistant:"
 msgstr "AI 도우미:"
 
-msgid "AIA - %s API key"
-msgstr "AIA - %s API 키"
-
 msgid "AIA - AI Mentor Assistant"
 msgstr "AIA - AI 멘토 도우미"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA는 켜진 상태로 유지되지만, 도구 > 옵션 > AI 도우미에서 제공자를 선택한 후에만 답변합니다."
-
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr "API 키가 설정되지 않았습니다. 도구 > 옵션 > AI 도우미 > API 키 설정...으로 이동하세요."
 
 msgid "API key:"
 msgstr "API 키:"
@@ -2032,23 +2023,14 @@ msgstr "컨텍스트:"
 msgid "Direct"
 msgstr "직답형"
 
-msgid "Enter your %s API key:"
-msgstr "%s API 키를 입력하세요:"
-
 msgid "Explanatory"
 msgstr "설명형"
-
-msgid "Get one at:"
-msgstr "발급받는 곳:"
 
 msgid "I will set it up later"
 msgstr "나중에 설정하기"
 
 msgid "Initial settings:"
 msgstr "초기 설정:"
-
-msgid "LLM Provider:"
-msgstr "LLM 제공자:"
 
 msgid "Language:"
 msgstr "언어:"
@@ -2062,23 +2044,11 @@ msgstr "로컬 모델을 불러오는 중..."
 msgid "Local model (Ollama, %s)"
 msgstr "로컬 모델 (Ollama, %s)"
 
-msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
-msgstr "모델 '%s'을(를) 찾을 수 없거나 더 이상 사용할 수 없습니다. 도구 > 옵션 > AI 도우미에서 다른 모델을 선택하세요."
-
-msgid "Model:"
-msgstr "모델:"
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (간단)"
 
-msgid "Remove key"
-msgstr "키 삭제"
-
 msgid "Send"
 msgstr "보내기"
-
-msgid "Set API Key..."
-msgstr "API 키 설정..."
 
 msgid "Socratic"
 msgstr "소크라테스식"
@@ -2094,9 +2064,6 @@ msgstr "'%s' 제공자에 필요한 Python 패키지 '%s'이(가) 없습니다. 
 
 msgid "The AI service did not answer in time. Try again."
 msgstr "AI 서비스가 제시간에 응답하지 않았습니다. 다시 시도하세요."
-
-msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
-msgstr "API 키가 거부되었습니다. 도구 > 옵션 > AI 도우미(API 키 설정...)에서 확인하세요."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "키는 Thonny 설정 파일에 일반 텍스트로 저장됩니다."
@@ -2143,3 +2110,27 @@ msgstr "인터넷 없이 실행되며 약 14 GB의 여유 RAM이 필요하고, �
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "아직 AI 제공자가 선택되지 않았습니다. 도구 > 옵션 > AI 도우미에서 선택하세요."
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "답변은 %s에서 제공합니다. API 키가 필요합니다. 아래 링크에서 만들거나 선생님께 받으세요."
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "선택된 제공자가 없습니다. AIA는 켜진 상태로 유지되지만 답변하지 않습니다."
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "데모 전용: 이 컴퓨터에 로그인된 Claude Code가 API 키 없이 답변합니다. 학생용이 아닙니다."
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "API 키가 설정되지 않았습니다. 도구 > 옵션 > AI 도우미에서 입력하세요."
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "API 키가 거부되었습니다. 도구 > 옵션 > AI 도우미에서 확인하세요."
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "모델 '%s'은(는) 더 이상 사용할 수 없습니다. 도구 > 옵션 > AI 도우미에서 다른 제공자를 선택하거나 최신 버전의 Thonny AIA를 설치하세요."

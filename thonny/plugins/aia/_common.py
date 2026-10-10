@@ -68,19 +68,6 @@ API_KEY_URLS = {
     "openai": "https://platform.openai.com/api-keys",
 }
 
-# Model IDs that earlier AIA versions offered (and wrote into aia.model) but
-# that the providers have since shut down. A stored value from this set is
-# treated as "use the provider default".
-RETIRED_MODELS = {
-    "claude-sonnet-4-20250514",  # retired 2026-06-15
-    "claude-opus-4-20250514",  # retired 2026-06-15
-    "gemini-2.0-flash",  # shut down
-    "gemini-2.5-flash-preview-05-20",
-    "gemini-2.5-pro-preview-05-06",
-    "gpt-4.1-nano",  # shutdown 2026-10-23
-    "gpt-4o-mini",  # no longer offered, too weak for a mentor (Jakub, 2026-10-10)
-}
-
 # Limits that keep requests (and student bills) bounded
 MAX_HISTORY_MESSAGES = 20
 MAX_IMPORTED_FILES = 10
@@ -264,14 +251,12 @@ def friendly_error(exc: BaseException, provider_id: str = "", model: str = "") -
     if isinstance(exc, ImportError):
         return install_hint(provider_id)
     if status in (401, 403) or "Authentication" in name or "PermissionDenied" in name:
-        return tr(
-            "The API key was rejected. Check it in Tools > Options > AI Assistant "
-            "(Set API Key...)."
-        )
+        return tr("The API key was rejected. Check it in Tools > Options > AI Assistant.")
     if status == 404 or "NotFound" in name:
+        # each provider answers with its default model, there is no model to choose
         return tr(
-            "Model '%s' was not found or is no longer available. "
-            "Choose another model in Tools > Options > AI Assistant."
+            "The model %s is no longer available. Choose another provider in "
+            "Tools > Options > AI Assistant, or install a newer Thonny AIA."
         ) % model
     if status == 429 or "RateLimit" in name:
         return tr(
@@ -385,10 +370,10 @@ class AIACore:
         return self._providers.get(self.get_current_provider_id())
 
     def get_current_model(self, provider: LLMProvider) -> str:
-        model = (get_workbench().get_option("aia.model") or "").strip()
-        if not model or model in RETIRED_MODELS:
-            return provider.get_default_model()
-        return model
+        # Each provider answers with its default model (Jakub 2026-10-10): simpler, and nothing
+        # has to find out which models a provider offers or check a stored choice against them.
+        # A model stored by an earlier version (aia.model) is ignored.
+        return provider.get_default_model()
 
     def check_ready(self) -> Optional[str]:
         """Return None if the current provider can be used, else a user-facing reason."""
@@ -409,7 +394,7 @@ class AIACore:
                 % provider_id
             )
         if not provider.is_available():
-            return tr("API key not set. Go to Tools > Options > AI Assistant > Set API Key...")
+            return tr("API key not set. Enter it in Tools > Options > AI Assistant.")
         return None
 
     @property

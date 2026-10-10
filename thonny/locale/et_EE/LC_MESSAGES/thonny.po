@@ -1998,26 +1998,17 @@ msgstr "Selle interpretaatori pakke saab korraldada süsteemi pakihalduri kaudu.
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr "Pakkide pip-installimiseks tuleb kasutada virtuaalkeskkonda."
 
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "Võti on juba salvestatud; uue sisestamine asendab selle."
-
 msgid "AI Assistant"
 msgstr "AI-assistent"
 
 msgid "AI assistant:"
 msgstr "AI-assistent:"
 
-msgid "AIA - %s API key"
-msgstr "AIA – %s API-võti"
-
 msgid "AIA - AI Mentor Assistant"
 msgstr "AIA – AI-mentor ja assistent"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA jääb sisse lülitatuks, kuid hakkab vastama alles siis, kui valid teenusepakkuja menüüs Tööriistad > Seaded > AI-assistent."
-
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr "API-võti pole määratud. Ava Tööriistad > Seaded > AI-assistent > Määra API-võti..."
 
 msgid "API key:"
 msgstr "API-võti:"
@@ -2055,23 +2046,14 @@ msgstr "Kontekst:"
 msgid "Direct"
 msgstr "Otsene"
 
-msgid "Enter your %s API key:"
-msgstr "Sisesta oma %s API-võti:"
-
 msgid "Explanatory"
 msgstr "Selgitav"
-
-msgid "Get one at:"
-msgstr "Hangi siit:"
 
 msgid "I will set it up later"
 msgstr "Seadistan hiljem"
 
 msgid "Initial settings:"
 msgstr "Algseaded:"
-
-msgid "LLM Provider:"
-msgstr "Keelemudeli pakkuja:"
 
 msgid "Language:"
 msgstr "Keel:"
@@ -2085,23 +2067,11 @@ msgstr "Laadin kohalikku mudelit..."
 msgid "Local model (Ollama, %s)"
 msgstr "Kohalik mudel (Ollama, %s)"
 
-msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
-msgstr "Mudelit „%s“ ei leitud või see pole enam saadaval. Vali menüüs Tööriistad > Seaded > AI-assistent mõni teine mudel."
-
-msgid "Model:"
-msgstr "Mudel:"
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (lihtne)"
 
-msgid "Remove key"
-msgstr "Eemalda võti"
-
 msgid "Send"
 msgstr "Saada"
-
-msgid "Set API Key..."
-msgstr "Määra API-võti..."
 
 msgid "Socratic"
 msgstr "Sokraatiline"
@@ -2117,9 +2087,6 @@ msgstr "Teenusepakkuja „%s“ vajab Pythoni paketti „%s“, mis puudub. Paig
 
 msgid "The AI service did not answer in time. Try again."
 msgstr "AI-teenus ei vastanud õigeaegselt. Proovi uuesti."
-
-msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
-msgstr "API-võti lükati tagasi. Kontrolli seda menüüs Tööriistad > Seaded > AI-assistent (Määra API-võti...)."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Võti salvestatakse Thonny seadistusfaili lihttekstina."
@@ -2166,3 +2133,27 @@ msgstr "Töötab ilma internetita, vajab umbes 14 GB vaba RAM-i ja vastab ilma v
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "AI-teenusepakkujat pole veel valitud. Vali see menüüs Tööriistad > Seaded > AI-assistent."
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "Vastuseid annab %s. Vajad API-võtit: loo see allolevalt lingilt või küsi õpetajalt."
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "Teenusepakkujat pole valitud: AIA jääb sisse lülitatuks, kuid ei vasta."
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "Ainult demonstreerimiseks: vastab selles arvutis sisse logitud Claude Code, ilma API-võtmeta. Mitte õpilastele."
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "API-võti pole määratud. Sisesta see menüüs Tööriistad > Seaded > AI-assistent."
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "API-võti lükati tagasi. Kontrolli seda menüüs Tööriistad > Seaded > AI-assistent."
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "Mudel „%s“ pole enam saadaval. Vali menüüs Tööriistad > Seaded > AI-assistent mõni teine teenusepakkuja või paigalda Thonny AIA uuem versioon."

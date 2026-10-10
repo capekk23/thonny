@@ -1995,26 +1995,17 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "Gako bat gordeta dago jada; berri bat sartzen baduzu, hura ordeztuko du."
-
 msgid "AI Assistant"
 msgstr "AA laguntzailea"
 
 msgid "AI assistant:"
 msgstr "AA laguntzailea:"
 
-msgid "AIA - %s API key"
-msgstr "AIA - %s API gakoa"
-
 msgid "AIA - AI Mentor Assistant"
 msgstr "AIA - AA tutore-laguntzailea"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA piztuta geratuko da, baina hornitzaile bat hautatu ondoren bakarrik erantzungo du: Tresnak > Aukerak > AA laguntzailea."
-
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr "API gakoa ez dago ezarrita. Joan hona: Tresnak > Aukerak > AA laguntzailea > Ezarri API gakoa..."
 
 msgid "API key:"
 msgstr "API gakoa:"
@@ -2052,23 +2043,14 @@ msgstr "Testuingurua:"
 msgid "Direct"
 msgstr "Zuzena"
 
-msgid "Enter your %s API key:"
-msgstr "Sartu zure %s API gakoa:"
-
 msgid "Explanatory"
 msgstr "Azaltzailea"
-
-msgid "Get one at:"
-msgstr "Lortu hemen:"
 
 msgid "I will set it up later"
 msgstr "Geroago konfiguratuko dut"
 
 msgid "Initial settings:"
 msgstr "Hasierako ezarpenak:"
-
-msgid "LLM Provider:"
-msgstr "LLM hornitzailea:"
 
 msgid "Language:"
 msgstr "Hizkuntza:"
@@ -2082,23 +2064,11 @@ msgstr "Eredu lokala kargatzen..."
 msgid "Local model (Ollama, %s)"
 msgstr "Eredu lokala (Ollama, %s)"
 
-msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
-msgstr "Ez da «%s» eredua aurkitu, edo jada ez dago erabilgarri. Hautatu beste eredu bat hemen: Tresnak > Aukerak > AA laguntzailea."
-
-msgid "Model:"
-msgstr "Eredua:"
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (sinplea)"
 
-msgid "Remove key"
-msgstr "Kendu gakoa"
-
 msgid "Send"
 msgstr "Bidali"
-
-msgid "Set API Key..."
-msgstr "Ezarri API gakoa..."
 
 msgid "Socratic"
 msgstr "Sokratikoa"
@@ -2114,9 +2084,6 @@ msgstr "«%s» hornitzaileak «%s» Python paketea behar du, eta falta da. Insta
 
 msgid "The AI service did not answer in time. Try again."
 msgstr "AA zerbitzuak ez du garaiz erantzun. Saiatu berriro."
-
-msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
-msgstr "API gakoa baztertu egin da. Egiaztatu hemen: Tresnak > Aukerak > AA laguntzailea (Ezarri API gakoa...)."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Gakoa testu arrunt gisa gordetzen da Thonnyren konfigurazio-fitxategian."
@@ -2163,3 +2130,27 @@ msgstr "Internetik gabe dabil, 14 GB inguru RAM libre behar ditu eta, txartel gr
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Oraindik ez da AA hornitzailerik hautatu. Hautatu bat hemen: Tresnak > Aukerak > AA laguntzailea."
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "Erantzunen hornitzailea: %s. API gako bat behar duzu: sortu beheko estekan, edo eskatu irakasleari."
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "Ez da hornitzailerik hautatu: AIA piztuta geratzen da, baina ez du erantzuten."
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "Erakustaldietarako soilik: ordenagailu honetan saioa hasita duen Claude Code-k erantzuten du, API gakorik gabe. Ez da ikasleentzat."
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "API gakoa ez dago ezarrita. Sartu hemen: Tresnak > Aukerak > AA laguntzailea."
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "API gakoa baztertu egin da. Egiaztatu hemen: Tresnak > Aukerak > AA laguntzailea."
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "«%s» eredua jada ez dago erabilgarri. Hautatu beste hornitzaile bat hemen: Tresnak > Aukerak > AA laguntzailea, edo instalatu Thonny AIA-ren bertsio berriago bat."

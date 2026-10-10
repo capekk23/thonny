@@ -1987,26 +1987,17 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "एक कुंजी पहले से सेव है; नई कुंजी डालने पर पुरानी बदल जाएगी।"
-
 msgid "AI Assistant"
 msgstr "AI असिस्टेंट"
 
 msgid "AI assistant:"
 msgstr "AI असिस्टेंट:"
 
-msgid "AIA - %s API key"
-msgstr "AIA - %s API कुंजी"
-
 msgid "AIA - AI Mentor Assistant"
 msgstr "AIA - AI मेंटर असिस्टेंट"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA चालू रहेगा, लेकिन जवाब तभी देगा जब आप टूल्स > ऑप्शनस > AI असिस्टेंट में कोई प्रोवाइडर चुनेंगे।"
-
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr "API कुंजी सेट नहीं है। टूल्स > ऑप्शनस > AI असिस्टेंट > API कुंजी सेट करें... पर जाएँ।"
 
 msgid "API key:"
 msgstr "API कुंजी:"
@@ -2044,23 +2035,14 @@ msgstr "संदर्भ:"
 msgid "Direct"
 msgstr "सीधा"
 
-msgid "Enter your %s API key:"
-msgstr "अपनी %s API कुंजी डालें:"
-
 msgid "Explanatory"
 msgstr "समझाने वाला"
-
-msgid "Get one at:"
-msgstr "यहाँ से लें:"
 
 msgid "I will set it up later"
 msgstr "बाद में सेट करेंगे"
 
 msgid "Initial settings:"
 msgstr "शुरुआती सेटिंग्स:"
-
-msgid "LLM Provider:"
-msgstr "LLM प्रोवाइडर:"
 
 msgid "Language:"
 msgstr "भाषा:"
@@ -2074,23 +2056,11 @@ msgstr "लोकल मॉडल लोड हो रहा है..."
 msgid "Local model (Ollama, %s)"
 msgstr "लोकल मॉडल (Ollama, %s)"
 
-msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
-msgstr "मॉडल '%s' नहीं मिला या अब उपलब्ध नहीं है। टूल्स > ऑप्शनस > AI असिस्टेंट में कोई दूसरा मॉडल चुनें।"
-
-msgid "Model:"
-msgstr "मॉडल:"
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (सरल)"
 
-msgid "Remove key"
-msgstr "कुंजी हटाएँ"
-
 msgid "Send"
 msgstr "भेजें"
-
-msgid "Set API Key..."
-msgstr "API कुंजी सेट करें..."
 
 msgid "Socratic"
 msgstr "सुकराती"
@@ -2106,9 +2076,6 @@ msgstr "'%s' प्रोवाइडर को Python पैकेज '%s' च�
 
 msgid "The AI service did not answer in time. Try again."
 msgstr "AI सेवा ने समय पर जवाब नहीं दिया। फिर से कोशिश करें।"
-
-msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
-msgstr "API कुंजी अस्वीकार कर दी गई। इसे टूल्स > ऑप्शनस > AI असिस्टेंट (API कुंजी सेट करें...) में जाँचें।"
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "कुंजी Thonny की कॉन्फ़िगरेशन फ़ाइल में सादे टेक्स्ट के रूप में सेव होती है।"
@@ -2155,3 +2122,27 @@ msgstr "यह बिना इंटरनेट के चलता है, �
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "अभी तक कोई AI प्रोवाइडर नहीं चुना गया है। टूल्स > ऑप्शनस > AI असिस्टेंट में कोई प्रोवाइडर चुनें।"
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "जवाब %s से आते हैं। आपको एक API कुंजी चाहिए: नीचे दिए लिंक पर बनाएँ, या अपने शिक्षक से लें।"
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "कोई प्रोवाइडर नहीं चुना गया है: AIA चालू रहता है, लेकिन जवाब नहीं देता।"
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "केवल डेमो के लिए: जवाब इस कंप्यूटर पर साइन इन किए गए Claude Code से आते हैं, बिना API कुंजी के। छात्रों के लिए नहीं।"
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "API कुंजी सेट नहीं है। इसे टूल्स > ऑप्शनस > AI असिस्टेंट में डालें।"
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "API कुंजी अस्वीकार कर दी गई। इसे टूल्स > ऑप्शनस > AI असिस्टेंट में जाँचें।"
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "मॉडल '%s' अब उपलब्ध नहीं है। टूल्स > ऑप्शनस > AI असिस्टेंट में कोई दूसरा प्रोवाइडर चुनें, या Thonny AIA का नया संस्करण इंस्टॉल करें।"

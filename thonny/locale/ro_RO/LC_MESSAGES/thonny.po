@@ -1995,26 +1995,17 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "O cheie este deja salvată; dacă introduceți una nouă, o va înlocui."
-
 msgid "AI Assistant"
 msgstr "Asistent AI"
 
 msgid "AI assistant:"
 msgstr "Asistent AI:"
 
-msgid "AIA - %s API key"
-msgstr "AIA – cheie API pentru %s"
-
 msgid "AIA - AI Mentor Assistant"
 msgstr "AIA – asistent AI și mentor"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA rămâne pornit, dar va răspunde abia după ce alegeți un furnizor în Instrumente > Opțiuni > Asistent AI."
-
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr "Cheia API nu este setată. Mergeți la Instrumente > Opțiuni > Asistent AI > Setează cheia API..."
 
 msgid "API key:"
 msgstr "Cheie API:"
@@ -2052,23 +2043,14 @@ msgstr "Context:"
 msgid "Direct"
 msgstr "Direct"
 
-msgid "Enter your %s API key:"
-msgstr "Introduceți cheia API pentru %s:"
-
 msgid "Explanatory"
 msgstr "Explicativ"
-
-msgid "Get one at:"
-msgstr "O puteți obține la:"
 
 msgid "I will set it up later"
 msgstr "Configurez mai târziu"
 
 msgid "Initial settings:"
 msgstr "Setări inițiale:"
-
-msgid "LLM Provider:"
-msgstr "Furnizor LLM:"
 
 msgid "Language:"
 msgstr "Limbă:"
@@ -2082,23 +2064,11 @@ msgstr "Se încarcă modelul local..."
 msgid "Local model (Ollama, %s)"
 msgstr "Model local (Ollama, %s)"
 
-msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
-msgstr "Modelul „%s” nu a fost găsit sau nu mai este disponibil. Alegeți alt model în Instrumente > Opțiuni > Asistent AI."
-
-msgid "Model:"
-msgstr "Model:"
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (simplu)"
 
-msgid "Remove key"
-msgstr "Șterge cheia"
-
 msgid "Send"
 msgstr "Trimite"
-
-msgid "Set API Key..."
-msgstr "Setează cheia API..."
 
 msgid "Socratic"
 msgstr "Socratic"
@@ -2114,9 +2084,6 @@ msgstr "Furnizorul „%s” are nevoie de pachetul Python „%s”, care lipseș
 
 msgid "The AI service did not answer in time. Try again."
 msgstr "Serviciul AI nu a răspuns la timp. Încercați din nou."
-
-msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
-msgstr "Cheia API a fost respinsă. Verificați-o în Instrumente > Opțiuni > Asistent AI (Setează cheia API...)."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Cheia este salvată ca text simplu în fișierul de configurare al Thonny."
@@ -2163,3 +2130,27 @@ msgstr "Rulează fără internet, are nevoie de aproximativ 14 GB de RAM liberă
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Nu a fost ales încă niciun furnizor AI. Alegeți unul în Instrumente > Opțiuni > Asistent AI."
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "Răspunsurile vin de la %s. Aveți nevoie de o cheie API: creați-o la linkul de mai jos sau cereți-o profesorului."
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "Nu este ales niciun furnizor: AIA rămâne pornit, dar nu răspunde."
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "Doar pentru demonstrații: răspunsurile vin de la Claude Code conectat pe acest computer, fără cheie API. Nu este pentru elevi."
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "Cheia API nu este setată. Introduceți-o în Instrumente > Opțiuni > Asistent AI."
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "Cheia API a fost respinsă. Verificați-o în Instrumente > Opțiuni > Asistent AI."
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "Modelul „%s” nu mai este disponibil. Alegeți alt furnizor în Instrumente > Opțiuni > Asistent AI sau instalați o versiune mai nouă de Thonny AIA."

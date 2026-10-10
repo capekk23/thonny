@@ -1978,26 +1978,17 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "Ключ уже збережено; новий ключ замінить його."
-
 msgid "AI Assistant"
 msgstr "ШІ-асистент"
 
 msgid "AI assistant:"
 msgstr "ШІ-асистент:"
 
-msgid "AIA - %s API key"
-msgstr "AIA — ключ API для %s"
-
 msgid "AIA - AI Mentor Assistant"
 msgstr "AIA — ШІ-асистент і наставник"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA залишиться увімкненим, але відповідатиме лише після того, як ви виберете постачальника в Інструменти > Параметри > ШІ-асистент."
-
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr "Ключ API не задано. Перейдіть до Інструменти > Параметри > ШІ-асистент > Задати ключ API..."
 
 msgid "API key:"
 msgstr "Ключ API:"
@@ -2035,23 +2026,14 @@ msgstr "Контекст:"
 msgid "Direct"
 msgstr "Прямий"
 
-msgid "Enter your %s API key:"
-msgstr "Введіть ключ API для %s:"
-
 msgid "Explanatory"
 msgstr "Пояснювальний"
-
-msgid "Get one at:"
-msgstr "Отримати можна тут:"
 
 msgid "I will set it up later"
 msgstr "Налаштую пізніше"
 
 msgid "Initial settings:"
 msgstr "Початкові налаштування:"
-
-msgid "LLM Provider:"
-msgstr "Постачальник LLM:"
 
 msgid "Language:"
 msgstr "Мова:"
@@ -2065,23 +2047,11 @@ msgstr "Завантаження локальної моделі..."
 msgid "Local model (Ollama, %s)"
 msgstr "Локальна модель (Ollama, %s)"
 
-msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
-msgstr "Модель «%s» не знайдено або вона більше недоступна. Виберіть іншу модель в Інструменти > Параметри > ШІ-асистент."
-
-msgid "Model:"
-msgstr "Модель:"
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (простий)"
 
-msgid "Remove key"
-msgstr "Видалити ключ"
-
 msgid "Send"
 msgstr "Надіслати"
-
-msgid "Set API Key..."
-msgstr "Задати ключ API..."
 
 msgid "Socratic"
 msgstr "Сократівський"
@@ -2097,9 +2067,6 @@ msgstr "Постачальнику «%s» потрібен пакет Python «%
 
 msgid "The AI service did not answer in time. Try again."
 msgstr "ШІ-сервіс не відповів вчасно. Спробуйте ще раз."
-
-msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
-msgstr "Ключ API відхилено. Перевірте його в Інструменти > Параметри > ШІ-асистент (Задати ключ API...)."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Ключ зберігається відкритим текстом у файлі конфігурації Thonny."
@@ -2146,3 +2113,27 @@ msgstr "Працює без інтернету, потребує близько 
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Постачальника ШІ ще не вибрано. Виберіть постачальника в Інструменти > Параметри > ШІ-асистент."
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "Відповіді надає %s. Вам потрібен ключ API: створіть його за посиланням нижче або отримайте від учителя."
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "Постачальника не вибрано: AIA залишається увімкненим, але не відповідає."
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "Лише для демонстрації: відповідає Claude Code, у якому виконано вхід на цьому комп'ютері, без ключа API. Не для учнів."
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "Ключ API не задано. Введіть його в Інструменти > Параметри > ШІ-асистент."
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "Ключ API відхилено. Перевірте його в Інструменти > Параметри > ШІ-асистент."
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "Модель «%s» більше недоступна. Виберіть іншого постачальника в Інструменти > Параметри > ШІ-асистент або встановіть новішу версію Thonny AIA."

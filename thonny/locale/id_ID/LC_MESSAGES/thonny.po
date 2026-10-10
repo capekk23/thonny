@@ -1985,26 +1985,17 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "Kunci sudah tersimpan; memasukkan kunci baru akan menggantikannya."
-
 msgid "AI Assistant"
 msgstr "Asisten AI"
 
 msgid "AI assistant:"
 msgstr "Asisten AI:"
 
-msgid "AIA - %s API key"
-msgstr "AIA - Kunci API %s"
-
 msgid "AIA - AI Mentor Assistant"
 msgstr "AIA - Asisten Mentor AI"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA tetap aktif, tetapi baru akan menjawab setelah Anda memilih penyedia di Tools > Options > Asisten AI."
-
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr "Kunci API belum diatur. Buka Tools > Options > Asisten AI > Atur Kunci API..."
 
 msgid "API key:"
 msgstr "Kunci API:"
@@ -2042,23 +2033,14 @@ msgstr "Konteks:"
 msgid "Direct"
 msgstr "Langsung"
 
-msgid "Enter your %s API key:"
-msgstr "Masukkan kunci API %s Anda:"
-
 msgid "Explanatory"
 msgstr "Menjelaskan"
-
-msgid "Get one at:"
-msgstr "Dapatkan di:"
 
 msgid "I will set it up later"
 msgstr "Saya akan mengaturnya nanti"
 
 msgid "Initial settings:"
 msgstr "Pengaturan awal:"
-
-msgid "LLM Provider:"
-msgstr "Penyedia LLM:"
 
 msgid "Language:"
 msgstr "Bahasa:"
@@ -2072,23 +2054,11 @@ msgstr "Memuat model lokal..."
 msgid "Local model (Ollama, %s)"
 msgstr "Model lokal (Ollama, %s)"
 
-msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
-msgstr "Model '%s' tidak ditemukan atau sudah tidak tersedia. Pilih model lain di Tools > Options > Asisten AI."
-
-msgid "Model:"
-msgstr "Model:"
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (sederhana)"
 
-msgid "Remove key"
-msgstr "Hapus kunci"
-
 msgid "Send"
 msgstr "Kirim"
-
-msgid "Set API Key..."
-msgstr "Atur Kunci API..."
 
 msgid "Socratic"
 msgstr "Sokratis"
@@ -2104,9 +2074,6 @@ msgstr "Penyedia '%s' memerlukan paket Python '%s', yang tidak ada. Instal ulang
 
 msgid "The AI service did not answer in time. Try again."
 msgstr "Layanan AI tidak menjawab tepat waktu. Coba lagi."
-
-msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
-msgstr "Kunci API ditolak. Periksa di Tools > Options > Asisten AI (Atur Kunci API...)."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Kunci disimpan sebagai teks biasa di file konfigurasi Thonny."
@@ -2153,3 +2120,27 @@ msgstr "Berjalan tanpa internet, memerlukan sekitar 14 GB RAM kosong dan, tanpa 
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Belum ada penyedia AI yang dipilih. Pilih penyedia di Tools > Options > Asisten AI."
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "Jawaban berasal dari %s. Anda memerlukan kunci API: buat di tautan di bawah, atau minta dari guru Anda."
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "Belum ada penyedia yang dipilih: AIA tetap aktif, tetapi tidak menjawab."
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "Hanya untuk demo: jawaban berasal dari Claude Code yang masuk di komputer ini, tanpa kunci API. Bukan untuk siswa."
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "Kunci API belum diatur. Masukkan di Tools > Options > Asisten AI."
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "Kunci API ditolak. Periksa di Tools > Options > Asisten AI."
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "Model '%s' sudah tidak tersedia. Pilih penyedia lain di Tools > Options > Asisten AI, atau instal versi Thonny AIA yang lebih baru."

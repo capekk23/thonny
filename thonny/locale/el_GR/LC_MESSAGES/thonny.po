@@ -1986,26 +1986,17 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "Υπάρχει ήδη αποθηκευμένο κλειδί· ένα νέο θα το αντικαταστήσει."
-
 msgid "AI Assistant"
 msgstr "Βοηθός ΤΝ"
 
 msgid "AI assistant:"
 msgstr "Βοηθός ΤΝ:"
 
-msgid "AIA - %s API key"
-msgstr "AIA – Κλειδί API για %s"
-
 msgid "AIA - AI Mentor Assistant"
 msgstr "AIA – Βοηθός-μέντορας ΤΝ"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "Το AIA παραμένει ενεργό, αλλά θα απαντά μόνο αφού επιλέξετε πάροχο στο Εργαλεία > Επιλογές > Βοηθός ΤΝ."
-
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr "Δεν έχει οριστεί κλειδί API. Μεταβείτε στο Εργαλεία > Επιλογές > Βοηθός ΤΝ > Ορισμός κλειδιού API..."
 
 msgid "API key:"
 msgstr "Κλειδί API:"
@@ -2043,23 +2034,14 @@ msgstr "Πλαίσιο:"
 msgid "Direct"
 msgstr "Άμεσο"
 
-msgid "Enter your %s API key:"
-msgstr "Εισαγάγετε το κλειδί API για %s:"
-
 msgid "Explanatory"
 msgstr "Επεξηγηματικό"
-
-msgid "Get one at:"
-msgstr "Αποκτήστε το στο:"
 
 msgid "I will set it up later"
 msgstr "Θα το ρυθμίσω αργότερα"
 
 msgid "Initial settings:"
 msgstr "Αρχικές ρυθμίσεις:"
-
-msgid "LLM Provider:"
-msgstr "Πάροχος LLM:"
 
 msgid "Language:"
 msgstr "Γλώσσα:"
@@ -2073,23 +2055,11 @@ msgstr "Φόρτωση του τοπικού μοντέλου..."
 msgid "Local model (Ollama, %s)"
 msgstr "Τοπικό μοντέλο (Ollama, %s)"
 
-msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
-msgstr "Το μοντέλο «%s» δεν βρέθηκε ή δεν είναι πλέον διαθέσιμο. Επιλέξτε άλλο μοντέλο στο Εργαλεία > Επιλογές > Βοηθός ΤΝ."
-
-msgid "Model:"
-msgstr "Μοντέλο:"
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (απλό)"
 
-msgid "Remove key"
-msgstr "Αφαίρεση κλειδιού"
-
 msgid "Send"
 msgstr "Αποστολή"
-
-msgid "Set API Key..."
-msgstr "Ορισμός κλειδιού API..."
 
 msgid "Socratic"
 msgstr "Σωκρατικό"
@@ -2105,9 +2075,6 @@ msgstr "Ο πάροχος «%s» χρειάζεται το πακέτο Python �
 
 msgid "The AI service did not answer in time. Try again."
 msgstr "Η υπηρεσία ΤΝ δεν απάντησε εγκαίρως. Δοκιμάστε ξανά."
-
-msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
-msgstr "Το κλειδί API απορρίφθηκε. Ελέγξτε το στο Εργαλεία > Επιλογές > Βοηθός ΤΝ (Ορισμός κλειδιού API...)."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Το κλειδί αποθηκεύεται ως απλό κείμενο στο αρχείο ρυθμίσεων του Thonny."
@@ -2154,3 +2121,27 @@ msgstr "Λειτουργεί χωρίς διαδίκτυο, χρειάζεται
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Δεν έχει επιλεγεί ακόμη πάροχος ΤΝ. Επιλέξτε έναν στο Εργαλεία > Επιλογές > Βοηθός ΤΝ."
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "Οι απαντήσεις προέρχονται από %s. Χρειάζεστε κλειδί API: δημιουργήστε το από τον παρακάτω σύνδεσμο ή ζητήστε το από τον καθηγητή σας."
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "Δεν έχει επιλεγεί πάροχος: το AIA παραμένει ενεργό, αλλά δεν απαντά."
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "Μόνο για επίδειξη: απαντά το Claude Code που είναι συνδεδεμένο σε αυτόν τον υπολογιστή, χωρίς κλειδί API. Όχι για μαθητές."
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "Δεν έχει οριστεί κλειδί API. Εισαγάγετέ το στο Εργαλεία > Επιλογές > Βοηθός ΤΝ."
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "Το κλειδί API απορρίφθηκε. Ελέγξτε το στο Εργαλεία > Επιλογές > Βοηθός ΤΝ."
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "Το μοντέλο «%s» δεν είναι πλέον διαθέσιμο. Επιλέξτε άλλο πάροχο στο Εργαλεία > Επιλογές > Βοηθός ΤΝ ή εγκαταστήστε νεότερη έκδοση του Thonny AIA."

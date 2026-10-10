@@ -1978,26 +1978,17 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "已保存一个密钥；输入新密钥将替换它。"
-
 msgid "AI Assistant"
 msgstr "AI 助手"
 
 msgid "AI assistant:"
 msgstr "AI 助手："
 
-msgid "AIA - %s API key"
-msgstr "AIA - %s API 密钥"
-
 msgid "AIA - AI Mentor Assistant"
 msgstr "AIA - AI 导师助手"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA 保持开启，但只有在你于“工具 > 选项 > AI 助手”中选择提供商后才会回答。"
-
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr "尚未设置 API 密钥。请前往“工具 > 选项 > AI 助手 > 设置 API 密钥...”"
 
 msgid "API key:"
 msgstr "API 密钥："
@@ -2035,23 +2026,14 @@ msgstr "上下文："
 msgid "Direct"
 msgstr "直接"
 
-msgid "Enter your %s API key:"
-msgstr "请输入你的 %s API 密钥："
-
 msgid "Explanatory"
 msgstr "讲解式"
-
-msgid "Get one at:"
-msgstr "获取地址："
 
 msgid "I will set it up later"
 msgstr "稍后再设置"
 
 msgid "Initial settings:"
 msgstr "初始设置："
-
-msgid "LLM Provider:"
-msgstr "LLM 提供商："
 
 msgid "Language:"
 msgstr "语言："
@@ -2065,23 +2047,11 @@ msgstr "正在加载本地模型..."
 msgid "Local model (Ollama, %s)"
 msgstr "本地模型（Ollama，%s）"
 
-msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
-msgstr "未找到模型“%s”，或该模型已不可用。请在“工具 > 选项 > AI 助手”中选择其他模型。"
-
-msgid "Model:"
-msgstr "模型："
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi（简易）"
 
-msgid "Remove key"
-msgstr "删除密钥"
-
 msgid "Send"
 msgstr "发送"
-
-msgid "Set API Key..."
-msgstr "设置 API 密钥..."
 
 msgid "Socratic"
 msgstr "苏格拉底式"
@@ -2097,9 +2067,6 @@ msgstr "提供商“%s”需要 Python 包“%s”，但该包缺失。请重新
 
 msgid "The AI service did not answer in time. Try again."
 msgstr "AI 服务未及时响应。请重试。"
-
-msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
-msgstr "API 密钥被拒绝。请在“工具 > 选项 > AI 助手”中检查（设置 API 密钥...）。"
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "密钥以明文形式保存在 Thonny 的配置文件中。"
@@ -2146,3 +2113,27 @@ msgstr "离线运行，需要约 14 GB 可用内存；如果没有性能强的�
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "尚未选择 AI 提供商。请在“工具 > 选项 > AI 助手”中选择一个。"
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "回答由 %s 提供。你需要一个 API 密钥：可通过下方链接创建，或向老师索取。"
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "未选择提供商：AIA 保持开启，但不会回答。"
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "仅用于演示：由本机已登录的 Claude Code 回答，无需 API 密钥。不适合学生使用。"
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "尚未设置 API 密钥。请在“工具 > 选项 > AI 助手”中输入。"
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "API 密钥被拒绝。请在“工具 > 选项 > AI 助手”中检查。"
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "模型“%s”已不可用。请在“工具 > 选项 > AI 助手”中选择其他提供商，或安装更新版本的 Thonny AIA。"

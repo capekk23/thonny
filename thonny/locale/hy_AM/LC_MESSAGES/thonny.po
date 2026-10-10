@@ -1986,26 +1986,17 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "Բանալին արդեն պահված է․ նորը մուտքագրելով՝ այն կփոխարինեք։"
-
 msgid "AI Assistant"
 msgstr "ԱԲ օգնական"
 
 msgid "AI assistant:"
 msgstr "ԱԲ օգնական:"
 
-msgid "AIA - %s API key"
-msgstr "AIA - %s API բանալի"
-
 msgid "AIA - AI Mentor Assistant"
 msgstr "AIA - ԱԲ մենթոր օգնական"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA֊ն մնում է միացված, բայց կպատասխանի միայն այն բանից հետո, երբ մատակարար ընտրեք Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"
-
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr "API բանալին սահմանված չէ։ Անցեք Գործիքներ > Ընտրանքներ > ԱԲ օգնական > Սահմանել API բանալին..."
 
 msgid "API key:"
 msgstr "API բանալի:"
@@ -2043,23 +2034,14 @@ msgstr "Համատեքստ:"
 msgid "Direct"
 msgstr "Ուղիղ"
 
-msgid "Enter your %s API key:"
-msgstr "Մուտքագրեք ձեր %s API բանալին:"
-
 msgid "Explanatory"
 msgstr "Բացատրական"
-
-msgid "Get one at:"
-msgstr "Ստացեք այստեղ:"
 
 msgid "I will set it up later"
 msgstr "Կկարգավորեմ ավելի ուշ"
 
 msgid "Initial settings:"
 msgstr "Սկզբնական կարգավորումներ:"
-
-msgid "LLM Provider:"
-msgstr "LLM մատակարար:"
 
 msgid "Language:"
 msgstr "Լեզու:"
@@ -2073,23 +2055,11 @@ msgstr "Տեղային մոդելը բեռնվում է..."
 msgid "Local model (Ollama, %s)"
 msgstr "Տեղային մոդել (Ollama, %s)"
 
-msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
-msgstr "«%s» մոդելը չի գտնվել կամ այլևս հասանելի չէ։ Ընտրեք այլ մոդել Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"
-
-msgid "Model:"
-msgstr "Մոդել:"
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (պարզ)"
 
-msgid "Remove key"
-msgstr "Հեռացնել բանալին"
-
 msgid "Send"
 msgstr "Ուղարկել"
-
-msgid "Set API Key..."
-msgstr "Սահմանել API բանալին..."
 
 msgid "Socratic"
 msgstr "Սոկրատյան"
@@ -2105,9 +2075,6 @@ msgstr "«%s» մատակարարին անհրաժեշտ է Python֊ի «%s» փ
 
 msgid "The AI service did not answer in time. Try again."
 msgstr "ԱԲ ծառայությունը ժամանակին չպատասխանեց։ Փորձեք կրկին։"
-
-msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
-msgstr "API բանալին մերժվել է։ Ստուգեք այն Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում (Սահմանել API բանալին...)։"
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Բանալին պահվում է որպես պարզ տեքստ Thonny֊ի կարգավորումների նիշքում։"
@@ -2154,3 +2121,27 @@ msgstr "Աշխատում է առանց համացանցի, պահանջում է
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "ԱԲ մատակարար դեռ ընտրված չէ։ Ընտրեք մատակարար Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "Պատասխանները տրամադրում է %s ծառայությունը։ Ձեզ անհրաժեշտ է API բանալի․ ստեղծեք այն ստորև նշված հղումով կամ ստացեք ձեր ուսուցչից։"
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "Մատակարար ընտրված չէ․ AIA֊ն մնում է միացված, բայց չի պատասխանում։"
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "Միայն ցուցադրման համար․ պատասխանում է այս համակարգչում մուտք գործած Claude Code֊ը՝ առանց API բանալու։ Նախատեսված չէ աշակերտների համար։"
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "API բանալին սահմանված չէ։ Մուտքագրեք այն Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "API բանալին մերժվել է։ Ստուգեք այն Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "«%s» մոդելն այլևս հասանելի չէ։ Ընտրեք այլ մատակարար Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում կամ տեղադրեք Thonny AIA֊ի ավելի նոր տարբերակ։"

@@ -2009,26 +2009,17 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "Ključ je že shranjen; nov ga bo nadomestil."
-
 msgid "AI Assistant"
 msgstr "Pomočnik AI"
 
 msgid "AI assistant:"
 msgstr "Pomočnik AI:"
 
-msgid "AIA - %s API key"
-msgstr "AIA – ključ API za %s"
-
 msgid "AIA - AI Mentor Assistant"
 msgstr "AIA – pomočnik AI in mentor"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA ostane vklopljen, vendar bo odgovarjal šele, ko izberete ponudnika v Orodja > Opcije > Pomočnik AI."
-
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr "Ključ API ni nastavljen. Pojdite v Orodja > Opcije > Pomočnik AI > Nastavi ključ API..."
 
 msgid "API key:"
 msgstr "Ključ API:"
@@ -2066,23 +2057,14 @@ msgstr "Kontekst:"
 msgid "Direct"
 msgstr "Neposredni"
 
-msgid "Enter your %s API key:"
-msgstr "Vnesite ključ API za %s:"
-
 msgid "Explanatory"
 msgstr "Razlagalni"
-
-msgid "Get one at:"
-msgstr "Dobite ga na:"
 
 msgid "I will set it up later"
 msgstr "Nastavim pozneje"
 
 msgid "Initial settings:"
 msgstr "Začetne nastavitve:"
-
-msgid "LLM Provider:"
-msgstr "Ponudnik LLM:"
 
 msgid "Language:"
 msgstr "Jezik:"
@@ -2096,23 +2078,11 @@ msgstr "Nalagam lokalni model..."
 msgid "Local model (Ollama, %s)"
 msgstr "Lokalni model (Ollama, %s)"
 
-msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
-msgstr "Modela »%s« ni mogoče najti ali ni več na voljo. Izberite drug model v Orodja > Opcije > Pomočnik AI."
-
-msgid "Model:"
-msgstr "Model:"
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (preprosto)"
 
-msgid "Remove key"
-msgstr "Odstrani ključ"
-
 msgid "Send"
 msgstr "Pošlji"
-
-msgid "Set API Key..."
-msgstr "Nastavi ključ API..."
 
 msgid "Socratic"
 msgstr "Sokratski"
@@ -2128,9 +2098,6 @@ msgstr "Ponudnik »%s« potrebuje paket Python »%s«, ki manjka. Znova namestit
 
 msgid "The AI service did not answer in time. Try again."
 msgstr "Storitev AI ni odgovorila pravočasno. Poskusite znova."
-
-msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
-msgstr "Ključ API je bil zavrnjen. Preverite ga v Orodja > Opcije > Pomočnik AI (Nastavi ključ API...)."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Ključ je shranjen kot navadno besedilo v konfiguracijski datoteki programa Thonny."
@@ -2177,3 +2144,27 @@ msgstr "Deluje brez interneta, potrebuje približno 14 GB prostega pomnilnika RA
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Ponudnik AI še ni izbran. Izberite ga v Orodja > Opcije > Pomočnik AI."
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "Odgovore zagotavlja %s. Potrebujete ključ API: ustvarite ga na spodnji povezavi ali ga dobite od učitelja."
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "Noben ponudnik ni izbran: AIA ostane vklopljen, vendar ne odgovarja."
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "Samo za predstavitve: odgovarja Claude Code, ki je prijavljen v tem računalniku, brez ključa API. Ni za učence."
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "Ključ API ni nastavljen. Vnesite ga v Orodja > Opcije > Pomočnik AI."
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "Ključ API je bil zavrnjen. Preverite ga v Orodja > Opcije > Pomočnik AI."
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "Model »%s« ni več na voljo. Izberite drugega ponudnika v Orodja > Opcije > Pomočnik AI ali namestite novejšo različico Thonny AIA."

@@ -1987,26 +1987,17 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "Ein nøkkel er allereie lagra. Skriv du inn ein ny, blir den erstatta."
-
 msgid "AI Assistant"
 msgstr "KI-assistent"
 
 msgid "AI assistant:"
 msgstr "KI-assistent:"
 
-msgid "AIA - %s API key"
-msgstr "AIA – API-nøkkel for %s"
-
 msgid "AIA - AI Mentor Assistant"
 msgstr "AIA – KI-mentorassistent"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA held fram med å vere slått på, men svarar først når du har valt ein leverandør under Verktøy > Alternativ > KI-assistent."
-
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr "API-nøkkelen er ikkje lagd inn. Gå til Verktøy > Alternativ > KI-assistent > Legg inn API-nøkkel..."
 
 msgid "API key:"
 msgstr "API-nøkkel:"
@@ -2044,23 +2035,14 @@ msgstr "Kontekst:"
 msgid "Direct"
 msgstr "Direkte"
 
-msgid "Enter your %s API key:"
-msgstr "Skriv inn API-nøkkelen for %s:"
-
 msgid "Explanatory"
 msgstr "Forklarande"
-
-msgid "Get one at:"
-msgstr "Få ein her:"
 
 msgid "I will set it up later"
 msgstr "Eg set det opp seinare"
 
 msgid "Initial settings:"
 msgstr "Startinnstillingar:"
-
-msgid "LLM Provider:"
-msgstr "LLM-leverandør:"
 
 msgid "Language:"
 msgstr "Språk:"
@@ -2074,23 +2056,11 @@ msgstr "Lastar inn den lokale modellen..."
 msgid "Local model (Ollama, %s)"
 msgstr "Lokal modell (Ollama, %s)"
 
-msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
-msgstr "Fann ikkje modellen «%s», eller den er ikkje tilgjengeleg lenger. Vel ein annan modell under Verktøy > Alternativ > KI-assistent."
-
-msgid "Model:"
-msgstr "Modell:"
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (enkelt)"
 
-msgid "Remove key"
-msgstr "Fjern nøkkel"
-
 msgid "Send"
 msgstr "Send"
-
-msgid "Set API Key..."
-msgstr "Legg inn API-nøkkel..."
 
 msgid "Socratic"
 msgstr "Sokratisk"
@@ -2106,9 +2076,6 @@ msgstr "Leverandøren «%s» treng Python-pakken «%s», som manglar. Installer 
 
 msgid "The AI service did not answer in time. Try again."
 msgstr "KI-tenesta svara ikkje i tide. Prøv igjen."
-
-msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
-msgstr "API-nøkkelen vart avvist. Sjekk den under Verktøy > Alternativ > KI-assistent (Legg inn API-nøkkel...)."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Nøkkelen blir lagra som rein tekst i konfigurasjonsfila til Thonny."
@@ -2155,3 +2122,27 @@ msgstr "Den køyrer utan internett, treng om lag 14 GB ledig RAM og svarar på 2
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Ingen KI-leverandør er vald enno. Vel ein under Verktøy > Alternativ > KI-assistent."
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "Svara kjem frå %s. Du treng ein API-nøkkel: lag den via lenkja nedanfor, eller få ein frå læraren din."
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "Ingen leverandør er valt: AIA held fram med å vere slått på, men svarar ikkje."
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "Berre til demonstrasjon: svara kjem frå Claude Code som er pålogga på denne datamaskina, utan API-nøkkel. Ikkje for elevar."
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "API-nøkkelen er ikkje lagd inn. Skriv den inn under Verktøy > Alternativ > KI-assistent."
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "API-nøkkelen vart avvist. Sjekk den under Verktøy > Alternativ > KI-assistent."
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "Modellen «%s» er ikkje tilgjengeleg lenger. Vel ein annan leverandør under Verktøy > Alternativ > KI-assistent, eller installer ein nyare versjon av Thonny AIA."

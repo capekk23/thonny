@@ -1988,26 +1988,17 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
-msgid "A key is already stored; entering a new one replaces it."
-msgstr "یک کلید از قبل ذخیره شده است؛ وارد کردن کلید جدید جایگزین آن می‌شود."
-
 msgid "AI Assistant"
 msgstr "دستیار هوش مصنوعی"
 
 msgid "AI assistant:"
 msgstr "دستیار هوش مصنوعی:"
 
-msgid "AIA - %s API key"
-msgstr "AIA - کلید API برای %s"
-
 msgid "AIA - AI Mentor Assistant"
 msgstr "AIA - دستیار و مربی هوش مصنوعی"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA روشن می‌ماند، اما فقط پس از انتخاب یک ارائه‌دهنده در ابزارها > تنظیمات > دستیار هوش مصنوعی پاسخ خواهد داد."
-
-msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
-msgstr "کلید API تنظیم نشده است. به ابزارها > تنظیمات > دستیار هوش مصنوعی > تنظیم کلید API... بروید."
 
 msgid "API key:"
 msgstr "کلید API:"
@@ -2045,23 +2036,14 @@ msgstr "زمینه:"
 msgid "Direct"
 msgstr "مستقیم"
 
-msgid "Enter your %s API key:"
-msgstr "کلید API مربوط به %s را وارد کنید:"
-
 msgid "Explanatory"
 msgstr "توضیحی"
-
-msgid "Get one at:"
-msgstr "دریافت از:"
 
 msgid "I will set it up later"
 msgstr "بعداً تنظیم می‌کنم"
 
 msgid "Initial settings:"
 msgstr "تنظیمات اولیه:"
-
-msgid "LLM Provider:"
-msgstr "ارائه‌دهندهٔ LLM:"
 
 msgid "Language:"
 msgstr "زبان:"
@@ -2075,23 +2057,11 @@ msgstr "در حال بارگذاری مدل محلی..."
 msgid "Local model (Ollama, %s)"
 msgstr "مدل محلی (Ollama، %s)"
 
-msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
-msgstr "مدل «%s» پیدا نشد یا دیگر در دسترس نیست. مدل دیگری را در ابزارها > تنظیمات > دستیار هوش مصنوعی انتخاب کنید."
-
-msgid "Model:"
-msgstr "مدل:"
-
 msgid "Raspberry Pi (simple)"
 msgstr "Raspberry Pi (ساده)"
 
-msgid "Remove key"
-msgstr "حذف کلید"
-
 msgid "Send"
 msgstr "ارسال"
-
-msgid "Set API Key..."
-msgstr "تنظیم کلید API..."
 
 msgid "Socratic"
 msgstr "سقراطی"
@@ -2107,9 +2077,6 @@ msgstr "ارائه‌دهندهٔ «%s» به بستهٔ Python به نام «%s
 
 msgid "The AI service did not answer in time. Try again."
 msgstr "سرویس هوش مصنوعی به‌موقع پاسخ نداد. دوباره تلاش کنید."
-
-msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
-msgstr "کلید API پذیرفته نشد. آن را در ابزارها > تنظیمات > دستیار هوش مصنوعی (تنظیم کلید API...) بررسی کنید."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "کلید به‌صورت متن ساده در فایل پیکربندی Thonny ذخیره می‌شود."
@@ -2156,3 +2123,27 @@ msgstr "بدون اینترنت کار می‌کند، حدود ۱۴ گیگاب�
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "هنوز هیچ ارائه‌دهندهٔ هوش مصنوعی انتخاب نشده است. یکی را در ابزارها > تنظیمات > دستیار هوش مصنوعی انتخاب کنید."
+
+#: thonny/plugins/aia
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
+msgstr "پاسخ‌ها از %s می‌آیند. به یک کلید API نیاز دارید: آن را از پیوند زیر بسازید یا از معلم خود بگیرید."
+
+#: thonny/plugins/aia
+msgid "No provider is chosen: AIA stays switched on, but it does not answer."
+msgstr "هیچ ارائه‌دهنده‌ای انتخاب نشده است: AIA روشن می‌ماند، اما پاسخ نمی‌دهد."
+
+#: thonny/plugins/aia
+msgid "Demo only: answers come from Claude Code signed in on this computer, without an API key. Not for students."
+msgstr "فقط برای نمایش: پاسخ‌ها از Claude Code واردشده در این رایانه می‌آیند، بدون کلید API. مناسب دانش‌آموزان نیست."
+
+#: thonny/plugins/aia
+msgid "API key not set. Enter it in Tools > Options > AI Assistant."
+msgstr "کلید API تنظیم نشده است. آن را در ابزارها > تنظیمات > دستیار هوش مصنوعی وارد کنید."
+
+#: thonny/plugins/aia
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
+msgstr "کلید API پذیرفته نشد. آن را در ابزارها > تنظیمات > دستیار هوش مصنوعی بررسی کنید."
+
+#: thonny/plugins/aia
+msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
+msgstr "مدل «%s» دیگر در دسترس نیست. ارائه‌دهندهٔ دیگری را در ابزارها > تنظیمات > دستیار هوش مصنوعی انتخاب کنید، یا نسخهٔ جدیدتری از Thonny AIA را نصب کنید."
