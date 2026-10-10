@@ -252,11 +252,12 @@ def _get_macos_app_path() -> Optional[str]:
 def launch():
     import runpy
 
-    if sys.executable.endswith("thonny.exe"):
+    # Thonny AIA's launcher is thonny-aia.exe, so it does not clash with the regular Thonny
+    if os.path.basename(sys.executable).lower() in ("thonny.exe", "thonny-aia.exe"):
         # otherwise some library may try to run its subprocess with thonny.exe
         # NB! Must be pythonw.exe not python.exe, otherwise Runner thinks console
         # is already allocated.
-        sys.executable = sys.executable[: -len("thonny.exe")] + "pythonw.exe"
+        sys.executable = os.path.join(os.path.dirname(sys.executable), "pythonw.exe")
 
     set_dpi_aware()
 

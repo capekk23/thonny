@@ -1,5 +1,9 @@
-﻿#define AppUserModelID "Thonny.Thonny"
-#define ThonnyPyProgID "Thonny.py"
+﻿; Thonny AIA (fork with the AI Assistant): own ids and names, so it installs next to
+; the regular Thonny instead of over it, and its launcher is thonny-aia.exe
+#define AppUserModelID "Thonny.ThonnyAIA"
+#define ThonnyPyProgID "ThonnyAIA.py"
+#define AppTitle "Thonny AIA"
+#define ExeName "thonny-aia.exe"
 ; Give AppVer and SourceFolder from command line, eg:
 ; "C:\Program Files (x86)\Inno Setup 5\iscc" /dAppVer=1.13 /dSourceFolder=build inno_setup.iss 
 ;#define AppVer "9.9.9"
@@ -10,16 +14,16 @@
 
 
 [Setup]
-AppId=Thonny
-AppName=Thonny
+AppId=ThonnyAIA
+AppName={#AppTitle}
 AppVersion={#AppVer}
-AppVerName=Thonny {#AppVer}
+AppVerName={#AppTitle} {#AppVer}
 ;AppComments string is displayed on the "Support" dialog of the Add/Remove Programs Control Panel applet
-AppComments=Thonny is Python IDE for beginners
-AppPublisher=Aivar Annamaa
-AppPublisherURL=https://thonny.org
-AppSupportURL=https://thonny.org
-AppUpdatesURL=https://thonny.org
+AppComments=Thonny (Python IDE for beginners by Aivar Annamaa) with the AI Assistant AIA
+AppPublisher=Jakub Senkyr
+AppPublisherURL=https://github.com/senkyr/thonny
+AppSupportURL=https://github.com/senkyr/thonny
+AppUpdatesURL=https://github.com/senkyr/thonny/releases
 
 ; Actual privileges depend on how user started the installer
 PrivilegesRequired=lowest
@@ -34,10 +38,10 @@ ArchitecturesInstallIn64BitMode={#SupportedArchitectures}
 DisableWelcomePage=no
 
 DisableProgramGroupPage=auto
-DefaultGroupName=Thonny
+DefaultGroupName={#AppTitle}
 
 ; Note that DefaultDirName can be overridden with installer's /DIR=... parameter
-DefaultDirName={autopf}\Thonny
+DefaultDirName={autopf}\{#AppTitle}
 DisableDirPage=auto
 DirExistsWarning=auto
 UsePreviousAppDir=yes
@@ -72,10 +76,11 @@ ChangesAssociations=yes
 ; "C:\Program Files (x86)\Windows Kits\10\App Certification Kit\signtool.exe" sign /n "Open Source Developer Aivar Annamaa" $p
 ; "C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\signtool.exe" sign /n "Open Source Developer Aivar Annamaa" $p
 ; NB! Don't forget the trailing $p
-SignTool=signtool /tr http://time.certum.pl /td sha256 /fd sha256 /d $qInstaller for Thonny {#AppVer}$q /du $qhttps://thonny.org$q $f
+; Thonny AIA is not signed (no SignTool)
 
 
 [Languages]
+Name: "czech"; MessagesFile: "compiler:Languages\Czech.isl"
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [InstallDelete]
@@ -92,14 +97,14 @@ Type: filesandordirs; Name: "{app}\Tools"
 Type: filesandordirs; Name: "{app}\python*"
 
 [Tasks]
-Name: CreateDesktopIcon; Description: "Create desktop icon"; Flags: unchecked;
+Name: CreateDesktopIcon; Description: "{cm:CreateDesktopIcon}"; Flags: unchecked;
 
 [Files]
 Source: "{#SourceFolder}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
 
 [Icons]
-Name: "{group}\Thonny"; Filename: "{app}\thonny.exe"; IconFilename: "{app}\thonny.exe"
-Name: "{autodesktop}\Thonny"; Filename: "{app}\thonny.exe"; IconFilename: "{app}\thonny.exe"; Tasks: CreateDesktopIcon
+Name: "{group}\{#AppTitle}"; Filename: "{app}\{#ExeName}"; IconFilename: "{app}\{#ExeName}"
+Name: "{autodesktop}\{#AppTitle}"; Filename: "{app}\{#ExeName}"; IconFilename: "{app}\{#ExeName}"; Tasks: CreateDesktopIcon
 
 
 [Registry]
@@ -107,23 +112,23 @@ Name: "{autodesktop}\Thonny"; Filename: "{app}\thonny.exe"; IconFilename: "{app}
 ; http://msdn.microsoft.com/en-us/library/windows/desktop/ee872121%28v=vs.85%29.aspx
 ; https://docs.microsoft.com/en-us/windows/desktop/shell/app-registration
 ; TODO: investigate also SupportedProtocols subkey of this key
-Root: HKA; Subkey: "Software\Microsoft\Windows\CurrentVersion\App Paths\thonny.exe"; ValueType: string; ValueName: "";                 ValueData: "{app}\thonny.exe"; Flags: uninsdeletekey
-Root: HKA; Subkey: "Software\Classes\Applications\thonny.exe";                       ValueType: string; ValueName: "";                 ValueData: "Thonny";  Flags: uninsdeletekey
-Root: HKA; Subkey: "Software\Classes\Applications\thonny.exe";                       ValueType: string; ValueName: "FriendlyAppName";  ValueData: "Thonny";  Flags: uninsdeletekey
-Root: HKA; Subkey: "Software\Classes\Applications\thonny.exe";                       ValueType: string; ValueName: "AppUserModelID";   ValueData: "{#AppUserModelID}";  Flags: uninsdeletekey
-Root: HKA; Subkey: "Software\Classes\Applications\thonny.exe\SupportedTypes";        ValueType: string; ValueName: ".py";              ValueData: "";        Flags: uninsdeletekey
-Root: HKA; Subkey: "Software\Classes\Applications\thonny.exe\SupportedTypes";        ValueType: string; ValueName: ".pyw";             ValueData: "";        Flags: uninsdeletekey
-Root: HKA; Subkey: "Software\Classes\Applications\thonny.exe\SupportedTypes";        ValueType: string; ValueName: ".pyde";             ValueData: "";        Flags: uninsdeletekey
-Root: HKA; Subkey: "Software\Classes\Applications\thonny.exe\shell\open\command";    ValueType: string; ValueName: "";                 ValueData: """{app}\thonny.exe"" ""%1"""; Flags: uninsdeletekey
-Root: HKA; Subkey: "Software\Classes\Applications\thonny.exe\shell\Edit with Thonny\command";   ValueType: string; ValueName: "";      ValueData: """{app}\thonny.exe"" ""%1"""; Flags: uninsdeletekey
+Root: HKA; Subkey: "Software\Microsoft\Windows\CurrentVersion\App Paths\{#ExeName}"; ValueType: string; ValueName: "";                 ValueData: "{app}\{#ExeName}"; Flags: uninsdeletekey
+Root: HKA; Subkey: "Software\Classes\Applications\{#ExeName}";                       ValueType: string; ValueName: "";                 ValueData: "{#AppTitle}";  Flags: uninsdeletekey
+Root: HKA; Subkey: "Software\Classes\Applications\{#ExeName}";                       ValueType: string; ValueName: "FriendlyAppName";  ValueData: "{#AppTitle}";  Flags: uninsdeletekey
+Root: HKA; Subkey: "Software\Classes\Applications\{#ExeName}";                       ValueType: string; ValueName: "AppUserModelID";   ValueData: "{#AppUserModelID}";  Flags: uninsdeletekey
+Root: HKA; Subkey: "Software\Classes\Applications\{#ExeName}\SupportedTypes";        ValueType: string; ValueName: ".py";              ValueData: "";        Flags: uninsdeletekey
+Root: HKA; Subkey: "Software\Classes\Applications\{#ExeName}\SupportedTypes";        ValueType: string; ValueName: ".pyw";             ValueData: "";        Flags: uninsdeletekey
+Root: HKA; Subkey: "Software\Classes\Applications\{#ExeName}\SupportedTypes";        ValueType: string; ValueName: ".pyde";             ValueData: "";        Flags: uninsdeletekey
+Root: HKA; Subkey: "Software\Classes\Applications\{#ExeName}\shell\open\command";    ValueType: string; ValueName: "";                 ValueData: """{app}\{#ExeName}"" ""%1"""; Flags: uninsdeletekey
+Root: HKA; Subkey: "Software\Classes\Applications\{#ExeName}\shell\Edit with Thonny AIA\command";   ValueType: string; ValueName: "";      ValueData: """{app}\{#ExeName}"" ""%1"""; Flags: uninsdeletekey
 
 ; Explicit marker for the modern 64-bit install mode.
-Root: HKA; Subkey: "Software\Thonny"; ValueType: string; ValueName: "InstallMode"; ValueData: "64-bit"; Flags: uninsdeletevalue
-Root: HKA; Subkey: "Software\Thonny"; ValueType: string; ValueName: "InstallArchitecture"; ValueData: "{#Arch}"; Flags: uninsdeletevalue
+Root: HKA; Subkey: "Software\Thonny AIA"; ValueType: string; ValueName: "InstallMode"; ValueData: "64-bit"; Flags: uninsdeletevalue
+Root: HKA; Subkey: "Software\Thonny AIA"; ValueType: string; ValueName: "InstallArchitecture"; ValueData: "{#Arch}"; Flags: uninsdeletevalue
 
 ; Add link to Thonny under existing Python.File ProgID
-Root: HKA; Subkey: "Software\Classes\Python.File\shell\Edit with Thonny"; ValueType: none; Flags: uninsdeletekey
-Root: HKA; Subkey: "Software\Classes\Python.File\shell\Edit with Thonny\command"; ValueType: string; ValueName: ""; ValueData: """{app}\thonny.exe"" ""%1""";  Flags: uninsdeletekey
+Root: HKA; Subkey: "Software\Classes\Python.File\shell\Edit with Thonny AIA"; ValueType: none; Flags: uninsdeletekey
+Root: HKA; Subkey: "Software\Classes\Python.File\shell\Edit with Thonny AIA\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#ExeName}"" ""%1""";  Flags: uninsdeletekey
 
 ; Create separate ProgID (Thonny.py) which represents Thonny's ability to handle Python files
 ; These settings will be used when user chooses Thonny as default program for opening *.py files
@@ -133,7 +138,7 @@ Root: HKA; Subkey: "Software\Classes\{#ThonnyPyProgID}"; ValueType: string; Valu
 
 ;Root: HKA; Subkey: "Software\Classes\{#ThonnyPyProgID}"; ValueType: string; ValueName: "EditFlags"; TODO: https://docs.microsoft.com/en-us/windows/desktop/api/Shlwapi/ne-shlwapi-filetypeattributeflags
 
-Root: HKA; Subkey: "Software\Classes\{#ThonnyPyProgID}\shell\open\command";     ValueType: string; ValueName: ""; ValueData: """{app}\thonny.exe"" ""%1""";  Flags: uninsdeletekey
+Root: HKA; Subkey: "Software\Classes\{#ThonnyPyProgID}\shell\open\command";     ValueType: string; ValueName: ""; ValueData: """{app}\{#ExeName}"" ""%1""";  Flags: uninsdeletekey
 
 ; Relate this ProgID with *.pyde, *.py and *.pyw extensions
 ; https://docs.microsoft.com/en-us/windows/desktop/shell/how-to-include-an-application-on-the-open-with-dialog-box
@@ -162,7 +167,7 @@ FinishedHeadingLabel=Great success!
 
 
 const
-  ModernInstallKey = 'Software\Thonny';
+  ModernInstallKey = 'Software\Thonny AIA';
   ModernInstallModeValue = '64-bit';
 
 var
@@ -181,12 +186,12 @@ end;
 
 function InstalledForAllUsers(): Boolean;
 begin
-    Result := RegKeyExists(HKEY_LOCAL_MACHINE, 'Software\Classes\Applications\thonny.exe');
+    Result := RegKeyExists(HKEY_LOCAL_MACHINE, 'Software\Classes\Applications\{#ExeName}');
 end;
 
 function InstalledForThisUser(): Boolean;
 begin
-    Result := RegKeyExists(HKEY_CURRENT_USER, 'Software\Classes\Applications\thonny.exe');
+    Result := RegKeyExists(HKEY_CURRENT_USER, 'Software\Classes\Applications\{#ExeName}');
 end;
 
 
@@ -217,39 +222,39 @@ var
   DualWarningLabel: TLabel;
 begin
   Upgraded := False;
-  WizardForm.WelcomeLabel1.Caption := 'Welcome to using Thonny!';
+  WizardForm.WelcomeLabel1.Caption := 'Welcome to using {#AppTitle}!';
 
   DualWarningLabel := TLabel.Create(WizardForm);
 
   if StartedForAllUsers() then
   begin
-    WizardForm.WelcomeLabel2.Caption := 'This wizard will install Thonny {#AppVer} for all users.';
+    WizardForm.WelcomeLabel2.Caption := 'This wizard will install {#AppTitle} {#AppVer} for all users.';
     if InstalledForThisUser() then
     begin    
       DualWarningLabel.Caption := 'Warning!'
           + ''#13#10''
           + ''#13#10''
-          + 'Looks like you have already installed Thonny for your account. In order to avoid confusion, you may want to cancel this wizard and uninstall single-user Thonny first.';
+          + 'Looks like you have already installed {#AppTitle} for your account. In order to avoid confusion, you may want to cancel this wizard and uninstall single-user {#AppTitle} first.';
     end
     else if InstalledForAllUsers() then
     begin
-      WizardForm.WelcomeLabel2.Caption := 'This wizard will upgrade Thonny to version {#AppVer} for all users.';
+      WizardForm.WelcomeLabel2.Caption := 'This wizard will upgrade {#AppTitle} to version {#AppVer} for all users.';
       Upgraded := True;
     end;
   end
   else  // single user
   begin
-    WizardForm.WelcomeLabel2.Caption := 'This wizard will install Thonny {#AppVer} for your account.';
+    WizardForm.WelcomeLabel2.Caption := 'This wizard will install {#AppTitle} {#AppVer} for your account.';
     if InstalledForAllUsers() then
     begin    
       DualWarningLabel.Caption := 'Warning!'
         + ''#13#10''
         + ''#13#10''
-        + 'Looks like Thonny is already installed for all users. In order to avoid confusion, you may want to cancel this wizard and uninstall all-users Thonny first.';
+        + 'Looks like {#AppTitle} is already installed for all users. In order to avoid confusion, you may want to cancel this wizard and uninstall all-users {#AppTitle} first.';
     end
     else if InstalledForThisUser() then
     begin
-      WizardForm.WelcomeLabel2.Caption := 'This wizard will upgrade Thonny to version {#AppVer} for your account.';
+      WizardForm.WelcomeLabel2.Caption := 'This wizard will upgrade {#AppTitle} to version {#AppVer} for your account.';
       Upgraded := True;
     end;
 
@@ -282,7 +287,7 @@ function NextButtonClick(CurPageID: Integer): Boolean;
 begin
   if (CurPageID = wpSelectDir) and (pos('&', WizardDirValue) > 1) then
   begin
-    MsgBox('Directory paths containing "&" are known to cause problems in Thonny'
+    MsgBox('Directory paths containing "&" are known to cause problems in {#AppTitle}'
           + ''#13#10''
           + 'Please choose another directory!', mbError, MB_OK);
     Result := False
@@ -298,11 +303,11 @@ begin
     if CurPageID = wpFinished then
     begin
       if Upgraded then
-        WizardForm.FinishedLabel.Caption := 'Thonny is now upgraded.'
+        WizardForm.FinishedLabel.Caption := '{#AppTitle} is now upgraded.'
       else
-        WizardForm.FinishedLabel.Caption := 'Thonny is now installed.';
+        WizardForm.FinishedLabel.Caption := '{#AppTitle} is now installed.';
       WizardForm.FinishedLabel.Caption := WizardForm.FinishedLabel.Caption 
-        + ' Run it via shortcut or right-click a *.py file and select "Edit with Thonny".';
+        + ' Run it via shortcut or right-click a *.py file and select "Edit with Thonny AIA".';
 
       WizardForm.FinishedLabel.AutoSize := True;
 
@@ -342,10 +347,10 @@ begin
   if (InstalledForAllUsers() or InstalledForThisUser()) 
     and not (Modern64BitInstallMarkerExists(HKEY_CURRENT_USER) or Modern64BitInstallMarkerExists(HKEY_LOCAL_MACHINE)) then
   begin
-      Msg := 'A previous Thonny installation created by an older installer was found.';
+      Msg := 'A previous {#AppTitle} installation created by an older installer was found.';
 
     Msg := Msg + #13#10#13#10 +
-      'If you continue, Thonny may be installed twice.' + #13#10 +
+      'If you continue, {#AppTitle} may be installed twice.' + #13#10 +
       'It is recommended to uninstall the old version first.' + #13#10#13#10 +
       'Do you want to continue anyway?';
 

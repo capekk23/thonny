@@ -1,14 +1,20 @@
 @echo off
 
-set BUILDDIR=build
+rem Thonny AIA: build and output folders, the Python to bundle and Inno Setup can be
+rem given from outside (keep the build tree out of a synced folder such as OneDrive)
+if not defined BUILDDIR set BUILDDIR=build
+if not defined DISTDIR set DISTDIR=dist
+if not defined PYTHONDIR set PYTHONDIR=C:\Program Files\Python314
+if not defined ISCC set ISCC=C:\Program Files (x86)\Inno Setup 6\iscc
 del %BUILDDIR% /Q
 rmdir %BUILDDIR% /S /Q
 mkdir %BUILDDIR%
 
 @echo ............... COPYING PYTHON ...................................
-xcopy "C:\Program Files\Python314\*" %BUILDDIR% /S /E /K>NUL
+xcopy "%PYTHONDIR%\*" %BUILDDIR% /S /E /K>NUL
+del %BUILDDIR%\__install__.json /Q>NUL 2>NUL
 @echo ............... COPYING OTHER STUFF ...................................
-copy ThonnyRunner314\x64\Release\thonny.exe %BUILDDIR% /Y
+copy ThonnyRunner314\x64\Release\thonny.exe %BUILDDIR%\thonny-aia.exe /Y
 copy thonny_python.ini %BUILDDIR%
 
 @echo ............... INSTALLING DEPS ...................................
@@ -18,7 +24,8 @@ copy thonny_python.ini %BUILDDIR%
 %BUILDDIR%\python -s -m pip install --no-warn-script-location --no-cache-dir --no-binary mypy -r ..\requirements-regular-bundle.txt
 
 @echo ............... INSTALLING THONNY ...................................
-%BUILDDIR%\python -s -m pip install --no-warn-script-location --pre --no-cache-dir thonny
+rem Thonny AIA: this fork from the source tree (pulls the AI SDKs as its dependencies)
+%BUILDDIR%\python -s -m pip install --no-warn-script-location --no-cache-dir ..\..
 @rem %BUILDDIR%\python -s -m pip install --no-warn-script-location ..\..\dist\thonny-4.2.0.dev1-py3-none-any.whl
 
 @echo ............... CLEANING PYTHON ............................
@@ -74,13 +81,14 @@ copy ..\..\README.rst %BUILDDIR% /Y>NUL
 
 @echo ............... CREATING INSTALLER ..........................
 set /p VERSION=<%BUILDDIR%\Lib\site-packages\thonny\VERSION
-"C:\Program Files (x86)\Inno Setup 6\iscc" /dInstallerPrefix=thonny /dAppVer=%VERSION% /dArch=x64 /dSupportedArchitectures="x64compatible arm64" /dSourceFolder=build inno_setup.iss > installer_building.log
+"%ISCC%" /dInstallerPrefix=thonny-aia /dAppVer=%VERSION% /dArch=x64 /dSupportedArchitectures="x64compatible arm64" /dSourceFolder=%BUILDDIR% /O%DISTDIR% inno_setup.iss > %DISTDIR%\installer_building.log
 
 @echo ............... CREATING ZIP ..........................
 SET PATH=%PATH%;C:\Program Files\7-Zip
+where 7z >NUL 2>NUL || goto :eof
 copy ..\portable_thonny.ini %BUILDDIR%
 cd %BUILDDIR%
-7z a -tzip ..\dist\thonny-%VERSION%-windows-portable-x64.zip *
+7z a -tzip %DISTDIR%\thonny-aia-%VERSION%-windows-portable-x64.zip *
 del portable_thonny.ini
 cd ..
 
