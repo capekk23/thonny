@@ -1987,3 +1987,173 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
+msgid "A key is already stored; entering a new one replaces it."
+msgstr "एक कुंजी पहले से सेव है; नई कुंजी डालने पर पुरानी बदल जाएगी।"
+
+msgid "AI Assistant"
+msgstr "AI असिस्टेंट"
+
+msgid "AI assistant:"
+msgstr "AI असिस्टेंट:"
+
+msgid "AIA - %s API key"
+msgstr "AIA - %s API कुंजी"
+
+msgid "AIA - AI Mentor Assistant"
+msgstr "AIA - AI मेंटर असिस्टेंट"
+
+msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
+msgstr "AIA चालू रहेगा, लेकिन जवाब तभी देगा जब आप टूल्स > ऑप्शनस > AI असिस्टेंट में कोई प्रोवाइडर चुनेंगे।"
+
+msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
+msgstr "API कुंजी सेट नहीं है। टूल्स > ऑप्शनस > AI असिस्टेंट > API कुंजी सेट करें... पर जाएँ।"
+
+msgid "API key:"
+msgstr "API कुंजी:"
+
+msgid "About Thonny AIA"
+msgstr "अबाउट Thonny AIA"
+
+msgid "Also include locally imported files"
+msgstr "लोकली इम्पोर्ट की गई फ़ाइलें भी शामिल करें"
+
+msgid "Answer style:"
+msgstr "जवाब की शैली:"
+
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
+msgstr "जवाब %s से आते हैं। आपको एक API कुंजी चाहिए: नीचे दिए लिंक पर बनाएँ, या अपने शिक्षक से लें। आप इसे बाद में टूल्स > ऑप्शनस > AI असिस्टेंट में भी डाल सकते हैं।"
+
+msgid "Automatically include current file as context"
+msgstr "मौजूदा फ़ाइल को अपने-आप संदर्भ के रूप में शामिल करें"
+
+msgid "Cannot connect to the AI service. Check the internet connection."
+msgstr "AI सेवा से कनेक्ट नहीं हो पा रहा। इंटरनेट कनेक्शन जाँचें।"
+
+msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
+msgstr "Ollama तक नहीं पहुँच पा रहे। क्या यह चल रहा है (ollama serve) और क्या होस्ट सही है?"
+
+msgid "Check again"
+msgstr "फिर से जाँचें"
+
+msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
+msgstr "Claude Code ('claude' कमांड) नहीं मिला। Claude Code इंस्टॉल करें, एक बार 'claude' चलाकर साइन इन करें, फिर Thonny रीस्टार्ट करें।"
+
+msgid "Context:"
+msgstr "संदर्भ:"
+
+msgid "Direct"
+msgstr "सीधा"
+
+msgid "Enter your %s API key:"
+msgstr "अपनी %s API कुंजी डालें:"
+
+msgid "Explanatory"
+msgstr "समझाने वाला"
+
+msgid "Get one at:"
+msgstr "यहाँ से लें:"
+
+msgid "I will set it up later"
+msgstr "बाद में सेट करेंगे"
+
+msgid "Initial settings:"
+msgstr "शुरुआती सेटिंग्स:"
+
+msgid "LLM Provider:"
+msgstr "LLM प्रोवाइडर:"
+
+msgid "Language:"
+msgstr "भाषा:"
+
+msgid "Let's go!"
+msgstr "चलिए शुरू करें!"
+
+msgid "Loading the local model..."
+msgstr "लोकल मॉडल लोड हो रहा है..."
+
+msgid "Local model (Ollama, %s)"
+msgstr "लोकल मॉडल (Ollama, %s)"
+
+msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
+msgstr "मॉडल '%s' नहीं मिला या अब उपलब्ध नहीं है। टूल्स > ऑप्शनस > AI असिस्टेंट में कोई दूसरा मॉडल चुनें।"
+
+msgid "Model:"
+msgstr "मॉडल:"
+
+msgid "Ollama is installed, but it is not running. Start it, then click Check again."
+msgstr "Ollama इंस्टॉल है, लेकिन चल नहीं रहा। इसे शुरू करें, फिर 'फिर से जाँचें' पर क्लिक करें।"
+
+msgid "Ollama is running and the model %s is downloaded."
+msgstr "Ollama चल रहा है और मॉडल %s डाउनलोड हो चुका है।"
+
+msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
+msgstr "Ollama चल रहा है, लेकिन मॉडल अभी डाउनलोड नहीं हुआ है। कमांड प्रॉम्प्ट में 'ollama pull %s' चलाएँ (13 GB), फिर 'फिर से जाँचें' पर क्लिक करें।"
+
+msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
+msgstr "इस कंप्यूटर पर Ollama नहीं मिला। इसे नीचे दिए लिंक से इंस्टॉल करें, फिर कमांड प्रॉम्प्ट में 'ollama pull %s' चलाएँ (13 GB) और 'फिर से जाँचें' पर क्लिक करें।"
+
+msgid "Raspberry Pi (simple)"
+msgstr "Raspberry Pi (सरल)"
+
+msgid "Remove key"
+msgstr "कुंजी हटाएँ"
+
+msgid "Send"
+msgstr "भेजें"
+
+msgid "Set API Key..."
+msgstr "API कुंजी सेट करें..."
+
+msgid "Socratic"
+msgstr "सुकराती"
+
+msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
+msgstr "सुकराती = आपको जवाब तक ले जाता है, समझाने वाला = समझाता है और जवाब देता है, सीधा = सिर्फ़ छोटा जवाब"
+
+msgid "Standard"
+msgstr "स्टैंडर्ड"
+
+msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
+msgstr "'%s' प्रोवाइडर को Python पैकेज '%s' चाहिए, जो मौजूद नहीं है। Thonny AIA फिर से इंस्टॉल करें।"
+
+msgid "The AI service did not answer in time. Try again."
+msgstr "AI सेवा ने समय पर जवाब नहीं दिया। फिर से कोशिश करें।"
+
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
+msgstr "API कुंजी अस्वीकार कर दी गई। इसे टूल्स > ऑप्शनस > AI असिस्टेंट (API कुंजी सेट करें...) में जाँचें।"
+
+msgid "The key is stored in plain text in Thonny's configuration file."
+msgstr "कुंजी Thonny की कॉन्फ़िगरेशन फ़ाइल में सादे टेक्स्ट के रूप में सेव होती है।"
+
+msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
+msgstr "मॉडल इसी कंप्यूटर पर चलता है, बिना API कुंजी और बिना इंटरनेट के। इसे लगभग 14 GB खाली RAM चाहिए; दमदार ग्राफ़िक्स कार्ड के बिना एक जवाब में 20-70 सेकंड लगते हैं।"
+
+msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
+msgstr "AI असिस्टेंट (AIA) के साथ Thonny। Thonny को Aivar Annamaa ने बनाया है।"
+
+msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
+msgstr "बहुत ज़्यादा अनुरोध, या खाते का कोटा खत्म हो गया है। थोड़ा रुकें और फिर से कोशिश करें।"
+
+msgid "Type a question below (Enter sends, Shift+Enter = new line)."
+msgstr "नीचे अपना सवाल लिखें (Enter से भेजें, Shift+Enter = नई लाइन)।"
+
+msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
+msgstr "अज्ञात प्रोवाइडर '%s'। टूल्स > ऑप्शनस > AI असिस्टेंट में कोई प्रोवाइडर चुनें।"
+
+msgid "Use AI-based AIA instead of the built-in Assistant"
+msgstr "बिल्ट-इन असिस्टेंट की जगह AI-आधारित AIA इस्तेमाल करें"
+
+msgid "Welcome to %s!"
+msgstr "%s में आपका स्वागत है!"
+
+msgid "You"
+msgstr "आप"
+
+msgid "You (auto)"
+msgstr "आप (ऑटो)"
+
+msgid "cancelled"
+msgstr "कैंसिल किया गया"
+
+msgid "error detected"
+msgstr "त्रुटि मिली"

@@ -1975,3 +1975,173 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
+msgid "A key is already stored; entering a new one replaces it."
+msgstr "키가 이미 저장되어 있습니다. 새 키를 입력하면 기존 키를 대체합니다."
+
+msgid "AI Assistant"
+msgstr "AI 도우미"
+
+msgid "AI assistant:"
+msgstr "AI 도우미:"
+
+msgid "AIA - %s API key"
+msgstr "AIA - %s API 키"
+
+msgid "AIA - AI Mentor Assistant"
+msgstr "AIA - AI 멘토 도우미"
+
+msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
+msgstr "AIA는 켜진 상태로 유지되지만, 도구 > 옵션 > AI 도우미에서 제공자를 선택한 후에만 답변합니다."
+
+msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
+msgstr "API 키가 설정되지 않았습니다. 도구 > 옵션 > AI 도우미 > API 키 설정...으로 이동하세요."
+
+msgid "API key:"
+msgstr "API 키:"
+
+msgid "About Thonny AIA"
+msgstr "Thonny AIA에 관하여"
+
+msgid "Also include locally imported files"
+msgstr "로컬에서 가져온 파일도 포함"
+
+msgid "Answer style:"
+msgstr "답변 스타일:"
+
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
+msgstr "답변은 %s에서 제공합니다. API 키가 필요합니다. 아래 링크에서 만들거나 선생님께 받으세요. 나중에 도구 > 옵션 > AI 도우미에서 입력할 수도 있습니다."
+
+msgid "Automatically include current file as context"
+msgstr "현재 파일을 자동으로 컨텍스트에 포함"
+
+msgid "Cannot connect to the AI service. Check the internet connection."
+msgstr "AI 서비스에 연결할 수 없습니다. 인터넷 연결을 확인하세요."
+
+msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
+msgstr "Ollama에 연결할 수 없습니다. Ollama가 실행 중인가요(ollama serve)? 호스트 주소가 올바른가요?"
+
+msgid "Check again"
+msgstr "다시 확인"
+
+msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
+msgstr "Claude Code('claude' 명령)를 찾을 수 없습니다. Claude Code를 설치하고 'claude'를 한 번 실행해 로그인한 다음 Thonny를 다시 시작하세요."
+
+msgid "Context:"
+msgstr "컨텍스트:"
+
+msgid "Direct"
+msgstr "직답형"
+
+msgid "Enter your %s API key:"
+msgstr "%s API 키를 입력하세요:"
+
+msgid "Explanatory"
+msgstr "설명형"
+
+msgid "Get one at:"
+msgstr "발급받는 곳:"
+
+msgid "I will set it up later"
+msgstr "나중에 설정하기"
+
+msgid "Initial settings:"
+msgstr "초기 설정:"
+
+msgid "LLM Provider:"
+msgstr "LLM 제공자:"
+
+msgid "Language:"
+msgstr "언어:"
+
+msgid "Let's go!"
+msgstr "시작합시다!"
+
+msgid "Loading the local model..."
+msgstr "로컬 모델을 불러오는 중..."
+
+msgid "Local model (Ollama, %s)"
+msgstr "로컬 모델 (Ollama, %s)"
+
+msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
+msgstr "모델 '%s'을(를) 찾을 수 없거나 더 이상 사용할 수 없습니다. 도구 > 옵션 > AI 도우미에서 다른 모델을 선택하세요."
+
+msgid "Model:"
+msgstr "모델:"
+
+msgid "Ollama is installed, but it is not running. Start it, then click Check again."
+msgstr "Ollama가 설치되어 있지만 실행 중이 아닙니다. Ollama를 실행한 다음 '다시 확인'을 클릭하세요."
+
+msgid "Ollama is running and the model %s is downloaded."
+msgstr "Ollama가 실행 중이며 %s 모델이 다운로드되어 있습니다."
+
+msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
+msgstr "Ollama가 실행 중이지만 모델이 아직 다운로드되지 않았습니다. 명령 프롬프트에서 'ollama pull %s'을(를) 실행한 다음(13 GB) '다시 확인'을 클릭하세요."
+
+msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
+msgstr "이 컴퓨터에서 Ollama를 찾을 수 없습니다. 아래 링크에서 설치한 다음 명령 프롬프트에서 'ollama pull %s'을(를) 실행하고(13 GB) '다시 확인'을 클릭하세요."
+
+msgid "Raspberry Pi (simple)"
+msgstr "Raspberry Pi (간단)"
+
+msgid "Remove key"
+msgstr "키 삭제"
+
+msgid "Send"
+msgstr "보내기"
+
+msgid "Set API Key..."
+msgstr "API 키 설정..."
+
+msgid "Socratic"
+msgstr "소크라테스식"
+
+msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
+msgstr "소크라테스식 = 답으로 이끌어 줌, 설명형 = 설명하고 답함, 직답형 = 짧은 답만"
+
+msgid "Standard"
+msgstr "표준"
+
+msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
+msgstr "'%s' 제공자에 필요한 Python 패키지 '%s'이(가) 없습니다. Thonny AIA를 다시 설치하세요."
+
+msgid "The AI service did not answer in time. Try again."
+msgstr "AI 서비스가 제시간에 응답하지 않았습니다. 다시 시도하세요."
+
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
+msgstr "API 키가 거부되었습니다. 도구 > 옵션 > AI 도우미(API 키 설정...)에서 확인하세요."
+
+msgid "The key is stored in plain text in Thonny's configuration file."
+msgstr "키는 Thonny 설정 파일에 일반 텍스트로 저장됩니다."
+
+msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
+msgstr "모델은 API 키나 인터넷 없이 이 컴퓨터에서 실행됩니다. 약 14 GB의 여유 RAM이 필요하며, 성능 좋은 그래픽 카드가 없으면 답변에 20~70초가 걸립니다."
+
+msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
+msgstr "AI 도우미(AIA)가 포함된 Thonny. Thonny는 Aivar Annamaa가 만들었습니다."
+
+msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
+msgstr "요청이 너무 많거나 계정 사용 한도를 모두 썼습니다. 잠시 기다린 후 다시 시도하세요."
+
+msgid "Type a question below (Enter sends, Shift+Enter = new line)."
+msgstr "아래에 질문을 입력하세요 (Enter = 보내기, Shift+Enter = 줄 바꿈)."
+
+msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
+msgstr "알 수 없는 제공자 '%s'입니다. 도구 > 옵션 > AI 도우미에서 선택하세요."
+
+msgid "Use AI-based AIA instead of the built-in Assistant"
+msgstr "내장된 도움 대신 AI 기반 AIA 사용"
+
+msgid "Welcome to %s!"
+msgstr "%s에 오신 것을 환영합니다!"
+
+msgid "You"
+msgstr "나"
+
+msgid "You (auto)"
+msgstr "나 (자동)"
+
+msgid "cancelled"
+msgstr "취소됨"
+
+msgid "error detected"
+msgstr "오류 감지됨"

@@ -1988,3 +1988,173 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
+msgid "A key is already stored; entering a new one replaces it."
+msgstr "Një çelës është ruajtur tashmë; nëse futni një të ri, ai do ta zëvendësojë."
+
+msgid "AI Assistant"
+msgstr "Asistenti AI"
+
+msgid "AI assistant:"
+msgstr "Asistenti AI:"
+
+msgid "AIA - %s API key"
+msgstr "AIA – çelësi API për %s"
+
+msgid "AIA - AI Mentor Assistant"
+msgstr "AIA – asistent dhe mentor AI"
+
+msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
+msgstr "AIA mbetet e aktivizuar, por do të përgjigjet vetëm pasi të zgjidhni një ofrues te Mjete > Opsione > Asistenti AI."
+
+msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
+msgstr "Çelësi API nuk është vendosur. Shkoni te Mjete > Opsione > Asistenti AI > Vendos çelësin API..."
+
+msgid "API key:"
+msgstr "Çelësi API:"
+
+msgid "About Thonny AIA"
+msgstr "Rreth Thonny AIA"
+
+msgid "Also include locally imported files"
+msgstr "Përfshi edhe kartelat e importuara lokalisht"
+
+msgid "Answer style:"
+msgstr "Stili i përgjigjeve:"
+
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
+msgstr "Përgjigjet vijnë nga %s. Ju duhet një çelës API: krijojeni te lidhja më poshtë ose merreni nga mësuesi. Mund ta futni edhe më vonë te Mjete > Opsione > Asistenti AI."
+
+msgid "Automatically include current file as context"
+msgstr "Përfshi automatikisht kartelën aktuale si kontekst"
+
+msgid "Cannot connect to the AI service. Check the internet connection."
+msgstr "Nuk mund të lidhet me shërbimin AI. Kontrolloni lidhjen me internetin."
+
+msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
+msgstr "Ollama nuk arrihet. A po ekzekutohet (ollama serve) dhe a është i saktë hosti?"
+
+msgid "Check again"
+msgstr "Kontrollo përsëri"
+
+msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
+msgstr "Claude Code (komanda «claude») nuk u gjet. Instaloni Claude Code, identifikohuni duke ekzekutuar «claude» një herë, pastaj rinisni Thonny."
+
+msgid "Context:"
+msgstr "Konteksti:"
+
+msgid "Direct"
+msgstr "I drejtpërdrejtë"
+
+msgid "Enter your %s API key:"
+msgstr "Futni çelësin API për %s:"
+
+msgid "Explanatory"
+msgstr "Shpjegues"
+
+msgid "Get one at:"
+msgstr "Merreni te:"
+
+msgid "I will set it up later"
+msgstr "Do ta konfiguroj më vonë"
+
+msgid "Initial settings:"
+msgstr "Cilësimet fillestare:"
+
+msgid "LLM Provider:"
+msgstr "Ofruesi LLM:"
+
+msgid "Language:"
+msgstr "Gjuha:"
+
+msgid "Let's go!"
+msgstr "Fillojmë!"
+
+msgid "Loading the local model..."
+msgstr "Po ngarkohet modeli lokal..."
+
+msgid "Local model (Ollama, %s)"
+msgstr "Model lokal (Ollama, %s)"
+
+msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
+msgstr "Modeli «%s» nuk u gjet ose nuk është më i disponueshëm. Zgjidhni një model tjetër te Mjete > Opsione > Asistenti AI."
+
+msgid "Model:"
+msgstr "Modeli:"
+
+msgid "Ollama is installed, but it is not running. Start it, then click Check again."
+msgstr "Ollama është e instaluar, por nuk po ekzekutohet. Niseni, pastaj klikoni Kontrollo përsëri."
+
+msgid "Ollama is running and the model %s is downloaded."
+msgstr "Ollama po ekzekutohet dhe modeli %s është shkarkuar."
+
+msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
+msgstr "Ollama po ekzekutohet, por modeli nuk është shkarkuar ende. Ekzekutoni «ollama pull %s» në vijën e komandave (13 GB), pastaj klikoni Kontrollo përsëri."
+
+msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
+msgstr "Ollama nuk u gjet në këtë kompjuter. Instalojeni nga lidhja më poshtë, pastaj ekzekutoni «ollama pull %s» në vijën e komandave (13 GB) dhe klikoni Kontrollo përsëri."
+
+msgid "Raspberry Pi (simple)"
+msgstr "Raspberry Pi (i thjeshtë)"
+
+msgid "Remove key"
+msgstr "Hiq çelësin"
+
+msgid "Send"
+msgstr "Dërgo"
+
+msgid "Set API Key..."
+msgstr "Vendos çelësin API..."
+
+msgid "Socratic"
+msgstr "Sokratik"
+
+msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
+msgstr "Sokratik = ju udhëheq drejt përgjigjes, Shpjegues = shpjegon dhe përgjigjet, I drejtpërdrejtë = vetëm një përgjigje e shkurtër"
+
+msgid "Standard"
+msgstr "Standard"
+
+msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
+msgstr "Ofruesi «%s» ka nevojë për paketën Python «%s», e cila mungon. Riinstaloni Thonny AIA."
+
+msgid "The AI service did not answer in time. Try again."
+msgstr "Shërbimi AI nuk u përgjigj në kohë. Provoni përsëri."
+
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
+msgstr "Çelësi API u refuzua. Kontrollojeni te Mjete > Opsione > Asistenti AI (Vendos çelësin API...)."
+
+msgid "The key is stored in plain text in Thonny's configuration file."
+msgstr "Çelësi ruhet si tekst i thjeshtë në kartelën e konfigurimit të Thonny."
+
+msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
+msgstr "Modeli ekzekutohet në këtë kompjuter, pa çelës API dhe pa internet. I duhen rreth 14 GB RAM të lirë; pa një kartë grafike të fuqishme, një përgjigje zgjat 20–70 sekonda."
+
+msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
+msgstr "Thonny me Asistentin AI (AIA). Thonny është krijuar nga Aivar Annamaa."
+
+msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
+msgstr "Shumë kërkesa ose kuota e llogarisë është shteruar. Prisni pak dhe provoni përsëri."
+
+msgid "Type a question below (Enter sends, Shift+Enter = new line)."
+msgstr "Shkruani një pyetje më poshtë (Enter e dërgon, Shift+Enter = rresht i ri)."
+
+msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
+msgstr "Ofrues i panjohur «%s». Zgjidhni një te Mjete > Opsione > Asistenti AI."
+
+msgid "Use AI-based AIA instead of the built-in Assistant"
+msgstr "Përdor AIA-n me AI në vend të Asistentit të integruar"
+
+msgid "Welcome to %s!"
+msgstr "Mirë se vini në %s!"
+
+msgid "You"
+msgstr "Ju"
+
+msgid "You (auto)"
+msgstr "Ju (automatik)"
+
+msgid "cancelled"
+msgstr "anuluar"
+
+msgid "error detected"
+msgstr "u zbulua gabim"

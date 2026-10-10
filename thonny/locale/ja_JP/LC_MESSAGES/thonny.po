@@ -1995,3 +1995,173 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
+msgid "A key is already stored; entering a new one replaces it."
+msgstr "キーはすでに保存されています。新しいキーを入力すると置き換えられます。"
+
+msgid "AI Assistant"
+msgstr "AIアシスタント"
+
+msgid "AI assistant:"
+msgstr "AIアシスタント:"
+
+msgid "AIA - %s API key"
+msgstr "AIA - %s APIキー"
+
+msgid "AIA - AI Mentor Assistant"
+msgstr "AIA - AIメンターアシスタント"
+
+msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
+msgstr "AIAはオンのままですが、ツール > オプション > AIアシスタント でプロバイダーを選択するまで応答しません。"
+
+msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
+msgstr "APIキーが設定されていません。ツール > オプション > AIアシスタント > APIキーを設定... から設定してください。"
+
+msgid "API key:"
+msgstr "APIキー:"
+
+msgid "About Thonny AIA"
+msgstr "Thonny AIAについて"
+
+msgid "Also include locally imported files"
+msgstr "ローカルでインポートしたファイルも含める"
+
+msgid "Answer style:"
+msgstr "回答スタイル:"
+
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
+msgstr "回答は %s から提供されます。APIキーが必要です。下のリンクから作成するか、先生からもらってください。後から ツール > オプション > AIアシスタント で入力することもできます。"
+
+msgid "Automatically include current file as context"
+msgstr "現在のファイルを自動的にコンテキストとして含める"
+
+msgid "Cannot connect to the AI service. Check the internet connection."
+msgstr "AIサービスに接続できません。インターネット接続を確認してください。"
+
+msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
+msgstr "Ollamaに接続できません。Ollamaは起動していますか（ollama serve）？ホストは正しいですか？"
+
+msgid "Check again"
+msgstr "もう一度確認"
+
+msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
+msgstr "Claude Code（「claude」コマンド）が見つかりません。Claude Codeをインストールし、一度「claude」を実行してサインインしてから、Thonnyを再起動してください。"
+
+msgid "Context:"
+msgstr "コンテキスト:"
+
+msgid "Direct"
+msgstr "直接型"
+
+msgid "Enter your %s API key:"
+msgstr "%s のAPIキーを入力してください:"
+
+msgid "Explanatory"
+msgstr "説明型"
+
+msgid "Get one at:"
+msgstr "取得先:"
+
+msgid "I will set it up later"
+msgstr "後で設定する"
+
+msgid "Initial settings:"
+msgstr "初期設定:"
+
+msgid "LLM Provider:"
+msgstr "LLMプロバイダー:"
+
+msgid "Language:"
+msgstr "言語:"
+
+msgid "Let's go!"
+msgstr "始めましょう！"
+
+msgid "Loading the local model..."
+msgstr "ローカルモデルを読み込んでいます..."
+
+msgid "Local model (Ollama, %s)"
+msgstr "ローカルモデル（Ollama、%s）"
+
+msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
+msgstr "モデル「%s」が見つからないか、利用できなくなりました。ツール > オプション > AIアシスタント で別のモデルを選択してください。"
+
+msgid "Model:"
+msgstr "モデル:"
+
+msgid "Ollama is installed, but it is not running. Start it, then click Check again."
+msgstr "Ollamaはインストールされていますが、起動していません。起動してから「もう一度確認」をクリックしてください。"
+
+msgid "Ollama is running and the model %s is downloaded."
+msgstr "Ollamaは起動しており、モデル %s はダウンロード済みです。"
+
+msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
+msgstr "Ollamaは起動していますが、モデルがまだダウンロードされていません。コマンドプロンプトで「ollama pull %s」を実行し（13 GB）、「もう一度確認」をクリックしてください。"
+
+msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
+msgstr "このコンピューターにOllamaが見つかりません。下のリンクからインストールし、コマンドプロンプトで「ollama pull %s」を実行して（13 GB）、「もう一度確認」をクリックしてください。"
+
+msgid "Raspberry Pi (simple)"
+msgstr "Raspberry Pi（シンプル）"
+
+msgid "Remove key"
+msgstr "キーを削除"
+
+msgid "Send"
+msgstr "送信"
+
+msgid "Set API Key..."
+msgstr "APIキーを設定..."
+
+msgid "Socratic"
+msgstr "ソクラテス式"
+
+msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
+msgstr "ソクラテス式 = 答えに導く、説明型 = 説明して答える、直接型 = 短い答えのみ"
+
+msgid "Standard"
+msgstr "標準"
+
+msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
+msgstr "プロバイダー「%s」にはPythonパッケージ「%s」が必要ですが、見つかりません。Thonny AIAを再インストールしてください。"
+
+msgid "The AI service did not answer in time. Try again."
+msgstr "AIサービスが時間内に応答しませんでした。もう一度お試しください。"
+
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
+msgstr "APIキーが拒否されました。ツール > オプション > AIアシスタント（APIキーを設定...）で確認してください。"
+
+msgid "The key is stored in plain text in Thonny's configuration file."
+msgstr "キーはThonnyの設定ファイルに平文で保存されます。"
+
+msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
+msgstr "モデルはこのコンピューター上で動作し、APIキーもインターネットも不要です。約14 GBの空きRAMが必要です。高性能なグラフィックスカードがない場合、回答に20～70秒かかります。"
+
+msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
+msgstr "AIアシスタント（AIA）付きのThonny。ThonnyはAivar Annamaaが作成しました。"
+
+msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
+msgstr "リクエストが多すぎるか、アカウントの利用枠を使い切りました。しばらく待ってからもう一度お試しください。"
+
+msgid "Type a question below (Enter sends, Shift+Enter = new line)."
+msgstr "下に質問を入力してください（Enterで送信、Shift+Enter = 改行）。"
+
+msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
+msgstr "不明なプロバイダー「%s」です。ツール > オプション > AIアシスタント で選択してください。"
+
+msgid "Use AI-based AIA instead of the built-in Assistant"
+msgstr "内蔵のアシスタントの代わりにAIベースのAIAを使う"
+
+msgid "Welcome to %s!"
+msgstr "%s へようこそ！"
+
+msgid "You"
+msgstr "あなた"
+
+msgid "You (auto)"
+msgstr "あなた（自動）"
+
+msgid "cancelled"
+msgstr "キャンセル済み"
+
+msgid "error detected"
+msgstr "エラー検出"

@@ -1995,3 +1995,173 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
+msgid "A key is already stored; entering a new one replaces it."
+msgstr "Gako bat gordeta dago jada; berri bat sartzen baduzu, hura ordeztuko du."
+
+msgid "AI Assistant"
+msgstr "AA laguntzailea"
+
+msgid "AI assistant:"
+msgstr "AA laguntzailea:"
+
+msgid "AIA - %s API key"
+msgstr "AIA - %s API gakoa"
+
+msgid "AIA - AI Mentor Assistant"
+msgstr "AIA - AA tutore-laguntzailea"
+
+msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
+msgstr "AIA piztuta geratuko da, baina hornitzaile bat hautatu ondoren bakarrik erantzungo du: Tresnak > Aukerak > AA laguntzailea."
+
+msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
+msgstr "API gakoa ez dago ezarrita. Joan hona: Tresnak > Aukerak > AA laguntzailea > Ezarri API gakoa..."
+
+msgid "API key:"
+msgstr "API gakoa:"
+
+msgid "About Thonny AIA"
+msgstr "«Thonny AIA»ri buruz"
+
+msgid "Also include locally imported files"
+msgstr "Sartu lokalki inportatutako fitxategiak ere"
+
+msgid "Answer style:"
+msgstr "Erantzun-estiloa:"
+
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
+msgstr "Erantzunen hornitzailea: %s. API gako bat behar duzu: sortu beheko estekan, edo eskatu irakasleari. Geroago ere sar dezakezu hemen: Tresnak > Aukerak > AA laguntzailea."
+
+msgid "Automatically include current file as context"
+msgstr "Sartu uneko fitxategia testuinguru gisa automatikoki"
+
+msgid "Cannot connect to the AI service. Check the internet connection."
+msgstr "Ezin da AA zerbitzura konektatu. Egiaztatu Interneteko konexioa."
+
+msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
+msgstr "Ollama ez dago eskuragarri. Martxan al dago (ollama serve) eta ostalaria zuzena al da?"
+
+msgid "Check again"
+msgstr "Egiaztatu berriro"
+
+msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
+msgstr "Ez da Claude Code aurkitu («claude» komandoa). Instalatu Claude Code, hasi saioa «claude» behin exekutatuz, eta berrabiarazi Thonny."
+
+msgid "Context:"
+msgstr "Testuingurua:"
+
+msgid "Direct"
+msgstr "Zuzena"
+
+msgid "Enter your %s API key:"
+msgstr "Sartu zure %s API gakoa:"
+
+msgid "Explanatory"
+msgstr "Azaltzailea"
+
+msgid "Get one at:"
+msgstr "Lortu hemen:"
+
+msgid "I will set it up later"
+msgstr "Geroago konfiguratuko dut"
+
+msgid "Initial settings:"
+msgstr "Hasierako ezarpenak:"
+
+msgid "LLM Provider:"
+msgstr "LLM hornitzailea:"
+
+msgid "Language:"
+msgstr "Hizkuntza:"
+
+msgid "Let's go!"
+msgstr "Goazen!"
+
+msgid "Loading the local model..."
+msgstr "Eredu lokala kargatzen..."
+
+msgid "Local model (Ollama, %s)"
+msgstr "Eredu lokala (Ollama, %s)"
+
+msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
+msgstr "Ez da «%s» eredua aurkitu, edo jada ez dago erabilgarri. Hautatu beste eredu bat hemen: Tresnak > Aukerak > AA laguntzailea."
+
+msgid "Model:"
+msgstr "Eredua:"
+
+msgid "Ollama is installed, but it is not running. Start it, then click Check again."
+msgstr "Ollama instalatuta dago, baina ez dago martxan. Abiarazi, eta sakatu «Egiaztatu berriro»."
+
+msgid "Ollama is running and the model %s is downloaded."
+msgstr "Ollama martxan dago eta %s eredua deskargatuta dago."
+
+msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
+msgstr "Ollama martxan dago, baina eredua ez dago oraindik deskargatuta. Exekutatu «ollama pull %s» komando-lerroan (13 GB), eta sakatu «Egiaztatu berriro»."
+
+msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
+msgstr "Ez da Ollama aurkitu ordenagailu honetan. Instalatu beheko estekatik, exekutatu «ollama pull %s» komando-lerroan (13 GB) eta sakatu «Egiaztatu berriro»."
+
+msgid "Raspberry Pi (simple)"
+msgstr "Raspberry Pi (sinplea)"
+
+msgid "Remove key"
+msgstr "Kendu gakoa"
+
+msgid "Send"
+msgstr "Bidali"
+
+msgid "Set API Key..."
+msgstr "Ezarri API gakoa..."
+
+msgid "Socratic"
+msgstr "Sokratikoa"
+
+msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
+msgstr "Sokratikoa = erantzunera gidatzen zaitu, Azaltzailea = azaldu eta erantzuten du, Zuzena = erantzun laburra soilik"
+
+msgid "Standard"
+msgstr "Estandarra"
+
+msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
+msgstr "«%s» hornitzaileak «%s» Python paketea behar du, eta falta da. Instalatu berriro Thonny AIA."
+
+msgid "The AI service did not answer in time. Try again."
+msgstr "AA zerbitzuak ez du garaiz erantzun. Saiatu berriro."
+
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
+msgstr "API gakoa baztertu egin da. Egiaztatu hemen: Tresnak > Aukerak > AA laguntzailea (Ezarri API gakoa...)."
+
+msgid "The key is stored in plain text in Thonny's configuration file."
+msgstr "Gakoa testu arrunt gisa gordetzen da Thonnyren konfigurazio-fitxategian."
+
+msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
+msgstr "Eredua ordenagailu honetan exekutatzen da, API gakorik eta Internetik gabe. 14 GB inguru RAM libre behar ditu; txartel grafiko indartsurik gabe, erantzun batek 20-70 segundo behar ditu."
+
+msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
+msgstr "Thonny AA laguntzailearekin (AIA). Thonnyren egilea Aivar Annamaa da."
+
+msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
+msgstr "Eskaera gehiegi, edo kontuaren kuota agortu da. Itxaron une bat eta saiatu berriro."
+
+msgid "Type a question below (Enter sends, Shift+Enter = new line)."
+msgstr "Idatzi galdera bat behean (Enter = bidali, Shift+Enter = lerro berria)."
+
+msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
+msgstr "«%s» hornitzaile ezezaguna. Hautatu bat hemen: Tresnak > Aukerak > AA laguntzailea."
+
+msgid "Use AI-based AIA instead of the built-in Assistant"
+msgstr "Erabili AAn oinarritutako AIA, integratutako Laguntzailearen ordez"
+
+msgid "Welcome to %s!"
+msgstr "Ongi etorri: %s!"
+
+msgid "You"
+msgstr "Zu"
+
+msgid "You (auto)"
+msgstr "Zu (automatikoa)"
+
+msgid "cancelled"
+msgstr "bertan behera utzita"
+
+msgid "error detected"
+msgstr "errorea detektatu da"

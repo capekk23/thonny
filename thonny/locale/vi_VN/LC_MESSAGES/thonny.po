@@ -1994,3 +1994,173 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
+msgid "A key is already stored; entering a new one replaces it."
+msgstr "Đã có một khóa được lưu; nhập khóa mới sẽ thay thế khóa cũ."
+
+msgid "AI Assistant"
+msgstr "Trợ lý AI"
+
+msgid "AI assistant:"
+msgstr "Trợ lý AI:"
+
+msgid "AIA - %s API key"
+msgstr "AIA - Khóa API của %s"
+
+msgid "AIA - AI Mentor Assistant"
+msgstr "AIA - Trợ lý cố vấn AI"
+
+msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
+msgstr "AIA vẫn được bật, nhưng chỉ trả lời sau khi bạn chọn nhà cung cấp trong Công cụ > Thiết lập > Trợ lý AI."
+
+msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
+msgstr "Chưa đặt khóa API. Hãy vào Công cụ > Thiết lập > Trợ lý AI > Đặt khóa API..."
+
+msgid "API key:"
+msgstr "Khóa API:"
+
+msgid "About Thonny AIA"
+msgstr "Về Thonny AIA"
+
+msgid "Also include locally imported files"
+msgstr "Gửi kèm cả các tệp được import cục bộ"
+
+msgid "Answer style:"
+msgstr "Kiểu trả lời:"
+
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
+msgstr "Câu trả lời đến từ %s. Bạn cần một khóa API: hãy tạo khóa tại liên kết bên dưới hoặc xin giáo viên của bạn. Bạn cũng có thể nhập khóa sau trong Công cụ > Thiết lập > Trợ lý AI."
+
+msgid "Automatically include current file as context"
+msgstr "Tự động gửi tệp hiện tại làm ngữ cảnh"
+
+msgid "Cannot connect to the AI service. Check the internet connection."
+msgstr "Không thể kết nối với dịch vụ AI. Hãy kiểm tra kết nối Internet."
+
+msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
+msgstr "Không thể kết nối với Ollama. Ollama có đang chạy (ollama serve) không và địa chỉ máy chủ có đúng không?"
+
+msgid "Check again"
+msgstr "Kiểm tra lại"
+
+msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
+msgstr "Không tìm thấy Claude Code (lệnh 'claude'). Hãy cài đặt Claude Code, chạy 'claude' một lần để đăng nhập, rồi khởi động lại Thonny."
+
+msgid "Context:"
+msgstr "Ngữ cảnh:"
+
+msgid "Direct"
+msgstr "Trực tiếp"
+
+msgid "Enter your %s API key:"
+msgstr "Nhập khóa API %s của bạn:"
+
+msgid "Explanatory"
+msgstr "Giải thích"
+
+msgid "Get one at:"
+msgstr "Lấy khóa tại:"
+
+msgid "I will set it up later"
+msgstr "Tôi sẽ thiết lập sau"
+
+msgid "Initial settings:"
+msgstr "Cài đặt ban đầu:"
+
+msgid "LLM Provider:"
+msgstr "Nhà cung cấp LLM:"
+
+msgid "Language:"
+msgstr "Ngôn ngữ:"
+
+msgid "Let's go!"
+msgstr "Bắt đầu thôi!"
+
+msgid "Loading the local model..."
+msgstr "Đang tải mô hình cục bộ..."
+
+msgid "Local model (Ollama, %s)"
+msgstr "Mô hình cục bộ (Ollama, %s)"
+
+msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
+msgstr "Không tìm thấy mô hình '%s' hoặc mô hình không còn khả dụng. Hãy chọn mô hình khác trong Công cụ > Thiết lập > Trợ lý AI."
+
+msgid "Model:"
+msgstr "Mô hình:"
+
+msgid "Ollama is installed, but it is not running. Start it, then click Check again."
+msgstr "Ollama đã được cài đặt nhưng chưa chạy. Hãy khởi động Ollama, rồi bấm Kiểm tra lại."
+
+msgid "Ollama is running and the model %s is downloaded."
+msgstr "Ollama đang chạy và mô hình %s đã được tải xuống."
+
+msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
+msgstr "Ollama đang chạy nhưng mô hình chưa được tải xuống. Hãy chạy 'ollama pull %s' trong cửa sổ dòng lệnh (13 GB), rồi bấm Kiểm tra lại."
+
+msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
+msgstr "Không tìm thấy Ollama trên máy tính này. Hãy cài đặt từ liên kết bên dưới, rồi chạy 'ollama pull %s' trong cửa sổ dòng lệnh (13 GB) và bấm Kiểm tra lại."
+
+msgid "Raspberry Pi (simple)"
+msgstr "Raspberry Pi (đơn giản)"
+
+msgid "Remove key"
+msgstr "Xóa khóa"
+
+msgid "Send"
+msgstr "Gửi"
+
+msgid "Set API Key..."
+msgstr "Đặt khóa API..."
+
+msgid "Socratic"
+msgstr "Kiểu Socrates"
+
+msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
+msgstr "Kiểu Socrates = dẫn dắt bạn đến câu trả lời, Giải thích = giải thích và trả lời, Trực tiếp = chỉ trả lời ngắn gọn"
+
+msgid "Standard"
+msgstr "Tiêu chuẩn"
+
+msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
+msgstr "Nhà cung cấp '%s' cần gói Python '%s' nhưng gói này bị thiếu. Hãy cài đặt lại Thonny AIA."
+
+msgid "The AI service did not answer in time. Try again."
+msgstr "Dịch vụ AI không trả lời kịp thời. Hãy thử lại."
+
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
+msgstr "Khóa API bị từ chối. Hãy kiểm tra trong Công cụ > Thiết lập > Trợ lý AI (Đặt khóa API...)."
+
+msgid "The key is stored in plain text in Thonny's configuration file."
+msgstr "Khóa được lưu dưới dạng văn bản thuần trong tệp cấu hình của Thonny."
+
+msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
+msgstr "Mô hình chạy trên máy tính này, không cần khóa API và không cần Internet. Mô hình cần khoảng 14 GB RAM trống; nếu không có card đồ họa mạnh, mỗi câu trả lời mất 20-70 giây."
+
+msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
+msgstr "Thonny với Trợ lý AI (AIA). Thonny được tạo bởi Aivar Annamaa."
+
+msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
+msgstr "Quá nhiều yêu cầu hoặc tài khoản đã hết hạn mức. Hãy chờ một lát rồi thử lại."
+
+msgid "Type a question below (Enter sends, Shift+Enter = new line)."
+msgstr "Nhập câu hỏi bên dưới (Enter để gửi, Shift+Enter = xuống dòng)."
+
+msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
+msgstr "Không rõ nhà cung cấp '%s'. Hãy chọn một nhà cung cấp trong Công cụ > Thiết lập > Trợ lý AI."
+
+msgid "Use AI-based AIA instead of the built-in Assistant"
+msgstr "Dùng AIA dựa trên AI thay cho Trợ lý tích hợp sẵn"
+
+msgid "Welcome to %s!"
+msgstr "Chào mừng bạn đến với %s!"
+
+msgid "You"
+msgstr "Bạn"
+
+msgid "You (auto)"
+msgstr "Bạn (tự động)"
+
+msgid "cancelled"
+msgstr "đã hủy"
+
+msgid "error detected"
+msgstr "phát hiện lỗi"

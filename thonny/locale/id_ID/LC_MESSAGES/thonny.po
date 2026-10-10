@@ -1985,3 +1985,173 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
+msgid "A key is already stored; entering a new one replaces it."
+msgstr "Kunci sudah tersimpan; memasukkan kunci baru akan menggantikannya."
+
+msgid "AI Assistant"
+msgstr "Asisten AI"
+
+msgid "AI assistant:"
+msgstr "Asisten AI:"
+
+msgid "AIA - %s API key"
+msgstr "AIA - Kunci API %s"
+
+msgid "AIA - AI Mentor Assistant"
+msgstr "AIA - Asisten Mentor AI"
+
+msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
+msgstr "AIA tetap aktif, tetapi baru akan menjawab setelah Anda memilih penyedia di Tools > Options > Asisten AI."
+
+msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
+msgstr "Kunci API belum diatur. Buka Tools > Options > Asisten AI > Atur Kunci API..."
+
+msgid "API key:"
+msgstr "Kunci API:"
+
+msgid "About Thonny AIA"
+msgstr "Tentang Thonny AIA"
+
+msgid "Also include locally imported files"
+msgstr "Sertakan juga file yang diimpor secara lokal"
+
+msgid "Answer style:"
+msgstr "Gaya jawaban:"
+
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
+msgstr "Jawaban berasal dari %s. Anda memerlukan kunci API: buat di tautan di bawah, atau minta dari guru Anda. Anda juga dapat memasukkannya nanti di Tools > Options > Asisten AI."
+
+msgid "Automatically include current file as context"
+msgstr "Otomatis sertakan file saat ini sebagai konteks"
+
+msgid "Cannot connect to the AI service. Check the internet connection."
+msgstr "Tidak dapat terhubung ke layanan AI. Periksa koneksi internet."
+
+msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
+msgstr "Tidak dapat menghubungi Ollama. Apakah Ollama berjalan (ollama serve) dan apakah host-nya benar?"
+
+msgid "Check again"
+msgstr "Periksa lagi"
+
+msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
+msgstr "Claude Code (perintah 'claude') tidak ditemukan. Instal Claude Code, masuk dengan menjalankan 'claude' sekali, lalu mulai ulang Thonny."
+
+msgid "Context:"
+msgstr "Konteks:"
+
+msgid "Direct"
+msgstr "Langsung"
+
+msgid "Enter your %s API key:"
+msgstr "Masukkan kunci API %s Anda:"
+
+msgid "Explanatory"
+msgstr "Menjelaskan"
+
+msgid "Get one at:"
+msgstr "Dapatkan di:"
+
+msgid "I will set it up later"
+msgstr "Saya akan mengaturnya nanti"
+
+msgid "Initial settings:"
+msgstr "Pengaturan awal:"
+
+msgid "LLM Provider:"
+msgstr "Penyedia LLM:"
+
+msgid "Language:"
+msgstr "Bahasa:"
+
+msgid "Let's go!"
+msgstr "Ayo mulai!"
+
+msgid "Loading the local model..."
+msgstr "Memuat model lokal..."
+
+msgid "Local model (Ollama, %s)"
+msgstr "Model lokal (Ollama, %s)"
+
+msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
+msgstr "Model '%s' tidak ditemukan atau sudah tidak tersedia. Pilih model lain di Tools > Options > Asisten AI."
+
+msgid "Model:"
+msgstr "Model:"
+
+msgid "Ollama is installed, but it is not running. Start it, then click Check again."
+msgstr "Ollama sudah terinstal, tetapi tidak berjalan. Jalankan Ollama, lalu klik Periksa lagi."
+
+msgid "Ollama is running and the model %s is downloaded."
+msgstr "Ollama berjalan dan model %s sudah diunduh."
+
+msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
+msgstr "Ollama berjalan, tetapi modelnya belum diunduh. Jalankan 'ollama pull %s' di command prompt (13 GB), lalu klik Periksa lagi."
+
+msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
+msgstr "Ollama tidak ditemukan di komputer ini. Instal dari tautan di bawah, lalu jalankan 'ollama pull %s' di command prompt (13 GB) dan klik Periksa lagi."
+
+msgid "Raspberry Pi (simple)"
+msgstr "Raspberry Pi (sederhana)"
+
+msgid "Remove key"
+msgstr "Hapus kunci"
+
+msgid "Send"
+msgstr "Kirim"
+
+msgid "Set API Key..."
+msgstr "Atur Kunci API..."
+
+msgid "Socratic"
+msgstr "Sokratis"
+
+msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
+msgstr "Sokratis = menuntun Anda ke jawaban, Menjelaskan = menjelaskan dan menjawab, Langsung = hanya jawaban singkat"
+
+msgid "Standard"
+msgstr "Standar"
+
+msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
+msgstr "Penyedia '%s' memerlukan paket Python '%s', yang tidak ada. Instal ulang Thonny AIA."
+
+msgid "The AI service did not answer in time. Try again."
+msgstr "Layanan AI tidak menjawab tepat waktu. Coba lagi."
+
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
+msgstr "Kunci API ditolak. Periksa di Tools > Options > Asisten AI (Atur Kunci API...)."
+
+msgid "The key is stored in plain text in Thonny's configuration file."
+msgstr "Kunci disimpan sebagai teks biasa di file konfigurasi Thonny."
+
+msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
+msgstr "Model berjalan di komputer ini, tanpa kunci API dan tanpa internet. Model memerlukan sekitar 14 GB RAM kosong; tanpa kartu grafis yang kuat, satu jawaban memakan waktu 20-70 detik."
+
+msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
+msgstr "Thonny dengan Asisten AI (AIA). Thonny dibuat oleh Aivar Annamaa."
+
+msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
+msgstr "Terlalu banyak permintaan atau kuota akun sudah habis. Tunggu sebentar lalu coba lagi."
+
+msgid "Type a question below (Enter sends, Shift+Enter = new line)."
+msgstr "Ketik pertanyaan di bawah (Enter untuk mengirim, Shift+Enter = baris baru)."
+
+msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
+msgstr "Penyedia '%s' tidak dikenal. Pilih penyedia di Tools > Options > Asisten AI."
+
+msgid "Use AI-based AIA instead of the built-in Assistant"
+msgstr "Gunakan AIA berbasis AI sebagai ganti Assistant bawaan"
+
+msgid "Welcome to %s!"
+msgstr "Selamat datang di %s!"
+
+msgid "You"
+msgstr "Anda"
+
+msgid "You (auto)"
+msgstr "Anda (otomatis)"
+
+msgid "cancelled"
+msgstr "dibatalkan"
+
+msgid "error detected"
+msgstr "kesalahan terdeteksi"

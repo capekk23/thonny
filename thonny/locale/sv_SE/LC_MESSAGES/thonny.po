@@ -1964,3 +1964,173 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
+msgid "A key is already stored; entering a new one replaces it."
+msgstr "En nyckel är redan sparad; om du anger en ny ersätts den."
+
+msgid "AI Assistant"
+msgstr "AI-assistent"
+
+msgid "AI assistant:"
+msgstr "AI-assistent:"
+
+msgid "AIA - %s API key"
+msgstr "AIA – API-nyckel för %s"
+
+msgid "AIA - AI Mentor Assistant"
+msgstr "AIA – AI-assistent och mentor"
+
+msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
+msgstr "AIA förblir påslaget, men svarar först när du har valt en leverantör i Verktyg > Alternativ > AI-assistent."
+
+msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
+msgstr "Ingen API-nyckel är angiven. Gå till Verktyg > Alternativ > AI-assistent > Ange API-nyckel..."
+
+msgid "API key:"
+msgstr "API-nyckel:"
+
+msgid "About Thonny AIA"
+msgstr "Om Thonny AIA"
+
+msgid "Also include locally imported files"
+msgstr "Skicka även lokalt importerade filer"
+
+msgid "Answer style:"
+msgstr "Svarsstil:"
+
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
+msgstr "Svaren kommer från %s. Du behöver en API-nyckel: skapa den via länken nedan, eller få en av din lärare. Du kan också ange den senare i Verktyg > Alternativ > AI-assistent."
+
+msgid "Automatically include current file as context"
+msgstr "Skicka automatiskt aktuell fil som kontext"
+
+msgid "Cannot connect to the AI service. Check the internet connection."
+msgstr "Kan inte ansluta till AI-tjänsten. Kontrollera internetanslutningen."
+
+msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
+msgstr "Kan inte nå Ollama. Körs den (ollama serve) och är värden korrekt?"
+
+msgid "Check again"
+msgstr "Kontrollera igen"
+
+msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
+msgstr "Claude Code (kommandot ”claude”) hittades inte. Installera Claude Code, logga in genom att köra ”claude” en gång och starta sedan om Thonny."
+
+msgid "Context:"
+msgstr "Kontext:"
+
+msgid "Direct"
+msgstr "Direkt"
+
+msgid "Enter your %s API key:"
+msgstr "Ange din API-nyckel för %s:"
+
+msgid "Explanatory"
+msgstr "Förklarande"
+
+msgid "Get one at:"
+msgstr "Skaffa en på:"
+
+msgid "I will set it up later"
+msgstr "Jag ställer in det senare"
+
+msgid "Initial settings:"
+msgstr "Startinställningar:"
+
+msgid "LLM Provider:"
+msgstr "LLM-leverantör:"
+
+msgid "Language:"
+msgstr "Språk:"
+
+msgid "Let's go!"
+msgstr "Nu kör vi!"
+
+msgid "Loading the local model..."
+msgstr "Läser in den lokala modellen..."
+
+msgid "Local model (Ollama, %s)"
+msgstr "Lokal modell (Ollama, %s)"
+
+msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
+msgstr "Modellen ”%s” hittades inte eller är inte längre tillgänglig. Välj en annan modell i Verktyg > Alternativ > AI-assistent."
+
+msgid "Model:"
+msgstr "Modell:"
+
+msgid "Ollama is installed, but it is not running. Start it, then click Check again."
+msgstr "Ollama är installerat men körs inte. Starta det och klicka sedan på Kontrollera igen."
+
+msgid "Ollama is running and the model %s is downloaded."
+msgstr "Ollama körs och modellen %s är nedladdad."
+
+msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
+msgstr "Ollama körs, men modellen är inte nedladdad än. Kör ”ollama pull %s” i en kommandotolk (13 GB) och klicka sedan på Kontrollera igen."
+
+msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
+msgstr "Ollama hittades inte på den här datorn. Installera det via länken nedan, kör sedan ”ollama pull %s” i en kommandotolk (13 GB) och klicka på Kontrollera igen."
+
+msgid "Raspberry Pi (simple)"
+msgstr "Raspberry Pi (enkel)"
+
+msgid "Remove key"
+msgstr "Ta bort nyckel"
+
+msgid "Send"
+msgstr "Skicka"
+
+msgid "Set API Key..."
+msgstr "Ange API-nyckel..."
+
+msgid "Socratic"
+msgstr "Sokratisk"
+
+msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
+msgstr "Sokratisk = leder dig fram till svaret, Förklarande = förklarar och svarar, Direkt = bara ett kort svar"
+
+msgid "Standard"
+msgstr "Standard"
+
+msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
+msgstr "Leverantören ”%s” behöver Python-paketet ”%s”, som saknas. Installera om Thonny AIA."
+
+msgid "The AI service did not answer in time. Try again."
+msgstr "AI-tjänsten svarade inte i tid. Försök igen."
+
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
+msgstr "API-nyckeln avvisades. Kontrollera den i Verktyg > Alternativ > AI-assistent (Ange API-nyckel...)."
+
+msgid "The key is stored in plain text in Thonny's configuration file."
+msgstr "Nyckeln sparas som klartext i Thonnys konfigurationsfil."
+
+msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
+msgstr "Modellen körs på den här datorn, utan API-nyckel och utan internet. Den behöver cirka 14 GB ledigt RAM; utan ett kraftfullt grafikkort tar ett svar 20–70 sekunder."
+
+msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
+msgstr "Thonny med AI-assistenten (AIA). Thonny är skapat av Aivar Annamaa."
+
+msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
+msgstr "För många förfrågningar, eller så är kontots kvot slut. Vänta en stund och försök igen."
+
+msgid "Type a question below (Enter sends, Shift+Enter = new line)."
+msgstr "Skriv en fråga nedan (Enter skickar, Shift+Enter = ny rad)."
+
+msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
+msgstr "Okänd leverantör ”%s”. Välj en i Verktyg > Alternativ > AI-assistent."
+
+msgid "Use AI-based AIA instead of the built-in Assistant"
+msgstr "Använd AI-baserade AIA i stället för den inbyggda Assistenten"
+
+msgid "Welcome to %s!"
+msgstr "Välkommen till %s!"
+
+msgid "You"
+msgstr "Du"
+
+msgid "You (auto)"
+msgstr "Du (auto)"
+
+msgid "cancelled"
+msgstr "avbruten"
+
+msgid "error detected"
+msgstr "fel upptäckt"

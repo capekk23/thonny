@@ -1979,3 +1979,173 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
+msgid "A key is already stored; entering a new one replaces it."
+msgstr "Er is al een sleutel opgeslagen; als u een nieuwe invoert, wordt die vervangen."
+
+msgid "AI Assistant"
+msgstr "AI-assistent"
+
+msgid "AI assistant:"
+msgstr "AI-assistent:"
+
+msgid "AIA - %s API key"
+msgstr "AIA – API-sleutel voor %s"
+
+msgid "AIA - AI Mentor Assistant"
+msgstr "AIA – AI-mentorassistent"
+
+msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
+msgstr "AIA blijft ingeschakeld, maar geeft pas antwoord nadat u een provider hebt gekozen in Hulpmiddelen > Opties > AI-assistent."
+
+msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
+msgstr "Geen API-sleutel ingesteld. Ga naar Hulpmiddelen > Opties > AI-assistent > API-sleutel instellen..."
+
+msgid "API key:"
+msgstr "API-sleutel:"
+
+msgid "About Thonny AIA"
+msgstr "Over Thonny AIA"
+
+msgid "Also include locally imported files"
+msgstr "Ook lokaal geïmporteerde bestanden meesturen"
+
+msgid "Answer style:"
+msgstr "Antwoordstijl:"
+
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
+msgstr "De antwoorden komen van %s. U hebt een API-sleutel nodig: maak die aan via de onderstaande link of vraag er een aan uw docent. U kunt de sleutel ook later invoeren in Hulpmiddelen > Opties > AI-assistent."
+
+msgid "Automatically include current file as context"
+msgstr "Huidig bestand automatisch meesturen als context"
+
+msgid "Cannot connect to the AI service. Check the internet connection."
+msgstr "Kan geen verbinding maken met de AI-dienst. Controleer de internetverbinding."
+
+msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
+msgstr "Ollama is niet bereikbaar. Draait Ollama (ollama serve) en is de host juist?"
+
+msgid "Check again"
+msgstr "Opnieuw controleren"
+
+msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
+msgstr "Claude Code (de opdracht 'claude') is niet gevonden. Installeer Claude Code, meld u aan door 'claude' één keer uit te voeren en start Thonny daarna opnieuw."
+
+msgid "Context:"
+msgstr "Context:"
+
+msgid "Direct"
+msgstr "Direct"
+
+msgid "Enter your %s API key:"
+msgstr "Voer uw API-sleutel voor %s in:"
+
+msgid "Explanatory"
+msgstr "Uitleggend"
+
+msgid "Get one at:"
+msgstr "Verkrijgbaar via:"
+
+msgid "I will set it up later"
+msgstr "Ik stel het later in"
+
+msgid "Initial settings:"
+msgstr "Begininstellingen:"
+
+msgid "LLM Provider:"
+msgstr "LLM-provider:"
+
+msgid "Language:"
+msgstr "Taal:"
+
+msgid "Let's go!"
+msgstr "Aan de slag!"
+
+msgid "Loading the local model..."
+msgstr "Lokaal model laden..."
+
+msgid "Local model (Ollama, %s)"
+msgstr "Lokaal model (Ollama, %s)"
+
+msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
+msgstr "Model '%s' is niet gevonden of niet meer beschikbaar. Kies een ander model in Hulpmiddelen > Opties > AI-assistent."
+
+msgid "Model:"
+msgstr "Model:"
+
+msgid "Ollama is installed, but it is not running. Start it, then click Check again."
+msgstr "Ollama is geïnstalleerd, maar draait niet. Start Ollama en klik daarna op Opnieuw controleren."
+
+msgid "Ollama is running and the model %s is downloaded."
+msgstr "Ollama draait en het model %s is gedownload."
+
+msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
+msgstr "Ollama draait, maar het model is nog niet gedownload. Voer 'ollama pull %s' uit in een opdrachtprompt (13 GB) en klik daarna op Opnieuw controleren."
+
+msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
+msgstr "Ollama is niet gevonden op deze computer. Installeer het via de onderstaande link, voer daarna 'ollama pull %s' uit in een opdrachtprompt (13 GB) en klik op Opnieuw controleren."
+
+msgid "Raspberry Pi (simple)"
+msgstr "Raspberry Pi (eenvoudig)"
+
+msgid "Remove key"
+msgstr "Sleutel verwijderen"
+
+msgid "Send"
+msgstr "Verzenden"
+
+msgid "Set API Key..."
+msgstr "API-sleutel instellen..."
+
+msgid "Socratic"
+msgstr "Socratisch"
+
+msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
+msgstr "Socratisch = leidt u naar het antwoord, Uitleggend = legt uit en geeft antwoord, Direct = alleen een kort antwoord"
+
+msgid "Standard"
+msgstr "Standaard"
+
+msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
+msgstr "De provider '%s' heeft het Python-pakket '%s' nodig, maar dat ontbreekt. Installeer Thonny AIA opnieuw."
+
+msgid "The AI service did not answer in time. Try again."
+msgstr "De AI-dienst heeft niet op tijd geantwoord. Probeer het opnieuw."
+
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
+msgstr "De API-sleutel is geweigerd. Controleer de sleutel in Hulpmiddelen > Opties > AI-assistent (API-sleutel instellen...)."
+
+msgid "The key is stored in plain text in Thonny's configuration file."
+msgstr "De sleutel wordt als platte tekst opgeslagen in het configuratiebestand van Thonny."
+
+msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
+msgstr "Het model draait op deze computer, zonder API-sleutel en zonder internet. Het heeft ongeveer 14 GB vrij RAM-geheugen nodig; zonder krachtige videokaart duurt een antwoord 20-70 seconden."
+
+msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
+msgstr "Thonny met de AI-assistent (AIA). Thonny is gemaakt door Aivar Annamaa."
+
+msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
+msgstr "Te veel verzoeken of het tegoed van het account is op. Wacht even en probeer het opnieuw."
+
+msgid "Type a question below (Enter sends, Shift+Enter = new line)."
+msgstr "Typ hieronder een vraag (Enter verzendt, Shift+Enter = nieuwe regel)."
+
+msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
+msgstr "Onbekende provider '%s'. Kies er een in Hulpmiddelen > Opties > AI-assistent."
+
+msgid "Use AI-based AIA instead of the built-in Assistant"
+msgstr "AI-gebaseerde AIA gebruiken in plaats van de ingebouwde Assistent"
+
+msgid "Welcome to %s!"
+msgstr "Welkom bij %s!"
+
+msgid "You"
+msgstr "U"
+
+msgid "You (auto)"
+msgstr "U (automatisch)"
+
+msgid "cancelled"
+msgstr "geannuleerd"
+
+msgid "error detected"
+msgstr "fout gevonden"

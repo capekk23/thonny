@@ -1973,3 +1973,173 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
+msgid "A key is already stored; entering a new one replaces it."
+msgstr "Már van tárolt kulcs; ha újat ad meg, az felülírja."
+
+msgid "AI Assistant"
+msgstr "MI-asszisztens"
+
+msgid "AI assistant:"
+msgstr "MI-asszisztens:"
+
+msgid "AIA - %s API key"
+msgstr "AIA – %s API-kulcs"
+
+msgid "AIA - AI Mentor Assistant"
+msgstr "AIA – MI mentor és asszisztens"
+
+msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
+msgstr "Az AIA bekapcsolva marad, de csak azután válaszol, hogy kiválasztott egy szolgáltatót az Eszközök > Beállítások > MI-asszisztens menüpontban."
+
+msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
+msgstr "Nincs beállítva API-kulcs. Nyissa meg: Eszközök > Beállítások > MI-asszisztens > API-kulcs beállítása..."
+
+msgid "API key:"
+msgstr "API-kulcs:"
+
+msgid "About Thonny AIA"
+msgstr "A Thonny AIA névjegye"
+
+msgid "Also include locally imported files"
+msgstr "A helyileg importált fájlok csatolása is"
+
+msgid "Answer style:"
+msgstr "Válaszstílus:"
+
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
+msgstr "A válaszokat a(z) %s adja. API-kulcsra van szüksége: hozza létre az alábbi linken, vagy kérjen egyet a tanárától. Később is megadhatja az Eszközök > Beállítások > MI-asszisztens menüpontban."
+
+msgid "Automatically include current file as context"
+msgstr "Az aktuális fájl automatikus csatolása kontextusként"
+
+msgid "Cannot connect to the AI service. Check the internet connection."
+msgstr "Nem sikerült csatlakozni az MI-szolgáltatáshoz. Ellenőrizze az internetkapcsolatot."
+
+msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
+msgstr "Az Ollama nem érhető el. Fut (ollama serve), és helyes a gazdagép címe?"
+
+msgid "Check again"
+msgstr "Újraellenőrzés"
+
+msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
+msgstr "A Claude Code („claude” parancs) nem található. Telepítse a Claude Code-ot, jelentkezzen be a „claude” egyszeri futtatásával, majd indítsa újra a Thonnyt."
+
+msgid "Context:"
+msgstr "Kontextus:"
+
+msgid "Direct"
+msgstr "Közvetlen"
+
+msgid "Enter your %s API key:"
+msgstr "Adja meg a(z) %s API-kulcsát:"
+
+msgid "Explanatory"
+msgstr "Magyarázó"
+
+msgid "Get one at:"
+msgstr "Beszerezhető itt:"
+
+msgid "I will set it up later"
+msgstr "Később állítom be"
+
+msgid "Initial settings:"
+msgstr "Kezdeti beállítások:"
+
+msgid "LLM Provider:"
+msgstr "LLM-szolgáltató:"
+
+msgid "Language:"
+msgstr "Nyelv:"
+
+msgid "Let's go!"
+msgstr "Kezdjük!"
+
+msgid "Loading the local model..."
+msgstr "A helyi modell betöltése..."
+
+msgid "Local model (Ollama, %s)"
+msgstr "Helyi modell (Ollama, %s)"
+
+msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
+msgstr "A(z) „%s” modell nem található, vagy már nem érhető el. Válasszon másik modellt az Eszközök > Beállítások > MI-asszisztens menüpontban."
+
+msgid "Model:"
+msgstr "Modell:"
+
+msgid "Ollama is installed, but it is not running. Start it, then click Check again."
+msgstr "Az Ollama telepítve van, de nem fut. Indítsa el, majd kattintson az Újraellenőrzés gombra."
+
+msgid "Ollama is running and the model %s is downloaded."
+msgstr "Az Ollama fut, és a(z) %s modell le van töltve."
+
+msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
+msgstr "Az Ollama fut, de a modell még nincs letöltve. Futtassa a parancssorban az „ollama pull %s” parancsot (13 GB), majd kattintson az Újraellenőrzés gombra."
+
+msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
+msgstr "Az Ollama nem található ezen a számítógépen. Telepítse az alábbi linkről, majd futtassa a parancssorban az „ollama pull %s” parancsot (13 GB), és kattintson az Újraellenőrzés gombra."
+
+msgid "Raspberry Pi (simple)"
+msgstr "Raspberry Pi (egyszerű)"
+
+msgid "Remove key"
+msgstr "Kulcs eltávolítása"
+
+msgid "Send"
+msgstr "Küldés"
+
+msgid "Set API Key..."
+msgstr "API-kulcs beállítása..."
+
+msgid "Socratic"
+msgstr "Szókratészi"
+
+msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
+msgstr "Szókratészi = elvezeti a válaszhoz, Magyarázó = elmagyarázza és válaszol, Közvetlen = csak rövid válasz"
+
+msgid "Standard"
+msgstr "Normál"
+
+msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
+msgstr "A(z) „%s” szolgáltatóhoz szükséges a(z) „%s” Python-csomag, amely hiányzik. Telepítse újra a Thonny AIA-t."
+
+msgid "The AI service did not answer in time. Try again."
+msgstr "Az MI-szolgáltatás nem válaszolt időben. Próbálja újra."
+
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
+msgstr "Az API-kulcsot elutasították. Ellenőrizze az Eszközök > Beállítások > MI-asszisztens menüpontban (API-kulcs beállítása...)."
+
+msgid "The key is stored in plain text in Thonny's configuration file."
+msgstr "A kulcs egyszerű szövegként tárolódik a Thonny konfigurációs fájljában."
+
+msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
+msgstr "A modell ezen a számítógépen fut, API-kulcs és internet nélkül. Körülbelül 14 GB szabad RAM kell hozzá; erős videokártya nélkül egy válasz 20–70 másodpercig tart."
+
+msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
+msgstr "Thonny MI-asszisztenssel (AIA). A Thonnyt Aivar Annamaa készítette."
+
+msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
+msgstr "Túl sok kérés, vagy elfogyott a fiók kerete. Várjon egy kicsit, és próbálja újra."
+
+msgid "Type a question below (Enter sends, Shift+Enter = new line)."
+msgstr "Írja be kérdését alul (Enter: küldés, Shift+Enter: új sor)."
+
+msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
+msgstr "Ismeretlen szolgáltató: „%s”. Válasszon egyet az Eszközök > Beállítások > MI-asszisztens menüpontban."
+
+msgid "Use AI-based AIA instead of the built-in Assistant"
+msgstr "A beépített Asszisztens helyett az MI-alapú AIA használata"
+
+msgid "Welcome to %s!"
+msgstr "Üdvözli a(z) %s!"
+
+msgid "You"
+msgstr "Ön"
+
+msgid "You (auto)"
+msgstr "Ön (automatikus)"
+
+msgid "cancelled"
+msgstr "megszakítva"
+
+msgid "error detected"
+msgstr "hiba észlelve"

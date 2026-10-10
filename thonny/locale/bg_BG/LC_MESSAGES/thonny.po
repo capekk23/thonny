@@ -1957,3 +1957,173 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
+msgid "A key is already stored; entering a new one replaces it."
+msgstr "Вече има запазен ключ; нов ключ ще го замени."
+
+msgid "AI Assistant"
+msgstr "AI асистент"
+
+msgid "AI assistant:"
+msgstr "AI асистент:"
+
+msgid "AIA - %s API key"
+msgstr "AIA – API ключ за %s"
+
+msgid "AIA - AI Mentor Assistant"
+msgstr "AIA – AI асистент и ментор"
+
+msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
+msgstr "AIA остава включен, но ще отговаря едва след като изберете доставчик в Инструменти > Опции > AI асистент."
+
+msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
+msgstr "API ключът не е зададен. Отидете в Инструменти > Опции > AI асистент > Задаване на API ключ..."
+
+msgid "API key:"
+msgstr "API ключ:"
+
+msgid "About Thonny AIA"
+msgstr "За Thonny AIA"
+
+msgid "Also include locally imported files"
+msgstr "Включване и на локално импортираните файлове"
+
+msgid "Answer style:"
+msgstr "Стил на отговорите:"
+
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
+msgstr "Отговорите идват от %s. Нужен ви е API ключ: създайте го чрез връзката по-долу или го получете от учителя си. Можете да го въведете и по-късно в Инструменти > Опции > AI асистент."
+
+msgid "Automatically include current file as context"
+msgstr "Автоматично включване на текущия файл като контекст"
+
+msgid "Cannot connect to the AI service. Check the internet connection."
+msgstr "Няма връзка с AI услугата. Проверете интернет връзката."
+
+msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
+msgstr "Ollama не е достъпна. Работи ли (ollama serve) и правилен ли е хостът?"
+
+msgid "Check again"
+msgstr "Провери отново"
+
+msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
+msgstr "Claude Code (командата „claude“) не е намерен. Инсталирайте Claude Code, влезте, като стартирате „claude“ веднъж, и след това рестартирайте Thonny."
+
+msgid "Context:"
+msgstr "Контекст:"
+
+msgid "Direct"
+msgstr "Директен"
+
+msgid "Enter your %s API key:"
+msgstr "Въведете своя API ключ за %s:"
+
+msgid "Explanatory"
+msgstr "Обяснителен"
+
+msgid "Get one at:"
+msgstr "Вземете го от:"
+
+msgid "I will set it up later"
+msgstr "Ще го настроя по-късно"
+
+msgid "Initial settings:"
+msgstr "Начални настройки:"
+
+msgid "LLM Provider:"
+msgstr "Доставчик на LLM:"
+
+msgid "Language:"
+msgstr "Език:"
+
+msgid "Let's go!"
+msgstr "Да започваме!"
+
+msgid "Loading the local model..."
+msgstr "Зареждане на локалния модел..."
+
+msgid "Local model (Ollama, %s)"
+msgstr "Локален модел (Ollama, %s)"
+
+msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
+msgstr "Моделът „%s“ не е намерен или вече не е наличен. Изберете друг модел в Инструменти > Опции > AI асистент."
+
+msgid "Model:"
+msgstr "Модел:"
+
+msgid "Ollama is installed, but it is not running. Start it, then click Check again."
+msgstr "Ollama е инсталирана, но не работи. Стартирайте я и щракнете върху „Провери отново“."
+
+msgid "Ollama is running and the model %s is downloaded."
+msgstr "Ollama работи и моделът %s е изтеглен."
+
+msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
+msgstr "Ollama работи, но моделът още не е изтеглен. Изпълнете „ollama pull %s“ в командния ред (13 GB) и щракнете върху „Провери отново“."
+
+msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
+msgstr "Ollama не е намерена на този компютър. Инсталирайте я от връзката по-долу, след това изпълнете „ollama pull %s“ в командния ред (13 GB) и щракнете върху „Провери отново“."
+
+msgid "Raspberry Pi (simple)"
+msgstr "Raspberry Pi (опростен)"
+
+msgid "Remove key"
+msgstr "Премахване на ключа"
+
+msgid "Send"
+msgstr "Изпрати"
+
+msgid "Set API Key..."
+msgstr "Задаване на API ключ..."
+
+msgid "Socratic"
+msgstr "Сократов"
+
+msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
+msgstr "Сократов = насочва ви към отговора, Обяснителен = обяснява и отговаря, Директен = само кратък отговор"
+
+msgid "Standard"
+msgstr "Стандартен"
+
+msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
+msgstr "Доставчикът „%s“ се нуждае от пакета на Python „%s“, който липсва. Преинсталирайте Thonny AIA."
+
+msgid "The AI service did not answer in time. Try again."
+msgstr "AI услугата не отговори навреме. Опитайте отново."
+
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
+msgstr "API ключът беше отхвърлен. Проверете го в Инструменти > Опции > AI асистент (Задаване на API ключ...)."
+
+msgid "The key is stored in plain text in Thonny's configuration file."
+msgstr "Ключът се съхранява като обикновен текст в конфигурационния файл на Thonny."
+
+msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
+msgstr "Моделът работи на този компютър, без API ключ и без интернет. Нужни са му около 14 GB свободна RAM памет; без мощна видеокарта един отговор отнема 20–70 секунди."
+
+msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
+msgstr "Thonny с AI асистент (AIA). Thonny е създаден от Aivar Annamaa."
+
+msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
+msgstr "Твърде много заявки или квотата на акаунта е изчерпана. Изчакайте малко и опитайте отново."
+
+msgid "Type a question below (Enter sends, Shift+Enter = new line)."
+msgstr "Напишете въпрос отдолу (Enter изпраща, Shift+Enter = нов ред)."
+
+msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
+msgstr "Неизвестен доставчик „%s“. Изберете друг в Инструменти > Опции > AI асистент."
+
+msgid "Use AI-based AIA instead of the built-in Assistant"
+msgstr "Използване на AIA с изкуствен интелект вместо вградения Асистент"
+
+msgid "Welcome to %s!"
+msgstr "Добре дошли в %s!"
+
+msgid "You"
+msgstr "Вие"
+
+msgid "You (auto)"
+msgstr "Вие (автоматично)"
+
+msgid "cancelled"
+msgstr "отменено"
+
+msgid "error detected"
+msgstr "открита грешка"

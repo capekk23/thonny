@@ -1986,3 +1986,173 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
+msgid "A key is already stored; entering a new one replaces it."
+msgstr "Բանալին արդեն պահված է․ նորը մուտքագրելով՝ այն կփոխարինեք։"
+
+msgid "AI Assistant"
+msgstr "ԱԲ օգնական"
+
+msgid "AI assistant:"
+msgstr "ԱԲ օգնական:"
+
+msgid "AIA - %s API key"
+msgstr "AIA - %s API բանալի"
+
+msgid "AIA - AI Mentor Assistant"
+msgstr "AIA - ԱԲ մենթոր օգնական"
+
+msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
+msgstr "AIA֊ն մնում է միացված, բայց կպատասխանի միայն այն բանից հետո, երբ մատակարար ընտրեք Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"
+
+msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
+msgstr "API բանալին սահմանված չէ։ Անցեք Գործիքներ > Ընտրանքներ > ԱԲ օգնական > Սահմանել API բանալին..."
+
+msgid "API key:"
+msgstr "API բանալի:"
+
+msgid "About Thonny AIA"
+msgstr "Thonny AIA֊ի մասին"
+
+msgid "Also include locally imported files"
+msgstr "Ներառել նաև տեղային ներմուծված նիշքերը"
+
+msgid "Answer style:"
+msgstr "Պատասխանի ոճ:"
+
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
+msgstr "Պատասխանները տրամադրում է %s ծառայությունը։ Ձեզ անհրաժեշտ է API բանալի․ ստեղծեք այն ստորև նշված հղումով կամ ստացեք ձեր ուսուցչից։ Կարող եք այն մուտքագրել նաև ավելի ուշ՝ Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"
+
+msgid "Automatically include current file as context"
+msgstr "Ավտոմատ կերպով ներառել ընթացիկ նիշքը որպես համատեքստ"
+
+msgid "Cannot connect to the AI service. Check the internet connection."
+msgstr "Հնարավոր չէ միանալ ԱԲ ծառայությանը։ Ստուգեք համացանցային կապը։"
+
+msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
+msgstr "Ollama֊ն հասանելի չէ։ Արդյո՞ք այն գործարկված է (ollama serve), և ճի՞շտ է հոսթը։"
+
+msgid "Check again"
+msgstr "Կրկին ստուգել"
+
+msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
+msgstr "Claude Code֊ը («claude» հրամանը) չի գտնվել։ Տեղադրեք Claude Code֊ը, մեկ անգամ գործարկեք «claude»֊ը և մուտք գործեք, ապա վերագործարկեք Thonny֊ն։"
+
+msgid "Context:"
+msgstr "Համատեքստ:"
+
+msgid "Direct"
+msgstr "Ուղիղ"
+
+msgid "Enter your %s API key:"
+msgstr "Մուտքագրեք ձեր %s API բանալին:"
+
+msgid "Explanatory"
+msgstr "Բացատրական"
+
+msgid "Get one at:"
+msgstr "Ստացեք այստեղ:"
+
+msgid "I will set it up later"
+msgstr "Կկարգավորեմ ավելի ուշ"
+
+msgid "Initial settings:"
+msgstr "Սկզբնական կարգավորումներ:"
+
+msgid "LLM Provider:"
+msgstr "LLM մատակարար:"
+
+msgid "Language:"
+msgstr "Լեզու:"
+
+msgid "Let's go!"
+msgstr "Սկսե՛նք։"
+
+msgid "Loading the local model..."
+msgstr "Տեղային մոդելը բեռնվում է..."
+
+msgid "Local model (Ollama, %s)"
+msgstr "Տեղային մոդել (Ollama, %s)"
+
+msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
+msgstr "«%s» մոդելը չի գտնվել կամ այլևս հասանելի չէ։ Ընտրեք այլ մոդել Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"
+
+msgid "Model:"
+msgstr "Մոդել:"
+
+msgid "Ollama is installed, but it is not running. Start it, then click Check again."
+msgstr "Ollama֊ն տեղադրված է, բայց գործարկված չէ։ Գործարկեք այն, ապա սեղմեք «Կրկին ստուգել»։"
+
+msgid "Ollama is running and the model %s is downloaded."
+msgstr "Ollama֊ն աշխատում է, և %s մոդելը ներբեռնված է։"
+
+msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
+msgstr "Ollama֊ն աշխատում է, բայց մոդելը դեռ ներբեռնված չէ։ Հրամանի տողում գործարկեք «ollama pull %s» (13 GB), ապա սեղմեք «Կրկին ստուգել»։"
+
+msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
+msgstr "Ollama֊ն այս համակարգչում չի գտնվել։ Տեղադրեք այն ստորև նշված հղումով, ապա հրամանի տողում գործարկեք «ollama pull %s» (13 GB) և սեղմեք «Կրկին ստուգել»։"
+
+msgid "Raspberry Pi (simple)"
+msgstr "Raspberry Pi (պարզ)"
+
+msgid "Remove key"
+msgstr "Հեռացնել բանալին"
+
+msgid "Send"
+msgstr "Ուղարկել"
+
+msgid "Set API Key..."
+msgstr "Սահմանել API բանալին..."
+
+msgid "Socratic"
+msgstr "Սոկրատյան"
+
+msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
+msgstr "Սոկրատյան = առաջնորդում է ձեզ դեպի պատասխանը, Բացատրական = բացատրում և պատասխանում է, Ուղիղ = միայն կարճ պատասխան"
+
+msgid "Standard"
+msgstr "Ստանդարտ"
+
+msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
+msgstr "«%s» մատակարարին անհրաժեշտ է Python֊ի «%s» փաթեթը, որը բացակայում է։ Վերատեղադրեք Thonny AIA֊ն։"
+
+msgid "The AI service did not answer in time. Try again."
+msgstr "ԱԲ ծառայությունը ժամանակին չպատասխանեց։ Փորձեք կրկին։"
+
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
+msgstr "API բանալին մերժվել է։ Ստուգեք այն Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում (Սահմանել API բանալին...)։"
+
+msgid "The key is stored in plain text in Thonny's configuration file."
+msgstr "Բանալին պահվում է որպես պարզ տեքստ Thonny֊ի կարգավորումների նիշքում։"
+
+msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
+msgstr "Մոդելն աշխատում է այս համակարգչում՝ առանց API բանալու և առանց համացանցի։ Այն պահանջում է մոտ 14 GB ազատ RAM․ առանց հզոր վիդեոքարտի պատասխանը տևում է 20-70 վայրկյան։"
+
+msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
+msgstr "Thonny՝ ԱԲ օգնականով (AIA)։ Thonny֊ն ստեղծել է Aivar Annamaa֊ն։"
+
+msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
+msgstr "Չափազանց շատ հարցումներ, կամ հաշվի սահմանաչափը սպառված է։ Մի փոքր սպասեք և փորձեք կրկին։"
+
+msgid "Type a question below (Enter sends, Shift+Enter = new line)."
+msgstr "Գրեք հարցը ներքևում (Enter֊ը ուղարկում է, Shift+Enter = նոր տող)։"
+
+msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
+msgstr "Անհայտ մատակարար՝ «%s»։ Ընտրեք մատակարար Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"
+
+msgid "Use AI-based AIA instead of the built-in Assistant"
+msgstr "Օգտագործել ԱԲ֊ի վրա հիմնված AIA֊ն ներկառուցված Օգնականի փոխարեն"
+
+msgid "Welcome to %s!"
+msgstr "Բարի գալուստ %s։"
+
+msgid "You"
+msgstr "Դուք"
+
+msgid "You (auto)"
+msgstr "Դուք (ավտոմատ)"
+
+msgid "cancelled"
+msgstr "չեղարկված"
+
+msgid "error detected"
+msgstr "սխալ է հայտնաբերվել"

@@ -1998,3 +1998,173 @@ msgstr "Selle interpretaatori pakke saab korraldada süsteemi pakihalduri kaudu.
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr "Pakkide pip-installimiseks tuleb kasutada virtuaalkeskkonda."
 
+msgid "A key is already stored; entering a new one replaces it."
+msgstr "Võti on juba salvestatud; uue sisestamine asendab selle."
+
+msgid "AI Assistant"
+msgstr "AI-assistent"
+
+msgid "AI assistant:"
+msgstr "AI-assistent:"
+
+msgid "AIA - %s API key"
+msgstr "AIA – %s API-võti"
+
+msgid "AIA - AI Mentor Assistant"
+msgstr "AIA – AI-mentor ja assistent"
+
+msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
+msgstr "AIA jääb sisse lülitatuks, kuid hakkab vastama alles siis, kui valid teenusepakkuja menüüs Tööriistad > Seaded > AI-assistent."
+
+msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
+msgstr "API-võti pole määratud. Ava Tööriistad > Seaded > AI-assistent > Määra API-võti..."
+
+msgid "API key:"
+msgstr "API-võti:"
+
+msgid "About Thonny AIA"
+msgstr "Info Thonny AIA kohta"
+
+msgid "Also include locally imported files"
+msgstr "Kaasa ka kohalikult imporditud failid"
+
+msgid "Answer style:"
+msgstr "Vastuse stiil:"
+
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
+msgstr "Vastuseid annab %s. Vajad API-võtit: loo see allolevalt lingilt või küsi õpetajalt. Saad selle sisestada ka hiljem menüüs Tööriistad > Seaded > AI-assistent."
+
+msgid "Automatically include current file as context"
+msgstr "Kaasa avatud fail automaatselt kontekstina"
+
+msgid "Cannot connect to the AI service. Check the internet connection."
+msgstr "AI-teenusega ei saa ühendust. Kontrolli internetiühendust."
+
+msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
+msgstr "Ollama pole kättesaadav. Kas see töötab (ollama serve) ja kas hosti aadress on õige?"
+
+msgid "Check again"
+msgstr "Kontrolli uuesti"
+
+msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
+msgstr "Claude Code'i (käsku „claude“) ei leitud. Paigalda Claude Code, logi sisse, käivitades korra „claude“, ja käivita siis Thonny uuesti."
+
+msgid "Context:"
+msgstr "Kontekst:"
+
+msgid "Direct"
+msgstr "Otsene"
+
+msgid "Enter your %s API key:"
+msgstr "Sisesta oma %s API-võti:"
+
+msgid "Explanatory"
+msgstr "Selgitav"
+
+msgid "Get one at:"
+msgstr "Hangi siit:"
+
+msgid "I will set it up later"
+msgstr "Seadistan hiljem"
+
+msgid "Initial settings:"
+msgstr "Algseaded:"
+
+msgid "LLM Provider:"
+msgstr "Keelemudeli pakkuja:"
+
+msgid "Language:"
+msgstr "Keel:"
+
+msgid "Let's go!"
+msgstr "Alustame!"
+
+msgid "Loading the local model..."
+msgstr "Laadin kohalikku mudelit..."
+
+msgid "Local model (Ollama, %s)"
+msgstr "Kohalik mudel (Ollama, %s)"
+
+msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
+msgstr "Mudelit „%s“ ei leitud või see pole enam saadaval. Vali menüüs Tööriistad > Seaded > AI-assistent mõni teine mudel."
+
+msgid "Model:"
+msgstr "Mudel:"
+
+msgid "Ollama is installed, but it is not running. Start it, then click Check again."
+msgstr "Ollama on paigaldatud, kuid ei tööta. Käivita see ja klõpsa siis „Kontrolli uuesti“."
+
+msgid "Ollama is running and the model %s is downloaded."
+msgstr "Ollama töötab ja mudel %s on alla laaditud."
+
+msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
+msgstr "Ollama töötab, kuid mudel pole veel alla laaditud. Käivita käsureal „ollama pull %s“ (13 GB) ja klõpsa siis „Kontrolli uuesti“."
+
+msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
+msgstr "Selles arvutis ei leitud Ollamat. Paigalda see allolevalt lingilt, käivita siis käsureal „ollama pull %s“ (13 GB) ja klõpsa „Kontrolli uuesti“."
+
+msgid "Raspberry Pi (simple)"
+msgstr "Raspberry Pi (lihtne)"
+
+msgid "Remove key"
+msgstr "Eemalda võti"
+
+msgid "Send"
+msgstr "Saada"
+
+msgid "Set API Key..."
+msgstr "Määra API-võti..."
+
+msgid "Socratic"
+msgstr "Sokraatiline"
+
+msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
+msgstr "Sokraatiline = juhatab sind vastuseni, Selgitav = selgitab ja vastab, Otsene = ainult lühike vastus"
+
+msgid "Standard"
+msgstr "Standardne"
+
+msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
+msgstr "Teenusepakkuja „%s“ vajab Pythoni paketti „%s“, mis puudub. Paigalda Thonny AIA uuesti."
+
+msgid "The AI service did not answer in time. Try again."
+msgstr "AI-teenus ei vastanud õigeaegselt. Proovi uuesti."
+
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
+msgstr "API-võti lükati tagasi. Kontrolli seda menüüs Tööriistad > Seaded > AI-assistent (Määra API-võti...)."
+
+msgid "The key is stored in plain text in Thonny's configuration file."
+msgstr "Võti salvestatakse Thonny seadistusfaili lihttekstina."
+
+msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
+msgstr "Mudel töötab selles arvutis, ilma API-võtme ja internetita. See vajab umbes 14 GB vaba RAM-i; ilma võimsa graafikakaardita võtab vastus aega 20–70 sekundit."
+
+msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
+msgstr "Thonny koos AI-assistendiga (AIA). Thonny autor on Aivar Annamaa."
+
+msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
+msgstr "Liiga palju päringuid või konto kvoot on täis. Oota hetk ja proovi uuesti."
+
+msgid "Type a question below (Enter sends, Shift+Enter = new line)."
+msgstr "Kirjuta küsimus allpool (Enter saadab, Shift+Enter = uus rida)."
+
+msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
+msgstr "Tundmatu teenusepakkuja „%s“. Vali see menüüs Tööriistad > Seaded > AI-assistent."
+
+msgid "Use AI-based AIA instead of the built-in Assistant"
+msgstr "Kasuta sisseehitatud Juhendaja asemel tehisintellektil põhinevat AIA-d"
+
+msgid "Welcome to %s!"
+msgstr "%s – tere tulemast!"
+
+msgid "You"
+msgstr "Sina"
+
+msgid "You (auto)"
+msgstr "Sina (automaatne)"
+
+msgid "cancelled"
+msgstr "tühistatud"
+
+msgid "error detected"
+msgstr "leiti viga"

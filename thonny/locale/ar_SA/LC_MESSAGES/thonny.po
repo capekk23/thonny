@@ -1982,3 +1982,173 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
+msgid "A key is already stored; entering a new one replaces it."
+msgstr "يوجد مفتاح محفوظ بالفعل؛ إدخال مفتاح جديد سيستبدله."
+
+msgid "AI Assistant"
+msgstr "مساعد الذكاء الاصطناعي"
+
+msgid "AI assistant:"
+msgstr "مساعد الذكاء الاصطناعي:"
+
+msgid "AIA - %s API key"
+msgstr "AIA - مفتاح API لـ %s"
+
+msgid "AIA - AI Mentor Assistant"
+msgstr "AIA - المساعد والمرشد بالذكاء الاصطناعي"
+
+msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
+msgstr "سيبقى AIA مفعّلًا، لكنه لن يجيب إلا بعد أن تختار مزوّدًا من أدوات > الخيارات > مساعد الذكاء الاصطناعي."
+
+msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
+msgstr "لم يتم تعيين مفتاح API. انتقل إلى أدوات > الخيارات > مساعد الذكاء الاصطناعي > تعيين مفتاح API..."
+
+msgid "API key:"
+msgstr "مفتاح API:"
+
+msgid "About Thonny AIA"
+msgstr "عن Thonny AIA"
+
+msgid "Also include locally imported files"
+msgstr "تضمين الملفات المستوردة محليًا أيضًا"
+
+msgid "Answer style:"
+msgstr "أسلوب الإجابة:"
+
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
+msgstr "تأتي الإجابات من %s. تحتاج إلى مفتاح API: أنشئه من الرابط أدناه أو احصل عليه من معلمك. يمكنك أيضًا إدخاله لاحقًا من أدوات > الخيارات > مساعد الذكاء الاصطناعي."
+
+msgid "Automatically include current file as context"
+msgstr "تضمين الملف الحالي تلقائيًا كسياق"
+
+msgid "Cannot connect to the AI service. Check the internet connection."
+msgstr "تعذّر الاتصال بخدمة الذكاء الاصطناعي. تحقق من الاتصال بالإنترنت."
+
+msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
+msgstr "تعذّر الوصول إلى Ollama. هل هو قيد التشغيل (ollama serve) وهل عنوان المضيف صحيح؟"
+
+msgid "Check again"
+msgstr "تحقق مرة أخرى"
+
+msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
+msgstr "لم يتم العثور على Claude Code (الأمر «claude»). ثبّت Claude Code، وسجّل الدخول بتشغيل «claude» مرة واحدة، ثم أعد تشغيل Thonny."
+
+msgid "Context:"
+msgstr "السياق:"
+
+msgid "Direct"
+msgstr "مباشر"
+
+msgid "Enter your %s API key:"
+msgstr "أدخل مفتاح API الخاص بـ %s:"
+
+msgid "Explanatory"
+msgstr "توضيحي"
+
+msgid "Get one at:"
+msgstr "احصل عليه من:"
+
+msgid "I will set it up later"
+msgstr "سأعدّه لاحقًا"
+
+msgid "Initial settings:"
+msgstr "الإعدادات الأولية:"
+
+msgid "LLM Provider:"
+msgstr "مزوّد LLM:"
+
+msgid "Language:"
+msgstr "اللغة:"
+
+msgid "Let's go!"
+msgstr "هيا بنا!"
+
+msgid "Loading the local model..."
+msgstr "جارٍ تحميل النموذج المحلي..."
+
+msgid "Local model (Ollama, %s)"
+msgstr "نموذج محلي (Ollama، %s)"
+
+msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
+msgstr "لم يتم العثور على النموذج «%s» أو لم يعد متاحًا. اختر نموذجًا آخر من أدوات > الخيارات > مساعد الذكاء الاصطناعي."
+
+msgid "Model:"
+msgstr "النموذج:"
+
+msgid "Ollama is installed, but it is not running. Start it, then click Check again."
+msgstr "Ollama مثبّت، لكنه لا يعمل. شغّله، ثم انقر على «تحقق مرة أخرى»."
+
+msgid "Ollama is running and the model %s is downloaded."
+msgstr "Ollama قيد التشغيل وتم تنزيل النموذج %s."
+
+msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
+msgstr "Ollama قيد التشغيل، لكن النموذج لم يُنزَّل بعد. نفّذ «ollama pull %s» في موجّه الأوامر (13 GB)، ثم انقر على «تحقق مرة أخرى»."
+
+msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
+msgstr "لم يتم العثور على Ollama على هذا الكمبيوتر. ثبّته من الرابط أدناه، ثم نفّذ «ollama pull %s» في موجّه الأوامر (13 GB) وانقر على «تحقق مرة أخرى»."
+
+msgid "Raspberry Pi (simple)"
+msgstr "Raspberry Pi (مبسّط)"
+
+msgid "Remove key"
+msgstr "إزالة المفتاح"
+
+msgid "Send"
+msgstr "إرسال"
+
+msgid "Set API Key..."
+msgstr "تعيين مفتاح API..."
+
+msgid "Socratic"
+msgstr "سقراطي"
+
+msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
+msgstr "سقراطي = يرشدك إلى الإجابة، توضيحي = يشرح ويجيب، مباشر = إجابة قصيرة فقط"
+
+msgid "Standard"
+msgstr "قياسي"
+
+msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
+msgstr "يحتاج المزوّد «%s» إلى حزمة Python «%s» وهي غير مثبّتة. أعد تثبيت Thonny AIA."
+
+msgid "The AI service did not answer in time. Try again."
+msgstr "لم تستجب خدمة الذكاء الاصطناعي في الوقت المحدد. حاول مرة أخرى."
+
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
+msgstr "تم رفض مفتاح API. تحقق منه في أدوات > الخيارات > مساعد الذكاء الاصطناعي (تعيين مفتاح API...)."
+
+msgid "The key is stored in plain text in Thonny's configuration file."
+msgstr "يُخزَّن المفتاح كنص عادي في ملف إعدادات Thonny."
+
+msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
+msgstr "يعمل النموذج على هذا الكمبيوتر، دون مفتاح API ودون إنترنت. يحتاج إلى نحو 14 GB من ذاكرة RAM الحرة؛ ومن دون بطاقة رسومات قوية تستغرق الإجابة 20-70 ثانية."
+
+msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
+msgstr "Thonny مع مساعد الذكاء الاصطناعي (AIA). Thonny من تطوير Aivar Annamaa."
+
+msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
+msgstr "طلبات كثيرة جدًا أو نفدت حصة الحساب. انتظر قليلًا ثم حاول مرة أخرى."
+
+msgid "Type a question below (Enter sends, Shift+Enter = new line)."
+msgstr "اكتب سؤالًا في الأسفل (Enter للإرسال، Shift+Enter = سطر جديد)."
+
+msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
+msgstr "مزوّد غير معروف «%s». اختر مزوّدًا من أدوات > الخيارات > مساعد الذكاء الاصطناعي."
+
+msgid "Use AI-based AIA instead of the built-in Assistant"
+msgstr "استخدام AIA المعتمد على الذكاء الاصطناعي بدلًا من المساعد المدمج"
+
+msgid "Welcome to %s!"
+msgstr "مرحبًا بك في %s!"
+
+msgid "You"
+msgstr "أنت"
+
+msgid "You (auto)"
+msgstr "أنت (تلقائي)"
+
+msgid "cancelled"
+msgstr "أُلغي"
+
+msgid "error detected"
+msgstr "تم اكتشاف خطأ"

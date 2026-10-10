@@ -1995,3 +1995,173 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
+msgid "A key is already stored; entering a new one replaces it."
+msgstr "O cheie este deja salvată; dacă introduceți una nouă, o va înlocui."
+
+msgid "AI Assistant"
+msgstr "Asistent AI"
+
+msgid "AI assistant:"
+msgstr "Asistent AI:"
+
+msgid "AIA - %s API key"
+msgstr "AIA – cheie API pentru %s"
+
+msgid "AIA - AI Mentor Assistant"
+msgstr "AIA – asistent AI și mentor"
+
+msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
+msgstr "AIA rămâne pornit, dar va răspunde abia după ce alegeți un furnizor în Instrumente > Opțiuni > Asistent AI."
+
+msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
+msgstr "Cheia API nu este setată. Mergeți la Instrumente > Opțiuni > Asistent AI > Setează cheia API..."
+
+msgid "API key:"
+msgstr "Cheie API:"
+
+msgid "About Thonny AIA"
+msgstr "Despre Thonny AIA"
+
+msgid "Also include locally imported files"
+msgstr "Include și fișierele importate local"
+
+msgid "Answer style:"
+msgstr "Stilul răspunsurilor:"
+
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
+msgstr "Răspunsurile vin de la %s. Aveți nevoie de o cheie API: creați-o la linkul de mai jos sau cereți-o profesorului. O puteți introduce și mai târziu în Instrumente > Opțiuni > Asistent AI."
+
+msgid "Automatically include current file as context"
+msgstr "Include automat fișierul curent ca context"
+
+msgid "Cannot connect to the AI service. Check the internet connection."
+msgstr "Nu se poate realiza conexiunea la serviciul AI. Verificați conexiunea la internet."
+
+msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
+msgstr "Ollama nu poate fi accesat. Rulează (ollama serve) și adresa gazdei este corectă?"
+
+msgid "Check again"
+msgstr "Verifică din nou"
+
+msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
+msgstr "Claude Code (comanda „claude”) nu a fost găsit. Instalați Claude Code, autentificați-vă rulând o dată „claude”, apoi reporniți Thonny."
+
+msgid "Context:"
+msgstr "Context:"
+
+msgid "Direct"
+msgstr "Direct"
+
+msgid "Enter your %s API key:"
+msgstr "Introduceți cheia API pentru %s:"
+
+msgid "Explanatory"
+msgstr "Explicativ"
+
+msgid "Get one at:"
+msgstr "O puteți obține la:"
+
+msgid "I will set it up later"
+msgstr "Configurez mai târziu"
+
+msgid "Initial settings:"
+msgstr "Setări inițiale:"
+
+msgid "LLM Provider:"
+msgstr "Furnizor LLM:"
+
+msgid "Language:"
+msgstr "Limbă:"
+
+msgid "Let's go!"
+msgstr "Să începem!"
+
+msgid "Loading the local model..."
+msgstr "Se încarcă modelul local..."
+
+msgid "Local model (Ollama, %s)"
+msgstr "Model local (Ollama, %s)"
+
+msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
+msgstr "Modelul „%s” nu a fost găsit sau nu mai este disponibil. Alegeți alt model în Instrumente > Opțiuni > Asistent AI."
+
+msgid "Model:"
+msgstr "Model:"
+
+msgid "Ollama is installed, but it is not running. Start it, then click Check again."
+msgstr "Ollama este instalat, dar nu rulează. Porniți-l, apoi faceți clic pe Verifică din nou."
+
+msgid "Ollama is running and the model %s is downloaded."
+msgstr "Ollama rulează și modelul %s este descărcat."
+
+msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
+msgstr "Ollama rulează, dar modelul nu este încă descărcat. Rulați „ollama pull %s” în linia de comandă (13 GB), apoi faceți clic pe Verifică din nou."
+
+msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
+msgstr "Ollama nu a fost găsit pe acest computer. Instalați-l de la linkul de mai jos, apoi rulați „ollama pull %s” în linia de comandă (13 GB) și faceți clic pe Verifică din nou."
+
+msgid "Raspberry Pi (simple)"
+msgstr "Raspberry Pi (simplu)"
+
+msgid "Remove key"
+msgstr "Șterge cheia"
+
+msgid "Send"
+msgstr "Trimite"
+
+msgid "Set API Key..."
+msgstr "Setează cheia API..."
+
+msgid "Socratic"
+msgstr "Socratic"
+
+msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
+msgstr "Socratic = vă conduce spre răspuns, Explicativ = explică și răspunde, Direct = doar un răspuns scurt"
+
+msgid "Standard"
+msgstr "Standard"
+
+msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
+msgstr "Furnizorul „%s” are nevoie de pachetul Python „%s”, care lipsește. Reinstalați Thonny AIA."
+
+msgid "The AI service did not answer in time. Try again."
+msgstr "Serviciul AI nu a răspuns la timp. Încercați din nou."
+
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
+msgstr "Cheia API a fost respinsă. Verificați-o în Instrumente > Opțiuni > Asistent AI (Setează cheia API...)."
+
+msgid "The key is stored in plain text in Thonny's configuration file."
+msgstr "Cheia este salvată ca text simplu în fișierul de configurare al Thonny."
+
+msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
+msgstr "Modelul rulează pe acest computer, fără cheie API și fără internet. Are nevoie de aproximativ 14 GB de RAM liberă; fără o placă grafică puternică, un răspuns durează 20–70 de secunde."
+
+msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
+msgstr "Thonny cu Asistentul AI (AIA). Thonny este creat de Aivar Annamaa."
+
+msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
+msgstr "Prea multe cereri sau cota contului s-a epuizat. Așteptați puțin și încercați din nou."
+
+msgid "Type a question below (Enter sends, Shift+Enter = new line)."
+msgstr "Scrieți o întrebare mai jos (Enter trimite, Shift+Enter = rând nou)."
+
+msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
+msgstr "Furnizor necunoscut „%s”. Alegeți unul în Instrumente > Opțiuni > Asistent AI."
+
+msgid "Use AI-based AIA instead of the built-in Assistant"
+msgstr "Folosește AIA, bazat pe AI, în locul Asistentului integrat"
+
+msgid "Welcome to %s!"
+msgstr "Bine ați venit în %s!"
+
+msgid "You"
+msgstr "Tu"
+
+msgid "You (auto)"
+msgstr "Tu (automat)"
+
+msgid "cancelled"
+msgstr "anulat"
+
+msgid "error detected"
+msgstr "eroare detectată"

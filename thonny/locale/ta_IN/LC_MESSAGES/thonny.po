@@ -1988,3 +1988,173 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
+msgid "A key is already stored; entering a new one replaces it."
+msgstr "ஒரு விசை ஏற்கனவே சேமிக்கப்பட்டுள்ளது; புதிய விசையை உள்ளிட்டால் அது மாற்றப்படும்."
+
+msgid "AI Assistant"
+msgstr "AI உதவியாளர்"
+
+msgid "AI assistant:"
+msgstr "AI உதவியாளர்:"
+
+msgid "AIA - %s API key"
+msgstr "AIA - %s API விசை"
+
+msgid "AIA - AI Mentor Assistant"
+msgstr "AIA - AI வழிகாட்டி உதவியாளர்"
+
+msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
+msgstr "AIA இயக்கத்தில் இருக்கும், ஆனால் கருவிகள் > விருப்பங்கள் > AI உதவியாளர் என்பதில் ஒரு வழங்குநரைத் தேர்ந்தெடுத்த பிறகே பதிலளிக்கும்."
+
+msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
+msgstr "API விசை அமைக்கப்படவில்லை. கருவிகள் > விருப்பங்கள் > AI உதவியாளர் > API விசையை அமை... என்பதற்குச் செல்லவும்."
+
+msgid "API key:"
+msgstr "API விசை:"
+
+msgid "About Thonny AIA"
+msgstr "Thonny AIA பற்றி"
+
+msgid "Also include locally imported files"
+msgstr "உள்ளூரில் இறக்குமதி செய்யப்பட்ட கோப்புகளையும் சேர்"
+
+msgid "Answer style:"
+msgstr "பதில் பாணி:"
+
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
+msgstr "பதில்கள் %s இலிருந்து வருகின்றன. உங்களுக்கு ஒரு API விசை தேவை: கீழே உள்ள இணைப்பில் அதை உருவாக்கவும், அல்லது உங்கள் ஆசிரியரிடமிருந்து பெறவும். கருவிகள் > விருப்பங்கள் > AI உதவியாளர் என்பதில் பின்னரும் அதை உள்ளிடலாம்."
+
+msgid "Automatically include current file as context"
+msgstr "தற்போதைய கோப்பைத் தானாகவே சூழலாகச் சேர்"
+
+msgid "Cannot connect to the AI service. Check the internet connection."
+msgstr "AI சேவையுடன் இணைக்க முடியவில்லை. இணைய இணைப்பைச் சரிபார்க்கவும்."
+
+msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
+msgstr "Ollama-வை அணுக முடியவில்லை. அது இயங்குகிறதா (ollama serve), ஹோஸ்ட் சரியாக உள்ளதா?"
+
+msgid "Check again"
+msgstr "மீண்டும் சரிபார்"
+
+msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
+msgstr "Claude Code ('claude' கட்டளை) கிடைக்கவில்லை. Claude Code-ஐ நிறுவி, 'claude'-ஐ ஒருமுறை இயக்கி உள்நுழைந்து, பின்னர் Thonny-ஐ மறுதொடக்கம் செய்யவும்."
+
+msgid "Context:"
+msgstr "சூழல்:"
+
+msgid "Direct"
+msgstr "நேரடி"
+
+msgid "Enter your %s API key:"
+msgstr "உங்கள் %s API விசையை உள்ளிடவும்:"
+
+msgid "Explanatory"
+msgstr "விளக்கமான"
+
+msgid "Get one at:"
+msgstr "இங்கே பெறலாம்:"
+
+msgid "I will set it up later"
+msgstr "பின்னர் அமைக்கிறேன்"
+
+msgid "Initial settings:"
+msgstr "தொடக்க அமைப்புகள்:"
+
+msgid "LLM Provider:"
+msgstr "LLM வழங்குநர்:"
+
+msgid "Language:"
+msgstr "மொழி:"
+
+msgid "Let's go!"
+msgstr "தொடங்குவோம்!"
+
+msgid "Loading the local model..."
+msgstr "உள்ளூர் மாதிரி ஏற்றப்படுகிறது..."
+
+msgid "Local model (Ollama, %s)"
+msgstr "உள்ளூர் மாதிரி (Ollama, %s)"
+
+msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
+msgstr "'%s' மாதிரி கிடைக்கவில்லை அல்லது இனி கிடைக்காது. கருவிகள் > விருப்பங்கள் > AI உதவியாளர் என்பதில் வேறொரு மாதிரியைத் தேர்ந்தெடுக்கவும்."
+
+msgid "Model:"
+msgstr "மாதிரி:"
+
+msgid "Ollama is installed, but it is not running. Start it, then click Check again."
+msgstr "Ollama நிறுவப்பட்டுள்ளது, ஆனால் இயங்கவில்லை. அதைத் தொடங்கி, பின்னர் மீண்டும் சரிபார் என்பதைக் கிளிக் செய்யவும்."
+
+msgid "Ollama is running and the model %s is downloaded."
+msgstr "Ollama இயங்குகிறது, %s மாதிரி பதிவிறக்கப்பட்டுள்ளது."
+
+msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
+msgstr "Ollama இயங்குகிறது, ஆனால் மாதிரி இன்னும் பதிவிறக்கப்படவில்லை. கட்டளை வரியில் 'ollama pull %s' ஐ இயக்கவும் (13 GB), பின்னர் மீண்டும் சரிபார் என்பதைக் கிளிக் செய்யவும்."
+
+msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
+msgstr "இந்தக் கணினியில் Ollama கிடைக்கவில்லை. கீழே உள்ள இணைப்பிலிருந்து அதை நிறுவி, பின்னர் கட்டளை வரியில் 'ollama pull %s' ஐ இயக்கி (13 GB), மீண்டும் சரிபார் என்பதைக் கிளிக் செய்யவும்."
+
+msgid "Raspberry Pi (simple)"
+msgstr "Raspberry Pi (எளிமையானது)"
+
+msgid "Remove key"
+msgstr "விசையை நீக்கு"
+
+msgid "Send"
+msgstr "அனுப்பு"
+
+msgid "Set API Key..."
+msgstr "API விசையை அமை..."
+
+msgid "Socratic"
+msgstr "சாக்ரடிக்"
+
+msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
+msgstr "சாக்ரடிக் = பதிலை நோக்கி உங்களை வழிநடத்தும், விளக்கமான = விளக்கி பதிலளிக்கும், நேரடி = சுருக்கமான பதில் மட்டும்"
+
+msgid "Standard"
+msgstr "நிலையான"
+
+msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
+msgstr "'%s' வழங்குநருக்கு '%s' என்ற Python தொகுப்பு தேவை, அது இல்லை. Thonny AIA-வை மீண்டும் நிறுவவும்."
+
+msgid "The AI service did not answer in time. Try again."
+msgstr "AI சேவை நேரத்தில் பதிலளிக்கவில்லை. மீண்டும் முயற்சிக்கவும்."
+
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
+msgstr "API விசை நிராகரிக்கப்பட்டது. கருவிகள் > விருப்பங்கள் > AI உதவியாளர் (API விசையை அமை...) என்பதில் அதைச் சரிபார்க்கவும்."
+
+msgid "The key is stored in plain text in Thonny's configuration file."
+msgstr "விசை Thonny-இன் உள்ளமைவுக் கோப்பில் சாதாரண உரையாகச் சேமிக்கப்படுகிறது."
+
+msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
+msgstr "மாதிரி இந்தக் கணினியிலேயே, API விசை இல்லாமலும் இணையம் இல்லாமலும் இயங்குகிறது. இதற்கு சுமார் 14 GB காலியான RAM தேவை; சக்திவாய்ந்த கிராபிக்ஸ் அட்டை இல்லையெனில் ஒரு பதிலுக்கு 20-70 வினாடிகள் ஆகும்."
+
+msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
+msgstr "AI உதவியாளருடன் (AIA) Thonny. Thonny-ஐ உருவாக்கியவர் Aivar Annamaa."
+
+msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
+msgstr "அதிகமான கோரிக்கைகள், அல்லது கணக்கின் ஒதுக்கீடு தீர்ந்துவிட்டது. சிறிது நேரம் காத்திருந்து மீண்டும் முயற்சிக்கவும்."
+
+msgid "Type a question below (Enter sends, Shift+Enter = new line)."
+msgstr "கீழே ஒரு கேள்வியைத் தட்டச்சு செய்யவும் (Enter அனுப்பும், Shift+Enter = புதிய வரி)."
+
+msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
+msgstr "அறியப்படாத வழங்குநர் '%s'. கருவிகள் > விருப்பங்கள் > AI உதவியாளர் என்பதில் ஒன்றைத் தேர்ந்தெடுக்கவும்."
+
+msgid "Use AI-based AIA instead of the built-in Assistant"
+msgstr "உள்ளமைந்த உதவியாளருக்குப் பதிலாக AI அடிப்படையிலான AIA-வைப் பயன்படுத்து"
+
+msgid "Welcome to %s!"
+msgstr "%s-க்கு வரவேற்கிறோம்!"
+
+msgid "You"
+msgstr "நீங்கள்"
+
+msgid "You (auto)"
+msgstr "நீங்கள் (தானியங்கு)"
+
+msgid "cancelled"
+msgstr "ரத்து செய்யப்பட்டது"
+
+msgid "error detected"
+msgstr "பிழை கண்டறியப்பட்டது"

@@ -1995,3 +1995,173 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
+msgid "A key is already stored; entering a new one replaces it."
+msgstr "Ja hi ha una clau desada; si n'introduïu una de nova, la substituirà."
+
+msgid "AI Assistant"
+msgstr "Assistent d'IA"
+
+msgid "AI assistant:"
+msgstr "Assistent d'IA:"
+
+msgid "AIA - %s API key"
+msgstr "AIA – Clau d'API de %s"
+
+msgid "AIA - AI Mentor Assistant"
+msgstr "AIA – Assistent mentor d'IA"
+
+msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
+msgstr "L'AIA continuarà activat, però només respondrà quan trieu un proveïdor a Eines > Opcions > Assistent d'IA."
+
+msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
+msgstr "No s'ha definit la clau d'API. Aneu a Eines > Opcions > Assistent d'IA > Defineix la clau d'API..."
+
+msgid "API key:"
+msgstr "Clau d'API:"
+
+msgid "About Thonny AIA"
+msgstr "Sobre Thonny AIA"
+
+msgid "Also include locally imported files"
+msgstr "Inclou també els fitxers importats localment"
+
+msgid "Answer style:"
+msgstr "Estil de resposta:"
+
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
+msgstr "Les respostes les proporciona %s. Necessiteu una clau d'API: creeu-la a l'enllaç de sota o demaneu-la al vostre professor. També la podeu introduir més tard a Eines > Opcions > Assistent d'IA."
+
+msgid "Automatically include current file as context"
+msgstr "Inclou automàticament el fitxer actual com a context"
+
+msgid "Cannot connect to the AI service. Check the internet connection."
+msgstr "No es pot connectar amb el servei d'IA. Comproveu la connexió a internet."
+
+msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
+msgstr "No es pot contactar amb Ollama. S'està executant (ollama serve) i l'amfitrió és correcte?"
+
+msgid "Check again"
+msgstr "Torna-ho a comprovar"
+
+msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
+msgstr "No s'ha trobat Claude Code (l'ordre «claude»). Instal·leu Claude Code, inicieu la sessió executant «claude» una vegada i, després, reinicieu Thonny."
+
+msgid "Context:"
+msgstr "Context:"
+
+msgid "Direct"
+msgstr "Directe"
+
+msgid "Enter your %s API key:"
+msgstr "Introduïu la vostra clau d'API de %s:"
+
+msgid "Explanatory"
+msgstr "Explicatiu"
+
+msgid "Get one at:"
+msgstr "Obteniu-ne una a:"
+
+msgid "I will set it up later"
+msgstr "Ho configuraré més tard"
+
+msgid "Initial settings:"
+msgstr "Configuració inicial:"
+
+msgid "LLM Provider:"
+msgstr "Proveïdor de LLM:"
+
+msgid "Language:"
+msgstr "Llengua:"
+
+msgid "Let's go!"
+msgstr "Som-hi!"
+
+msgid "Loading the local model..."
+msgstr "S'està carregant el model local..."
+
+msgid "Local model (Ollama, %s)"
+msgstr "Model local (Ollama, %s)"
+
+msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
+msgstr "No s'ha trobat el model «%s» o ja no està disponible. Trieu un altre model a Eines > Opcions > Assistent d'IA."
+
+msgid "Model:"
+msgstr "Model:"
+
+msgid "Ollama is installed, but it is not running. Start it, then click Check again."
+msgstr "Ollama està instal·lat, però no s'està executant. Inicieu-lo i feu clic a «Torna-ho a comprovar»."
+
+msgid "Ollama is running and the model %s is downloaded."
+msgstr "Ollama s'està executant i el model %s ja està baixat."
+
+msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
+msgstr "Ollama s'està executant, però el model encara no està baixat. Executeu «ollama pull %s» en un intèrpret d'ordres (13 GB) i feu clic a «Torna-ho a comprovar»."
+
+msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
+msgstr "No s'ha trobat Ollama en aquest ordinador. Instal·leu-lo des de l'enllaç de sota, executeu «ollama pull %s» en un intèrpret d'ordres (13 GB) i feu clic a «Torna-ho a comprovar»."
+
+msgid "Raspberry Pi (simple)"
+msgstr "Raspberry Pi (senzill)"
+
+msgid "Remove key"
+msgstr "Elimina la clau"
+
+msgid "Send"
+msgstr "Envia"
+
+msgid "Set API Key..."
+msgstr "Defineix la clau d'API..."
+
+msgid "Socratic"
+msgstr "Socràtic"
+
+msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
+msgstr "Socràtic = us guia cap a la resposta, Explicatiu = explica i respon, Directe = només una resposta breu"
+
+msgid "Standard"
+msgstr "Estàndard"
+
+msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
+msgstr "El proveïdor «%s» necessita el paquet de Python «%s», que no està instal·lat. Reinstal·leu Thonny AIA."
+
+msgid "The AI service did not answer in time. Try again."
+msgstr "El servei d'IA no ha respost a temps. Torneu-ho a provar."
+
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
+msgstr "S'ha rebutjat la clau d'API. Comproveu-la a Eines > Opcions > Assistent d'IA (Defineix la clau d'API...)."
+
+msgid "The key is stored in plain text in Thonny's configuration file."
+msgstr "La clau es desa com a text sense xifrar al fitxer de configuració de Thonny."
+
+msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
+msgstr "El model s'executa en aquest ordinador, sense clau d'API i sense internet. Necessita uns 14 GB de RAM lliure; sense una targeta gràfica potent, cada resposta triga entre 20 i 70 segons."
+
+msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
+msgstr "Thonny amb l'Assistent d'IA (AIA). Thonny és obra d'Aivar Annamaa."
+
+msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
+msgstr "Massa sol·licituds o s'ha esgotat la quota del compte. Espereu un moment i torneu-ho a provar."
+
+msgid "Type a question below (Enter sends, Shift+Enter = new line)."
+msgstr "Escriviu una pregunta a sota (Enter l'envia, Shift+Enter = línia nova)."
+
+msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
+msgstr "Proveïdor desconegut «%s». Trieu-ne un a Eines > Opcions > Assistent d'IA."
+
+msgid "Use AI-based AIA instead of the built-in Assistant"
+msgstr "Utilitza l'AIA basat en IA en lloc de l'Assistent integrat"
+
+msgid "Welcome to %s!"
+msgstr "Us donem la benvinguda a %s!"
+
+msgid "You"
+msgstr "Vós"
+
+msgid "You (auto)"
+msgstr "Vós (automàtic)"
+
+msgid "cancelled"
+msgstr "cancel·lat"
+
+msgid "error detected"
+msgstr "error detectat"

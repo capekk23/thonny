@@ -1983,3 +1983,173 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
+msgid "A key is already stored; entering a new one replaces it."
+msgstr "已保存一个密钥；输入新密钥将替换它。"
+
+msgid "AI Assistant"
+msgstr "AI 助手"
+
+msgid "AI assistant:"
+msgstr "AI 助手："
+
+msgid "AIA - %s API key"
+msgstr "AIA - %s API 密钥"
+
+msgid "AIA - AI Mentor Assistant"
+msgstr "AIA - AI 导师助手"
+
+msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
+msgstr "AIA 保持开启，但只有在你于“工具 > 选项 > AI 助手”中选择提供商后才会回答。"
+
+msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
+msgstr "尚未设置 API 密钥。请前往“工具 > 选项 > AI 助手 > 设置 API 密钥...”"
+
+msgid "API key:"
+msgstr "API 密钥："
+
+msgid "About Thonny AIA"
+msgstr "关于Thonny AIA"
+
+msgid "Also include locally imported files"
+msgstr "同时发送本地导入的文件"
+
+msgid "Answer style:"
+msgstr "回答风格："
+
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
+msgstr "回答由 %s 提供。你需要一个 API 密钥：可通过下方链接创建，或向老师索取。你也可以稍后在“工具 > 选项 > AI 助手”中输入。"
+
+msgid "Automatically include current file as context"
+msgstr "自动将当前文件作为上下文发送"
+
+msgid "Cannot connect to the AI service. Check the internet connection."
+msgstr "无法连接到 AI 服务。请检查网络连接。"
+
+msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
+msgstr "无法连接到 Ollama。它是否正在运行（ollama serve），主机地址是否正确？"
+
+msgid "Check again"
+msgstr "再次检查"
+
+msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
+msgstr "未找到 Claude Code（“claude”命令）。请安装 Claude Code，运行一次“claude”进行登录，然后重新启动 Thonny。"
+
+msgid "Context:"
+msgstr "上下文："
+
+msgid "Direct"
+msgstr "直接"
+
+msgid "Enter your %s API key:"
+msgstr "请输入你的 %s API 密钥："
+
+msgid "Explanatory"
+msgstr "讲解式"
+
+msgid "Get one at:"
+msgstr "获取地址："
+
+msgid "I will set it up later"
+msgstr "稍后再设置"
+
+msgid "Initial settings:"
+msgstr "初始设置："
+
+msgid "LLM Provider:"
+msgstr "LLM 提供商："
+
+msgid "Language:"
+msgstr "语言："
+
+msgid "Let's go!"
+msgstr "开始吧！"
+
+msgid "Loading the local model..."
+msgstr "正在加载本地模型..."
+
+msgid "Local model (Ollama, %s)"
+msgstr "本地模型（Ollama，%s）"
+
+msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
+msgstr "未找到模型“%s”，或该模型已不可用。请在“工具 > 选项 > AI 助手”中选择其他模型。"
+
+msgid "Model:"
+msgstr "模型："
+
+msgid "Ollama is installed, but it is not running. Start it, then click Check again."
+msgstr "Ollama 已安装，但没有运行。请启动它，然后点击“再次检查”。"
+
+msgid "Ollama is running and the model %s is downloaded."
+msgstr "Ollama 正在运行，模型 %s 已下载。"
+
+msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
+msgstr "Ollama 正在运行，但模型尚未下载。请在命令提示符中运行“ollama pull %s”（13 GB），然后点击“再次检查”。"
+
+msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
+msgstr "在这台电脑上未找到 Ollama。请通过下方链接安装，然后在命令提示符中运行“ollama pull %s”（13 GB），再点击“再次检查”。"
+
+msgid "Raspberry Pi (simple)"
+msgstr "Raspberry Pi（简易）"
+
+msgid "Remove key"
+msgstr "删除密钥"
+
+msgid "Send"
+msgstr "发送"
+
+msgid "Set API Key..."
+msgstr "设置 API 密钥..."
+
+msgid "Socratic"
+msgstr "苏格拉底式"
+
+msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
+msgstr "苏格拉底式 = 引导你找到答案，讲解式 = 解释并给出答案，直接 = 只给简短答案"
+
+msgid "Standard"
+msgstr "标准"
+
+msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
+msgstr "提供商“%s”需要 Python 包“%s”，但该包缺失。请重新安装 Thonny AIA。"
+
+msgid "The AI service did not answer in time. Try again."
+msgstr "AI 服务未及时响应。请重试。"
+
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
+msgstr "API 密钥被拒绝。请在“工具 > 选项 > AI 助手”中检查（设置 API 密钥...）。"
+
+msgid "The key is stored in plain text in Thonny's configuration file."
+msgstr "密钥以明文形式保存在 Thonny 的配置文件中。"
+
+msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
+msgstr "模型在这台电脑上运行，无需 API 密钥，也无需联网。它需要约 14 GB 可用内存；如果没有性能强的显卡，每次回答需要 20-70 秒。"
+
+msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
+msgstr "带有 AI 助手（AIA）的 Thonny。Thonny 由 Aivar Annamaa 开发。"
+
+msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
+msgstr "请求过多，或账户配额已用完。请稍等片刻再试。"
+
+msgid "Type a question below (Enter sends, Shift+Enter = new line)."
+msgstr "在下方输入问题（Enter 发送，Shift+Enter = 换行）。"
+
+msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
+msgstr "未知的提供商“%s”。请在“工具 > 选项 > AI 助手”中选择一个。"
+
+msgid "Use AI-based AIA instead of the built-in Assistant"
+msgstr "使用基于 AI 的 AIA 代替内置助手"
+
+msgid "Welcome to %s!"
+msgstr "欢迎使用 %s！"
+
+msgid "You"
+msgstr "你"
+
+msgid "You (auto)"
+msgstr "你（自动）"
+
+msgid "cancelled"
+msgstr "已取消"
+
+msgid "error detected"
+msgstr "检测到错误"

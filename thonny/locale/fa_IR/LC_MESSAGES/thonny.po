@@ -1988,3 +1988,173 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
+msgid "A key is already stored; entering a new one replaces it."
+msgstr "یک کلید از قبل ذخیره شده است؛ وارد کردن کلید جدید جایگزین آن می‌شود."
+
+msgid "AI Assistant"
+msgstr "دستیار هوش مصنوعی"
+
+msgid "AI assistant:"
+msgstr "دستیار هوش مصنوعی:"
+
+msgid "AIA - %s API key"
+msgstr "AIA - کلید API برای %s"
+
+msgid "AIA - AI Mentor Assistant"
+msgstr "AIA - دستیار و مربی هوش مصنوعی"
+
+msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
+msgstr "AIA روشن می‌ماند، اما فقط پس از انتخاب یک ارائه‌دهنده در ابزارها > تنظیمات > دستیار هوش مصنوعی پاسخ خواهد داد."
+
+msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
+msgstr "کلید API تنظیم نشده است. به ابزارها > تنظیمات > دستیار هوش مصنوعی > تنظیم کلید API... بروید."
+
+msgid "API key:"
+msgstr "کلید API:"
+
+msgid "About Thonny AIA"
+msgstr "درباره Thonny AIA"
+
+msgid "Also include locally imported files"
+msgstr "فایل‌های محلیِ واردشده (import) هم فرستاده شوند"
+
+msgid "Answer style:"
+msgstr "سبک پاسخ:"
+
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
+msgstr "پاسخ‌ها از %s می‌آیند. به یک کلید API نیاز دارید: آن را از پیوند زیر بسازید یا از معلم خود بگیرید. همچنین می‌توانید بعداً آن را در ابزارها > تنظیمات > دستیار هوش مصنوعی وارد کنید."
+
+msgid "Automatically include current file as context"
+msgstr "فایل فعلی به‌طور خودکار به‌عنوان زمینه فرستاده شود"
+
+msgid "Cannot connect to the AI service. Check the internet connection."
+msgstr "اتصال به سرویس هوش مصنوعی ممکن نیست. اتصال اینترنت را بررسی کنید."
+
+msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
+msgstr "دسترسی به Ollama ممکن نیست. آیا در حال اجراست (ollama serve) و آیا آدرس میزبان درست است؟"
+
+msgid "Check again"
+msgstr "بررسی دوباره"
+
+msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
+msgstr "Claude Code (فرمان «claude») پیدا نشد. Claude Code را نصب کنید، یک بار «claude» را اجرا کنید و وارد حساب شوید، سپس Thonny را دوباره راه‌اندازی کنید."
+
+msgid "Context:"
+msgstr "زمینه:"
+
+msgid "Direct"
+msgstr "مستقیم"
+
+msgid "Enter your %s API key:"
+msgstr "کلید API مربوط به %s را وارد کنید:"
+
+msgid "Explanatory"
+msgstr "توضیحی"
+
+msgid "Get one at:"
+msgstr "دریافت از:"
+
+msgid "I will set it up later"
+msgstr "بعداً تنظیم می‌کنم"
+
+msgid "Initial settings:"
+msgstr "تنظیمات اولیه:"
+
+msgid "LLM Provider:"
+msgstr "ارائه‌دهندهٔ LLM:"
+
+msgid "Language:"
+msgstr "زبان:"
+
+msgid "Let's go!"
+msgstr "شروع کنیم!"
+
+msgid "Loading the local model..."
+msgstr "در حال بارگذاری مدل محلی..."
+
+msgid "Local model (Ollama, %s)"
+msgstr "مدل محلی (Ollama، %s)"
+
+msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
+msgstr "مدل «%s» پیدا نشد یا دیگر در دسترس نیست. مدل دیگری را در ابزارها > تنظیمات > دستیار هوش مصنوعی انتخاب کنید."
+
+msgid "Model:"
+msgstr "مدل:"
+
+msgid "Ollama is installed, but it is not running. Start it, then click Check again."
+msgstr "Ollama نصب شده است، اما در حال اجرا نیست. آن را اجرا کنید و سپس روی «بررسی دوباره» کلیک کنید."
+
+msgid "Ollama is running and the model %s is downloaded."
+msgstr "Ollama در حال اجراست و مدل %s دانلود شده است."
+
+msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
+msgstr "Ollama در حال اجراست، اما مدل هنوز دانلود نشده است. در خط فرمان «ollama pull %s» را اجرا کنید (۱۳ گیگابایت) و سپس روی «بررسی دوباره» کلیک کنید."
+
+msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
+msgstr "Ollama روی این رایانه پیدا نشد. آن را از پیوند زیر نصب کنید، سپس در خط فرمان «ollama pull %s» را اجرا کنید (۱۳ گیگابایت) و روی «بررسی دوباره» کلیک کنید."
+
+msgid "Raspberry Pi (simple)"
+msgstr "Raspberry Pi (ساده)"
+
+msgid "Remove key"
+msgstr "حذف کلید"
+
+msgid "Send"
+msgstr "ارسال"
+
+msgid "Set API Key..."
+msgstr "تنظیم کلید API..."
+
+msgid "Socratic"
+msgstr "سقراطی"
+
+msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
+msgstr "سقراطی = شما را به پاسخ راهنمایی می‌کند، توضیحی = توضیح می‌دهد و پاسخ می‌دهد، مستقیم = فقط پاسخ کوتاه"
+
+msgid "Standard"
+msgstr "استاندارد"
+
+msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
+msgstr "ارائه‌دهندهٔ «%s» به بستهٔ Python به نام «%s» نیاز دارد که موجود نیست. Thonny AIA را دوباره نصب کنید."
+
+msgid "The AI service did not answer in time. Try again."
+msgstr "سرویس هوش مصنوعی به‌موقع پاسخ نداد. دوباره تلاش کنید."
+
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
+msgstr "کلید API پذیرفته نشد. آن را در ابزارها > تنظیمات > دستیار هوش مصنوعی (تنظیم کلید API...) بررسی کنید."
+
+msgid "The key is stored in plain text in Thonny's configuration file."
+msgstr "کلید به‌صورت متن ساده در فایل پیکربندی Thonny ذخیره می‌شود."
+
+msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
+msgstr "مدل روی همین رایانه، بدون کلید API و بدون اینترنت اجرا می‌شود. حدود ۱۴ گیگابایت RAM آزاد لازم دارد؛ بدون کارت گرافیک قوی، هر پاسخ ۲۰ تا ۷۰ ثانیه طول می‌کشد."
+
+msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
+msgstr "Thonny همراه با دستیار هوش مصنوعی (AIA). سازندهٔ Thonny، Aivar Annamaa است."
+
+msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
+msgstr "تعداد درخواست‌ها بیش از حد است یا سهمیهٔ حساب تمام شده است. کمی صبر کنید و دوباره تلاش کنید."
+
+msgid "Type a question below (Enter sends, Shift+Enter = new line)."
+msgstr "پرسش خود را پایین بنویسید (Enter ارسال می‌کند، Shift+Enter = خط جدید)."
+
+msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
+msgstr "ارائه‌دهندهٔ ناشناخته «%s». یکی را در ابزارها > تنظیمات > دستیار هوش مصنوعی انتخاب کنید."
+
+msgid "Use AI-based AIA instead of the built-in Assistant"
+msgstr "استفاده از AIA مبتنی بر هوش مصنوعی به‌جای دستیار داخلی"
+
+msgid "Welcome to %s!"
+msgstr "به %s خوش آمدید!"
+
+msgid "You"
+msgstr "شما"
+
+msgid "You (auto)"
+msgstr "شما (خودکار)"
+
+msgid "cancelled"
+msgstr "لغو شد"
+
+msgid "error detected"
+msgstr "خطا پیدا شد"

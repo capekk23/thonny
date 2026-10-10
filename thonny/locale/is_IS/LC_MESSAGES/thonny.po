@@ -1995,3 +1995,173 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
+msgid "A key is already stored; entering a new one replaces it."
+msgstr "Lykill er þegar vistaður; ef þú slærð inn nýjan kemur hann í stað þess gamla."
+
+msgid "AI Assistant"
+msgstr "Gervigreindaraðstoð"
+
+msgid "AI assistant:"
+msgstr "Gervigreindaraðstoð:"
+
+msgid "AIA - %s API key"
+msgstr "AIA - API-lykill fyrir %s"
+
+msgid "AIA - AI Mentor Assistant"
+msgstr "AIA - Gervigreindarleiðbeinandi"
+
+msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
+msgstr "AIA er áfram virkt en svarar ekki fyrr en þú velur þjónustuaðila í Tól > Valkostir > Gervigreindaraðstoð."
+
+msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
+msgstr "API-lykill er ekki stilltur. Farðu í Tól > Valkostir > Gervigreindaraðstoð > Stilla API-lykil..."
+
+msgid "API key:"
+msgstr "API-lykill:"
+
+msgid "About Thonny AIA"
+msgstr "Um Thonny AIA"
+
+msgid "Also include locally imported files"
+msgstr "Taka líka með skrár sem eru fluttar inn staðbundið"
+
+msgid "Answer style:"
+msgstr "Svarstíll:"
+
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
+msgstr "Svörin koma frá %s. Þú þarft API-lykil: búðu hann til á tenglinum hér fyrir neðan eða fáðu hann hjá kennaranum þínum. Þú getur líka slegið hann inn seinna í Tól > Valkostir > Gervigreindaraðstoð."
+
+msgid "Automatically include current file as context"
+msgstr "Taka núverandi skrá sjálfkrafa með sem samhengi"
+
+msgid "Cannot connect to the AI service. Check the internet connection."
+msgstr "Ekki tókst að tengjast gervigreindarþjónustunni. Athugaðu nettenginguna."
+
+msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
+msgstr "Ekki næst í Ollama. Er það í gangi (ollama serve) og er hýsillinn réttur?"
+
+msgid "Check again"
+msgstr "Athuga aftur"
+
+msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
+msgstr "Claude Code (skipunin 'claude') fannst ekki. Settu upp Claude Code, skráðu þig inn með því að keyra 'claude' einu sinni og endurræstu svo Thonny."
+
+msgid "Context:"
+msgstr "Samhengi:"
+
+msgid "Direct"
+msgstr "Beint"
+
+msgid "Enter your %s API key:"
+msgstr "Sláðu inn API-lykilinn þinn fyrir %s:"
+
+msgid "Explanatory"
+msgstr "Útskýrandi"
+
+msgid "Get one at:"
+msgstr "Fáðu hann hér:"
+
+msgid "I will set it up later"
+msgstr "Ég stilli þetta seinna"
+
+msgid "Initial settings:"
+msgstr "Upphafsstillingar:"
+
+msgid "LLM Provider:"
+msgstr "LLM-þjónustuaðili:"
+
+msgid "Language:"
+msgstr "Tungumál:"
+
+msgid "Let's go!"
+msgstr "Byrjum!"
+
+msgid "Loading the local model..."
+msgstr "Hleð inn staðbundnu líkani..."
+
+msgid "Local model (Ollama, %s)"
+msgstr "Staðbundið líkan (Ollama, %s)"
+
+msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
+msgstr "Líkanið '%s' fannst ekki eða er ekki lengur í boði. Veldu annað líkan í Tól > Valkostir > Gervigreindaraðstoð."
+
+msgid "Model:"
+msgstr "Líkan:"
+
+msgid "Ollama is installed, but it is not running. Start it, then click Check again."
+msgstr "Ollama er uppsett en ekki í gangi. Ræstu það og smelltu svo á Athuga aftur."
+
+msgid "Ollama is running and the model %s is downloaded."
+msgstr "Ollama er í gangi og líkanið %s hefur verið sótt."
+
+msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
+msgstr "Ollama er í gangi en líkanið hefur ekki verið sótt enn. Keyrðu 'ollama pull %s' í skipanalínu (13 GB) og smelltu svo á Athuga aftur."
+
+msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
+msgstr "Ollama fannst ekki á þessari tölvu. Settu það upp af tenglinum hér fyrir neðan, keyrðu síðan 'ollama pull %s' í skipanalínu (13 GB) og smelltu á Athuga aftur."
+
+msgid "Raspberry Pi (simple)"
+msgstr "Raspberry Pi (einfalt)"
+
+msgid "Remove key"
+msgstr "Fjarlægja lykil"
+
+msgid "Send"
+msgstr "Senda"
+
+msgid "Set API Key..."
+msgstr "Stilla API-lykil..."
+
+msgid "Socratic"
+msgstr "Sókratískt"
+
+msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
+msgstr "Sókratískt = leiðir þig að svarinu, Útskýrandi = útskýrir og svarar, Beint = aðeins stutt svar"
+
+msgid "Standard"
+msgstr "Staðlað"
+
+msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
+msgstr "Þjónustuaðilinn '%s' þarf Python-pakkann '%s', sem vantar. Settu Thonny AIA upp aftur."
+
+msgid "The AI service did not answer in time. Try again."
+msgstr "Gervigreindarþjónustan svaraði ekki í tæka tíð. Reyndu aftur."
+
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
+msgstr "API-lyklinum var hafnað. Athugaðu hann í Tól > Valkostir > Gervigreindaraðstoð (Stilla API-lykil...)."
+
+msgid "The key is stored in plain text in Thonny's configuration file."
+msgstr "Lykillinn er vistaður sem venjulegur texti í stillingaskrá Thonny."
+
+msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
+msgstr "Líkanið keyrir á þessari tölvu, án API-lykils og án internets. Það þarf um 14 GB af lausu vinnsluminni (RAM); án öflugs skjákorts tekur svar 20-70 sekúndur."
+
+msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
+msgstr "Thonny með gervigreindaraðstoð (AIA). Aivar Annamaa bjó til Thonny."
+
+msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
+msgstr "Of margar fyrirspurnir eða kvóti aðgangsins er uppurinn. Bíddu aðeins og reyndu aftur."
+
+msgid "Type a question below (Enter sends, Shift+Enter = new line)."
+msgstr "Skrifaðu spurningu hér fyrir neðan (Enter sendir, Shift+Enter = ný lína)."
+
+msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
+msgstr "Óþekktur þjónustuaðili '%s'. Veldu einn í Tól > Valkostir > Gervigreindaraðstoð."
+
+msgid "Use AI-based AIA instead of the built-in Assistant"
+msgstr "Nota AIA með gervigreind í stað innbyggðrar Kóðarýni"
+
+msgid "Welcome to %s!"
+msgstr "Velkomin í %s!"
+
+msgid "You"
+msgstr "Þú"
+
+msgid "You (auto)"
+msgstr "Þú (sjálfvirkt)"
+
+msgid "cancelled"
+msgstr "hætt við"
+
+msgid "error detected"
+msgstr "villa fannst"

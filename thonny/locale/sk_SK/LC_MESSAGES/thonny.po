@@ -1990,3 +1990,173 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
+msgid "A key is already stored; entering a new one replaces it."
+msgstr "Kľúč je už uložený; nový ho nahradí."
+
+msgid "AI Assistant"
+msgstr "AI asistent"
+
+msgid "AI assistant:"
+msgstr "AI asistent:"
+
+msgid "AIA - %s API key"
+msgstr "AIA – API kľúč pre %s"
+
+msgid "AIA - AI Mentor Assistant"
+msgstr "AIA – AI asistent a mentor"
+
+msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
+msgstr "AIA zostane zapnutá, ale odpovedať začne, až v Nástroje > Možnosti > AI asistent vyberiete poskytovateľa."
+
+msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
+msgstr "API kľúč nie je nastavený. Zadajte ho v Nástroje > Možnosti > AI asistent > Nastaviť API kľúč..."
+
+msgid "API key:"
+msgstr "API kľúč:"
+
+msgid "About Thonny AIA"
+msgstr "O Thonny AIA"
+
+msgid "Also include locally imported files"
+msgstr "Posielať aj lokálne importované súbory"
+
+msgid "Answer style:"
+msgstr "Štýl odpovedí:"
+
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
+msgstr "Odpovede poskytuje %s. Potrebujete API kľúč: vytvorte si ho na odkaze nižšie, alebo vám ho dá vyučujúci. Zadať ho môžete aj neskôr v Nástroje > Možnosti > AI asistent."
+
+msgid "Automatically include current file as context"
+msgstr "Automaticky posielať aktuálny súbor ako kontext"
+
+msgid "Cannot connect to the AI service. Check the internet connection."
+msgstr "Nedá sa pripojiť k AI službe. Skontrolujte pripojenie k internetu."
+
+msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
+msgstr "Ollama nie je dostupná. Beží (ollama serve) a je adresa správna?"
+
+msgid "Check again"
+msgstr "Skontrolovať znova"
+
+msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
+msgstr "Claude Code (príkaz „claude“) sa nenašiel. Nainštalujte Claude Code, raz spustite „claude“ a prihláste sa, potom Thonny reštartujte."
+
+msgid "Context:"
+msgstr "Kontext:"
+
+msgid "Direct"
+msgstr "Priamy"
+
+msgid "Enter your %s API key:"
+msgstr "Zadajte API kľúč pre %s:"
+
+msgid "Explanatory"
+msgstr "Vysvetľujúci"
+
+msgid "Get one at:"
+msgstr "Získate ho na:"
+
+msgid "I will set it up later"
+msgstr "Nastavím neskôr"
+
+msgid "Initial settings:"
+msgstr "Úvodné nastavenie:"
+
+msgid "LLM Provider:"
+msgstr "Poskytovateľ AI:"
+
+msgid "Language:"
+msgstr "Jazyk:"
+
+msgid "Let's go!"
+msgstr "Poďme na to!"
+
+msgid "Loading the local model..."
+msgstr "Načítavam lokálny model..."
+
+msgid "Local model (Ollama, %s)"
+msgstr "Lokálny model (Ollama, %s)"
+
+msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
+msgstr "Model „%s“ sa nenašiel alebo už nie je dostupný. Vyberte iný v Nástroje > Možnosti > AI asistent."
+
+msgid "Model:"
+msgstr "Model:"
+
+msgid "Ollama is installed, but it is not running. Start it, then click Check again."
+msgstr "Ollama je nainštalovaná, ale nebeží. Spustite ju a kliknite na Skontrolovať znova."
+
+msgid "Ollama is running and the model %s is downloaded."
+msgstr "Ollama beží a model %s je stiahnutý."
+
+msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
+msgstr "Ollama beží, ale model ešte nie je stiahnutý. V príkazovom riadku spustite „ollama pull %s“ (13 GB) a kliknite na Skontrolovať znova."
+
+msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
+msgstr "Ollama sa na tomto počítači nenašla. Nainštalujte ju z odkazu nižšie, potom v príkazovom riadku spustite „ollama pull %s“ (13 GB) a kliknite na Skontrolovať znova."
+
+msgid "Raspberry Pi (simple)"
+msgstr "Raspberry Pi (jednoduché)"
+
+msgid "Remove key"
+msgstr "Odstrániť kľúč"
+
+msgid "Send"
+msgstr "Odoslať"
+
+msgid "Set API Key..."
+msgstr "Nastaviť API kľúč..."
+
+msgid "Socratic"
+msgstr "Sokratovský"
+
+msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
+msgstr "Sokratovský = dovedie vás k odpovedi, Vysvetľujúci = vysvetlí a odpovie, Priamy = len krátka odpoveď"
+
+msgid "Standard"
+msgstr "Štandardný"
+
+msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
+msgstr "Poskytovateľ %s potrebuje balík Pythonu „%s“, ktorý chýba. Preinštalujte Thonny AIA."
+
+msgid "The AI service did not answer in time. Try again."
+msgstr "AI služba neodpovedala včas. Skúste to znova."
+
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
+msgstr "API kľúč bol odmietnutý. Skontrolujte ho v Nástroje > Možnosti > AI asistent (Nastaviť API kľúč...)."
+
+msgid "The key is stored in plain text in Thonny's configuration file."
+msgstr "Kľúč sa ukladá ako obyčajný text do konfiguračného súboru Thonny."
+
+msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
+msgstr "Model beží na tomto počítači, bez API kľúča a bez internetu. Potrebuje asi 14 GB voľnej pamäte RAM; bez výkonnej grafickej karty trvá odpoveď 20–70 sekúnd."
+
+msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
+msgstr "Thonny s AI asistentom (AIA). Thonny vytvoril Aivar Annamaa."
+
+msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
+msgstr "Príliš veľa požiadaviek alebo je vyčerpaný limit účtu. Chvíľu počkajte a skúste to znova."
+
+msgid "Type a question below (Enter sends, Shift+Enter = new line)."
+msgstr "Napíšte otázku nižšie (Enter odošle, Shift+Enter = nový riadok)."
+
+msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
+msgstr "Neznámy poskytovateľ „%s“. Vyberte ho v Nástroje > Možnosti > AI asistent."
+
+msgid "Use AI-based AIA instead of the built-in Assistant"
+msgstr "Používať AI asistenta (AIA) namiesto vstavaného Asistenta"
+
+msgid "Welcome to %s!"
+msgstr "Vitajte v %s!"
+
+msgid "You"
+msgstr "Vy"
+
+msgid "You (auto)"
+msgstr "Vy (automaticky)"
+
+msgid "cancelled"
+msgstr "zrušené"
+
+msgid "error detected"
+msgstr "nájdená chyba"

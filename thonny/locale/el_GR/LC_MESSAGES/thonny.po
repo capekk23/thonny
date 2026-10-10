@@ -1986,3 +1986,173 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
+msgid "A key is already stored; entering a new one replaces it."
+msgstr "Υπάρχει ήδη αποθηκευμένο κλειδί· ένα νέο θα το αντικαταστήσει."
+
+msgid "AI Assistant"
+msgstr "Βοηθός ΤΝ"
+
+msgid "AI assistant:"
+msgstr "Βοηθός ΤΝ:"
+
+msgid "AIA - %s API key"
+msgstr "AIA – Κλειδί API για %s"
+
+msgid "AIA - AI Mentor Assistant"
+msgstr "AIA – Βοηθός-μέντορας ΤΝ"
+
+msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
+msgstr "Το AIA παραμένει ενεργό, αλλά θα απαντά μόνο αφού επιλέξετε πάροχο στο Εργαλεία > Επιλογές > Βοηθός ΤΝ."
+
+msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
+msgstr "Δεν έχει οριστεί κλειδί API. Μεταβείτε στο Εργαλεία > Επιλογές > Βοηθός ΤΝ > Ορισμός κλειδιού API..."
+
+msgid "API key:"
+msgstr "Κλειδί API:"
+
+msgid "About Thonny AIA"
+msgstr "Σχετικά με το Thonny AIA"
+
+msgid "Also include locally imported files"
+msgstr "Να συμπεριλαμβάνονται και τα τοπικά εισαγόμενα αρχεία"
+
+msgid "Answer style:"
+msgstr "Ύφος απαντήσεων:"
+
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
+msgstr "Οι απαντήσεις προέρχονται από %s. Χρειάζεστε κλειδί API: δημιουργήστε το από τον παρακάτω σύνδεσμο ή ζητήστε το από τον καθηγητή σας. Μπορείτε επίσης να το εισαγάγετε αργότερα στο Εργαλεία > Επιλογές > Βοηθός ΤΝ."
+
+msgid "Automatically include current file as context"
+msgstr "Αυτόματη συμπερίληψη του τρέχοντος αρχείου ως πλαίσιο"
+
+msgid "Cannot connect to the AI service. Check the internet connection."
+msgstr "Δεν είναι δυνατή η σύνδεση με την υπηρεσία ΤΝ. Ελέγξτε τη σύνδεση στο διαδίκτυο."
+
+msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
+msgstr "Το Ollama δεν είναι προσβάσιμο. Εκτελείται (ollama serve) και είναι σωστός ο κεντρικός υπολογιστής;"
+
+msgid "Check again"
+msgstr "Νέος έλεγχος"
+
+msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
+msgstr "Δεν βρέθηκε το Claude Code (η εντολή «claude»). Εγκαταστήστε το Claude Code, συνδεθείτε εκτελώντας μία φορά την εντολή «claude» και, στη συνέχεια, επανεκκινήστε το Thonny."
+
+msgid "Context:"
+msgstr "Πλαίσιο:"
+
+msgid "Direct"
+msgstr "Άμεσο"
+
+msgid "Enter your %s API key:"
+msgstr "Εισαγάγετε το κλειδί API για %s:"
+
+msgid "Explanatory"
+msgstr "Επεξηγηματικό"
+
+msgid "Get one at:"
+msgstr "Αποκτήστε το στο:"
+
+msgid "I will set it up later"
+msgstr "Θα το ρυθμίσω αργότερα"
+
+msgid "Initial settings:"
+msgstr "Αρχικές ρυθμίσεις:"
+
+msgid "LLM Provider:"
+msgstr "Πάροχος LLM:"
+
+msgid "Language:"
+msgstr "Γλώσσα:"
+
+msgid "Let's go!"
+msgstr "Πάμε!"
+
+msgid "Loading the local model..."
+msgstr "Φόρτωση του τοπικού μοντέλου..."
+
+msgid "Local model (Ollama, %s)"
+msgstr "Τοπικό μοντέλο (Ollama, %s)"
+
+msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
+msgstr "Το μοντέλο «%s» δεν βρέθηκε ή δεν είναι πλέον διαθέσιμο. Επιλέξτε άλλο μοντέλο στο Εργαλεία > Επιλογές > Βοηθός ΤΝ."
+
+msgid "Model:"
+msgstr "Μοντέλο:"
+
+msgid "Ollama is installed, but it is not running. Start it, then click Check again."
+msgstr "Το Ollama είναι εγκατεστημένο, αλλά δεν εκτελείται. Ξεκινήστε το και πατήστε «Νέος έλεγχος»."
+
+msgid "Ollama is running and the model %s is downloaded."
+msgstr "Το Ollama εκτελείται και το μοντέλο %s έχει ληφθεί."
+
+msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
+msgstr "Το Ollama εκτελείται, αλλά το μοντέλο δεν έχει ληφθεί ακόμη. Εκτελέστε «ollama pull %s» σε γραμμή εντολών (13 GB) και πατήστε «Νέος έλεγχος»."
+
+msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
+msgstr "Το Ollama δεν βρέθηκε σε αυτόν τον υπολογιστή. Εγκαταστήστε το από τον παρακάτω σύνδεσμο, εκτελέστε «ollama pull %s» σε γραμμή εντολών (13 GB) και πατήστε «Νέος έλεγχος»."
+
+msgid "Raspberry Pi (simple)"
+msgstr "Raspberry Pi (απλό)"
+
+msgid "Remove key"
+msgstr "Αφαίρεση κλειδιού"
+
+msgid "Send"
+msgstr "Αποστολή"
+
+msgid "Set API Key..."
+msgstr "Ορισμός κλειδιού API..."
+
+msgid "Socratic"
+msgstr "Σωκρατικό"
+
+msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
+msgstr "Σωκρατικό = σας οδηγεί στην απάντηση, Επεξηγηματικό = εξηγεί και απαντά, Άμεσο = μόνο σύντομη απάντηση"
+
+msgid "Standard"
+msgstr "Τυπικό"
+
+msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
+msgstr "Ο πάροχος «%s» χρειάζεται το πακέτο Python «%s», το οποίο λείπει. Εγκαταστήστε ξανά το Thonny AIA."
+
+msgid "The AI service did not answer in time. Try again."
+msgstr "Η υπηρεσία ΤΝ δεν απάντησε εγκαίρως. Δοκιμάστε ξανά."
+
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
+msgstr "Το κλειδί API απορρίφθηκε. Ελέγξτε το στο Εργαλεία > Επιλογές > Βοηθός ΤΝ (Ορισμός κλειδιού API...)."
+
+msgid "The key is stored in plain text in Thonny's configuration file."
+msgstr "Το κλειδί αποθηκεύεται ως απλό κείμενο στο αρχείο ρυθμίσεων του Thonny."
+
+msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
+msgstr "Το μοντέλο εκτελείται σε αυτόν τον υπολογιστή, χωρίς κλειδί API και χωρίς διαδίκτυο. Χρειάζεται περίπου 14 GB ελεύθερης μνήμης RAM· χωρίς ισχυρή κάρτα γραφικών, μια απάντηση διαρκεί 20–70 δευτερόλεπτα."
+
+msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
+msgstr "Το Thonny με τον Βοηθό ΤΝ (AIA). Το Thonny δημιουργήθηκε από τον Aivar Annamaa."
+
+msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
+msgstr "Πάρα πολλά αιτήματα ή εξαντλήθηκε το όριο του λογαριασμού. Περιμένετε λίγο και δοκιμάστε ξανά."
+
+msgid "Type a question below (Enter sends, Shift+Enter = new line)."
+msgstr "Πληκτρολογήστε μια ερώτηση παρακάτω (Enter = αποστολή, Shift+Enter = νέα γραμμή)."
+
+msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
+msgstr "Άγνωστος πάροχος «%s». Επιλέξτε έναν στο Εργαλεία > Επιλογές > Βοηθός ΤΝ."
+
+msgid "Use AI-based AIA instead of the built-in Assistant"
+msgstr "Χρήση του AIA με ΤΝ αντί του ενσωματωμένου Βοηθού"
+
+msgid "Welcome to %s!"
+msgstr "Καλώς ήρθατε στο %s!"
+
+msgid "You"
+msgstr "Εσείς"
+
+msgid "You (auto)"
+msgstr "Εσείς (αυτόματα)"
+
+msgid "cancelled"
+msgstr "ακυρώθηκε"
+
+msgid "error detected"
+msgstr "εντοπίστηκε σφάλμα"

@@ -1996,3 +1996,173 @@ msgstr "I pacchetti di questo interprete possono essere gestiti tramite il gesto
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr "Per installare un pacchetto con pip, è necessario usare un ambiente virtuale."
 
+msgid "A key is already stored; entering a new one replaces it."
+msgstr "Una chiave è già salvata; inserendone una nuova, verrà sostituita."
+
+msgid "AI Assistant"
+msgstr "Assistente IA"
+
+msgid "AI assistant:"
+msgstr "Assistente IA:"
+
+msgid "AIA - %s API key"
+msgstr "AIA - chiave API di %s"
+
+msgid "AIA - AI Mentor Assistant"
+msgstr "AIA - Assistente e mentore IA"
+
+msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
+msgstr "AIA resta attivo, ma risponderà solo dopo che avrai scelto un fornitore in Strumenti > Opzioni > Assistente IA."
+
+msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
+msgstr "Chiave API non impostata. Vai in Strumenti > Opzioni > Assistente IA > Imposta chiave API..."
+
+msgid "API key:"
+msgstr "Chiave API:"
+
+msgid "About Thonny AIA"
+msgstr "Informazioni su Thonny AIA"
+
+msgid "Also include locally imported files"
+msgstr "Includi anche i file importati localmente"
+
+msgid "Answer style:"
+msgstr "Stile di risposta:"
+
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
+msgstr "Le risposte arrivano da %s. Ti serve una chiave API: creala al link qui sotto oppure chiedila al tuo insegnante. Puoi inserirla anche più tardi in Strumenti > Opzioni > Assistente IA."
+
+msgid "Automatically include current file as context"
+msgstr "Includi automaticamente il file corrente come contesto"
+
+msgid "Cannot connect to the AI service. Check the internet connection."
+msgstr "Impossibile connettersi al servizio IA. Controlla la connessione a Internet."
+
+msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
+msgstr "Impossibile raggiungere Ollama. È in esecuzione (ollama serve) e l'host è corretto?"
+
+msgid "Check again"
+msgstr "Controlla di nuovo"
+
+msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
+msgstr "Claude Code (il comando 'claude') non è stato trovato. Installa Claude Code, accedi eseguendo 'claude' una volta, poi riavvia Thonny."
+
+msgid "Context:"
+msgstr "Contesto:"
+
+msgid "Direct"
+msgstr "Diretto"
+
+msgid "Enter your %s API key:"
+msgstr "Inserisci la tua chiave API di %s:"
+
+msgid "Explanatory"
+msgstr "Esplicativo"
+
+msgid "Get one at:"
+msgstr "Ottienila qui:"
+
+msgid "I will set it up later"
+msgstr "Lo configurerò più tardi"
+
+msgid "Initial settings:"
+msgstr "Impostazioni iniziali:"
+
+msgid "LLM Provider:"
+msgstr "Fornitore LLM:"
+
+msgid "Language:"
+msgstr "Lingua:"
+
+msgid "Let's go!"
+msgstr "Cominciamo!"
+
+msgid "Loading the local model..."
+msgstr "Caricamento del modello locale..."
+
+msgid "Local model (Ollama, %s)"
+msgstr "Modello locale (Ollama, %s)"
+
+msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
+msgstr "Il modello '%s' non è stato trovato o non è più disponibile. Scegli un altro modello in Strumenti > Opzioni > Assistente IA."
+
+msgid "Model:"
+msgstr "Modello:"
+
+msgid "Ollama is installed, but it is not running. Start it, then click Check again."
+msgstr "Ollama è installato, ma non è in esecuzione. Avvialo, poi fai clic su Controlla di nuovo."
+
+msgid "Ollama is running and the model %s is downloaded."
+msgstr "Ollama è in esecuzione e il modello %s è scaricato."
+
+msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
+msgstr "Ollama è in esecuzione, ma il modello non è ancora scaricato. Esegui 'ollama pull %s' nel prompt dei comandi (13 GB), poi fai clic su Controlla di nuovo."
+
+msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
+msgstr "Ollama non è stato trovato su questo computer. Installalo dal link qui sotto, poi esegui 'ollama pull %s' nel prompt dei comandi (13 GB) e fai clic su Controlla di nuovo."
+
+msgid "Raspberry Pi (simple)"
+msgstr "Raspberry Pi (semplice)"
+
+msgid "Remove key"
+msgstr "Rimuovi chiave"
+
+msgid "Send"
+msgstr "Invia"
+
+msgid "Set API Key..."
+msgstr "Imposta chiave API..."
+
+msgid "Socratic"
+msgstr "Socratico"
+
+msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
+msgstr "Socratico = ti guida verso la risposta, Esplicativo = spiega e risponde, Diretto = solo una risposta breve"
+
+msgid "Standard"
+msgstr "Standard"
+
+msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
+msgstr "Il fornitore '%s' richiede il pacchetto Python '%s', che manca. Reinstalla Thonny AIA."
+
+msgid "The AI service did not answer in time. Try again."
+msgstr "Il servizio IA non ha risposto in tempo. Riprova."
+
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
+msgstr "La chiave API è stata rifiutata. Controllala in Strumenti > Opzioni > Assistente IA (Imposta chiave API...)."
+
+msgid "The key is stored in plain text in Thonny's configuration file."
+msgstr "La chiave viene salvata in chiaro nel file di configurazione di Thonny."
+
+msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
+msgstr "Il modello gira su questo computer, senza chiave API e senza Internet. Richiede circa 14 GB di RAM libera; senza una scheda grafica potente una risposta richiede 20-70 secondi."
+
+msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
+msgstr "Thonny con l'Assistente IA (AIA). Thonny è stato creato da Aivar Annamaa."
+
+msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
+msgstr "Troppe richieste o la quota dell'account è esaurita. Attendi un momento e riprova."
+
+msgid "Type a question below (Enter sends, Shift+Enter = new line)."
+msgstr "Scrivi una domanda qui sotto (Invio per inviare, Maiusc+Invio = nuova riga)."
+
+msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
+msgstr "Fornitore '%s' sconosciuto. Scegline uno in Strumenti > Opzioni > Assistente IA."
+
+msgid "Use AI-based AIA instead of the built-in Assistant"
+msgstr "Usa AIA basato sull'IA invece dell'Assistente integrato"
+
+msgid "Welcome to %s!"
+msgstr "Ti diamo il benvenuto in %s!"
+
+msgid "You"
+msgstr "Tu"
+
+msgid "You (auto)"
+msgstr "Tu (auto)"
+
+msgid "cancelled"
+msgstr "annullato"
+
+msgid "error detected"
+msgstr "errore rilevato"

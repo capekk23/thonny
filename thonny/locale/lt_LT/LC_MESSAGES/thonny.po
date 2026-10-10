@@ -1977,3 +1977,173 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
+msgid "A key is already stored; entering a new one replaces it."
+msgstr "Raktas jau išsaugotas; įvedus naują, jis bus pakeistas."
+
+msgid "AI Assistant"
+msgstr "DI asistentas"
+
+msgid "AI assistant:"
+msgstr "DI asistentas:"
+
+msgid "AIA - %s API key"
+msgstr "AIA - %s API raktas"
+
+msgid "AIA - AI Mentor Assistant"
+msgstr "AIA - DI asistentas ir mentorius"
+
+msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
+msgstr "AIA lieka įjungtas, bet atsakinės tik tada, kai pasirinksite teikėją skiltyje Įrankiai > Nustatymai > DI asistentas."
+
+msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
+msgstr "API raktas nenustatytas. Eikite į Įrankiai > Nustatymai > DI asistentas > Nustatyti API raktą..."
+
+msgid "API key:"
+msgstr "API raktas:"
+
+msgid "About Thonny AIA"
+msgstr "Apie Thonny AIA"
+
+msgid "Also include locally imported files"
+msgstr "Įtraukti ir vietoje importuotus failus"
+
+msgid "Answer style:"
+msgstr "Atsakymo stilius:"
+
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
+msgstr "Atsakymus teikia %s. Jums reikia API rakto: susikurkite jį toliau pateiktoje nuorodoje arba gaukite iš mokytojo. Jį galite įvesti ir vėliau skiltyje Įrankiai > Nustatymai > DI asistentas."
+
+msgid "Automatically include current file as context"
+msgstr "Automatiškai įtraukti dabartinį failą kaip kontekstą"
+
+msgid "Cannot connect to the AI service. Check the internet connection."
+msgstr "Nepavyksta prisijungti prie DI paslaugos. Patikrinkite interneto ryšį."
+
+msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
+msgstr "Nepavyksta pasiekti Ollama. Ar ji paleista (ollama serve) ir ar teisingas serverio adresas?"
+
+msgid "Check again"
+msgstr "Tikrinti dar kartą"
+
+msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
+msgstr "Claude Code (komanda „claude“) nerasta. Įdiekite Claude Code, vieną kartą paleiskite „claude“ ir prisijunkite, tada iš naujo paleiskite Thonny."
+
+msgid "Context:"
+msgstr "Kontekstas:"
+
+msgid "Direct"
+msgstr "Tiesioginis"
+
+msgid "Enter your %s API key:"
+msgstr "Įveskite savo %s API raktą:"
+
+msgid "Explanatory"
+msgstr "Aiškinamasis"
+
+msgid "Get one at:"
+msgstr "Gaukite čia:"
+
+msgid "I will set it up later"
+msgstr "Nustatysiu vėliau"
+
+msgid "Initial settings:"
+msgstr "Pradiniai nustatymai:"
+
+msgid "LLM Provider:"
+msgstr "LLM teikėjas:"
+
+msgid "Language:"
+msgstr "Kalba:"
+
+msgid "Let's go!"
+msgstr "Pirmyn!"
+
+msgid "Loading the local model..."
+msgstr "Įkeliamas vietinis modelis..."
+
+msgid "Local model (Ollama, %s)"
+msgstr "Vietinis modelis (Ollama, %s)"
+
+msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
+msgstr "Modelis „%s“ nerastas arba nebepasiekiamas. Pasirinkite kitą modelį skiltyje Įrankiai > Nustatymai > DI asistentas."
+
+msgid "Model:"
+msgstr "Modelis:"
+
+msgid "Ollama is installed, but it is not running. Start it, then click Check again."
+msgstr "Ollama įdiegta, bet nepaleista. Paleiskite ją ir spustelėkite Tikrinti dar kartą."
+
+msgid "Ollama is running and the model %s is downloaded."
+msgstr "Ollama veikia, o modelis %s atsisiųstas."
+
+msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
+msgstr "Ollama veikia, bet modelis dar neatsisiųstas. Komandų eilutėje paleiskite „ollama pull %s“ (13 GB) ir spustelėkite Tikrinti dar kartą."
+
+msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
+msgstr "Šiame kompiuteryje Ollama nerasta. Įdiekite ją iš toliau pateiktos nuorodos, tada komandų eilutėje paleiskite „ollama pull %s“ (13 GB) ir spustelėkite Tikrinti dar kartą."
+
+msgid "Raspberry Pi (simple)"
+msgstr "Raspberry Pi (paprastas)"
+
+msgid "Remove key"
+msgstr "Pašalinti raktą"
+
+msgid "Send"
+msgstr "Siųsti"
+
+msgid "Set API Key..."
+msgstr "Nustatyti API raktą..."
+
+msgid "Socratic"
+msgstr "Sokratiškas"
+
+msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
+msgstr "Sokratiškas = veda jus prie atsakymo, Aiškinamasis = paaiškina ir atsako, Tiesioginis = tik trumpas atsakymas"
+
+msgid "Standard"
+msgstr "Standartinis"
+
+msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
+msgstr "Teikėjui „%s“ reikia Python paketo „%s“, kurio trūksta. Iš naujo įdiekite Thonny AIA."
+
+msgid "The AI service did not answer in time. Try again."
+msgstr "DI paslauga laiku neatsakė. Bandykite dar kartą."
+
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
+msgstr "API raktas atmestas. Patikrinkite jį skiltyje Įrankiai > Nustatymai > DI asistentas (Nustatyti API raktą...)."
+
+msgid "The key is stored in plain text in Thonny's configuration file."
+msgstr "Raktas saugomas paprastu tekstu Thonny konfigūracijos faile."
+
+msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
+msgstr "Modelis veikia šiame kompiuteryje, be API rakto ir be interneto. Jam reikia apie 14 GB laisvos RAM; be galingos vaizdo plokštės atsakymas užtrunka 20–70 sekundžių."
+
+msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
+msgstr "Thonny su DI asistentu (AIA). Thonny sukūrė Aivar Annamaa."
+
+msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
+msgstr "Per daug užklausų arba išnaudota paskyros kvota. Šiek tiek palaukite ir bandykite dar kartą."
+
+msgid "Type a question below (Enter sends, Shift+Enter = new line)."
+msgstr "Įrašykite klausimą žemiau (Enter išsiunčia, Shift+Enter = nauja eilutė)."
+
+msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
+msgstr "Nežinomas teikėjas „%s“. Pasirinkite jį skiltyje Įrankiai > Nustatymai > DI asistentas."
+
+msgid "Use AI-based AIA instead of the built-in Assistant"
+msgstr "Naudoti DI pagrįstą AIA vietoj įtaisyto Asistento"
+
+msgid "Welcome to %s!"
+msgstr "Sveiki atvykę į %s!"
+
+msgid "You"
+msgstr "Jūs"
+
+msgid "You (auto)"
+msgstr "Jūs (automatiškai)"
+
+msgid "cancelled"
+msgstr "atšaukta"
+
+msgid "error detected"
+msgstr "aptikta klaida"

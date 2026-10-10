@@ -1945,3 +1945,173 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
+msgid "A key is already stored; entering a new one replaces it."
+msgstr "ഒരു കീ ഇതിനകം സംഭരിച്ചിട്ടുണ്ട്; പുതിയത് നൽകിയാൽ അത് മാറ്റിസ്ഥാപിക്കപ്പെടും."
+
+msgid "AI Assistant"
+msgstr "AI സഹായി"
+
+msgid "AI assistant:"
+msgstr "AI സഹായി:"
+
+msgid "AIA - %s API key"
+msgstr "AIA - %s API കീ"
+
+msgid "AIA - AI Mentor Assistant"
+msgstr "AIA - AI മെന്റർ സഹായി"
+
+msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
+msgstr "AIA ഓണായിത്തന്നെ തുടരും, പക്ഷേ ഉപകരണങ്ങൾ > ഐച്ഛികങ്ങൾ > AI സഹായി എന്നതിൽ ഒരു ദാതാവിനെ തിരഞ്ഞെടുത്തതിനു ശേഷം മാത്രമേ അത് മറുപടി നൽകൂ."
+
+msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
+msgstr "API കീ സജ്ജമാക്കിയിട്ടില്ല. ഉപകരണങ്ങൾ > ഐച്ഛികങ്ങൾ > AI സഹായി > API കീ സജ്ജമാക്കുക... എന്നതിലേക്ക് പോകുക."
+
+msgid "API key:"
+msgstr "API കീ:"
+
+msgid "About Thonny AIA"
+msgstr "Thonny AIA-യെ കുറിച്ച്"
+
+msgid "Also include locally imported files"
+msgstr "പ്രാദേശികമായി ഇംപോർട്ട് ചെയ്ത ഫയലുകളും ഉൾപ്പെടുത്തുക"
+
+msgid "Answer style:"
+msgstr "മറുപടി ശൈലി:"
+
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
+msgstr "മറുപടികൾ %s-ൽ നിന്നാണ് വരുന്നത്. നിങ്ങൾക്ക് ഒരു API കീ വേണം: താഴെയുള്ള ലിങ്കിൽ അത് സൃഷ്ടിക്കുക, അല്ലെങ്കിൽ നിങ്ങളുടെ അധ്യാപകനിൽ നിന്ന് ഒന്ന് വാങ്ങുക. ഉപകരണങ്ങൾ > ഐച്ഛികങ്ങൾ > AI സഹായി എന്നതിൽ പിന്നീടും ഇത് നൽകാം."
+
+msgid "Automatically include current file as context"
+msgstr "നിലവിലെ ഫയൽ സന്ദർഭമായി സ്വയമേവ ഉൾപ്പെടുത്തുക"
+
+msgid "Cannot connect to the AI service. Check the internet connection."
+msgstr "AI സേവനവുമായി ബന്ധിപ്പിക്കാൻ കഴിയുന്നില്ല. ഇന്റർനെറ്റ് കണക്ഷൻ പരിശോധിക്കുക."
+
+msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
+msgstr "Ollama-യുമായി ബന്ധപ്പെടാൻ കഴിയുന്നില്ല. അത് പ്രവർത്തിക്കുന്നുണ്ടോ (ollama serve), ഹോസ്റ്റ് ശരിയാണോ?"
+
+msgid "Check again"
+msgstr "വീണ്ടും പരിശോധിക്കുക"
+
+msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
+msgstr "Claude Code ('claude' കമാൻഡ്) കണ്ടെത്തിയില്ല. Claude Code ഇൻസ്റ്റാൾ ചെയ്യുക, 'claude' ഒരിക്കൽ പ്രവർത്തിപ്പിച്ച് സൈൻ ഇൻ ചെയ്യുക, തുടർന്ന് Thonny പുനരാരംഭിക്കുക."
+
+msgid "Context:"
+msgstr "സന്ദർഭം:"
+
+msgid "Direct"
+msgstr "നേരിട്ടുള്ളത്"
+
+msgid "Enter your %s API key:"
+msgstr "നിങ്ങളുടെ %s API കീ നൽകുക:"
+
+msgid "Explanatory"
+msgstr "വിശദീകരിക്കുന്നത്"
+
+msgid "Get one at:"
+msgstr "ഇവിടെ നിന്ന് നേടുക:"
+
+msgid "I will set it up later"
+msgstr "ഞാൻ പിന്നീട് സജ്ജമാക്കാം"
+
+msgid "Initial settings:"
+msgstr "പ്രാരംഭ ക്രമീകരണങ്ങൾ:"
+
+msgid "LLM Provider:"
+msgstr "LLM ദാതാവ്:"
+
+msgid "Language:"
+msgstr "ഭാഷ:"
+
+msgid "Let's go!"
+msgstr "നമുക്ക് തുടങ്ങാം!"
+
+msgid "Loading the local model..."
+msgstr "പ്രാദേശിക മോഡൽ ലോഡ് ചെയ്യുന്നു..."
+
+msgid "Local model (Ollama, %s)"
+msgstr "പ്രാദേശിക മോഡൽ (Ollama, %s)"
+
+msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
+msgstr "'%s' എന്ന മോഡൽ കണ്ടെത്തിയില്ല അല്ലെങ്കിൽ ഇപ്പോൾ ലഭ്യമല്ല. ഉപകരണങ്ങൾ > ഐച്ഛികങ്ങൾ > AI സഹായി എന്നതിൽ മറ്റൊരു മോഡൽ തിരഞ്ഞെടുക്കുക."
+
+msgid "Model:"
+msgstr "മോഡൽ:"
+
+msgid "Ollama is installed, but it is not running. Start it, then click Check again."
+msgstr "Ollama ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ട്, പക്ഷേ പ്രവർത്തിക്കുന്നില്ല. അത് ആരംഭിക്കുക, തുടർന്ന് വീണ്ടും പരിശോധിക്കുക ക്ലിക്ക് ചെയ്യുക."
+
+msgid "Ollama is running and the model %s is downloaded."
+msgstr "Ollama പ്രവർത്തിക്കുന്നുണ്ട്, %s എന്ന മോഡൽ ഡൗൺലോഡ് ചെയ്തിട്ടുണ്ട്."
+
+msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
+msgstr "Ollama പ്രവർത്തിക്കുന്നുണ്ട്, പക്ഷേ മോഡൽ ഇതുവരെ ഡൗൺലോഡ് ചെയ്തിട്ടില്ല. കമാൻഡ് പ്രോംപ്റ്റിൽ 'ollama pull %s' പ്രവർത്തിപ്പിക്കുക (13 GB), തുടർന്ന് വീണ്ടും പരിശോധിക്കുക ക്ലിക്ക് ചെയ്യുക."
+
+msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
+msgstr "ഈ കമ്പ്യൂട്ടറിൽ Ollama കണ്ടെത്തിയില്ല. താഴെയുള്ള ലിങ്കിൽ നിന്ന് അത് ഇൻസ്റ്റാൾ ചെയ്യുക, തുടർന്ന് കമാൻഡ് പ്രോംപ്റ്റിൽ 'ollama pull %s' പ്രവർത്തിപ്പിക്കുക (13 GB), ശേഷം വീണ്ടും പരിശോധിക്കുക ക്ലിക്ക് ചെയ്യുക."
+
+msgid "Raspberry Pi (simple)"
+msgstr "Raspberry Pi (ലളിതം)"
+
+msgid "Remove key"
+msgstr "കീ നീക്കം ചെയ്യുക"
+
+msgid "Send"
+msgstr "അയയ്ക്കുക"
+
+msgid "Set API Key..."
+msgstr "API കീ സജ്ജമാക്കുക..."
+
+msgid "Socratic"
+msgstr "സോക്രട്ടിക്"
+
+msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
+msgstr "സോക്രട്ടിക് = ഉത്തരത്തിലേക്ക് നിങ്ങളെ നയിക്കുന്നു, വിശദീകരിക്കുന്നത് = വിശദീകരിച്ച് ഉത്തരം നൽകുന്നു, നേരിട്ടുള്ളത് = ചെറിയ ഉത്തരം മാത്രം"
+
+msgid "Standard"
+msgstr "സാധാരണ"
+
+msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
+msgstr "'%s' ദാതാവിന് '%s' എന്ന Python പാക്കേജ് ആവശ്യമാണ്, അത് ലഭ്യമല്ല. Thonny AIA വീണ്ടും ഇൻസ്റ്റാൾ ചെയ്യുക."
+
+msgid "The AI service did not answer in time. Try again."
+msgstr "AI സേവനം സമയത്ത് മറുപടി നൽകിയില്ല. വീണ്ടും ശ്രമിക്കുക."
+
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
+msgstr "API കീ നിരസിക്കപ്പെട്ടു. ഉപകരണങ്ങൾ > ഐച്ഛികങ്ങൾ > AI സഹായി (API കീ സജ്ജമാക്കുക...) എന്നതിൽ അത് പരിശോധിക്കുക."
+
+msgid "The key is stored in plain text in Thonny's configuration file."
+msgstr "Thonny-യുടെ കോൺഫിഗറേഷൻ ഫയലിൽ കീ സാധാരണ ടെക്സ്റ്റായി സംഭരിക്കുന്നു."
+
+msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
+msgstr "മോഡൽ ഈ കമ്പ്യൂട്ടറിൽ തന്നെ പ്രവർത്തിക്കുന്നു, API കീയും ഇന്റർനെറ്റും ഇല്ലാതെ. ഇതിന് ഏകദേശം 14 GB സ്വതന്ത്ര RAM വേണം; ശക്തമായ ഗ്രാഫിക്സ് കാർഡ് ഇല്ലെങ്കിൽ ഒരു മറുപടിക്ക് 20-70 സെക്കൻഡ് എടുക്കും."
+
+msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
+msgstr "AI സഹായിയോടു കൂടിയ Thonny (AIA). Thonny നിർമ്മിച്ചത് Aivar Annamaa ആണ്."
+
+msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
+msgstr "അഭ്യർത്ഥനകൾ വളരെ കൂടുതലാണ്, അല്ലെങ്കിൽ അക്കൗണ്ടിന്റെ പരിധി തീർന്നു. അൽപ്പസമയം കാത്തിരുന്ന് വീണ്ടും ശ്രമിക്കുക."
+
+msgid "Type a question below (Enter sends, Shift+Enter = new line)."
+msgstr "താഴെ ഒരു ചോദ്യം ടൈപ്പ് ചെയ്യുക (Enter അയയ്ക്കും, Shift+Enter = പുതിയ വരി)."
+
+msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
+msgstr "അജ്ഞാത ദാതാവ് '%s'. ഉപകരണങ്ങൾ > ഐച്ഛികങ്ങൾ > AI സഹായി എന്നതിൽ ഒന്ന് തിരഞ്ഞെടുക്കുക."
+
+msgid "Use AI-based AIA instead of the built-in Assistant"
+msgstr "ബിൽറ്റ്-ഇൻ സഹായിക്ക് പകരം AI അടിസ്ഥാനമാക്കിയ AIA ഉപയോഗിക്കുക"
+
+msgid "Welcome to %s!"
+msgstr "%s-ലേക്ക് സ്വാഗതം!"
+
+msgid "You"
+msgstr "നിങ്ങൾ"
+
+msgid "You (auto)"
+msgstr "നിങ്ങൾ (സ്വയമേവ)"
+
+msgid "cancelled"
+msgstr "റദ്ദാക്കി"
+
+msgid "error detected"
+msgstr "പിശക് കണ്ടെത്തി"

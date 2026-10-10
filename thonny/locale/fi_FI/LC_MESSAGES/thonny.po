@@ -1973,3 +1973,173 @@ msgstr ""
 msgid "For pip-installing a package, you need to use a virtual environment."
 msgstr ""
 
+msgid "A key is already stored; entering a new one replaces it."
+msgstr "Avain on jo tallennettu; uuden syöttäminen korvaa sen."
+
+msgid "AI Assistant"
+msgstr "Tekoälyavustaja"
+
+msgid "AI assistant:"
+msgstr "Tekoälyavustaja:"
+
+msgid "AIA - %s API key"
+msgstr "AIA – API-avain: %s"
+
+msgid "AIA - AI Mentor Assistant"
+msgstr "AIA – tekoälymentori ja -avustaja"
+
+msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
+msgstr "AIA pysyy päällä, mutta vastaa vasta, kun valitset palveluntarjoajan kohdassa Työkalut > Asetukset > Tekoälyavustaja."
+
+msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
+msgstr "API-avainta ei ole asetettu. Siirry kohtaan Työkalut > Asetukset > Tekoälyavustaja > Aseta API-avain..."
+
+msgid "API key:"
+msgstr "API-avain:"
+
+msgid "About Thonny AIA"
+msgstr "Tietoja Thonny AIA:sta"
+
+msgid "Also include locally imported files"
+msgstr "Liitä mukaan myös paikallisesti tuodut tiedostot"
+
+msgid "Answer style:"
+msgstr "Vastaustyyli:"
+
+msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
+msgstr "Vastaukset tulevat palvelusta %s. Tarvitset API-avaimen: luo se alla olevasta linkistä tai pyydä opettajaltasi. Voit syöttää sen myös myöhemmin kohdassa Työkalut > Asetukset > Tekoälyavustaja."
+
+msgid "Automatically include current file as context"
+msgstr "Liitä nykyinen tiedosto automaattisesti kontekstiksi"
+
+msgid "Cannot connect to the AI service. Check the internet connection."
+msgstr "Tekoälypalveluun ei saada yhteyttä. Tarkista internetyhteys."
+
+msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
+msgstr "Ollamaan ei saada yhteyttä. Onko se käynnissä (ollama serve) ja onko palvelimen osoite oikein?"
+
+msgid "Check again"
+msgstr "Tarkista uudelleen"
+
+msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
+msgstr "Claude Codea (komentoa ”claude”) ei löytynyt. Asenna Claude Code, kirjaudu sisään suorittamalla ”claude” kerran ja käynnistä sitten Thonny uudelleen."
+
+msgid "Context:"
+msgstr "Konteksti:"
+
+msgid "Direct"
+msgstr "Suora"
+
+msgid "Enter your %s API key:"
+msgstr "Syötä API-avaimesi palveluun %s:"
+
+msgid "Explanatory"
+msgstr "Selittävä"
+
+msgid "Get one at:"
+msgstr "Hanki osoitteesta:"
+
+msgid "I will set it up later"
+msgstr "Määritän myöhemmin"
+
+msgid "Initial settings:"
+msgstr "Alkuasetukset:"
+
+msgid "LLM Provider:"
+msgstr "LLM-palveluntarjoaja:"
+
+msgid "Language:"
+msgstr "Kieli:"
+
+msgid "Let's go!"
+msgstr "Aloitetaan!"
+
+msgid "Loading the local model..."
+msgstr "Ladataan paikallista mallia..."
+
+msgid "Local model (Ollama, %s)"
+msgstr "Paikallinen malli (Ollama, %s)"
+
+msgid "Model '%s' was not found or is no longer available. Choose another model in Tools > Options > AI Assistant."
+msgstr "Mallia ”%s” ei löytynyt tai se ei ole enää saatavilla. Valitse toinen malli kohdassa Työkalut > Asetukset > Tekoälyavustaja."
+
+msgid "Model:"
+msgstr "Malli:"
+
+msgid "Ollama is installed, but it is not running. Start it, then click Check again."
+msgstr "Ollama on asennettu, mutta se ei ole käynnissä. Käynnistä se ja napsauta sitten ”Tarkista uudelleen”."
+
+msgid "Ollama is running and the model %s is downloaded."
+msgstr "Ollama on käynnissä ja malli %s on ladattu."
+
+msgid "Ollama is running, but the model is not downloaded yet. Run 'ollama pull %s' in a command prompt (13 GB), then click Check again."
+msgstr "Ollama on käynnissä, mutta mallia ei ole vielä ladattu. Suorita komentorivillä ”ollama pull %s” (13 Gt) ja napsauta sitten ”Tarkista uudelleen”."
+
+msgid "Ollama was not found on this computer. Install it from the link below, then run 'ollama pull %s' in a command prompt (13 GB) and click Check again."
+msgstr "Ollamaa ei löytynyt tältä tietokoneelta. Asenna se alla olevasta linkistä, suorita sitten komentorivillä ”ollama pull %s” (13 Gt) ja napsauta ”Tarkista uudelleen”."
+
+msgid "Raspberry Pi (simple)"
+msgstr "Raspberry Pi (yksinkertainen)"
+
+msgid "Remove key"
+msgstr "Poista avain"
+
+msgid "Send"
+msgstr "Lähetä"
+
+msgid "Set API Key..."
+msgstr "Aseta API-avain..."
+
+msgid "Socratic"
+msgstr "Sokraattinen"
+
+msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
+msgstr "Sokraattinen = ohjaa sinut vastaukseen, Selittävä = selittää ja vastaa, Suora = vain lyhyt vastaus"
+
+msgid "Standard"
+msgstr "Vakio"
+
+msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
+msgstr "Palveluntarjoaja ”%s” tarvitsee Python-paketin ”%s”, joka puuttuu. Asenna Thonny AIA uudelleen."
+
+msgid "The AI service did not answer in time. Try again."
+msgstr "Tekoälypalvelu ei vastannut ajoissa. Yritä uudelleen."
+
+msgid "The API key was rejected. Check it in Tools > Options > AI Assistant (Set API Key...)."
+msgstr "API-avain hylättiin. Tarkista se kohdassa Työkalut > Asetukset > Tekoälyavustaja (Aseta API-avain...)."
+
+msgid "The key is stored in plain text in Thonny's configuration file."
+msgstr "Avain tallennetaan tavallisena tekstinä Thonnyn asetustiedostoon."
+
+msgid "The model runs on this computer, without an API key and without the internet. It needs about 14 GB of free RAM; without a strong graphics card an answer takes 20-70 seconds."
+msgstr "Malli toimii tällä tietokoneella ilman API-avainta ja ilman internetiä. Se tarvitsee noin 14 Gt vapaata RAM-muistia; ilman tehokasta näytönohjainta vastaus kestää 20–70 sekuntia."
+
+msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
+msgstr "Thonny ja tekoälyavustaja (AIA). Thonnyn on tehnyt Aivar Annamaa."
+
+msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
+msgstr "Liikaa pyyntöjä tai tilin käyttöraja on täynnä. Odota hetki ja yritä uudelleen."
+
+msgid "Type a question below (Enter sends, Shift+Enter = new line)."
+msgstr "Kirjoita kysymys alle (Enter lähettää, Shift+Enter = uusi rivi)."
+
+msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
+msgstr "Tuntematon palveluntarjoaja ”%s”. Valitse se kohdassa Työkalut > Asetukset > Tekoälyavustaja."
+
+msgid "Use AI-based AIA instead of the built-in Assistant"
+msgstr "Käytä tekoälypohjaista AIA:ta sisäänrakennetun Avustajan sijaan"
+
+msgid "Welcome to %s!"
+msgstr "%s – tervetuloa!"
+
+msgid "You"
+msgstr "Sinä"
+
+msgid "You (auto)"
+msgstr "Sinä (automaattinen)"
+
+msgid "cancelled"
+msgstr "peruttu"
+
+msgid "error detected"
+msgstr "virhe havaittu"
