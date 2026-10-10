@@ -2124,14 +2124,8 @@ msgstr "Sveiki atvykę į %s!"
 msgid "You"
 msgstr "Jūs"
 
-msgid "You (auto)"
-msgstr "Jūs (automatiškai)"
-
 msgid "cancelled"
 msgstr "atšaukta"
-
-msgid "error detected"
-msgstr "aptikta klaida"
 
 msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
 msgstr "Ollama neįdiegta. Įdiekite ją iš toliau pateiktos nuorodos ir atsisiųskite modelį: „ollama pull %s“ (13 GB)."
@@ -2151,11 +2145,3 @@ msgstr "Veikia be interneto, reikia apie 14 GB laisvos RAM, o be galingos vaizdo
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "DI teikėjas dar nepasirinktas. Pasirinkite jį skiltyje Įrankiai > Nustatymai > DI asistentas."
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "I ran my code and got this error: %s"
-msgstr "Paleidau savo kodą ir gavau šią klaidą: %s"
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "(line %s)"
-msgstr "(eilutė %s)"

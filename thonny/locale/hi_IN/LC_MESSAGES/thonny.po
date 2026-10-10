@@ -2134,14 +2134,8 @@ msgstr "%s में आपका स्वागत है!"
 msgid "You"
 msgstr "आप"
 
-msgid "You (auto)"
-msgstr "आप (ऑटो)"
-
 msgid "cancelled"
 msgstr "कैंसिल किया गया"
-
-msgid "error detected"
-msgstr "त्रुटि मिली"
 
 msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
 msgstr "Ollama इंस्टॉल नहीं है। इसे नीचे दिए लिंक से इंस्टॉल करें, फिर मॉडल डाउनलोड करें: 'ollama pull %s' (13 GB)।"
@@ -2161,11 +2155,3 @@ msgstr "यह बिना इंटरनेट के चलता है, �
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "अभी तक कोई AI प्रोवाइडर नहीं चुना गया है। टूल्स > ऑप्शनस > AI असिस्टेंट में कोई प्रोवाइडर चुनें।"
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "I ran my code and got this error: %s"
-msgstr "मैंने अपना कोड रन किया और मुझे यह एरर मिला: %s"
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "(line %s)"
-msgstr "(लाइन %s)"

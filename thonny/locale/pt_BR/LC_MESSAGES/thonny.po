@@ -2141,14 +2141,8 @@ msgstr "Bem-vindo ao %s!"
 msgid "You"
 msgstr "Você"
 
-msgid "You (auto)"
-msgstr "Você (automático)"
-
 msgid "cancelled"
 msgstr "cancelado"
-
-msgid "error detected"
-msgstr "erro detectado"
 
 msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
 msgstr "O Ollama não está instalado. Instale-o pelo link abaixo e depois baixe o modelo: 'ollama pull %s' (13 GB)."
@@ -2168,11 +2162,3 @@ msgstr "Funciona offline, precisa de cerca de 14 GB de RAM livre e, sem uma plac
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Nenhum provedor de IA foi escolhido ainda. Escolha um em Ferramentas > Opções > Assistente de IA."
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "I ran my code and got this error: %s"
-msgstr "Executei meu código e recebi este erro: %s"
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "(line %s)"
-msgstr "(linha %s)"

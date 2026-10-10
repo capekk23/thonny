@@ -2122,14 +2122,8 @@ msgstr "%s에 오신 것을 환영합니다!"
 msgid "You"
 msgstr "나"
 
-msgid "You (auto)"
-msgstr "나 (자동)"
-
 msgid "cancelled"
 msgstr "취소됨"
-
-msgid "error detected"
-msgstr "오류 감지됨"
 
 msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
 msgstr "Ollama가 설치되어 있지 않습니다. 아래 링크에서 설치한 다음 모델을 다운로드하세요: 'ollama pull %s' (13 GB)."
@@ -2149,11 +2143,3 @@ msgstr "인터넷 없이 실행되며 약 14 GB의 여유 RAM이 필요하고, �
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "아직 AI 제공자가 선택되지 않았습니다. 도구 > 옵션 > AI 도우미에서 선택하세요."
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "I ran my code and got this error: %s"
-msgstr "코드를 실행했더니 다음 오류가 발생했습니다: %s"
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "(line %s)"
-msgstr "(%s번째 줄)"

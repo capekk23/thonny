@@ -2132,14 +2132,8 @@ msgstr "Selamat datang di %s!"
 msgid "You"
 msgstr "Anda"
 
-msgid "You (auto)"
-msgstr "Anda (otomatis)"
-
 msgid "cancelled"
 msgstr "dibatalkan"
-
-msgid "error detected"
-msgstr "kesalahan terdeteksi"
 
 msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
 msgstr "Ollama belum terinstal. Instal dari tautan di bawah, lalu unduh modelnya: 'ollama pull %s' (13 GB)."
@@ -2159,11 +2153,3 @@ msgstr "Berjalan tanpa internet, memerlukan sekitar 14 GB RAM kosong dan, tanpa 
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Belum ada penyedia AI yang dipilih. Pilih penyedia di Tools > Options > Asisten AI."
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "I ran my code and got this error: %s"
-msgstr "Saya menjalankan kode saya dan mendapatkan error ini: %s"
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "(line %s)"
-msgstr "(baris %s)"

@@ -2092,14 +2092,8 @@ msgstr "%s-ലേക്ക് സ്വാഗതം!"
 msgid "You"
 msgstr "നിങ്ങൾ"
 
-msgid "You (auto)"
-msgstr "നിങ്ങൾ (സ്വയമേവ)"
-
 msgid "cancelled"
 msgstr "റദ്ദാക്കി"
-
-msgid "error detected"
-msgstr "പിശക് കണ്ടെത്തി"
 
 msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
 msgstr "Ollama ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ല. താഴെയുള്ള ലിങ്കിൽ നിന്ന് അത് ഇൻസ്റ്റാൾ ചെയ്യുക, തുടർന്ന് മോഡൽ ഡൗൺലോഡ് ചെയ്യുക: 'ollama pull %s' (13 GB)."
@@ -2119,11 +2113,3 @@ msgstr "ഇന്റർനെറ്റ് ഇല്ലാതെ പ്രവർ�
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "ഇതുവരെ AI ദാതാവിനെ തിരഞ്ഞെടുത്തിട്ടില്ല. ഉപകരണങ്ങൾ > ഐച്ഛികങ്ങൾ > AI സഹായി എന്നതിൽ ഒന്ന് തിരഞ്ഞെടുക്കുക."
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "I ran my code and got this error: %s"
-msgstr "ഞാൻ എന്റെ കോഡ് പ്രവർത്തിപ്പിച്ചപ്പോൾ ഈ പിശക് ലഭിച്ചു: %s"
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "(line %s)"
-msgstr "(വരി %s)"

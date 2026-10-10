@@ -167,3 +167,44 @@ def test_local_loading_note_disappears_on_cancel(panel_view):
     view._on_cancel()
 
     assert view._messages_text.deleted == [("2.5", "2.31")] and view._loading is False
+
+
+def test_error_is_reported_to_the_model_but_not_shown(panel_view, fake_thonny):
+    """After a runtime error AIA opens the conversation itself (Jakub 2026-10-10)."""
+
+    class _Shell:
+        class text:
+            @staticmethod
+            def get(start, end):
+                assert (start, end) == ("command_io_start", "output_end")
+                return "1\n2\n3\nTraceback (most recent call last):\nIndexError: list index out of range\n"
+
+    fake_thonny.options["aia.enabled"] = True
+    fake_thonny.show_view = lambda view_id, set_focus=True: None
+    fake_thonny.get_view = lambda view_id: _Shell()
+    view = make_view(panel_view)
+    view.after = lambda ms, func: func()
+    requests = []
+    view._request_llm_response = lambda: requests.append(list(view._conversation))
+
+    error = {"type_name": "IndexError", "message": "list index out of range", "lineno": 3}
+    view.handle_toplevel_response({"user_exception": error})
+
+    assert view.inserted == []  # nothing from the student in the panel
+    (msg,) = requests[0]
+    assert msg["role"] == "user" and msg["hidden"] is True
+    assert "IndexError: list index out of range (line 3)" in msg["content"]
+    assert "1\n2\n3\nTraceback" in msg["content"]  # the whole Shell output of the run
+    assert "did not type this" in msg["content"]
+
+
+def test_shell_output_is_limited_to_its_end(panel_view, fake_thonny):
+    from thonny.plugins.aia import _common
+
+    class _Shell:
+        class text:
+            get = staticmethod(lambda start, end: "x" * 10000 + "END")
+
+    fake_thonny.get_view = lambda view_id: _Shell()
+    out = _common.last_run_shell_output(fake_thonny)
+    assert out.endswith("END") and len(out) <= _common.SHELL_OUTPUT_LIMIT + 4

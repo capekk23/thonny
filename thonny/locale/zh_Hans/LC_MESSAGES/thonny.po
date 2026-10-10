@@ -2125,14 +2125,8 @@ msgstr "欢迎使用 %s！"
 msgid "You"
 msgstr "你"
 
-msgid "You (auto)"
-msgstr "你（自动）"
-
 msgid "cancelled"
 msgstr "已取消"
-
-msgid "error detected"
-msgstr "检测到错误"
 
 msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
 msgstr "Ollama 未安装。请通过下方链接安装，然后下载模型：“ollama pull %s”（13 GB）。"
@@ -2152,11 +2146,3 @@ msgstr "离线运行，需要约 14 GB 可用内存；如果没有性能强的�
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "尚未选择 AI 提供商。请在“工具 > 选项 > AI 助手”中选择一个。"
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "I ran my code and got this error: %s"
-msgstr "我运行了代码，出现了这个错误：%s"
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "(line %s)"
-msgstr "（第 %s 行）"

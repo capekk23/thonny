@@ -20,8 +20,10 @@ from thonny.languages import tr
 
 from thonny.plugins.aia._common import (
     AIACore,
+    error_report,
     friendly_error,
     interface_language,
+    last_run_shell_output,
     prepare_messages,
     snapshot_editor_context,
 )
@@ -30,6 +32,7 @@ from thonny.plugins.aia.prompts import build_system_prompt
 logger = logging.getLogger(__name__)
 
 POLL_MS = 50
+SHELL_SETTLE_MS = 300  # the Shell draws the output of a run a little after the run ends
 
 # Shown until the first token of a local model arrives: on CPU, loading gpt-oss:20b took
 # 35-55 s and processing the prompt up to 40 s more, with nothing in the panel (Jakub 2026-10-10)
@@ -123,7 +126,6 @@ class AIAView(ttk.Frame):
             "system_text", foreground="#7f8c8d", font=("TkDefaultFont", 8)
         )
         self._messages_text.tag_configure("error_text", foreground="#c0392b")
-        self._messages_text.tag_configure("auto_label", foreground="#7f8c8d")
         self._messages_text.tag_configure("loading_text", foreground="#7f8c8d")
 
     def _show_welcome(self):
@@ -162,26 +164,19 @@ class AIAView(ttk.Frame):
         if not error_info:
             return
 
-        type_name = error_info.get("type_name", "Error")
-        message = error_info.get("message", "")
-        lineno = error_info.get("lineno")
-
-        # In the interface language: the student sees it in the panel, and an English report
-        # made the model answer in English although Thonny was set to Czech (Jakub 2026-10-10)
-        parts = [tr("I ran my code and got this error: %s") % f"{type_name}: {message}"]
-        if lineno:
-            parts.append(tr("(line %s)") % lineno)
-
-        traceback_text = error_info.get("traceback_text", "")
-        if traceback_text:
-            parts.append(f"\n{traceback_text.strip()}")
-
         # A new error supersedes an answer that is still streaming
         self._abort_current_request()
-        self._add_user_message("\n".join(parts), auto=True)
-        self._request_llm_response()
-
         get_workbench().show_view("AIAView", set_focus=False)
+        # The Shell may still be drawing the output of the run
+        self.after(SHELL_SETTLE_MS, lambda: self._react_to_error(error_info))
+
+    def _react_to_error(self, error_info):
+        """AIA opens the conversation itself: the report goes to the model, not to the panel."""
+        if self._cancel_event is not None:
+            return  # the student sent a message in the meantime
+        report = error_report(error_info, last_run_shell_output(get_workbench()))
+        self._conversation.append({"role": "user", "content": report, "hidden": True})
+        self._request_llm_response()
 
     def _on_enter(self, event):
         """Enter sends the message, Shift+Enter inserts a newline."""
@@ -197,7 +192,7 @@ class AIAView(ttk.Frame):
         if not text:
             return
         self._input_text.delete("1.0", "end")
-        self._add_user_message(text, auto=False)
+        self._add_user_message(text)
         self._request_llm_response()
 
     def _on_cancel(self):
@@ -208,11 +203,9 @@ class AIAView(ttk.Frame):
 
     # --- Conversation management ---
 
-    def _add_user_message(self, text: str, auto: bool = False):
+    def _add_user_message(self, text: str):
         self._conversation.append({"role": "user", "content": text})
-        self._insert("\n" + (tr("You (auto)") if auto else tr("You")) + ": ", "user_header")
-        if auto:
-            self._insert("(" + tr("error detected") + ") ", "auto_label")
+        self._insert("\n" + tr("You") + ": ", "user_header")
         self._insert(f"{text}\n")
 
     def _abort_current_request(self):

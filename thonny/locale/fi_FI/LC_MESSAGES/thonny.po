@@ -2120,14 +2120,8 @@ msgstr "%s – tervetuloa!"
 msgid "You"
 msgstr "Sinä"
 
-msgid "You (auto)"
-msgstr "Sinä (automaattinen)"
-
 msgid "cancelled"
 msgstr "peruttu"
-
-msgid "error detected"
-msgstr "virhe havaittu"
 
 msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
 msgstr "Ollamaa ei ole asennettu. Asenna se alla olevasta linkistä ja lataa sitten malli: ”ollama pull %s” (13 Gt)."
@@ -2147,11 +2141,3 @@ msgstr "Toimii ilman internetiä, tarvitsee noin 14 Gt vapaata RAM-muistia ja va
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Tekoälypalveluntarjoajaa ei ole vielä valittu. Valitse se kohdassa Työkalut > Asetukset > Tekoälyavustaja."
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "I ran my code and got this error: %s"
-msgstr "Suoritin koodini ja sain tämän virheen: %s"
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "(line %s)"
-msgstr "(rivi %s)"

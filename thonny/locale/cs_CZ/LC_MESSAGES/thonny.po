@@ -2384,16 +2384,8 @@ msgid "Type a question below (Enter sends, Shift+Enter = new line)."
 msgstr "Napište dotaz dolů (Enter odešle, Shift+Enter = nový řádek)."
 
 #: thonny/plugins/aia/_panel/view.py:208
-msgid "You (auto)"
-msgstr "Vy (automaticky)"
-
-#: thonny/plugins/aia/_panel/view.py:208
 msgid "You"
 msgstr "Vy"
-
-#: thonny/plugins/aia/_panel/view.py:210
-msgid "error detected"
-msgstr "nalezena chyba"
 
 #: thonny/plugins/aia/_panel/view.py:219 thonny/plugins/aia/_panel/view.py:276
 msgid "cancelled"
@@ -2442,11 +2434,3 @@ msgstr "Běží bez internetu, potřebuje asi 14 GB volné paměti RAM a bez vý
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Zatím není vybraný poskytovatel AI. Vyberte ho v Nástroje > Volby > AI asistent."
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "I ran my code and got this error: %s"
-msgstr "Po spuštění kódu se objevila tato chyba: %s"
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "(line %s)"
-msgstr "(řádek %s)"

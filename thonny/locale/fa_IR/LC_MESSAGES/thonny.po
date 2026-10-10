@@ -2135,14 +2135,8 @@ msgstr "به %s خوش آمدید!"
 msgid "You"
 msgstr "شما"
 
-msgid "You (auto)"
-msgstr "شما (خودکار)"
-
 msgid "cancelled"
 msgstr "لغو شد"
-
-msgid "error detected"
-msgstr "خطا پیدا شد"
 
 msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
 msgstr "Ollama نصب نشده است. آن را از پیوند زیر نصب کنید، سپس مدل را دانلود کنید: «ollama pull %s» (۱۳ گیگابایت)."
@@ -2162,11 +2156,3 @@ msgstr "بدون اینترنت کار می‌کند، حدود ۱۴ گیگاب�
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "هنوز هیچ ارائه‌دهندهٔ هوش مصنوعی انتخاب نشده است. یکی را در ابزارها > تنظیمات > دستیار هوش مصنوعی انتخاب کنید."
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "I ran my code and got this error: %s"
-msgstr "کدم را اجرا کردم و این خطا را گرفتم: %s"
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "(line %s)"
-msgstr "(خط %s)"

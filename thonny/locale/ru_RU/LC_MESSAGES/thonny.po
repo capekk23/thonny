@@ -2142,14 +2142,8 @@ msgstr "Добро пожаловать в %s!"
 msgid "You"
 msgstr "Вы"
 
-msgid "You (auto)"
-msgstr "Вы (авто)"
-
 msgid "cancelled"
 msgstr "отменено"
-
-msgid "error detected"
-msgstr "обнаружена ошибка"
 
 msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
 msgstr "Ollama не установлена. Установите её по ссылке ниже и загрузите модель: «ollama pull %s» (13 ГБ)."
@@ -2169,11 +2163,3 @@ msgstr "Работает без интернета, требует около 14
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Провайдер ИИ ещё не выбран. Выберите провайдера в Инструменты > Параметры > ИИ-ассистент."
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "I ran my code and got this error: %s"
-msgstr "После запуска кода появилась эта ошибка: %s"
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "(line %s)"
-msgstr "(строка %s)"

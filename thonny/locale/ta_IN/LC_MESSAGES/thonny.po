@@ -2135,14 +2135,8 @@ msgstr "%s-க்கு வரவேற்கிறோம்!"
 msgid "You"
 msgstr "நீங்கள்"
 
-msgid "You (auto)"
-msgstr "நீங்கள் (தானியங்கு)"
-
 msgid "cancelled"
 msgstr "ரத்து செய்யப்பட்டது"
-
-msgid "error detected"
-msgstr "பிழை கண்டறியப்பட்டது"
 
 msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
 msgstr "Ollama நிறுவப்படவில்லை. கீழே உள்ள இணைப்பிலிருந்து அதை நிறுவி, பின்னர் மாதிரியைப் பதிவிறக்கவும்: 'ollama pull %s' (13 GB)."
@@ -2162,11 +2156,3 @@ msgstr "இணையம் இல்லாமல் இயங்குகிற�
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "இன்னும் AI வழங்குநர் தேர்ந்தெடுக்கப்படவில்லை. கருவிகள் > விருப்பங்கள் > AI உதவியாளர் என்பதில் ஒன்றைத் தேர்ந்தெடுக்கவும்."
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "I ran my code and got this error: %s"
-msgstr "நான் என் குறியீட்டை இயக்கியபோது இந்தப் பிழை வந்தது: %s"
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "(line %s)"
-msgstr "(வரி %s)"

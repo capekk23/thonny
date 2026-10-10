@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-10-10 20:40+0200\n"
+"POT-Creation-Date: 2026-10-10 21:12+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -276,7 +276,7 @@ msgstr ""
 
 #: thonny/base_file_browser.py:1382 thonny/config_ui.py:42 thonny/export.py:28
 #: thonny/plugins/aia/_panel/api_key_dialog.py:69
-#: thonny/plugins/aia/_panel/view.py:109
+#: thonny/plugins/aia/_panel/view.py:112
 #: thonny/plugins/backend_config_page.py:288 thonny/plugins/pip_gui.py:1406
 #: thonny/ui_utils.py:161 thonny/ui_utils.py:1749 thonny/ui_utils.py:1835
 #: thonny/workdlg.py:205 thonny/workdlg.py:259
@@ -708,7 +708,7 @@ msgstr ""
 msgid "Plotter"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:113 thonny/shell.py:319
+#: thonny/plugins/aia/_panel/view.py:116 thonny/shell.py:319
 msgid "Clear"
 msgstr ""
 
@@ -1985,55 +1985,55 @@ msgid ""
 "Reinstall Thonny AIA."
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:229
+#: thonny/plugins/aia/_common.py:268
 msgid ""
 "The API key was rejected. Check it in Tools > Options > AI Assistant (Set"
 " API Key...)."
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:234
+#: thonny/plugins/aia/_common.py:273
 #, python-format
 msgid ""
 "Model '%s' was not found or is no longer available. Choose another model "
 "in Tools > Options > AI Assistant."
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:239
+#: thonny/plugins/aia/_common.py:278
 msgid ""
 "Too many requests or the account's quota is used up. Wait a moment and "
 "try again."
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:242
+#: thonny/plugins/aia/_common.py:281
 msgid "The AI service did not answer in time. Try again."
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:246
+#: thonny/plugins/aia/_common.py:285
 msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:248
+#: thonny/plugins/aia/_common.py:287
 msgid "Cannot connect to the AI service. Check the internet connection."
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:358
+#: thonny/plugins/aia/_common.py:397
 msgid ""
 "No AI provider is chosen yet. Choose one in Tools > Options > AI "
 "Assistant."
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:365
+#: thonny/plugins/aia/_common.py:404
 msgid ""
 "Claude Code (the 'claude' command) was not found. Install Claude Code, "
 "sign in by running 'claude' once, then restart Thonny."
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:369
+#: thonny/plugins/aia/_common.py:408
 #, python-format
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:373
+#: thonny/plugins/aia/_common.py:412
 msgid "API key not set. Go to Tools > Options > AI Assistant > Set API Key..."
 msgstr ""
 
@@ -2306,45 +2306,27 @@ msgstr ""
 msgid "Also include locally imported files"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:37
+#: thonny/plugins/aia/_panel/view.py:40
 msgid "Loading the local model..."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:105
+#: thonny/plugins/aia/_panel/view.py:108
 msgid "Send"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:131
+#: thonny/plugins/aia/_panel/view.py:133
 msgid "AIA - AI Mentor Assistant"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:133
+#: thonny/plugins/aia/_panel/view.py:135
 msgid "Type a question below (Enter sends, Shift+Enter = new line)."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:171
-#, python-format
-msgid "I ran my code and got this error: %s"
-msgstr ""
-
-#: thonny/plugins/aia/_panel/view.py:173
-#, python-format
-msgid "(line %s)"
-msgstr ""
-
-#: thonny/plugins/aia/_panel/view.py:213
-msgid "You (auto)"
-msgstr ""
-
-#: thonny/plugins/aia/_panel/view.py:213
+#: thonny/plugins/aia/_panel/view.py:208
 msgid "You"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:215
-msgid "error detected"
-msgstr ""
-
-#: thonny/plugins/aia/_panel/view.py:224 thonny/plugins/aia/_panel/view.py:283
+#: thonny/plugins/aia/_panel/view.py:217 thonny/plugins/aia/_panel/view.py:276
 msgid "cancelled"
 msgstr ""
 

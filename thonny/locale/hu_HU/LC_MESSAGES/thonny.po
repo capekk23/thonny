@@ -2120,14 +2120,8 @@ msgstr "Üdvözli a(z) %s!"
 msgid "You"
 msgstr "Ön"
 
-msgid "You (auto)"
-msgstr "Ön (automatikus)"
-
 msgid "cancelled"
 msgstr "megszakítva"
-
-msgid "error detected"
-msgstr "hiba észlelve"
 
 msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
 msgstr "Az Ollama nincs telepítve. Telepítse az alábbi linkről, majd töltse le a modellt: „ollama pull %s” (13 GB)."
@@ -2147,11 +2141,3 @@ msgstr "Internet nélkül fut, körülbelül 14 GB szabad RAM kell hozzá, és e
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Még nincs kiválasztva MI-szolgáltató. Válasszon egyet az Eszközök > Beállítások > MI-asszisztens menüpontban."
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "I ran my code and got this error: %s"
-msgstr "Futtattam a kódomat, és ezt a hibát kaptam: %s"
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "(line %s)"
-msgstr "(%s. sor)"

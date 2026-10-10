@@ -2135,14 +2135,8 @@ msgstr "Velkommen til %s!"
 msgid "You"
 msgstr "Du"
 
-msgid "You (auto)"
-msgstr "Du (auto)"
-
 msgid "cancelled"
 msgstr "avbrutt"
-
-msgid "error detected"
-msgstr "feil oppdaget"
 
 msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
 msgstr "Ollama er ikke installert. Installer den fra lenken nedenfor, og last deretter ned modellen: «ollama pull %s» (13 GB)."
@@ -2162,11 +2156,3 @@ msgstr "Kjører uten internett, trenger omtrent 14 GB ledig RAM og svarer på 20
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Ingen KI-leverandør er valgt ennå. Velg en under Verktøy > Alternativer > KI-assistent."
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "I ran my code and got this error: %s"
-msgstr "Jeg kjørte koden min og fikk denne feilen: %s"
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "(line %s)"
-msgstr "(linje %s)"

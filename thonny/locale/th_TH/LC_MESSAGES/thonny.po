@@ -2142,14 +2142,8 @@ msgstr "ยินดีต้อนรับสู่ %s!"
 msgid "You"
 msgstr "คุณ"
 
-msgid "You (auto)"
-msgstr "คุณ (อัตโนมัติ)"
-
 msgid "cancelled"
 msgstr "ยกเลิกแล้ว"
-
-msgid "error detected"
-msgstr "พบข้อผิดพลาด"
 
 msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
 msgstr "ยังไม่ได้ติดตั้ง Ollama ติดตั้งจากลิงก์ด้านล่าง แล้วดาวน์โหลดโมเดล: 'ollama pull %s' (13 GB)"
@@ -2169,11 +2163,3 @@ msgstr "ทำงานแบบออฟไลน์ ต้องมี RAM ว
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "ยังไม่ได้เลือกผู้ให้บริการ AI เลือกผู้ให้บริการใน เครื่องมือ > ตัวเลือก > ผู้ช่วย AI"
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "I ran my code and got this error: %s"
-msgstr "เรียกใช้โค้ดแล้วเกิดข้อผิดพลาดนี้: %s"
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "(line %s)"
-msgstr "(บรรทัดที่ %s)"

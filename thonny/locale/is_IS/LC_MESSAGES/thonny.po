@@ -2142,14 +2142,8 @@ msgstr "Velkomin í %s!"
 msgid "You"
 msgstr "Þú"
 
-msgid "You (auto)"
-msgstr "Þú (sjálfvirkt)"
-
 msgid "cancelled"
 msgstr "hætt við"
-
-msgid "error detected"
-msgstr "villa fannst"
 
 msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
 msgstr "Ollama er ekki uppsett. Settu það upp af tenglinum hér fyrir neðan og sæktu svo líkanið: 'ollama pull %s' (13 GB)."
@@ -2169,11 +2163,3 @@ msgstr "Keyrir án internets, þarf um 14 GB af lausu vinnsluminni (RAM) og svar
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Enginn gervigreindarþjónustuaðili hefur verið valinn enn. Veldu einn í Tól > Valkostir > Gervigreindaraðstoð."
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "I ran my code and got this error: %s"
-msgstr "Ég keyrði kóðann minn og fékk þessa villu: %s"
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "(line %s)"
-msgstr "(lína %s)"

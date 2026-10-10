@@ -2137,14 +2137,8 @@ msgstr "Vitajte v %s!"
 msgid "You"
 msgstr "Vy"
 
-msgid "You (auto)"
-msgstr "Vy (automaticky)"
-
 msgid "cancelled"
 msgstr "zrušené"
-
-msgid "error detected"
-msgstr "nájdená chyba"
 
 msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
 msgstr "Ollama nie je nainštalovaná. Nainštalujte ju z odkazu nižšie a stiahnite model: „ollama pull %s“ (13 GB)."
@@ -2164,11 +2158,3 @@ msgstr "Beží bez internetu, potrebuje asi 14 GB voľnej pamäte RAM a bez výk
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Zatiaľ nie je vybraný poskytovateľ AI. Vyberte ho v Nástroje > Možnosti > AI asistent."
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "I ran my code and got this error: %s"
-msgstr "Po spustení kódu sa objavila táto chyba: %s"
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "(line %s)"
-msgstr "(riadok %s)"

@@ -183,6 +183,45 @@ def snapshot_editor_context(wb) -> Dict[str, Optional[object]]:
     return result
 
 
+# Enough for the output before the error and a long traceback, cheap for every provider
+SHELL_OUTPUT_LIMIT = 4000
+
+
+def last_run_shell_output(wb) -> str:
+    """What the Shell shows for the last run: program output and traceback. UI thread only."""
+    try:
+        text = wb.get_view("ShellView").text
+        output = text.get("command_io_start", "output_end").strip()
+    except Exception:
+        logger.debug("Could not read the Shell output", exc_info=True)
+        return ""
+    if len(output) > SHELL_OUTPUT_LIMIT:
+        output = "...\n" + output[-SHELL_OUTPUT_LIMIT:]
+    return output
+
+
+def error_report(error_info: Dict, shell_output: str = "") -> str:
+    """The first message after a runtime error, sent to the model but not shown in the panel.
+
+    The student wrote nothing, so AIA opens the conversation itself, reacting to what the
+    student sees in the Shell (Jakub 2026-10-10: instead of the student "reporting" the error,
+    the assistant "reacts" to what is happening). In English: the system prompt says in which
+    language to answer.
+    """
+    type_name = error_info.get("type_name", "Error")
+    message = error_info.get("message", "")
+    lineno = error_info.get("lineno")
+    error = f"{type_name}: {message}" + (f" (line {lineno})" if lineno else "")
+    shown = shell_output or (error_info.get("traceback_text") or "").strip() or error
+    return (
+        "[Automatic notice from Thonny - the student did not type this.] The student ran their "
+        f"program and it stopped with {error}. This is what the student sees in Thonny's Shell:\n"
+        f"```\n{shown}\n```\n"
+        "Open the conversation yourself: react to what the student is looking at, in the way your "
+        "instructions describe. Do not say that the student reported, sent or asked anything."
+    )
+
+
 def prepare_messages(
     messages: List[Dict[str, str]], max_messages: int = MAX_HISTORY_MESSAGES
 ) -> List[Dict[str, str]]:

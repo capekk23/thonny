@@ -2133,14 +2133,8 @@ msgstr "Բարի գալուստ %s։"
 msgid "You"
 msgstr "Դուք"
 
-msgid "You (auto)"
-msgstr "Դուք (ավտոմատ)"
-
 msgid "cancelled"
 msgstr "չեղարկված"
-
-msgid "error detected"
-msgstr "սխալ է հայտնաբերվել"
 
 msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
 msgstr "Ollama֊ն տեղադրված չէ։ Տեղադրեք այն ստորև նշված հղումով, ապա ներբեռնեք մոդելը՝ «ollama pull %s» (13 GB)։"
@@ -2160,11 +2154,3 @@ msgstr "Աշխատում է առանց համացանցի, պահանջում է
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "ԱԲ մատակարար դեռ ընտրված չէ։ Ընտրեք մատակարար Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "I ran my code and got this error: %s"
-msgstr "Գործարկեցի իմ կոդը և ստացա այս սխալը՝ %s"
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "(line %s)"
-msgstr "(տող %s)"

@@ -2142,14 +2142,8 @@ msgstr "Ongi etorri: %s!"
 msgid "You"
 msgstr "Zu"
 
-msgid "You (auto)"
-msgstr "Zu (automatikoa)"
-
 msgid "cancelled"
 msgstr "bertan behera utzita"
-
-msgid "error detected"
-msgstr "errorea detektatu da"
 
 msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
 msgstr "Ollama ez dago instalatuta. Instalatu beheko estekatik eta deskargatu eredua: «ollama pull %s» (13 GB)."
@@ -2169,11 +2163,3 @@ msgstr "Internetik gabe dabil, 14 GB inguru RAM libre behar ditu eta, txartel gr
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Oraindik ez da AA hornitzailerik hautatu. Hautatu bat hemen: Tresnak > Aukerak > AA laguntzailea."
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "I ran my code and got this error: %s"
-msgstr "Nire kodea exekutatu dut eta errore hau jaso dut: %s"
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "(line %s)"
-msgstr "(%s. lerroa)"

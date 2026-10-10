@@ -2145,14 +2145,8 @@ msgstr "%s – tere tulemast!"
 msgid "You"
 msgstr "Sina"
 
-msgid "You (auto)"
-msgstr "Sina (automaatne)"
-
 msgid "cancelled"
 msgstr "tühistatud"
-
-msgid "error detected"
-msgstr "leiti viga"
 
 msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
 msgstr "Ollama pole paigaldatud. Paigalda see allolevalt lingilt ja laadi siis mudel alla: „ollama pull %s“ (13 GB)."
@@ -2172,11 +2166,3 @@ msgstr "Töötab ilma internetita, vajab umbes 14 GB vaba RAM-i ja vastab ilma v
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "AI-teenusepakkujat pole veel valitud. Vali see menüüs Tööriistad > Seaded > AI-assistent."
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "I ran my code and got this error: %s"
-msgstr "Käivitasin oma koodi ja sain selle vea: %s"
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "(line %s)"
-msgstr "(rida %s)"

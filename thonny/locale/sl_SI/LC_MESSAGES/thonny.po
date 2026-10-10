@@ -2156,14 +2156,8 @@ msgstr "Dobrodošli v %s!"
 msgid "You"
 msgstr "Vi"
 
-msgid "You (auto)"
-msgstr "Vi (samodejno)"
-
 msgid "cancelled"
 msgstr "preklicano"
-
-msgid "error detected"
-msgstr "zaznana napaka"
 
 msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
 msgstr "Ollama ni nameščena. Namestite jo s spodnje povezave in nato prenesite model: »ollama pull %s« (13 GB)."
@@ -2183,11 +2177,3 @@ msgstr "Deluje brez interneta, potrebuje približno 14 GB prostega pomnilnika RA
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
 msgstr "Ponudnik AI še ni izbran. Izberite ga v Orodja > Opcije > Pomočnik AI."
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "I ran my code and got this error: %s"
-msgstr "Po zagonu kode se je pojavila ta napaka: %s"
-
-#: thonny/plugins/aia/_panel/view.py
-msgid "(line %s)"
-msgstr "(vrstica %s)"
