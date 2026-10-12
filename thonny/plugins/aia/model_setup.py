@@ -8,11 +8,13 @@ The measurement is not a guarantee under future load or for longer conversations
 import ctypes
 from dataclasses import dataclass
 import http.client
+import io
 import json
 import os
 from pathlib import Path
 import platform
 import re
+import select
 import shutil
 import socket
 import subprocess
@@ -125,20 +127,60 @@ def find_ollama():
     return next((str(p) for p in paths if p and os.path.isfile(p) and os.access(p, os.X_OK)), None)
 
 
+class _CancellableReader(io.RawIOBase):
+    """Poll readiness so cancellation does not depend on cross-thread shutdown."""
+
+    def __init__(self, sock, cancel_event):
+        self.sock = sock.dup()
+        self.cancel_event = cancel_event
+
+    def readable(self):
+        return True
+
+    def readinto(self, buffer):
+        timeout = self.sock.gettimeout()
+        deadline = None if timeout is None else time.monotonic() + timeout
+        while True:
+            if self.cancel_event.is_set():
+                raise SetupCancelled()
+            remaining = None if deadline is None else deadline - time.monotonic()
+            if remaining is not None and remaining <= 0:
+                raise TimeoutError("Ollama response timed out")
+            ready, _, _ = select.select(
+                [self.sock], [], [], min(0.1, remaining) if remaining is not None else 0.1
+            )
+            if ready:
+                if self.cancel_event.is_set():
+                    raise SetupCancelled()
+                return self.sock.recv_into(buffer)
+
+    def close(self):
+        self.sock.close()
+        super().close()
+
+
+class _ResponseSocket:
+    def __init__(self, sock, cancel_event):
+        self.sock = sock
+        self.cancel_event = cancel_event
+
+    def makefile(self, mode):
+        return io.BufferedReader(_CancellableReader(self.sock, self.cancel_event))
+
+
 class LocalAPI:
     """Fixed loopback endpoint: never provision a remote OLLAMA_HOST by accident."""
 
     def __init__(self, cancel_event):
         self.cancel_event = cancel_event
         self._connection = None
-        self._socket = None
         self._lock = threading.Lock()
 
     def cancel(self):
         self.cancel_event.set()
         with self._lock:
             conn = self._connection
-            sock = self._socket or (conn.sock if conn else None)
+            sock = conn.sock if conn else None
         if sock:
             try:
                 sock.shutdown(socket.SHUT_RDWR)
@@ -149,8 +191,12 @@ class LocalAPI:
         if self.cancel_event.is_set():
             raise SetupCancelled()
         conn = http.client.HTTPConnection("127.0.0.1", 11434, timeout=timeout)
+        conn.response_class = lambda sock, *args, **kwargs: http.client.HTTPResponse(
+            _ResponseSocket(sock, self.cancel_event), *args, **kwargs
+        )
         with self._lock:
             self._connection = conn
+        response = None
         try:
             conn.request(
                 "POST" if body is not None else "GET",
@@ -158,11 +204,6 @@ class LocalAPI:
                 json.dumps(body) if body is not None else None,
                 {"Content-Type": "application/json"},
             )
-            # getresponse() can close conn.sock for an EOF-delimited response.
-            # Keep an independent handle, including on Windows, so shutdown can
-            # always interrupt the response reader rather than a closed socket.
-            with self._lock:
-                self._socket = conn.sock.dup() if conn.sock else None
             if self.cancel_event.is_set():
                 raise SetupCancelled()
             response = conn.getresponse()
@@ -190,13 +231,12 @@ class LocalAPI:
                 raise SetupCancelled() from None
             raise
         finally:
+            if response is not None:
+                response.close()
             conn.close()
             with self._lock:
                 if self._connection is conn:
                     self._connection = None
-                    if self._socket:
-                        self._socket.close()
-                    self._socket = None
 
     def get(self, path, timeout=3):
         return next(self.request(path, timeout=timeout))

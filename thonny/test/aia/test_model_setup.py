@@ -257,6 +257,9 @@ def test_http_api_is_fixed_to_loopback_and_surfaces_stream_errors(monkeypatch):
             class Response:
                 status = 200
 
+                def close(self):
+                    pass
+
                 def __iter__(self):
                     yield b'{"error":"download failed"}\n'
 
@@ -311,7 +314,8 @@ def test_first_run_setup_saves_model_without_workbench(monkeypatch, hardware):
     assert window.ok
 
 
-def test_api_cancellation_interrupts_a_stalled_stream(monkeypatch):
+@pytest.mark.parametrize("framing", ["eof", "length", "chunked"])
+def test_api_cancellation_interrupts_a_stalled_stream(monkeypatch, framing):
     import http.server
 
     ready = threading.Event()
@@ -325,6 +329,10 @@ def test_api_cancellation_interrupts_a_stalled_stream(monkeypatch):
             self.rfile.read(int(self.headers["Content-Length"]))
             self.send_response(200)
             self.send_header("Content-Type", "application/x-ndjson")
+            if framing == "length":
+                self.send_header("Content-Length", "100")
+            elif framing == "chunked":
+                self.send_header("Transfer-Encoding", "chunked")
             self.end_headers()
             self.wfile.flush()
             ready.set()
@@ -350,6 +358,9 @@ def test_api_cancellation_interrupts_a_stalled_stream(monkeypatch):
     )
     api = m.LocalAPI(threading.Event())
     outcomes = []
+    # Windows may leave an already-blocked recv waiting after shutdown. Verify
+    # cancellation independently of that OS-specific interruption mechanism.
+    monkeypatch.setattr(m.socket.socket, "shutdown", lambda *args: None)
 
     def read():
         try:
@@ -370,3 +381,16 @@ def test_api_cancellation_interrupts_a_stalled_stream(monkeypatch):
         release.set()
         server.shutdown()
         server.server_close()
+
+
+def test_cancellable_reader_preserves_inactivity_timeout():
+    left, right = m.socket.socketpair()
+    left.settimeout(0.1)
+    reader = m._CancellableReader(left, threading.Event())
+    try:
+        with pytest.raises(TimeoutError, match="timed out"):
+            reader.readinto(bytearray(16))
+    finally:
+        reader.close()
+        left.close()
+        right.close()
