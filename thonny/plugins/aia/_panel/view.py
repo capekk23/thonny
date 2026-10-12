@@ -17,6 +17,7 @@ from typing import Dict, List, Optional
 
 from thonny import get_workbench
 from thonny.languages import tr
+from thonny.ui_utils import scrollbar_style
 
 from thonny.plugins.aia._common import (
     AIACore,
@@ -48,6 +49,80 @@ def local_working_text() -> str:
     return tr("The local model is preparing the answer...")
 
 
+# Background and text of the panel follow Thonny's UI theme, like the built-in Assistant it
+# replaces and the other side views (Jakub 2026-10-12, cortex-zamestnani#71: in a dark theme
+# the panel stayed white). The labels take colours of the syntax theme, which are readable on
+# its background - unless the syntax theme is light and the UI dark or the other way round
+# (Thonny does not tie them); then FALLBACK_COLORS of the panel's lightness apply.
+TAG_COLORS = {  # tag -> syntax theme tag whose foreground it takes
+    "user_header": "builtin",
+    "assistant_header": "string",
+    "system_text": "comment",
+    "loading_text": "comment",
+    "error_text": "stderr",  # the colour of an error in the Shell
+}
+FALLBACK_COLORS = {
+    # light: the colours of beta 1
+    False: {
+        "user_header": "#1a5276",
+        "assistant_header": "#117a65",
+        "system_text": "#7f8c8d",
+        "loading_text": "#7f8c8d",
+        "error_text": "#c0392b",
+    },
+    # dark: those of the Default Dark syntax theme
+    True: {
+        "user_header": "#A9B1C9",
+        "assistant_header": "#8DC76F",
+        "system_text": "#D4D44E",
+        "loading_text": "#D4D44E",
+        "error_text": "#EB5B83",
+    },
+}
+BORDER_MIX = 0.4  # border of the input: this much of the text colour, the rest background
+
+
+def is_dark(color, rgb) -> bool:
+    r, g, b = (c / 65535 for c in rgb(color))
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b < 0.5
+
+
+def theme_colors(ui_text, syntax_options, rgb):
+    """Colours of the panel.
+
+    ``ui_text`` holds background and foreground of the UI theme's "Text" style (empty if
+    the theme has none), ``syntax_options`` the syntax theme (theme tag -> Tk options),
+    ``rgb`` turns a Tk colour into (r, g, b) in 0-65535, like ``winfo_rgb``. Returns the
+    options of both Text widgets, the foreground of each tag and the border colour of the
+    input (None without theme colours).
+    """
+    syntax_text = syntax_options.get("TEXT", {})
+    bg = ui_text.get("background") or syntax_text.get("background")
+    fg = ui_text.get("foreground") or syntax_text.get("foreground")
+    if not (bg and fg):
+        return {}, {}, None
+
+    widget = {"background": bg, "foreground": fg, "insertbackground": fg}
+    dark = is_dark(bg, rgb)
+    syntax_bg = syntax_text.get("background")
+    if syntax_bg and is_dark(syntax_bg, rgb) == dark:
+        tags = {
+            tag: syntax_options.get(theme_tag, {}).get("foreground") or fg
+            for tag, theme_tag in TAG_COLORS.items()
+        }
+        sel = syntax_options.get("sel", {})
+        if sel.get("background"):
+            widget["selectbackground"] = sel["background"]
+            widget["inactiveselectbackground"] = sel["background"]
+        if sel.get("foreground"):
+            widget["selectforeground"] = sel["foreground"]
+    else:
+        tags = dict(FALLBACK_COLORS[dark])
+
+    mixed = [round(f * BORDER_MIX + b * (1 - BORDER_MIX)) // 257 for f, b in zip(rgb(fg), rgb(bg))]
+    return widget, tags, "#%02x%02x%02x" % tuple(mixed)
+
+
 
 class AIAView(ttk.Frame):
     """Chat panel that provides AI-powered programming assistance."""
@@ -67,6 +142,13 @@ class AIAView(ttk.Frame):
         self._note = False  # a local model note (loading / working) is in the messages area
 
         self._build_ui()
+        self._apply_theme()
+        # Thonny applies a new UI theme and then the syntax theme, so this event covers both
+        get_workbench().bind("SyntaxThemeChanged", self._apply_theme, True)
+
+    def destroy(self):
+        get_workbench().unbind("SyntaxThemeChanged", self._apply_theme)
+        super().destroy()
 
     # --- UI ---
 
@@ -92,7 +174,9 @@ class AIAView(ttk.Frame):
         )
         self._messages_text.grid(row=0, column=0, sticky="nsew")
 
-        scrollbar = ttk.Scrollbar(messages_frame, command=self._messages_text.yview)
+        scrollbar = ttk.Scrollbar(
+            messages_frame, command=self._messages_text.yview, style=scrollbar_style("Vertical")
+        )
         scrollbar.grid(row=0, column=1, sticky="ns")
         self._messages_text.configure(yscrollcommand=scrollbar.set)
 
@@ -105,7 +189,10 @@ class AIAView(ttk.Frame):
 
         # height=1 is only the minimum: the button column sets the row height and the
         # input stretches to it, so its edges line up with Send and Clear
-        self._input_text = tk.Text(input_frame, height=1, wrap="word", borderwidth=1, relief="solid")
+        # the border is a highlight, so that its colour can follow the theme
+        self._input_text = tk.Text(
+            input_frame, height=1, wrap="word", borderwidth=0, highlightthickness=1
+        )
         self._input_text.grid(row=0, column=0, sticky="nsew", padx=(0, 4))
         self._input_text.bind("<Return>", self._on_enter)
 
@@ -127,13 +214,27 @@ class AIAView(ttk.Frame):
     def _configure_tags(self):
         bold_font = ("TkDefaultFont", 9, "bold")
 
-        self._messages_text.tag_configure("user_header", font=bold_font, foreground="#1a5276")
-        self._messages_text.tag_configure("assistant_header", font=bold_font, foreground="#117a65")
-        self._messages_text.tag_configure(
-            "system_text", foreground="#7f8c8d", font=("TkDefaultFont", 8)
-        )
-        self._messages_text.tag_configure("error_text", foreground="#c0392b")
-        self._messages_text.tag_configure("loading_text", foreground="#7f8c8d")
+        # colours come from the theme (_apply_theme)
+        self._messages_text.tag_configure("user_header", font=bold_font)
+        self._messages_text.tag_configure("assistant_header", font=bold_font)
+        self._messages_text.tag_configure("system_text", font=("TkDefaultFont", 8))
+
+    def _apply_theme(self, event=None):
+        """Colours of the active themes; also called when a theme changes."""
+        from thonny.codeview import get_syntax_options_for_tag
+
+        style = ttk.Style()
+        ui_text = {key: style.lookup("Text", key) for key in ("background", "foreground")}
+        names = {"TEXT", "sel", *TAG_COLORS.values()}
+        options = {name: get_syntax_options_for_tag(name) for name in names}
+        widget, tags, border = theme_colors(ui_text, options, self.winfo_rgb)
+
+        for text in (self._messages_text, self._input_text):
+            text.configure(**widget)
+        if border:
+            self._input_text.configure(highlightbackground=border, highlightcolor=border)
+        for tag, color in tags.items():
+            self._messages_text.tag_configure(tag, foreground=color)
 
     def _show_welcome(self):
         self._insert(

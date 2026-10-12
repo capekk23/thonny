@@ -30,6 +30,11 @@ class FakeWorkbench:
     def bind(self, sequence, func, add=None):
         self.handlers.setdefault(sequence, []).append(func)
 
+    def unbind(self, sequence, func=None):
+        handlers = self.handlers.get(sequence, [])
+        if func in handlers:
+            handlers.remove(func)
+
     def queue_event(self, sequence, event=None):
         # Real Thonny delivers this on the UI thread ~20 ms later; the tests
         # deliver it immediately on the calling thread.
