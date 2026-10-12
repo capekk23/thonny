@@ -11,6 +11,7 @@ ssl_cert_dir = libdir + "/python3.14/site-packages/certifi"
 mainprogram = os.path.join(resdir, "thonnymain.py")
 
 sys.argv.insert(1, mainprogram)
+sys.argv.insert(1, "-B")
 sys.argv.insert(1, "-I")
 
 os.environ["PYTHON_SYS_EXECUTABLE"] = executable
