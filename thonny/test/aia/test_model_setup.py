@@ -315,6 +315,7 @@ def test_api_cancellation_interrupts_a_stalled_stream(monkeypatch):
     import http.server
 
     ready = threading.Event()
+    reader_ready = threading.Event()
     release = threading.Event()
 
     class Handler(http.server.BaseHTTPRequestHandler):
@@ -335,10 +336,17 @@ def test_api_cancellation_interrupts_a_stalled_stream(monkeypatch):
     server = http.server.ThreadingHTTPServer(("127.0.0.1", 0), Handler)
     threading.Thread(target=server.serve_forever, daemon=True).start()
     connection = m.http.client.HTTPConnection
+
+    class TestConnection(connection):
+        def getresponse(self):
+            response = super().getresponse()
+            reader_ready.set()
+            return response
+
     monkeypatch.setattr(
         m.http.client,
         "HTTPConnection",
-        lambda host, port, **kw: connection(host, server.server_port, **kw),
+        lambda host, port, **kw: TestConnection(host, server.server_port, **kw),
     )
     api = m.LocalAPI(threading.Event())
     outcomes = []
@@ -353,6 +361,7 @@ def test_api_cancellation_interrupts_a_stalled_stream(monkeypatch):
     worker.start()
     try:
         assert ready.wait(2)
+        assert reader_ready.wait(2)
         api.cancel()
         worker.join(2)
         assert not worker.is_alive()

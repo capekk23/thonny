@@ -131,13 +131,14 @@ class LocalAPI:
     def __init__(self, cancel_event):
         self.cancel_event = cancel_event
         self._connection = None
+        self._socket = None
         self._lock = threading.Lock()
 
     def cancel(self):
         self.cancel_event.set()
         with self._lock:
             conn = self._connection
-            sock = conn.sock if conn else None
+            sock = (conn.sock if conn else None) or self._socket
         if sock:
             try:
                 sock.shutdown(socket.SHUT_RDWR)
@@ -157,6 +158,10 @@ class LocalAPI:
                 json.dumps(body) if body is not None else None,
                 {"Content-Type": "application/json"},
             )
+            # getresponse() can detach conn.sock for an EOF-delimited response.
+            # Its file object still owns the live socket; retain it for cancellation.
+            with self._lock:
+                self._socket = conn.sock
             if self.cancel_event.is_set():
                 raise SetupCancelled()
             response = conn.getresponse()
@@ -188,6 +193,7 @@ class LocalAPI:
             with self._lock:
                 if self._connection is conn:
                     self._connection = None
+                    self._socket = None
 
     def get(self, path, timeout=3):
         return next(self.request(path, timeout=timeout))
