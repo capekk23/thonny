@@ -138,7 +138,7 @@ class LocalAPI:
         self.cancel_event.set()
         with self._lock:
             conn = self._connection
-            sock = (conn.sock if conn else None) or self._socket
+            sock = self._socket or (conn.sock if conn else None)
         if sock:
             try:
                 sock.shutdown(socket.SHUT_RDWR)
@@ -158,10 +158,11 @@ class LocalAPI:
                 json.dumps(body) if body is not None else None,
                 {"Content-Type": "application/json"},
             )
-            # getresponse() can detach conn.sock for an EOF-delimited response.
-            # Its file object still owns the live socket; retain it for cancellation.
+            # getresponse() can close conn.sock for an EOF-delimited response.
+            # Keep an independent handle, including on Windows, so shutdown can
+            # always interrupt the response reader rather than a closed socket.
             with self._lock:
-                self._socket = conn.sock
+                self._socket = conn.sock.dup() if conn.sock else None
             if self.cancel_event.is_set():
                 raise SetupCancelled()
             response = conn.getresponse()
@@ -193,6 +194,8 @@ class LocalAPI:
             with self._lock:
                 if self._connection is conn:
                     self._connection = None
+                    if self._socket:
+                        self._socket.close()
                     self._socket = None
 
     def get(self, path, timeout=3):
