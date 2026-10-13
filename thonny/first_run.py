@@ -76,11 +76,17 @@ def _mode_labels():
     return {STD_MODE: tr("Standard"), RPI_MODE: tr("Raspberry Pi (simple)")}
 
 
-# Readable names of the default models; an ID not listed here is shown as it is
+# Readable names of the default models and of the usual others (a model chosen in Tools >
+# Options shows in its provider's label there); an ID not listed here is shown as it is
 MODEL_NAMES = {
     "claude-haiku-5-5": "Claude Haiku 5.5",
+    "claude-sonnet-5-5": "Claude Sonnet 5.5",
+    "claude-opus-5-5": "Claude Opus 5.5",
     "gpt-6-luna": "GPT-6 Luna",
+    "gpt-6.1-sol": "GPT-6.1 Sol",
+    "gpt-6-astra": "GPT-6 Astra",
     "gemini-3.5-flash-lite": "Gemini 3.5 Flash-Lite",
+    "gemini-3.8-flash": "Gemini 3.8 Flash",
 }
 
 

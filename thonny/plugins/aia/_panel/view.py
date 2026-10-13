@@ -217,6 +217,7 @@ class AIAView(ttk.Frame):
         self._configure_tags()
         self._idle = False  # only the empty panel's line is in the messages area
         self._idle_text = None
+        self._idle_timer = None
         self._show_idle()
 
         input_frame = ttk.Frame(self)
@@ -282,22 +283,33 @@ class AIAView(ttk.Frame):
             return
         if is_loading():
             text = waking_text()
-            self.after(IDLE_CHECK_MS, self._update_idle)
         else:
             others = [t for t in idle_texts() if t != self._idle_text]
             text = random.choice(others)
         self._idle_text = text
         self._idle = True
         self._edit_messages(lambda: self._messages_text.insert("1.0", text, "system_text"))
+        self._schedule_idle_check()
+
+    def _schedule_idle_check(self):
+        if self._idle_timer is not None:
+            self.after_cancel(self._idle_timer)
+        self._idle_timer = self.after(IDLE_CHECK_MS, self._update_idle)
 
     def _update_idle(self):
-        """Replace the loading line once the local model is loaded (or its load failed)."""
-        if self._idle and self._idle_text == waking_text():
-            if is_loading():
-                self.after(IDLE_CHECK_MS, self._update_idle)
-            else:
-                self._hide_idle()
-                self._show_idle()
+        """While the panel is empty: say when the local model starts or stops loading.
+
+        The load starts a second after Thonny, or after switching to the local model in the
+        Options, maybe while the panel already shows its playful line.
+        """
+        self._idle_timer = None
+        if not self._idle:
+            return  # the conversation started; clear_conversation() checks again
+        if is_loading() != (self._idle_text == waking_text()):
+            self._hide_idle()
+            self._show_idle()  # schedules the next check
+        else:
+            self._schedule_idle_check()
 
     def _hide_idle(self):
         if self._idle:

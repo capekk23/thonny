@@ -482,8 +482,10 @@ def make_idle_view(module):
     view._messages_text = _IdleText()
     view._idle = False
     view._idle_text = None
+    view._idle_timer = None
     view.scheduled = []
-    view.after = lambda ms, func: view.scheduled.append(func)
+    view.after = lambda ms, func: view.scheduled.append(func) or func
+    view.after_cancel = lambda timer: view.scheduled.remove(timer)
     return view
 
 
@@ -523,3 +525,19 @@ def test_empty_panel_says_when_the_local_model_loads(panel_view, monkeypatch):
     view.scheduled.pop()()
     assert view._idle_text in panel_view.idle_texts()
     assert len(view._messages_text.parts) == 1
+
+
+def test_a_load_starting_after_the_panel_shows_is_noticed(panel_view, monkeypatch):
+    """The keeper starts loading a second after Thonny, the panel may be there already."""
+    view = make_idle_view(panel_view)
+    loading = [False]
+    monkeypatch.setattr(panel_view, "is_loading", lambda: loading[0])
+    view._show_idle()
+    assert view._idle_text in panel_view.idle_texts()
+    loading[0] = True
+    view.scheduled.pop()()
+    assert view._messages_text.parts == [(panel_view.waking_text(), "system_text")]
+    assert len(view.scheduled) == 1  # one check at a time
+    view._insert("You: hi")
+    view.scheduled.pop()()  # the conversation started: no more checks
+    assert view.scheduled == []

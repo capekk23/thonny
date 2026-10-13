@@ -2,11 +2,17 @@
 
 The AI choice is the welcome dialog's choice (Jakub 2026-10-10: the options had other items
 than the dialog and a model choice that was quietly dropped): the same list in the same
-order, the same notes, the API key on the page. Each provider answers with its default
-model, so there is no model choice. The Claude Code demo provider is not offered (Jakub
-2026-10-10: "To demo tam nemá co dělat."): it is reachable only by editing configuration.ini.
+order, the same notes, the API key on the page. With an API key the page also offers the
+model (Jakub 2026-10-13, cortex-zamestnani#75): the models the provider lists for the key,
+asked in a worker thread, or the provider's usual models when it cannot be asked. The
+Claude Code demo provider is not offered (Jakub 2026-10-10: "To demo tam nemá co dělat."):
+it is reachable only by editing configuration.ini.
 """
 
+import copy
+import logging
+import queue
+import threading
 import tkinter as tk
 import types
 import webbrowser
@@ -16,8 +22,13 @@ from thonny import first_run, get_workbench, ui_utils
 from thonny.languages import tr
 from thonny.config_ui import ConfigurationPage
 
-from thonny.plugins.aia._common import AIACore
+from thonny.plugins.aia._common import AIACore, MODEL_CHOICE_PROVIDERS, model_option
 from thonny.plugins.aia.prompts import answer_style
+
+logger = logging.getLogger(__name__)
+
+KEY_SETTLE_MS = 1000  # after the last change of the key, ask for its models
+POLL_MS = 100
 
 
 def style_names():
@@ -45,7 +56,18 @@ class AIAPanelConfigPage(ConfigurationPage):
 
         self._models = first_run._default_models()
         self._key_urls = first_run._key_urls()
-        self._labels = first_run._ai_labels(self._models)
+        # provider -> chosen model ("" = default), and the models listed for its key
+        self._chosen = {
+            p: (wb.get_option(model_option(p)) or "").strip() for p in MODEL_CHOICE_PROVIDERS
+        }
+        self._listed = {}  # provider -> (key, models) of the last successful listing
+        self._listing = queue.Queue()  # (provider, key, models or None) from worker threads
+        self._listing_key = {}  # provider -> key whose models are being asked for
+        self._key_timer = None
+        self._poll_timer = None
+        self._failed = {}  # provider -> key whose listing failed
+        self._model_ids = []
+        self._labels = first_run._ai_labels(self._current_models())
 
         stored = wb.get_option("aia.provider") or first_run.AI_LATER
         self._ai = stored if stored in self._labels else first_run.AI_LATER
@@ -161,18 +183,36 @@ class AIAPanelConfigPage(ConfigurationPage):
             text=tr("The key is stored in plain text in Thonny's configuration file."),
             foreground="#7f8c8d",
         ).grid(row=2, column=1, columnspan=2, sticky="w", pady=(2, 0))
+        ttk.Label(d.key_frame, text=tr("Model:")).grid(row=3, column=1, sticky="w", pady=(7, 0))
+        self._model_var = tk.StringVar()
+        d.model_combo = ttk.Combobox(
+            d.key_frame,
+            textvariable=self._model_var,
+            state="readonly",
+            exportselection=False,
+            width=34,
+        )
+        d.model_combo.grid(row=3, column=2, sticky="w", padx=(10, 0), pady=(7, 0))
+        d.model_combo.bind("<<ComboboxSelected>>", self._on_model_changed)
+        d.model_note = ttk.Label(d.key_frame, foreground="#7f8c8d")
+        d.model_note.grid(row=4, column=1, columnspan=2, sticky="w", pady=(2, 0))
+        self._key_var.trace_add("write", self._on_key_changed)
         d.check_button = ttk.Button(frame, text=tr("Check again"), command=self._on_check_ollama)
         d.check_button.grid(row=2, column=1, sticky="nw", pady=(7, 0))
         d.link = ui_utils.create_action_label(frame, "", lambda e: webbrowser.open(self._link_url))
         d.link.grid(row=3, column=1, sticky="nw", pady=(3, 0))
         return d
 
-    def _fill(self, ai, ollama):
-        """Show the detail of one choice (and one Ollama state for the local model)."""
+    def _fill(self, ai, ollama, measure=False):
+        """Show the detail of one choice (and one Ollama state for the local model).
+
+        ``measure``: the longest variant of the texts, for _fix_detail_size.
+        """
         d = self._detail
         link = ""
         if ai in first_run.AI_CLOUD:
             d.note.configure(text=_cloud_note(ai))
+            self._show_models(ai, measure)
             d.key_frame.grid()
             d.check_button.grid_remove()
             link = self._key_urls[ai]
@@ -202,12 +242,12 @@ class AIAPanelConfigPage(ConfigurationPage):
         variants += [(first_run.AI_LOCAL, s) for s in ("missing", "stopped", "no_model", "ready")]
         # the note is as wide as the page's widest line (the legend of the answer styles)
         self.update_idletasks()
-        self._detail.note.configure(
-            wraplength=max(self._legend.winfo_reqwidth(), self._ai_combo.winfo_reqwidth())
-        )
+        wraplength = max(self._legend.winfo_reqwidth(), self._ai_combo.winfo_reqwidth())
+        self._detail.note.configure(wraplength=wraplength)
+        self._detail.model_note.configure(wraplength=wraplength)
         width = height = 0
         for ai, ollama in variants:
-            self._fill(ai, ollama)
+            self._fill(ai, ollama, measure=True)
             self._detail.frame.update_idletasks()
             width = max(width, self._detail.frame.winfo_reqwidth())
             height = max(height, self._detail.frame.winfo_reqheight())
@@ -221,6 +261,7 @@ class AIAPanelConfigPage(ConfigurationPage):
             if ai not in self._keys:
                 self._keys[ai] = self._core._get_stored_api_key(ai) or ""
             self._key_var.set(self._keys[ai])
+            self._ask_models(ai)  # now, not after KEY_SETTLE_MS
         self._fill(ai, self._ollama)
 
     def _on_ai_changed(self, event=None):
@@ -250,5 +291,144 @@ class AIAPanelConfigPage(ConfigurationPage):
                 self._core.set_api_key(provider, key)
         if self._kept_provider is None:
             wb.set_option("aia.provider", "" if self._ai == first_run.AI_LATER else self._ai)
+        for provider, model in self._chosen.items():
+            wb.set_option(model_option(provider), model)
         wb.set_option("aia.model", "")  # a model chosen in earlier versions no longer applies
         return True
+
+    # --- Model (providers with an API key) ---
+
+    def _current_models(self):
+        """Provider id -> the model it answers with (the chosen one or the default)."""
+        models = dict(self._models)
+        models.update({p: m for p, m in self._chosen.items() if m})
+        return models
+
+    def _model_values(self, provider):
+        """Model ids offered: those listed for the key on the page, else the usual ones."""
+        default = self._models[provider]
+        listed = self._listed.get(provider)
+        if listed and listed[0] == self._key_var.get().strip():
+            models = list(listed[1])
+        else:
+            registered = self._core.providers.get(provider)
+            models = registered.get_available_models() if registered else []
+        if default not in models:
+            models.insert(0, default)
+        chosen = self._chosen.get(provider)
+        if chosen and chosen not in models:
+            models.append(chosen)  # stays offered until another model is chosen
+        return models
+
+    def _model_label(self, provider, model):
+        return tr("%s (default)") % model if model == self._models[provider] else model
+
+    def _model_notes(self):
+        return {
+            "no_key": tr("Enter the API key to see the models it can use."),
+            "asking": tr("Asking the provider for the models of this key..."),
+            "listed": tr("The models this key can use."),
+            "failed": tr(
+                "The provider did not list the models of this key; these are the usual ones."
+            ),
+        }
+
+    def _model_note(self, provider):
+        key = self._key_var.get().strip()
+        listed = self._listed.get(provider)
+        if not key:
+            state = "no_key"
+        elif self._listing_key.get(provider) == key:
+            state = "asking"
+        elif listed and listed[0] == key:
+            state = "listed"
+        elif self._failed.get(provider) == key:
+            state = "failed"
+        else:
+            return ""
+        return self._model_notes()[state]
+
+    def _show_models(self, provider, measure=False):
+        d = self._detail
+        self._model_ids = self._model_values(provider)
+        d.model_combo.configure(values=[self._model_label(provider, m) for m in self._model_ids])
+        current = self._chosen.get(provider) or self._models[provider]
+        self._model_var.set(self._model_label(provider, current))
+        if measure:
+            note = max(self._model_notes().values(), key=len)
+        else:
+            note = self._model_note(provider)
+        d.model_note.configure(text=note)
+
+    def _on_model_changed(self, event=None):
+        model = self._model_ids[self._detail.model_combo.current()]
+        self._chosen[self._ai] = "" if model == self._models[self._ai] else model
+        # the AI choice names the model: "Anthropic (Claude Opus 5.5)"
+        self._labels = first_run._ai_labels(self._current_models())
+        self._ai_combo.configure(values=list(self._labels.values()))
+        self._ai_var.set(self._labels[self._ai])
+
+    def _on_key_changed(self, *_args):
+        if self._ai not in first_run.AI_CLOUD:
+            return
+        if self._key_timer is not None:
+            self.after_cancel(self._key_timer)
+        self._key_timer = self.after(KEY_SETTLE_MS, self._on_key_settled)
+        self._show_models(self._ai)
+
+    def _on_key_settled(self):
+        self._key_timer = None
+        if self._ai in first_run.AI_CLOUD:
+            self._ask_models(self._ai)
+            self._show_models(self._ai)
+
+    def _ask_models(self, provider):
+        """Ask the provider which models the key on the page can use, in a worker thread."""
+        key = self._key_var.get().strip()
+        registered = self._core.providers.get(provider)
+        listed = self._listed.get(provider)
+        if (
+            not key
+            or registered is None
+            or (listed and listed[0] == key)
+            or key in (self._listing_key.get(provider), self._failed.get(provider))
+        ):
+            return
+        asking = copy.copy(registered.frozen())  # settings read here, on the UI thread
+        asking._get_api_key = lambda: key  # the key on the page, maybe not saved yet
+        self._listing_key[provider] = key
+
+        def work():
+            try:
+                models = asking.list_models()
+            except Exception:
+                logger.info("AIA: could not list the models of %s", provider, exc_info=True)
+                models = None
+            self._listing.put((provider, key, models))
+
+        threading.Thread(target=work, daemon=True).start()
+        if self._poll_timer is None:
+            self._poll_timer = self.after(POLL_MS, self._poll_listing)
+
+    def _poll_listing(self):
+        self._poll_timer = None
+        try:
+            if not self.winfo_exists():
+                return  # the Options dialog was closed
+        except tk.TclError:
+            return
+        try:
+            while True:
+                provider, key, models = self._listing.get_nowait()
+                if self._listing_key.get(provider) == key:
+                    del self._listing_key[provider]
+                if models:
+                    self._listed[provider] = (key, models)
+                else:
+                    self._failed[provider] = key
+                if provider == self._ai:
+                    self._show_models(provider)
+        except queue.Empty:
+            pass
+        if self._listing_key:
+            self._poll_timer = self.after(POLL_MS, self._poll_listing)
