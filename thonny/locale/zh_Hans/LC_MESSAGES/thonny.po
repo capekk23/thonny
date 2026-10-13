@@ -2135,5 +2135,13 @@ msgid "The model %s is no longer available. Choose another provider in Tools > O
 msgstr "模型“%s”已不可用。请在“工具 > 选项 > AI 助手”中选择其他提供商，或安装更新版本的 Thonny AIA。"
 
 #: thonny/plugins/aia
-msgid "The local model is preparing the answer..."
-msgstr "本地模型正在准备回答..."
+msgid "Thinking..."
+msgstr "正在思考..."
+
+#: thonny/plugins/aia
+msgid "Clear the conversation?"
+msgstr "清空对话？"
+
+#: thonny/plugins/aia
+msgid "The whole conversation with AIA will be deleted. This cannot be undone."
+msgstr "与 AIA 的全部对话将被删除。此操作无法撤销。"

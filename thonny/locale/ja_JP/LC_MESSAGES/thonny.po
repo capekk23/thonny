@@ -2152,5 +2152,13 @@ msgid "The model %s is no longer available. Choose another provider in Tools > O
 msgstr "モデル「%s」は利用できなくなりました。ツール > オプション > AIアシスタント で別のプロバイダーを選択するか、新しいバージョンの Thonny AIA をインストールしてください。"
 
 #: thonny/plugins/aia
-msgid "The local model is preparing the answer..."
-msgstr "ローカルモデルが回答を準備しています..."
+msgid "Thinking..."
+msgstr "考えています..."
+
+#: thonny/plugins/aia
+msgid "Clear the conversation?"
+msgstr "会話をクリアしますか？"
+
+#: thonny/plugins/aia
+msgid "The whole conversation with AIA will be deleted. This cannot be undone."
+msgstr "AIA との会話はすべて削除されます。元に戻すことはできません。"

@@ -22,7 +22,8 @@ Czech answer.
 INTERFACE_LANGUAGE_RULE = """\
 LANGUAGE: the student's Thonny is set to {language}. Reply in {language}, unless the student \
 writes their own message in another language. Messages that Thonny sends for the student \
-(the automatic error report and its traceback) do not count: answer them in {language}.
+(the automatic report of a runtime error or of a failed package installation, with its \
+output) do not count: answer them in {language}.
 """
 
 CONTEXT_RULES = """\

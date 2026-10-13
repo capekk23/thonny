@@ -952,6 +952,17 @@ class PipDialog(CommonDialog, ABC):
     ) -> Tuple[int, str, str]:
         raise NotImplementedError()
 
+    def _report_failed_install(self, command: str, args: List[str], dlg) -> None:
+        """Thonny AIA: the AI assistant reacts to a failed installation like to a runtime
+        error (Jakub 2026-10-13, cortex-zamestnani#74). Not after Cancel."""
+        if command != "install" or dlg.success or getattr(dlg, "cancelled", False):
+            return
+        get_workbench().event_generate(
+            "PackageInstallFailed",
+            command="pip install " + construct_cmd_line(args),
+            output=dlg.stdout + dlg.stderr,
+        )
+
     def _get_interpreter_description(self):
         raise NotImplementedError()
 
@@ -1143,6 +1154,7 @@ class BackendPipDialog(PipDialog):
             output_prelude=f"{command} {construct_cmd_line(args)}\n",
         )
         ui_utils.show_dialog(dlg)
+        self._report_failed_install(command, args, dlg)
 
         return dlg.returncode, dlg.stdout, dlg.stderr
 
@@ -1297,6 +1309,7 @@ class PluginsPipDialog(PipDialog):
             self, proc, title="pip " + command, long_description=title, autostart=True
         )
         ui_utils.show_dialog(dlg)
+        self._report_failed_install(command, args, dlg)
         return dlg.returncode, dlg.stdout, dlg.stderr
 
 

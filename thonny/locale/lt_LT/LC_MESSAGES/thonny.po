@@ -2134,5 +2134,13 @@ msgid "The model %s is no longer available. Choose another provider in Tools > O
 msgstr "Modelis „%s“ nebepasiekiamas. Pasirinkite kitą teikėją skiltyje Įrankiai > Nustatymai > DI asistentas arba įdiekite naujesnę Thonny AIA versiją."
 
 #: thonny/plugins/aia
-msgid "The local model is preparing the answer..."
-msgstr "Vietinis modelis ruošia atsakymą..."
+msgid "Thinking..."
+msgstr "Galvoju..."
+
+#: thonny/plugins/aia
+msgid "Clear the conversation?"
+msgstr "Išvalyti pokalbį?"
+
+#: thonny/plugins/aia
+msgid "The whole conversation with AIA will be deleted. This cannot be undone."
+msgstr "Visas pokalbis su AIA bus ištrintas. To negalima atšaukti."

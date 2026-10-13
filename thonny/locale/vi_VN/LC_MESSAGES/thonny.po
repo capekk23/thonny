@@ -2151,5 +2151,13 @@ msgid "The model %s is no longer available. Choose another provider in Tools > O
 msgstr "Mô hình '%s' không còn khả dụng. Hãy chọn nhà cung cấp khác trong Công cụ > Thiết lập > Trợ lý AI, hoặc cài đặt phiên bản Thonny AIA mới hơn."
 
 #: thonny/plugins/aia
-msgid "The local model is preparing the answer..."
-msgstr "Mô hình cục bộ đang chuẩn bị câu trả lời..."
+msgid "Thinking..."
+msgstr "Đang suy nghĩ..."
+
+#: thonny/plugins/aia
+msgid "Clear the conversation?"
+msgstr "Xóa cuộc trò chuyện?"
+
+#: thonny/plugins/aia
+msgid "The whole conversation with AIA will be deleted. This cannot be undone."
+msgstr "Toàn bộ cuộc trò chuyện với AIA sẽ bị xóa. Không thể hoàn tác thao tác này."

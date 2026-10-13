@@ -2143,5 +2143,13 @@ msgid "The model %s is no longer available. Choose another provider in Tools > O
 msgstr "Το μοντέλο «%s» δεν είναι πλέον διαθέσιμο. Επιλέξτε άλλο πάροχο στο Εργαλεία > Επιλογές > Βοηθός ΤΝ ή εγκαταστήστε νεότερη έκδοση του Thonny AIA."
 
 #: thonny/plugins/aia
-msgid "The local model is preparing the answer..."
-msgstr "Το τοπικό μοντέλο ετοιμάζει την απάντηση..."
+msgid "Thinking..."
+msgstr "Σκέφτομαι..."
+
+#: thonny/plugins/aia
+msgid "Clear the conversation?"
+msgstr "Καθάρισμα της συνομιλίας;"
+
+#: thonny/plugins/aia
+msgid "The whole conversation with AIA will be deleted. This cannot be undone."
+msgstr "Ολόκληρη η συνομιλία με το AIA θα διαγραφεί. Αυτό δεν μπορεί να αναιρεθεί."

@@ -2152,5 +2152,13 @@ msgid "The model %s is no longer available. Choose another provider in Tools > O
 msgstr "Líkanið '%s' er ekki lengur í boði. Veldu annan þjónustuaðila í Tól > Valkostir > Gervigreindaraðstoð eða settu upp nýrri útgáfu af Thonny AIA."
 
 #: thonny/plugins/aia
-msgid "The local model is preparing the answer..."
-msgstr "Staðbundna líkanið er að undirbúa svarið..."
+msgid "Thinking..."
+msgstr "Hugsa..."
+
+#: thonny/plugins/aia
+msgid "Clear the conversation?"
+msgstr "Hreinsa samtalið?"
+
+#: thonny/plugins/aia
+msgid "The whole conversation with AIA will be deleted. This cannot be undone."
+msgstr "Öllu samtalinu við AIA verður eytt. Ekki er hægt að afturkalla það."

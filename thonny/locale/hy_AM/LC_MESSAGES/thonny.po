@@ -2143,5 +2143,13 @@ msgid "The model %s is no longer available. Choose another provider in Tools > O
 msgstr "«%s» մոդելն այլևս հասանելի չէ։ Ընտրեք այլ մատակարար Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում կամ տեղադրեք Thonny AIA֊ի ավելի նոր տարբերակ։"
 
 #: thonny/plugins/aia
-msgid "The local model is preparing the answer..."
-msgstr "Տեղային մոդելը պատրաստում է պատասխանը..."
+msgid "Thinking..."
+msgstr "Մտածում եմ..."
+
+#: thonny/plugins/aia
+msgid "Clear the conversation?"
+msgstr "Մաքրե՞լ զրույցը։"
+
+#: thonny/plugins/aia
+msgid "The whole conversation with AIA will be deleted. This cannot be undone."
+msgstr "AIA-ի հետ ամբողջ զրույցը կջնջվի։ Սա հնարավոր չէ հետարկել։"

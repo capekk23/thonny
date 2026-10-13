@@ -2152,5 +2152,13 @@ msgid "The model %s is no longer available. Choose another provider in Tools > O
 msgstr "«%s» eredua jada ez dago erabilgarri. Hautatu beste hornitzaile bat hemen: Tresnak > Aukerak > AA laguntzailea, edo instalatu Thonny AIA-ren bertsio berriago bat."
 
 #: thonny/plugins/aia
-msgid "The local model is preparing the answer..."
-msgstr "Eredu lokala erantzuna prestatzen ari da..."
+msgid "Thinking..."
+msgstr "Pentsatzen..."
+
+#: thonny/plugins/aia
+msgid "Clear the conversation?"
+msgstr "Elkarrizketa garbitu?"
+
+#: thonny/plugins/aia
+msgid "The whole conversation with AIA will be deleted. This cannot be undone."
+msgstr "AIArekin izandako elkarrizketa osoa ezabatuko da. Ezin da desegin."

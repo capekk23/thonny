@@ -12,7 +12,7 @@ import logging
 import queue
 import threading
 import tkinter as tk
-from tkinter import ttk
+from tkinter import messagebox, ttk
 from typing import Dict, List, Optional
 
 from thonny import get_workbench
@@ -23,6 +23,7 @@ from thonny.plugins.aia._common import (
     AIACore,
     error_report,
     friendly_error,
+    install_error_report,
     interface_language,
     last_run_shell_output,
     prepare_messages,
@@ -37,16 +38,18 @@ SHELL_SETTLE_MS = 300  # the Shell draws the output of a run a little after the 
 LOAD_CHECK_S = 2.0  # while the local model loads, how often to ask Ollama whether it is in memory
 
 
-# Shown until the first token of a local model arrives: on CPU, loading gpt-oss:20b took
-# 35-55 s and processing the prompt up to 40 s more, with nothing in the panel (Jakub 2026-10-10).
-# "Loading" only while the model is really not in memory (Jakub 2026-10-10: with the model
-# loaded at startup the note made it look as if it loaded only now).
+# Shown after "AIA: " until the first part of the answer arrives, with every provider (Jakub
+# 2026-10-13, cortex-zamestnani#74): until then the panel showed nothing and looked stuck.
+def thinking_text() -> str:
+    return tr("Thinking...")
+
+
+# Takes the place of thinking_text() while a local model is not in memory: on CPU, loading
+# gpt-oss:20b took 35-55 s, with nothing in the panel (Jakub 2026-10-10). Only while the model
+# is really not loaded (Jakub 2026-10-10: with the model loaded at startup a note on every
+# request made it look as if it loaded only now); once it is, thinking_text() returns.
 def local_loading_text() -> str:
     return tr("Loading the local model...")
-
-
-def local_working_text() -> str:
-    return tr("The local model is preparing the answer...")
 
 
 # Background and text of the panel follow Thonny's UI theme, like the built-in Assistant it
@@ -139,7 +142,7 @@ class AIAView(ttk.Frame):
         self._cancel_event: Optional[threading.Event] = None
         self._partial: List[str] = []
         self._polling = False
-        self._note = False  # a local model note (loading / working) is in the messages area
+        self._note = False  # a note (thinking / loading the local model) is in the messages area
 
         self._build_ui()
         self._apply_theme()
@@ -207,9 +210,7 @@ class AIAView(ttk.Frame):
         )
         self._cancel_button.pack(side="top", pady=(0, 2))
 
-        ttk.Button(button_frame, text=tr("Clear"), width=9, command=self.clear_conversation).pack(
-            side="top"
-        )
+        ttk.Button(button_frame, text=tr("Clear"), width=9, command=self._on_clear).pack(side="top")
 
     def _configure_tags(self):
         bold_font = ("TkDefaultFont", 9, "bold")
@@ -286,6 +287,14 @@ class AIAView(ttk.Frame):
         self._conversation.append({"role": "user", "content": report, "hidden": True})
         self._request_llm_response()
 
+    def handle_install_failure(self, event):
+        """PackageInstallFailed from the package manager: react like to a runtime error."""
+        self._abort_current_request()
+        get_workbench().show_view("AIAView", set_focus=False)
+        report = install_error_report(getattr(event, "command", ""), getattr(event, "output", ""))
+        self._conversation.append({"role": "user", "content": report, "hidden": True})
+        self._request_llm_response()
+
     def _on_enter(self, event):
         """Enter sends the message, Shift+Enter inserts a newline."""
         if event.state & 0x0001:  # Shift
@@ -302,6 +311,17 @@ class AIAView(ttk.Frame):
         self._input_text.delete("1.0", "end")
         self._add_user_message(text)
         self._request_llm_response()
+
+    def _on_clear(self):
+        """Clear asks first: the conversation cannot be brought back (Jakub 2026-10-13, #74)."""
+        if (self._conversation or self._cancel_event is not None) and not messagebox.askyesno(
+            tr("Clear the conversation?"),
+            tr("The whole conversation with AIA will be deleted. This cannot be undone."),
+            default=messagebox.NO,
+            master=self,
+        ):
+            return
+        self.clear_conversation()
 
     def _on_cancel(self):
         # Free the panel right away: the worker may be blocked before the first
@@ -352,6 +372,7 @@ class AIAView(ttk.Frame):
         self._partial = []
         self._set_busy(True)
         self._insert("\nAIA: ", "assistant_header")
+        self._show_note(thinking_text())
 
         threading.Thread(
             target=self._stream_in_background,
@@ -405,8 +426,7 @@ class AIAView(ttk.Frame):
             logger.debug("AIA: could not ask Ollama for loaded models", exc_info=True)
             return
         if loaded:
-            put((request_id, "note", local_working_text()))
-            return
+            return  # thinking_text() is shown already
         put((request_id, "note", local_loading_text()))
 
         def watch():
@@ -415,7 +435,7 @@ class AIAView(ttk.Frame):
                     return  # superseded or finished
                 try:
                     if provider.is_loaded(model):
-                        put((request_id, "note", local_working_text()))
+                        put((request_id, "note", thinking_text()))
                         return
                 except Exception:
                     return
@@ -435,9 +455,7 @@ class AIAView(ttk.Frame):
                     continue  # superseded request
                 if kind == "note":
                     if self._cancel_event is not None and not self._partial:  # not started yet
-                        self._hide_loading()
-                        self._insert(payload, "loading_text")
-                        self._note = True
+                        self._show_note(payload)
                 elif kind == "chunk":
                     self._hide_loading()
                     self._partial.append(payload)
@@ -456,8 +474,14 @@ class AIAView(ttk.Frame):
         else:
             self._polling = False
 
+    def _show_note(self, text: str):
+        """Show a note after "AIA: " in place of the previous one."""
+        self._hide_loading()
+        self._insert(text, "loading_text")
+        self._note = True
+
     def _hide_loading(self):
-        """Remove the loading note once the answer (or an error, or Cancel) takes its place."""
+        """Remove the note once the answer (or an error, or Cancel) takes its place."""
         if not getattr(self, "_note", False):
             return
         self._note = False

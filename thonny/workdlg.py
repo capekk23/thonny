@@ -31,6 +31,7 @@ class WorkDialog(CommonDialog):
         self._has_been_started = False
         self._state = "idle"
         self.success = False
+        self.cancelled = False  # the user cancelled the work (Thonny AIA: no AI reaction then)
         self._work_events_queue = queue.Queue()
         self.init_instructions_frame()
         self.init_main_frame()
@@ -231,6 +232,7 @@ class WorkDialog(CommonDialog):
     def cancel_work(self):
         # worker should periodically check this value
         self._state = "cancelling"
+        self.cancelled = True
         self.set_action_text(tr("Cancelling"))
 
     def toggle_log_frame(self, event=None):

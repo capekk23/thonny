@@ -204,10 +204,10 @@ def test_loaded_local_model_is_not_said_to_load(panel_view):
     view._stream_in_background(request_id, cancel_event, ollama, "ollama", "", [], "gpt-oss:20b")
 
     notes = [p for _, kind, p in _drain(view) if kind == "note"]
-    assert notes == [panel_view.local_working_text()]
+    assert notes == []  # "Thinking..." from the start of the request stays
 
 
-def test_loading_note_turns_into_working_note_once_loaded(panel_view, monkeypatch):
+def test_loading_note_turns_into_thinking_note_once_loaded(panel_view, monkeypatch):
     monkeypatch.setattr(panel_view, "LOAD_CHECK_S", 0.01)
     view = make_view(panel_view)
     request_id, cancel_event = start_request(view)
@@ -227,7 +227,7 @@ def test_loading_note_turns_into_working_note_once_loaded(panel_view, monkeypatc
     worker.join(5)
 
     notes = [p for _, kind, p in list(view._events.queue) if kind == "note"]
-    assert notes == [panel_view.local_loading_text(), panel_view.local_working_text()]
+    assert notes == [panel_view.local_loading_text(), panel_view.thinking_text()]
     view._messages_text = _FakeText()
     view._poll_events()
     assert "Ahoj" in view.inserted and view._note is False
@@ -242,9 +242,9 @@ def test_note_after_the_answer_is_ignored(panel_view):
     view._poll_events()
     assert cancel_event.is_set()  # stops the watch of a loading model
 
-    view._events.put((request_id, "note", panel_view.local_working_text()))
+    view._events.put((request_id, "note", panel_view.thinking_text()))
     view._poll_events()
-    assert panel_view.local_working_text() not in view.inserted
+    assert panel_view.thinking_text() not in view.inserted
 
 
 def test_unreachable_ollama_shows_no_note(panel_view):
@@ -300,3 +300,153 @@ def test_shell_output_is_limited_to_its_end(panel_view, fake_thonny):
     fake_thonny.get_view = lambda view_id: _Shell()
     out = _common.last_run_shell_output(fake_thonny)
     assert out.endswith("END") and len(out) <= _common.SHELL_OUTPUT_LIMIT + 4
+
+
+class _Core:
+    """AIACore with a ready provider whose answer never comes (the worker is not run)."""
+
+    class _Provider:
+        def frozen(self):
+            return self
+
+    def check_ready(self):
+        return None
+
+    def get_current_provider_id(self):
+        return "anthropic"
+
+    def get_current_provider(self):
+        return self._Provider()
+
+    def get_current_model(self, provider):
+        return "claude-haiku-5-5"
+
+
+def test_thinking_note_follows_the_header_until_the_answer(panel_view):
+    """Jakub 2026-10-13 (#74): "AIA: Thinking..." while waiting, replaced by the answer."""
+    view = make_view(panel_view)
+    view._insert = lambda text, tag=None: view.inserted.append((text, tag))
+    view._core = _Core()
+    view._stream_in_background = lambda *args: None
+    view._conversation = [{"role": "user", "content": "Co je cyklus?"}]
+
+    view._request_llm_response()
+
+    assert view.inserted[-2][1] == "assistant_header"
+    assert view.inserted[-1] == (panel_view.thinking_text(), "loading_text")
+    assert view._note is True
+
+    view._messages_text = _FakeText()
+    view._events.put((view._request_id, "chunk", "Cyklus"))
+    view._poll_events()
+    assert view._messages_text.deleted == [("2.5", "2.31")]  # the note is gone
+    assert view.inserted[-1] == ("Cyklus", None)
+
+
+def test_clear_asks_before_deleting_a_conversation(panel_view, monkeypatch):
+    asked = []
+    answer = []
+    monkeypatch.setattr(
+        panel_view.messagebox, "askyesno", lambda *a, **kw: asked.append(kw) or answer[-1]
+    )
+    view = make_view(panel_view)
+    cleared = []
+    view.clear_conversation = lambda: cleared.append(True)
+    view._conversation = [{"role": "user", "content": "Ahoj"}]
+
+    answer.append(False)
+    view._on_clear()
+    assert len(asked) == 1 and asked[0]["default"] == "no" and cleared == []
+
+    answer.append(True)
+    view._on_clear()
+    assert cleared == [True]
+
+
+def test_clear_of_an_empty_panel_does_not_ask(panel_view, monkeypatch):
+    monkeypatch.setattr(panel_view.messagebox, "askyesno", lambda *a, **kw: pytest.fail("asked"))
+    view = make_view(panel_view)
+    cleared = []
+    view.clear_conversation = lambda: cleared.append(True)
+
+    view._on_clear()
+
+    assert cleared == [True]
+
+
+def test_failed_installation_is_reported_to_the_model(panel_view, fake_thonny):
+    """Jakub 2026-10-13 (#74): AIA reacts to package installation errors too."""
+    import types
+
+    fake_thonny.show_view = lambda view_id, set_focus=True: None
+    view = make_view(panel_view)
+    requests = []
+    view._request_llm_response = lambda: requests.append(list(view._conversation))
+    event = types.SimpleNamespace(
+        command="pip install --user nunpy",
+        output="ERROR: No matching distribution found for nunpy",
+    )
+
+    view.handle_install_failure(event)
+
+    assert view.inserted == []  # nothing from the student in the panel
+    (msg,) = requests[0]
+    assert msg["role"] == "user" and msg["hidden"] is True
+    assert "pip install --user nunpy" in msg["content"]
+    assert "No matching distribution found for nunpy" in msg["content"]
+    assert "did not type this" in msg["content"]
+
+
+def test_install_report_keeps_the_end_of_a_long_output(fake_thonny):
+    from thonny.plugins.aia import _common
+
+    report = _common.install_error_report("pip install x", "x" * 10000 + "ERROR: END")
+    assert "ERROR: END" in report and len(report) < _common.SHELL_OUTPUT_LIMIT + 1000
+
+
+def test_package_manager_reports_only_a_failed_install(fake_thonny, monkeypatch):
+    import types
+
+    from thonny.plugins import pip_gui
+
+    events = []
+    fake_thonny.event_generate = lambda sequence, **kwargs: events.append((sequence, kwargs))
+    monkeypatch.setattr(pip_gui, "get_workbench", lambda: fake_thonny)
+    report = pip_gui.PipDialog._report_failed_install
+
+    def dlg(success=False, cancelled=False):
+        return types.SimpleNamespace(
+            success=success, cancelled=cancelled, stdout="Collecting nunpy ", stderr="ERROR: no"
+        )
+
+    report(None, "install", ["--user", "nunpy"], dlg(success=True))
+    report(None, "install", ["--user", "nunpy"], dlg(cancelled=True))
+    report(None, "uninstall", ["--yes", "nunpy"], dlg())
+    assert events == []
+
+    report(None, "install", ["--user", "nunpy"], dlg())
+    ((sequence, kwargs),) = events
+    assert sequence == "PackageInstallFailed"
+    assert kwargs["command"] == "pip install --user nunpy"
+    assert kwargs["output"] == "Collecting nunpy ERROR: no"
+
+
+def test_installation_error_goes_to_the_panel_only_while_aia_is_on(fake_thonny):
+    from thonny.plugins.aia._panel import switching
+
+    got = []
+
+    class _View:
+        def handle_install_failure(self, event):
+            got.append(event)
+
+    fake_thonny.get_view = lambda view_id: _View()
+    fake_thonny.options["aia.enabled"] = False
+    switching.install_switching_logic(fake_thonny)
+    (handler,) = fake_thonny.handlers["PackageInstallFailed"]
+
+    handler("off")
+    fake_thonny.options["aia.enabled"] = True
+    handler("on")
+
+    assert got == ["on"]

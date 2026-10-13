@@ -2130,5 +2130,13 @@ msgid "The model %s is no longer available. Choose another provider in Tools > O
 msgstr "Malli ”%s” ei ole enää saatavilla. Valitse toinen palveluntarjoaja kohdassa Työkalut > Asetukset > Tekoälyavustaja tai asenna uudempi Thonny AIA."
 
 #: thonny/plugins/aia
-msgid "The local model is preparing the answer..."
-msgstr "Paikallinen malli valmistelee vastausta..."
+msgid "Thinking..."
+msgstr "Mietin..."
+
+#: thonny/plugins/aia
+msgid "Clear the conversation?"
+msgstr "Tyhjennetäänkö keskustelu?"
+
+#: thonny/plugins/aia
+msgid "The whole conversation with AIA will be deleted. This cannot be undone."
+msgstr "Koko keskustelu AIA:n kanssa poistetaan. Tätä ei voi perua."

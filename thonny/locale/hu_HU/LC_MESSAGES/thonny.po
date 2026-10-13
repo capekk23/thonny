@@ -2130,5 +2130,13 @@ msgid "The model %s is no longer available. Choose another provider in Tools > O
 msgstr "A(z) „%s” modell már nem érhető el. Válasszon másik szolgáltatót az Eszközök > Beállítások > MI-asszisztens menüpontban, vagy telepítse a Thonny AIA újabb verzióját."
 
 #: thonny/plugins/aia
-msgid "The local model is preparing the answer..."
-msgstr "A helyi modell készíti a választ..."
+msgid "Thinking..."
+msgstr "Gondolkodom..."
+
+#: thonny/plugins/aia
+msgid "Clear the conversation?"
+msgstr "Törlöd a beszélgetést?"
+
+#: thonny/plugins/aia
+msgid "The whole conversation with AIA will be deleted. This cannot be undone."
+msgstr "Az AIA-val folytatott teljes beszélgetés törlődik. Ez nem vonható vissza."

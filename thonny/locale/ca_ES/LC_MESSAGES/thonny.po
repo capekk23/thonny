@@ -2152,5 +2152,13 @@ msgid "The model %s is no longer available. Choose another provider in Tools > O
 msgstr "El model «%s» ja no està disponible. Trieu un altre proveïdor a Eines > Opcions > Assistent d'IA o instal·leu una versió més nova de Thonny AIA."
 
 #: thonny/plugins/aia
-msgid "The local model is preparing the answer..."
-msgstr "El model local està preparant la resposta..."
+msgid "Thinking..."
+msgstr "Pensant..."
+
+#: thonny/plugins/aia
+msgid "Clear the conversation?"
+msgstr "Vols esborrar la conversa?"
+
+#: thonny/plugins/aia
+msgid "The whole conversation with AIA will be deleted. This cannot be undone."
+msgstr "S'esborrarà tota la conversa amb AIA. No es pot desfer."

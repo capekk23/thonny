@@ -209,6 +209,26 @@ def error_report(error_info: Dict, shell_output: str = "") -> str:
     )
 
 
+def install_error_report(command: str, output: str) -> str:
+    """The first message after a failed package installation, like error_report().
+
+    Thonny's package manager (Tools > Manage packages) sends PackageInstallFailed when pip
+    fails (Jakub 2026-10-13, cortex-zamestnani#74: the assistant reacts to installation errors
+    too). The output is pip's log as the dialog shows it; its end holds the error.
+    """
+    output = output.strip()
+    if len(output) > SHELL_OUTPUT_LIMIT:
+        output = "...\n" + output[-SHELL_OUTPUT_LIMIT:]
+    return (
+        "[Automatic notice from Thonny - the student did not type this.] The student tried to "
+        "install a Python package with Thonny's package manager (Tools > Manage packages), and "
+        f"the installation failed. Command: {command}\n"
+        f"This is the output the student sees in the installation window:\n```\n{output}\n```\n"
+        "Open the conversation yourself: react to what the student is looking at, in the way your "
+        "instructions describe. Do not say that the student reported, sent or asked anything."
+    )
+
+
 def prepare_messages(
     messages: List[Dict[str, str]], max_messages: int = MAX_HISTORY_MESSAGES
 ) -> List[Dict[str, str]]:

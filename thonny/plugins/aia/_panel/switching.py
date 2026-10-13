@@ -47,6 +47,20 @@ def install_switching_logic(wb):
     except Exception:
         logger.debug("Could not bind ShowView event", exc_info=True)
 
+    # A failed installation in the package manager (thonny/plugins/pip_gui.py, Thonny AIA)
+    def _on_install_failed(event):
+        if not wb.get_option("aia.enabled"):
+            return
+        try:
+            wb.get_view("AIAView").handle_install_failure(event)
+        except Exception:
+            logger.debug("Could not hand the installation error to AIAView", exc_info=True)
+
+    try:
+        wb.bind("PackageInstallFailed", _on_install_failed, True)
+    except Exception:
+        logger.debug("Could not bind PackageInstallFailed event", exc_info=True)
+
     # Defer initial activation until the workbench has created its views
     if wb.get_option("aia.enabled"):
         wb.after(500, lambda: _activate_aia(wb))
