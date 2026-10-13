@@ -78,7 +78,7 @@ def _mode_labels():
 
 # Readable names of the default models; an ID not listed here is shown as it is
 MODEL_NAMES = {
-    "claude-sonnet-5-5": "Claude Sonnet 5.5",
+    "claude-haiku-5-5": "Claude Haiku 5.5",
     "gpt-6-luna": "GPT-6 Luna",
     "gemini-3.5-flash-lite": "Gemini 3.5 Flash-Lite",
 }

@@ -52,16 +52,17 @@ class AnthropicProvider(LLMProvider):
         return "Anthropic Claude"
 
     def get_default_model(self) -> str:
-        # Measured 2026-10-09 with the AIA prompts: first text in 1-2 s, correct
-        # Czech answers in both checked levels. Sonnet and Haiku 5.5 think by
-        # default; it costs ~1 s here, so no effort setting is sent.
-        return "claude-sonnet-5-5"
+        # Haiku, not Sonnet (Jakub 2026-10-13, cortex-zamestnani#74): the cheap model of each
+        # provider, like Gemini 3.5 Flash-Lite and GPT-6 Luna. Haiku 5.5 thinks by default
+        # (effort medium); no effort setting is sent. It has no server-side refusal fallback,
+        # a refusal ends with REFUSAL_NOTE.
+        return "claude-haiku-5-5"
 
     def get_available_models(self) -> List[str]:
         # Per the Models API for an AIA key (2026-10-09). Older IDs stored in
         # aia.model (claude-sonnet-5, claude-haiku-4-5) are still served.
         return [
-            "claude-sonnet-5-5",
             "claude-haiku-5-5",
+            "claude-sonnet-5-5",
             "claude-opus-5-5",
         ]
