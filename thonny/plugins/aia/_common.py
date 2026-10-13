@@ -29,6 +29,15 @@ def interface_language(code: Optional[str]) -> str:
 # Providers that require an API key (Ollama is local, no key needed)
 PROVIDERS_NEEDING_KEY = {"openai", "anthropic", "gemini"}
 
+# With an API key the model can be chosen in Tools > Options (Jakub 2026-10-13,
+# cortex-zamestnani#75; until beta 3 each provider answered with its default model). Stored per
+# provider, "" = the provider's default; the local model stays gpt-oss:20b.
+MODEL_CHOICE_PROVIDERS = ("anthropic", "gemini", "openai")
+
+
+def model_option(provider_id: str) -> str:
+    return "aia.%s_model" % provider_id
+
 # Display name -> internal ID, alphabetical order
 PROVIDER_NAMES = {
     "Anthropic": "anthropic",
@@ -273,10 +282,9 @@ def friendly_error(exc: BaseException, provider_id: str = "", model: str = "") -
     if status in (401, 403) or "Authentication" in name or "PermissionDenied" in name:
         return tr("The API key was rejected. Check it in Tools > Options > AI Assistant.")
     if status == 404 or "NotFound" in name:
-        # each provider answers with its default model, there is no model to choose
         return tr(
-            "The model %s is no longer available. Choose another provider in "
-            "Tools > Options > AI Assistant, or install a newer Thonny AIA."
+            "The model %s is not available. Choose another model in "
+            "Tools > Options > AI Assistant."
         ) % model
     if status == 429 or "RateLimit" in name:
         return tr(
@@ -390,9 +398,15 @@ class AIACore:
         return self._providers.get(self.get_current_provider_id())
 
     def get_current_model(self, provider: LLMProvider) -> str:
-        # Each provider answers with its default model (Jakub 2026-10-10): simpler, and nothing
-        # has to find out which models a provider offers or check a stored choice against them.
-        # A model stored by an earlier version (aia.model) is ignored.
+        """The model chosen for the provider in Tools > Options, else its default. UI thread.
+
+        A model stored by an earlier version in aia.model is ignored.
+        """
+        for provider_id, registered in self._providers.items():
+            if registered is provider and provider_id in MODEL_CHOICE_PROVIDERS:
+                chosen = (get_workbench().get_option(model_option(provider_id)) or "").strip()
+                if chosen:
+                    return chosen
         return provider.get_default_model()
 
     def check_ready(self) -> Optional[str]:

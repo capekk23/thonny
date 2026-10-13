@@ -1,9 +1,25 @@
 import logging
 from typing import Dict, Iterator, List
 
-from thonny.plugins.aia.providers.base import REQUEST_TIMEOUT, LLMProvider
+from thonny.plugins.aia.providers.base import (
+    LIST_MODELS_TIMEOUT,
+    REQUEST_TIMEOUT,
+    LLMProvider,
+    with_default_first,
+)
 
 logger = logging.getLogger(__name__)
+
+# /v1/models lists every model of the key, also those that cannot chat
+CHAT_PREFIXES = ("gpt-", "chatgpt-", "o1", "o3", "o4")
+NOT_CHAT = (
+    "audio", "realtime", "tts", "transcribe", "image", "search", "embedding", "moderation",
+    "instruct", "dall-e", "whisper", "davinci", "babbage", "codex", "computer-use",
+)
+
+
+def is_chat_model(model_id: str) -> bool:
+    return model_id.startswith(CHAT_PREFIXES) and not any(w in model_id for w in NOT_CHAT)
 
 
 class OpenAIProvider(LLMProvider):
@@ -65,3 +81,17 @@ class OpenAIProvider(LLMProvider):
         # Per developers.openai.com/api/docs/models (read 2026-10-10): Luna is the efficient
         # model, 6.1 Sol the balanced one (20x Luna's price), Astra the most capable.
         return ["gpt-6-luna", "gpt-6.1-sol", "gpt-6-astra"]
+
+    def list_models(self, timeout: float = LIST_MODELS_TIMEOUT) -> List[str]:
+        from openai import OpenAI
+
+        kwargs = {"api_key": self._get_api_key(), "timeout": timeout, "max_retries": 0}
+        api_base = self._get_api_base() if self._get_api_base else None
+        if api_base:
+            kwargs["base_url"] = api_base
+        models = sorted(
+            OpenAI(**kwargs).models.list(), key=lambda m: getattr(m, "created", 0), reverse=True
+        )
+        return with_default_first(
+            [m.id for m in models if is_chat_model(m.id)], self.get_default_model()
+        )

@@ -6,6 +6,18 @@ from typing import Dict, Iterator, List
 # SDK defaults are ~10 minutes, which in a classroom looks like a frozen IDE.
 REQUEST_TIMEOUT = 60.0
 
+# Listing the models of an API key (Options page, in a worker thread)
+LIST_MODELS_TIMEOUT = 10.0
+
+
+def with_default_first(models: List[str], default: str) -> List[str]:
+    """The provider's order without duplicates, the default model first."""
+    result = [default]
+    for model in models:
+        if model and model not in result:
+            result.append(model)
+    return result
+
 
 class LLMProvider(ABC):
     """Abstract base class for LLM providers (OpenAI, Anthropic, Gemini, etc.).
@@ -57,3 +69,11 @@ class LLMProvider(ABC):
     def get_available_models(self) -> List[str]:
         """Return list of suggested models. Override for dynamic model lists."""
         return [self.get_default_model()]
+
+    def list_models(self, timeout: float = LIST_MODELS_TIMEOUT) -> List[str]:
+        """Chat models the API key may use, asked from the provider, default first.
+
+        Blocks - worker thread only, on a ``frozen()`` copy. Raises when the provider
+        cannot be asked (no key, no connection, key rejected).
+        """
+        raise NotImplementedError

@@ -64,7 +64,7 @@ def test_friendly_error_hides_auth_details(fake_thonny):
 
     msg = friendly_error(_StatusError(401), "openai", "gpt-4o-mini")
     assert "rejected" in msg and "sk-" not in msg
-    assert "no longer available" in friendly_error(_StatusError(404), "anthropic", "old-model")
+    assert "Choose another model" in friendly_error(_StatusError(404), "anthropic", "old-model")
     assert "quota" in friendly_error(_StatusError(429))
     assert "Ollama" in friendly_error(ConnectionRefusedError("x"), "ollama")
     assert "'google.genai', which is missing" in friendly_error(ImportError("x"), "gemini")
@@ -73,7 +73,7 @@ def test_friendly_error_hides_auth_details(fake_thonny):
 def test_build_system_prompt_includes_context(fake_thonny):
     from thonny.plugins.aia.prompts import SOCRATIC_PROMPT, build_system_prompt
 
-    assert build_system_prompt("unknown-level") == SOCRATIC_PROMPT
+    assert build_system_prompt("unknown-level").startswith(SOCRATIC_PROMPT)
     prompt = build_system_prompt(
         "direct", current_code="print(x)", current_file_name="a.py", imported_files={"b.py": "y=1"}
     )
@@ -83,7 +83,9 @@ def test_build_system_prompt_includes_context(fake_thonny):
 def test_local_model_gets_the_rules_again_at_the_end(fake_thonny):
     from thonny.plugins.aia import prompts
 
-    cloud = prompts.build_system_prompt("socratic", current_code="print(x)", current_file_name="a.py")
+    cloud = prompts.build_system_prompt(
+        "socratic", current_code="print(x)", current_file_name="a.py", language="Čeština"
+    )
     local = prompts.build_system_prompt(
         "socratic", current_code="print(x)", current_file_name="a.py", local=True, language="Čeština"
     )
@@ -101,6 +103,16 @@ def test_every_provider_gets_the_interface_language(fake_thonny):
     assert "Thonny is set to Čeština. Reply in Čeština" in cloud
     assert "RULES THAT MATTER MOST" not in cloud  # the local rules stay local
     assert "Thonny is set to" not in prompts.build_system_prompt("socratic")
+
+
+def test_every_style_and_provider_is_told_to_speak_informally(fake_thonny):
+    from thonny.plugins.aia import prompts
+
+    for style in prompts.ANSWER_STYLES:
+        prompt = prompts.build_system_prompt(style, language="Čeština")
+        assert prompts.ADDRESS_RULE in prompt  # with the style
+        assert prompt.rstrip().endswith(prompts.ADDRESS_REMINDER.rstrip())  # and last of all
+        assert "never vykání" in prompt
 
 
 # --- API keys and provider registry --------------------------------------------
@@ -160,16 +172,86 @@ def test_no_provider_chosen_asks_for_the_choice(fake_thonny):
     assert "No AI provider is chosen yet" in core.check_ready()
 
 
-def test_every_provider_answers_with_its_default_model(fake_thonny):
-    """No model choice (Jakub 2026-10-10): a model stored by an earlier version is ignored."""
+def test_model_is_chosen_per_provider(fake_thonny, monkeypatch):
+    """Tools > Options chooses the model per provider (Jakub 2026-10-13, #75); "" = default."""
+    from thonny.plugins.aia import _common
     from thonny.plugins.aia._common import AIACore
+
+    monkeypatch.setattr(_common, "package_installed", lambda name: True)
+    core = AIACore()
+    core.register_providers()
+    anthropic, gemini = core.providers["anthropic"], core.providers["gemini"]
+    fake_thonny.options["aia.model"] = "claude-sonnet-4-20250514"  # stored by old versions
+    assert core.get_current_model(anthropic) == "claude-haiku-5-5"
+    fake_thonny.options["aia.anthropic_model"] = "claude-opus-5-5"
+    assert core.get_current_model(anthropic) == "claude-opus-5-5"
+    assert core.get_current_model(gemini) == "gemini-3.5-flash-lite"  # its own choice
+    fake_thonny.options["aia.ollama_model"] = "gemma3"  # the local model is not chosen
+    assert core.get_current_model(core.providers["ollama"]) == "gpt-oss:20b"
+
+
+def test_anthropic_lists_the_models_of_the_key(fake_thonny, monkeypatch):
     from thonny.plugins.aia.providers.anthropic_provider import AnthropicProvider
 
-    provider = AnthropicProvider(get_api_key=lambda: "k")
-    core = AIACore()
-    for stored in ("", "claude-sonnet-4-20250514", "my-custom-model"):
-        fake_thonny.options["aia.model"] = stored
-        assert core.get_current_model(provider) == provider.get_default_model()
+    seen = {}
+
+    class FakeAnthropic:
+        def __init__(self, api_key, timeout, max_retries):
+            seen.update(api_key=api_key, timeout=timeout)
+            self.models = types.SimpleNamespace(
+                list=lambda: [types.SimpleNamespace(id=i) for i in
+                              ("claude-opus-5-5", "claude-haiku-5-5", "claude-sonnet-5-5")]
+            )
+
+    monkeypatch.setitem(sys.modules, "anthropic", types.SimpleNamespace(Anthropic=FakeAnthropic))
+    models = AnthropicProvider(get_api_key=lambda: "k").list_models(timeout=3)
+    assert models == ["claude-haiku-5-5", "claude-opus-5-5", "claude-sonnet-5-5"]  # default first
+    assert seen == {"api_key": "k", "timeout": 3}
+
+
+def test_openai_lists_only_chat_models_newest_first(fake_thonny, monkeypatch):
+    from thonny.plugins.aia.providers.openai_provider import OpenAIProvider
+
+    listed = [("gpt-6-astra", 3), ("text-embedding-3-small", 9), ("gpt-6-luna", 1),
+              ("gpt-6-realtime", 8), ("whisper-1", 7), ("o4-mini", 2), ("gpt-6.1-sol", 4)]
+
+    class FakeOpenAI:
+        def __init__(self, **kwargs):
+            self.models = types.SimpleNamespace(
+                list=lambda: [types.SimpleNamespace(id=i, created=c) for i, c in listed]
+            )
+
+    monkeypatch.setitem(sys.modules, "openai", types.SimpleNamespace(OpenAI=FakeOpenAI))
+    models = OpenAIProvider(get_api_key=lambda: "k").list_models()
+    assert models == ["gpt-6-luna", "gpt-6.1-sol", "gpt-6-astra", "o4-mini"]
+
+
+def test_gemini_lists_only_text_chat_models(fake_thonny, monkeypatch):
+    from thonny.plugins.aia.providers.gemini_provider import GeminiProvider
+
+    listed = [("models/gemini-3.8-flash", ["generateContent", "countTokens"]),
+              ("models/gemini-embedding-002", ["embedContent"]),
+              ("models/gemini-3.8-flash-tts", ["generateContent"]),
+              ("models/gemini-3.5-flash-lite", ["generateContent"]),
+              ("models/veo-4", ["predictLongRunning"])]
+
+    class FakeClient:
+        def __init__(self, api_key, http_options):
+            self.models = types.SimpleNamespace(
+                list=lambda: [types.SimpleNamespace(name=n, supported_actions=a) for n, a in listed]
+            )
+
+    genai = types.SimpleNamespace(Client=FakeClient)
+    gtypes = types.SimpleNamespace(HttpOptions=lambda timeout: timeout)
+    google = types.ModuleType("google")
+    google.genai = genai
+    monkeypatch.setitem(sys.modules, "google", google)
+    monkeypatch.setitem(sys.modules, "google.genai", genai)
+    monkeypatch.setitem(sys.modules, "google.genai.types", gtypes)
+    genai.types = gtypes
+    assert GeminiProvider(get_api_key=lambda: "k").list_models() == [
+        "gemini-3.5-flash-lite", "gemini-3.8-flash"
+    ]
 
 
 # --- providers with fake SDKs ---------------------------------------------------
@@ -363,9 +445,9 @@ def test_answer_styles_renamed_and_old_values_migrated(fake_thonny, monkeypatch)
     import thonny.plugins.aia as aia
     from thonny.plugins.aia import prompts
 
-    assert prompts.build_system_prompt("mentor") == prompts.SOCRATIC_PROMPT
-    assert prompts.build_system_prompt("balanced") == prompts.EXPLANATORY_PROMPT
-    assert prompts.build_system_prompt("direct") == prompts.DIRECT_PROMPT
+    assert prompts.build_system_prompt("mentor").startswith(prompts.SOCRATIC_PROMPT)
+    assert prompts.build_system_prompt("balanced").startswith(prompts.EXPLANATORY_PROMPT)
+    assert prompts.build_system_prompt("direct").startswith(prompts.DIRECT_PROMPT)
 
     monkeypatch.setattr(aia, "_load_panel", lambda wb: None)
     for stored, expected in (("balanced", "explanatory"), ("mentor", "socratic"), ("direct", "direct")):

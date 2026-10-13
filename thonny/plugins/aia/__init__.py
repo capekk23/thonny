@@ -12,6 +12,7 @@ because Thonny 5 has no Chat API.
 import logging
 
 from thonny import get_workbench
+from thonny.plugins.aia._common import MODEL_CHOICE_PROVIDERS, model_option
 from thonny.plugins.aia.prompts import DEFAULT_STYLE, answer_style
 
 logger = logging.getLogger(__name__)
@@ -25,7 +26,9 @@ def load_plugin():
     # "" = not chosen yet: the welcome dialog's "I will set it up later" saves no provider
     # (Jakub 2026-10-10), the panel then asks for the choice
     wb.set_default("aia.provider", "")
-    wb.set_default("aia.model", "")  # no longer used: each provider answers with its default model
+    wb.set_default("aia.model", "")  # no longer used: the model is chosen per provider
+    for provider_id in MODEL_CHOICE_PROVIDERS:
+        wb.set_default(model_option(provider_id), "")  # "" = the provider's default
     wb.set_default("aia.mentoring_level", DEFAULT_STYLE)
     wb.set_default("aia.auto_attach_context", True)
     wb.set_default("aia.include_local_imports", False)

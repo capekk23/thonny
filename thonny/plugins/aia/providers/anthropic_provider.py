@@ -1,7 +1,12 @@
 import logging
 from typing import Dict, Iterator, List
 
-from thonny.plugins.aia.providers.base import REQUEST_TIMEOUT, LLMProvider
+from thonny.plugins.aia.providers.base import (
+    LIST_MODELS_TIMEOUT,
+    REQUEST_TIMEOUT,
+    LLMProvider,
+    with_default_first,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -66,3 +71,11 @@ class AnthropicProvider(LLMProvider):
             "claude-sonnet-5-5",
             "claude-opus-5-5",
         ]
+
+    def list_models(self, timeout: float = LIST_MODELS_TIMEOUT) -> List[str]:
+        # Models API: every model the key may use, newest first (auto-paginated)
+        from anthropic import Anthropic
+
+        client = Anthropic(api_key=self._get_api_key(), timeout=timeout, max_retries=0)
+        models = [m.id for m in client.models.list() if m.id.startswith("claude-")]
+        return with_default_first(models, self.get_default_model())
