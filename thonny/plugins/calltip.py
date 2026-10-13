@@ -151,7 +151,8 @@ class Calltipper:
 def load_plugin():
     calltipper = Calltipper()
 
-    get_workbench().set_default("edit.automatic_calltips", False)
+    # on in Thonny AIA: Options > Editor as Jakub set it (cortex-zamestnani#75)
+    get_workbench().set_default("edit.automatic_calltips", True)
 
     get_workbench().add_command(
         "open_calltip",

@@ -120,6 +120,7 @@ def update_highlighting(event):
 
 def load_plugin() -> None:
     wb = get_workbench()
-    wb.set_default("view.locals_highlighting", False)
+    # on in Thonny AIA: Options > Editor as Jakub set it (cortex-zamestnani#75)
+    wb.set_default("view.locals_highlighting", True)
     wb.bind_class("CodeViewText", "<<TextChange>>", update_highlighting, True)
     wb.bind("<<UpdateAppearance>>", update_highlighting, True)
