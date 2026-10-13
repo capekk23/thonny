@@ -16,6 +16,23 @@ English, but that is no reason to answer in English: a student who writes in Cze
 Czech answer.
 """
 
+# The students are children and young adults (Jakub 2026-10-13, cortex-zamestnani#75): Claude
+# Haiku 5.5 in beta 3 addressed them formally (Czech vykání), no prompt said anything about it.
+# It stands in every style prompt and, short, once more at the very end, for every provider.
+ADDRESS_RULE = """\
+Address the student informally, as one young person, in every sentence: the students are \
+children and young adults. In Czech always tykání ("zkus", "napsal jsi", "tvůj kód", "máš", \
+"podívej se"), never vykání ("zkuste", "napsal jste", "váš kód", "máte", "podívejte se", \
+"byste"), also when the student writes formally, and if you greet, then informally ("Ahoj", \
+not "Dobrý den"); in Slovak tykanie; in German "du", in French "tu", in Spanish "tú", in \
+Polish "ty", in Russian and Ukrainian "ты"; in any other language its informal singular form.
+"""
+
+ADDRESS_REMINDER = """\
+ADDRESS: the informal singular in every sentence - in Czech tykání ("zkus", "máš", "tvůj"), \
+never vykání ("zkuste", "máte", "váš").
+"""
+
 # Thonny's interface language, for every provider (Jakub 2026-10-10: with Czech set, the
 # automatic error report went out in English and the model answered in English). The report
 # is written by Thonny, not by the student, so it says nothing about the student's language.
@@ -38,6 +55,7 @@ SOCRATIC_PROMPT = (
 You are AIA, a friendly programming mentor for beginner Python students using the Thonny IDE.
 """
     + LANGUAGE_RULE
+    + ADDRESS_RULE
     + """
 CORE PRINCIPLES:
 1. NEVER give complete code solutions unprompted. Guide the student to discover the answer \
@@ -70,6 +88,7 @@ EXPLANATORY_PROMPT = (
 You are AIA, a friendly programming assistant for Python students using the Thonny IDE.
 """
     + LANGUAGE_RULE
+    + ADDRESS_RULE
     + """
 YOUR APPROACH: first explain the context of the question, then give the answer.
 1. Context first (2-4 sentences): name the concept the question is really about and explain it \
@@ -96,6 +115,7 @@ DIRECT_PROMPT = (
 You are AIA, a Python programming assistant in the Thonny IDE.
 """
     + LANGUAGE_RULE
+    + ADDRESS_RULE
     + """
 YOUR APPROACH: a short answer and nothing else - no explanation.
 1. Give only the answer: the fixed code, the code that was asked for, or the fact. No \
@@ -231,6 +251,8 @@ def build_system_prompt(
 
     if language:
         base_prompt += "\n\n" + INTERFACE_LANGUAGE_RULE.format(language=language)
+
+    base_prompt += "\n" + ADDRESS_REMINDER
 
     if local:
         base_prompt += local_rules(mentoring_level, language)
