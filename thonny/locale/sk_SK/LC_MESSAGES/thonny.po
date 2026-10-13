@@ -1996,9 +1996,6 @@ msgstr "AI asistent"
 msgid "AI assistant:"
 msgstr "AI asistent:"
 
-msgid "AIA - AI Mentor Assistant"
-msgstr "AIA – AI asistent a mentor"
-
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA zostane zapnutá, ale odpovedať začne, až v Nástroje > Možnosti > AI asistent vyberiete poskytovateľa."
 
@@ -2089,9 +2086,6 @@ msgstr "Thonny s AI asistentom (AIA). Thonny vytvoril Aivar Annamaa."
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "Príliš veľa požiadaviek alebo je vyčerpaný limit účtu. Chvíľu počkajte a skúste to znova."
 
-msgid "Type a question below (Enter sends, Shift+Enter = new line)."
-msgstr "Napíšte otázku nižšie (Enter odošle, Shift+Enter = nový riadok)."
-
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
 msgstr "Neznámy poskytovateľ „%s“. Vyberte ho v Nástroje > Možnosti > AI asistent."
 
@@ -2143,10 +2137,6 @@ msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
 msgstr "API kľúč bol odmietnutý. Skontrolujte ho v Nástroje > Možnosti > AI asistent."
 
 #: thonny/plugins/aia
-msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
-msgstr "Model „%s“ už nie je dostupný. Vyberte iného poskytovateľa v Nástroje > Možnosti > AI asistent, alebo nainštalujte novší Thonny AIA."
-
-#: thonny/plugins/aia
 msgid "Thinking..."
 msgstr "Premýšľam..."
 
@@ -2161,3 +2151,63 @@ msgstr "Celá konverzácia s AIA bude vymazaná. Tento krok nemožno vrátiť sp
 #: thonny/plugins/aia
 msgid "Write a message to the assistant..."
 msgstr "Napíš správu asistentovi..."
+
+#: thonny/plugins/aia
+msgid "The assistant is resting..."
+msgstr "Asistent oddychuje..."
+
+#: thonny/plugins/aia
+msgid "The assistant is loafing around..."
+msgstr "Asistent leňoší..."
+
+#: thonny/plugins/aia
+msgid "The assistant is out for lunch..."
+msgstr "Asistent je na obede..."
+
+#: thonny/plugins/aia
+msgid "The assistant is having a coffee..."
+msgstr "Asistent si dáva kávu..."
+
+#: thonny/plugins/aia
+msgid "The assistant is reading a book..."
+msgstr "Asistent si číta knižku..."
+
+#: thonny/plugins/aia
+msgid "The assistant is looking out of the window..."
+msgstr "Asistent pozerá z okna..."
+
+#: thonny/plugins/aia
+msgid "The assistant is stretching..."
+msgstr "Asistent sa naťahuje..."
+
+#: thonny/plugins/aia
+msgid "The assistant is waking up..."
+msgstr "Asistent sa prebúdza..."
+
+#: thonny/plugins/aia
+msgid "Model:"
+msgstr "Model:"
+
+#: thonny/plugins/aia
+msgid "%s (default)"
+msgstr "%s (predvolený)"
+
+#: thonny/plugins/aia
+msgid "Enter the API key to see the models it can use."
+msgstr "Zadaj API kľúč a uvidíš modely, ktoré môže používať."
+
+#: thonny/plugins/aia
+msgid "Asking the provider for the models of this key..."
+msgstr "Pýtam sa poskytovateľa na modely tohto kľúča..."
+
+#: thonny/plugins/aia
+msgid "The models this key can use."
+msgstr "Modely, ktoré tento kľúč môže používať."
+
+#: thonny/plugins/aia
+msgid "The provider did not list the models of this key; these are the usual ones."
+msgstr "Poskytovateľ modely tohto kľúča nevypísal, toto sú bežné."
+
+#: thonny/plugins/aia
+msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
+msgstr "Model %s nie je k dispozícii. Vyber iný model v Nástroje > Možnosti > AI asistent."

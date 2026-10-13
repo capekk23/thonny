@@ -2015,9 +2015,6 @@ msgstr "Pomočnik AI"
 msgid "AI assistant:"
 msgstr "Pomočnik AI:"
 
-msgid "AIA - AI Mentor Assistant"
-msgstr "AIA – pomočnik AI in mentor"
-
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA ostane vklopljen, vendar bo odgovarjal šele, ko izberete ponudnika v Orodja > Opcije > Pomočnik AI."
 
@@ -2108,9 +2105,6 @@ msgstr "Thonny s pomočnikom AI (AIA). Thonny je ustvaril Aivar Annamaa."
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "Preveč zahtev ali pa je kvota računa porabljena. Malo počakajte in poskusite znova."
 
-msgid "Type a question below (Enter sends, Shift+Enter = new line)."
-msgstr "Spodaj vpišite vprašanje (Enter pošlje, Shift+Enter = nova vrstica)."
-
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
 msgstr "Neznan ponudnik »%s«. Izberite ga v Orodja > Opcije > Pomočnik AI."
 
@@ -2162,10 +2156,6 @@ msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
 msgstr "Ključ API je bil zavrnjen. Preverite ga v Orodja > Opcije > Pomočnik AI."
 
 #: thonny/plugins/aia
-msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
-msgstr "Model »%s« ni več na voljo. Izberite drugega ponudnika v Orodja > Opcije > Pomočnik AI ali namestite novejšo različico Thonny AIA."
-
-#: thonny/plugins/aia
 msgid "Thinking..."
 msgstr "Razmišljam..."
 
@@ -2180,3 +2170,63 @@ msgstr "Celoten pogovor z AIA bo izbrisan. Tega ni mogoče razveljaviti."
 #: thonny/plugins/aia
 msgid "Write a message to the assistant..."
 msgstr "Napiši sporočilo pomočniku..."
+
+#: thonny/plugins/aia
+msgid "The assistant is resting..."
+msgstr "Pomočnik počiva..."
+
+#: thonny/plugins/aia
+msgid "The assistant is loafing around..."
+msgstr "Pomočnik lenari..."
+
+#: thonny/plugins/aia
+msgid "The assistant is out for lunch..."
+msgstr "Pomočnik je na kosilu..."
+
+#: thonny/plugins/aia
+msgid "The assistant is having a coffee..."
+msgstr "Pomočnik pije kavo..."
+
+#: thonny/plugins/aia
+msgid "The assistant is reading a book..."
+msgstr "Pomočnik bere knjigo..."
+
+#: thonny/plugins/aia
+msgid "The assistant is looking out of the window..."
+msgstr "Pomočnik gleda skozi okno..."
+
+#: thonny/plugins/aia
+msgid "The assistant is stretching..."
+msgstr "Pomočnik se pretegne..."
+
+#: thonny/plugins/aia
+msgid "The assistant is waking up..."
+msgstr "Pomočnik se prebuja..."
+
+#: thonny/plugins/aia
+msgid "Model:"
+msgstr "Model:"
+
+#: thonny/plugins/aia
+msgid "%s (default)"
+msgstr "%s (privzeto)"
+
+#: thonny/plugins/aia
+msgid "Enter the API key to see the models it can use."
+msgstr "Vnesi ključ API, da vidiš modele, ki jih lahko uporablja."
+
+#: thonny/plugins/aia
+msgid "Asking the provider for the models of this key..."
+msgstr "Ponudnika sprašujem za modele tega ključa..."
+
+#: thonny/plugins/aia
+msgid "The models this key can use."
+msgstr "Modeli, ki jih lahko uporablja ta ključ."
+
+#: thonny/plugins/aia
+msgid "The provider did not list the models of this key; these are the usual ones."
+msgstr "Ponudnik ni navedel modelov tega ključa; to so običajni."
+
+#: thonny/plugins/aia
+msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
+msgstr "Model %s ni na voljo. Izberi drug model v Orodja > Opcije > Pomočnik AI."

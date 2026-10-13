@@ -1992,9 +1992,6 @@ msgstr "Βοηθός ΤΝ"
 msgid "AI assistant:"
 msgstr "Βοηθός ΤΝ:"
 
-msgid "AIA - AI Mentor Assistant"
-msgstr "AIA – Βοηθός-μέντορας ΤΝ"
-
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "Το AIA παραμένει ενεργό, αλλά θα απαντά μόνο αφού επιλέξετε πάροχο στο Εργαλεία > Επιλογές > Βοηθός ΤΝ."
 
@@ -2085,9 +2082,6 @@ msgstr "Το Thonny με τον Βοηθό ΤΝ (AIA). Το Thonny δημιου�
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "Πάρα πολλά αιτήματα ή εξαντλήθηκε το όριο του λογαριασμού. Περιμένετε λίγο και δοκιμάστε ξανά."
 
-msgid "Type a question below (Enter sends, Shift+Enter = new line)."
-msgstr "Πληκτρολογήστε μια ερώτηση παρακάτω (Enter = αποστολή, Shift+Enter = νέα γραμμή)."
-
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
 msgstr "Άγνωστος πάροχος «%s». Επιλέξτε έναν στο Εργαλεία > Επιλογές > Βοηθός ΤΝ."
 
@@ -2139,10 +2133,6 @@ msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
 msgstr "Το κλειδί API απορρίφθηκε. Ελέγξτε το στο Εργαλεία > Επιλογές > Βοηθός ΤΝ."
 
 #: thonny/plugins/aia
-msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
-msgstr "Το μοντέλο «%s» δεν είναι πλέον διαθέσιμο. Επιλέξτε άλλο πάροχο στο Εργαλεία > Επιλογές > Βοηθός ΤΝ ή εγκαταστήστε νεότερη έκδοση του Thonny AIA."
-
-#: thonny/plugins/aia
 msgid "Thinking..."
 msgstr "Σκέφτομαι..."
 
@@ -2157,3 +2147,63 @@ msgstr "Ολόκληρη η συνομιλία με το AIA θα διαγραφ
 #: thonny/plugins/aia
 msgid "Write a message to the assistant..."
 msgstr "Γράψε ένα μήνυμα στον βοηθό..."
+
+#: thonny/plugins/aia
+msgid "The assistant is resting..."
+msgstr "Ο βοηθός ξεκουράζεται..."
+
+#: thonny/plugins/aia
+msgid "The assistant is loafing around..."
+msgstr "Ο βοηθός χαζεύει..."
+
+#: thonny/plugins/aia
+msgid "The assistant is out for lunch..."
+msgstr "Ο βοηθός είναι για φαγητό..."
+
+#: thonny/plugins/aia
+msgid "The assistant is having a coffee..."
+msgstr "Ο βοηθός πίνει έναν καφέ..."
+
+#: thonny/plugins/aia
+msgid "The assistant is reading a book..."
+msgstr "Ο βοηθός διαβάζει ένα βιβλίο..."
+
+#: thonny/plugins/aia
+msgid "The assistant is looking out of the window..."
+msgstr "Ο βοηθός κοιτάζει έξω από το παράθυρο..."
+
+#: thonny/plugins/aia
+msgid "The assistant is stretching..."
+msgstr "Ο βοηθός τεντώνεται..."
+
+#: thonny/plugins/aia
+msgid "The assistant is waking up..."
+msgstr "Ο βοηθός ξυπνάει..."
+
+#: thonny/plugins/aia
+msgid "Model:"
+msgstr "Μοντέλο:"
+
+#: thonny/plugins/aia
+msgid "%s (default)"
+msgstr "%s (προεπιλογή)"
+
+#: thonny/plugins/aia
+msgid "Enter the API key to see the models it can use."
+msgstr "Βάλε το κλειδί API για να δεις τα μοντέλα που μπορεί να χρησιμοποιήσει."
+
+#: thonny/plugins/aia
+msgid "Asking the provider for the models of this key..."
+msgstr "Ρωτάω τον πάροχο για τα μοντέλα αυτού του κλειδιού..."
+
+#: thonny/plugins/aia
+msgid "The models this key can use."
+msgstr "Τα μοντέλα που μπορεί να χρησιμοποιήσει αυτό το κλειδί."
+
+#: thonny/plugins/aia
+msgid "The provider did not list the models of this key; these are the usual ones."
+msgstr "Ο πάροχος δεν έδωσε τα μοντέλα αυτού του κλειδιού· αυτά είναι τα συνηθισμένα."
+
+#: thonny/plugins/aia
+msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
+msgstr "Το μοντέλο %s δεν είναι διαθέσιμο. Διάλεξε άλλο μοντέλο στο Εργαλεία > Επιλογές > Βοηθός ΤΝ."

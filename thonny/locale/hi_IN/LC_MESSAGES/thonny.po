@@ -1993,9 +1993,6 @@ msgstr "AI असिस्टेंट"
 msgid "AI assistant:"
 msgstr "AI असिस्टेंट:"
 
-msgid "AIA - AI Mentor Assistant"
-msgstr "AIA - AI मेंटर असिस्टेंट"
-
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA चालू रहेगा, लेकिन जवाब तभी देगा जब आप टूल्स > ऑप्शनस > AI असिस्टेंट में कोई प्रोवाइडर चुनेंगे।"
 
@@ -2086,9 +2083,6 @@ msgstr "AI असिस्टेंट (AIA) के साथ Thonny। Thonny �
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "बहुत ज़्यादा अनुरोध, या खाते का कोटा खत्म हो गया है। थोड़ा रुकें और फिर से कोशिश करें।"
 
-msgid "Type a question below (Enter sends, Shift+Enter = new line)."
-msgstr "नीचे अपना सवाल लिखें (Enter से भेजें, Shift+Enter = नई लाइन)।"
-
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
 msgstr "अज्ञात प्रोवाइडर '%s'। टूल्स > ऑप्शनस > AI असिस्टेंट में कोई प्रोवाइडर चुनें।"
 
@@ -2140,10 +2134,6 @@ msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
 msgstr "API कुंजी अस्वीकार कर दी गई। इसे टूल्स > ऑप्शनस > AI असिस्टेंट में जाँचें।"
 
 #: thonny/plugins/aia
-msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
-msgstr "मॉडल '%s' अब उपलब्ध नहीं है। टूल्स > ऑप्शनस > AI असिस्टेंट में कोई दूसरा प्रोवाइडर चुनें, या Thonny AIA का नया संस्करण इंस्टॉल करें।"
-
-#: thonny/plugins/aia
 msgid "Thinking..."
 msgstr "सोच रहा हूँ..."
 
@@ -2158,3 +2148,63 @@ msgstr "AIA के साथ पूरी बातचीत हटा दी �
 #: thonny/plugins/aia
 msgid "Write a message to the assistant..."
 msgstr "सहायक को संदेश लिखो..."
+
+#: thonny/plugins/aia
+msgid "The assistant is resting..."
+msgstr "असिस्टेंट आराम कर रहा है..."
+
+#: thonny/plugins/aia
+msgid "The assistant is loafing around..."
+msgstr "असिस्टेंट आलस कर रहा है..."
+
+#: thonny/plugins/aia
+msgid "The assistant is out for lunch..."
+msgstr "असिस्टेंट लंच पर गया है..."
+
+#: thonny/plugins/aia
+msgid "The assistant is having a coffee..."
+msgstr "असिस्टेंट कॉफ़ी पी रहा है..."
+
+#: thonny/plugins/aia
+msgid "The assistant is reading a book..."
+msgstr "असिस्टेंट किताब पढ़ रहा है..."
+
+#: thonny/plugins/aia
+msgid "The assistant is looking out of the window..."
+msgstr "असिस्टेंट खिड़की से बाहर देख रहा है..."
+
+#: thonny/plugins/aia
+msgid "The assistant is stretching..."
+msgstr "असिस्टेंट अंगड़ाई ले रहा है..."
+
+#: thonny/plugins/aia
+msgid "The assistant is waking up..."
+msgstr "असिस्टेंट जाग रहा है..."
+
+#: thonny/plugins/aia
+msgid "Model:"
+msgstr "मॉडल:"
+
+#: thonny/plugins/aia
+msgid "%s (default)"
+msgstr "%s (डिफ़ॉल्ट)"
+
+#: thonny/plugins/aia
+msgid "Enter the API key to see the models it can use."
+msgstr "API कुंजी डालो, ताकि दिखे कि यह कौन-से मॉडल इस्तेमाल कर सकती है।"
+
+#: thonny/plugins/aia
+msgid "Asking the provider for the models of this key..."
+msgstr "प्रदाता से इस कुंजी के मॉडल पूछ रहा हूँ..."
+
+#: thonny/plugins/aia
+msgid "The models this key can use."
+msgstr "वे मॉडल जिन्हें यह कुंजी इस्तेमाल कर सकती है।"
+
+#: thonny/plugins/aia
+msgid "The provider did not list the models of this key; these are the usual ones."
+msgstr "प्रदाता ने इस कुंजी के मॉडल नहीं बताए; ये सामान्य मॉडल हैं।"
+
+#: thonny/plugins/aia
+msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
+msgstr "मॉडल %s उपलब्ध नहीं है। टूल्स > ऑप्शनस > AI असिस्टेंट में कोई दूसरा मॉडल चुनो।"

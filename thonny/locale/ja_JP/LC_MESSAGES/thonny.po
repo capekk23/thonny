@@ -2001,9 +2001,6 @@ msgstr "AIアシスタント"
 msgid "AI assistant:"
 msgstr "AIアシスタント:"
 
-msgid "AIA - AI Mentor Assistant"
-msgstr "AIA - AIメンターアシスタント"
-
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIAはオンのままですが、ツール > オプション > AIアシスタント でプロバイダーを選択するまで応答しません。"
 
@@ -2094,9 +2091,6 @@ msgstr "AIアシスタント（AIA）付きのThonny。ThonnyはAivar Annamaaが
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "リクエストが多すぎるか、アカウントの利用枠を使い切りました。しばらく待ってからもう一度お試しください。"
 
-msgid "Type a question below (Enter sends, Shift+Enter = new line)."
-msgstr "下に質問を入力してください（Enterで送信、Shift+Enter = 改行）。"
-
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
 msgstr "不明なプロバイダー「%s」です。ツール > オプション > AIアシスタント で選択してください。"
 
@@ -2148,10 +2142,6 @@ msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
 msgstr "APIキーが拒否されました。ツール > オプション > AIアシスタント で確認してください。"
 
 #: thonny/plugins/aia
-msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
-msgstr "モデル「%s」は利用できなくなりました。ツール > オプション > AIアシスタント で別のプロバイダーを選択するか、新しいバージョンの Thonny AIA をインストールしてください。"
-
-#: thonny/plugins/aia
 msgid "Thinking..."
 msgstr "考えています..."
 
@@ -2166,3 +2156,63 @@ msgstr "AIA との会話はすべて削除されます。元に戻すことは�
 #: thonny/plugins/aia
 msgid "Write a message to the assistant..."
 msgstr "アシスタントへのメッセージを入力..."
+
+#: thonny/plugins/aia
+msgid "The assistant is resting..."
+msgstr "アシスタントは休憩中..."
+
+#: thonny/plugins/aia
+msgid "The assistant is loafing around..."
+msgstr "アシスタントはのんびり中..."
+
+#: thonny/plugins/aia
+msgid "The assistant is out for lunch..."
+msgstr "アシスタントは昼食中..."
+
+#: thonny/plugins/aia
+msgid "The assistant is having a coffee..."
+msgstr "アシスタントはコーヒータイム..."
+
+#: thonny/plugins/aia
+msgid "The assistant is reading a book..."
+msgstr "アシスタントは読書中..."
+
+#: thonny/plugins/aia
+msgid "The assistant is looking out of the window..."
+msgstr "アシスタントは窓の外を眺めています..."
+
+#: thonny/plugins/aia
+msgid "The assistant is stretching..."
+msgstr "アシスタントはストレッチ中..."
+
+#: thonny/plugins/aia
+msgid "The assistant is waking up..."
+msgstr "アシスタントが起きています..."
+
+#: thonny/plugins/aia
+msgid "Model:"
+msgstr "モデル:"
+
+#: thonny/plugins/aia
+msgid "%s (default)"
+msgstr "%s (既定)"
+
+#: thonny/plugins/aia
+msgid "Enter the API key to see the models it can use."
+msgstr "APIキーを入力すると、使えるモデルが表示されます。"
+
+#: thonny/plugins/aia
+msgid "Asking the provider for the models of this key..."
+msgstr "このキーのモデルをプロバイダーに問い合わせています..."
+
+#: thonny/plugins/aia
+msgid "The models this key can use."
+msgstr "このキーで使えるモデルです。"
+
+#: thonny/plugins/aia
+msgid "The provider did not list the models of this key; these are the usual ones."
+msgstr "プロバイダーがこのキーのモデルを返しませんでした。通常のモデルを表示しています。"
+
+#: thonny/plugins/aia
+msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
+msgstr "モデル %s は利用できません。ツール > オプション > AIアシスタント で別のモデルを選んでください。"

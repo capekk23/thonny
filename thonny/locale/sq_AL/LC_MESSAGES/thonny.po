@@ -1994,9 +1994,6 @@ msgstr "Asistenti AI"
 msgid "AI assistant:"
 msgstr "Asistenti AI:"
 
-msgid "AIA - AI Mentor Assistant"
-msgstr "AIA – asistent dhe mentor AI"
-
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA mbetet e aktivizuar, por do të përgjigjet vetëm pasi të zgjidhni një ofrues te Mjete > Opsione > Asistenti AI."
 
@@ -2087,9 +2084,6 @@ msgstr "Thonny me Asistentin AI (AIA). Thonny është krijuar nga Aivar Annamaa.
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "Shumë kërkesa ose kuota e llogarisë është shteruar. Prisni pak dhe provoni përsëri."
 
-msgid "Type a question below (Enter sends, Shift+Enter = new line)."
-msgstr "Shkruani një pyetje më poshtë (Enter e dërgon, Shift+Enter = rresht i ri)."
-
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
 msgstr "Ofrues i panjohur «%s». Zgjidhni një te Mjete > Opsione > Asistenti AI."
 
@@ -2141,10 +2135,6 @@ msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
 msgstr "Çelësi API u refuzua. Kontrollojeni te Mjete > Opsione > Asistenti AI."
 
 #: thonny/plugins/aia
-msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
-msgstr "Modeli «%s» nuk është më i disponueshëm. Zgjidhni një ofrues tjetër te Mjete > Opsione > Asistenti AI ose instaloni një version më të ri të Thonny AIA."
-
-#: thonny/plugins/aia
 msgid "Thinking..."
 msgstr "Po mendoj..."
 
@@ -2159,3 +2149,63 @@ msgstr "E gjithë biseda me AIA do të fshihet. Ky veprim nuk mund të zhbëhet.
 #: thonny/plugins/aia
 msgid "Write a message to the assistant..."
 msgstr "Shkruaj një mesazh për asistentin..."
+
+#: thonny/plugins/aia
+msgid "The assistant is resting..."
+msgstr "Asistenti po pushon..."
+
+#: thonny/plugins/aia
+msgid "The assistant is loafing around..."
+msgstr "Asistenti po përtacon..."
+
+#: thonny/plugins/aia
+msgid "The assistant is out for lunch..."
+msgstr "Asistenti është për drekë..."
+
+#: thonny/plugins/aia
+msgid "The assistant is having a coffee..."
+msgstr "Asistenti po pi një kafe..."
+
+#: thonny/plugins/aia
+msgid "The assistant is reading a book..."
+msgstr "Asistenti po lexon një libër..."
+
+#: thonny/plugins/aia
+msgid "The assistant is looking out of the window..."
+msgstr "Asistenti po sheh nga dritarja..."
+
+#: thonny/plugins/aia
+msgid "The assistant is stretching..."
+msgstr "Asistenti po shtriqet..."
+
+#: thonny/plugins/aia
+msgid "The assistant is waking up..."
+msgstr "Asistenti po zgjohet..."
+
+#: thonny/plugins/aia
+msgid "Model:"
+msgstr "Modeli:"
+
+#: thonny/plugins/aia
+msgid "%s (default)"
+msgstr "%s (i parazgjedhur)"
+
+#: thonny/plugins/aia
+msgid "Enter the API key to see the models it can use."
+msgstr "Fut çelësin API për të parë modelet që mund të përdorë."
+
+#: thonny/plugins/aia
+msgid "Asking the provider for the models of this key..."
+msgstr "Po pyes ofruesin për modelet e këtij çelësi..."
+
+#: thonny/plugins/aia
+msgid "The models this key can use."
+msgstr "Modelet që mund të përdorë ky çelës."
+
+#: thonny/plugins/aia
+msgid "The provider did not list the models of this key; these are the usual ones."
+msgstr "Ofruesi nuk i listoi modelet e këtij çelësi; këto janë të zakonshmet."
+
+#: thonny/plugins/aia
+msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
+msgstr "Modeli %s nuk është i disponueshëm. Zgjidh një model tjetër te Mjete > Opsione > Asistenti AI."

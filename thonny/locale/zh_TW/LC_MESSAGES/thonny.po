@@ -1984,9 +1984,6 @@ msgstr "AI 助理"
 msgid "AI assistant:"
 msgstr "AI 助理："
 
-msgid "AIA - AI Mentor Assistant"
-msgstr "AIA - AI 導師助理"
-
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA 會保持開啟，但要等您在「工具 > 選項 > AI 助理」中選擇服務供應商後才會回答。"
 
@@ -2077,9 +2074,6 @@ msgstr "搭配 AI 助理（AIA）的 Thonny。Thonny 由 Aivar Annamaa 開發。
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "請求過多，或帳戶配額已用完。請稍候片刻再試一次。"
 
-msgid "Type a question below (Enter sends, Shift+Enter = new line)."
-msgstr "在下方輸入問題（Enter 傳送，Shift+Enter = 換行）。"
-
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
 msgstr "未知的服務供應商「%s」。請在「工具 > 選項 > AI 助理」中選擇一個。"
 
@@ -2131,10 +2125,6 @@ msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
 msgstr "API 金鑰遭拒。請在「工具 > 選項 > AI 助理」中檢查。"
 
 #: thonny/plugins/aia
-msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
-msgstr "模型「%s」已無法使用。請在「工具 > 選項 > AI 助理」中選擇其他服務供應商，或安裝較新版本的 Thonny AIA。"
-
-#: thonny/plugins/aia
 msgid "Thinking..."
 msgstr "正在思考..."
 
@@ -2149,3 +2139,63 @@ msgstr "與 AIA 的整段對話將被刪除。此操作無法復原。"
 #: thonny/plugins/aia
 msgid "Write a message to the assistant..."
 msgstr "給助理寫則訊息..."
+
+#: thonny/plugins/aia
+msgid "The assistant is resting..."
+msgstr "助理正在休息..."
+
+#: thonny/plugins/aia
+msgid "The assistant is loafing around..."
+msgstr "助理正在偷懶..."
+
+#: thonny/plugins/aia
+msgid "The assistant is out for lunch..."
+msgstr "助理去吃午餐了..."
+
+#: thonny/plugins/aia
+msgid "The assistant is having a coffee..."
+msgstr "助理正在喝咖啡..."
+
+#: thonny/plugins/aia
+msgid "The assistant is reading a book..."
+msgstr "助理正在看書..."
+
+#: thonny/plugins/aia
+msgid "The assistant is looking out of the window..."
+msgstr "助理正在望著窗外..."
+
+#: thonny/plugins/aia
+msgid "The assistant is stretching..."
+msgstr "助理正在伸懶腰..."
+
+#: thonny/plugins/aia
+msgid "The assistant is waking up..."
+msgstr "助理正在醒來..."
+
+#: thonny/plugins/aia
+msgid "Model:"
+msgstr "模型："
+
+#: thonny/plugins/aia
+msgid "%s (default)"
+msgstr "%s（預設）"
+
+#: thonny/plugins/aia
+msgid "Enter the API key to see the models it can use."
+msgstr "輸入 API 金鑰，就能看到它可以使用的模型。"
+
+#: thonny/plugins/aia
+msgid "Asking the provider for the models of this key..."
+msgstr "正在向服務供應商查詢此金鑰的模型..."
+
+#: thonny/plugins/aia
+msgid "The models this key can use."
+msgstr "此金鑰可以使用的模型。"
+
+#: thonny/plugins/aia
+msgid "The provider did not list the models of this key; these are the usual ones."
+msgstr "服務供應商沒有列出此金鑰的模型；這些是常用的模型。"
+
+#: thonny/plugins/aia
+msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
+msgstr "無法使用模型 %s。請在「工具 > 選項 > AI 助理」中選擇其他模型。"

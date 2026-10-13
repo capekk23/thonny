@@ -2001,9 +2001,6 @@ msgstr "AA laguntzailea"
 msgid "AI assistant:"
 msgstr "AA laguntzailea:"
 
-msgid "AIA - AI Mentor Assistant"
-msgstr "AIA - AA tutore-laguntzailea"
-
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA piztuta geratuko da, baina hornitzaile bat hautatu ondoren bakarrik erantzungo du: Tresnak > Aukerak > AA laguntzailea."
 
@@ -2094,9 +2091,6 @@ msgstr "Thonny AA laguntzailearekin (AIA). Thonnyren egilea Aivar Annamaa da."
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "Eskaera gehiegi, edo kontuaren kuota agortu da. Itxaron une bat eta saiatu berriro."
 
-msgid "Type a question below (Enter sends, Shift+Enter = new line)."
-msgstr "Idatzi galdera bat behean (Enter = bidali, Shift+Enter = lerro berria)."
-
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
 msgstr "«%s» hornitzaile ezezaguna. Hautatu bat hemen: Tresnak > Aukerak > AA laguntzailea."
 
@@ -2148,10 +2142,6 @@ msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
 msgstr "API gakoa baztertu egin da. Egiaztatu hemen: Tresnak > Aukerak > AA laguntzailea."
 
 #: thonny/plugins/aia
-msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
-msgstr "«%s» eredua jada ez dago erabilgarri. Hautatu beste hornitzaile bat hemen: Tresnak > Aukerak > AA laguntzailea, edo instalatu Thonny AIA-ren bertsio berriago bat."
-
-#: thonny/plugins/aia
 msgid "Thinking..."
 msgstr "Pentsatzen..."
 
@@ -2166,3 +2156,63 @@ msgstr "AIArekin izandako elkarrizketa osoa ezabatuko da. Ezin da desegin."
 #: thonny/plugins/aia
 msgid "Write a message to the assistant..."
 msgstr "Idatzi mezu bat laguntzaileari..."
+
+#: thonny/plugins/aia
+msgid "The assistant is resting..."
+msgstr "Laguntzailea atseden hartzen ari da..."
+
+#: thonny/plugins/aia
+msgid "The assistant is loafing around..."
+msgstr "Laguntzailea alferkerian ari da..."
+
+#: thonny/plugins/aia
+msgid "The assistant is out for lunch..."
+msgstr "Laguntzailea bazkaltzen ari da..."
+
+#: thonny/plugins/aia
+msgid "The assistant is having a coffee..."
+msgstr "Laguntzailea kafe bat hartzen ari da..."
+
+#: thonny/plugins/aia
+msgid "The assistant is reading a book..."
+msgstr "Laguntzailea liburu bat irakurtzen ari da..."
+
+#: thonny/plugins/aia
+msgid "The assistant is looking out of the window..."
+msgstr "Laguntzailea leihotik begira dago..."
+
+#: thonny/plugins/aia
+msgid "The assistant is stretching..."
+msgstr "Laguntzailea luzatzen ari da..."
+
+#: thonny/plugins/aia
+msgid "The assistant is waking up..."
+msgstr "Laguntzailea esnatzen ari da..."
+
+#: thonny/plugins/aia
+msgid "Model:"
+msgstr "Eredua:"
+
+#: thonny/plugins/aia
+msgid "%s (default)"
+msgstr "%s (lehenetsia)"
+
+#: thonny/plugins/aia
+msgid "Enter the API key to see the models it can use."
+msgstr "Sartu API gakoa erabil ditzakeen ereduak ikusteko."
+
+#: thonny/plugins/aia
+msgid "Asking the provider for the models of this key..."
+msgstr "Gako honen ereduak hornitzaileari galdetzen..."
+
+#: thonny/plugins/aia
+msgid "The models this key can use."
+msgstr "Gako honek erabil ditzakeen ereduak."
+
+#: thonny/plugins/aia
+msgid "The provider did not list the models of this key; these are the usual ones."
+msgstr "Hornitzaileak ez ditu gako honen ereduak zerrendatu; hauek dira ohikoak."
+
+#: thonny/plugins/aia
+msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
+msgstr "%s eredua ez dago erabilgarri. Aukeratu beste eredu bat hemen: Tresnak > Aukerak > AA laguntzailea."

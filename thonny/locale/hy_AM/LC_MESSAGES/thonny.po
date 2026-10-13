@@ -1992,9 +1992,6 @@ msgstr "ԱԲ օգնական"
 msgid "AI assistant:"
 msgstr "ԱԲ օգնական:"
 
-msgid "AIA - AI Mentor Assistant"
-msgstr "AIA - ԱԲ մենթոր օգնական"
-
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA֊ն մնում է միացված, բայց կպատասխանի միայն այն բանից հետո, երբ մատակարար ընտրեք Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"
 
@@ -2085,9 +2082,6 @@ msgstr "Thonny՝ ԱԲ օգնականով (AIA)։ Thonny֊ն ստեղծել է Ai
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "Չափազանց շատ հարցումներ, կամ հաշվի սահմանաչափը սպառված է։ Մի փոքր սպասեք և փորձեք կրկին։"
 
-msgid "Type a question below (Enter sends, Shift+Enter = new line)."
-msgstr "Գրեք հարցը ներքևում (Enter֊ը ուղարկում է, Shift+Enter = նոր տող)։"
-
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
 msgstr "Անհայտ մատակարար՝ «%s»։ Ընտրեք մատակարար Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"
 
@@ -2139,10 +2133,6 @@ msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
 msgstr "API բանալին մերժվել է։ Ստուգեք այն Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"
 
 #: thonny/plugins/aia
-msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
-msgstr "«%s» մոդելն այլևս հասանելի չէ։ Ընտրեք այլ մատակարար Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում կամ տեղադրեք Thonny AIA֊ի ավելի նոր տարբերակ։"
-
-#: thonny/plugins/aia
 msgid "Thinking..."
 msgstr "Մտածում եմ..."
 
@@ -2157,3 +2147,63 @@ msgstr "AIA-ի հետ ամբողջ զրույցը կջնջվի։ Սա հնարա
 #: thonny/plugins/aia
 msgid "Write a message to the assistant..."
 msgstr "Գրիր հաղորդագրություն օգնականին..."
+
+#: thonny/plugins/aia
+msgid "The assistant is resting..."
+msgstr "Օգնականը հանգստանում է..."
+
+#: thonny/plugins/aia
+msgid "The assistant is loafing around..."
+msgstr "Օգնականը ծուլանում է..."
+
+#: thonny/plugins/aia
+msgid "The assistant is out for lunch..."
+msgstr "Օգնականը ճաշի է..."
+
+#: thonny/plugins/aia
+msgid "The assistant is having a coffee..."
+msgstr "Օգնականը սուրճ է խմում..."
+
+#: thonny/plugins/aia
+msgid "The assistant is reading a book..."
+msgstr "Օգնականը գիրք է կարդում..."
+
+#: thonny/plugins/aia
+msgid "The assistant is looking out of the window..."
+msgstr "Օգնականը նայում է պատուհանից դուրս..."
+
+#: thonny/plugins/aia
+msgid "The assistant is stretching..."
+msgstr "Օգնականը ձգվում է..."
+
+#: thonny/plugins/aia
+msgid "The assistant is waking up..."
+msgstr "Օգնականն արթնանում է..."
+
+#: thonny/plugins/aia
+msgid "Model:"
+msgstr "Մոդել՝"
+
+#: thonny/plugins/aia
+msgid "%s (default)"
+msgstr "%s (լռելյայն)"
+
+#: thonny/plugins/aia
+msgid "Enter the API key to see the models it can use."
+msgstr "Մուտքագրիր API բանալին՝ տեսնելու համար, թե որ մոդելները կարող է այն օգտագործել։"
+
+#: thonny/plugins/aia
+msgid "Asking the provider for the models of this key..."
+msgstr "Մատակարարից հարցնում եմ այս բանալու մոդելները..."
+
+#: thonny/plugins/aia
+msgid "The models this key can use."
+msgstr "Մոդելները, որոնք այս բանալին կարող է օգտագործել։"
+
+#: thonny/plugins/aia
+msgid "The provider did not list the models of this key; these are the usual ones."
+msgstr "Մատակարարը չթվարկեց այս բանալու մոդելները․ սրանք սովորականներն են։"
+
+#: thonny/plugins/aia
+msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
+msgstr "%s մոդելը հասանելի չէ։ Ընտրիր այլ մոդել Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"

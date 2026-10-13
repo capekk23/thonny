@@ -1983,9 +1983,6 @@ msgstr "DI asistentas"
 msgid "AI assistant:"
 msgstr "DI asistentas:"
 
-msgid "AIA - AI Mentor Assistant"
-msgstr "AIA - DI asistentas ir mentorius"
-
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA lieka įjungtas, bet atsakinės tik tada, kai pasirinksite teikėją skiltyje Įrankiai > Nustatymai > DI asistentas."
 
@@ -2076,9 +2073,6 @@ msgstr "Thonny su DI asistentu (AIA). Thonny sukūrė Aivar Annamaa."
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "Per daug užklausų arba išnaudota paskyros kvota. Šiek tiek palaukite ir bandykite dar kartą."
 
-msgid "Type a question below (Enter sends, Shift+Enter = new line)."
-msgstr "Įrašykite klausimą žemiau (Enter išsiunčia, Shift+Enter = nauja eilutė)."
-
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
 msgstr "Nežinomas teikėjas „%s“. Pasirinkite jį skiltyje Įrankiai > Nustatymai > DI asistentas."
 
@@ -2130,10 +2124,6 @@ msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
 msgstr "API raktas atmestas. Patikrinkite jį skiltyje Įrankiai > Nustatymai > DI asistentas."
 
 #: thonny/plugins/aia
-msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
-msgstr "Modelis „%s“ nebepasiekiamas. Pasirinkite kitą teikėją skiltyje Įrankiai > Nustatymai > DI asistentas arba įdiekite naujesnę Thonny AIA versiją."
-
-#: thonny/plugins/aia
 msgid "Thinking..."
 msgstr "Galvoju..."
 
@@ -2148,3 +2138,63 @@ msgstr "Visas pokalbis su AIA bus ištrintas. To negalima atšaukti."
 #: thonny/plugins/aia
 msgid "Write a message to the assistant..."
 msgstr "Parašyk žinutę asistentui..."
+
+#: thonny/plugins/aia
+msgid "The assistant is resting..."
+msgstr "Asistentas ilsisi..."
+
+#: thonny/plugins/aia
+msgid "The assistant is loafing around..."
+msgstr "Asistentas tinginiauja..."
+
+#: thonny/plugins/aia
+msgid "The assistant is out for lunch..."
+msgstr "Asistentas pietauja..."
+
+#: thonny/plugins/aia
+msgid "The assistant is having a coffee..."
+msgstr "Asistentas geria kavą..."
+
+#: thonny/plugins/aia
+msgid "The assistant is reading a book..."
+msgstr "Asistentas skaito knygą..."
+
+#: thonny/plugins/aia
+msgid "The assistant is looking out of the window..."
+msgstr "Asistentas žiūri pro langą..."
+
+#: thonny/plugins/aia
+msgid "The assistant is stretching..."
+msgstr "Asistentas rąžosi..."
+
+#: thonny/plugins/aia
+msgid "The assistant is waking up..."
+msgstr "Asistentas bunda..."
+
+#: thonny/plugins/aia
+msgid "Model:"
+msgstr "Modelis:"
+
+#: thonny/plugins/aia
+msgid "%s (default)"
+msgstr "%s (numatytasis)"
+
+#: thonny/plugins/aia
+msgid "Enter the API key to see the models it can use."
+msgstr "Įvesk API raktą, kad pamatytum modelius, kuriuos jis gali naudoti."
+
+#: thonny/plugins/aia
+msgid "Asking the provider for the models of this key..."
+msgstr "Klausiu teikėjo šio rakto modelių..."
+
+#: thonny/plugins/aia
+msgid "The models this key can use."
+msgstr "Modeliai, kuriuos gali naudoti šis raktas."
+
+#: thonny/plugins/aia
+msgid "The provider did not list the models of this key; these are the usual ones."
+msgstr "Teikėjas nepateikė šio rakto modelių; tai įprasti modeliai."
+
+#: thonny/plugins/aia
+msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
+msgstr "Modelis %s nepasiekiamas. Pasirink kitą modelį skiltyje Įrankiai > Nustatymai > DI asistentas."

@@ -1994,9 +1994,6 @@ msgstr "دستیار هوش مصنوعی"
 msgid "AI assistant:"
 msgstr "دستیار هوش مصنوعی:"
 
-msgid "AIA - AI Mentor Assistant"
-msgstr "AIA - دستیار و مربی هوش مصنوعی"
-
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA روشن می‌ماند، اما فقط پس از انتخاب یک ارائه‌دهنده در ابزارها > تنظیمات > دستیار هوش مصنوعی پاسخ خواهد داد."
 
@@ -2087,9 +2084,6 @@ msgstr "Thonny همراه با دستیار هوش مصنوعی (AIA). سازن�
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "تعداد درخواست‌ها بیش از حد است یا سهمیهٔ حساب تمام شده است. کمی صبر کنید و دوباره تلاش کنید."
 
-msgid "Type a question below (Enter sends, Shift+Enter = new line)."
-msgstr "پرسش خود را پایین بنویسید (Enter ارسال می‌کند، Shift+Enter = خط جدید)."
-
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
 msgstr "ارائه‌دهندهٔ ناشناخته «%s». یکی را در ابزارها > تنظیمات > دستیار هوش مصنوعی انتخاب کنید."
 
@@ -2141,10 +2135,6 @@ msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
 msgstr "کلید API پذیرفته نشد. آن را در ابزارها > تنظیمات > دستیار هوش مصنوعی بررسی کنید."
 
 #: thonny/plugins/aia
-msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
-msgstr "مدل «%s» دیگر در دسترس نیست. ارائه‌دهندهٔ دیگری را در ابزارها > تنظیمات > دستیار هوش مصنوعی انتخاب کنید، یا نسخهٔ جدیدتری از Thonny AIA را نصب کنید."
-
-#: thonny/plugins/aia
 msgid "Thinking..."
 msgstr "در حال فکر کردن..."
 
@@ -2159,3 +2149,63 @@ msgstr "کل گفتگو با AIA حذف خواهد شد. این کار قابل 
 #: thonny/plugins/aia
 msgid "Write a message to the assistant..."
 msgstr "یک پیام برای دستیار بنویس..."
+
+#: thonny/plugins/aia
+msgid "The assistant is resting..."
+msgstr "دستیار در حال استراحت است..."
+
+#: thonny/plugins/aia
+msgid "The assistant is loafing around..."
+msgstr "دستیار وقت می‌گذراند..."
+
+#: thonny/plugins/aia
+msgid "The assistant is out for lunch..."
+msgstr "دستیار برای ناهار رفته است..."
+
+#: thonny/plugins/aia
+msgid "The assistant is having a coffee..."
+msgstr "دستیار دارد قهوه می‌نوشد..."
+
+#: thonny/plugins/aia
+msgid "The assistant is reading a book..."
+msgstr "دستیار دارد کتاب می‌خواند..."
+
+#: thonny/plugins/aia
+msgid "The assistant is looking out of the window..."
+msgstr "دستیار دارد از پنجره بیرون را نگاه می‌کند..."
+
+#: thonny/plugins/aia
+msgid "The assistant is stretching..."
+msgstr "دستیار دارد کش و قوس می‌آید..."
+
+#: thonny/plugins/aia
+msgid "The assistant is waking up..."
+msgstr "دستیار دارد بیدار می‌شود..."
+
+#: thonny/plugins/aia
+msgid "Model:"
+msgstr "مدل:"
+
+#: thonny/plugins/aia
+msgid "%s (default)"
+msgstr "%s (پیش‌فرض)"
+
+#: thonny/plugins/aia
+msgid "Enter the API key to see the models it can use."
+msgstr "کلید API را وارد کن تا مدل‌هایی را که می‌تواند استفاده کند ببینی."
+
+#: thonny/plugins/aia
+msgid "Asking the provider for the models of this key..."
+msgstr "در حال پرسیدن مدل‌های این کلید از ارائه‌دهنده..."
+
+#: thonny/plugins/aia
+msgid "The models this key can use."
+msgstr "مدل‌هایی که این کلید می‌تواند استفاده کند."
+
+#: thonny/plugins/aia
+msgid "The provider did not list the models of this key; these are the usual ones."
+msgstr "ارائه‌دهنده مدل‌های این کلید را فهرست نکرد؛ این‌ها مدل‌های معمول هستند."
+
+#: thonny/plugins/aia
+msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
+msgstr "مدل %s در دسترس نیست. در ابزارها > تنظیمات > دستیار هوش مصنوعی مدل دیگری انتخاب کن."

@@ -1981,9 +1981,6 @@ msgstr "AI 도우미"
 msgid "AI assistant:"
 msgstr "AI 도우미:"
 
-msgid "AIA - AI Mentor Assistant"
-msgstr "AIA - AI 멘토 도우미"
-
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA는 켜진 상태로 유지되지만, 도구 > 옵션 > AI 도우미에서 제공자를 선택한 후에만 답변합니다."
 
@@ -2074,9 +2071,6 @@ msgstr "AI 도우미(AIA)가 포함된 Thonny. Thonny는 Aivar Annamaa가 만들
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "요청이 너무 많거나 계정 사용 한도를 모두 썼습니다. 잠시 기다린 후 다시 시도하세요."
 
-msgid "Type a question below (Enter sends, Shift+Enter = new line)."
-msgstr "아래에 질문을 입력하세요 (Enter = 보내기, Shift+Enter = 줄 바꿈)."
-
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
 msgstr "알 수 없는 제공자 '%s'입니다. 도구 > 옵션 > AI 도우미에서 선택하세요."
 
@@ -2128,10 +2122,6 @@ msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
 msgstr "API 키가 거부되었습니다. 도구 > 옵션 > AI 도우미에서 확인하세요."
 
 #: thonny/plugins/aia
-msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
-msgstr "모델 '%s'은(는) 더 이상 사용할 수 없습니다. 도구 > 옵션 > AI 도우미에서 다른 제공자를 선택하거나 최신 버전의 Thonny AIA를 설치하세요."
-
-#: thonny/plugins/aia
 msgid "Thinking..."
 msgstr "생각하는 중..."
 
@@ -2146,3 +2136,63 @@ msgstr "AIA와의 대화 전체가 삭제됩니다. 이 작업은 되돌릴 수 
 #: thonny/plugins/aia
 msgid "Write a message to the assistant..."
 msgstr "어시스턴트에게 메시지를 입력하세요..."
+
+#: thonny/plugins/aia
+msgid "The assistant is resting..."
+msgstr "도우미가 쉬는 중..."
+
+#: thonny/plugins/aia
+msgid "The assistant is loafing around..."
+msgstr "도우미가 빈둥거리는 중..."
+
+#: thonny/plugins/aia
+msgid "The assistant is out for lunch..."
+msgstr "도우미가 점심 먹는 중..."
+
+#: thonny/plugins/aia
+msgid "The assistant is having a coffee..."
+msgstr "도우미가 커피 마시는 중..."
+
+#: thonny/plugins/aia
+msgid "The assistant is reading a book..."
+msgstr "도우미가 책 읽는 중..."
+
+#: thonny/plugins/aia
+msgid "The assistant is looking out of the window..."
+msgstr "도우미가 창밖을 보는 중..."
+
+#: thonny/plugins/aia
+msgid "The assistant is stretching..."
+msgstr "도우미가 기지개 켜는 중..."
+
+#: thonny/plugins/aia
+msgid "The assistant is waking up..."
+msgstr "도우미가 깨어나는 중..."
+
+#: thonny/plugins/aia
+msgid "Model:"
+msgstr "모델:"
+
+#: thonny/plugins/aia
+msgid "%s (default)"
+msgstr "%s (기본값)"
+
+#: thonny/plugins/aia
+msgid "Enter the API key to see the models it can use."
+msgstr "API 키를 입력하면 쓸 수 있는 모델이 보여."
+
+#: thonny/plugins/aia
+msgid "Asking the provider for the models of this key..."
+msgstr "제공자에게 이 키의 모델을 묻는 중..."
+
+#: thonny/plugins/aia
+msgid "The models this key can use."
+msgstr "이 키로 쓸 수 있는 모델."
+
+#: thonny/plugins/aia
+msgid "The provider did not list the models of this key; these are the usual ones."
+msgstr "제공자가 이 키의 모델을 알려 주지 않았어. 보통 쓰는 모델이야."
+
+#: thonny/plugins/aia
+msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
+msgstr "모델 %s을(를) 사용할 수 없어. 도구 > 옵션 > AI 도우미에서 다른 모델을 골라."

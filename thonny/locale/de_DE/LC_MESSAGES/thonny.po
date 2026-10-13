@@ -1991,9 +1991,6 @@ msgstr "KI-Assistent"
 msgid "AI assistant:"
 msgstr "KI-Assistent:"
 
-msgid "AIA - AI Mentor Assistant"
-msgstr "AIA – KI-Mentor-Assistent"
-
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA bleibt eingeschaltet, antwortet aber erst, wenn Sie unter Werkzeuge > Optionen > KI-Assistent einen Anbieter auswählen."
 
@@ -2084,9 +2081,6 @@ msgstr "Thonny mit dem KI-Assistenten (AIA). Thonny wird von Aivar Annamaa entwi
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "Zu viele Anfragen oder das Kontingent des Kontos ist aufgebraucht. Warten Sie einen Moment und versuchen Sie es erneut."
 
-msgid "Type a question below (Enter sends, Shift+Enter = new line)."
-msgstr "Geben Sie unten eine Frage ein (Enter sendet, Shift+Enter = neue Zeile)."
-
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
 msgstr "Unbekannter Anbieter „%s“. Wählen Sie unter Werkzeuge > Optionen > KI-Assistent einen aus."
 
@@ -2138,10 +2132,6 @@ msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
 msgstr "Der API-Schlüssel wurde abgelehnt. Prüfen Sie ihn unter Werkzeuge > Optionen > KI-Assistent."
 
 #: thonny/plugins/aia
-msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
-msgstr "Das Modell „%s“ ist nicht mehr verfügbar. Wählen Sie unter Werkzeuge > Optionen > KI-Assistent einen anderen Anbieter oder installieren Sie eine neuere Version von Thonny AIA."
-
-#: thonny/plugins/aia
 msgid "Thinking..."
 msgstr "Denke nach..."
 
@@ -2156,3 +2146,63 @@ msgstr "Die gesamte Unterhaltung mit AIA wird gelöscht. Dies kann nicht rückg�
 #: thonny/plugins/aia
 msgid "Write a message to the assistant..."
 msgstr "Schreib dem Assistenten eine Nachricht..."
+
+#: thonny/plugins/aia
+msgid "The assistant is resting..."
+msgstr "Der Assistent ruht sich aus..."
+
+#: thonny/plugins/aia
+msgid "The assistant is loafing around..."
+msgstr "Der Assistent faulenzt..."
+
+#: thonny/plugins/aia
+msgid "The assistant is out for lunch..."
+msgstr "Der Assistent ist beim Mittagessen..."
+
+#: thonny/plugins/aia
+msgid "The assistant is having a coffee..."
+msgstr "Der Assistent trinkt einen Kaffee..."
+
+#: thonny/plugins/aia
+msgid "The assistant is reading a book..."
+msgstr "Der Assistent liest ein Buch..."
+
+#: thonny/plugins/aia
+msgid "The assistant is looking out of the window..."
+msgstr "Der Assistent schaut aus dem Fenster..."
+
+#: thonny/plugins/aia
+msgid "The assistant is stretching..."
+msgstr "Der Assistent streckt sich..."
+
+#: thonny/plugins/aia
+msgid "The assistant is waking up..."
+msgstr "Der Assistent wacht auf..."
+
+#: thonny/plugins/aia
+msgid "Model:"
+msgstr "Modell:"
+
+#: thonny/plugins/aia
+msgid "%s (default)"
+msgstr "%s (Standard)"
+
+#: thonny/plugins/aia
+msgid "Enter the API key to see the models it can use."
+msgstr "Gib den API-Schlüssel ein, um die Modelle zu sehen, die er nutzen kann."
+
+#: thonny/plugins/aia
+msgid "Asking the provider for the models of this key..."
+msgstr "Frage den Anbieter nach den Modellen dieses Schlüssels..."
+
+#: thonny/plugins/aia
+msgid "The models this key can use."
+msgstr "Die Modelle, die dieser Schlüssel nutzen kann."
+
+#: thonny/plugins/aia
+msgid "The provider did not list the models of this key; these are the usual ones."
+msgstr "Der Anbieter hat die Modelle dieses Schlüssels nicht aufgelistet; das sind die üblichen."
+
+#: thonny/plugins/aia
+msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
+msgstr "Das Modell %s ist nicht verfügbar. Wähle unter Werkzeuge > Optionen > KI-Assistent ein anderes Modell."

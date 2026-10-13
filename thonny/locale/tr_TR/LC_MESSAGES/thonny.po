@@ -2000,9 +2000,6 @@ msgstr "AI Yardımcısı"
 msgid "AI assistant:"
 msgstr "AI yardımcısı:"
 
-msgid "AIA - AI Mentor Assistant"
-msgstr "AIA - AI Mentor Yardımcısı"
-
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA açık kalır, ancak yalnızca Araçlar > Seçenekler > AI Yardımcısı bölümünde bir sağlayıcı seçtikten sonra yanıt verir."
 
@@ -2093,9 +2090,6 @@ msgstr "AI Yardımcısı (AIA) ile Thonny. Thonny, Aivar Annamaa tarafından gel
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "Çok fazla istek var veya hesabın kotası doldu. Biraz bekleyip tekrar deneyin."
 
-msgid "Type a question below (Enter sends, Shift+Enter = new line)."
-msgstr "Sorunuzu aşağıya yazın (Enter gönderir, Shift+Enter = yeni satır)."
-
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
 msgstr "Bilinmeyen sağlayıcı: '%s'. Araçlar > Seçenekler > AI Yardımcısı bölümünden bir sağlayıcı seçin."
 
@@ -2147,10 +2141,6 @@ msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
 msgstr "API anahtarı reddedildi. Araçlar > Seçenekler > AI Yardımcısı bölümünden kontrol edin."
 
 #: thonny/plugins/aia
-msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
-msgstr "'%s' modeli artık kullanılamıyor. Araçlar > Seçenekler > AI Yardımcısı bölümünden başka bir sağlayıcı seçin veya daha yeni bir Thonny AIA sürümü yükleyin."
-
-#: thonny/plugins/aia
 msgid "Thinking..."
 msgstr "Düşünüyorum..."
 
@@ -2165,3 +2155,63 @@ msgstr "AIA ile yapılan sohbetin tamamı silinecek. Bu işlem geri alınamaz."
 #: thonny/plugins/aia
 msgid "Write a message to the assistant..."
 msgstr "Asistana bir mesaj yaz..."
+
+#: thonny/plugins/aia
+msgid "The assistant is resting..."
+msgstr "Yardımcı dinleniyor..."
+
+#: thonny/plugins/aia
+msgid "The assistant is loafing around..."
+msgstr "Yardımcı aylaklık ediyor..."
+
+#: thonny/plugins/aia
+msgid "The assistant is out for lunch..."
+msgstr "Yardımcı öğle yemeğinde..."
+
+#: thonny/plugins/aia
+msgid "The assistant is having a coffee..."
+msgstr "Yardımcı kahve içiyor..."
+
+#: thonny/plugins/aia
+msgid "The assistant is reading a book..."
+msgstr "Yardımcı kitap okuyor..."
+
+#: thonny/plugins/aia
+msgid "The assistant is looking out of the window..."
+msgstr "Yardımcı pencereden dışarı bakıyor..."
+
+#: thonny/plugins/aia
+msgid "The assistant is stretching..."
+msgstr "Yardımcı gerinip esniyor..."
+
+#: thonny/plugins/aia
+msgid "The assistant is waking up..."
+msgstr "Yardımcı uyanıyor..."
+
+#: thonny/plugins/aia
+msgid "Model:"
+msgstr "Model:"
+
+#: thonny/plugins/aia
+msgid "%s (default)"
+msgstr "%s (varsayılan)"
+
+#: thonny/plugins/aia
+msgid "Enter the API key to see the models it can use."
+msgstr "Kullanabileceği modelleri görmek için API anahtarını gir."
+
+#: thonny/plugins/aia
+msgid "Asking the provider for the models of this key..."
+msgstr "Sağlayıcıya bu anahtarın modelleri soruluyor..."
+
+#: thonny/plugins/aia
+msgid "The models this key can use."
+msgstr "Bu anahtarın kullanabileceği modeller."
+
+#: thonny/plugins/aia
+msgid "The provider did not list the models of this key; these are the usual ones."
+msgstr "Sağlayıcı bu anahtarın modellerini listelemedi; bunlar olağan modeller."
+
+#: thonny/plugins/aia
+msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
+msgstr "%s modeli kullanılamıyor. Araçlar > Seçenekler > AI Yardımcısı bölümünde başka bir model seç."

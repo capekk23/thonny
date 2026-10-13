@@ -1951,9 +1951,6 @@ msgstr "AI സഹായി"
 msgid "AI assistant:"
 msgstr "AI സഹായി:"
 
-msgid "AIA - AI Mentor Assistant"
-msgstr "AIA - AI മെന്റർ സഹായി"
-
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA ഓണായിത്തന്നെ തുടരും, പക്ഷേ ഉപകരണങ്ങൾ > ഐച്ഛികങ്ങൾ > AI സഹായി എന്നതിൽ ഒരു ദാതാവിനെ തിരഞ്ഞെടുത്തതിനു ശേഷം മാത്രമേ അത് മറുപടി നൽകൂ."
 
@@ -2044,9 +2041,6 @@ msgstr "AI സഹായിയോടു കൂടിയ Thonny (AIA). Thonny ന�
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "അഭ്യർത്ഥനകൾ വളരെ കൂടുതലാണ്, അല്ലെങ്കിൽ അക്കൗണ്ടിന്റെ പരിധി തീർന്നു. അൽപ്പസമയം കാത്തിരുന്ന് വീണ്ടും ശ്രമിക്കുക."
 
-msgid "Type a question below (Enter sends, Shift+Enter = new line)."
-msgstr "താഴെ ഒരു ചോദ്യം ടൈപ്പ് ചെയ്യുക (Enter അയയ്ക്കും, Shift+Enter = പുതിയ വരി)."
-
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
 msgstr "അജ്ഞാത ദാതാവ് '%s'. ഉപകരണങ്ങൾ > ഐച്ഛികങ്ങൾ > AI സഹായി എന്നതിൽ ഒന്ന് തിരഞ്ഞെടുക്കുക."
 
@@ -2098,10 +2092,6 @@ msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
 msgstr "API കീ നിരസിക്കപ്പെട്ടു. ഉപകരണങ്ങൾ > ഐച്ഛികങ്ങൾ > AI സഹായി എന്നതിൽ അത് പരിശോധിക്കുക."
 
 #: thonny/plugins/aia
-msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
-msgstr "'%s' എന്ന മോഡൽ ഇപ്പോൾ ലഭ്യമല്ല. ഉപകരണങ്ങൾ > ഐച്ഛികങ്ങൾ > AI സഹായി എന്നതിൽ മറ്റൊരു ദാതാവിനെ തിരഞ്ഞെടുക്കുക, അല്ലെങ്കിൽ Thonny AIA-യുടെ പുതിയ പതിപ്പ് ഇൻസ്റ്റാൾ ചെയ്യുക."
-
-#: thonny/plugins/aia
 msgid "Thinking..."
 msgstr "ചിന്തിക്കുന്നു..."
 
@@ -2116,3 +2106,63 @@ msgstr "AIA-യുമായുള്ള മുഴുവൻ സംഭാഷണവ
 #: thonny/plugins/aia
 msgid "Write a message to the assistant..."
 msgstr "സഹായിക്ക് ഒരു സന്ദേശം എഴുതുക..."
+
+#: thonny/plugins/aia
+msgid "The assistant is resting..."
+msgstr "സഹായി വിശ്രമിക്കുന്നു..."
+
+#: thonny/plugins/aia
+msgid "The assistant is loafing around..."
+msgstr "സഹായി അലസമായിരിക്കുന്നു..."
+
+#: thonny/plugins/aia
+msgid "The assistant is out for lunch..."
+msgstr "സഹായി ഉച്ചഭക്ഷണത്തിന് പോയി..."
+
+#: thonny/plugins/aia
+msgid "The assistant is having a coffee..."
+msgstr "സഹായി കാപ്പി കുടിക്കുന്നു..."
+
+#: thonny/plugins/aia
+msgid "The assistant is reading a book..."
+msgstr "സഹായി ഒരു പുസ്തകം വായിക്കുന്നു..."
+
+#: thonny/plugins/aia
+msgid "The assistant is looking out of the window..."
+msgstr "സഹായി ജനാലയിലൂടെ പുറത്തേക്ക് നോക്കുന്നു..."
+
+#: thonny/plugins/aia
+msgid "The assistant is stretching..."
+msgstr "സഹായി മൂരി നിവർത്തുന്നു..."
+
+#: thonny/plugins/aia
+msgid "The assistant is waking up..."
+msgstr "സഹായി ഉണരുന്നു..."
+
+#: thonny/plugins/aia
+msgid "Model:"
+msgstr "മോഡൽ:"
+
+#: thonny/plugins/aia
+msgid "%s (default)"
+msgstr "%s (സ്ഥിരസ്ഥിതി)"
+
+#: thonny/plugins/aia
+msgid "Enter the API key to see the models it can use."
+msgstr "ഈ കീക്ക് ഉപയോഗിക്കാവുന്ന മോഡലുകൾ കാണാൻ API കീ നൽകൂ."
+
+#: thonny/plugins/aia
+msgid "Asking the provider for the models of this key..."
+msgstr "ഈ കീയുടെ മോഡലുകൾ ദാതാവിനോട് ചോദിക്കുന്നു..."
+
+#: thonny/plugins/aia
+msgid "The models this key can use."
+msgstr "ഈ കീക്ക് ഉപയോഗിക്കാവുന്ന മോഡലുകൾ."
+
+#: thonny/plugins/aia
+msgid "The provider did not list the models of this key; these are the usual ones."
+msgstr "ദാതാവ് ഈ കീയുടെ മോഡലുകൾ പട്ടികപ്പെടുത്തിയില്ല; ഇവ സാധാരണ മോഡലുകളാണ്."
+
+#: thonny/plugins/aia
+msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
+msgstr "മോഡൽ %s ലഭ്യമല്ല. ഉപകരണങ്ങൾ > ഐച്ഛികങ്ങൾ > AI സഹായി എന്നതിൽ മറ്റൊരു മോഡൽ തിരഞ്ഞെടുക്കൂ."

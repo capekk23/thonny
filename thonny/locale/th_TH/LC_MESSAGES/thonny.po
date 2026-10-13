@@ -2001,9 +2001,6 @@ msgstr "ผู้ช่วย AI"
 msgid "AI assistant:"
 msgstr "ผู้ช่วย AI:"
 
-msgid "AIA - AI Mentor Assistant"
-msgstr "AIA - ผู้ช่วยและพี่เลี้ยง AI"
-
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA ยังคงเปิดอยู่ แต่จะตอบได้ก็ต่อเมื่อคุณเลือกผู้ให้บริการใน เครื่องมือ > ตัวเลือก > ผู้ช่วย AI แล้ว"
 
@@ -2094,9 +2091,6 @@ msgstr "Thonny พร้อมผู้ช่วย AI (AIA) Thonny สร้า
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "มีคำขอมากเกินไป หรือโควตาของบัญชีหมดแล้ว รอสักครู่แล้วลองอีกครั้ง"
 
-msgid "Type a question below (Enter sends, Shift+Enter = new line)."
-msgstr "พิมพ์คำถามด้านล่าง (Enter = ส่ง, Shift+Enter = ขึ้นบรรทัดใหม่)"
-
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
 msgstr "ไม่รู้จักผู้ให้บริการ '%s' เลือกผู้ให้บริการใน เครื่องมือ > ตัวเลือก > ผู้ช่วย AI"
 
@@ -2148,10 +2142,6 @@ msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
 msgstr "คีย์ API ถูกปฏิเสธ ตรวจสอบได้ใน เครื่องมือ > ตัวเลือก > ผู้ช่วย AI"
 
 #: thonny/plugins/aia
-msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
-msgstr "โมเดล '%s' ไม่มีให้ใช้แล้ว เลือกผู้ให้บริการอื่นใน เครื่องมือ > ตัวเลือก > ผู้ช่วย AI หรือติดตั้ง Thonny AIA เวอร์ชันใหม่กว่า"
-
-#: thonny/plugins/aia
 msgid "Thinking..."
 msgstr "กำลังคิด..."
 
@@ -2166,3 +2156,63 @@ msgstr "บทสนทนาทั้งหมดกับ AIA จะถูก�
 #: thonny/plugins/aia
 msgid "Write a message to the assistant..."
 msgstr "พิมพ์ข้อความถึงผู้ช่วย..."
+
+#: thonny/plugins/aia
+msgid "The assistant is resting..."
+msgstr "ผู้ช่วยกำลังพักผ่อน..."
+
+#: thonny/plugins/aia
+msgid "The assistant is loafing around..."
+msgstr "ผู้ช่วยกำลังอู้งาน..."
+
+#: thonny/plugins/aia
+msgid "The assistant is out for lunch..."
+msgstr "ผู้ช่วยไปกินข้าวกลางวัน..."
+
+#: thonny/plugins/aia
+msgid "The assistant is having a coffee..."
+msgstr "ผู้ช่วยกำลังดื่มกาแฟ..."
+
+#: thonny/plugins/aia
+msgid "The assistant is reading a book..."
+msgstr "ผู้ช่วยกำลังอ่านหนังสือ..."
+
+#: thonny/plugins/aia
+msgid "The assistant is looking out of the window..."
+msgstr "ผู้ช่วยกำลังมองออกไปนอกหน้าต่าง..."
+
+#: thonny/plugins/aia
+msgid "The assistant is stretching..."
+msgstr "ผู้ช่วยกำลังบิดขี้เกียจ..."
+
+#: thonny/plugins/aia
+msgid "The assistant is waking up..."
+msgstr "ผู้ช่วยกำลังตื่น..."
+
+#: thonny/plugins/aia
+msgid "Model:"
+msgstr "โมเดล:"
+
+#: thonny/plugins/aia
+msgid "%s (default)"
+msgstr "%s (ค่าเริ่มต้น)"
+
+#: thonny/plugins/aia
+msgid "Enter the API key to see the models it can use."
+msgstr "ใส่คีย์ API เพื่อดูโมเดลที่คีย์นี้ใช้ได้"
+
+#: thonny/plugins/aia
+msgid "Asking the provider for the models of this key..."
+msgstr "กำลังถามผู้ให้บริการถึงโมเดลของคีย์นี้..."
+
+#: thonny/plugins/aia
+msgid "The models this key can use."
+msgstr "โมเดลที่คีย์นี้ใช้ได้"
+
+#: thonny/plugins/aia
+msgid "The provider did not list the models of this key; these are the usual ones."
+msgstr "ผู้ให้บริการไม่ได้แสดงรายการโมเดลของคีย์นี้ นี่คือโมเดลที่ใช้ทั่วไป"
+
+#: thonny/plugins/aia
+msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
+msgstr "ไม่มีโมเดล %s ให้ใช้ เลือกโมเดลอื่นได้ใน เครื่องมือ > ตัวเลือก > ผู้ช่วย AI"

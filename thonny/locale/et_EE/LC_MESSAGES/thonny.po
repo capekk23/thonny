@@ -2004,9 +2004,6 @@ msgstr "AI-assistent"
 msgid "AI assistant:"
 msgstr "AI-assistent:"
 
-msgid "AIA - AI Mentor Assistant"
-msgstr "AIA – AI-mentor ja assistent"
-
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA jääb sisse lülitatuks, kuid hakkab vastama alles siis, kui valid teenusepakkuja menüüs Tööriistad > Seaded > AI-assistent."
 
@@ -2097,9 +2094,6 @@ msgstr "Thonny koos AI-assistendiga (AIA). Thonny autor on Aivar Annamaa."
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "Liiga palju päringuid või konto kvoot on täis. Oota hetk ja proovi uuesti."
 
-msgid "Type a question below (Enter sends, Shift+Enter = new line)."
-msgstr "Kirjuta küsimus allpool (Enter saadab, Shift+Enter = uus rida)."
-
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
 msgstr "Tundmatu teenusepakkuja „%s“. Vali see menüüs Tööriistad > Seaded > AI-assistent."
 
@@ -2151,10 +2145,6 @@ msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
 msgstr "API-võti lükati tagasi. Kontrolli seda menüüs Tööriistad > Seaded > AI-assistent."
 
 #: thonny/plugins/aia
-msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
-msgstr "Mudel „%s“ pole enam saadaval. Vali menüüs Tööriistad > Seaded > AI-assistent mõni teine teenusepakkuja või paigalda Thonny AIA uuem versioon."
-
-#: thonny/plugins/aia
 msgid "Thinking..."
 msgstr "Mõtlen..."
 
@@ -2169,3 +2159,63 @@ msgstr "Kogu vestlus AIA-ga kustutatakse. Seda ei saa tagasi võtta."
 #: thonny/plugins/aia
 msgid "Write a message to the assistant..."
 msgstr "Kirjuta assistendile sõnum..."
+
+#: thonny/plugins/aia
+msgid "The assistant is resting..."
+msgstr "Assistent puhkab..."
+
+#: thonny/plugins/aia
+msgid "The assistant is loafing around..."
+msgstr "Assistent logeleb..."
+
+#: thonny/plugins/aia
+msgid "The assistant is out for lunch..."
+msgstr "Assistent on lõunal..."
+
+#: thonny/plugins/aia
+msgid "The assistant is having a coffee..."
+msgstr "Assistent joob kohvi..."
+
+#: thonny/plugins/aia
+msgid "The assistant is reading a book..."
+msgstr "Assistent loeb raamatut..."
+
+#: thonny/plugins/aia
+msgid "The assistant is looking out of the window..."
+msgstr "Assistent vaatab aknast välja..."
+
+#: thonny/plugins/aia
+msgid "The assistant is stretching..."
+msgstr "Assistent venitab end..."
+
+#: thonny/plugins/aia
+msgid "The assistant is waking up..."
+msgstr "Assistent ärkab..."
+
+#: thonny/plugins/aia
+msgid "Model:"
+msgstr "Mudel:"
+
+#: thonny/plugins/aia
+msgid "%s (default)"
+msgstr "%s (vaikimisi)"
+
+#: thonny/plugins/aia
+msgid "Enter the API key to see the models it can use."
+msgstr "Sisesta API-võti, et näha mudeleid, mida see kasutada saab."
+
+#: thonny/plugins/aia
+msgid "Asking the provider for the models of this key..."
+msgstr "Küsin teenusepakkujalt selle võtme mudeleid..."
+
+#: thonny/plugins/aia
+msgid "The models this key can use."
+msgstr "Mudelid, mida see võti kasutada saab."
+
+#: thonny/plugins/aia
+msgid "The provider did not list the models of this key; these are the usual ones."
+msgstr "Teenusepakkuja ei andnud selle võtme mudeleid; need on tavalised."
+
+#: thonny/plugins/aia
+msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
+msgstr "Mudel %s pole saadaval. Vali teine mudel menüüs Tööriistad > Seaded > AI-assistent."

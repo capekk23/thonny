@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-10-13 12:24+0200\n"
+"POT-Creation-Date: 2026-10-13 15:12+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -273,7 +273,7 @@ msgid "OK"
 msgstr ""
 
 #: thonny/base_file_browser.py:1382 thonny/config_ui.py:42 thonny/export.py:28
-#: thonny/plugins/aia/_panel/view.py:218
+#: thonny/plugins/aia/_panel/view.py:247
 #: thonny/plugins/backend_config_page.py:288 thonny/plugins/pip_gui.py:1419
 #: thonny/ui_utils.py:161 thonny/ui_utils.py:1749 thonny/ui_utils.py:1835
 #: thonny/workdlg.py:206 thonny/workdlg.py:261
@@ -538,16 +538,16 @@ msgstr ""
 msgid "Raspberry Pi (simple)"
 msgstr ""
 
-#: thonny/first_run.py:89
+#: thonny/first_run.py:95
 #, python-format
 msgid "Local model (Ollama, %s)"
 msgstr ""
 
-#: thonny/first_run.py:92
+#: thonny/first_run.py:98
 msgid "I will set it up later"
 msgstr ""
 
-#: thonny/first_run.py:98
+#: thonny/first_run.py:104
 #, python-format
 msgid ""
 "Answers come from %s. You need an API key: create it at the link below, "
@@ -555,67 +555,67 @@ msgid ""
 "Options > AI Assistant."
 msgstr ""
 
-#: thonny/first_run.py:108
+#: thonny/first_run.py:114
 #, python-format
 msgid ""
 "Ollama is not installed. Install it from the link below, then download "
 "the model: 'ollama pull %s' (13 GB)."
 msgstr ""
 
-#: thonny/first_run.py:112
+#: thonny/first_run.py:118
 msgid "Ollama is installed but not running. Start it."
 msgstr ""
 
-#: thonny/first_run.py:114
+#: thonny/first_run.py:120
 #, python-format
 msgid ""
 "Ollama is running, but the model is missing. Download it: 'ollama pull "
 "%s' (13 GB)."
 msgstr ""
 
-#: thonny/first_run.py:116
+#: thonny/first_run.py:122
 #, python-format
 msgid "Ollama is running and the model %s is ready."
 msgstr ""
 
-#: thonny/first_run.py:121
+#: thonny/first_run.py:127
 msgid ""
 "It runs offline, needs about 14 GB of free RAM and, without a strong "
 "graphics card, answers in 20-70 s."
 msgstr ""
 
-#: thonny/first_run.py:129
+#: thonny/first_run.py:135
 msgid ""
 "AIA stays switched on, but it will answer only after you choose a "
 "provider in Tools > Options > AI Assistant."
 msgstr ""
 
-#: thonny/first_run.py:174
+#: thonny/first_run.py:180
 msgid "Language:"
 msgstr ""
 
-#: thonny/first_run.py:182
+#: thonny/first_run.py:188
 msgid "Initial settings:"
 msgstr ""
 
-#: thonny/first_run.py:189 thonny/plugins/aia/_panel/config_page.py:68
+#: thonny/first_run.py:195 thonny/plugins/aia/_panel/config_page.py:90
 msgid "AI assistant:"
 msgstr ""
 
-#: thonny/first_run.py:209
+#: thonny/first_run.py:215
 msgid "Let's go!"
 msgstr ""
 
-#: thonny/first_run.py:247
+#: thonny/first_run.py:253
 #, python-format
 msgid "Welcome to %s!"
 msgstr ""
 
-#: thonny/first_run.py:282 thonny/plugins/aia/_panel/config_page.py:153
+#: thonny/first_run.py:288 thonny/plugins/aia/_panel/config_page.py:175
 msgid "API key:"
 msgstr ""
 
-#: thonny/first_run.py:283 thonny/plugins/aia/_panel/config_page.py:164
+#: thonny/first_run.py:289 thonny/plugins/aia/_panel/config_page.py:200
 msgid "Check again"
 msgstr ""
 
@@ -705,7 +705,7 @@ msgstr ""
 msgid "Plotter"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:222 thonny/shell.py:319
+#: thonny/plugins/aia/_panel/view.py:251 thonny/shell.py:319
 msgid "Clear"
 msgstr ""
 
@@ -1971,64 +1971,64 @@ msgstr ""
 msgid "Variables"
 msgstr ""
 
-#: thonny/plugins/aia/__init__.py:56 thonny/plugins/aia/__init__.py:57
+#: thonny/plugins/aia/__init__.py:59 thonny/plugins/aia/__init__.py:60
 msgid "AI Assistant"
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:91
+#: thonny/plugins/aia/_common.py:100
 #, python-format
 msgid ""
 "The '%s' provider needs the Python package '%s', which is missing. "
 "Reinstall Thonny AIA."
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:274
+#: thonny/plugins/aia/_common.py:283
 msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:278
+#: thonny/plugins/aia/_common.py:286
 #, python-format
 msgid ""
-"The model %s is no longer available. Choose another provider in Tools > "
-"Options > AI Assistant, or install a newer Thonny AIA."
+"The model %s is not available. Choose another model in Tools > Options > "
+"AI Assistant."
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:283
+#: thonny/plugins/aia/_common.py:291
 msgid ""
 "Too many requests or the account's quota is used up. Wait a moment and "
 "try again."
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:286
+#: thonny/plugins/aia/_common.py:294
 msgid "The AI service did not answer in time. Try again."
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:290
+#: thonny/plugins/aia/_common.py:298
 msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:292
+#: thonny/plugins/aia/_common.py:300
 msgid "Cannot connect to the AI service. Check the internet connection."
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:402
+#: thonny/plugins/aia/_common.py:416
 msgid ""
 "No AI provider is chosen yet. Choose one in Tools > Options > AI "
 "Assistant."
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:409
+#: thonny/plugins/aia/_common.py:423
 msgid ""
 "Claude Code (the 'claude' command) was not found. Install Claude Code, "
 "sign in by running 'claude' once, then restart Thonny."
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:413
+#: thonny/plugins/aia/_common.py:427
 #, python-format
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:417
+#: thonny/plugins/aia/_common.py:431
 msgid "API key not set. Enter it in Tools > Options > AI Assistant."
 msgstr ""
 
@@ -2225,96 +2225,147 @@ msgstr ""
 msgid "Open system shell..."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:25
+#: thonny/plugins/aia/_panel/config_page.py:36
 msgid "Socratic"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:25
+#: thonny/plugins/aia/_panel/config_page.py:36
 msgid "Explanatory"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:25
+#: thonny/plugins/aia/_panel/config_page.py:36
 msgid "Direct"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:30
+#: thonny/plugins/aia/_panel/config_page.py:41
 #, python-format
 msgid ""
 "Answers come from %s. You need an API key: create it at the link below, "
 "or get one from your teacher."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:36
+#: thonny/plugins/aia/_panel/config_page.py:47
 msgid "No provider is chosen: AIA stays switched on, but it does not answer."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:63
+#: thonny/plugins/aia/_panel/config_page.py:85
 msgid "Use AI-based AIA instead of the built-in Assistant"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:87
+#: thonny/plugins/aia/_panel/config_page.py:109
 msgid "Answer style:"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:107
+#: thonny/plugins/aia/_panel/config_page.py:129
 msgid ""
 "Socratic = guides you to the answer, Explanatory = explains and answers, "
 "Direct = short answer only"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:121
+#: thonny/plugins/aia/_panel/config_page.py:143
 msgid "Context:"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:128
+#: thonny/plugins/aia/_panel/config_page.py:150
 msgid "Automatically include current file as context"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:135
+#: thonny/plugins/aia/_panel/config_page.py:157
 msgid "Also include locally imported files"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:161
+#: thonny/plugins/aia/_panel/config_page.py:183
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:44
+#: thonny/plugins/aia/_panel/config_page.py:186
+msgid "Model:"
+msgstr ""
+
+#: thonny/plugins/aia/_panel/config_page.py:324
+#, python-format
+msgid "%s (default)"
+msgstr ""
+
+#: thonny/plugins/aia/_panel/config_page.py:328
+msgid "Enter the API key to see the models it can use."
+msgstr ""
+
+#: thonny/plugins/aia/_panel/config_page.py:329
+msgid "Asking the provider for the models of this key..."
+msgstr ""
+
+#: thonny/plugins/aia/_panel/config_page.py:330
+msgid "The models this key can use."
+msgstr ""
+
+#: thonny/plugins/aia/_panel/config_page.py:332
+msgid ""
+"The provider did not list the models of this key; these are the usual "
+"ones."
+msgstr ""
+
+#: thonny/plugins/aia/_panel/view.py:46
 msgid "Thinking..."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:52
+#: thonny/plugins/aia/_panel/view.py:54
 msgid "Loading the local model..."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:57
+#: thonny/plugins/aia/_panel/view.py:59
 msgid "Write a message to the assistant..."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:214
+#: thonny/plugins/aia/_panel/view.py:67
+msgid "The assistant is resting..."
+msgstr ""
+
+#: thonny/plugins/aia/_panel/view.py:68
+msgid "The assistant is loafing around..."
+msgstr ""
+
+#: thonny/plugins/aia/_panel/view.py:69
+msgid "The assistant is out for lunch..."
+msgstr ""
+
+#: thonny/plugins/aia/_panel/view.py:70
+msgid "The assistant is having a coffee..."
+msgstr ""
+
+#: thonny/plugins/aia/_panel/view.py:71
+msgid "The assistant is reading a book..."
+msgstr ""
+
+#: thonny/plugins/aia/_panel/view.py:72
+msgid "The assistant is looking out of the window..."
+msgstr ""
+
+#: thonny/plugins/aia/_panel/view.py:73
+msgid "The assistant is stretching..."
+msgstr ""
+
+#: thonny/plugins/aia/_panel/view.py:80
+msgid "The assistant is waking up..."
+msgstr ""
+
+#: thonny/plugins/aia/_panel/view.py:243
 msgid "Send"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:253
-msgid "AIA - AI Mentor Assistant"
-msgstr ""
-
-#: thonny/plugins/aia/_panel/view.py:255
-msgid "Type a question below (Enter sends, Shift+Enter = new line)."
-msgstr ""
-
-#: thonny/plugins/aia/_panel/view.py:355
+#: thonny/plugins/aia/_panel/view.py:422
 msgid "Clear the conversation?"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:356
+#: thonny/plugins/aia/_panel/view.py:423
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:373
+#: thonny/plugins/aia/_panel/view.py:440
 msgid "You"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:382 thonny/plugins/aia/_panel/view.py:441
+#: thonny/plugins/aia/_panel/view.py:449 thonny/plugins/aia/_panel/view.py:508
 msgid "cancelled"
 msgstr ""
 

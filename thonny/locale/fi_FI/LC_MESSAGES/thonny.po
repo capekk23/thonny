@@ -1979,9 +1979,6 @@ msgstr "Tekoälyavustaja"
 msgid "AI assistant:"
 msgstr "Tekoälyavustaja:"
 
-msgid "AIA - AI Mentor Assistant"
-msgstr "AIA – tekoälymentori ja -avustaja"
-
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA pysyy päällä, mutta vastaa vasta, kun valitset palveluntarjoajan kohdassa Työkalut > Asetukset > Tekoälyavustaja."
 
@@ -2072,9 +2069,6 @@ msgstr "Thonny ja tekoälyavustaja (AIA). Thonnyn on tehnyt Aivar Annamaa."
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "Liikaa pyyntöjä tai tilin käyttöraja on täynnä. Odota hetki ja yritä uudelleen."
 
-msgid "Type a question below (Enter sends, Shift+Enter = new line)."
-msgstr "Kirjoita kysymys alle (Enter lähettää, Shift+Enter = uusi rivi)."
-
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
 msgstr "Tuntematon palveluntarjoaja ”%s”. Valitse se kohdassa Työkalut > Asetukset > Tekoälyavustaja."
 
@@ -2126,10 +2120,6 @@ msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
 msgstr "API-avain hylättiin. Tarkista se kohdassa Työkalut > Asetukset > Tekoälyavustaja."
 
 #: thonny/plugins/aia
-msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
-msgstr "Malli ”%s” ei ole enää saatavilla. Valitse toinen palveluntarjoaja kohdassa Työkalut > Asetukset > Tekoälyavustaja tai asenna uudempi Thonny AIA."
-
-#: thonny/plugins/aia
 msgid "Thinking..."
 msgstr "Mietin..."
 
@@ -2144,3 +2134,63 @@ msgstr "Koko keskustelu AIA:n kanssa poistetaan. Tätä ei voi perua."
 #: thonny/plugins/aia
 msgid "Write a message to the assistant..."
 msgstr "Kirjoita viesti avustajalle..."
+
+#: thonny/plugins/aia
+msgid "The assistant is resting..."
+msgstr "Avustaja lepää..."
+
+#: thonny/plugins/aia
+msgid "The assistant is loafing around..."
+msgstr "Avustaja laiskottelee..."
+
+#: thonny/plugins/aia
+msgid "The assistant is out for lunch..."
+msgstr "Avustaja on lounaalla..."
+
+#: thonny/plugins/aia
+msgid "The assistant is having a coffee..."
+msgstr "Avustaja juo kahvia..."
+
+#: thonny/plugins/aia
+msgid "The assistant is reading a book..."
+msgstr "Avustaja lukee kirjaa..."
+
+#: thonny/plugins/aia
+msgid "The assistant is looking out of the window..."
+msgstr "Avustaja katselee ikkunasta ulos..."
+
+#: thonny/plugins/aia
+msgid "The assistant is stretching..."
+msgstr "Avustaja venyttelee..."
+
+#: thonny/plugins/aia
+msgid "The assistant is waking up..."
+msgstr "Avustaja herää..."
+
+#: thonny/plugins/aia
+msgid "Model:"
+msgstr "Malli:"
+
+#: thonny/plugins/aia
+msgid "%s (default)"
+msgstr "%s (oletus)"
+
+#: thonny/plugins/aia
+msgid "Enter the API key to see the models it can use."
+msgstr "Syötä API-avain nähdäksesi mallit, joita se voi käyttää."
+
+#: thonny/plugins/aia
+msgid "Asking the provider for the models of this key..."
+msgstr "Kysyn palveluntarjoajalta tämän avaimen malleja..."
+
+#: thonny/plugins/aia
+msgid "The models this key can use."
+msgstr "Mallit, joita tämä avain voi käyttää."
+
+#: thonny/plugins/aia
+msgid "The provider did not list the models of this key; these are the usual ones."
+msgstr "Palveluntarjoaja ei listannut tämän avaimen malleja; nämä ovat tavalliset."
+
+#: thonny/plugins/aia
+msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
+msgstr "Malli %s ei ole käytettävissä. Valitse toinen malli kohdassa Työkalut > Asetukset > Tekoälyavustaja."

@@ -2001,9 +2001,6 @@ msgstr "Gervigreindaraðstoð"
 msgid "AI assistant:"
 msgstr "Gervigreindaraðstoð:"
 
-msgid "AIA - AI Mentor Assistant"
-msgstr "AIA - Gervigreindarleiðbeinandi"
-
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA er áfram virkt en svarar ekki fyrr en þú velur þjónustuaðila í Tól > Valkostir > Gervigreindaraðstoð."
 
@@ -2094,9 +2091,6 @@ msgstr "Thonny með gervigreindaraðstoð (AIA). Aivar Annamaa bjó til Thonny."
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "Of margar fyrirspurnir eða kvóti aðgangsins er uppurinn. Bíddu aðeins og reyndu aftur."
 
-msgid "Type a question below (Enter sends, Shift+Enter = new line)."
-msgstr "Skrifaðu spurningu hér fyrir neðan (Enter sendir, Shift+Enter = ný lína)."
-
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
 msgstr "Óþekktur þjónustuaðili '%s'. Veldu einn í Tól > Valkostir > Gervigreindaraðstoð."
 
@@ -2148,10 +2142,6 @@ msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
 msgstr "API-lyklinum var hafnað. Athugaðu hann í Tól > Valkostir > Gervigreindaraðstoð."
 
 #: thonny/plugins/aia
-msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
-msgstr "Líkanið '%s' er ekki lengur í boði. Veldu annan þjónustuaðila í Tól > Valkostir > Gervigreindaraðstoð eða settu upp nýrri útgáfu af Thonny AIA."
-
-#: thonny/plugins/aia
 msgid "Thinking..."
 msgstr "Hugsa..."
 
@@ -2166,3 +2156,63 @@ msgstr "Öllu samtalinu við AIA verður eytt. Ekki er hægt að afturkalla þa�
 #: thonny/plugins/aia
 msgid "Write a message to the assistant..."
 msgstr "Skrifaðu skilaboð til aðstoðarmannsins..."
+
+#: thonny/plugins/aia
+msgid "The assistant is resting..."
+msgstr "Aðstoðin er að hvíla sig..."
+
+#: thonny/plugins/aia
+msgid "The assistant is loafing around..."
+msgstr "Aðstoðin er að slæpast..."
+
+#: thonny/plugins/aia
+msgid "The assistant is out for lunch..."
+msgstr "Aðstoðin er í hádegismat..."
+
+#: thonny/plugins/aia
+msgid "The assistant is having a coffee..."
+msgstr "Aðstoðin er að fá sér kaffi..."
+
+#: thonny/plugins/aia
+msgid "The assistant is reading a book..."
+msgstr "Aðstoðin er að lesa bók..."
+
+#: thonny/plugins/aia
+msgid "The assistant is looking out of the window..."
+msgstr "Aðstoðin horfir út um gluggann..."
+
+#: thonny/plugins/aia
+msgid "The assistant is stretching..."
+msgstr "Aðstoðin er að teygja sig..."
+
+#: thonny/plugins/aia
+msgid "The assistant is waking up..."
+msgstr "Aðstoðin er að vakna..."
+
+#: thonny/plugins/aia
+msgid "Model:"
+msgstr "Líkan:"
+
+#: thonny/plugins/aia
+msgid "%s (default)"
+msgstr "%s (sjálfgefið)"
+
+#: thonny/plugins/aia
+msgid "Enter the API key to see the models it can use."
+msgstr "Sláðu inn API-lykilinn til að sjá líkönin sem hann getur notað."
+
+#: thonny/plugins/aia
+msgid "Asking the provider for the models of this key..."
+msgstr "Spyr þjónustuaðilann um líkön þessa lykils..."
+
+#: thonny/plugins/aia
+msgid "The models this key can use."
+msgstr "Líkönin sem þessi lykill getur notað."
+
+#: thonny/plugins/aia
+msgid "The provider did not list the models of this key; these are the usual ones."
+msgstr "Þjónustuaðilinn gaf ekki upp líkön þessa lykils; þetta eru þau venjulegu."
+
+#: thonny/plugins/aia
+msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
+msgstr "Líkanið %s er ekki í boði. Veldu annað líkan í Tól > Valkostir > Gervigreindaraðstoð."

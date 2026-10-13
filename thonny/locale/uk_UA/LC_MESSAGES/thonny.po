@@ -1984,9 +1984,6 @@ msgstr "ШІ-асистент"
 msgid "AI assistant:"
 msgstr "ШІ-асистент:"
 
-msgid "AIA - AI Mentor Assistant"
-msgstr "AIA — ШІ-асистент і наставник"
-
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA залишиться увімкненим, але відповідатиме лише після того, як ви виберете постачальника в Інструменти > Параметри > ШІ-асистент."
 
@@ -2077,9 +2074,6 @@ msgstr "Thonny із ШІ-асистентом (AIA). Thonny створив Aivar
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "Забагато запитів, або квоту облікового запису вичерпано. Зачекайте трохи й спробуйте ще раз."
 
-msgid "Type a question below (Enter sends, Shift+Enter = new line)."
-msgstr "Введіть запитання нижче (Enter — надіслати, Shift+Enter — новий рядок)."
-
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
 msgstr "Невідомий постачальник «%s». Виберіть постачальника в Інструменти > Параметри > ШІ-асистент."
 
@@ -2131,10 +2125,6 @@ msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
 msgstr "Ключ API відхилено. Перевірте його в Інструменти > Параметри > ШІ-асистент."
 
 #: thonny/plugins/aia
-msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
-msgstr "Модель «%s» більше недоступна. Виберіть іншого постачальника в Інструменти > Параметри > ШІ-асистент або встановіть новішу версію Thonny AIA."
-
-#: thonny/plugins/aia
 msgid "Thinking..."
 msgstr "Думаю..."
 
@@ -2149,3 +2139,63 @@ msgstr "Усю розмову з AIA буде видалено. Цю дію не
 #: thonny/plugins/aia
 msgid "Write a message to the assistant..."
 msgstr "Напиши повідомлення асистенту..."
+
+#: thonny/plugins/aia
+msgid "The assistant is resting..."
+msgstr "Асистент відпочиває..."
+
+#: thonny/plugins/aia
+msgid "The assistant is loafing around..."
+msgstr "Асистент байдикує..."
+
+#: thonny/plugins/aia
+msgid "The assistant is out for lunch..."
+msgstr "Асистент на обіді..."
+
+#: thonny/plugins/aia
+msgid "The assistant is having a coffee..."
+msgstr "Асистент п'є каву..."
+
+#: thonny/plugins/aia
+msgid "The assistant is reading a book..."
+msgstr "Асистент читає книжку..."
+
+#: thonny/plugins/aia
+msgid "The assistant is looking out of the window..."
+msgstr "Асистент дивиться у вікно..."
+
+#: thonny/plugins/aia
+msgid "The assistant is stretching..."
+msgstr "Асистент потягується..."
+
+#: thonny/plugins/aia
+msgid "The assistant is waking up..."
+msgstr "Асистент прокидається..."
+
+#: thonny/plugins/aia
+msgid "Model:"
+msgstr "Модель:"
+
+#: thonny/plugins/aia
+msgid "%s (default)"
+msgstr "%s (типова)"
+
+#: thonny/plugins/aia
+msgid "Enter the API key to see the models it can use."
+msgstr "Введи ключ API, щоб побачити моделі, які він може використовувати."
+
+#: thonny/plugins/aia
+msgid "Asking the provider for the models of this key..."
+msgstr "Питаю в постачальника моделі цього ключа..."
+
+#: thonny/plugins/aia
+msgid "The models this key can use."
+msgstr "Моделі, які може використовувати цей ключ."
+
+#: thonny/plugins/aia
+msgid "The provider did not list the models of this key; these are the usual ones."
+msgstr "Постачальник не перелічив моделі цього ключа; це звичайні моделі."
+
+#: thonny/plugins/aia
+msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
+msgstr "Модель %s недоступна. Вибери іншу модель в Інструменти > Параметри > ШІ-асистент."

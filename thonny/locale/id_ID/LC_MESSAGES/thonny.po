@@ -1991,9 +1991,6 @@ msgstr "Asisten AI"
 msgid "AI assistant:"
 msgstr "Asisten AI:"
 
-msgid "AIA - AI Mentor Assistant"
-msgstr "AIA - Asisten Mentor AI"
-
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA tetap aktif, tetapi baru akan menjawab setelah Anda memilih penyedia di Tools > Options > Asisten AI."
 
@@ -2084,9 +2081,6 @@ msgstr "Thonny dengan Asisten AI (AIA). Thonny dibuat oleh Aivar Annamaa."
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "Terlalu banyak permintaan atau kuota akun sudah habis. Tunggu sebentar lalu coba lagi."
 
-msgid "Type a question below (Enter sends, Shift+Enter = new line)."
-msgstr "Ketik pertanyaan di bawah (Enter untuk mengirim, Shift+Enter = baris baru)."
-
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
 msgstr "Penyedia '%s' tidak dikenal. Pilih penyedia di Tools > Options > Asisten AI."
 
@@ -2138,10 +2132,6 @@ msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
 msgstr "Kunci API ditolak. Periksa di Tools > Options > Asisten AI."
 
 #: thonny/plugins/aia
-msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
-msgstr "Model '%s' sudah tidak tersedia. Pilih penyedia lain di Tools > Options > Asisten AI, atau instal versi Thonny AIA yang lebih baru."
-
-#: thonny/plugins/aia
 msgid "Thinking..."
 msgstr "Sedang berpikir..."
 
@@ -2156,3 +2146,63 @@ msgstr "Seluruh percakapan dengan AIA akan dihapus. Tindakan ini tidak dapat dib
 #: thonny/plugins/aia
 msgid "Write a message to the assistant..."
 msgstr "Tulis pesan untuk asisten..."
+
+#: thonny/plugins/aia
+msgid "The assistant is resting..."
+msgstr "Asisten sedang beristirahat..."
+
+#: thonny/plugins/aia
+msgid "The assistant is loafing around..."
+msgstr "Asisten sedang bermalas-malasan..."
+
+#: thonny/plugins/aia
+msgid "The assistant is out for lunch..."
+msgstr "Asisten sedang makan siang..."
+
+#: thonny/plugins/aia
+msgid "The assistant is having a coffee..."
+msgstr "Asisten sedang minum kopi..."
+
+#: thonny/plugins/aia
+msgid "The assistant is reading a book..."
+msgstr "Asisten sedang membaca buku..."
+
+#: thonny/plugins/aia
+msgid "The assistant is looking out of the window..."
+msgstr "Asisten sedang melihat ke luar jendela..."
+
+#: thonny/plugins/aia
+msgid "The assistant is stretching..."
+msgstr "Asisten sedang meregangkan badan..."
+
+#: thonny/plugins/aia
+msgid "The assistant is waking up..."
+msgstr "Asisten sedang bangun..."
+
+#: thonny/plugins/aia
+msgid "Model:"
+msgstr "Model:"
+
+#: thonny/plugins/aia
+msgid "%s (default)"
+msgstr "%s (bawaan)"
+
+#: thonny/plugins/aia
+msgid "Enter the API key to see the models it can use."
+msgstr "Masukkan kunci API untuk melihat model yang bisa dipakainya."
+
+#: thonny/plugins/aia
+msgid "Asking the provider for the models of this key..."
+msgstr "Menanyakan model kunci ini ke penyedia..."
+
+#: thonny/plugins/aia
+msgid "The models this key can use."
+msgstr "Model yang bisa dipakai kunci ini."
+
+#: thonny/plugins/aia
+msgid "The provider did not list the models of this key; these are the usual ones."
+msgstr "Penyedia tidak mencantumkan model kunci ini; ini model yang biasa."
+
+#: thonny/plugins/aia
+msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
+msgstr "Model %s tidak tersedia. Pilih model lain di Tools > Options > Asisten AI."

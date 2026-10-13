@@ -2000,9 +2000,6 @@ msgstr "Trợ lý AI"
 msgid "AI assistant:"
 msgstr "Trợ lý AI:"
 
-msgid "AIA - AI Mentor Assistant"
-msgstr "AIA - Trợ lý cố vấn AI"
-
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
 msgstr "AIA vẫn được bật, nhưng chỉ trả lời sau khi bạn chọn nhà cung cấp trong Công cụ > Thiết lập > Trợ lý AI."
 
@@ -2093,9 +2090,6 @@ msgstr "Thonny với Trợ lý AI (AIA). Thonny được tạo bởi Aivar Annam
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "Quá nhiều yêu cầu hoặc tài khoản đã hết hạn mức. Hãy chờ một lát rồi thử lại."
 
-msgid "Type a question below (Enter sends, Shift+Enter = new line)."
-msgstr "Nhập câu hỏi bên dưới (Enter để gửi, Shift+Enter = xuống dòng)."
-
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
 msgstr "Không rõ nhà cung cấp '%s'. Hãy chọn một nhà cung cấp trong Công cụ > Thiết lập > Trợ lý AI."
 
@@ -2147,10 +2141,6 @@ msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
 msgstr "Khóa API bị từ chối. Hãy kiểm tra trong Công cụ > Thiết lập > Trợ lý AI."
 
 #: thonny/plugins/aia
-msgid "The model %s is no longer available. Choose another provider in Tools > Options > AI Assistant, or install a newer Thonny AIA."
-msgstr "Mô hình '%s' không còn khả dụng. Hãy chọn nhà cung cấp khác trong Công cụ > Thiết lập > Trợ lý AI, hoặc cài đặt phiên bản Thonny AIA mới hơn."
-
-#: thonny/plugins/aia
 msgid "Thinking..."
 msgstr "Đang suy nghĩ..."
 
@@ -2165,3 +2155,63 @@ msgstr "Toàn bộ cuộc trò chuyện với AIA sẽ bị xóa. Không thể h
 #: thonny/plugins/aia
 msgid "Write a message to the assistant..."
 msgstr "Viết tin nhắn cho trợ lý..."
+
+#: thonny/plugins/aia
+msgid "The assistant is resting..."
+msgstr "Trợ lý đang nghỉ ngơi..."
+
+#: thonny/plugins/aia
+msgid "The assistant is loafing around..."
+msgstr "Trợ lý đang lười biếng..."
+
+#: thonny/plugins/aia
+msgid "The assistant is out for lunch..."
+msgstr "Trợ lý đang đi ăn trưa..."
+
+#: thonny/plugins/aia
+msgid "The assistant is having a coffee..."
+msgstr "Trợ lý đang uống cà phê..."
+
+#: thonny/plugins/aia
+msgid "The assistant is reading a book..."
+msgstr "Trợ lý đang đọc sách..."
+
+#: thonny/plugins/aia
+msgid "The assistant is looking out of the window..."
+msgstr "Trợ lý đang nhìn ra cửa sổ..."
+
+#: thonny/plugins/aia
+msgid "The assistant is stretching..."
+msgstr "Trợ lý đang vươn vai..."
+
+#: thonny/plugins/aia
+msgid "The assistant is waking up..."
+msgstr "Trợ lý đang thức dậy..."
+
+#: thonny/plugins/aia
+msgid "Model:"
+msgstr "Mô hình:"
+
+#: thonny/plugins/aia
+msgid "%s (default)"
+msgstr "%s (mặc định)"
+
+#: thonny/plugins/aia
+msgid "Enter the API key to see the models it can use."
+msgstr "Nhập khóa API để xem các mô hình mà khóa có thể dùng."
+
+#: thonny/plugins/aia
+msgid "Asking the provider for the models of this key..."
+msgstr "Đang hỏi nhà cung cấp các mô hình của khóa này..."
+
+#: thonny/plugins/aia
+msgid "The models this key can use."
+msgstr "Các mô hình mà khóa này có thể dùng."
+
+#: thonny/plugins/aia
+msgid "The provider did not list the models of this key; these are the usual ones."
+msgstr "Nhà cung cấp không liệt kê mô hình của khóa này; đây là các mô hình thường dùng."
+
+#: thonny/plugins/aia
+msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
+msgstr "Mô hình %s không khả dụng. Hãy chọn mô hình khác trong Công cụ > Thiết lập > Trợ lý AI."
