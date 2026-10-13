@@ -2107,7 +2107,7 @@ msgid "Welcome to %s!"
 msgstr "Us donem la benvinguda a %s!"
 
 msgid "You"
-msgstr "Vós"
+msgstr "Tu"
 
 msgid "cancelled"
 msgstr "cancel·lat"
@@ -2162,3 +2162,7 @@ msgstr "Vols esborrar la conversa?"
 #: thonny/plugins/aia
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr "S'esborrarà tota la conversa amb AIA. No es pot desfer."
+
+#: thonny/plugins/aia
+msgid "Write a message to the assistant..."
+msgstr "Escriu un missatge a l'assistent..."

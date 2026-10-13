@@ -2100,7 +2100,7 @@ msgid "Welcome to %s!"
 msgstr "Mirë se vini në %s!"
 
 msgid "You"
-msgstr "Ju"
+msgstr "Ti"
 
 msgid "cancelled"
 msgstr "anuluar"
@@ -2155,3 +2155,7 @@ msgstr "Të pastrohet biseda?"
 #: thonny/plugins/aia
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr "E gjithë biseda me AIA do të fshihet. Ky veprim nuk mund të zhbëhet."
+
+#: thonny/plugins/aia
+msgid "Write a message to the assistant..."
+msgstr "Shkruaj një mesazh për asistentin..."

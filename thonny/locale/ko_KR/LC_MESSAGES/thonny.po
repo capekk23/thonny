@@ -2142,3 +2142,7 @@ msgstr "대화를 지우시겠습니까?"
 #: thonny/plugins/aia
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr "AIA와의 대화 전체가 삭제됩니다. 이 작업은 되돌릴 수 없습니다."
+
+#: thonny/plugins/aia
+msgid "Write a message to the assistant..."
+msgstr "어시스턴트에게 메시지를 입력하세요..."

@@ -2098,7 +2098,7 @@ msgid "Welcome to %s!"
 msgstr "Καλώς ήρθατε στο %s!"
 
 msgid "You"
-msgstr "Εσείς"
+msgstr "Εσύ"
 
 msgid "cancelled"
 msgstr "ακυρώθηκε"
@@ -2153,3 +2153,7 @@ msgstr "Καθάρισμα της συνομιλίας;"
 #: thonny/plugins/aia
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr "Ολόκληρη η συνομιλία με το AIA θα διαγραφεί. Αυτό δεν μπορεί να αναιρεθεί."
+
+#: thonny/plugins/aia
+msgid "Write a message to the assistant..."
+msgstr "Γράψε ένα μήνυμα στον βοηθό..."

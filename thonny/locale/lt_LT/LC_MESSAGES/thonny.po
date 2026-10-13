@@ -2089,7 +2089,7 @@ msgid "Welcome to %s!"
 msgstr "Sveiki atvykę į %s!"
 
 msgid "You"
-msgstr "Jūs"
+msgstr "Tu"
 
 msgid "cancelled"
 msgstr "atšaukta"
@@ -2144,3 +2144,7 @@ msgstr "Išvalyti pokalbį?"
 #: thonny/plugins/aia
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr "Visas pokalbis su AIA bus ištrintas. To negalima atšaukti."
+
+#: thonny/plugins/aia
+msgid "Write a message to the assistant..."
+msgstr "Parašyk žinutę asistentui..."

@@ -2097,7 +2097,7 @@ msgid "Welcome to %s!"
 msgstr "Selamat datang di %s!"
 
 msgid "You"
-msgstr "Anda"
+msgstr "Kamu"
 
 msgid "cancelled"
 msgstr "dibatalkan"
@@ -2152,3 +2152,7 @@ msgstr "Hapus percakapan?"
 #: thonny/plugins/aia
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr "Seluruh percakapan dengan AIA akan dihapus. Tindakan ini tidak dapat dibatalkan."
+
+#: thonny/plugins/aia
+msgid "Write a message to the assistant..."
+msgstr "Tulis pesan untuk asisten..."

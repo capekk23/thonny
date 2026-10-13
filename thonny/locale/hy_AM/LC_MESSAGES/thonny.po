@@ -2098,7 +2098,7 @@ msgid "Welcome to %s!"
 msgstr "Բարի գալուստ %s։"
 
 msgid "You"
-msgstr "Դուք"
+msgstr "Դու"
 
 msgid "cancelled"
 msgstr "չեղարկված"
@@ -2153,3 +2153,7 @@ msgstr "Մաքրե՞լ զրույցը։"
 #: thonny/plugins/aia
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr "AIA-ի հետ ամբողջ զրույցը կջնջվի։ Սա հնարավոր չէ հետարկել։"
+
+#: thonny/plugins/aia
+msgid "Write a message to the assistant..."
+msgstr "Գրիր հաղորդագրություն օգնականին..."

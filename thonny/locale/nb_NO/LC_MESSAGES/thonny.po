@@ -2155,3 +2155,7 @@ msgstr "Vil du tømme samtalen?"
 #: thonny/plugins/aia
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr "Hele samtalen med AIA blir slettet. Dette kan ikke angres."
+
+#: thonny/plugins/aia
+msgid "Write a message to the assistant..."
+msgstr "Skriv en melding til assistenten..."

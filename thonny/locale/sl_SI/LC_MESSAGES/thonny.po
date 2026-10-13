@@ -2121,7 +2121,7 @@ msgid "Welcome to %s!"
 msgstr "Dobrodošli v %s!"
 
 msgid "You"
-msgstr "Vi"
+msgstr "Ti"
 
 msgid "cancelled"
 msgstr "preklicano"
@@ -2176,3 +2176,7 @@ msgstr "Počistim pogovor?"
 #: thonny/plugins/aia
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr "Celoten pogovor z AIA bo izbrisan. Tega ni mogoče razveljaviti."
+
+#: thonny/plugins/aia
+msgid "Write a message to the assistant..."
+msgstr "Napiši sporočilo pomočniku..."

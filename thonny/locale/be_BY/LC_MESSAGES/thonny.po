@@ -2121,7 +2121,7 @@ msgid "Welcome to %s!"
 msgstr "Вітаем у %s!"
 
 msgid "You"
-msgstr "Вы"
+msgstr "Ты"
 
 msgid "cancelled"
 msgstr "скасавана"
@@ -2176,3 +2176,7 @@ msgstr "Ачысціць размову?"
 #: thonny/plugins/aia
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr "Уся размова з AIA будзе выдалена. Гэта нельга адмяніць."
+
+#: thonny/plugins/aia
+msgid "Write a message to the assistant..."
+msgstr "Напішы паведамленне асістэнту..."

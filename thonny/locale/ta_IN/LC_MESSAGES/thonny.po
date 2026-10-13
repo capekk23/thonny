@@ -2155,3 +2155,7 @@ msgstr "உரையாடலை அழிக்கவா?"
 #: thonny/plugins/aia
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr "AIA உடனான முழு உரையாடலும் நீக்கப்படும். இதைச் செயல்தவிர்க்க முடியாது."
+
+#: thonny/plugins/aia
+msgid "Write a message to the assistant..."
+msgstr "உதவியாளருக்கு ஒரு செய்தியை எழுது..."

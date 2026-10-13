@@ -2162,3 +2162,7 @@ msgstr "Ștergeți conversația?"
 #: thonny/plugins/aia
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr "Întreaga conversație cu AIA va fi ștearsă. Acțiunea nu poate fi anulată."
+
+#: thonny/plugins/aia
+msgid "Write a message to the assistant..."
+msgstr "Scrie un mesaj asistentului..."

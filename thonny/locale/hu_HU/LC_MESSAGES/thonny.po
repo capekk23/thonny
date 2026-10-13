@@ -2085,7 +2085,7 @@ msgid "Welcome to %s!"
 msgstr "Üdvözli a(z) %s!"
 
 msgid "You"
-msgstr "Ön"
+msgstr "Te"
 
 msgid "cancelled"
 msgstr "megszakítva"
@@ -2140,3 +2140,7 @@ msgstr "Törlöd a beszélgetést?"
 #: thonny/plugins/aia
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr "Az AIA-val folytatott teljes beszélgetés törlődik. Ez nem vonható vissza."
+
+#: thonny/plugins/aia
+msgid "Write a message to the assistant..."
+msgstr "Írj üzenetet az asszisztensnek..."

@@ -2099,7 +2099,7 @@ msgid "Welcome to %s!"
 msgstr "%s में आपका स्वागत है!"
 
 msgid "You"
-msgstr "आप"
+msgstr "तुम"
 
 msgid "cancelled"
 msgstr "कैंसिल किया गया"
@@ -2154,3 +2154,7 @@ msgstr "बातचीत मिटाएँ?"
 #: thonny/plugins/aia
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr "AIA के साथ पूरी बातचीत हटा दी जाएगी। इसे पूर्ववत नहीं किया जा सकता।"
+
+#: thonny/plugins/aia
+msgid "Write a message to the assistant..."
+msgstr "सहायक को संदेश लिखो..."

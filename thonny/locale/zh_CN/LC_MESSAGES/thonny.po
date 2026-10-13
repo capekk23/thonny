@@ -2150,3 +2150,7 @@ msgstr "清空对话？"
 #: thonny/plugins/aia
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr "与 AIA 的全部对话将被删除。此操作无法撤销。"
+
+#: thonny/plugins/aia
+msgid "Write a message to the assistant..."
+msgstr "给助手写条消息..."

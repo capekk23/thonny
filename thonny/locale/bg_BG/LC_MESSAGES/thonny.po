@@ -2069,7 +2069,7 @@ msgid "Welcome to %s!"
 msgstr "Добре дошли в %s!"
 
 msgid "You"
-msgstr "Вие"
+msgstr "Ти"
 
 msgid "cancelled"
 msgstr "отменено"
@@ -2124,3 +2124,7 @@ msgstr "Да се изчисти ли разговорът?"
 #: thonny/plugins/aia
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr "Целият разговор с AIA ще бъде изтрит. Това не може да бъде отменено."
+
+#: thonny/plugins/aia
+msgid "Write a message to the assistant..."
+msgstr "Напиши съобщение до асистента..."

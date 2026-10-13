@@ -2131,3 +2131,7 @@ msgstr "Rensa konversationen?"
 #: thonny/plugins/aia
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr "Hela konversationen med AIA raderas. Det går inte att ångra."
+
+#: thonny/plugins/aia
+msgid "Write a message to the assistant..."
+msgstr "Skriv ett meddelande till assistenten..."

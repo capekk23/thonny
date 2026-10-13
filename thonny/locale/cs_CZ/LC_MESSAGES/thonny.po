@@ -2324,11 +2324,11 @@ msgstr "AIA – AI asistent a mentor"
 
 #: thonny/plugins/aia/_panel/view.py:130
 msgid "Type a question below (Enter sends, Shift+Enter = new line)."
-msgstr "Napište dotaz dolů (Enter odešle, Shift+Enter = nový řádek)."
+msgstr "Napiš dotaz dolů (Enter odešle, Shift+Enter = nový řádek)."
 
 #: thonny/plugins/aia/_panel/view.py:208
 msgid "You"
-msgstr "Vy"
+msgstr "Ty"
 
 #: thonny/plugins/aia/_panel/view.py:219 thonny/plugins/aia/_panel/view.py:276
 msgid "cancelled"
@@ -2409,3 +2409,7 @@ msgstr "Smazat konverzaci?"
 #: thonny/plugins/aia
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr "Celá konverzace s AIA bude smazána. Tento krok nelze vrátit zpět."
+
+#: thonny/plugins/aia
+msgid "Write a message to the assistant..."
+msgstr "Napiš zprávu asistentovi..."

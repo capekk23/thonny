@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-10-13 12:16+0200\n"
+"POT-Creation-Date: 2026-10-13 12:24+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -273,7 +273,7 @@ msgid "OK"
 msgstr ""
 
 #: thonny/base_file_browser.py:1382 thonny/config_ui.py:42 thonny/export.py:28
-#: thonny/plugins/aia/_panel/view.py:209
+#: thonny/plugins/aia/_panel/view.py:218
 #: thonny/plugins/backend_config_page.py:288 thonny/plugins/pip_gui.py:1419
 #: thonny/ui_utils.py:161 thonny/ui_utils.py:1749 thonny/ui_utils.py:1835
 #: thonny/workdlg.py:206 thonny/workdlg.py:261
@@ -705,7 +705,7 @@ msgstr ""
 msgid "Plotter"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:213 thonny/shell.py:319
+#: thonny/plugins/aia/_panel/view.py:222 thonny/shell.py:319
 msgid "Clear"
 msgstr ""
 
@@ -2286,31 +2286,35 @@ msgstr ""
 msgid "Loading the local model..."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:205
+#: thonny/plugins/aia/_panel/view.py:57
+msgid "Write a message to the assistant..."
+msgstr ""
+
+#: thonny/plugins/aia/_panel/view.py:214
 msgid "Send"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:242
+#: thonny/plugins/aia/_panel/view.py:253
 msgid "AIA - AI Mentor Assistant"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:244
+#: thonny/plugins/aia/_panel/view.py:255
 msgid "Type a question below (Enter sends, Shift+Enter = new line)."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:318
+#: thonny/plugins/aia/_panel/view.py:355
 msgid "Clear the conversation?"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:319
+#: thonny/plugins/aia/_panel/view.py:356
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:336
+#: thonny/plugins/aia/_panel/view.py:373
 msgid "You"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:345 thonny/plugins/aia/_panel/view.py:404
+#: thonny/plugins/aia/_panel/view.py:382 thonny/plugins/aia/_panel/view.py:441
 msgid "cancelled"
 msgstr ""
 

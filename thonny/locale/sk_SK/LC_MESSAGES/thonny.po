@@ -2102,7 +2102,7 @@ msgid "Welcome to %s!"
 msgstr "Vitajte v %s!"
 
 msgid "You"
-msgstr "Vy"
+msgstr "Ty"
 
 msgid "cancelled"
 msgstr "zrušené"
@@ -2157,3 +2157,7 @@ msgstr "Vymazať konverzáciu?"
 #: thonny/plugins/aia
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr "Celá konverzácia s AIA bude vymazaná. Tento krok nemožno vrátiť späť."
+
+#: thonny/plugins/aia
+msgid "Write a message to the assistant..."
+msgstr "Napíš správu asistentovi..."

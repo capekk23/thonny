@@ -2090,7 +2090,7 @@ msgid "Welcome to %s!"
 msgstr "歡迎使用 %s！"
 
 msgid "You"
-msgstr "您"
+msgstr "你"
 
 msgid "cancelled"
 msgstr "已取消"
@@ -2145,3 +2145,7 @@ msgstr "清除對話？"
 #: thonny/plugins/aia
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr "與 AIA 的整段對話將被刪除。此操作無法復原。"
+
+#: thonny/plugins/aia
+msgid "Write a message to the assistant..."
+msgstr "給助理寫則訊息..."

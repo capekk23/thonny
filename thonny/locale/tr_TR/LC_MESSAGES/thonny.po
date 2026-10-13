@@ -2106,7 +2106,7 @@ msgid "Welcome to %s!"
 msgstr "%s uygulamasına hoş geldiniz!"
 
 msgid "You"
-msgstr "Siz"
+msgstr "Sen"
 
 msgid "cancelled"
 msgstr "iptal edildi"
@@ -2161,3 +2161,7 @@ msgstr "Sohbet temizlensin mi?"
 #: thonny/plugins/aia
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr "AIA ile yapılan sohbetin tamamı silinecek. Bu işlem geri alınamaz."
+
+#: thonny/plugins/aia
+msgid "Write a message to the assistant..."
+msgstr "Asistana bir mesaj yaz..."

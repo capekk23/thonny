@@ -2161,3 +2161,7 @@ msgstr "Limpar a conversa?"
 #: thonny/plugins/aia
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr "Toda a conversa com o AIA será apagada. Isso não pode ser desfeito."
+
+#: thonny/plugins/aia
+msgid "Write a message to the assistant..."
+msgstr "Escreva uma mensagem para o assistente..."

@@ -178,3 +178,34 @@ def test_panel_follows_a_theme_change(panel_view, root, fake_thonny, monkeypatch
         view.destroy()
         style.configure("Text", background="", foreground="")
     assert view._apply_theme not in fake_thonny.handlers.get("SyntaxThemeChanged", [])
+
+
+def test_input_hint_shows_while_the_input_is_empty_and_unfocused(panel_view, root, monkeypatch):
+    """Jakub 2026-10-13 (#74): a grey hint in the empty input, never sent. Here because it
+    needs a real Tk interpreter, like the theme tests."""
+    from thonny import codeview
+
+    themes = builtin_syntax_themes(monkeypatch)
+    monkeypatch.setattr(codeview, "_syntax_options", themes["Default Light"])
+    view = panel_view.AIAView(root)
+    sent = []
+    view._request_llm_response = lambda: sent.append(list(view._conversation))
+    content = lambda: view._input_text.get("1.0", "end-1c")
+    try:
+        assert content() == panel_view.input_hint_text()
+        assert view._input_text.tag_cget("placeholder", "foreground")
+        view._on_send()  # Send with only the hint in the input
+        assert sent == []
+
+        view._hide_placeholder()  # <FocusIn>
+        assert content() == ""
+        view._input_text.insert("1.0", "Ahoj")
+        view._show_placeholder()  # <FocusOut> with a message typed: it stays
+        assert content() == "Ahoj"
+        view._on_send()
+        assert sent[0][-1]["content"] == "Ahoj"
+
+        view._show_placeholder()  # empty again, the focus elsewhere
+        assert content() == panel_view.input_hint_text()
+    finally:
+        view.destroy()

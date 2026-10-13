@@ -2105,7 +2105,7 @@ msgid "Welcome to %s!"
 msgstr "Bem-vindo ao %s!"
 
 msgid "You"
-msgstr "Você"
+msgstr "Tu"
 
 msgid "cancelled"
 msgstr "cancelado"
@@ -2160,3 +2160,7 @@ msgstr "Limpar a conversa?"
 #: thonny/plugins/aia
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr "Toda a conversa com o AIA será apagada. Esta ação não pode ser anulada."
+
+#: thonny/plugins/aia
+msgid "Write a message to the assistant..."
+msgstr "Escreve uma mensagem ao assistente..."

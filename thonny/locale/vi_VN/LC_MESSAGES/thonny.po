@@ -2161,3 +2161,7 @@ msgstr "Xóa cuộc trò chuyện?"
 #: thonny/plugins/aia
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr "Toàn bộ cuộc trò chuyện với AIA sẽ bị xóa. Không thể hoàn tác thao tác này."
+
+#: thonny/plugins/aia
+msgid "Write a message to the assistant..."
+msgstr "Viết tin nhắn cho trợ lý..."

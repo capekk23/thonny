@@ -2140,3 +2140,7 @@ msgstr "Tyhjennetäänkö keskustelu?"
 #: thonny/plugins/aia
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr "Koko keskustelu AIA:n kanssa poistetaan. Tätä ei voi perua."
+
+#: thonny/plugins/aia
+msgid "Write a message to the assistant..."
+msgstr "Kirjoita viesti avustajalle..."

@@ -2162,3 +2162,7 @@ msgstr "Elkarrizketa garbitu?"
 #: thonny/plugins/aia
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr "AIArekin izandako elkarrizketa osoa ezabatuko da. Ezin da desegin."
+
+#: thonny/plugins/aia
+msgid "Write a message to the assistant..."
+msgstr "Idatzi mezu bat laguntzaileari..."

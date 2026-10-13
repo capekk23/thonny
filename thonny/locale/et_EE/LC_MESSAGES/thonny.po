@@ -2165,3 +2165,7 @@ msgstr "Kas tühjendada vestlus?"
 #: thonny/plugins/aia
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr "Kogu vestlus AIA-ga kustutatakse. Seda ei saa tagasi võtta."
+
+#: thonny/plugins/aia
+msgid "Write a message to the assistant..."
+msgstr "Kirjuta assistendile sõnum..."

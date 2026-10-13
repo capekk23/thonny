@@ -2091,7 +2091,7 @@ msgid "Welcome to %s!"
 msgstr "Welkom bij %s!"
 
 msgid "You"
-msgstr "U"
+msgstr "Jij"
 
 msgid "cancelled"
 msgstr "geannuleerd"
@@ -2146,3 +2146,7 @@ msgstr "Gesprek leegmaken?"
 #: thonny/plugins/aia
 msgid "The whole conversation with AIA will be deleted. This cannot be undone."
 msgstr "Het hele gesprek met AIA wordt verwijderd. Dit kan niet ongedaan worden gemaakt."
+
+#: thonny/plugins/aia
+msgid "Write a message to the assistant..."
+msgstr "Schrijf een bericht aan de assistent..."

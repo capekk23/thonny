@@ -52,6 +52,11 @@ def local_loading_text() -> str:
     return tr("Loading the local model...")
 
 
+# Grey hint in the empty input (Jakub 2026-10-13, cortex-zamestnani#74)
+def input_hint_text() -> str:
+    return tr("Write a message to the assistant...")
+
+
 # Background and text of the panel follow Thonny's UI theme, like the built-in Assistant it
 # replaces and the other side views (Jakub 2026-10-12, cortex-zamestnani#71: in a dark theme
 # the panel stayed white). The labels take colours of the syntax theme, which are readable on
@@ -198,6 +203,10 @@ class AIAView(ttk.Frame):
         )
         self._input_text.grid(row=0, column=0, sticky="nsew", padx=(0, 4))
         self._input_text.bind("<Return>", self._on_enter)
+        self._input_text.bind("<FocusIn>", self._hide_placeholder, True)
+        self._input_text.bind("<FocusOut>", self._show_placeholder, True)
+        self._placeholder = False
+        self._show_placeholder()
 
         button_frame = ttk.Frame(input_frame)
         button_frame.grid(row=0, column=1, sticky="ns")
@@ -236,6 +245,8 @@ class AIAView(ttk.Frame):
             self._input_text.configure(highlightbackground=border, highlightcolor=border)
         for tag, color in tags.items():
             self._messages_text.tag_configure(tag, foreground=color)
+        if "system_text" in tags:
+            self._input_text.tag_configure("placeholder", foreground=tags["system_text"])
 
     def _show_welcome(self):
         self._insert(
@@ -254,6 +265,30 @@ class AIAView(ttk.Frame):
             self._messages_text.insert("end", text)
         self._messages_text.configure(state="disabled")
         self._messages_text.see("end")
+
+    def _show_placeholder(self, event=None):
+        """The hint shows in the empty input while it does not have the focus."""
+        text = self._input_text
+        try:
+            focused = self.focus_get() is text
+        except (KeyError, tk.TclError):  # focus in a widget Tk cannot name (e.g. a menu)
+            focused = False
+        if self._placeholder or focused or text.get("1.0", "end-1c"):
+            return
+        self._placeholder = True
+        self._edit_input(lambda: text.insert("1.0", input_hint_text(), "placeholder"))
+
+    def _hide_placeholder(self, event=None):
+        if self._placeholder:
+            self._placeholder = False
+            self._edit_input(lambda: self._input_text.delete("1.0", "end"))
+
+    def _edit_input(self, change):
+        """Change the input also while it is disabled (an answer is coming)."""
+        state = self._input_text.cget("state")
+        self._input_text.configure(state="normal")
+        change()
+        self._input_text.configure(state=state)
 
     def _set_busy(self, busy: bool):
         self._send_button.configure(state="disabled" if busy else "normal")
@@ -305,6 +340,8 @@ class AIAView(ttk.Frame):
     def _on_send(self):
         if self._cancel_event is not None:
             return  # a request is running
+        if self._placeholder:
+            return  # only the hint is in the input
         text = self._input_text.get("1.0", "end-1c").strip()
         if not text:
             return
