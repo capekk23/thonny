@@ -450,3 +450,76 @@ def test_installation_error_goes_to_the_panel_only_while_aia_is_on(fake_thonny):
     handler("on")
 
     assert got == ["on"]
+
+
+class _IdleText:
+    """The few tk.Text calls of the messages area, on a list of (text, tag)."""
+
+    def __init__(self):
+        self.parts = []
+
+    def get(self, start, end):
+        return "".join(text for text, _ in self.parts)
+
+    def insert(self, index, text, tag=None):
+        if index == "1.0":
+            self.parts.insert(0, (text, tag))
+        else:
+            self.parts.append((text, tag))
+
+    def delete(self, start, end):
+        self.parts = []
+
+    def configure(self, **kw):
+        pass
+
+    def see(self, index):
+        pass
+
+
+def make_idle_view(module):
+    view = module.AIAView.__new__(module.AIAView)
+    view._messages_text = _IdleText()
+    view._idle = False
+    view._idle_text = None
+    view.scheduled = []
+    view.after = lambda ms, func: view.scheduled.append(func)
+    return view
+
+
+def test_empty_panel_shows_a_playful_line_in_the_conversation_font(panel_view):
+    view = make_idle_view(panel_view)
+    view._show_idle()
+    [(text, tag)] = view._messages_text.parts
+    assert text in panel_view.idle_texts()
+    assert tag == "system_text"  # colour only: the tag sets no font (_configure_tags)
+    assert "AI Mentor Assistant" not in text
+
+    view._insert("\nYou: ", "user_header")  # the first message replaces it, at the top
+    assert view._messages_text.parts == [("You: ", "user_header")]
+
+
+def test_clear_shows_another_playful_line(panel_view):
+    view = make_idle_view(panel_view)
+    view._show_idle()
+    first = view._idle_text
+    view._insert("\nYou: hi\n")
+    view._abort_current_request = lambda: None
+    view._conversation = []
+    view.clear_conversation()
+    assert view._idle_text in panel_view.idle_texts() and view._idle_text != first
+
+
+def test_empty_panel_says_when_the_local_model_loads(panel_view, monkeypatch):
+    view = make_idle_view(panel_view)
+    loading = [True]
+    monkeypatch.setattr(panel_view, "is_loading", lambda: loading[0])
+    view._show_idle()
+    assert view._messages_text.parts == [(panel_view.waking_text(), "system_text")]
+
+    view.scheduled.pop()()  # still loading: checks again
+    assert view._idle_text == panel_view.waking_text() and view.scheduled
+    loading[0] = False
+    view.scheduled.pop()()
+    assert view._idle_text in panel_view.idle_texts()
+    assert len(view._messages_text.parts) == 1

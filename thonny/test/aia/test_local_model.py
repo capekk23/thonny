@@ -23,6 +23,7 @@ class _FakeOllama:
 class _Core:
     def __init__(self, providers):
         self.providers = providers
+        self._providers = providers
 
     def get_current_model(self, provider):
         from thonny.plugins.aia._common import AIACore
@@ -143,3 +144,34 @@ def test_check_waits_while_the_model_loads(keeper):
     keeper._loading = True  # the load takes ~30 s
     keeper._check()
     assert keeper._timer == ("timer", 15 * 1000) and len(keeper.ollama.requests) == 1
+
+
+def test_a_load_finished_after_switching_away_is_undone(keeper, fake_thonny):
+    keeper._tick()  # loading
+    fake_thonny.options["aia.provider"] = "anthropic"
+    keeper._tick()  # unload sent while Ollama still loads
+    keeper.ollama.requests.clear()
+
+    keeper._after_load(keeper.ollama, "gpt-oss:20b")  # the load ends only now
+    assert keeper.ollama.requests == [("unload", "gpt-oss:20b")]
+
+
+def test_a_wanted_model_stays_after_its_load(keeper):
+    keeper._tick()
+    keeper.ollama.requests.clear()
+    keeper._after_load(keeper.ollama, "gpt-oss:20b")
+    assert keeper.ollama.requests == []
+
+
+def test_is_loading_only_until_the_model_is_ready(keeper, monkeypatch):
+    from thonny.plugins.aia import local_model
+
+    monkeypatch.setattr(local_model, "_keeper", keeper)
+    keeper._tick()
+    keeper._loading = True  # the load runs in its thread
+    assert local_model.is_loading()
+    keeper._ready = True  # loaded; the periodic renewal loads again
+    assert not local_model.is_loading()
+    keeper._ready = False
+    keeper._loading = False  # failed: Ollama not running
+    assert not local_model.is_loading()

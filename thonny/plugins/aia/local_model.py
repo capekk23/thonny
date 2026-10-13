@@ -28,6 +28,17 @@ FIRST_LOAD_DELAY_MS = 1000
 RETRY_MS = 15 * 1000
 
 
+_keeper = None  # the installed keeper, for is_loading()
+
+
+def is_loading() -> bool:
+    """Whether the local model is on its way into memory (the empty panel says so).
+
+    Not during the periodic renewal of a model that is loaded already.
+    """
+    return _keeper is not None and _keeper._loading and not _keeper._ready
+
+
 class LocalModelKeeper:
     def __init__(self, wb, core):
         self._wb = wb
@@ -37,8 +48,11 @@ class LocalModelKeeper:
         # State of the last load, written by its worker thread, read by the timer
         self._loading = False
         self._failed = False
+        self._ready = False  # the wanted model has been loaded (renewals do not reset it)
 
     def install(self):
+        global _keeper
+        _keeper = self
         try:
             self._wb.get_variable("aia.provider").trace_add("write", self._on_settings_changed)
             self._wb.get_variable("aia.enabled").trace_add("write", self._on_settings_changed)
@@ -75,6 +89,8 @@ class LocalModelKeeper:
         previous = self._loaded
         if previous is not None and (wanted is None or wanted[1] != previous[1]):
             self._run(previous[0].unload, previous[1])
+        if wanted is None or previous is None or wanted[1] != previous[1]:
+            self._ready = False
         self._loaded = wanted
         if wanted is not None:
             self._run(wanted[0].preload, wanted[1], load=True)
@@ -98,6 +114,9 @@ class LocalModelKeeper:
         def work():
             try:
                 func(model)
+                if load:
+                    self._ready = True
+                    self._after_load(func.__self__, model)
             except Exception:
                 # Server not running or model not pulled - the chat request reports it
                 logger.info("AIA: local model %s: %s failed", model, func.__name__, exc_info=True)
@@ -108,6 +127,16 @@ class LocalModelKeeper:
                     self._loading = False
 
         threading.Thread(target=work, daemon=True).start()
+
+    def _after_load(self, provider, model):
+        """Worker thread: unload a model that is no longer wanted once its load is done.
+
+        Switching to another choice while the model loads sends the unload request during the
+        load; Ollama finishes the load after it and keeps the model for KEEP_ALIVE.
+        """
+        wanted = self._loaded  # set on the UI thread, read only
+        if wanted is None or wanted[1] != model:
+            provider.unload(model)
 
     def _on_close(self, event=None):
         if self._loaded is None:

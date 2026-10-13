@@ -10,6 +10,7 @@ superseded (cancelled) request are dropped.
 
 import logging
 import queue
+import random
 import threading
 import tkinter as tk
 from tkinter import messagebox, ttk
@@ -29,6 +30,7 @@ from thonny.plugins.aia._common import (
     prepare_messages,
     snapshot_editor_context,
 )
+from thonny.plugins.aia.local_model import is_loading
 from thonny.plugins.aia.prompts import build_system_prompt
 
 logger = logging.getLogger(__name__)
@@ -55,6 +57,30 @@ def local_loading_text() -> str:
 # Grey hint in the empty input (Jakub 2026-10-13, cortex-zamestnani#74)
 def input_hint_text() -> str:
     return tr("Write a message to the assistant...")
+
+
+# The empty panel shows one of these, in the font of the conversation, instead of the title and
+# instructions it had until beta 3 (Jakub 2026-10-13, cortex-zamestnani#75: "Asistent
+# odpočívá...", "Asistent lelkuje...", "Asistent je na obědě...", they may take turns).
+def idle_texts() -> List[str]:
+    return [
+        tr("The assistant is resting..."),
+        tr("The assistant is loafing around..."),
+        tr("The assistant is out for lunch..."),
+        tr("The assistant is having a coffee..."),
+        tr("The assistant is reading a book..."),
+        tr("The assistant is looking out of the window..."),
+        tr("The assistant is stretching..."),
+    ]
+
+
+# While the local model loads at startup (35-55 s on CPU), the empty panel says so: the load
+# starts with Thonny, not with the first message (Jakub 2026-10-13, cortex-zamestnani#75).
+def waking_text() -> str:
+    return tr("The assistant is waking up...")
+
+
+IDLE_CHECK_MS = 1000  # how often the empty panel asks whether the local model still loads
 
 
 # Background and text of the panel follow Thonny's UI theme, like the built-in Assistant it
@@ -189,7 +215,9 @@ class AIAView(ttk.Frame):
         self._messages_text.configure(yscrollcommand=scrollbar.set)
 
         self._configure_tags()
-        self._show_welcome()
+        self._idle = False  # only the empty panel's line is in the messages area
+        self._idle_text = None
+        self._show_idle()
 
         input_frame = ttk.Frame(self)
         input_frame.grid(row=1, column=0, sticky="ew", padx=4, pady=(2, 4))
@@ -224,10 +252,10 @@ class AIAView(ttk.Frame):
     def _configure_tags(self):
         bold_font = ("TkDefaultFont", 9, "bold")
 
-        # colours come from the theme (_apply_theme)
+        # colours come from the theme (_apply_theme); system_text (the empty panel) keeps the
+        # font of the conversation
         self._messages_text.tag_configure("user_header", font=bold_font)
         self._messages_text.tag_configure("assistant_header", font=bold_font)
-        self._messages_text.tag_configure("system_text", font=("TkDefaultFont", 8))
 
     def _apply_theme(self, event=None):
         """Colours of the active themes; also called when a theme changes."""
@@ -248,16 +276,43 @@ class AIAView(ttk.Frame):
         if "system_text" in tags:
             self._input_text.tag_configure("placeholder", foreground=tags["system_text"])
 
-    def _show_welcome(self):
-        self._insert(
-            tr("AIA - AI Mentor Assistant")
-            + "\n"
-            + tr("Type a question below (Enter sends, Shift+Enter = new line).")
-            + "\n",
-            "system_text",
-        )
+    def _show_idle(self):
+        """The empty panel: a playful line, or that the local model is loading."""
+        if self._messages_text.get("1.0", "end-1c"):
+            return
+        if is_loading():
+            text = waking_text()
+            self.after(IDLE_CHECK_MS, self._update_idle)
+        else:
+            others = [t for t in idle_texts() if t != self._idle_text]
+            text = random.choice(others)
+        self._idle_text = text
+        self._idle = True
+        self._edit_messages(lambda: self._messages_text.insert("1.0", text, "system_text"))
+
+    def _update_idle(self):
+        """Replace the loading line once the local model is loaded (or its load failed)."""
+        if self._idle and self._idle_text == waking_text():
+            if is_loading():
+                self.after(IDLE_CHECK_MS, self._update_idle)
+            else:
+                self._hide_idle()
+                self._show_idle()
+
+    def _hide_idle(self):
+        if self._idle:
+            self._idle = False
+            self._edit_messages(lambda: self._messages_text.delete("1.0", "end"))
+
+    def _edit_messages(self, change):
+        self._messages_text.configure(state="normal")
+        change()
+        self._messages_text.configure(state="disabled")
 
     def _insert(self, text: str, tag: Optional[str] = None):
+        self._hide_idle()
+        if not self._messages_text.get("1.0", "end-1c"):
+            text = text.lstrip("\n")  # the first message starts at the top
         self._messages_text.configure(state="normal")
         if tag:
             self._messages_text.insert("end", text, tag)
@@ -550,4 +605,5 @@ class AIAView(ttk.Frame):
         self._messages_text.configure(state="normal")
         self._messages_text.delete("1.0", "end")
         self._messages_text.configure(state="disabled")
-        self._show_welcome()
+        self._idle = False
+        self._show_idle()
