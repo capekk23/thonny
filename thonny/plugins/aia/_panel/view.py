@@ -46,14 +46,6 @@ def thinking_text() -> str:
     return tr("Thinking...")
 
 
-# Takes the place of thinking_text() while a local model is not in memory: on CPU, loading
-# gpt-oss:20b took 35-55 s, with nothing in the panel (Jakub 2026-10-10). Only while the model
-# is really not loaded (Jakub 2026-10-10: with the model loaded at startup a note on every
-# request made it look as if it loaded only now); once it is, thinking_text() returns.
-def local_loading_text() -> str:
-    return tr("Loading the local model...")
-
-
 # Grey hint in the empty input (Jakub 2026-10-13, cortex-zamestnani#74)
 def input_hint_text() -> str:
     return tr("Write a message to the assistant...")
@@ -76,6 +68,11 @@ def idle_texts() -> List[str]:
 
 # While the local model loads at startup (35-55 s on CPU), the empty panel says so: the load
 # starts with Thonny, not with the first message (Jakub 2026-10-13, cortex-zamestnani#75).
+# A request sent while the model is not in memory shows it after "AIA: " in place of
+# thinking_text() (_report_local_model), so the whole load has one playful line (Jakub
+# 2026-10-13, cortex-zamestnani#76: in beta 4 it changed to "Loading the local model...").
+# Only while the model is really not loaded (Jakub 2026-10-10: with the model loaded at
+# startup a note on every request made it look as if it loaded only now).
 def waking_text() -> str:
     return tr("The assistant is waking up...")
 
@@ -173,7 +170,8 @@ class AIAView(ttk.Frame):
         self._cancel_event: Optional[threading.Event] = None
         self._partial: List[str] = []
         self._polling = False
-        self._note = False  # a note (thinking / loading the local model) is in the messages area
+        self._note = False  # a note (thinking / the local model waking up) is in the messages area
+        self._note_text = None
 
         self._build_ui()
         self._apply_theme()
@@ -476,7 +474,9 @@ class AIAView(ttk.Frame):
         self._partial = []
         self._set_busy(True)
         self._insert("\nAIA: ", "assistant_header")
-        self._show_note(thinking_text())
+        # While the keeper loads the model, the empty panel said "waking up": go on with it
+        # right away, not with "Thinking..." until Ollama answers (_report_local_model)
+        self._show_note(waking_text() if provider_id == "ollama" and is_loading() else thinking_text())
 
         threading.Thread(
             target=self._stream_in_background,
@@ -530,8 +530,10 @@ class AIAView(ttk.Frame):
             logger.debug("AIA: could not ask Ollama for loaded models", exc_info=True)
             return
         if loaded:
-            return  # thinking_text() is shown already
-        put((request_id, "note", local_loading_text()))
+            # thinking_text() is shown already, unless the keeper's load ended just now
+            put((request_id, "note", thinking_text()))
+            return
+        put((request_id, "note", waking_text()))
 
         def watch():
             while not cancel_event.wait(LOAD_CHECK_S):
@@ -580,9 +582,12 @@ class AIAView(ttk.Frame):
 
     def _show_note(self, text: str):
         """Show a note after "AIA: " in place of the previous one."""
+        if getattr(self, "_note", False) and getattr(self, "_note_text", None) == text:
+            return
         self._hide_loading()
         self._insert(text, "loading_text")
         self._note = True
+        self._note_text = text
 
     def _hide_loading(self):
         """Remove the note once the answer (or an error, or Cancel) takes its place."""

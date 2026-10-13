@@ -17,12 +17,14 @@ STD_MODE = "standard"
 RPI_MODE = "rpi"
 
 # AI Assistant (thonny.plugins.aia): what the welcome dialog offers, as provider ids.
-# The local model is preselected: the only choice that works and costs nothing (Jakub 2026-10-10).
-# "later" keeps AIA on and saves no provider: the choice is made later in Tools > Options.
+# "later" is preselected (Jakub 2026-10-13, cortex-zamestnani#76; until beta 4 the local model
+# was): the start is simpler and a new user does not end up with gpt-oss:20b, weak and slow,
+# loading 13 GB at the first start. "later" keeps AIA on and saves no provider: the choice is
+# made later in Tools > Options.
 AI_CLOUD = ("anthropic", "openai", "gemini")
 AI_LOCAL = "ollama"
 AI_LATER = "later"
-AI_DEFAULT = AI_LOCAL
+AI_DEFAULT = AI_LATER
 COMPANY = {"anthropic": "Anthropic", "openai": "OpenAI", "gemini": "Google"}
 
 OLLAMA_URL = "https://ollama.com/download"
@@ -91,11 +93,12 @@ MODEL_NAMES = {
 
 
 def _ai_labels(models):
-    # Order of the choice (Jakub 2026-10-10): local model first, providers by company name, "later" last
-    labels = {AI_LOCAL: tr("Local model (Ollama, %s)") % models[AI_LOCAL]}
+    # Order of the choice: "later" first, providers by company name, local model last (Jakub
+    # 2026-10-13, cortex-zamestnani#76: the two swapped places; until beta 4 it was local first)
+    labels = {AI_LATER: tr("I will set it up later")}
     for p in sorted(AI_CLOUD, key=lambda p: COMPANY[p].lower()):
         labels[p] = "%s (%s)" % (COMPANY[p], MODEL_NAMES.get(models[p], models[p]))
-    labels[AI_LATER] = tr("I will set it up later")
+    labels[AI_LOCAL] = tr("Local model (Ollama, %s)") % models[AI_LOCAL]
     return labels
 
 
@@ -148,7 +151,7 @@ class FirstRunWindow(tk.Tk):
         self.conf = configuration_manager
         self.models = _default_models()
         self.key_urls = _key_urls()
-        # last ollama_state(); checked right away, because the local model is preselected
+        # last ollama_state(); checked right away only if the local model is preselected
         self.ollama = ollama_state(self.models[AI_LOCAL]) if AI_DEFAULT == AI_LOCAL else None
 
         self.main_frame = ttk.Frame(self)

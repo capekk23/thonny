@@ -204,7 +204,7 @@ def test_loaded_local_model_is_not_said_to_load(panel_view):
     view._stream_in_background(request_id, cancel_event, ollama, "ollama", "", [], "gpt-oss:20b")
 
     notes = [p for _, kind, p in _drain(view) if kind == "note"]
-    assert notes == []  # "Thinking..." from the start of the request stays
+    assert notes == [panel_view.thinking_text()]  # the same note as at the start: nothing changes
 
 
 def test_loading_note_turns_into_thinking_note_once_loaded(panel_view, monkeypatch):
@@ -227,7 +227,7 @@ def test_loading_note_turns_into_thinking_note_once_loaded(panel_view, monkeypat
     worker.join(5)
 
     notes = [p for _, kind, p in list(view._events.queue) if kind == "note"]
-    assert notes == [panel_view.local_loading_text(), panel_view.thinking_text()]
+    assert notes == [panel_view.waking_text(), panel_view.thinking_text()]
     view._messages_text = _FakeText()
     view._poll_events()
     assert "Ahoj" in view.inserted and view._note is False
@@ -341,6 +341,44 @@ def test_thinking_note_follows_the_header_until_the_answer(panel_view):
     view._poll_events()
     assert view._messages_text.deleted == [("2.5", "2.31")]  # the note is gone
     assert view.inserted[-1] == ("Cyklus", None)
+
+
+class _LocalCore(_Core):
+    def get_current_provider_id(self):
+        return "ollama"
+
+    def get_current_model(self, provider):
+        return "gpt-oss:20b"
+
+
+@pytest.mark.parametrize("loading", [True, False])
+def test_request_during_the_load_goes_on_waking_up(panel_view, monkeypatch, loading):
+    """Jakub 2026-10-13 (#76): the whole load has one playful line, also after a message.
+
+    In beta 4 a message sent during the load showed "Thinking..." until Ollama answered,
+    then "Loading the local model...".
+    """
+    monkeypatch.setattr(panel_view, "is_loading", lambda: loading)
+    view = make_view(panel_view)
+    view._insert = lambda text, tag=None: view.inserted.append((text, tag))
+    view._core = _LocalCore()
+    view._stream_in_background = lambda *args: None
+    view._conversation = [{"role": "user", "content": "Ahoj"}]
+
+    view._request_llm_response()
+
+    expected = panel_view.waking_text() if loading else panel_view.thinking_text()
+    assert view.inserted[-1] == (expected, "loading_text")
+
+
+def test_same_note_again_changes_nothing(panel_view):
+    view = make_view(panel_view)
+    view._insert = lambda text, tag=None: view.inserted.append((text, tag))
+    view._messages_text = _FakeText()
+    view._show_note(panel_view.waking_text())
+    view._show_note(panel_view.waking_text())
+    assert view.inserted == [(panel_view.waking_text(), "loading_text")]
+    assert view._messages_text.deleted == []
 
 
 def test_clear_asks_before_deleting_a_conversation(panel_view, monkeypatch):
