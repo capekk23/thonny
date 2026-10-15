@@ -58,6 +58,9 @@ def _load_panel(wb):
     from thonny.plugins.aia._panel.switching import install_switching_logic
     from thonny.plugins.aia._panel.view import AIAView
 
+    from thonny.plugins.aia._panel.quadrants import init_option
+
+    init_option(wb)  # the default layout in quadrants, only for a fresh configuration
     wb.add_view(AIAView, tr("AI Assistant"), "ne", visible_by_default=False)
     wb.add_configuration_page("aia", tr("AI Assistant"), AIAPanelConfigPage, 81)
     install_switching_logic(wb)

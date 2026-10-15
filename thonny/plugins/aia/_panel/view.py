@@ -20,7 +20,7 @@ from typing import Dict, List, Optional
 
 from thonny import get_workbench
 from thonny.languages import tr
-from thonny.ui_utils import scrollbar_style
+from thonny.ui_utils import AutomaticPanedWindow, scrollbar_style
 
 from thonny.plugins.aia._common import (
     AIACore,
@@ -188,11 +188,15 @@ class AIAView(ttk.Frame):
 
     def _build_ui(self):
         self.columnconfigure(0, weight=1)
-        self.rowconfigure(0, weight=1)  # messages area expands
-        self.rowconfigure(1, weight=0)  # input area fixed
+        self.rowconfigure(0, weight=1)
 
-        messages_frame = ttk.Frame(self)
-        messages_frame.grid(row=0, column=0, sticky="nsew")
+        # The answers above, the input below, with a border the user can move; in the default
+        # layout the border runs at the height of the one above the Shell (quadrants.py)
+        self.split = AutomaticPanedWindow(self, orient=tk.VERTICAL)
+        self.split.grid(row=0, column=0, sticky="nsew")
+
+        messages_frame = ttk.Frame(self.split)
+        messages_frame.preferred_size_in_pw = None  # takes what the input leaves
         messages_frame.columnconfigure(0, weight=1)
         messages_frame.rowconfigure(0, weight=1)
 
@@ -220,12 +224,20 @@ class AIAView(ttk.Frame):
         self._idle_timer = None
         self._show_idle()
 
-        input_frame = ttk.Frame(self)
-        input_frame.grid(row=1, column=0, sticky="ew", padx=4, pady=(2, 4))
+        # the pane keeps its height when the panel grows (AutomaticPanedWindow), the input inside
+        # it stretches to the pane
+        self.input_pane = ttk.Frame(self.split)
+        self.input_pane.preferred_size_in_pw = 0  # set below and by set_input_height()
+        self.input_pane.columnconfigure(0, weight=1)
+        self.input_pane.rowconfigure(0, weight=1)
+        input_frame = ttk.Frame(self.input_pane)
+        input_frame.grid(row=0, column=0, sticky="nsew", padx=4, pady=(2, 4))
         input_frame.columnconfigure(0, weight=1)
+        input_frame.rowconfigure(0, weight=1)
+        self._input_frame = input_frame
 
-        # height=1 is only the minimum: the button column sets the row height and the
-        # input stretches to it, so its edges line up with Send and Clear
+        # height=1 is only the minimum: the input stretches to the pane, at least to the height
+        # of the button column, so its edges line up with Send and Clear
         # the border is a highlight, so that its colour can follow the theme
         self._input_text = tk.Text(
             input_frame, height=1, wrap="word", borderwidth=0, highlightthickness=1
@@ -249,6 +261,37 @@ class AIAView(ttk.Frame):
         self._cancel_button.pack(side="top", pady=(0, 2))
 
         ttk.Button(button_frame, text=tr("Clear"), width=9, command=self._on_clear).pack(side="top")
+
+        self.input_pane.preferred_size_in_pw = self.input_minimum()
+        self.split.add(messages_frame, minsize=self.input_minimum())
+        self.split.add(self.input_pane, minsize=self.input_minimum())
+        self.after_idle(self._start_quadrants)
+
+    def input_minimum(self) -> int:
+        """The smallest height of the input pane: the input with its three buttons."""
+        self._input_frame.update_idletasks()
+        return self._input_frame.winfo_reqheight() + 6  # pady of the input frame
+
+    def set_input_height(self, height: int):
+        """Height of the input pane; the answers above get the rest."""
+        # AutomaticPanedWindow gives the last pane its preferred size minus the sash before it
+        height = max(int(height), self.input_minimum()) + int(str(self.split.cget("sashwidth")))
+        # also when only the actual height is off: Tk gives the extra space of a growing panel to
+        # its last pane, and AutomaticPanedWindow does not always restore it
+        sash = int(str(self.split.cget("sashwidth")))
+        actual = self.input_pane.winfo_height()
+        if self.input_pane.preferred_size_in_pw != height or (actual > 1 and actual != height - sash):
+            self.input_pane.preferred_size_in_pw = height
+            self.split._check_restore_preferred_sizes()
+
+    def _start_quadrants(self):
+        # home_widget (the view's place in a notebook) exists only after the constructor
+        from thonny.plugins.aia._panel.quadrants import Quadrants
+
+        try:
+            self._quadrants = Quadrants(get_workbench(), self)
+        except Exception:
+            logger.debug("Could not set up the quadrants", exc_info=True)
 
     def _configure_tags(self):
         bold_font = ("TkDefaultFont", 9, "bold")
