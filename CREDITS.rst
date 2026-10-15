@@ -23,6 +23,13 @@ Several companies and organizations have provided us with free hardware for test
 * Calliope (https://calliope.cc/en)
 * @bwshockley (https://minifigboards.com/)
 
+Thonny AIA
+----------
+Thonny AIA is an unofficial fork of Thonny (https://github.com/senkyr/thonny-aia). It is not published or supported by the Thonny project or the University of Tartu. Its AI assistant AIA and the changes of the fork were made by Jakub Šenkýř (SPŠ Trutnov, Czech Republic), on top of Thonny by Aivar Annamaa and the people listed here.
+
+* The SDKs anthropic (https://github.com/anthropics/anthropic-sdk-python), openai (https://github.com/openai/openai-python), google-genai (https://github.com/googleapis/python-genai) and ollama (https://github.com/ollama/ollama-python) connect AIA to the AI providers. Their licenses and those of the libraries they need are in licenses/aia.
+* Ollama (https://ollama.com) runs the local model.
+
 Python
 ------
 It's a really nice language for teaching programming. It also has some nice technical properties, that made Thonny's program animation features pleasure to implement.

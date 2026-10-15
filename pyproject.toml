@@ -11,6 +11,8 @@ license = "MIT"
 requires-python = ">=3.8"
 authors = [
     { name = "Aivar Annamaa and others", email = "thonny@googlegroups.com" },
+    # Thonny AIA: the AI assistant AIA and the changes of the fork
+    { name = "Jakub Šenkýř" },
 ]
 keywords = [
     "IDE",
@@ -61,9 +63,12 @@ dependencies = [
 ]
 
 [project.urls]
-"Bug tracker" = "https://github.com/thonny/thonny/issues"
-Homepage = "https://thonny.org"
-"Source code" = "https://github.com/thonny/thonny"
+# Thonny AIA (unofficial fork): its own repository and issues, then the Thonny project
+Homepage = "https://github.com/senkyr/thonny-aia"
+"Bug tracker" = "https://github.com/senkyr/thonny-aia/issues"
+"Source code" = "https://github.com/senkyr/thonny-aia"
+"Thonny homepage" = "https://thonny.org"
+"Thonny source code" = "https://github.com/thonny/thonny"
 
 [project.gui-scripts]
 thonny = "thonny:launch"

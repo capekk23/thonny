@@ -398,7 +398,10 @@ class AssistantView(tktextext.TextFrame):
         )
 
     def _append_feedback_link(self):
-        self._append_text("Was it helpful or confusing?\n", ("a", "feedback_link"))
+        # Thonny AIA: no feedback link, the feedback dialog sends to the Thonny project's server
+        # (thonny.org/store_assistant_feedback.php), and data from the fork must not go there.
+        # Reachable when AIA is switched off in Tools > Options (cortex-zamestnani#78).
+        return
 
     def _format_file_url(self, atts):
         return format_file_url(atts["filename"], atts.get("lineno"), atts.get("col_offset"))
@@ -479,16 +482,8 @@ class GenericErrorHelper(ErrorHelper):
 
         self.intro_text = "No specific suggestions for this error (yet)."
         self.intro_confidence = 1
-        self.suggestions = [
-            Suggestion(
-                "ask-for-specific-support",
-                "Let Thonny developers know",
-                "Click on the feedback link at the bottom of this panel to let Thonny developers know "
-                + "about your problem. They may add support for "
-                + "such cases in future Thonny versions.",
-                1,
-            )
-        ]
+        # Thonny AIA: no "Let Thonny developers know" suggestion, it pointed to the feedback link
+        self.suggestions = []
 
         if error_info["message"].lower() != "invalid syntax":
             self.suggestions.append(

@@ -2,6 +2,17 @@
 
 `Support Ukraine! <https://github.com/thonny/thonny/wiki/Support-Ukraine>`_
 
+==========
+Thonny AIA
+==========
+
+**Thonny AIA is an unofficial fork of Thonny. It is not published or supported by the Thonny project or the University of Tartu.**
+It adds the AI assistant AIA, which helps beginners understand their errors through dialogue instead of writing the code for them.
+Thonny was created by Aivar Annamaa, the AI assistant AIA and the changes of the fork by Jakub Šenkýř.
+Installers: https://github.com/senkyr/thonny-aia/releases, problems of the fork: https://github.com/senkyr/thonny-aia/issues, version history: `CHANGELOG.rst <CHANGELOG.rst>`_.
+
+The text below is Thonny's own.
+
 ======
 Thonny
 ======

@@ -12,9 +12,27 @@ import thonny
 from thonny import get_workbench, ui_utils
 from thonny.common import get_python_version_string
 from thonny.languages import tr
-from thonny.ui_utils import CommonDialog, CommonDialogEx, create_url_label, get_hyperlink_cursor
+from thonny.first_run import data_notice
+from thonny.ui_utils import (
+    CommonDialog,
+    CommonDialogEx,
+    create_url_label,
+    ems_to_pixels,
+    get_hyperlink_cursor,
+)
+
+# Thonny AIA (fork of Thonny with the AI assistant AIA): its own repository, issues and changelog,
+# so that problems of the fork do not go to the Thonny project
+FORK_URL = "https://github.com/senkyr/thonny-aia"
 
 logger = getLogger(__name__)
+
+
+def unofficial_notice() -> str:
+    return tr(
+        "Thonny AIA is an unofficial fork. It is not published or supported by the Thonny "
+        "project or the University of Tartu."
+    )
 
 
 class AboutDialog(CommonDialogEx):
@@ -32,20 +50,30 @@ class AboutDialog(CommonDialogEx):
         )
         heading_label.grid(pady=(self.get_large_padding(), self.get_small_padding()))
 
-        based_on_label = ttk.Label(
+        # Thonny first, AIA second, also in the links and the copyright (Jakub 2026-10-15,
+        # cortex-zamestnani#78)
+        authors_label = ttk.Label(
             self.main_frame,
-            text=tr("Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."),
+            text=tr("Thonny was created by %s.") % "Aivar Annamaa"
+            + "\n"
+            + tr("The intelligent assistant AIA was created by %s.") % "Jakub Šenkýř",
             justify=tk.CENTER,
         )
-        based_on_label.grid()
-
-        fork_url_label = create_url_label(
-            self.main_frame, "https://github.com/senkyr/thonny", justify=tk.CENTER
-        )
-        fork_url_label.grid()
+        authors_label.grid()
 
         url_label = create_url_label(self.main_frame, "https://thonny.org", justify=tk.CENTER)
         url_label.grid()
+
+        fork_url_label = create_url_label(self.main_frame, FORK_URL, justify=tk.CENTER)
+        fork_url_label.grid()
+
+        unofficial_label = ttk.Label(
+            self.main_frame,
+            text=unofficial_notice(),
+            justify=tk.CENTER,
+            wraplength=ems_to_pixels(32),
+        )
+        unofficial_label.grid(pady=(self.get_small_padding(), 0), padx=self.get_large_padding())
 
         if sys.platform == "linux":
             try:
@@ -102,6 +130,14 @@ class AboutDialog(CommonDialogEx):
         )
         credits_label.grid()
 
+        data_label = ttk.Label(
+            self.main_frame,
+            text=data_notice(),
+            justify=tk.CENTER,
+            wraplength=ems_to_pixels(32),
+        )
+        data_label.grid(pady=(self.get_medium_padding(), 0), padx=self.get_large_padding())
+
         default_font = tkinter.font.nametofont("TkDefaultFont")
         license_font = default_font.copy()
         license_font.configure(size=round(default_font["size"] * 0.7))
@@ -110,6 +146,11 @@ class AboutDialog(CommonDialogEx):
             text="Copyright (©) "
             + str(datetime.datetime.now().year)
             + " Aivar Annamaa\n"
+            + "Copyright (©) "
+            + str(datetime.datetime.now().year)
+            + " Jakub Šenkýř "
+            + tr("(the AI assistant AIA and the changes of Thonny AIA)")
+            + "\n"
             + tr(
                 "This program comes with\n"
                 + "ABSOLUTELY NO WARRANTY!\n"
@@ -152,14 +193,14 @@ def load_plugin() -> None:
         "changelog",
         "help",
         tr("Version history"),
-        lambda: open_url("https://github.com/thonny/thonny/blob/master/CHANGELOG.rst"),
+        lambda: open_url(FORK_URL + "/blob/aia-5.5/CHANGELOG.rst"),
         group=60,
     )
     get_workbench().add_command(
         "issues",
         "help",
         tr("Report problems"),
-        lambda: open_url("https://github.com/thonny/thonny/issues"),
+        lambda: open_url(FORK_URL + "/issues"),
         group=60,
     )
     get_workbench().add_command("about", "help", tr("About Thonny"), open_about, group=61)

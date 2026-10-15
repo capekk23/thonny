@@ -2,6 +2,50 @@
 Version history
 ===============
 
+Thonny AIA
+==========
+Thonny AIA is an unofficial fork of Thonny 5.0.0 with the AI assistant AIA (https://github.com/senkyr/thonny-aia). It is not published or supported by the Thonny project. Its versions are below, Thonny's own history follows after them.
+
+5.5.0b6 (in progress)
+---------------------
+* The About window names the authors in order: Thonny was created by Aivar Annamaa, the intelligent assistant AIA by Jakub Šenkýř; the links and the copyright follow the same order.
+* The About window and the README say that Thonny AIA is an unofficial fork, not published or supported by the Thonny project or the University of Tartu.
+* The welcome dialog and the About window say what AIA sends to the chosen AI provider.
+* Help > Report problems and Help > Version history lead to the fork, the repository is now https://github.com/senkyr/thonny-aia.
+* The feedback link of the rule-based Assistant (shown when AIA is switched off) is gone: it sent data to the Thonny project's server.
+* The installer shows the copyright and the publisher Jakub Šenkýř in its file properties and lists the licenses of the libraries bundled for AIA.
+
+5.5.0b5 (2026-10-13)
+--------------------
+* One playful line for the whole load of the local model: "Asistent se probouzí..." until the model is loaded, then "Thinking..." and the answer.
+* "I will set it up later" is first and preselected, the local model last, in the welcome dialog and in Tools > Options > AI Assistant. The welcome dialog checks Ollama only when the local model is chosen.
+
+5.5.0b4 (2026-10-13)
+--------------------
+* AIA always addresses the student informally (Czech tykání, du, tu, ты ...), with every provider. The Czech texts of AIA are informal too.
+* The empty panel shows a playful line instead of a title and instructions, and "Asistent se probouzí..." while the local model loads.
+* Choice of model with an API key in Tools > Options > AI Assistant.
+* Everything in Tools > Options > Editor is on by default except indenting with tabs.
+
+5.5.0b3 (2026-10-13)
+--------------------
+* Anthropic answers with Claude Haiku 5.5 instead of Claude Sonnet 5.5.
+* "Thinking..." while waiting for the answer.
+* Clear asks first.
+* AIA reacts to failed package installations in Tools > Manage packages.
+* "Ty:" instead of "Vy:" for the student's messages, a hint in the empty input.
+
+5.5.0b2 (2026-10-12)
+--------------------
+* The AI Assistant panel follows Thonny's theme, light or dark.
+
+5.5.0b1 (2026-10-12)
+--------------------
+First beta: Thonny 5.0.0 with the AI assistant AIA instead of the rule-based Assistant (three answer styles, Socratic by default), the choice of AI provider in the welcome dialog (Anthropic, Google, OpenAI or a local model in Ollama), the local model loaded at startup, Czech by default with a complete Czech translation, its own installation folder, settings and launcher (thonny-aia.exe), and a steadier logo.
+
+Thonny
+======
+
 5.0.0 (2026-04-22)
 ====================
 Fixed regressions introduced in 5.0.0b1:

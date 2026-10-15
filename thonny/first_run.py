@@ -133,6 +133,19 @@ def _local_note(state, model):
     )
 
 
+def data_notice():
+    """What AIA sends and where, in the welcome dialog and in About (Jakub 2026-10-15,
+    cortex-zamestnani#78). Checked against the code: the messages, the editor's file (option
+    aia.auto_attach_context, on by default) and the files it imports from its folder (option
+    aia.include_local_imports, off by default), the Shell output after an error and pip's log
+    after a failed installation go to the chosen provider; Ollama runs on the computer."""
+    return tr(
+        "AIA sends your messages, the code from the editor (and, if switched on in the options, "
+        "the files it imports) and error output to the AI provider you choose. The local model "
+        "sends nothing outside your computer."
+    )
+
+
 def _later_note():
     return tr(
         "AIA stays switched on, but it will answer only after you choose a provider in "
@@ -211,9 +224,15 @@ class FirstRunWindow(tk.Tk):
         self.probe = self._make_detail(ttk.Frame(self.main_frame))  # never gridded
         self._sized_for = None  # language the detail size was measured for
 
+        self.data_label = ttk.Label(self.main_frame, justify="left")
+        self.data_label.grid(
+            row=5, column=2, columnspan=2, sticky="nw", padx=(0, self.padx), pady=(12, 0)
+        )
+        self._translatable.append((self.data_label, data_notice))
+
         self.ok_button = ttk.Button(self.main_frame, command=self.on_ok)
         self.ok_button.grid(
-            row=5, column=3, padx=(0, self.padx), pady=(12, 20), sticky="se"
+            row=6, column=3, padx=(0, self.padx), pady=(12, 20), sticky="se"
         )
         self._translatable.append((self.ok_button, lambda: tr("Let's go!")))
 
@@ -327,6 +346,7 @@ class FirstRunWindow(tk.Tk):
         wrap = max(l.winfo_reqwidth() for l in self._combo_labels) + 10 + self.ai_combo.winfo_reqwidth()
         for d in (self.detail, self.probe):
             d.note.configure(wraplength=wrap)
+        self.data_label.configure(wraplength=wrap)
         width = height = 0
         for ai, ollama in variants:
             self._show_detail(self.probe, ai, ollama)
