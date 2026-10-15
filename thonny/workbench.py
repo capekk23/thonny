@@ -308,11 +308,20 @@ class Workbench(tk.Tk):
         self.set_default("layout.top", 50)
         self.set_default("layout.left", 150)
         if self.in_simple_mode():
-            self.set_default("layout.width", 1130)
-            self.set_default("layout.height", 700)
+            default_size = (1130, 700)
         else:
-            self.set_default("layout.width", 800)
-            self.set_default("layout.height", 650)
+            default_size = (800, 650)
+        # Thonny AIA: the first window grows with the display scaling, so that at 150 % it holds
+        # as much as at 100 % (upstream opens 800x650 px at any scaling, with bigger fonts in it);
+        # the default layout halves its width between the editor and AIA (cortex-zamestnani#78)
+        scale = max(self._scaling_factor / (96 / 72), 1.0)
+        self.set_default(
+            "layout.width", min(round(default_size[0] * scale), int(self.winfo_screenwidth() * 0.9))
+        )
+        self.set_default(
+            "layout.height",
+            min(round(default_size[1] * scale), int(self.winfo_screenheight() * 0.85)),
+        )
         self.set_default("layout.w_width", 200)
         self.set_default("layout.e_width", 200)
         self.set_default("layout.s_height", 200)
