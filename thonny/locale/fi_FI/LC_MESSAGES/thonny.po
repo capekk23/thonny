@@ -2033,9 +2033,6 @@ msgstr "Kieli:"
 msgid "Let's go!"
 msgstr "Aloitetaan!"
 
-msgid "Loading the local model..."
-msgstr "Ladataan paikallista mallia..."
-
 msgid "Local model (Ollama, %s)"
 msgstr "Paikallinen malli (Ollama, %s)"
 
@@ -2063,14 +2060,11 @@ msgstr "Tekoälypalvelu ei vastannut ajoissa. Yritä uudelleen."
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Avain tallennetaan tavallisena tekstinä Thonnyn asetustiedostoon."
 
-msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
-msgstr "Thonny ja tekoälyavustaja (AIA). Thonnyn on tehnyt Aivar Annamaa."
-
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "Liikaa pyyntöjä tai tilin käyttöraja on täynnä. Odota hetki ja yritä uudelleen."
 
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
-msgstr "Tuntematon palveluntarjoaja ”%s”. Valitse se kohdassa Työkalut > Asetukset > Tekoälyavustaja."
+msgstr "Tuntematon palveluntarjoaja ”%s”. Valitse palveluntarjoaja kohdassa Työkalut > Asetukset > Tekoälyavustaja."
 
 msgid "Use AI-based AIA instead of the built-in Assistant"
 msgstr "Käytä tekoälypohjaista AIA:ta sisäänrakennetun Avustajan sijaan"
@@ -2194,3 +2188,23 @@ msgstr "Palveluntarjoaja ei listannut tämän avaimen malleja; nämä ovat taval
 #: thonny/plugins/aia
 msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
 msgstr "Malli %s ei ole käytettävissä. Valitse toinen malli kohdassa Työkalut > Asetukset > Tekoälyavustaja."
+
+#: thonny/plugins/aia
+msgid "AIA sends your messages, the code from the editor (and, if switched on in the options, the files it imports) and error output to the AI provider you choose. The local model sends nothing outside your computer."
+msgstr "AIA lähettää valitsemallesi tekoälypalveluntarjoajalle viestisi, editorin koodin (ja, jos kytket sen päälle asetuksissa, myös tiedostot, jotka koodi tuo) sekä virhetulosteet. Paikallinen malli ei lähetä mitään tietokoneesi ulkopuolelle."
+
+#: thonny/plugins/aia
+msgid "Thonny AIA is an unofficial fork. It is not published or supported by the Thonny project or the University of Tartu."
+msgstr "Thonny AIA on epävirallinen haara (fork). Thonny-projekti tai Tarton yliopisto ei julkaise eikä tue sitä."
+
+#: thonny/plugins/aia
+msgid "Thonny was created by %s."
+msgstr "Thonnyn on luonut %s."
+
+#: thonny/plugins/aia
+msgid "The intelligent assistant AIA was created by %s."
+msgstr "Älykkään avustajan AIA:n on luonut %s."
+
+#: thonny/plugins/aia
+msgid "(the AI assistant AIA and the changes of Thonny AIA)"
+msgstr "(tekoälyavustaja AIA ja Thonny AIA:n muutokset)"

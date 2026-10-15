@@ -2005,9 +2005,6 @@ msgstr "ഭാഷ:"
 msgid "Let's go!"
 msgstr "നമുക്ക് തുടങ്ങാം!"
 
-msgid "Loading the local model..."
-msgstr "പ്രാദേശിക മോഡൽ ലോഡ് ചെയ്യുന്നു..."
-
 msgid "Local model (Ollama, %s)"
 msgstr "പ്രാദേശിക മോഡൽ (Ollama, %s)"
 
@@ -2034,9 +2031,6 @@ msgstr "AI സേവനം സമയത്ത് മറുപടി നൽകി
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Thonny-യുടെ കോൺഫിഗറേഷൻ ഫയലിൽ കീ സാധാരണ ടെക്സ്റ്റായി സംഭരിക്കുന്നു."
-
-msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
-msgstr "AI സഹായിയോടു കൂടിയ Thonny (AIA). Thonny നിർമ്മിച്ചത് Aivar Annamaa ആണ്."
 
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "അഭ്യർത്ഥനകൾ വളരെ കൂടുതലാണ്, അല്ലെങ്കിൽ അക്കൗണ്ടിന്റെ പരിധി തീർന്നു. അൽപ്പസമയം കാത്തിരുന്ന് വീണ്ടും ശ്രമിക്കുക."
@@ -2166,3 +2160,23 @@ msgstr "ദാതാവ് ഈ കീയുടെ മോഡലുകൾ പട�
 #: thonny/plugins/aia
 msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
 msgstr "മോഡൽ %s ലഭ്യമല്ല. ഉപകരണങ്ങൾ > ഐച്ഛികങ്ങൾ > AI സഹായി എന്നതിൽ മറ്റൊരു മോഡൽ തിരഞ്ഞെടുക്കൂ."
+
+#: thonny/plugins/aia
+msgid "AIA sends your messages, the code from the editor (and, if switched on in the options, the files it imports) and error output to the AI provider you choose. The local model sends nothing outside your computer."
+msgstr "AIA നിങ്ങളുടെ സന്ദേശങ്ങൾ, എഡിറ്ററിലെ കോഡ് (ഐച്ഛികങ്ങളിൽ ഓണാക്കിയിട്ടുണ്ടെങ്കിൽ, ആ കോഡ് ഇംപോർട്ട് ചെയ്യുന്ന ഫയലുകളും), പിഴവ് ഔട്ട്പുട്ട് എന്നിവ നിങ്ങൾ തിരഞ്ഞെടുക്കുന്ന AI ദാതാവിന് അയയ്ക്കുന്നു. പ്രാദേശിക മോഡൽ നിങ്ങളുടെ കമ്പ്യൂട്ടറിന് പുറത്തേക്ക് ഒന്നും അയയ്ക്കുന്നില്ല."
+
+#: thonny/plugins/aia
+msgid "Thonny AIA is an unofficial fork. It is not published or supported by the Thonny project or the University of Tartu."
+msgstr "Thonny AIA ഒരു അനൗദ്യോഗിക ഫോർക്ക് ആണ്. Thonny പ്രോജക്റ്റോ ടാർട്ടു സർവകലാശാലയോ ഇത് പ്രസിദ്ധീകരിക്കുകയോ പിന്തുണയ്ക്കുകയോ ചെയ്യുന്നില്ല."
+
+#: thonny/plugins/aia
+msgid "Thonny was created by %s."
+msgstr "Thonny സൃഷ്ടിച്ചത് %s ആണ്."
+
+#: thonny/plugins/aia
+msgid "The intelligent assistant AIA was created by %s."
+msgstr "ബുദ്ധിയുള്ള സഹായി AIA സൃഷ്ടിച്ചത് %s ആണ്."
+
+#: thonny/plugins/aia
+msgid "(the AI assistant AIA and the changes of Thonny AIA)"
+msgstr "(AI സഹായി AIA-യും Thonny AIA-യിലെ മാറ്റങ്ങളും)"

@@ -2038,9 +2038,6 @@ msgstr "語言："
 msgid "Let's go!"
 msgstr "開始吧！"
 
-msgid "Loading the local model..."
-msgstr "正在載入本機模型..."
-
 msgid "Local model (Ollama, %s)"
 msgstr "本機模型（Ollama，%s）"
 
@@ -2067,9 +2064,6 @@ msgstr "AI 服務未及時回應。請再試一次。"
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "金鑰會以純文字形式儲存在 Thonny 的設定檔中。"
-
-msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
-msgstr "搭配 AI 助理（AIA）的 Thonny。Thonny 由 Aivar Annamaa 開發。"
 
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "請求過多，或帳戶配額已用完。請稍候片刻再試一次。"
@@ -2199,3 +2193,23 @@ msgstr "服務供應商沒有列出此金鑰的模型；這些是常用的模型
 #: thonny/plugins/aia
 msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
 msgstr "無法使用模型 %s。請在「工具 > 選項 > AI 助理」中選擇其他模型。"
+
+#: thonny/plugins/aia
+msgid "AIA sends your messages, the code from the editor (and, if switched on in the options, the files it imports) and error output to the AI provider you choose. The local model sends nothing outside your computer."
+msgstr "AIA 會將您的訊息、編輯器中的程式碼（以及在選項中開啟後，該程式碼匯入的檔案）和錯誤輸出傳送給您選擇的 AI 服務供應商。本機模型不會將任何內容傳送到您的電腦之外。"
+
+#: thonny/plugins/aia
+msgid "Thonny AIA is an unofficial fork. It is not published or supported by the Thonny project or the University of Tartu."
+msgstr "Thonny AIA 是非官方的分支（fork），並非由 Thonny 專案或塔爾圖大學發布或提供支援。"
+
+#: thonny/plugins/aia
+msgid "Thonny was created by %s."
+msgstr "Thonny 由 %s 建立。"
+
+#: thonny/plugins/aia
+msgid "The intelligent assistant AIA was created by %s."
+msgstr "智慧助理 AIA 由 %s 建立。"
+
+#: thonny/plugins/aia
+msgid "(the AI assistant AIA and the changes of Thonny AIA)"
+msgstr "（AI 助理 AIA 及 Thonny AIA 的修改）"

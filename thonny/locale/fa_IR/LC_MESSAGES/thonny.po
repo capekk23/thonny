@@ -2010,13 +2010,13 @@ msgid "Answer style:"
 msgstr "سبک پاسخ:"
 
 msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
-msgstr "پاسخ‌ها از %s می‌آیند. به یک کلید API نیاز دارید: آن را از پیوند زیر بسازید یا از معلم خود بگیرید. همچنین می‌توانید بعداً آن را در ابزارها > تنظیمات > دستیار هوش مصنوعی وارد کنید."
+msgstr "پاسخ‌ها از %s می‌آیند. به یک کلید API نیاز داری: آن را از پیوند زیر بساز یا از معلمت بگیر. همچنین می‌توانی بعداً آن را در ابزارها > تنظیمات > دستیار هوش مصنوعی وارد کنی."
 
 msgid "Automatically include current file as context"
 msgstr "فایل فعلی به‌طور خودکار به‌عنوان زمینه فرستاده شود"
 
 msgid "Cannot connect to the AI service. Check the internet connection."
-msgstr "اتصال به سرویس هوش مصنوعی ممکن نیست. اتصال اینترنت را بررسی کنید."
+msgstr "اتصال به سرویس هوش مصنوعی ممکن نیست. اتصال اینترنت را بررسی کن."
 
 msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
 msgstr "دسترسی به Ollama ممکن نیست. آیا در حال اجراست (ollama serve) و آیا آدرس میزبان درست است؟"
@@ -2025,7 +2025,7 @@ msgid "Check again"
 msgstr "بررسی دوباره"
 
 msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
-msgstr "Claude Code (فرمان «claude») پیدا نشد. Claude Code را نصب کنید، یک بار «claude» را اجرا کنید و وارد حساب شوید، سپس Thonny را دوباره راه‌اندازی کنید."
+msgstr "Claude Code (فرمان «claude») پیدا نشد. Claude Code را نصب کن، یک بار «claude» را اجرا کن و وارد حساب شو، سپس Thonny را دوباره راه‌اندازی کن."
 
 msgid "Context:"
 msgstr "زمینه:"
@@ -2048,9 +2048,6 @@ msgstr "زبان:"
 msgid "Let's go!"
 msgstr "شروع کنیم!"
 
-msgid "Loading the local model..."
-msgstr "در حال بارگذاری مدل محلی..."
-
 msgid "Local model (Ollama, %s)"
 msgstr "مدل محلی (Ollama، %s)"
 
@@ -2064,34 +2061,31 @@ msgid "Socratic"
 msgstr "سقراطی"
 
 msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
-msgstr "سقراطی = شما را به پاسخ راهنمایی می‌کند، توضیحی = توضیح می‌دهد و پاسخ می‌دهد، مستقیم = فقط پاسخ کوتاه"
+msgstr "سقراطی = تو را به پاسخ راهنمایی می‌کند، توضیحی = توضیح می‌دهد و پاسخ می‌دهد، مستقیم = فقط پاسخ کوتاه"
 
 msgid "Standard"
 msgstr "استاندارد"
 
 msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
-msgstr "ارائه‌دهندهٔ «%s» به بستهٔ Python به نام «%s» نیاز دارد که موجود نیست. Thonny AIA را دوباره نصب کنید."
+msgstr "ارائه‌دهندهٔ «%s» به بستهٔ Python به نام «%s» نیاز دارد که موجود نیست. Thonny AIA را دوباره نصب کن."
 
 msgid "The AI service did not answer in time. Try again."
-msgstr "سرویس هوش مصنوعی به‌موقع پاسخ نداد. دوباره تلاش کنید."
+msgstr "سرویس هوش مصنوعی به‌موقع پاسخ نداد. دوباره تلاش کن."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "کلید به‌صورت متن ساده در فایل پیکربندی Thonny ذخیره می‌شود."
 
-msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
-msgstr "Thonny همراه با دستیار هوش مصنوعی (AIA). سازندهٔ Thonny، Aivar Annamaa است."
-
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
-msgstr "تعداد درخواست‌ها بیش از حد است یا سهمیهٔ حساب تمام شده است. کمی صبر کنید و دوباره تلاش کنید."
+msgstr "تعداد درخواست‌ها بیش از حد است یا سهمیهٔ حساب تمام شده است. کمی صبر کن و دوباره تلاش کن."
 
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
-msgstr "ارائه‌دهندهٔ ناشناخته «%s». یکی را در ابزارها > تنظیمات > دستیار هوش مصنوعی انتخاب کنید."
+msgstr "ارائه‌دهندهٔ ناشناخته «%s». یکی را در ابزارها > تنظیمات > دستیار هوش مصنوعی انتخاب کن."
 
 msgid "Use AI-based AIA instead of the built-in Assistant"
 msgstr "استفاده از AIA مبتنی بر هوش مصنوعی به‌جای دستیار داخلی"
 
 msgid "Welcome to %s!"
-msgstr "به %s خوش آمدید!"
+msgstr "به %s خوش آمدی!"
 
 msgid "You"
 msgstr "تو"
@@ -2100,13 +2094,13 @@ msgid "cancelled"
 msgstr "لغو شد"
 
 msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
-msgstr "Ollama نصب نشده است. آن را از پیوند زیر نصب کنید، سپس مدل را دانلود کنید: «ollama pull %s» (۱۳ گیگابایت)."
+msgstr "Ollama نصب نشده است. آن را از پیوند زیر نصب کن، سپس مدل را دانلود کن: «ollama pull %s» (۱۳ گیگابایت)."
 
 msgid "Ollama is installed but not running. Start it."
-msgstr "Ollama نصب شده است، اما در حال اجرا نیست. آن را اجرا کنید."
+msgstr "Ollama نصب شده است، اما در حال اجرا نیست. آن را اجرا کن."
 
 msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s' (13 GB)."
-msgstr "Ollama در حال اجراست، اما مدل وجود ندارد. آن را دانلود کنید: «ollama pull %s» (۱۳ گیگابایت)."
+msgstr "Ollama در حال اجراست، اما مدل وجود ندارد. آن را دانلود کن: «ollama pull %s» (۱۳ گیگابایت)."
 
 msgid "Ollama is running and the model %s is ready."
 msgstr "Ollama در حال اجراست و مدل %s آماده است."
@@ -2116,11 +2110,11 @@ msgstr "بدون اینترنت کار می‌کند، حدود ۱۴ گیگاب�
 
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
-msgstr "هنوز هیچ ارائه‌دهندهٔ هوش مصنوعی انتخاب نشده است. یکی را در ابزارها > تنظیمات > دستیار هوش مصنوعی انتخاب کنید."
+msgstr "هنوز هیچ ارائه‌دهندهٔ هوش مصنوعی انتخاب نشده است. یکی را در ابزارها > تنظیمات > دستیار هوش مصنوعی انتخاب کن."
 
 #: thonny/plugins/aia
 msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
-msgstr "پاسخ‌ها از %s می‌آیند. به یک کلید API نیاز دارید: آن را از پیوند زیر بسازید یا از معلم خود بگیرید."
+msgstr "پاسخ‌ها از %s می‌آیند. به یک کلید API نیاز داری: آن را از پیوند زیر بساز یا از معلمت بگیر."
 
 #: thonny/plugins/aia
 msgid "No provider is chosen: AIA stays switched on, but it does not answer."
@@ -2128,11 +2122,11 @@ msgstr "هیچ ارائه‌دهنده‌ای انتخاب نشده است: AIA 
 
 #: thonny/plugins/aia
 msgid "API key not set. Enter it in Tools > Options > AI Assistant."
-msgstr "کلید API تنظیم نشده است. آن را در ابزارها > تنظیمات > دستیار هوش مصنوعی وارد کنید."
+msgstr "کلید API تنظیم نشده است. آن را در ابزارها > تنظیمات > دستیار هوش مصنوعی وارد کن."
 
 #: thonny/plugins/aia
 msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
-msgstr "کلید API پذیرفته نشد. آن را در ابزارها > تنظیمات > دستیار هوش مصنوعی بررسی کنید."
+msgstr "کلید API پذیرفته نشد. آن را در ابزارها > تنظیمات > دستیار هوش مصنوعی بررسی کن."
 
 #: thonny/plugins/aia
 msgid "Thinking..."
@@ -2209,3 +2203,23 @@ msgstr "ارائه‌دهنده مدل‌های این کلید را فهرست 
 #: thonny/plugins/aia
 msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
 msgstr "مدل %s در دسترس نیست. در ابزارها > تنظیمات > دستیار هوش مصنوعی مدل دیگری انتخاب کن."
+
+#: thonny/plugins/aia
+msgid "AIA sends your messages, the code from the editor (and, if switched on in the options, the files it imports) and error output to the AI provider you choose. The local model sends nothing outside your computer."
+msgstr "AIA پیام‌هایت، کد ویرایشگر (و اگر در تنظیمات روشنش کنی، فایل‌هایی که این کد وارد (import) می‌کند) و خروجی خطاها را برای ارائه‌دهندهٔ هوش مصنوعی‌ای که انتخاب می‌کنی می‌فرستد. مدل محلی هیچ چیزی را بیرون از رایانه‌ات نمی‌فرستد."
+
+#: thonny/plugins/aia
+msgid "Thonny AIA is an unofficial fork. It is not published or supported by the Thonny project or the University of Tartu."
+msgstr "Thonny AIA یک فورک غیررسمی است. پروژهٔ Thonny و دانشگاه تارتو آن را منتشر نمی‌کنند و از آن پشتیبانی نمی‌کنند."
+
+#: thonny/plugins/aia
+msgid "Thonny was created by %s."
+msgstr "Thonny را %s ساخته است."
+
+#: thonny/plugins/aia
+msgid "The intelligent assistant AIA was created by %s."
+msgstr "دستیار هوشمند AIA را %s ساخته است."
+
+#: thonny/plugins/aia
+msgid "(the AI assistant AIA and the changes of Thonny AIA)"
+msgstr "(دستیار هوش مصنوعی AIA و تغییرات Thonny AIA)"

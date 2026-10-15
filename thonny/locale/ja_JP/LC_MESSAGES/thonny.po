@@ -2055,9 +2055,6 @@ msgstr "言語:"
 msgid "Let's go!"
 msgstr "始めましょう！"
 
-msgid "Loading the local model..."
-msgstr "ローカルモデルを読み込んでいます..."
-
 msgid "Local model (Ollama, %s)"
 msgstr "ローカルモデル（Ollama、%s）"
 
@@ -2084,9 +2081,6 @@ msgstr "AIサービスが時間内に応答しませんでした。もう一度�
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "キーはThonnyの設定ファイルに平文で保存されます。"
-
-msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
-msgstr "AIアシスタント（AIA）付きのThonny。ThonnyはAivar Annamaaが作成しました。"
 
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "リクエストが多すぎるか、アカウントの利用枠を使い切りました。しばらく待ってからもう一度お試しください。"
@@ -2187,7 +2181,7 @@ msgstr "アシスタントはストレッチ中..."
 
 #: thonny/plugins/aia
 msgid "The assistant is waking up..."
-msgstr "アシスタントが起きています..."
+msgstr "アシスタントが目を覚ましています..."
 
 #: thonny/plugins/aia
 msgid "Model:"
@@ -2216,3 +2210,23 @@ msgstr "プロバイダーがこのキーのモデルを返しませんでした
 #: thonny/plugins/aia
 msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
 msgstr "モデル %s は利用できません。ツール > オプション > AIアシスタント で別のモデルを選んでください。"
+
+#: thonny/plugins/aia
+msgid "AIA sends your messages, the code from the editor (and, if switched on in the options, the files it imports) and error output to the AI provider you choose. The local model sends nothing outside your computer."
+msgstr "AIAは、あなたのメッセージ、エディターのコード（オプションで有効にした場合は、そのコードがインポートするファイルも）、およびエラー出力を、選択したAIプロバイダーに送信します。ローカルモデルはコンピューターの外に何も送信しません。"
+
+#: thonny/plugins/aia
+msgid "Thonny AIA is an unofficial fork. It is not published or supported by the Thonny project or the University of Tartu."
+msgstr "Thonny AIAは非公式のフォークです。Thonnyプロジェクトおよびタルトゥ大学が公開またはサポートしているものではありません。"
+
+#: thonny/plugins/aia
+msgid "Thonny was created by %s."
+msgstr "Thonnyは %s が作成しました。"
+
+#: thonny/plugins/aia
+msgid "The intelligent assistant AIA was created by %s."
+msgstr "インテリジェントアシスタントAIAは %s が作成しました。"
+
+#: thonny/plugins/aia
+msgid "(the AI assistant AIA and the changes of Thonny AIA)"
+msgstr "（AIアシスタントAIAおよびThonny AIAの変更点）"

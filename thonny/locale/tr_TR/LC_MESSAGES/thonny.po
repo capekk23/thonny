@@ -2016,13 +2016,13 @@ msgid "Answer style:"
 msgstr "Yanıt stili:"
 
 msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
-msgstr "Yanıtlar %s tarafından sağlanır. Bir API anahtarına ihtiyacınız var: aşağıdaki bağlantıdan oluşturun veya öğretmeninizden alın. Anahtarı daha sonra Araçlar > Seçenekler > AI Yardımcısı bölümünde de girebilirsiniz."
+msgstr "Yanıtlar %s tarafından sağlanır. Bir API anahtarına ihtiyacın var: aşağıdaki bağlantıdan oluştur veya öğretmeninden al. Anahtarı daha sonra Araçlar > Seçenekler > AI Yardımcısı bölümünde de girebilirsin."
 
 msgid "Automatically include current file as context"
 msgstr "Geçerli dosyayı bağlam olarak otomatik ekle"
 
 msgid "Cannot connect to the AI service. Check the internet connection."
-msgstr "AI hizmetine bağlanılamıyor. İnternet bağlantısını kontrol edin."
+msgstr "AI hizmetine bağlanılamıyor. İnternet bağlantısını kontrol et."
 
 msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
 msgstr "Ollama'ya ulaşılamıyor. Çalışıyor mu (ollama serve) ve sunucu adresi doğru mu?"
@@ -2031,7 +2031,7 @@ msgid "Check again"
 msgstr "Tekrar kontrol et"
 
 msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
-msgstr "Claude Code ('claude' komutu) bulunamadı. Claude Code'u kurun, 'claude' komutunu bir kez çalıştırarak oturum açın, ardından Thonny'yi yeniden başlatın."
+msgstr "Claude Code ('claude' komutu) bulunamadı. Claude Code'u kur, 'claude' komutunu bir kez çalıştırarak oturum aç, ardından Thonny'yi yeniden başlat."
 
 msgid "Context:"
 msgstr "Bağlam:"
@@ -2054,9 +2054,6 @@ msgstr "Dil:"
 msgid "Let's go!"
 msgstr "Hadi başlayalım!"
 
-msgid "Loading the local model..."
-msgstr "Yerel model yükleniyor..."
-
 msgid "Local model (Ollama, %s)"
 msgstr "Yerel model (Ollama, %s)"
 
@@ -2070,34 +2067,31 @@ msgid "Socratic"
 msgstr "Sokratik"
 
 msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
-msgstr "Sokratik = sizi cevaba yönlendirir, Açıklayıcı = açıklar ve cevaplar, Doğrudan = yalnızca kısa cevap"
+msgstr "Sokratik = seni cevaba yönlendirir, Açıklayıcı = açıklar ve cevaplar, Doğrudan = yalnızca kısa cevap"
 
 msgid "Standard"
 msgstr "Standart"
 
 msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
-msgstr "'%s' sağlayıcısı '%s' Python paketine ihtiyaç duyuyor, ancak bu paket eksik. Thonny AIA'yı yeniden kurun."
+msgstr "'%s' sağlayıcısı '%s' Python paketine ihtiyaç duyuyor, ancak bu paket eksik. Thonny AIA'yı yeniden kur."
 
 msgid "The AI service did not answer in time. Try again."
-msgstr "AI hizmeti zamanında yanıt vermedi. Tekrar deneyin."
+msgstr "AI hizmeti zamanında yanıt vermedi. Tekrar dene."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Anahtar, Thonny'nin yapılandırma dosyasında düz metin olarak saklanır."
 
-msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
-msgstr "AI Yardımcısı (AIA) ile Thonny. Thonny, Aivar Annamaa tarafından geliştirilmiştir."
-
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
-msgstr "Çok fazla istek var veya hesabın kotası doldu. Biraz bekleyip tekrar deneyin."
+msgstr "Çok fazla istek var veya hesabın kotası doldu. Biraz bekleyip tekrar dene."
 
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
-msgstr "Bilinmeyen sağlayıcı: '%s'. Araçlar > Seçenekler > AI Yardımcısı bölümünden bir sağlayıcı seçin."
+msgstr "Bilinmeyen sağlayıcı: '%s'. Araçlar > Seçenekler > AI Yardımcısı bölümünden bir sağlayıcı seç."
 
 msgid "Use AI-based AIA instead of the built-in Assistant"
 msgstr "Yerleşik Yardımcı yerine yapay zekâ tabanlı AIA'yı kullan"
 
 msgid "Welcome to %s!"
-msgstr "%s uygulamasına hoş geldiniz!"
+msgstr "%s uygulamasına hoş geldin!"
 
 msgid "You"
 msgstr "Sen"
@@ -2106,13 +2100,13 @@ msgid "cancelled"
 msgstr "iptal edildi"
 
 msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
-msgstr "Ollama kurulu değil. Aşağıdaki bağlantıdan kurun, ardından modeli indirin: 'ollama pull %s' (13 GB)."
+msgstr "Ollama kurulu değil. Aşağıdaki bağlantıdan kur, ardından modeli indir: 'ollama pull %s' (13 GB)."
 
 msgid "Ollama is installed but not running. Start it."
-msgstr "Ollama kurulu, ancak çalışmıyor. Başlatın."
+msgstr "Ollama kurulu, ancak çalışmıyor. Başlat."
 
 msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s' (13 GB)."
-msgstr "Ollama çalışıyor, ancak model eksik. İndirin: 'ollama pull %s' (13 GB)."
+msgstr "Ollama çalışıyor, ancak model eksik. İndir: 'ollama pull %s' (13 GB)."
 
 msgid "Ollama is running and the model %s is ready."
 msgstr "Ollama çalışıyor ve %s modeli hazır."
@@ -2122,11 +2116,11 @@ msgstr "İnternetsiz çalışır, yaklaşık 14 GB boş RAM gerektirir ve güçl
 
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
-msgstr "Henüz bir AI sağlayıcısı seçilmedi. Araçlar > Seçenekler > AI Yardımcısı bölümünden bir sağlayıcı seçin."
+msgstr "Henüz bir AI sağlayıcısı seçilmedi. Araçlar > Seçenekler > AI Yardımcısı bölümünden bir sağlayıcı seç."
 
 #: thonny/plugins/aia
 msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
-msgstr "Yanıtlar %s tarafından sağlanır. Bir API anahtarına ihtiyacınız var: aşağıdaki bağlantıdan oluşturun veya öğretmeninizden alın."
+msgstr "Yanıtlar %s tarafından sağlanır. Bir API anahtarına ihtiyacın var: aşağıdaki bağlantıdan oluştur veya öğretmeninden al."
 
 #: thonny/plugins/aia
 msgid "No provider is chosen: AIA stays switched on, but it does not answer."
@@ -2134,11 +2128,11 @@ msgstr "Hiçbir sağlayıcı seçilmedi: AIA açık kalır, ancak yanıt vermez.
 
 #: thonny/plugins/aia
 msgid "API key not set. Enter it in Tools > Options > AI Assistant."
-msgstr "API anahtarı ayarlanmamış. Araçlar > Seçenekler > AI Yardımcısı bölümünde girin."
+msgstr "API anahtarı ayarlanmamış. Araçlar > Seçenekler > AI Yardımcısı bölümünde gir."
 
 #: thonny/plugins/aia
 msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
-msgstr "API anahtarı reddedildi. Araçlar > Seçenekler > AI Yardımcısı bölümünden kontrol edin."
+msgstr "API anahtarı reddedildi. Araçlar > Seçenekler > AI Yardımcısı bölümünden kontrol et."
 
 #: thonny/plugins/aia
 msgid "Thinking..."
@@ -2215,3 +2209,23 @@ msgstr "Sağlayıcı bu anahtarın modellerini listelemedi; bunlar olağan model
 #: thonny/plugins/aia
 msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
 msgstr "%s modeli kullanılamıyor. Araçlar > Seçenekler > AI Yardımcısı bölümünde başka bir model seç."
+
+#: thonny/plugins/aia
+msgid "AIA sends your messages, the code from the editor (and, if switched on in the options, the files it imports) and error output to the AI provider you choose. The local model sends nothing outside your computer."
+msgstr "AIA mesajlarını, editördeki kodu (ve seçeneklerde açarsan bu kodun içe aktardığı dosyaları da) ve hata çıktısını seçtiğin AI sağlayıcısına gönderir. Yerel model bilgisayarının dışına hiçbir şey göndermez."
+
+#: thonny/plugins/aia
+msgid "Thonny AIA is an unofficial fork. It is not published or supported by the Thonny project or the University of Tartu."
+msgstr "Thonny AIA resmî olmayan bir çataldır (fork). Ne Thonny projesi ne de Tartu Üniversitesi tarafından yayımlanır veya desteklenir."
+
+#: thonny/plugins/aia
+msgid "Thonny was created by %s."
+msgstr "Thonny'yi %s oluşturdu."
+
+#: thonny/plugins/aia
+msgid "The intelligent assistant AIA was created by %s."
+msgstr "Akıllı yardımcı AIA'yı %s oluşturdu."
+
+#: thonny/plugins/aia
+msgid "(the AI assistant AIA and the changes of Thonny AIA)"
+msgstr "(AI yardımcısı AIA ve Thonny AIA'daki değişiklikler)"

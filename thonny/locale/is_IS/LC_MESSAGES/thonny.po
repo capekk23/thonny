@@ -2055,9 +2055,6 @@ msgstr "Tungumál:"
 msgid "Let's go!"
 msgstr "Byrjum!"
 
-msgid "Loading the local model..."
-msgstr "Hleð inn staðbundnu líkani..."
-
 msgid "Local model (Ollama, %s)"
 msgstr "Staðbundið líkan (Ollama, %s)"
 
@@ -2085,9 +2082,6 @@ msgstr "Gervigreindarþjónustan svaraði ekki í tæka tíð. Reyndu aftur."
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Lykillinn er vistaður sem venjulegur texti í stillingaskrá Thonny."
 
-msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
-msgstr "Thonny með gervigreindaraðstoð (AIA). Aivar Annamaa bjó til Thonny."
-
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "Of margar fyrirspurnir eða kvóti aðgangsins er uppurinn. Bíddu aðeins og reyndu aftur."
 
@@ -2098,7 +2092,7 @@ msgid "Use AI-based AIA instead of the built-in Assistant"
 msgstr "Nota AIA með gervigreind í stað innbyggðrar Kóðarýni"
 
 msgid "Welcome to %s!"
-msgstr "Velkomin í %s!"
+msgstr "%s heilsar þér!"
 
 msgid "You"
 msgstr "Þú"
@@ -2216,3 +2210,23 @@ msgstr "Þjónustuaðilinn gaf ekki upp líkön þessa lykils; þetta eru þau v
 #: thonny/plugins/aia
 msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
 msgstr "Líkanið %s er ekki í boði. Veldu annað líkan í Tól > Valkostir > Gervigreindaraðstoð."
+
+#: thonny/plugins/aia
+msgid "AIA sends your messages, the code from the editor (and, if switched on in the options, the files it imports) and error output to the AI provider you choose. The local model sends nothing outside your computer."
+msgstr "AIA sendir skilaboðin þín, kóðann úr ritlinum (og, ef þú kveikir á því í valkostunum, líka skrárnar sem hann flytur inn) og villuúttak til gervigreindarþjónustuaðilans sem þú velur. Staðbundna líkanið sendir ekkert út fyrir tölvuna þína."
+
+#: thonny/plugins/aia
+msgid "Thonny AIA is an unofficial fork. It is not published or supported by the Thonny project or the University of Tartu."
+msgstr "Thonny AIA er óopinber kvísl (fork). Hún er hvorki gefin út né studd af Thonny-verkefninu eða Háskólanum í Tartu."
+
+#: thonny/plugins/aia
+msgid "Thonny was created by %s."
+msgstr "%s bjó til Thonny."
+
+#: thonny/plugins/aia
+msgid "The intelligent assistant AIA was created by %s."
+msgstr "%s bjó til greinda aðstoðarmanninn AIA."
+
+#: thonny/plugins/aia
+msgid "(the AI assistant AIA and the changes of Thonny AIA)"
+msgstr "(gervigreindaraðstoðin AIA og breytingarnar í Thonny AIA)"

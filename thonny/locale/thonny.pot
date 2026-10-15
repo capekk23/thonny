@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-10-13 15:12+0200\n"
+"POT-Creation-Date: 2026-10-15 12:24+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: thonny/assistance.py:987 thonny/plugins/assistant_config_page.py:74
+#: thonny/assistance.py:982 thonny/plugins/assistant_config_page.py:74
 msgid "Assistant"
 msgstr ""
 
@@ -244,7 +244,7 @@ msgid ""
 "local directory and open it from there!"
 msgstr ""
 
-#: thonny/base_file_browser.py:1258 thonny/editors.py:988 thonny/editors.py:990
+#: thonny/base_file_browser.py:1258 thonny/editors.py:989 thonny/editors.py:991
 msgid "Deleting"
 msgstr ""
 
@@ -267,7 +267,7 @@ msgid "File name:"
 msgstr ""
 
 #: thonny/base_file_browser.py:1373 thonny/config_ui.py:41 thonny/export.py:25
-#: thonny/plugins/about.py:127 thonny/plugins/backend_config_page.py:283
+#: thonny/plugins/about.py:168 thonny/plugins/backend_config_page.py:283
 #: thonny/ui_utils.py:158 thonny/ui_utils.py:1832 thonny/workdlg.py:258
 msgid "OK"
 msgstr ""
@@ -446,108 +446,108 @@ msgstr ""
 msgid "Did you mean '%s'?"
 msgstr ""
 
-#: thonny/editors.py:660 thonny/editors.py:662
+#: thonny/editors.py:661 thonny/editors.py:663
 msgid "New"
 msgstr ""
 
-#: thonny/editors.py:673
+#: thonny/editors.py:674
 msgid "Open..."
 msgstr ""
 
-#: thonny/editors.py:675
+#: thonny/editors.py:676
 msgid "Load"
 msgstr ""
 
-#: thonny/editors.py:684
+#: thonny/editors.py:685
 msgid "Recent files"
 msgstr ""
 
-#: thonny/editors.py:695 thonny/plugins/pip_gui.py:269 thonny/ui_utils.py:497
+#: thonny/editors.py:696 thonny/plugins/pip_gui.py:269 thonny/ui_utils.py:497
 #: thonny/ui_utils.py:1888 thonny/workdlg.py:204
 msgid "Close"
 msgstr ""
 
-#: thonny/editors.py:706 thonny/ui_utils.py:499
+#: thonny/editors.py:707 thonny/ui_utils.py:499
 msgid "Close all"
 msgstr ""
 
-#: thonny/editors.py:716 thonny/editors.py:718
+#: thonny/editors.py:717 thonny/editors.py:719
 msgid "Save"
 msgstr ""
 
-#: thonny/editors.py:730 thonny/editors.py:732
+#: thonny/editors.py:731 thonny/editors.py:733
 msgid "Save All files"
 msgstr ""
 
-#: thonny/editors.py:741
+#: thonny/editors.py:742
 msgid "Save as..."
 msgstr ""
 
-#: thonny/editors.py:752
+#: thonny/editors.py:753
 msgid "Save copy..."
 msgstr ""
 
-#: thonny/editors.py:761
+#: thonny/editors.py:762
 msgid "Move / rename..."
 msgstr ""
 
-#: thonny/editors.py:770
+#: thonny/editors.py:771
 msgid "Go to line..."
 msgstr ""
 
-#: thonny/editors.py:1012
+#: thonny/editors.py:1013
 msgid "Go to line"
 msgstr ""
 
-#: thonny/editors.py:1012
+#: thonny/editors.py:1013
 msgid "Line number"
 msgstr ""
 
-#: thonny/editors.py:1055
+#: thonny/editors.py:1056
 #, python-format
 msgid ""
 "Got permission error when trying to load\n"
 "%s"
 msgstr ""
 
-#: thonny/editors.py:1057
+#: thonny/editors.py:1058
 msgid "Try opening it with File => Open."
 msgstr ""
 
-#: thonny/editors.py:1059
+#: thonny/editors.py:1060
 msgid "Permission error"
 msgstr ""
 
-#: thonny/editors.py:1158
+#: thonny/editors.py:1159
 msgid "Do you want to save files before closing?"
 msgstr ""
 
-#: thonny/editors.py:1160
+#: thonny/editors.py:1161
 msgid "Do you want to save file before closing?"
 msgstr ""
 
-#: thonny/editors.py:1163
+#: thonny/editors.py:1164
 msgid "Save On Close"
 msgstr ""
 
-#: thonny/first_run.py:76
+#: thonny/first_run.py:78
 msgid "Standard"
 msgstr ""
 
-#: thonny/first_run.py:76
+#: thonny/first_run.py:78
 msgid "Raspberry Pi (simple)"
-msgstr ""
-
-#: thonny/first_run.py:95
-#, python-format
-msgid "Local model (Ollama, %s)"
 msgstr ""
 
 #: thonny/first_run.py:98
 msgid "I will set it up later"
 msgstr ""
 
-#: thonny/first_run.py:104
+#: thonny/first_run.py:101
+#, python-format
+msgid "Local model (Ollama, %s)"
+msgstr ""
+
+#: thonny/first_run.py:107
 #, python-format
 msgid ""
 "Answers come from %s. You need an API key: create it at the link below, "
@@ -555,67 +555,74 @@ msgid ""
 "Options > AI Assistant."
 msgstr ""
 
-#: thonny/first_run.py:114
+#: thonny/first_run.py:117
 #, python-format
 msgid ""
 "Ollama is not installed. Install it from the link below, then download "
 "the model: 'ollama pull %s' (13 GB)."
 msgstr ""
 
-#: thonny/first_run.py:118
+#: thonny/first_run.py:121
 msgid "Ollama is installed but not running. Start it."
 msgstr ""
 
-#: thonny/first_run.py:120
+#: thonny/first_run.py:123
 #, python-format
 msgid ""
 "Ollama is running, but the model is missing. Download it: 'ollama pull "
 "%s' (13 GB)."
 msgstr ""
 
-#: thonny/first_run.py:122
+#: thonny/first_run.py:125
 #, python-format
 msgid "Ollama is running and the model %s is ready."
 msgstr ""
 
-#: thonny/first_run.py:127
+#: thonny/first_run.py:130
 msgid ""
 "It runs offline, needs about 14 GB of free RAM and, without a strong "
 "graphics card, answers in 20-70 s."
 msgstr ""
 
-#: thonny/first_run.py:135
+#: thonny/first_run.py:143
+msgid ""
+"AIA sends your messages, the code from the editor (and, if switched on in"
+" the options, the files it imports) and error output to the AI provider "
+"you choose. The local model sends nothing outside your computer."
+msgstr ""
+
+#: thonny/first_run.py:151
 msgid ""
 "AIA stays switched on, but it will answer only after you choose a "
 "provider in Tools > Options > AI Assistant."
 msgstr ""
 
-#: thonny/first_run.py:180
+#: thonny/first_run.py:196
 msgid "Language:"
 msgstr ""
 
-#: thonny/first_run.py:188
+#: thonny/first_run.py:204
 msgid "Initial settings:"
 msgstr ""
 
-#: thonny/first_run.py:195 thonny/plugins/aia/_panel/config_page.py:90
+#: thonny/first_run.py:211 thonny/plugins/aia/_panel/config_page.py:92
 msgid "AI assistant:"
 msgstr ""
 
-#: thonny/first_run.py:215
+#: thonny/first_run.py:237
 msgid "Let's go!"
 msgstr ""
 
-#: thonny/first_run.py:253
+#: thonny/first_run.py:275
 #, python-format
 msgid "Welcome to %s!"
 msgstr ""
 
-#: thonny/first_run.py:288 thonny/plugins/aia/_panel/config_page.py:175
+#: thonny/first_run.py:310 thonny/plugins/aia/_panel/config_page.py:177
 msgid "API key:"
 msgstr ""
 
-#: thonny/first_run.py:289 thonny/plugins/aia/_panel/config_page.py:200
+#: thonny/first_run.py:311 thonny/plugins/aia/_panel/config_page.py:202
 msgid "Check again"
 msgstr ""
 
@@ -656,7 +663,7 @@ msgstr ""
 msgid "Run current script"
 msgstr ""
 
-#: thonny/running.py:161 thonny/workbench.py:384
+#: thonny/running.py:161 thonny/workbench.py:393
 msgid "Run"
 msgstr ""
 
@@ -764,119 +771,119 @@ msgstr ""
 msgid "Select All"
 msgstr ""
 
-#: thonny/workbench.py:381
+#: thonny/workbench.py:390
 msgid "File"
 msgstr ""
 
-#: thonny/workbench.py:382
+#: thonny/workbench.py:391
 msgid "Edit"
 msgstr ""
 
-#: thonny/workbench.py:383
+#: thonny/workbench.py:392
 msgid "View"
 msgstr ""
 
-#: thonny/workbench.py:385
+#: thonny/workbench.py:394
 msgid "Tools"
 msgstr ""
 
-#: thonny/plugins/help/__init__.py:80 thonny/workbench.py:386
+#: thonny/plugins/help/__init__.py:80 thonny/workbench.py:395
 msgid "Help"
 msgstr ""
 
-#: thonny/workbench.py:604
+#: thonny/workbench.py:613
 msgid "Exit"
 msgstr ""
 
-#: thonny/workbench.py:614
+#: thonny/workbench.py:623
 msgid "Options..."
 msgstr ""
 
-#: thonny/workbench.py:621
+#: thonny/workbench.py:630
 msgid "Increase font size"
 msgstr ""
 
-#: thonny/workbench.py:631
+#: thonny/workbench.py:640
 msgid "Decrease font size"
 msgstr ""
 
-#: thonny/workbench.py:643
+#: thonny/workbench.py:652
 msgid "Focus editor"
 msgstr ""
 
-#: thonny/workbench.py:652
+#: thonny/workbench.py:661
 msgid "Focus shell"
 msgstr ""
 
-#: thonny/workbench.py:662
+#: thonny/workbench.py:671
 msgid "Maximize view"
 msgstr ""
 
-#: thonny/workbench.py:674
+#: thonny/workbench.py:683
 msgid "Full screen"
 msgstr ""
 
-#: thonny/workbench.py:685
+#: thonny/workbench.py:694
 msgid "Change font size"
 msgstr ""
 
-#: thonny/workbench.py:686
+#: thonny/workbench.py:695
 msgid "Zoom"
 msgstr ""
 
-#: thonny/workbench.py:695
+#: thonny/workbench.py:704
 msgid "Exit Thonny"
 msgstr ""
 
-#: thonny/workbench.py:698
+#: thonny/workbench.py:707
 msgid "Quit"
 msgstr ""
 
-#: thonny/workbench.py:706 thonny/workbench.py:805
+#: thonny/workbench.py:715 thonny/workbench.py:814
 msgid "Support Ukraine"
 msgstr ""
 
-#: thonny/workbench.py:709
+#: thonny/workbench.py:718
 msgid "Support"
 msgstr ""
 
-#: thonny/workbench.py:876
+#: thonny/workbench.py:885
 msgid "Install MicroPython"
 msgstr ""
 
-#: thonny/workbench.py:880
+#: thonny/workbench.py:889
 msgid "Install CircuitPython"
 msgstr ""
 
-#: thonny/plugins/backend_config_page.py:338 thonny/workbench.py:886
+#: thonny/plugins/backend_config_page.py:338 thonny/workbench.py:895
 msgid "Configure interpreter..."
 msgstr ""
 
-#: thonny/workbench.py:1253 thonny/workbench.py:1261
+#: thonny/workbench.py:1262 thonny/workbench.py:1270
 #, python-format
 msgid "Overwriting theme '%s'"
 msgstr ""
 
-#: thonny/workbench.py:1444
+#: thonny/workbench.py:1453
 msgid "Program arguments:"
 msgstr ""
 
-#: thonny/workbench.py:1473
+#: thonny/workbench.py:1482
 msgid "Program arguments"
 msgstr ""
 
-#: thonny/workbench.py:1487
+#: thonny/workbench.py:1496
 msgid ""
 "Switch to\n"
 "regular\n"
 "mode"
 msgstr ""
 
-#: thonny/workbench.py:1498
+#: thonny/workbench.py:1507
 msgid "Regular mode"
 msgstr ""
 
-#: thonny/workbench.py:1500
+#: thonny/workbench.py:1509
 msgid ""
 "Configuration has been updated. Restart Thonny to start working in "
 "regular mode.\n"
@@ -884,7 +891,7 @@ msgid ""
 "(See 'Tools → Options → General' if you change your mind later.)"
 msgstr ""
 
-#: thonny/workbench.py:1597
+#: thonny/workbench.py:1606
 msgid "Device"
 msgstr ""
 
@@ -896,15 +903,27 @@ msgstr ""
 msgid "Starting"
 msgstr ""
 
-#: thonny/plugins/about.py:24
+#: thonny/plugins/about.py:33
+msgid ""
+"Thonny AIA is an unofficial fork. It is not published or supported by the"
+" Thonny project or the University of Tartu."
+msgstr ""
+
+#: thonny/plugins/about.py:42
 msgid "About Thonny AIA"
 msgstr ""
 
-#: thonny/plugins/about.py:37
-msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
+#: thonny/plugins/about.py:57
+#, python-format
+msgid "Thonny was created by %s."
 msgstr ""
 
-#: thonny/plugins/about.py:94
+#: thonny/plugins/about.py:59
+#, python-format
+msgid "The intelligent assistant AIA was created by %s."
+msgstr ""
+
+#: thonny/plugins/about.py:122
 msgid ""
 "Made in\n"
 "University of Tartu, Estonia,\n"
@@ -914,7 +933,11 @@ msgid ""
 "and Cybernetica AS"
 msgstr ""
 
-#: thonny/plugins/about.py:114
+#: thonny/plugins/about.py:152
+msgid "(the AI assistant AIA and the changes of Thonny AIA)"
+msgstr ""
+
+#: thonny/plugins/about.py:155
 msgid ""
 "This program comes with\n"
 "ABSOLUTELY NO WARRANTY!\n"
@@ -924,15 +947,15 @@ msgid ""
 "for details"
 msgstr ""
 
-#: thonny/plugins/about.py:154
+#: thonny/plugins/about.py:195
 msgid "Version history"
 msgstr ""
 
-#: thonny/plugins/about.py:161
+#: thonny/plugins/about.py:202
 msgid "Report problems"
 msgstr ""
 
-#: thonny/plugins/about.py:165
+#: thonny/plugins/about.py:206
 msgid "About Thonny"
 msgstr ""
 
@@ -1017,7 +1040,7 @@ msgstr ""
 msgid "Debug current script (birdseye)"
 msgstr ""
 
-#: thonny/plugins/calltip.py:159
+#: thonny/plugins/calltip.py:160
 msgid "Show parameter info"
 msgstr ""
 
@@ -1971,64 +1994,64 @@ msgstr ""
 msgid "Variables"
 msgstr ""
 
-#: thonny/plugins/aia/__init__.py:59 thonny/plugins/aia/__init__.py:60
+#: thonny/plugins/aia/__init__.py:61 thonny/plugins/aia/__init__.py:62
 msgid "AI Assistant"
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:100
+#: thonny/plugins/aia/_common.py:102
 #, python-format
 msgid ""
 "The '%s' provider needs the Python package '%s', which is missing. "
 "Reinstall Thonny AIA."
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:283
+#: thonny/plugins/aia/_common.py:285
 msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:286
+#: thonny/plugins/aia/_common.py:288
 #, python-format
 msgid ""
 "The model %s is not available. Choose another model in Tools > Options > "
 "AI Assistant."
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:291
+#: thonny/plugins/aia/_common.py:293
 msgid ""
 "Too many requests or the account's quota is used up. Wait a moment and "
 "try again."
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:294
+#: thonny/plugins/aia/_common.py:296
 msgid "The AI service did not answer in time. Try again."
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:298
+#: thonny/plugins/aia/_common.py:300
 msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:300
+#: thonny/plugins/aia/_common.py:302
 msgid "Cannot connect to the AI service. Check the internet connection."
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:416
+#: thonny/plugins/aia/_common.py:418
 msgid ""
 "No AI provider is chosen yet. Choose one in Tools > Options > AI "
 "Assistant."
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:423
+#: thonny/plugins/aia/_common.py:425
 msgid ""
 "Claude Code (the 'claude' command) was not found. Install Claude Code, "
 "sign in by running 'claude' once, then restart Thonny."
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:427
+#: thonny/plugins/aia/_common.py:429
 #, python-format
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
 msgstr ""
 
-#: thonny/plugins/aia/_common.py:431
+#: thonny/plugins/aia/_common.py:433
 msgid "API key not set. Enter it in Tools > Options > AI Assistant."
 msgstr ""
 
@@ -2225,127 +2248,123 @@ msgstr ""
 msgid "Open system shell..."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:36
+#: thonny/plugins/aia/_panel/config_page.py:38
 msgid "Socratic"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:36
+#: thonny/plugins/aia/_panel/config_page.py:38
 msgid "Explanatory"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:36
+#: thonny/plugins/aia/_panel/config_page.py:38
 msgid "Direct"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:41
+#: thonny/plugins/aia/_panel/config_page.py:43
 #, python-format
 msgid ""
 "Answers come from %s. You need an API key: create it at the link below, "
 "or get one from your teacher."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:47
+#: thonny/plugins/aia/_panel/config_page.py:49
 msgid "No provider is chosen: AIA stays switched on, but it does not answer."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:85
+#: thonny/plugins/aia/_panel/config_page.py:87
 msgid "Use AI-based AIA instead of the built-in Assistant"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:109
+#: thonny/plugins/aia/_panel/config_page.py:111
 msgid "Answer style:"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:129
+#: thonny/plugins/aia/_panel/config_page.py:131
 msgid ""
 "Socratic = guides you to the answer, Explanatory = explains and answers, "
 "Direct = short answer only"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:143
+#: thonny/plugins/aia/_panel/config_page.py:145
 msgid "Context:"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:150
+#: thonny/plugins/aia/_panel/config_page.py:152
 msgid "Automatically include current file as context"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:157
+#: thonny/plugins/aia/_panel/config_page.py:159
 msgid "Also include locally imported files"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:183
+#: thonny/plugins/aia/_panel/config_page.py:185
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:186
+#: thonny/plugins/aia/_panel/config_page.py:188
 msgid "Model:"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:324
+#: thonny/plugins/aia/_panel/config_page.py:326
 #, python-format
 msgid "%s (default)"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:328
+#: thonny/plugins/aia/_panel/config_page.py:330
 msgid "Enter the API key to see the models it can use."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:329
+#: thonny/plugins/aia/_panel/config_page.py:331
 msgid "Asking the provider for the models of this key..."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:330
+#: thonny/plugins/aia/_panel/config_page.py:332
 msgid "The models this key can use."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/config_page.py:332
+#: thonny/plugins/aia/_panel/config_page.py:334
 msgid ""
 "The provider did not list the models of this key; these are the usual "
 "ones."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:46
+#: thonny/plugins/aia/_panel/view.py:48
 msgid "Thinking..."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:54
-msgid "Loading the local model..."
-msgstr ""
-
-#: thonny/plugins/aia/_panel/view.py:59
+#: thonny/plugins/aia/_panel/view.py:53
 msgid "Write a message to the assistant..."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:67
+#: thonny/plugins/aia/_panel/view.py:61
 msgid "The assistant is resting..."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:68
+#: thonny/plugins/aia/_panel/view.py:62
 msgid "The assistant is loafing around..."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:69
+#: thonny/plugins/aia/_panel/view.py:63
 msgid "The assistant is out for lunch..."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:70
+#: thonny/plugins/aia/_panel/view.py:64
 msgid "The assistant is having a coffee..."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:71
+#: thonny/plugins/aia/_panel/view.py:65
 msgid "The assistant is reading a book..."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:72
+#: thonny/plugins/aia/_panel/view.py:66
 msgid "The assistant is looking out of the window..."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:73
+#: thonny/plugins/aia/_panel/view.py:67
 msgid "The assistant is stretching..."
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:80
+#: thonny/plugins/aia/_panel/view.py:79
 msgid "The assistant is waking up..."
 msgstr ""
 
@@ -2365,7 +2384,7 @@ msgstr ""
 msgid "You"
 msgstr ""
 
-#: thonny/plugins/aia/_panel/view.py:449 thonny/plugins/aia/_panel/view.py:508
+#: thonny/plugins/aia/_panel/view.py:449 thonny/plugins/aia/_panel/view.py:510
 msgid "cancelled"
 msgstr ""
 

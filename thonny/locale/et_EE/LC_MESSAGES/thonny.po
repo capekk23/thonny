@@ -2058,9 +2058,6 @@ msgstr "Keel:"
 msgid "Let's go!"
 msgstr "Alustame!"
 
-msgid "Loading the local model..."
-msgstr "Laadin kohalikku mudelit..."
-
 msgid "Local model (Ollama, %s)"
 msgstr "Kohalik mudel (Ollama, %s)"
 
@@ -2087,9 +2084,6 @@ msgstr "AI-teenus ei vastanud õigeaegselt. Proovi uuesti."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Võti salvestatakse Thonny seadistusfaili lihttekstina."
-
-msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
-msgstr "Thonny koos AI-assistendiga (AIA). Thonny autor on Aivar Annamaa."
 
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "Liiga palju päringuid või konto kvoot on täis. Oota hetk ja proovi uuesti."
@@ -2219,3 +2213,23 @@ msgstr "Teenusepakkuja ei andnud selle võtme mudeleid; need on tavalised."
 #: thonny/plugins/aia
 msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
 msgstr "Mudel %s pole saadaval. Vali teine mudel menüüs Tööriistad > Seaded > AI-assistent."
+
+#: thonny/plugins/aia
+msgid "AIA sends your messages, the code from the editor (and, if switched on in the options, the files it imports) and error output to the AI provider you choose. The local model sends nothing outside your computer."
+msgstr "AIA saadab sinu valitud AI-teenusepakkujale sinu sõnumid, redaktoris oleva koodi (ja kui lülitad selle seadetes sisse, ka failid, mida see kood impordib) ning veaväljundi. Kohalik mudel ei saada midagi sinu arvutist välja."
+
+#: thonny/plugins/aia
+msgid "Thonny AIA is an unofficial fork. It is not published or supported by the Thonny project or the University of Tartu."
+msgstr "Thonny AIA on mitteametlik fork. Seda ei avalda ega toeta Thonny projekt ega Tartu Ülikool."
+
+#: thonny/plugins/aia
+msgid "Thonny was created by %s."
+msgstr "Thonny lõi %s."
+
+#: thonny/plugins/aia
+msgid "The intelligent assistant AIA was created by %s."
+msgstr "Intelligentse assistendi AIA lõi %s."
+
+#: thonny/plugins/aia
+msgid "(the AI assistant AIA and the changes of Thonny AIA)"
+msgstr "(AI-assistent AIA ja Thonny AIA muudatused)"

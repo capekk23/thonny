@@ -1997,7 +1997,7 @@ msgid "AI assistant:"
 msgstr "AI asistent:"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
-msgstr "AIA zostane zapnutá, ale odpovedať začne, až v Nástroje > Možnosti > AI asistent vyberiete poskytovateľa."
+msgstr "AIA zostane zapnutá, ale odpovedať začne, až v Nástroje > Možnosti > AI asistent vyberieš poskytovateľa."
 
 msgid "API key:"
 msgstr "API kľúč:"
@@ -2012,13 +2012,13 @@ msgid "Answer style:"
 msgstr "Štýl odpovedí:"
 
 msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
-msgstr "Odpovede poskytuje %s. Potrebujete API kľúč: vytvorte si ho na odkaze nižšie, alebo vám ho dá vyučujúci. Zadať ho môžete aj neskôr v Nástroje > Možnosti > AI asistent."
+msgstr "Odpovede poskytuje %s. Potrebuješ API kľúč: vytvor si ho na odkaze nižšie, alebo ti ho dá vyučujúci. Zadať ho môžeš aj neskôr v Nástroje > Možnosti > AI asistent."
 
 msgid "Automatically include current file as context"
 msgstr "Automaticky posielať aktuálny súbor ako kontext"
 
 msgid "Cannot connect to the AI service. Check the internet connection."
-msgstr "Nedá sa pripojiť k AI službe. Skontrolujte pripojenie k internetu."
+msgstr "Nedá sa pripojiť k AI službe. Skontroluj pripojenie k internetu."
 
 msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
 msgstr "Ollama nie je dostupná. Beží (ollama serve) a je adresa správna?"
@@ -2027,7 +2027,7 @@ msgid "Check again"
 msgstr "Skontrolovať znova"
 
 msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
-msgstr "Claude Code (príkaz „claude“) sa nenašiel. Nainštalujte Claude Code, raz spustite „claude“ a prihláste sa, potom Thonny reštartujte."
+msgstr "Claude Code (príkaz „claude“) sa nenašiel. Nainštaluj Claude Code, raz spusti „claude“ a prihlás sa, potom Thonny reštartuj."
 
 msgid "Context:"
 msgstr "Kontext:"
@@ -2050,9 +2050,6 @@ msgstr "Jazyk:"
 msgid "Let's go!"
 msgstr "Poďme na to!"
 
-msgid "Loading the local model..."
-msgstr "Načítavam lokálny model..."
-
 msgid "Local model (Ollama, %s)"
 msgstr "Lokálny model (Ollama, %s)"
 
@@ -2066,34 +2063,31 @@ msgid "Socratic"
 msgstr "Sokratovský"
 
 msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
-msgstr "Sokratovský = dovedie vás k odpovedi, Vysvetľujúci = vysvetlí a odpovie, Priamy = len krátka odpoveď"
+msgstr "Sokratovský = dovedie ťa k odpovedi, Vysvetľujúci = vysvetlí a odpovie, Priamy = len krátka odpoveď"
 
 msgid "Standard"
 msgstr "Štandardný"
 
 msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
-msgstr "Poskytovateľ %s potrebuje balík Pythonu „%s“, ktorý chýba. Preinštalujte Thonny AIA."
+msgstr "Poskytovateľ %s potrebuje balík Pythonu „%s“, ktorý chýba. Preinštaluj Thonny AIA."
 
 msgid "The AI service did not answer in time. Try again."
-msgstr "AI služba neodpovedala včas. Skúste to znova."
+msgstr "AI služba neodpovedala včas. Skús to znova."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Kľúč sa ukladá ako obyčajný text do konfiguračného súboru Thonny."
 
-msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
-msgstr "Thonny s AI asistentom (AIA). Thonny vytvoril Aivar Annamaa."
-
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
-msgstr "Príliš veľa požiadaviek alebo je vyčerpaný limit účtu. Chvíľu počkajte a skúste to znova."
+msgstr "Príliš veľa požiadaviek alebo je vyčerpaný limit účtu. Chvíľu počkaj a skús to znova."
 
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
-msgstr "Neznámy poskytovateľ „%s“. Vyberte ho v Nástroje > Možnosti > AI asistent."
+msgstr "Neznámy poskytovateľ „%s“. Vyber ho v Nástroje > Možnosti > AI asistent."
 
 msgid "Use AI-based AIA instead of the built-in Assistant"
 msgstr "Používať AI asistenta (AIA) namiesto vstavaného Asistenta"
 
 msgid "Welcome to %s!"
-msgstr "Vitajte v %s!"
+msgstr "Vitaj v %s!"
 
 msgid "You"
 msgstr "Ty"
@@ -2102,13 +2096,13 @@ msgid "cancelled"
 msgstr "zrušené"
 
 msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
-msgstr "Ollama nie je nainštalovaná. Nainštalujte ju z odkazu nižšie a stiahnite model: „ollama pull %s“ (13 GB)."
+msgstr "Ollama nie je nainštalovaná. Nainštaluj ju z odkazu nižšie a stiahni model: „ollama pull %s“ (13 GB)."
 
 msgid "Ollama is installed but not running. Start it."
-msgstr "Ollama je nainštalovaná, ale nebeží. Spustite ju."
+msgstr "Ollama je nainštalovaná, ale nebeží. Spusti ju."
 
 msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s' (13 GB)."
-msgstr "Ollama beží, ale chýba model. Stiahnite ho: „ollama pull %s“ (13 GB)."
+msgstr "Ollama beží, ale chýba model. Stiahni ho: „ollama pull %s“ (13 GB)."
 
 msgid "Ollama is running and the model %s is ready."
 msgstr "Ollama beží a model %s je pripravený."
@@ -2118,11 +2112,11 @@ msgstr "Beží bez internetu, potrebuje asi 14 GB voľnej pamäte RAM a bez výk
 
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
-msgstr "Zatiaľ nie je vybraný poskytovateľ AI. Vyberte ho v Nástroje > Možnosti > AI asistent."
+msgstr "Zatiaľ nie je vybraný poskytovateľ AI. Vyber ho v Nástroje > Možnosti > AI asistent."
 
 #: thonny/plugins/aia
 msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
-msgstr "Odpovede poskytuje %s. Potrebujete API kľúč: vytvorte si ho na odkaze nižšie, alebo vám ho dá vyučujúci."
+msgstr "Odpovede poskytuje %s. Potrebuješ API kľúč: vytvor si ho na odkaze nižšie, alebo ti ho dá vyučujúci."
 
 #: thonny/plugins/aia
 msgid "No provider is chosen: AIA stays switched on, but it does not answer."
@@ -2130,11 +2124,11 @@ msgstr "Nie je vybraný žiadny poskytovateľ: AIA zostáva zapnutá, ale neodpo
 
 #: thonny/plugins/aia
 msgid "API key not set. Enter it in Tools > Options > AI Assistant."
-msgstr "API kľúč nie je nastavený. Zadajte ho v Nástroje > Možnosti > AI asistent."
+msgstr "API kľúč nie je nastavený. Zadaj ho v Nástroje > Možnosti > AI asistent."
 
 #: thonny/plugins/aia
 msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
-msgstr "API kľúč bol odmietnutý. Skontrolujte ho v Nástroje > Možnosti > AI asistent."
+msgstr "API kľúč bol odmietnutý. Skontroluj ho v Nástroje > Možnosti > AI asistent."
 
 #: thonny/plugins/aia
 msgid "Thinking..."
@@ -2211,3 +2205,23 @@ msgstr "Poskytovateľ modely tohto kľúča nevypísal, toto sú bežné."
 #: thonny/plugins/aia
 msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
 msgstr "Model %s nie je k dispozícii. Vyber iný model v Nástroje > Možnosti > AI asistent."
+
+#: thonny/plugins/aia
+msgid "AIA sends your messages, the code from the editor (and, if switched on in the options, the files it imports) and error output to the AI provider you choose. The local model sends nothing outside your computer."
+msgstr "AIA posiela vybranému poskytovateľovi AI tvoje správy, kód z editora (a keď to zapneš v možnostiach, aj súbory, ktoré importuje) a výpisy chýb. Lokálny model nič mimo tvoj počítač neposiela."
+
+#: thonny/plugins/aia
+msgid "Thonny AIA is an unofficial fork. It is not published or supported by the Thonny project or the University of Tartu."
+msgstr "Thonny AIA je neoficiálny fork. Projekt Thonny ani Tartuská univerzita ho nevydávajú ani nepodporujú."
+
+#: thonny/plugins/aia
+msgid "Thonny was created by %s."
+msgstr "Thonny vytvoril %s."
+
+#: thonny/plugins/aia
+msgid "The intelligent assistant AIA was created by %s."
+msgstr "Inteligentného asistenta AIA vytvoril %s."
+
+#: thonny/plugins/aia
+msgid "(the AI assistant AIA and the changes of Thonny AIA)"
+msgstr "(AI asistent AIA a úpravy Thonny AIA)"

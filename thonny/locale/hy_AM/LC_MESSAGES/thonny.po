@@ -1993,7 +1993,7 @@ msgid "AI assistant:"
 msgstr "ԱԲ օգնական:"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
-msgstr "AIA֊ն մնում է միացված, բայց կպատասխանի միայն այն բանից հետո, երբ մատակարար ընտրեք Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"
+msgstr "AIA֊ն մնում է միացված, բայց կպատասխանի միայն այն բանից հետո, երբ մատակարար ընտրես Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"
 
 msgid "API key:"
 msgstr "API բանալի:"
@@ -2008,13 +2008,13 @@ msgid "Answer style:"
 msgstr "Պատասխանի ոճ:"
 
 msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
-msgstr "Պատասխանները տրամադրում է %s ծառայությունը։ Ձեզ անհրաժեշտ է API բանալի․ ստեղծեք այն ստորև նշված հղումով կամ ստացեք ձեր ուսուցչից։ Կարող եք այն մուտքագրել նաև ավելի ուշ՝ Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"
+msgstr "Պատասխանները տրամադրում է %s ծառայությունը։ Քեզ անհրաժեշտ է API բանալի․ ստեղծիր այն ստորև նշված հղումով կամ ստացիր քո ուսուցչից։ Կարող ես այն մուտքագրել նաև ավելի ուշ՝ Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"
 
 msgid "Automatically include current file as context"
 msgstr "Ավտոմատ կերպով ներառել ընթացիկ նիշքը որպես համատեքստ"
 
 msgid "Cannot connect to the AI service. Check the internet connection."
-msgstr "Հնարավոր չէ միանալ ԱԲ ծառայությանը։ Ստուգեք համացանցային կապը։"
+msgstr "Հնարավոր չէ միանալ ԱԲ ծառայությանը։ Ստուգիր համացանցային կապը։"
 
 msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
 msgstr "Ollama֊ն հասանելի չէ։ Արդյո՞ք այն գործարկված է (ollama serve), և ճի՞շտ է հոսթը։"
@@ -2023,7 +2023,7 @@ msgid "Check again"
 msgstr "Կրկին ստուգել"
 
 msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
-msgstr "Claude Code֊ը («claude» հրամանը) չի գտնվել։ Տեղադրեք Claude Code֊ը, մեկ անգամ գործարկեք «claude»֊ը և մուտք գործեք, ապա վերագործարկեք Thonny֊ն։"
+msgstr "Claude Code֊ը («claude» հրամանը) չի գտնվել։ Տեղադրիր Claude Code֊ը, մեկ անգամ գործարկիր «claude»֊ը և մուտք գործիր, ապա վերագործարկիր Thonny֊ն։"
 
 msgid "Context:"
 msgstr "Համատեքստ:"
@@ -2046,9 +2046,6 @@ msgstr "Լեզու:"
 msgid "Let's go!"
 msgstr "Սկսե՛նք։"
 
-msgid "Loading the local model..."
-msgstr "Տեղային մոդելը բեռնվում է..."
-
 msgid "Local model (Ollama, %s)"
 msgstr "Տեղային մոդել (Ollama, %s)"
 
@@ -2062,28 +2059,25 @@ msgid "Socratic"
 msgstr "Սոկրատյան"
 
 msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
-msgstr "Սոկրատյան = առաջնորդում է ձեզ դեպի պատասխանը, Բացատրական = բացատրում և պատասխանում է, Ուղիղ = միայն կարճ պատասխան"
+msgstr "Սոկրատյան = առաջնորդում է քեզ դեպի պատասխանը, Բացատրական = բացատրում և պատասխանում է, Ուղիղ = միայն կարճ պատասխան"
 
 msgid "Standard"
 msgstr "Ստանդարտ"
 
 msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
-msgstr "«%s» մատակարարին անհրաժեշտ է Python֊ի «%s» փաթեթը, որը բացակայում է։ Վերատեղադրեք Thonny AIA֊ն։"
+msgstr "«%s» մատակարարին անհրաժեշտ է Python֊ի «%s» փաթեթը, որը բացակայում է։ Վերատեղադրիր Thonny AIA֊ն։"
 
 msgid "The AI service did not answer in time. Try again."
-msgstr "ԱԲ ծառայությունը ժամանակին չպատասխանեց։ Փորձեք կրկին։"
+msgstr "ԱԲ ծառայությունը ժամանակին չպատասխանեց։ Փորձիր կրկին։"
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Բանալին պահվում է որպես պարզ տեքստ Thonny֊ի կարգավորումների նիշքում։"
 
-msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
-msgstr "Thonny՝ ԱԲ օգնականով (AIA)։ Thonny֊ն ստեղծել է Aivar Annamaa֊ն։"
-
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
-msgstr "Չափազանց շատ հարցումներ, կամ հաշվի սահմանաչափը սպառված է։ Մի փոքր սպասեք և փորձեք կրկին։"
+msgstr "Չափազանց շատ հարցումներ, կամ հաշվի սահմանաչափը սպառված է։ Մի փոքր սպասիր և փորձիր կրկին։"
 
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
-msgstr "Անհայտ մատակարար՝ «%s»։ Ընտրեք մատակարար Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"
+msgstr "Անհայտ մատակարար՝ «%s»։ Ընտրիր մատակարար Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"
 
 msgid "Use AI-based AIA instead of the built-in Assistant"
 msgstr "Օգտագործել ԱԲ֊ի վրա հիմնված AIA֊ն ներկառուցված Օգնականի փոխարեն"
@@ -2098,13 +2092,13 @@ msgid "cancelled"
 msgstr "չեղարկված"
 
 msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
-msgstr "Ollama֊ն տեղադրված չէ։ Տեղադրեք այն ստորև նշված հղումով, ապա ներբեռնեք մոդելը՝ «ollama pull %s» (13 GB)։"
+msgstr "Ollama֊ն տեղադրված չէ։ Տեղադրիր այն ստորև նշված հղումով, ապա ներբեռնիր մոդելը՝ «ollama pull %s» (13 GB)։"
 
 msgid "Ollama is installed but not running. Start it."
-msgstr "Ollama֊ն տեղադրված է, բայց գործարկված չէ։ Գործարկեք այն։"
+msgstr "Ollama֊ն տեղադրված է, բայց գործարկված չէ։ Գործարկիր այն։"
 
 msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s' (13 GB)."
-msgstr "Ollama֊ն աշխատում է, բայց մոդելը բացակայում է։ Ներբեռնեք այն՝ «ollama pull %s» (13 GB)։"
+msgstr "Ollama֊ն աշխատում է, բայց մոդելը բացակայում է։ Ներբեռնիր այն՝ «ollama pull %s» (13 GB)։"
 
 msgid "Ollama is running and the model %s is ready."
 msgstr "Ollama֊ն աշխատում է, և %s մոդելը պատրաստ է։"
@@ -2114,11 +2108,11 @@ msgstr "Աշխատում է առանց համացանցի, պահանջում է
 
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
-msgstr "ԱԲ մատակարար դեռ ընտրված չէ։ Ընտրեք մատակարար Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"
+msgstr "ԱԲ մատակարար դեռ ընտրված չէ։ Ընտրիր մատակարար Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"
 
 #: thonny/plugins/aia
 msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
-msgstr "Պատասխանները տրամադրում է %s ծառայությունը։ Ձեզ անհրաժեշտ է API բանալի․ ստեղծեք այն ստորև նշված հղումով կամ ստացեք ձեր ուսուցչից։"
+msgstr "Պատասխանները տրամադրում է %s ծառայությունը։ Քեզ անհրաժեշտ է API բանալի․ ստեղծիր այն ստորև նշված հղումով կամ ստացիր քո ուսուցչից։"
 
 #: thonny/plugins/aia
 msgid "No provider is chosen: AIA stays switched on, but it does not answer."
@@ -2126,11 +2120,11 @@ msgstr "Մատակարար ընտրված չէ․ AIA֊ն մնում է միաց
 
 #: thonny/plugins/aia
 msgid "API key not set. Enter it in Tools > Options > AI Assistant."
-msgstr "API բանալին սահմանված չէ։ Մուտքագրեք այն Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"
+msgstr "API բանալին սահմանված չէ։ Մուտքագրիր այն Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"
 
 #: thonny/plugins/aia
 msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
-msgstr "API բանալին մերժվել է։ Ստուգեք այն Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"
+msgstr "API բանալին մերժվել է։ Ստուգիր այն Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"
 
 #: thonny/plugins/aia
 msgid "Thinking..."
@@ -2207,3 +2201,23 @@ msgstr "Մատակարարը չթվարկեց այս բանալու մոդելն
 #: thonny/plugins/aia
 msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
 msgstr "%s մոդելը հասանելի չէ։ Ընտրիր այլ մոդել Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"
+
+#: thonny/plugins/aia
+msgid "AIA sends your messages, the code from the editor (and, if switched on in the options, the files it imports) and error output to the AI provider you choose. The local model sends nothing outside your computer."
+msgstr "AIA֊ն քո ընտրած ԱԲ մատակարարին ուղարկում է քո հաղորդագրությունները, խմբագրի կոդը (և, եթե դա միացնես ընտրանքներում, նաև այն նիշքերը, որոնք այդ կոդը ներմուծում է) և սխալների արտածումը։ Տեղային մոդելը ոչինչ չի ուղարկում քո համակարգչից դուրս։"
+
+#: thonny/plugins/aia
+msgid "Thonny AIA is an unofficial fork. It is not published or supported by the Thonny project or the University of Tartu."
+msgstr "Thonny AIA֊ն ոչ պաշտոնական ֆորք է։ Այն չի հրատարակվում և չի աջակցվում ո՛չ Thonny նախագծի, ո՛չ էլ Տարտուի համալսարանի կողմից։"
+
+#: thonny/plugins/aia
+msgid "Thonny was created by %s."
+msgstr "Thonny֊ն ստեղծել է %s։"
+
+#: thonny/plugins/aia
+msgid "The intelligent assistant AIA was created by %s."
+msgstr "AIA ինտելեկտուալ օգնականը ստեղծել է %s։"
+
+#: thonny/plugins/aia
+msgid "(the AI assistant AIA and the changes of Thonny AIA)"
+msgstr "(ԱԲ օգնական AIA֊ն և Thonny AIA֊ի փոփոխությունները)"

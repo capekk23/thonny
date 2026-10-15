@@ -2048,9 +2048,6 @@ msgstr "மொழி:"
 msgid "Let's go!"
 msgstr "தொடங்குவோம்!"
 
-msgid "Loading the local model..."
-msgstr "உள்ளூர் மாதிரி ஏற்றப்படுகிறது..."
-
 msgid "Local model (Ollama, %s)"
 msgstr "உள்ளூர் மாதிரி (Ollama, %s)"
 
@@ -2077,9 +2074,6 @@ msgstr "AI சேவை நேரத்தில் பதிலளிக்க�
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "விசை Thonny-இன் உள்ளமைவுக் கோப்பில் சாதாரண உரையாகச் சேமிக்கப்படுகிறது."
-
-msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
-msgstr "AI உதவியாளருடன் (AIA) Thonny. Thonny-ஐ உருவாக்கியவர் Aivar Annamaa."
 
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "அதிகமான கோரிக்கைகள், அல்லது கணக்கின் ஒதுக்கீடு தீர்ந்துவிட்டது. சிறிது நேரம் காத்திருந்து மீண்டும் முயற்சிக்கவும்."
@@ -2148,7 +2142,7 @@ msgstr "AIA உடனான முழு உரையாடலும் நீ�
 
 #: thonny/plugins/aia
 msgid "Write a message to the assistant..."
-msgstr "உதவியாளருக்கு ஒரு செய்தியை எழுது..."
+msgstr "உதவியாளருக்கு ஒரு செய்தியை எழுதவும்..."
 
 #: thonny/plugins/aia
 msgid "The assistant is resting..."
@@ -2192,7 +2186,7 @@ msgstr "%s (இயல்புநிலை)"
 
 #: thonny/plugins/aia
 msgid "Enter the API key to see the models it can use."
-msgstr "இந்த விசை பயன்படுத்தக்கூடிய மாதிரிகளைப் பார்க்க API விசையை உள்ளிடு."
+msgstr "இந்த விசை பயன்படுத்தக்கூடிய மாதிரிகளைப் பார்க்க API விசையை உள்ளிடவும்."
 
 #: thonny/plugins/aia
 msgid "Asking the provider for the models of this key..."
@@ -2208,4 +2202,24 @@ msgstr "வழங்குநர் இந்த விசையின் மா
 
 #: thonny/plugins/aia
 msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
-msgstr "மாதிரி %s கிடைக்கவில்லை. கருவிகள் > விருப்பங்கள் > AI உதவியாளர் என்பதில் வேறொரு மாதிரியைத் தேர்ந்தெடு."
+msgstr "மாதிரி %s கிடைக்கவில்லை. கருவிகள் > விருப்பங்கள் > AI உதவியாளர் என்பதில் வேறொரு மாதிரியைத் தேர்ந்தெடுக்கவும்."
+
+#: thonny/plugins/aia
+msgid "AIA sends your messages, the code from the editor (and, if switched on in the options, the files it imports) and error output to the AI provider you choose. The local model sends nothing outside your computer."
+msgstr "AIA உங்கள் செய்திகளையும், திருத்தியில் உள்ள குறியீட்டையும் (விருப்பங்களில் இயக்கியிருந்தால், அந்தக் குறியீடு இறக்குமதி செய்யும் கோப்புகளையும்), பிழை வெளியீட்டையும் நீங்கள் தேர்ந்தெடுக்கும் AI வழங்குநருக்கு அனுப்புகிறது. உள்ளூர் மாதிரி உங்கள் கணினிக்கு வெளியே எதையும் அனுப்பாது."
+
+#: thonny/plugins/aia
+msgid "Thonny AIA is an unofficial fork. It is not published or supported by the Thonny project or the University of Tartu."
+msgstr "Thonny AIA ஒரு அதிகாரப்பூர்வமற்ற கிளை (fork) ஆகும். இதை Thonny திட்டமோ டார்ட்டு பல்கலைக்கழகமோ வெளியிடவில்லை, ஆதரிக்கவும் இல்லை."
+
+#: thonny/plugins/aia
+msgid "Thonny was created by %s."
+msgstr "Thonny-ஐ உருவாக்கியவர் %s."
+
+#: thonny/plugins/aia
+msgid "The intelligent assistant AIA was created by %s."
+msgstr "அறிவார்ந்த உதவியாளர் AIA-வை உருவாக்கியவர் %s."
+
+#: thonny/plugins/aia
+msgid "(the AI assistant AIA and the changes of Thonny AIA)"
+msgstr "(AI உதவியாளர் AIA மற்றும் Thonny AIA-வின் மாற்றங்கள்)"

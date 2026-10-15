@@ -2045,9 +2045,6 @@ msgstr "Bahasa:"
 msgid "Let's go!"
 msgstr "Ayo mulai!"
 
-msgid "Loading the local model..."
-msgstr "Memuat model lokal..."
-
 msgid "Local model (Ollama, %s)"
 msgstr "Model lokal (Ollama, %s)"
 
@@ -2074,9 +2071,6 @@ msgstr "Layanan AI tidak menjawab tepat waktu. Coba lagi."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Kunci disimpan sebagai teks biasa di file konfigurasi Thonny."
-
-msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
-msgstr "Thonny dengan Asisten AI (AIA). Thonny dibuat oleh Aivar Annamaa."
 
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "Terlalu banyak permintaan atau kuota akun sudah habis. Tunggu sebentar lalu coba lagi."
@@ -2206,3 +2200,23 @@ msgstr "Penyedia tidak mencantumkan model kunci ini; ini model yang biasa."
 #: thonny/plugins/aia
 msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
 msgstr "Model %s tidak tersedia. Pilih model lain di Tools > Options > Asisten AI."
+
+#: thonny/plugins/aia
+msgid "AIA sends your messages, the code from the editor (and, if switched on in the options, the files it imports) and error output to the AI provider you choose. The local model sends nothing outside your computer."
+msgstr "AIA mengirim pesan Anda, kode dari editor (dan, jika diaktifkan di opsi, file yang diimpor oleh kode tersebut) serta keluaran error ke penyedia AI yang Anda pilih. Model lokal tidak mengirim apa pun ke luar komputer Anda."
+
+#: thonny/plugins/aia
+msgid "Thonny AIA is an unofficial fork. It is not published or supported by the Thonny project or the University of Tartu."
+msgstr "Thonny AIA adalah fork tidak resmi. Fork ini tidak diterbitkan atau didukung oleh proyek Thonny maupun Universitas Tartu."
+
+#: thonny/plugins/aia
+msgid "Thonny was created by %s."
+msgstr "Thonny dibuat oleh %s."
+
+#: thonny/plugins/aia
+msgid "The intelligent assistant AIA was created by %s."
+msgstr "Asisten cerdas AIA dibuat oleh %s."
+
+#: thonny/plugins/aia
+msgid "(the AI assistant AIA and the changes of Thonny AIA)"
+msgstr "(asisten AI AIA dan perubahan Thonny AIA)"

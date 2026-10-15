@@ -459,7 +459,7 @@ msgstr "Pythonové soubory mají obvykle příponu .py."
 #: thonny/editors.py:592
 #, python-format
 msgid "Did you mean '%s'?"
-msgstr "Měli jste na mysli '%s'?"
+msgstr "Myslíte '%s'?"
 
 #: thonny/editors.py:660 thonny/editors.py:662
 msgid "New"
@@ -594,7 +594,7 @@ msgstr "Hodnota"
 #: thonny/misc_utils.py:178
 #, python-format
 msgid "Could not find disk '%s'. Do you want to locate it yourself?"
-msgstr "Nenalezen disk '%s'. Chcete jej najít sám(a)?"
+msgstr "Nenalezen disk '%s'. Chcete ho najít ručně?"
 
 #: thonny/misc_utils.py:181
 #, python-format
@@ -875,10 +875,6 @@ msgstr "Spouštění"
 #: thonny/plugins/about.py:24
 msgid "About Thonny AIA"
 msgstr "O Thonny AIA"
-
-#: thonny/plugins/about.py:37
-msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
-msgstr "Thonny s AI asistentem (AIA). Thonny vytvořil Aivar Annamaa."
 
 #: thonny/plugins/about.py:94
 msgid ""
@@ -1682,7 +1678,7 @@ msgstr "Balík '{}' je požadován pro instalaci a odinstalaci ostatních balík
 
 #: thonny/plugins/pip_gui.py:821
 msgid "Are you sure you want to uninstall it?"
-msgstr "Jste si jisti odinstalací?"
+msgstr "Opravdu ho chcete odinstalovat?"
 
 #: thonny/plugins/pip_gui.py:828
 msgid "Installing"
@@ -2246,9 +2242,7 @@ msgstr "Heslo"
 msgid ""
 "This doesn't look like MicroPython/CircuitPython package.\n"
 "Are you sure you want to install it?"
-msgstr ""
-"Tohle nevypadá jako balíček pro MicroPython/CircuitPython.\n"
-"Jste si jistí, že jej chcete nainstalovat."
+msgstr "Tohle nevypadá jako balíček pro MicroPython/CircuitPython.\nOpravdu ho chcete nainstalovat?"
 
 #: thonny/plugins/micropython/pip_gui.py:66
 msgid "Search micropython-lib and PyPI"
@@ -2309,10 +2303,6 @@ msgstr "Automaticky posílat aktuální soubor jako kontext"
 #: thonny/plugins/aia/_panel/config_page.py:132
 msgid "Also include locally imported files"
 msgstr "Posílat i lokálně importované soubory"
-
-#: thonny/plugins/aia/_panel/view.py:36
-msgid "Loading the local model..."
-msgstr "Načítám lokální model..."
 
 #: thonny/plugins/aia/_panel/view.py:102
 msgid "Send"
@@ -2461,3 +2451,23 @@ msgstr "Poskytovatel modely tohoto klíče nevypsal, tohle jsou obvyklé."
 #: thonny/plugins/aia
 msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
 msgstr "Model %s není k dispozici. Vyber jiný model v Nástroje > Volby > AI asistent."
+
+#: thonny/plugins/aia
+msgid "AIA sends your messages, the code from the editor (and, if switched on in the options, the files it imports) and error output to the AI provider you choose. The local model sends nothing outside your computer."
+msgstr "AIA posílá vybranému poskytovateli AI tvoje zprávy, kód z editoru (a když to zapneš ve volbách, i soubory, které importuje) a výpisy chyb. Lokální model nic mimo tvůj počítač neposílá."
+
+#: thonny/plugins/aia
+msgid "Thonny AIA is an unofficial fork. It is not published or supported by the Thonny project or the University of Tartu."
+msgstr "Thonny AIA je neoficiální fork. Projekt Thonny ani Univerzita v Tartu ho nevydávají ani nepodporují."
+
+#: thonny/plugins/aia
+msgid "Thonny was created by %s."
+msgstr "Thonny vytvořil %s."
+
+#: thonny/plugins/aia
+msgid "The intelligent assistant AIA was created by %s."
+msgstr "Inteligentního asistenta AIA vytvořil %s."
+
+#: thonny/plugins/aia
+msgid "(the AI assistant AIA and the changes of Thonny AIA)"
+msgstr "(AI asistent AIA a úpravy Thonny AIA)"

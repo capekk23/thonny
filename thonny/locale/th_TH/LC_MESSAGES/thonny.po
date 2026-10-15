@@ -2055,9 +2055,6 @@ msgstr "ภาษา:"
 msgid "Let's go!"
 msgstr "เริ่มกันเลย!"
 
-msgid "Loading the local model..."
-msgstr "กำลังโหลดโมเดลในเครื่อง..."
-
 msgid "Local model (Ollama, %s)"
 msgstr "โมเดลในเครื่อง (Ollama, %s)"
 
@@ -2084,9 +2081,6 @@ msgstr "บริการ AI ไม่ตอบกลับภายในเ�
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "คีย์ถูกเก็บเป็นข้อความธรรมดาในไฟล์การตั้งค่าของ Thonny"
-
-msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
-msgstr "Thonny พร้อมผู้ช่วย AI (AIA) Thonny สร้างโดย Aivar Annamaa"
 
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "มีคำขอมากเกินไป หรือโควตาของบัญชีหมดแล้ว รอสักครู่แล้วลองอีกครั้ง"
@@ -2216,3 +2210,23 @@ msgstr "ผู้ให้บริการไม่ได้แสดงรา
 #: thonny/plugins/aia
 msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
 msgstr "ไม่มีโมเดล %s ให้ใช้ เลือกโมเดลอื่นได้ใน เครื่องมือ > ตัวเลือก > ผู้ช่วย AI"
+
+#: thonny/plugins/aia
+msgid "AIA sends your messages, the code from the editor (and, if switched on in the options, the files it imports) and error output to the AI provider you choose. The local model sends nothing outside your computer."
+msgstr "AIA จะส่งข้อความของคุณ โค้ดจากเอดิเตอร์ (และไฟล์ที่โค้ดนั้นนำเข้า หากเปิดใช้ในตัวเลือก) และเอาต์พุตข้อผิดพลาด ไปยังผู้ให้บริการ AI ที่คุณเลือก โมเดลในเครื่องจะไม่ส่งสิ่งใดออกไปนอกคอมพิวเตอร์ของคุณ"
+
+#: thonny/plugins/aia
+msgid "Thonny AIA is an unofficial fork. It is not published or supported by the Thonny project or the University of Tartu."
+msgstr "Thonny AIA เป็น fork ที่ไม่เป็นทางการ โครงการ Thonny และมหาวิทยาลัยทาร์ทูไม่ได้เผยแพร่หรือให้การสนับสนุน"
+
+#: thonny/plugins/aia
+msgid "Thonny was created by %s."
+msgstr "Thonny สร้างโดย %s"
+
+#: thonny/plugins/aia
+msgid "The intelligent assistant AIA was created by %s."
+msgstr "ผู้ช่วยอัจฉริยะ AIA สร้างโดย %s"
+
+#: thonny/plugins/aia
+msgid "(the AI assistant AIA and the changes of Thonny AIA)"
+msgstr "(ผู้ช่วย AI AIA และการเปลี่ยนแปลงของ Thonny AIA)"

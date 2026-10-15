@@ -1984,7 +1984,7 @@ msgid "AI assistant:"
 msgstr "DI asistentas:"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
-msgstr "AIA lieka įjungtas, bet atsakinės tik tada, kai pasirinksite teikėją skiltyje Įrankiai > Nustatymai > DI asistentas."
+msgstr "AIA lieka įjungtas, bet atsakinės tik tada, kai pasirinksi teikėją skiltyje Įrankiai > Nustatymai > DI asistentas."
 
 msgid "API key:"
 msgstr "API raktas:"
@@ -1999,13 +1999,13 @@ msgid "Answer style:"
 msgstr "Atsakymo stilius:"
 
 msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
-msgstr "Atsakymus teikia %s. Jums reikia API rakto: susikurkite jį toliau pateiktoje nuorodoje arba gaukite iš mokytojo. Jį galite įvesti ir vėliau skiltyje Įrankiai > Nustatymai > DI asistentas."
+msgstr "Atsakymus teikia %s. Tau reikia API rakto: susikurk jį toliau pateiktoje nuorodoje arba gauk iš mokytojo. Jį gali įvesti ir vėliau skiltyje Įrankiai > Nustatymai > DI asistentas."
 
 msgid "Automatically include current file as context"
 msgstr "Automatiškai įtraukti dabartinį failą kaip kontekstą"
 
 msgid "Cannot connect to the AI service. Check the internet connection."
-msgstr "Nepavyksta prisijungti prie DI paslaugos. Patikrinkite interneto ryšį."
+msgstr "Nepavyksta prisijungti prie DI paslaugos. Patikrink interneto ryšį."
 
 msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
 msgstr "Nepavyksta pasiekti Ollama. Ar ji paleista (ollama serve) ir ar teisingas serverio adresas?"
@@ -2014,7 +2014,7 @@ msgid "Check again"
 msgstr "Tikrinti dar kartą"
 
 msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
-msgstr "Claude Code (komanda „claude“) nerasta. Įdiekite Claude Code, vieną kartą paleiskite „claude“ ir prisijunkite, tada iš naujo paleiskite Thonny."
+msgstr "Claude Code (komanda „claude“) nerasta. Įdiek Claude Code, vieną kartą paleisk „claude“ ir prisijunk, tada iš naujo paleisk Thonny."
 
 msgid "Context:"
 msgstr "Kontekstas:"
@@ -2037,9 +2037,6 @@ msgstr "Kalba:"
 msgid "Let's go!"
 msgstr "Pirmyn!"
 
-msgid "Loading the local model..."
-msgstr "Įkeliamas vietinis modelis..."
-
 msgid "Local model (Ollama, %s)"
 msgstr "Vietinis modelis (Ollama, %s)"
 
@@ -2053,34 +2050,31 @@ msgid "Socratic"
 msgstr "Sokratiškas"
 
 msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
-msgstr "Sokratiškas = veda jus prie atsakymo, Aiškinamasis = paaiškina ir atsako, Tiesioginis = tik trumpas atsakymas"
+msgstr "Sokratiškas = veda tave prie atsakymo, Aiškinamasis = paaiškina ir atsako, Tiesioginis = tik trumpas atsakymas"
 
 msgid "Standard"
 msgstr "Standartinis"
 
 msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
-msgstr "Teikėjui „%s“ reikia Python paketo „%s“, kurio trūksta. Iš naujo įdiekite Thonny AIA."
+msgstr "Teikėjui „%s“ reikia Python paketo „%s“, kurio trūksta. Iš naujo įdiek Thonny AIA."
 
 msgid "The AI service did not answer in time. Try again."
-msgstr "DI paslauga laiku neatsakė. Bandykite dar kartą."
+msgstr "DI paslauga laiku neatsakė. Bandyk dar kartą."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Raktas saugomas paprastu tekstu Thonny konfigūracijos faile."
 
-msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
-msgstr "Thonny su DI asistentu (AIA). Thonny sukūrė Aivar Annamaa."
-
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
-msgstr "Per daug užklausų arba išnaudota paskyros kvota. Šiek tiek palaukite ir bandykite dar kartą."
+msgstr "Per daug užklausų arba išnaudota paskyros kvota. Šiek tiek palauk ir bandyk dar kartą."
 
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
-msgstr "Nežinomas teikėjas „%s“. Pasirinkite jį skiltyje Įrankiai > Nustatymai > DI asistentas."
+msgstr "Nežinomas teikėjas „%s“. Pasirink teikėją skiltyje Įrankiai > Nustatymai > DI asistentas."
 
 msgid "Use AI-based AIA instead of the built-in Assistant"
 msgstr "Naudoti DI pagrįstą AIA vietoj įtaisyto Asistento"
 
 msgid "Welcome to %s!"
-msgstr "Sveiki atvykę į %s!"
+msgstr "%s tave sveikina!"
 
 msgid "You"
 msgstr "Tu"
@@ -2089,13 +2083,13 @@ msgid "cancelled"
 msgstr "atšaukta"
 
 msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
-msgstr "Ollama neįdiegta. Įdiekite ją iš toliau pateiktos nuorodos ir atsisiųskite modelį: „ollama pull %s“ (13 GB)."
+msgstr "Ollama neįdiegta. Įdiek ją iš toliau pateiktos nuorodos ir atsisiųsk modelį: „ollama pull %s“ (13 GB)."
 
 msgid "Ollama is installed but not running. Start it."
-msgstr "Ollama įdiegta, bet nepaleista. Paleiskite ją."
+msgstr "Ollama įdiegta, bet nepaleista. Paleisk ją."
 
 msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s' (13 GB)."
-msgstr "Ollama veikia, bet trūksta modelio. Atsisiųskite jį: „ollama pull %s“ (13 GB)."
+msgstr "Ollama veikia, bet trūksta modelio. Atsisiųsk jį: „ollama pull %s“ (13 GB)."
 
 msgid "Ollama is running and the model %s is ready."
 msgstr "Ollama veikia, o modelis %s paruoštas."
@@ -2105,11 +2099,11 @@ msgstr "Veikia be interneto, reikia apie 14 GB laisvos RAM, o be galingos vaizdo
 
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
-msgstr "DI teikėjas dar nepasirinktas. Pasirinkite jį skiltyje Įrankiai > Nustatymai > DI asistentas."
+msgstr "DI teikėjas dar nepasirinktas. Pasirink jį skiltyje Įrankiai > Nustatymai > DI asistentas."
 
 #: thonny/plugins/aia
 msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
-msgstr "Atsakymus teikia %s. Jums reikia API rakto: susikurkite jį toliau pateiktoje nuorodoje arba gaukite iš mokytojo."
+msgstr "Atsakymus teikia %s. Tau reikia API rakto: susikurk jį toliau pateiktoje nuorodoje arba gauk iš mokytojo."
 
 #: thonny/plugins/aia
 msgid "No provider is chosen: AIA stays switched on, but it does not answer."
@@ -2117,11 +2111,11 @@ msgstr "Nepasirinktas joks teikėjas: AIA lieka įjungtas, bet neatsako."
 
 #: thonny/plugins/aia
 msgid "API key not set. Enter it in Tools > Options > AI Assistant."
-msgstr "API raktas nenustatytas. Įveskite jį skiltyje Įrankiai > Nustatymai > DI asistentas."
+msgstr "API raktas nenustatytas. Įvesk jį skiltyje Įrankiai > Nustatymai > DI asistentas."
 
 #: thonny/plugins/aia
 msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
-msgstr "API raktas atmestas. Patikrinkite jį skiltyje Įrankiai > Nustatymai > DI asistentas."
+msgstr "API raktas atmestas. Patikrink jį skiltyje Įrankiai > Nustatymai > DI asistentas."
 
 #: thonny/plugins/aia
 msgid "Thinking..."
@@ -2198,3 +2192,23 @@ msgstr "Teikėjas nepateikė šio rakto modelių; tai įprasti modeliai."
 #: thonny/plugins/aia
 msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
 msgstr "Modelis %s nepasiekiamas. Pasirink kitą modelį skiltyje Įrankiai > Nustatymai > DI asistentas."
+
+#: thonny/plugins/aia
+msgid "AIA sends your messages, the code from the editor (and, if switched on in the options, the files it imports) and error output to the AI provider you choose. The local model sends nothing outside your computer."
+msgstr "AIA tavo žinutes, kodą iš redaktoriaus (ir, jei tai įjungsi nustatymuose, failus, kuriuos jis importuoja) bei klaidų išvestį siunčia tavo pasirinktam DI teikėjui. Vietinis modelis nieko nesiunčia už tavo kompiuterio ribų."
+
+#: thonny/plugins/aia
+msgid "Thonny AIA is an unofficial fork. It is not published or supported by the Thonny project or the University of Tartu."
+msgstr "Thonny AIA yra neoficiali atšaka (fork). Jos neleidžia ir nepalaiko nei Thonny projektas, nei Tartu universitetas."
+
+#: thonny/plugins/aia
+msgid "Thonny was created by %s."
+msgstr "Thonny sukūrė %s."
+
+#: thonny/plugins/aia
+msgid "The intelligent assistant AIA was created by %s."
+msgstr "Intelektualųjį asistentą AIA sukūrė %s."
+
+#: thonny/plugins/aia
+msgid "(the AI assistant AIA and the changes of Thonny AIA)"
+msgstr "(DI asistentas AIA ir Thonny AIA pakeitimai)"

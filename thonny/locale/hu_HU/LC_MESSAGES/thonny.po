@@ -1980,7 +1980,7 @@ msgid "AI assistant:"
 msgstr "MI-asszisztens:"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
-msgstr "Az AIA bekapcsolva marad, de csak azután válaszol, hogy kiválasztott egy szolgáltatót az Eszközök > Beállítások > MI-asszisztens menüpontban."
+msgstr "Az AIA bekapcsolva marad, de csak azután válaszol, hogy kiválasztottál egy szolgáltatót az Eszközök > Beállítások > MI-asszisztens menüpontban."
 
 msgid "API key:"
 msgstr "API-kulcs:"
@@ -1995,13 +1995,13 @@ msgid "Answer style:"
 msgstr "Válaszstílus:"
 
 msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
-msgstr "A válaszokat a(z) %s adja. API-kulcsra van szüksége: hozza létre az alábbi linken, vagy kérjen egyet a tanárától. Később is megadhatja az Eszközök > Beállítások > MI-asszisztens menüpontban."
+msgstr "A válaszokat a(z) %s adja. API-kulcsra van szükséged: hozd létre az alábbi linken, vagy kérj egyet a tanárodtól. Később is megadhatod az Eszközök > Beállítások > MI-asszisztens menüpontban."
 
 msgid "Automatically include current file as context"
 msgstr "Az aktuális fájl automatikus csatolása kontextusként"
 
 msgid "Cannot connect to the AI service. Check the internet connection."
-msgstr "Nem sikerült csatlakozni az MI-szolgáltatáshoz. Ellenőrizze az internetkapcsolatot."
+msgstr "Nem sikerült csatlakozni az MI-szolgáltatáshoz. Ellenőrizd az internetkapcsolatot."
 
 msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
 msgstr "Az Ollama nem érhető el. Fut (ollama serve), és helyes a gazdagép címe?"
@@ -2010,7 +2010,7 @@ msgid "Check again"
 msgstr "Újraellenőrzés"
 
 msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
-msgstr "A Claude Code („claude” parancs) nem található. Telepítse a Claude Code-ot, jelentkezzen be a „claude” egyszeri futtatásával, majd indítsa újra a Thonnyt."
+msgstr "A Claude Code („claude” parancs) nem található. Telepítsd a Claude Code-ot, jelentkezz be a „claude” egyszeri futtatásával, majd indítsd újra a Thonnyt."
 
 msgid "Context:"
 msgstr "Kontextus:"
@@ -2033,9 +2033,6 @@ msgstr "Nyelv:"
 msgid "Let's go!"
 msgstr "Kezdjük!"
 
-msgid "Loading the local model..."
-msgstr "A helyi modell betöltése..."
-
 msgid "Local model (Ollama, %s)"
 msgstr "Helyi modell (Ollama, %s)"
 
@@ -2049,34 +2046,31 @@ msgid "Socratic"
 msgstr "Szókratészi"
 
 msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
-msgstr "Szókratészi = elvezeti a válaszhoz, Magyarázó = elmagyarázza és válaszol, Közvetlen = csak rövid válasz"
+msgstr "Szókratészi = elvezet a válaszhoz, Magyarázó = elmagyarázza és válaszol, Közvetlen = csak rövid válasz"
 
 msgid "Standard"
 msgstr "Normál"
 
 msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
-msgstr "A(z) „%s” szolgáltatóhoz szükséges a(z) „%s” Python-csomag, amely hiányzik. Telepítse újra a Thonny AIA-t."
+msgstr "A(z) „%s” szolgáltatóhoz szükséges a(z) „%s” Python-csomag, amely hiányzik. Telepítsd újra a Thonny AIA-t."
 
 msgid "The AI service did not answer in time. Try again."
-msgstr "Az MI-szolgáltatás nem válaszolt időben. Próbálja újra."
+msgstr "Az MI-szolgáltatás nem válaszolt időben. Próbáld újra."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "A kulcs egyszerű szövegként tárolódik a Thonny konfigurációs fájljában."
 
-msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
-msgstr "Thonny MI-asszisztenssel (AIA). A Thonnyt Aivar Annamaa készítette."
-
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
-msgstr "Túl sok kérés, vagy elfogyott a fiók kerete. Várjon egy kicsit, és próbálja újra."
+msgstr "Túl sok kérés, vagy elfogyott a fiók kerete. Várj egy kicsit, és próbáld újra."
 
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
-msgstr "Ismeretlen szolgáltató: „%s”. Válasszon egyet az Eszközök > Beállítások > MI-asszisztens menüpontban."
+msgstr "Ismeretlen szolgáltató: „%s”. Válassz egyet az Eszközök > Beállítások > MI-asszisztens menüpontban."
 
 msgid "Use AI-based AIA instead of the built-in Assistant"
 msgstr "A beépített Asszisztens helyett az MI-alapú AIA használata"
 
 msgid "Welcome to %s!"
-msgstr "Üdvözli a(z) %s!"
+msgstr "Üdvözöl a(z) %s!"
 
 msgid "You"
 msgstr "Te"
@@ -2085,13 +2079,13 @@ msgid "cancelled"
 msgstr "megszakítva"
 
 msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
-msgstr "Az Ollama nincs telepítve. Telepítse az alábbi linkről, majd töltse le a modellt: „ollama pull %s” (13 GB)."
+msgstr "Az Ollama nincs telepítve. Telepítsd az alábbi linkről, majd töltsd le a modellt: „ollama pull %s” (13 GB)."
 
 msgid "Ollama is installed but not running. Start it."
-msgstr "Az Ollama telepítve van, de nem fut. Indítsa el."
+msgstr "Az Ollama telepítve van, de nem fut. Indítsd el."
 
 msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s' (13 GB)."
-msgstr "Az Ollama fut, de hiányzik a modell. Töltse le: „ollama pull %s” (13 GB)."
+msgstr "Az Ollama fut, de hiányzik a modell. Töltsd le: „ollama pull %s” (13 GB)."
 
 msgid "Ollama is running and the model %s is ready."
 msgstr "Az Ollama fut, és a(z) %s modell készen áll."
@@ -2101,11 +2095,11 @@ msgstr "Internet nélkül fut, körülbelül 14 GB szabad RAM kell hozzá, és e
 
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
-msgstr "Még nincs kiválasztva MI-szolgáltató. Válasszon egyet az Eszközök > Beállítások > MI-asszisztens menüpontban."
+msgstr "Még nincs kiválasztva MI-szolgáltató. Válassz egyet az Eszközök > Beállítások > MI-asszisztens menüpontban."
 
 #: thonny/plugins/aia
 msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
-msgstr "A válaszokat a(z) %s adja. API-kulcsra van szüksége: hozza létre az alábbi linken, vagy kérjen egyet a tanárától."
+msgstr "A válaszokat a(z) %s adja. API-kulcsra van szükséged: hozd létre az alábbi linken, vagy kérj egyet a tanárodtól."
 
 #: thonny/plugins/aia
 msgid "No provider is chosen: AIA stays switched on, but it does not answer."
@@ -2113,11 +2107,11 @@ msgstr "Nincs kiválasztva szolgáltató: az AIA bekapcsolva marad, de nem vála
 
 #: thonny/plugins/aia
 msgid "API key not set. Enter it in Tools > Options > AI Assistant."
-msgstr "Nincs beállítva API-kulcs. Adja meg az Eszközök > Beállítások > MI-asszisztens menüpontban."
+msgstr "Nincs beállítva API-kulcs. Add meg az Eszközök > Beállítások > MI-asszisztens menüpontban."
 
 #: thonny/plugins/aia
 msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
-msgstr "Az API-kulcsot elutasították. Ellenőrizze az Eszközök > Beállítások > MI-asszisztens menüpontban."
+msgstr "Az API-kulcsot elutasították. Ellenőrizd az Eszközök > Beállítások > MI-asszisztens menüpontban."
 
 #: thonny/plugins/aia
 msgid "Thinking..."
@@ -2194,3 +2188,23 @@ msgstr "A szolgáltató nem sorolta fel a kulcs modelljeit; ezek a szokásosak."
 #: thonny/plugins/aia
 msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
 msgstr "A(z) %s modell nem érhető el. Válassz másik modellt az Eszközök > Beállítások > MI-asszisztens menüpontban."
+
+#: thonny/plugins/aia
+msgid "AIA sends your messages, the code from the editor (and, if switched on in the options, the files it imports) and error output to the AI provider you choose. The local model sends nothing outside your computer."
+msgstr "Az AIA elküldi az általad választott MI-szolgáltatónak az üzeneteidet, a kódot a kódszerkesztőből (és ha a beállításokban bekapcsolod, az általa importált fájlokat is) és a hibakimenetet. A helyi modell semmit sem küld ki a számítógépedről."
+
+#: thonny/plugins/aia
+msgid "Thonny AIA is an unofficial fork. It is not published or supported by the Thonny project or the University of Tartu."
+msgstr "A Thonny AIA nem hivatalos fork. Sem a Thonny projekt, sem a Tartui Egyetem nem adja ki és nem támogatja."
+
+#: thonny/plugins/aia
+msgid "Thonny was created by %s."
+msgstr "A Thonnyt %s hozta létre."
+
+#: thonny/plugins/aia
+msgid "The intelligent assistant AIA was created by %s."
+msgstr "Az AIA intelligens asszisztenst %s hozta létre."
+
+#: thonny/plugins/aia
+msgid "(the AI assistant AIA and the changes of Thonny AIA)"
+msgstr "(az AIA MI-asszisztens és a Thonny AIA módosításai)"

@@ -2054,9 +2054,6 @@ msgstr "Idioma:"
 msgid "Let's go!"
 msgstr "Vamos lá!"
 
-msgid "Loading the local model..."
-msgstr "Carregando o modelo local..."
-
 msgid "Local model (Ollama, %s)"
 msgstr "Modelo local (Ollama, %s)"
 
@@ -2084,9 +2081,6 @@ msgstr "O serviço de IA não respondeu a tempo. Tente novamente."
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "A chave é armazenada como texto simples no arquivo de configuração do Thonny."
 
-msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
-msgstr "Thonny com o Assistente de IA (AIA). O Thonny é desenvolvido por Aivar Annamaa."
-
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "Muitas solicitações ou a cota da conta se esgotou. Aguarde um momento e tente novamente."
 
@@ -2097,7 +2091,7 @@ msgid "Use AI-based AIA instead of the built-in Assistant"
 msgstr "Usar o AIA baseado em IA em vez do Assistente integrado"
 
 msgid "Welcome to %s!"
-msgstr "Bem-vindo ao %s!"
+msgstr "Boas-vindas ao %s!"
 
 msgid "You"
 msgstr "Você"
@@ -2215,3 +2209,23 @@ msgstr "O provedor não listou os modelos desta chave; estes são os de costume.
 #: thonny/plugins/aia
 msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
 msgstr "O modelo %s não está disponível. Escolha outro modelo em Ferramentas > Opções > Assistente de IA."
+
+#: thonny/plugins/aia
+msgid "AIA sends your messages, the code from the editor (and, if switched on in the options, the files it imports) and error output to the AI provider you choose. The local model sends nothing outside your computer."
+msgstr "O AIA envia ao provedor de IA que você escolher suas mensagens, o código do editor (e, se você ativar isso nas opções, os arquivos que ele importa) e as mensagens de erro. O modelo local não envia nada para fora do seu computador."
+
+#: thonny/plugins/aia
+msgid "Thonny AIA is an unofficial fork. It is not published or supported by the Thonny project or the University of Tartu."
+msgstr "O Thonny AIA é um fork não oficial. Ele não é publicado nem suportado pelo projeto Thonny ou pela Universidade de Tartu."
+
+#: thonny/plugins/aia
+msgid "Thonny was created by %s."
+msgstr "O Thonny foi criado por %s."
+
+#: thonny/plugins/aia
+msgid "The intelligent assistant AIA was created by %s."
+msgstr "O assistente inteligente AIA foi criado por %s."
+
+#: thonny/plugins/aia
+msgid "(the AI assistant AIA and the changes of Thonny AIA)"
+msgstr "(o assistente de IA AIA e as alterações do Thonny AIA)"

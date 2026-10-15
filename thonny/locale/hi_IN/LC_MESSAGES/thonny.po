@@ -1994,7 +1994,7 @@ msgid "AI assistant:"
 msgstr "AI असिस्टेंट:"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
-msgstr "AIA चालू रहेगा, लेकिन जवाब तभी देगा जब आप टूल्स > ऑप्शनस > AI असिस्टेंट में कोई प्रोवाइडर चुनेंगे।"
+msgstr "AIA चालू रहेगा, लेकिन जवाब तभी देगा जब टूल्स > ऑप्शनस > AI असिस्टेंट में कोई प्रोवाइडर चुना जाएगा।"
 
 msgid "API key:"
 msgstr "API कुंजी:"
@@ -2009,7 +2009,7 @@ msgid "Answer style:"
 msgstr "जवाब की शैली:"
 
 msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
-msgstr "जवाब %s से आते हैं। आपको एक API कुंजी चाहिए: नीचे दिए लिंक पर बनाएँ, या अपने शिक्षक से लें। आप इसे बाद में टूल्स > ऑप्शनस > AI असिस्टेंट में भी डाल सकते हैं।"
+msgstr "जवाब %s से आते हैं। आपको एक API कुंजी चाहिए: नीचे दिए लिंक पर बनाएँ, या अपने शिक्षक से लें। इसे बाद में टूल्स > ऑप्शनस > AI असिस्टेंट में भी डाला जा सकता है।"
 
 msgid "Automatically include current file as context"
 msgstr "मौजूदा फ़ाइल को अपने-आप संदर्भ के रूप में शामिल करें"
@@ -2018,7 +2018,7 @@ msgid "Cannot connect to the AI service. Check the internet connection."
 msgstr "AI सेवा से कनेक्ट नहीं हो पा रहा। इंटरनेट कनेक्शन जाँचें।"
 
 msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
-msgstr "Ollama तक नहीं पहुँच पा रहे। क्या यह चल रहा है (ollama serve) और क्या होस्ट सही है?"
+msgstr "Ollama से संपर्क नहीं हो पा रहा। क्या यह चल रहा है (ollama serve) और क्या होस्ट सही है?"
 
 msgid "Check again"
 msgstr "फिर से जाँचें"
@@ -2036,7 +2036,7 @@ msgid "Explanatory"
 msgstr "समझाने वाला"
 
 msgid "I will set it up later"
-msgstr "बाद में सेट करेंगे"
+msgstr "बाद में सेट करें"
 
 msgid "Initial settings:"
 msgstr "शुरुआती सेटिंग्स:"
@@ -2046,9 +2046,6 @@ msgstr "भाषा:"
 
 msgid "Let's go!"
 msgstr "चलिए शुरू करें!"
-
-msgid "Loading the local model..."
-msgstr "लोकल मॉडल लोड हो रहा है..."
 
 msgid "Local model (Ollama, %s)"
 msgstr "लोकल मॉडल (Ollama, %s)"
@@ -2076,9 +2073,6 @@ msgstr "AI सेवा ने समय पर जवाब नहीं दि
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "कुंजी Thonny की कॉन्फ़िगरेशन फ़ाइल में सादे टेक्स्ट के रूप में सेव होती है।"
-
-msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
-msgstr "AI असिस्टेंट (AIA) के साथ Thonny। Thonny को Aivar Annamaa ने बनाया है।"
 
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "बहुत ज़्यादा अनुरोध, या खाते का कोटा खत्म हो गया है। थोड़ा रुकें और फिर से कोशिश करें।"
@@ -2147,7 +2141,7 @@ msgstr "AIA के साथ पूरी बातचीत हटा दी �
 
 #: thonny/plugins/aia
 msgid "Write a message to the assistant..."
-msgstr "सहायक को संदेश लिखो..."
+msgstr "सहायक को संदेश लिखें..."
 
 #: thonny/plugins/aia
 msgid "The assistant is resting..."
@@ -2191,7 +2185,7 @@ msgstr "%s (डिफ़ॉल्ट)"
 
 #: thonny/plugins/aia
 msgid "Enter the API key to see the models it can use."
-msgstr "API कुंजी डालो, ताकि दिखे कि यह कौन-से मॉडल इस्तेमाल कर सकती है।"
+msgstr "API कुंजी डालें, ताकि दिखे कि यह कौन-से मॉडल इस्तेमाल कर सकती है।"
 
 #: thonny/plugins/aia
 msgid "Asking the provider for the models of this key..."
@@ -2207,4 +2201,24 @@ msgstr "प्रदाता ने इस कुंजी के मॉडल 
 
 #: thonny/plugins/aia
 msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
-msgstr "मॉडल %s उपलब्ध नहीं है। टूल्स > ऑप्शनस > AI असिस्टेंट में कोई दूसरा मॉडल चुनो।"
+msgstr "मॉडल %s उपलब्ध नहीं है। टूल्स > ऑप्शनस > AI असिस्टेंट में कोई दूसरा मॉडल चुनें।"
+
+#: thonny/plugins/aia
+msgid "AIA sends your messages, the code from the editor (and, if switched on in the options, the files it imports) and error output to the AI provider you choose. The local model sends nothing outside your computer."
+msgstr "AIA आपके संदेश, एडिटर का कोड (और, अगर ऑप्शनस में यह चालू हो, तो वे फ़ाइलें जिन्हें यह कोड इम्पोर्ट करता है) और एरर आउटपुट चुने गए AI प्रोवाइडर को भेजता है। लोकल मॉडल आपके कंप्यूटर से बाहर कुछ नहीं भेजता।"
+
+#: thonny/plugins/aia
+msgid "Thonny AIA is an unofficial fork. It is not published or supported by the Thonny project or the University of Tartu."
+msgstr "Thonny AIA एक ग़ैर-आधिकारिक फ़ोर्क है। Thonny प्रोजेक्ट और टार्टू विश्वविद्यालय न इसे प्रकाशित करते हैं, न इसका समर्थन करते हैं।"
+
+#: thonny/plugins/aia
+msgid "Thonny was created by %s."
+msgstr "Thonny को %s ने बनाया है।"
+
+#: thonny/plugins/aia
+msgid "The intelligent assistant AIA was created by %s."
+msgstr "इंटेलिजेंट असिस्टेंट AIA को %s ने बनाया है।"
+
+#: thonny/plugins/aia
+msgid "(the AI assistant AIA and the changes of Thonny AIA)"
+msgstr "(AI असिस्टेंट AIA और Thonny AIA के बदलाव)"

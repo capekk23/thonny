@@ -2016,7 +2016,7 @@ msgid "AI assistant:"
 msgstr "Pomočnik AI:"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
-msgstr "AIA ostane vklopljen, vendar bo odgovarjal šele, ko izberete ponudnika v Orodja > Opcije > Pomočnik AI."
+msgstr "AIA ostane vklopljen, vendar bo odgovarjal šele, ko izbereš ponudnika v Orodja > Opcije > Pomočnik AI."
 
 msgid "API key:"
 msgstr "Ključ API:"
@@ -2031,13 +2031,13 @@ msgid "Answer style:"
 msgstr "Slog odgovorov:"
 
 msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
-msgstr "Odgovore zagotavlja %s. Potrebujete ključ API: ustvarite ga na spodnji povezavi ali ga dobite od učitelja. Vnesete ga lahko tudi pozneje v Orodja > Opcije > Pomočnik AI."
+msgstr "Odgovore zagotavlja %s. Potrebuješ ključ API: ustvari ga na spodnji povezavi ali ga dobi od učitelja. Vneseš ga lahko tudi pozneje v Orodja > Opcije > Pomočnik AI."
 
 msgid "Automatically include current file as context"
 msgstr "Samodejno pošlji trenutno datoteko kot kontekst"
 
 msgid "Cannot connect to the AI service. Check the internet connection."
-msgstr "Povezava s storitvijo AI ni mogoča. Preverite internetno povezavo."
+msgstr "Povezava s storitvijo AI ni mogoča. Preveri internetno povezavo."
 
 msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
 msgstr "Ollama ni dosegljiva. Ali teče (ollama serve) in je naslov gostitelja pravilen?"
@@ -2046,7 +2046,7 @@ msgid "Check again"
 msgstr "Preveri znova"
 
 msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
-msgstr "Claude Code (ukaz »claude«) ni bil najden. Namestite Claude Code, se prijavite tako, da enkrat zaženete »claude«, nato znova zaženite Thonny."
+msgstr "Claude Code (ukaz »claude«) ni bil najden. Namesti Claude Code, prijavi se tako, da enkrat zaženeš »claude«, nato znova zaženi Thonny."
 
 msgid "Context:"
 msgstr "Kontekst:"
@@ -2069,9 +2069,6 @@ msgstr "Jezik:"
 msgid "Let's go!"
 msgstr "Gremo!"
 
-msgid "Loading the local model..."
-msgstr "Nalagam lokalni model..."
-
 msgid "Local model (Ollama, %s)"
 msgstr "Lokalni model (Ollama, %s)"
 
@@ -2085,28 +2082,25 @@ msgid "Socratic"
 msgstr "Sokratski"
 
 msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
-msgstr "Sokratski = vas vodi do odgovora, Razlagalni = razloži in odgovori, Neposredni = samo kratek odgovor"
+msgstr "Sokratski = te vodi do odgovora, Razlagalni = razloži in odgovori, Neposredni = samo kratek odgovor"
 
 msgid "Standard"
 msgstr "Standardni"
 
 msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
-msgstr "Ponudnik »%s« potrebuje paket Python »%s«, ki manjka. Znova namestite Thonny AIA."
+msgstr "Ponudnik »%s« potrebuje paket Python »%s«, ki manjka. Znova namesti Thonny AIA."
 
 msgid "The AI service did not answer in time. Try again."
-msgstr "Storitev AI ni odgovorila pravočasno. Poskusite znova."
+msgstr "Storitev AI ni odgovorila pravočasno. Poskusi znova."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Ključ je shranjen kot navadno besedilo v konfiguracijski datoteki programa Thonny."
 
-msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
-msgstr "Thonny s pomočnikom AI (AIA). Thonny je ustvaril Aivar Annamaa."
-
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
-msgstr "Preveč zahtev ali pa je kvota računa porabljena. Malo počakajte in poskusite znova."
+msgstr "Preveč zahtev ali pa je kvota računa porabljena. Malo počakaj in poskusi znova."
 
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
-msgstr "Neznan ponudnik »%s«. Izberite ga v Orodja > Opcije > Pomočnik AI."
+msgstr "Neznan ponudnik »%s«. Izberi ga v Orodja > Opcije > Pomočnik AI."
 
 msgid "Use AI-based AIA instead of the built-in Assistant"
 msgstr "Uporabi AIA, ki temelji na AI, namesto vgrajenega Pomočnika"
@@ -2121,13 +2115,13 @@ msgid "cancelled"
 msgstr "preklicano"
 
 msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
-msgstr "Ollama ni nameščena. Namestite jo s spodnje povezave in nato prenesite model: »ollama pull %s« (13 GB)."
+msgstr "Ollama ni nameščena. Namesti jo s spodnje povezave in nato prenesi model: »ollama pull %s« (13 GB)."
 
 msgid "Ollama is installed but not running. Start it."
-msgstr "Ollama je nameščena, vendar ne teče. Zaženite jo."
+msgstr "Ollama je nameščena, vendar ne teče. Zaženi jo."
 
 msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s' (13 GB)."
-msgstr "Ollama teče, vendar model manjka. Prenesite ga: »ollama pull %s« (13 GB)."
+msgstr "Ollama teče, vendar model manjka. Prenesi ga: »ollama pull %s« (13 GB)."
 
 msgid "Ollama is running and the model %s is ready."
 msgstr "Ollama teče in model %s je pripravljen."
@@ -2137,11 +2131,11 @@ msgstr "Deluje brez interneta, potrebuje približno 14 GB prostega pomnilnika RA
 
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
-msgstr "Ponudnik AI še ni izbran. Izberite ga v Orodja > Opcije > Pomočnik AI."
+msgstr "Ponudnik AI še ni izbran. Izberi ga v Orodja > Opcije > Pomočnik AI."
 
 #: thonny/plugins/aia
 msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
-msgstr "Odgovore zagotavlja %s. Potrebujete ključ API: ustvarite ga na spodnji povezavi ali ga dobite od učitelja."
+msgstr "Odgovore zagotavlja %s. Potrebuješ ključ API: ustvari ga na spodnji povezavi ali ga dobi od učitelja."
 
 #: thonny/plugins/aia
 msgid "No provider is chosen: AIA stays switched on, but it does not answer."
@@ -2149,11 +2143,11 @@ msgstr "Noben ponudnik ni izbran: AIA ostane vklopljen, vendar ne odgovarja."
 
 #: thonny/plugins/aia
 msgid "API key not set. Enter it in Tools > Options > AI Assistant."
-msgstr "Ključ API ni nastavljen. Vnesite ga v Orodja > Opcije > Pomočnik AI."
+msgstr "Ključ API ni nastavljen. Vnesi ga v Orodja > Opcije > Pomočnik AI."
 
 #: thonny/plugins/aia
 msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
-msgstr "Ključ API je bil zavrnjen. Preverite ga v Orodja > Opcije > Pomočnik AI."
+msgstr "Ključ API je bil zavrnjen. Preveri ga v Orodja > Opcije > Pomočnik AI."
 
 #: thonny/plugins/aia
 msgid "Thinking..."
@@ -2230,3 +2224,23 @@ msgstr "Ponudnik ni navedel modelov tega ključa; to so običajni."
 #: thonny/plugins/aia
 msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
 msgstr "Model %s ni na voljo. Izberi drug model v Orodja > Opcije > Pomočnik AI."
+
+#: thonny/plugins/aia
+msgid "AIA sends your messages, the code from the editor (and, if switched on in the options, the files it imports) and error output to the AI provider you choose. The local model sends nothing outside your computer."
+msgstr "AIA pošilja izbranemu ponudniku AI tvoja sporočila, kodo iz urejevalnika (in če to vklopiš v opcijah, tudi datoteke, ki jih koda uvaža) ter izpise napak. Lokalni model ne pošilja ničesar izven tvojega računalnika."
+
+#: thonny/plugins/aia
+msgid "Thonny AIA is an unofficial fork. It is not published or supported by the Thonny project or the University of Tartu."
+msgstr "Thonny AIA je neuradni fork. Projekt Thonny in Univerza v Tartuju ga ne izdajata in ne podpirata."
+
+#: thonny/plugins/aia
+msgid "Thonny was created by %s."
+msgstr "Thonny je ustvaril %s."
+
+#: thonny/plugins/aia
+msgid "The intelligent assistant AIA was created by %s."
+msgstr "Inteligentnega pomočnika AIA je ustvaril %s."
+
+#: thonny/plugins/aia
+msgid "(the AI assistant AIA and the changes of Thonny AIA)"
+msgstr "(pomočnik AI AIA in spremembe Thonny AIA)"

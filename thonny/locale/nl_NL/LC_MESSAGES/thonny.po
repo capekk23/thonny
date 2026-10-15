@@ -1986,7 +1986,7 @@ msgid "AI assistant:"
 msgstr "AI-assistent:"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
-msgstr "AIA blijft ingeschakeld, maar geeft pas antwoord nadat u een provider hebt gekozen in Hulpmiddelen > Opties > AI-assistent."
+msgstr "AIA blijft ingeschakeld, maar geeft pas antwoord nadat je een provider hebt gekozen in Hulpmiddelen > Opties > AI-assistent."
 
 msgid "API key:"
 msgstr "API-sleutel:"
@@ -2001,7 +2001,7 @@ msgid "Answer style:"
 msgstr "Antwoordstijl:"
 
 msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
-msgstr "De antwoorden komen van %s. U hebt een API-sleutel nodig: maak die aan via de onderstaande link of vraag er een aan uw docent. U kunt de sleutel ook later invoeren in Hulpmiddelen > Opties > AI-assistent."
+msgstr "De antwoorden komen van %s. Je hebt een API-sleutel nodig: maak die aan via de onderstaande link of vraag er een aan je docent. Je kunt de sleutel ook later invoeren in Hulpmiddelen > Opties > AI-assistent."
 
 msgid "Automatically include current file as context"
 msgstr "Huidig bestand automatisch meesturen als context"
@@ -2016,7 +2016,7 @@ msgid "Check again"
 msgstr "Opnieuw controleren"
 
 msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
-msgstr "Claude Code (de opdracht 'claude') is niet gevonden. Installeer Claude Code, meld u aan door 'claude' één keer uit te voeren en start Thonny daarna opnieuw."
+msgstr "Claude Code (de opdracht 'claude') is niet gevonden. Installeer Claude Code, meld je aan door 'claude' één keer uit te voeren en start Thonny daarna opnieuw."
 
 msgid "Context:"
 msgstr "Context:"
@@ -2039,9 +2039,6 @@ msgstr "Taal:"
 msgid "Let's go!"
 msgstr "Aan de slag!"
 
-msgid "Loading the local model..."
-msgstr "Lokaal model laden..."
-
 msgid "Local model (Ollama, %s)"
 msgstr "Lokaal model (Ollama, %s)"
 
@@ -2055,7 +2052,7 @@ msgid "Socratic"
 msgstr "Socratisch"
 
 msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
-msgstr "Socratisch = leidt u naar het antwoord, Uitleggend = legt uit en geeft antwoord, Direct = alleen een kort antwoord"
+msgstr "Socratisch = leidt je naar het antwoord, Uitleggend = legt uit en geeft antwoord, Direct = alleen een kort antwoord"
 
 msgid "Standard"
 msgstr "Standaard"
@@ -2068,9 +2065,6 @@ msgstr "De AI-dienst heeft niet op tijd geantwoord. Probeer het opnieuw."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "De sleutel wordt als platte tekst opgeslagen in het configuratiebestand van Thonny."
-
-msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
-msgstr "Thonny met de AI-assistent (AIA). Thonny is gemaakt door Aivar Annamaa."
 
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "Te veel verzoeken of het tegoed van het account is op. Wacht even en probeer het opnieuw."
@@ -2111,7 +2105,7 @@ msgstr "Er is nog geen AI-provider gekozen. Kies er een in Hulpmiddelen > Opties
 
 #: thonny/plugins/aia
 msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
-msgstr "De antwoorden komen van %s. U hebt een API-sleutel nodig: maak die aan via de onderstaande link of vraag er een aan uw docent."
+msgstr "De antwoorden komen van %s. Je hebt een API-sleutel nodig: maak die aan via de onderstaande link of vraag er een aan je docent."
 
 #: thonny/plugins/aia
 msgid "No provider is chosen: AIA stays switched on, but it does not answer."
@@ -2200,3 +2194,23 @@ msgstr "De aanbieder gaf de modellen van deze sleutel niet; dit zijn de gebruike
 #: thonny/plugins/aia
 msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
 msgstr "Het model %s is niet beschikbaar. Kies een ander model in Hulpmiddelen > Opties > AI-assistent."
+
+#: thonny/plugins/aia
+msgid "AIA sends your messages, the code from the editor (and, if switched on in the options, the files it imports) and error output to the AI provider you choose. The local model sends nothing outside your computer."
+msgstr "AIA stuurt je berichten, de code uit de editor (en, als je dat in de opties inschakelt, ook de bestanden die die code importeert) en foutmeldingen naar de AI-provider die je kiest. Het lokale model stuurt niets naar buiten je computer."
+
+#: thonny/plugins/aia
+msgid "Thonny AIA is an unofficial fork. It is not published or supported by the Thonny project or the University of Tartu."
+msgstr "Thonny AIA is een onofficiële fork. Deze wordt niet gepubliceerd of ondersteund door het Thonny-project of de Universiteit van Tartu."
+
+#: thonny/plugins/aia
+msgid "Thonny was created by %s."
+msgstr "Thonny is gemaakt door %s."
+
+#: thonny/plugins/aia
+msgid "The intelligent assistant AIA was created by %s."
+msgstr "De intelligente assistent AIA is gemaakt door %s."
+
+#: thonny/plugins/aia
+msgid "(the AI assistant AIA and the changes of Thonny AIA)"
+msgstr "(de AI-assistent AIA en de wijzigingen in Thonny AIA)"

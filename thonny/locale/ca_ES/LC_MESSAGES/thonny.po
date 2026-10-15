@@ -2002,7 +2002,7 @@ msgid "AI assistant:"
 msgstr "Assistent d'IA:"
 
 msgid "AIA stays switched on, but it will answer only after you choose a provider in Tools > Options > AI Assistant."
-msgstr "L'AIA continuarà activat, però només respondrà quan trieu un proveïdor a Eines > Opcions > Assistent d'IA."
+msgstr "L'AIA continuarà activat, però només respondrà quan triïs un proveïdor a Eines > Opcions > Assistent d'IA."
 
 msgid "API key:"
 msgstr "Clau d'API:"
@@ -2017,13 +2017,13 @@ msgid "Answer style:"
 msgstr "Estil de resposta:"
 
 msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher. You can also enter it later in Tools > Options > AI Assistant."
-msgstr "Les respostes les proporciona %s. Necessiteu una clau d'API: creeu-la a l'enllaç de sota o demaneu-la al vostre professor. També la podeu introduir més tard a Eines > Opcions > Assistent d'IA."
+msgstr "Les respostes les proporciona %s. Necessites una clau d'API: crea-la a l'enllaç de sota o demana-la al teu professor. També la pots introduir més tard a Eines > Opcions > Assistent d'IA."
 
 msgid "Automatically include current file as context"
 msgstr "Inclou automàticament el fitxer actual com a context"
 
 msgid "Cannot connect to the AI service. Check the internet connection."
-msgstr "No es pot connectar amb el servei d'IA. Comproveu la connexió a internet."
+msgstr "No es pot connectar amb el servei d'IA. Comprova la connexió a internet."
 
 msgid "Cannot reach Ollama. Is it running (ollama serve) and is the host correct?"
 msgstr "No es pot contactar amb Ollama. S'està executant (ollama serve) i l'amfitrió és correcte?"
@@ -2032,7 +2032,7 @@ msgid "Check again"
 msgstr "Torna-ho a comprovar"
 
 msgid "Claude Code (the 'claude' command) was not found. Install Claude Code, sign in by running 'claude' once, then restart Thonny."
-msgstr "No s'ha trobat Claude Code (l'ordre «claude»). Instal·leu Claude Code, inicieu la sessió executant «claude» una vegada i, després, reinicieu Thonny."
+msgstr "No s'ha trobat Claude Code (l'ordre «claude»). Instal·la Claude Code, inicia la sessió executant «claude» una vegada i, després, reinicia Thonny."
 
 msgid "Context:"
 msgstr "Context:"
@@ -2055,9 +2055,6 @@ msgstr "Llengua:"
 msgid "Let's go!"
 msgstr "Som-hi!"
 
-msgid "Loading the local model..."
-msgstr "S'està carregant el model local..."
-
 msgid "Local model (Ollama, %s)"
 msgstr "Model local (Ollama, %s)"
 
@@ -2071,34 +2068,31 @@ msgid "Socratic"
 msgstr "Socràtic"
 
 msgid "Socratic = guides you to the answer, Explanatory = explains and answers, Direct = short answer only"
-msgstr "Socràtic = us guia cap a la resposta, Explicatiu = explica i respon, Directe = només una resposta breu"
+msgstr "Socràtic = et guia cap a la resposta, Explicatiu = explica i respon, Directe = només una resposta breu"
 
 msgid "Standard"
 msgstr "Estàndard"
 
 msgid "The '%s' provider needs the Python package '%s', which is missing. Reinstall Thonny AIA."
-msgstr "El proveïdor «%s» necessita el paquet de Python «%s», que no està instal·lat. Reinstal·leu Thonny AIA."
+msgstr "El proveïdor «%s» necessita el paquet de Python «%s», que no està instal·lat. Reinstal·la Thonny AIA."
 
 msgid "The AI service did not answer in time. Try again."
-msgstr "El servei d'IA no ha respost a temps. Torneu-ho a provar."
+msgstr "El servei d'IA no ha respost a temps. Torna-ho a provar."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "La clau es desa com a text sense xifrar al fitxer de configuració de Thonny."
 
-msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
-msgstr "Thonny amb l'Assistent d'IA (AIA). Thonny és obra d'Aivar Annamaa."
-
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
-msgstr "Massa sol·licituds o s'ha esgotat la quota del compte. Espereu un moment i torneu-ho a provar."
+msgstr "Massa sol·licituds o s'ha esgotat la quota del compte. Espera un moment i torna-ho a provar."
 
 msgid "Unknown provider '%s'. Choose one in Tools > Options > AI Assistant."
-msgstr "Proveïdor desconegut «%s». Trieu-ne un a Eines > Opcions > Assistent d'IA."
+msgstr "Proveïdor desconegut «%s». Tria'n un a Eines > Opcions > Assistent d'IA."
 
 msgid "Use AI-based AIA instead of the built-in Assistant"
 msgstr "Utilitza l'AIA basat en IA en lloc de l'Assistent integrat"
 
 msgid "Welcome to %s!"
-msgstr "Us donem la benvinguda a %s!"
+msgstr "Et donem la benvinguda a %s!"
 
 msgid "You"
 msgstr "Tu"
@@ -2107,13 +2101,13 @@ msgid "cancelled"
 msgstr "cancel·lat"
 
 msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s' (13 GB)."
-msgstr "Ollama no està instal·lat. Instal·leu-lo des de l'enllaç de sota i baixeu el model: «ollama pull %s» (13 GB)."
+msgstr "Ollama no està instal·lat. Instal·la'l des de l'enllaç de sota i baixa el model: «ollama pull %s» (13 GB)."
 
 msgid "Ollama is installed but not running. Start it."
-msgstr "Ollama està instal·lat, però no s'està executant. Inicieu-lo."
+msgstr "Ollama està instal·lat, però no s'està executant. Inicia'l."
 
 msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s' (13 GB)."
-msgstr "Ollama s'està executant, però falta el model. Baixeu-lo: «ollama pull %s» (13 GB)."
+msgstr "Ollama s'està executant, però falta el model. Baixa'l: «ollama pull %s» (13 GB)."
 
 msgid "Ollama is running and the model %s is ready."
 msgstr "Ollama s'està executant i el model %s està a punt."
@@ -2123,11 +2117,11 @@ msgstr "Funciona sense internet, necessita uns 14 GB de RAM lliure i, sense una 
 
 #: thonny/plugins/aia/_common.py
 msgid "No AI provider is chosen yet. Choose one in Tools > Options > AI Assistant."
-msgstr "Encara no s'ha triat cap proveïdor d'IA. Trieu-ne un a Eines > Opcions > Assistent d'IA."
+msgstr "Encara no s'ha triat cap proveïdor d'IA. Tria'n un a Eines > Opcions > Assistent d'IA."
 
 #: thonny/plugins/aia
 msgid "Answers come from %s. You need an API key: create it at the link below, or get one from your teacher."
-msgstr "Les respostes les proporciona %s. Necessiteu una clau d'API: creeu-la a l'enllaç de sota o demaneu-la al vostre professor."
+msgstr "Les respostes les proporciona %s. Necessites una clau d'API: crea-la a l'enllaç de sota o demana-la al teu professor."
 
 #: thonny/plugins/aia
 msgid "No provider is chosen: AIA stays switched on, but it does not answer."
@@ -2135,11 +2129,11 @@ msgstr "No s'ha triat cap proveïdor: l'AIA continua activat, però no respon."
 
 #: thonny/plugins/aia
 msgid "API key not set. Enter it in Tools > Options > AI Assistant."
-msgstr "No s'ha definit la clau d'API. Introduïu-la a Eines > Opcions > Assistent d'IA."
+msgstr "No s'ha definit la clau d'API. Introdueix-la a Eines > Opcions > Assistent d'IA."
 
 #: thonny/plugins/aia
 msgid "The API key was rejected. Check it in Tools > Options > AI Assistant."
-msgstr "S'ha rebutjat la clau d'API. Comproveu-la a Eines > Opcions > Assistent d'IA."
+msgstr "S'ha rebutjat la clau d'API. Comprova-la a Eines > Opcions > Assistent d'IA."
 
 #: thonny/plugins/aia
 msgid "Thinking..."
@@ -2216,3 +2210,23 @@ msgstr "El proveïdor no ha llistat els models d'aquesta clau; aquests són els 
 #: thonny/plugins/aia
 msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
 msgstr "El model %s no està disponible. Tria un altre model a Eines > Opcions > Assistent d'IA."
+
+#: thonny/plugins/aia
+msgid "AIA sends your messages, the code from the editor (and, if switched on in the options, the files it imports) and error output to the AI provider you choose. The local model sends nothing outside your computer."
+msgstr "L'AIA envia al proveïdor d'IA que triïs els teus missatges, el codi de l'editor (i, si ho actives a les opcions, els fitxers que importa) i els missatges d'error. El model local no envia res fora del teu ordinador."
+
+#: thonny/plugins/aia
+msgid "Thonny AIA is an unofficial fork. It is not published or supported by the Thonny project or the University of Tartu."
+msgstr "Thonny AIA és un fork no oficial. Ni el projecte Thonny ni la Universitat de Tartu el publiquen ni li donen suport."
+
+#: thonny/plugins/aia
+msgid "Thonny was created by %s."
+msgstr "Thonny ha estat creat per %s."
+
+#: thonny/plugins/aia
+msgid "The intelligent assistant AIA was created by %s."
+msgstr "L'assistent intel·ligent AIA ha estat creat per %s."
+
+#: thonny/plugins/aia
+msgid "(the AI assistant AIA and the changes of Thonny AIA)"
+msgstr "(l'assistent d'IA AIA i els canvis de Thonny AIA)"

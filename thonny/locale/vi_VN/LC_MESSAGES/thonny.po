@@ -2054,9 +2054,6 @@ msgstr "Ngôn ngữ:"
 msgid "Let's go!"
 msgstr "Bắt đầu thôi!"
 
-msgid "Loading the local model..."
-msgstr "Đang tải mô hình cục bộ..."
-
 msgid "Local model (Ollama, %s)"
 msgstr "Mô hình cục bộ (Ollama, %s)"
 
@@ -2083,9 +2080,6 @@ msgstr "Dịch vụ AI không trả lời kịp thời. Hãy thử lại."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Khóa được lưu dưới dạng văn bản thuần trong tệp cấu hình của Thonny."
-
-msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
-msgstr "Thonny với Trợ lý AI (AIA). Thonny được tạo bởi Aivar Annamaa."
 
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "Quá nhiều yêu cầu hoặc tài khoản đã hết hạn mức. Hãy chờ một lát rồi thử lại."
@@ -2215,3 +2209,23 @@ msgstr "Nhà cung cấp không liệt kê mô hình của khóa này; đây là 
 #: thonny/plugins/aia
 msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
 msgstr "Mô hình %s không khả dụng. Hãy chọn mô hình khác trong Công cụ > Thiết lập > Trợ lý AI."
+
+#: thonny/plugins/aia
+msgid "AIA sends your messages, the code from the editor (and, if switched on in the options, the files it imports) and error output to the AI provider you choose. The local model sends nothing outside your computer."
+msgstr "AIA gửi tin nhắn của bạn, mã trong trình soạn thảo (và, nếu được bật trong phần thiết lập, cả các tệp mà mã đó import) cùng đầu ra lỗi đến nhà cung cấp AI mà bạn chọn. Mô hình cục bộ không gửi gì ra ngoài máy tính của bạn."
+
+#: thonny/plugins/aia
+msgid "Thonny AIA is an unofficial fork. It is not published or supported by the Thonny project or the University of Tartu."
+msgstr "Thonny AIA là một bản fork không chính thức. Bản này không được dự án Thonny hay Đại học Tartu phát hành hoặc hỗ trợ."
+
+#: thonny/plugins/aia
+msgid "Thonny was created by %s."
+msgstr "Thonny được tạo bởi %s."
+
+#: thonny/plugins/aia
+msgid "The intelligent assistant AIA was created by %s."
+msgstr "Trợ lý thông minh AIA được tạo bởi %s."
+
+#: thonny/plugins/aia
+msgid "(the AI assistant AIA and the changes of Thonny AIA)"
+msgstr "(trợ lý AI AIA và các thay đổi của Thonny AIA)"

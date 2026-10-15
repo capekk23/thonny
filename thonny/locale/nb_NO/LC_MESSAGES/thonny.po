@@ -2048,9 +2048,6 @@ msgstr "Språk:"
 msgid "Let's go!"
 msgstr "Sett i gang!"
 
-msgid "Loading the local model..."
-msgstr "Laster inn den lokale modellen..."
-
 msgid "Local model (Ollama, %s)"
 msgstr "Lokal modell (Ollama, %s)"
 
@@ -2077,9 +2074,6 @@ msgstr "KI-tjenesten svarte ikke i tide. Prøv igjen."
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "Nøkkelen lagres som ren tekst i konfigurasjonsfilen til Thonny."
-
-msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
-msgstr "Thonny med KI-assistenten (AIA). Thonny er laget av Aivar Annamaa."
 
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "For mange forespørsler, eller kvoten på kontoen er brukt opp. Vent litt og prøv igjen."
@@ -2209,3 +2203,23 @@ msgstr "Leverandøren listet ikke opp modellene til denne nøkkelen; dette er de
 #: thonny/plugins/aia
 msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
 msgstr "Modellen %s er ikke tilgjengelig. Velg en annen modell under Verktøy > Alternativer > KI-assistent."
+
+#: thonny/plugins/aia
+msgid "AIA sends your messages, the code from the editor (and, if switched on in the options, the files it imports) and error output to the AI provider you choose. The local model sends nothing outside your computer."
+msgstr "AIA sender meldingene dine, koden fra editoren (og, hvis du slår det på i alternativene, også filene den importerer) og feilutdata til KI-leverandøren du velger. Den lokale modellen sender ingenting ut av datamaskinen din."
+
+#: thonny/plugins/aia
+msgid "Thonny AIA is an unofficial fork. It is not published or supported by the Thonny project or the University of Tartu."
+msgstr "Thonny AIA er en uoffisiell fork. Den er verken utgitt eller støttet av Thonny-prosjektet eller Universitetet i Tartu."
+
+#: thonny/plugins/aia
+msgid "Thonny was created by %s."
+msgstr "Thonny ble laget av %s."
+
+#: thonny/plugins/aia
+msgid "The intelligent assistant AIA was created by %s."
+msgstr "Den intelligente assistenten AIA ble laget av %s."
+
+#: thonny/plugins/aia
+msgid "(the AI assistant AIA and the changes of Thonny AIA)"
+msgstr "(KI-assistenten AIA og endringene i Thonny AIA)"

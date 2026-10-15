@@ -2035,9 +2035,6 @@ msgstr "언어:"
 msgid "Let's go!"
 msgstr "시작합시다!"
 
-msgid "Loading the local model..."
-msgstr "로컬 모델을 불러오는 중..."
-
 msgid "Local model (Ollama, %s)"
 msgstr "로컬 모델 (Ollama, %s)"
 
@@ -2064,9 +2061,6 @@ msgstr "AI 서비스가 제시간에 응답하지 않았습니다. 다시 시도
 
 msgid "The key is stored in plain text in Thonny's configuration file."
 msgstr "키는 Thonny 설정 파일에 일반 텍스트로 저장됩니다."
-
-msgid "Thonny with the AI Assistant (AIA). Thonny is made by Aivar Annamaa."
-msgstr "AI 도우미(AIA)가 포함된 Thonny. Thonny는 Aivar Annamaa가 만들었습니다."
 
 msgid "Too many requests or the account's quota is used up. Wait a moment and try again."
 msgstr "요청이 너무 많거나 계정 사용 한도를 모두 썼습니다. 잠시 기다린 후 다시 시도하세요."
@@ -2179,7 +2173,7 @@ msgstr "%s (기본값)"
 
 #: thonny/plugins/aia
 msgid "Enter the API key to see the models it can use."
-msgstr "API 키를 입력하면 쓸 수 있는 모델이 보여."
+msgstr "API 키를 입력하면 사용할 수 있는 모델이 표시됩니다."
 
 #: thonny/plugins/aia
 msgid "Asking the provider for the models of this key..."
@@ -2191,8 +2185,28 @@ msgstr "이 키로 쓸 수 있는 모델."
 
 #: thonny/plugins/aia
 msgid "The provider did not list the models of this key; these are the usual ones."
-msgstr "제공자가 이 키의 모델을 알려 주지 않았어. 보통 쓰는 모델이야."
+msgstr "제공자가 이 키의 모델을 알려 주지 않았습니다. 일반적으로 사용하는 모델입니다."
 
 #: thonny/plugins/aia
 msgid "The model %s is not available. Choose another model in Tools > Options > AI Assistant."
-msgstr "모델 %s을(를) 사용할 수 없어. 도구 > 옵션 > AI 도우미에서 다른 모델을 골라."
+msgstr "모델 %s을(를) 사용할 수 없습니다. 도구 > 옵션 > AI 도우미에서 다른 모델을 선택하세요."
+
+#: thonny/plugins/aia
+msgid "AIA sends your messages, the code from the editor (and, if switched on in the options, the files it imports) and error output to the AI provider you choose. The local model sends nothing outside your computer."
+msgstr "AIA는 사용자의 메시지, 편집기의 코드(옵션에서 켠 경우 그 코드가 가져오는 파일 포함), 오류 출력을 선택한 AI 제공자에게 보냅니다. 로컬 모델은 컴퓨터 밖으로 아무것도 보내지 않습니다."
+
+#: thonny/plugins/aia
+msgid "Thonny AIA is an unofficial fork. It is not published or supported by the Thonny project or the University of Tartu."
+msgstr "Thonny AIA는 비공식 포크입니다. Thonny 프로젝트나 타르투 대학교에서 배포하거나 지원하지 않습니다."
+
+#: thonny/plugins/aia
+msgid "Thonny was created by %s."
+msgstr "Thonny는 %s이(가) 만들었습니다."
+
+#: thonny/plugins/aia
+msgid "The intelligent assistant AIA was created by %s."
+msgstr "지능형 도우미 AIA는 %s이(가) 만들었습니다."
+
+#: thonny/plugins/aia
+msgid "(the AI assistant AIA and the changes of Thonny AIA)"
+msgstr "(AI 도우미 AIA 및 Thonny AIA의 변경 사항)"
