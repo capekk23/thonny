@@ -19,11 +19,18 @@ AppName={#AppTitle}
 AppVersion={#AppVer}
 AppVerName={#AppTitle} {#AppVer}
 ;AppComments string is displayed on the "Support" dialog of the Add/Remove Programs Control Panel applet
-AppComments=Thonny (Python IDE for beginners by Aivar Annamaa) with the AI Assistant AIA
-AppPublisher=Jakub Senkyr
-AppPublisherURL=https://github.com/senkyr/thonny
-AppSupportURL=https://github.com/senkyr/thonny
-AppUpdatesURL=https://github.com/senkyr/thonny/releases
+AppComments=Unofficial fork of Thonny (Python IDE for beginners by Aivar Annamaa) with the AI assistant AIA by Jakub Šenkýř
+AppPublisher=Jakub Šenkýř
+AppPublisherURL=https://github.com/senkyr/thonny-aia
+AppSupportURL=https://github.com/senkyr/thonny-aia/issues
+AppUpdatesURL=https://github.com/senkyr/thonny-aia/releases
+; Thonny first, AIA second (cortex-zamestnani#78); shown in the installer's file properties
+AppCopyright=Copyright (c) 2026 Aivar Annamaa, Copyright (c) 2026 Jakub Šenkýř
+VersionInfoCopyright=Copyright (c) 2026 Aivar Annamaa, Copyright (c) 2026 Jakub Šenkýř
+VersionInfoCompany=Jakub Šenkýř
+VersionInfoDescription={#AppTitle} {#AppVer} Setup
+VersionInfoProductName={#AppTitle}
+VersionInfoProductTextVersion={#AppVer}
 
 ; Actual privileges depend on how user started the installer
 PrivilegesRequired=lowest
