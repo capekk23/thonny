@@ -6,12 +6,15 @@ Thonny AIA
 ==========
 Thonny AIA is an unofficial fork of Thonny 5.0.0 with the AI assistant AIA (https://github.com/senkyr/thonny-aia). It is not published or supported by the Thonny project. Its versions are below, Thonny's own history follows after them.
 
-5.5.0b6 (in progress)
----------------------
+5.5.0b6 (2026-10-15)
+--------------------
+* Default layout in quadrants for a new installation: the editor and AIA's answers above, the Shell and AIA's input below, the halves 1:1 and the bottom row a quarter of the height (at least the height of AIA's input). The proportions hold when the window changes size until a border is moved. AIA's panel has a movable border between the answers and the input. Layouts saved by an earlier version stay.
+* The first window grows with the display scaling (at 150 % one and a half times 800x650, at most 85 % of the screen height), so it holds as much as at 100 %.
 * The About window names the authors in order: Thonny was created by Aivar Annamaa, the intelligent assistant AIA by Jakub Šenkýř; the links and the copyright follow the same order.
 * The About window and the README say that Thonny AIA is an unofficial fork, not published or supported by the Thonny project or the University of Tartu.
 * The welcome dialog and the About window say what AIA sends to the chosen AI provider.
-* Help > Report problems and Help > Version history lead to the fork, the repository is now https://github.com/senkyr/thonny-aia.
+* AIA no longer uses forms that show the student's gender (in Czech no "napsal jsi", "jak bys to opravil"). The texts of AIA and the welcome dialog address the user informally and gender-neutrally in all languages that tell the forms apart; in Czech four of Thonny's own texts lost their gendered forms.
+* Help > Report problems and Help > Version history lead to the fork, whose repository is now https://github.com/senkyr/thonny-aia.
 * The feedback link of the rule-based Assistant (shown when AIA is switched off) is gone: it sent data to the Thonny project's server.
 * The installer shows the copyright and the publisher Jakub Šenkýř in its file properties and lists the licenses of the libraries bundled for AIA.
 
