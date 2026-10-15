@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Jakub Šenkýř
+# SPDX-License-Identifier: MIT
 """Demo provider: the Claude Code CLI (``claude -p``) instead of an API key.
 
 Runs under the account the CLI is signed in to on this computer, so it is meant

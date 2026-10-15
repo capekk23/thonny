@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Jakub Šenkýř
+# SPDX-License-Identifier: MIT
 """Pedagogical system prompts for AIA - the core differentiator.
 
 Three answer styles (Jakub, 2026-10-10; the names before were mentor / balanced / direct):

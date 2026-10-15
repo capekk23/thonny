@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Jakub Šenkýř
+# SPDX-License-Identifier: MIT
 """Keep the local model (Ollama) loaded while Thonny runs.
 
 Loading gpt-oss:20b takes 35-55 s on CPU and Ollama unloads an idle model after

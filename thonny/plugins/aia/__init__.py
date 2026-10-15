@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Jakub Šenkýř
+# SPDX-License-Identifier: MIT
 """AIA - AI Mentor Assistant, built into Thonny AIA.
 
 A pedagogical programming buddy that helps beginners learn Python through

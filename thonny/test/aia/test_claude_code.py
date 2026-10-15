@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Jakub Šenkýř
+# SPDX-License-Identifier: MIT
 """Claude Code CLI provider (demo) with a fake ``subprocess.Popen`` - no real CLI runs."""
 
 import io

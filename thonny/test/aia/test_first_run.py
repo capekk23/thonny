@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Jakub Šenkýř
+# SPDX-License-Identifier: MIT
 """The AI choice of the welcome dialog, also used by Tools > Options > AI Assistant."""
 
 

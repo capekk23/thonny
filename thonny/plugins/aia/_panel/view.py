@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Jakub Šenkýř
+# SPDX-License-Identifier: MIT
 """AIAView - custom chat panel for Thonny without the Chat API (4.x, 5.0.x).
 
 Replaces the built-in rule-based AssistantView when AIA is enabled.

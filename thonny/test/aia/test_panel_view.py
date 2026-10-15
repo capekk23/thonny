@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Jakub Šenkýř
+# SPDX-License-Identifier: MIT
 """Request handling of the _panel AIAView without a Tk window.
 
 The view is built with ``__new__`` and its few Tk touch points (text insert,

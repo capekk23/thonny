@@ -1,3 +1,6 @@
+# Copyright (c) 2026 Jakub Šenkýř
+# SPDX-License-Identifier: MIT
+
 import logging
 from typing import Dict, Iterator, List
 

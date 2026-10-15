@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Jakub Šenkýř
+# SPDX-License-Identifier: MIT
 """Shared logic used by both integration layers (_panel and _chat).
 
 Threading rule: everything that touches Tk or the workbench (options, editor

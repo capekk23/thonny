@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Jakub Šenkýř
+# SPDX-License-Identifier: MIT
 """Test fixtures: the real ``thonny`` package with a fake workbench, so the AIA logic
 can be tested without a Tk window or any LLM SDK installed. Nothing here talks to a network."""
 

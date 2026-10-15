@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Jakub Šenkýř
+# SPDX-License-Identifier: MIT
 """Toggle between the built-in AssistantView and AIAView (Thonny 4.x / 5.0.x).
 
 AssistantView registers ``self.handle_toplevel_response`` with

@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Jakub Šenkýř
+# SPDX-License-Identifier: MIT
 """Configuration page for AIA (Tools > Options > AI Assistant).
 
 The AI choice is the welcome dialog's choice (Jakub 2026-10-10: the options had other items

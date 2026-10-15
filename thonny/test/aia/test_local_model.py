@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Jakub Šenkýř
+# SPDX-License-Identifier: MIT
 """LocalModelKeeper: the Ollama model is loaded at startup and kept while Thonny runs."""
 
 import pytest

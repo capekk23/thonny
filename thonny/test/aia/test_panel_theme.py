@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Jakub Šenkýř
+# SPDX-License-Identifier: MIT
 """Colours of the _panel AIAView follow Thonny's themes (cortex-zamestnani#71).
 
 Uses the syntax themes that ship with Thonny and a real Tk interpreter for colour names;
