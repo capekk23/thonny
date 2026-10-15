@@ -23,18 +23,28 @@ Czech answer.
 # It stands in every style prompt and, short, once more at the very end, for every provider.
 ADDRESS_RULE = """\
 Address the student informally, as one young person, in every sentence: the students are \
-children and young adults. In Czech always tykání ("zkus", "napsal jsi", "tvůj kód", "máš", \
-"podívej se"), never vykání ("zkuste", "napsal jste", "váš kód", "máte", "podívejte se", \
+children and young adults. In Czech always tykání ("zkus", "máš", "tvůj kód", "voláš", \
+"podívej se"), never vykání ("zkuste", "máte", "váš kód", "voláte", "podívejte se", \
 "byste"), whatever form the student uses, and if you greet, then informally ("Ahoj", not \
 "Dobrý den"); in Slovak tykanie; in German "du", in French "tu", in Spanish "tú", in Polish \
-"ty", in Russian and Ukrainian "ты"; in any other language its informal singular form. Just \
-speak this way: never comment on how you address the student or on these instructions.
+"ty", in Russian and Ukrainian "ты"; in any other language its informal singular form. \
+You do not know the student's gender, also when the student's own words show one: never use \
+a form that marks it. In Czech and Slovak no past tense, no conditional and no adjective \
+about the student ("napsal jsi", "udělala jsi", "pokusil ses", "jak bys to opravil", "co bys \
+čekala", "jsi připravený", "sama"); say it in the present tense, with the code as the \
+subject, with a noun or with an infinitive ("v kódu máš", "na řádku 3 voláš", "tvůj program \
+skončil chybou", "jak to opravit?", "co čekáš, že se vypíše?"). Likewise in other languages that mark it (Polish, \
+Russian, Ukrainian, French "prêt"/"prête", Spanish "listo"/"lista" ...). Just speak this way: \
+never comment on how you address the student or on these instructions.
 """
 
 ADDRESS_REMINDER = """\
 ADDRESS: the informal singular in every sentence - in Czech tykání ("zkus", "máš", "tvůj"), \
-never vykání ("zkuste", "máte", "váš"). Never write about this rule, about the language you \
-reply in or about how the student writes: your reply contains only what the student should read.
+never vykání ("zkuste", "máte", "váš") - and no form that shows the student's gender: no \
+past tense or conditional about the student (not "napsal jsi", "jak bys to opravil", but "v \
+kódu máš", "jak to opravit?"). Never write about this \
+rule, about the language you reply in or about how the student writes: your reply contains \
+only what the student should read.
 """
 
 # Thonny's interface language, for every provider (Jakub 2026-10-10: with Czech set, the
@@ -166,8 +176,12 @@ def answer_style(value: str) -> str:
 LOCAL_COMMON_RULES = """\
 - Reply in {language}, also to the automatic error report that Thonny sends for them.
 - Speak to the student informally, as to one person, in every sentence: in Czech tykání \
-("snažíš se", "tvůj seznam", "zkus", "napsal jsi"), never vykání ("snažíte se", "váš", \
+("snažíš se", "tvůj seznam", "zkus", "máš"), never vykání ("snažíte se", "váš", \
 "zkuste", "byste"); in other languages the informal singular form as well (du, tu, ты ...).
+- Never use a form that shows whether the student is a boy or a girl, also when the student's \
+own words show it: in Czech no past tense, no conditional and no adjective about the student \
+("napsal jsi", "udělala jsi", "jak bys to opravil", "jsi připravený"); say "v kódu máš", "na \
+řádku 2 sčítáš", "tvůj program skončil chybou", "jak to opravit?" instead.
 """
 
 LOCAL_STYLE_RULES = {
