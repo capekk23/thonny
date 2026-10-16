@@ -2222,3 +2222,27 @@ msgstr "Den intelligente assistenten AIA vart laga av %s."
 #: thonny/plugins/aia
 msgid "(the AI assistant AIA and the changes of Thonny AIA)"
 msgstr "(KI-assistenten AIA og endringane i Thonny AIA)"
+
+#: thonny/first_run.py
+msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s'."
+msgstr "Ollama er ikkje installert. Installer den frå lenkja nedanfor, og last så ned modellen: «ollama pull %s»."
+
+#: thonny/first_run.py
+msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s'."
+msgstr "Ollama køyrer, men modellen manglar. Last den ned: «ollama pull %s»."
+
+#: thonny/first_run.py
+msgid "It runs offline; how much memory it needs and how fast it answers depends on the model and the computer."
+msgstr "Den køyrer utan internett; kor mykje minne den treng og kor raskt den svarar, kjem an på modellen og datamaskina."
+
+#: thonny/plugins/aia
+msgid "Asking Ollama for the models on this computer..."
+msgstr "Spør Ollama om modellane på denne datamaskina..."
+
+#: thonny/plugins/aia
+msgid "The models Ollama has on this computer."
+msgstr "Modellane Ollama har på denne datamaskina."
+
+#: thonny/plugins/aia
+msgid "Ollama did not answer, so the models on this computer are unknown."
+msgstr "Ollama svarte ikkje, så modellane på denne datamaskina er ukjende."

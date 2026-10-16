@@ -2221,3 +2221,27 @@ msgstr "Τον ευφυή βοηθό AIA δημιούργησε ο %s."
 #: thonny/plugins/aia
 msgid "(the AI assistant AIA and the changes of Thonny AIA)"
 msgstr "(ο βοηθός ΤΝ AIA και οι αλλαγές του Thonny AIA)"
+
+#: thonny/first_run.py
+msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s'."
+msgstr "Το Ollama δεν είναι εγκατεστημένο. Εγκατάστησέ το από τον παρακάτω σύνδεσμο και κατέβασε το μοντέλο: «ollama pull %s»."
+
+#: thonny/first_run.py
+msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s'."
+msgstr "Το Ollama εκτελείται, αλλά λείπει το μοντέλο. Κατέβασέ το: «ollama pull %s»."
+
+#: thonny/first_run.py
+msgid "It runs offline; how much memory it needs and how fast it answers depends on the model and the computer."
+msgstr "Λειτουργεί χωρίς διαδίκτυο· πόση μνήμη χρειάζεται και πόσο γρήγορα απαντά εξαρτάται από το μοντέλο και τον υπολογιστή."
+
+#: thonny/plugins/aia
+msgid "Asking Ollama for the models on this computer..."
+msgstr "Ρωτάω το Ollama για τα μοντέλα σε αυτόν τον υπολογιστή..."
+
+#: thonny/plugins/aia
+msgid "The models Ollama has on this computer."
+msgstr "Τα μοντέλα που έχει το Ollama σε αυτόν τον υπολογιστή."
+
+#: thonny/plugins/aia
+msgid "Ollama did not answer, so the models on this computer are unknown."
+msgstr "Το Ollama δεν απάντησε, οπότε τα μοντέλα σε αυτόν τον υπολογιστή δεν είναι γνωστά."

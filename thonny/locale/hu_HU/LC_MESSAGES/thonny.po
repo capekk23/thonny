@@ -2208,3 +2208,27 @@ msgstr "Az AIA intelligens asszisztenst %s hozta létre."
 #: thonny/plugins/aia
 msgid "(the AI assistant AIA and the changes of Thonny AIA)"
 msgstr "(az AIA MI-asszisztens és a Thonny AIA módosításai)"
+
+#: thonny/first_run.py
+msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s'."
+msgstr "Az Ollama nincs telepítve. Telepítsd az alábbi linkről, majd töltsd le a modellt: „ollama pull %s”."
+
+#: thonny/first_run.py
+msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s'."
+msgstr "Az Ollama fut, de hiányzik a modell. Töltsd le: „ollama pull %s”."
+
+#: thonny/first_run.py
+msgid "It runs offline; how much memory it needs and how fast it answers depends on the model and the computer."
+msgstr "Internet nélkül fut; hogy mennyi memória kell hozzá és milyen gyorsan válaszol, az a modelltől és a számítógéptől függ."
+
+#: thonny/plugins/aia
+msgid "Asking Ollama for the models on this computer..."
+msgstr "Megkérdezem az Ollamát a számítógép modelljeiről..."
+
+#: thonny/plugins/aia
+msgid "The models Ollama has on this computer."
+msgstr "Az Ollama modelljei ezen a számítógépen."
+
+#: thonny/plugins/aia
+msgid "Ollama did not answer, so the models on this computer are unknown."
+msgstr "Az Ollama nem válaszolt, ezért a számítógép modelljei nem ismertek."

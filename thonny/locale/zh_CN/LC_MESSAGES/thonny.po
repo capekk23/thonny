@@ -2218,3 +2218,27 @@ msgstr "智能助手 AIA 由 %s 创建。"
 #: thonny/plugins/aia
 msgid "(the AI assistant AIA and the changes of Thonny AIA)"
 msgstr "（AI 助手 AIA 及 Thonny AIA 的修改）"
+
+#: thonny/first_run.py
+msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s'."
+msgstr "Ollama 未安装。请通过下方链接安装，然后下载模型：“ollama pull %s”。"
+
+#: thonny/first_run.py
+msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s'."
+msgstr "Ollama 正在运行，但缺少模型。请下载：“ollama pull %s”。"
+
+#: thonny/first_run.py
+msgid "It runs offline; how much memory it needs and how fast it answers depends on the model and the computer."
+msgstr "离线运行；需要多少内存、回答多快取决于模型和电脑。"
+
+#: thonny/plugins/aia
+msgid "Asking Ollama for the models on this computer..."
+msgstr "正在向 Ollama 查询此电脑上的模型..."
+
+#: thonny/plugins/aia
+msgid "The models Ollama has on this computer."
+msgstr "Ollama 在此电脑上的模型。"
+
+#: thonny/plugins/aia
+msgid "Ollama did not answer, so the models on this computer are unknown."
+msgstr "Ollama 没有响应，因此不知道此电脑上有哪些模型。"

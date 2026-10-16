@@ -2230,3 +2230,27 @@ msgstr "インテリジェントアシスタントAIAは %s が作成しまし�
 #: thonny/plugins/aia
 msgid "(the AI assistant AIA and the changes of Thonny AIA)"
 msgstr "（AIアシスタントAIAおよびThonny AIAの変更点）"
+
+#: thonny/first_run.py
+msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s'."
+msgstr "Ollamaがインストールされていません。下のリンクからインストールし、モデルをダウンロードしてください：「ollama pull %s」。"
+
+#: thonny/first_run.py
+msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s'."
+msgstr "Ollamaは起動していますが、モデルがありません。ダウンロードしてください：「ollama pull %s」。"
+
+#: thonny/first_run.py
+msgid "It runs offline; how much memory it needs and how fast it answers depends on the model and the computer."
+msgstr "オフラインで動作します。必要なメモリ量と応答速度は、モデルとコンピューターによって異なります。"
+
+#: thonny/plugins/aia
+msgid "Asking Ollama for the models on this computer..."
+msgstr "このコンピューターのモデルをOllamaに問い合わせています..."
+
+#: thonny/plugins/aia
+msgid "The models Ollama has on this computer."
+msgstr "このコンピューターでOllamaが持っているモデルです。"
+
+#: thonny/plugins/aia
+msgid "Ollama did not answer, so the models on this computer are unknown."
+msgstr "Ollamaが応答しなかったため、このコンピューターのモデルは不明です。"

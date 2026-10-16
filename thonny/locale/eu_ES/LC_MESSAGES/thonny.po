@@ -2230,3 +2230,27 @@ msgstr "AIA laguntzaile adimendunaren sortzailea: %s."
 #: thonny/plugins/aia
 msgid "(the AI assistant AIA and the changes of Thonny AIA)"
 msgstr "(AIA AA laguntzailea eta Thonny AIAren aldaketak)"
+
+#: thonny/first_run.py
+msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s'."
+msgstr "Ollama ez dago instalatuta. Instalatu beheko estekatik eta deskargatu eredua: «ollama pull %s»."
+
+#: thonny/first_run.py
+msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s'."
+msgstr "Ollama martxan dago, baina eredua falta da. Deskargatu: «ollama pull %s»."
+
+#: thonny/first_run.py
+msgid "It runs offline; how much memory it needs and how fast it answers depends on the model and the computer."
+msgstr "Internetik gabe dabil; behar duen memoria eta erantzuteko abiadura ereduaren eta ordenagailuaren araberakoak dira."
+
+#: thonny/plugins/aia
+msgid "Asking Ollama for the models on this computer..."
+msgstr "Ordenagailu honetako ereduak Ollamari galdetzen..."
+
+#: thonny/plugins/aia
+msgid "The models Ollama has on this computer."
+msgstr "Ollamak ordenagailu honetan dituen ereduak."
+
+#: thonny/plugins/aia
+msgid "Ollama did not answer, so the models on this computer are unknown."
+msgstr "Ollamak ez du erantzun; beraz, ordenagailu honetako ereduak ez dira ezagutzen."

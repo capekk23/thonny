@@ -2229,3 +2229,27 @@ msgstr "Trợ lý thông minh AIA được tạo bởi %s."
 #: thonny/plugins/aia
 msgid "(the AI assistant AIA and the changes of Thonny AIA)"
 msgstr "(trợ lý AI AIA và các thay đổi của Thonny AIA)"
+
+#: thonny/first_run.py
+msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s'."
+msgstr "Ollama chưa được cài đặt. Hãy cài đặt từ liên kết bên dưới, rồi tải mô hình xuống: 'ollama pull %s'."
+
+#: thonny/first_run.py
+msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s'."
+msgstr "Ollama đang chạy nhưng thiếu mô hình. Hãy tải xuống: 'ollama pull %s'."
+
+#: thonny/first_run.py
+msgid "It runs offline; how much memory it needs and how fast it answers depends on the model and the computer."
+msgstr "Chạy ngoại tuyến; lượng bộ nhớ cần dùng và tốc độ trả lời tùy thuộc vào mô hình và máy tính."
+
+#: thonny/plugins/aia
+msgid "Asking Ollama for the models on this computer..."
+msgstr "Đang hỏi Ollama các mô hình trên máy tính này..."
+
+#: thonny/plugins/aia
+msgid "The models Ollama has on this computer."
+msgstr "Các mô hình mà Ollama có trên máy tính này."
+
+#: thonny/plugins/aia
+msgid "Ollama did not answer, so the models on this computer are unknown."
+msgstr "Ollama không phản hồi, nên chưa biết trên máy tính này có những mô hình nào."

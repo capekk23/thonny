@@ -2231,3 +2231,27 @@ msgstr "L'assistente intelligente AIA è stato creato da %s."
 #: thonny/plugins/aia
 msgid "(the AI assistant AIA and the changes of Thonny AIA)"
 msgstr "(l'assistente IA AIA e le modifiche di Thonny AIA)"
+
+#: thonny/first_run.py
+msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s'."
+msgstr "Ollama non è installato. Installalo dal link qui sotto, poi scarica il modello: 'ollama pull %s'."
+
+#: thonny/first_run.py
+msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s'."
+msgstr "Ollama è in esecuzione, ma il modello manca. Scaricalo: 'ollama pull %s'."
+
+#: thonny/first_run.py
+msgid "It runs offline; how much memory it needs and how fast it answers depends on the model and the computer."
+msgstr "Funziona offline; quanta memoria richiede e quanto velocemente risponde dipendono dal modello e dal computer."
+
+#: thonny/plugins/aia
+msgid "Asking Ollama for the models on this computer..."
+msgstr "Chiedo a Ollama i modelli di questo computer..."
+
+#: thonny/plugins/aia
+msgid "The models Ollama has on this computer."
+msgstr "I modelli che Ollama ha su questo computer."
+
+#: thonny/plugins/aia
+msgid "Ollama did not answer, so the models on this computer are unknown."
+msgstr "Ollama non ha risposto, quindi i modelli di questo computer non sono noti."

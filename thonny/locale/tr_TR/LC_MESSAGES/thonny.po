@@ -2229,3 +2229,27 @@ msgstr "Akıllı yardımcı AIA'yı %s oluşturdu."
 #: thonny/plugins/aia
 msgid "(the AI assistant AIA and the changes of Thonny AIA)"
 msgstr "(AI yardımcısı AIA ve Thonny AIA'daki değişiklikler)"
+
+#: thonny/first_run.py
+msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s'."
+msgstr "Ollama kurulu değil. Aşağıdaki bağlantıdan kur, ardından modeli indir: 'ollama pull %s'."
+
+#: thonny/first_run.py
+msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s'."
+msgstr "Ollama çalışıyor, ancak model eksik. İndir: 'ollama pull %s'."
+
+#: thonny/first_run.py
+msgid "It runs offline; how much memory it needs and how fast it answers depends on the model and the computer."
+msgstr "İnternetsiz çalışır; ne kadar bellek gerektirdiği ve ne kadar hızlı yanıt verdiği modele ve bilgisayara bağlıdır."
+
+#: thonny/plugins/aia
+msgid "Asking Ollama for the models on this computer..."
+msgstr "Ollama'ya bu bilgisayardaki modeller soruluyor..."
+
+#: thonny/plugins/aia
+msgid "The models Ollama has on this computer."
+msgstr "Ollama'nın bu bilgisayardaki modelleri."
+
+#: thonny/plugins/aia
+msgid "Ollama did not answer, so the models on this computer are unknown."
+msgstr "Ollama yanıt vermedi, bu yüzden bu bilgisayardaki modeller bilinmiyor."

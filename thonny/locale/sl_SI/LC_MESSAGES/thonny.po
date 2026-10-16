@@ -2244,3 +2244,27 @@ msgstr "Inteligentnega pomočnika AIA je ustvaril %s."
 #: thonny/plugins/aia
 msgid "(the AI assistant AIA and the changes of Thonny AIA)"
 msgstr "(pomočnik AI AIA in spremembe Thonny AIA)"
+
+#: thonny/first_run.py
+msgid "Ollama is not installed. Install it from the link below, then download the model: 'ollama pull %s'."
+msgstr "Ollama ni nameščena. Namesti jo s spodnje povezave in nato prenesi model: »ollama pull %s«."
+
+#: thonny/first_run.py
+msgid "Ollama is running, but the model is missing. Download it: 'ollama pull %s'."
+msgstr "Ollama teče, vendar model manjka. Prenesi ga: »ollama pull %s«."
+
+#: thonny/first_run.py
+msgid "It runs offline; how much memory it needs and how fast it answers depends on the model and the computer."
+msgstr "Deluje brez interneta; koliko pomnilnika potrebuje in kako hitro odgovarja, je odvisno od modela in računalnika."
+
+#: thonny/plugins/aia
+msgid "Asking Ollama for the models on this computer..."
+msgstr "Ollamo sprašujem za modele v tem računalniku..."
+
+#: thonny/plugins/aia
+msgid "The models Ollama has on this computer."
+msgstr "Modeli, ki jih ima Ollama v tem računalniku."
+
+#: thonny/plugins/aia
+msgid "Ollama did not answer, so the models on this computer are unknown."
+msgstr "Ollama ni odgovorila, zato modeli v tem računalniku niso znani."
