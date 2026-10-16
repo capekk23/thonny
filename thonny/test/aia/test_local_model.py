@@ -91,6 +91,32 @@ def test_switching_provider_frees_the_model(keeper, fake_thonny):
     assert keeper.ollama.requests[-1] == ("unload", "gpt-oss:20b")
 
 
+def test_the_chosen_local_model_is_loaded(keeper, fake_thonny):
+    """Tools > Options chooses the local model (#80): the keeper loads that one."""
+    fake_thonny.options["aia.ollama_model"] = "qwen3:14b"
+    keeper._tick()
+    assert keeper.ollama.requests == [("preload", "qwen3:14b")]
+
+    fake_thonny.options["aia.ollama_model"] = ""  # back to the default
+    keeper._tick()
+    assert keeper.ollama.requests[-2:] == [("unload", "qwen3:14b"), ("preload", "gpt-oss:20b")]
+
+
+def test_changing_the_local_model_wakes_the_keeper(keeper, fake_thonny):
+    traced = []
+
+    class Var:
+        def __init__(self, name):
+            self.name = name
+
+        def trace_add(self, mode, func):
+            traced.append(self.name)
+
+    fake_thonny.get_variable = Var
+    keeper.install()
+    assert "aia.ollama_model" in traced
+
+
 def test_closing_thonny_frees_the_model(keeper):
     keeper._on_close()
     assert keeper.ollama.requests == []  # nothing loaded, nothing to free

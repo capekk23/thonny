@@ -32,9 +32,11 @@ def interface_language(code: Optional[str]) -> str:
 PROVIDERS_NEEDING_KEY = {"openai", "anthropic", "gemini"}
 
 # With an API key the model can be chosen in Tools > Options (Jakub 2026-10-13,
-# cortex-zamestnani#75; until beta 3 each provider answered with its default model). Stored per
-# provider, "" = the provider's default; the local model stays gpt-oss:20b.
-MODEL_CHOICE_PROVIDERS = ("anthropic", "gemini", "openai")
+# cortex-zamestnani#75; until beta 3 each provider answered with its default model), the local
+# model among the models Ollama has (Jakub 2026-10-16, cortex-zamestnani#80; until beta 6 it
+# was always gpt-oss:20b). Stored per provider, "" = the provider's default, so the first
+# switch to the local model gives gpt-oss:20b.
+MODEL_CHOICE_PROVIDERS = ("anthropic", "gemini", "openai", "ollama")
 
 
 def model_option(provider_id: str) -> str:

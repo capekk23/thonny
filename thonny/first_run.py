@@ -112,25 +112,44 @@ def _cloud_note(provider):
 def _local_note(state, model):
     # Kept about as long as the cloud note (Jakub 2026-10-10): the detail area is sized for the
     # longest variant, so a long local note left the usual dialog half empty.
+    # The sizes and the speed are those of the default model; another model chosen in Tools >
+    # Options (cortex-zamestnani#80) gets the texts without them.
+    default = model == _default_models()[AI_LOCAL]
     if state == "missing":
-        text = tr(
-            "Ollama is not installed. Install it from the link below, then download the model: "
-            "'ollama pull %s' (13 GB)."
-        ) % model
+        if default:
+            text = tr(
+                "Ollama is not installed. Install it from the link below, then download the "
+                "model: 'ollama pull %s' (13 GB)."
+            ) % model
+        else:
+            text = tr(
+                "Ollama is not installed. Install it from the link below, then download the "
+                "model: 'ollama pull %s'."
+            ) % model
     elif state == "stopped":
         text = tr("Ollama is installed but not running. Start it.")
     elif state == "no_model":
-        text = tr("Ollama is running, but the model is missing. Download it: 'ollama pull %s' (13 GB).") % model
+        if default:
+            text = tr(
+                "Ollama is running, but the model is missing. Download it: 'ollama pull %s' (13 GB)."
+            ) % model
+        else:
+            text = tr(
+                "Ollama is running, but the model is missing. Download it: 'ollama pull %s'."
+            ) % model
     else:
         text = tr("Ollama is running and the model %s is ready.") % model
-    return (
-        text
-        + " "
-        + tr(
+    if default:
+        tail = tr(
             "It runs offline, needs about 14 GB of free RAM and, without a strong graphics card, "
             "answers in 20-70 s."
         )
-    )
+    else:
+        tail = tr(
+            "It runs offline; how much memory it needs and how fast it answers depends on the "
+            "model and the computer."
+        )
+    return text + " " + tail
 
 
 def data_notice():

@@ -6,8 +6,10 @@ The AI choice is the welcome dialog's choice (Jakub 2026-10-10: the options had 
 than the dialog and a model choice that was quietly dropped): the same list in the same
 order, the same notes, the API key on the page. With an API key the page also offers the
 model (Jakub 2026-10-13, cortex-zamestnani#75): the models the provider lists for the key,
-asked in a worker thread, or the provider's usual models when it cannot be asked. The
-Claude Code demo provider is not offered (Jakub 2026-10-10: "To demo tam nemá co dělat."):
+asked in a worker thread, or the provider's usual models when it cannot be asked. The local
+model too (Jakub 2026-10-16, cortex-zamestnani#80): the chat models Ollama has on this
+computer, asked the same way; when Ollama does not answer, only the default and the chosen
+model are offered. The Claude Code demo provider is not offered (Jakub 2026-10-10: "To demo tam nemá co dělat."):
 it is reachable only by editing configuration.ini.
 """
 
@@ -169,22 +171,26 @@ class AIAPanelConfigPage(ConfigurationPage):
     def _make_detail(self, frame):
         d = types.SimpleNamespace(frame=frame)
         frame.rowconfigure(0, weight=1)
-        frame.rowconfigure(4, weight=1)
+        frame.rowconfigure(5, weight=1)
         d.note = ttk.Label(frame, wraplength=460, justify="left")
         d.note.grid(row=1, column=1, sticky="nw")
         d.key_frame = ttk.Frame(frame)
         d.key_frame.grid(row=2, column=1, sticky="nw", pady=(7, 0))
-        ttk.Label(d.key_frame, text=tr("API key:")).grid(row=1, column=1, sticky="w")
+        # the model rows below the key are shown for the local model too, without the key
+        d.key_widgets = [ttk.Label(d.key_frame, text=tr("API key:"))]
+        d.key_widgets[-1].grid(row=1, column=1, sticky="w")
         self._key_var = tk.StringVar()
-        ttk.Entry(d.key_frame, textvariable=self._key_var, show="*", width=36).grid(
-            row=1, column=2, sticky="w", padx=(10, 0)
-        )
+        d.key_widgets.append(ttk.Entry(d.key_frame, textvariable=self._key_var, show="*", width=36))
+        d.key_widgets[-1].grid(row=1, column=2, sticky="w", padx=(10, 0))
         # Thonny 5 has no secrets store (the API key dialog said so before, keep saying it)
-        ttk.Label(
-            d.key_frame,
-            text=tr("The key is stored in plain text in Thonny's configuration file."),
-            foreground="#7f8c8d",
-        ).grid(row=2, column=1, columnspan=2, sticky="w", pady=(2, 0))
+        d.key_widgets.append(
+            ttk.Label(
+                d.key_frame,
+                text=tr("The key is stored in plain text in Thonny's configuration file."),
+                foreground="#7f8c8d",
+            )
+        )
+        d.key_widgets[-1].grid(row=2, column=1, columnspan=2, sticky="w", pady=(2, 0))
         ttk.Label(d.key_frame, text=tr("Model:")).grid(row=3, column=1, sticky="w", pady=(7, 0))
         self._model_var = tk.StringVar()
         d.model_combo = ttk.Combobox(
@@ -199,28 +205,39 @@ class AIAPanelConfigPage(ConfigurationPage):
         d.model_note = ttk.Label(d.key_frame, foreground="#7f8c8d")
         d.model_note.grid(row=4, column=1, columnspan=2, sticky="w", pady=(2, 0))
         self._key_var.trace_add("write", self._on_key_changed)
-        d.check_button = ttk.Button(frame, text=tr("Check again"), command=self._on_check_ollama)
-        d.check_button.grid(row=2, column=1, sticky="nw", pady=(7, 0))
+        # width -6 = at least 6 characters: Thonny's UI themes give TButton a fixed width of 6,
+        # which cut "Zkontrolovat znovu" to "Zkontrolo" (until beta 6)
+        d.check_button = ttk.Button(
+            frame, text=tr("Check again"), command=self._on_check_ollama, width=-6
+        )
+        d.check_button.grid(row=3, column=1, sticky="nw", pady=(7, 0))
         d.link = ui_utils.create_action_label(frame, "", lambda e: webbrowser.open(self._link_url))
-        d.link.grid(row=3, column=1, sticky="nw", pady=(3, 0))
+        d.link.grid(row=4, column=1, sticky="nw", pady=(3, 0))
         return d
 
-    def _fill(self, ai, ollama, measure=False):
+    def _fill(self, ai, ollama, measure=False, local_model=None):
         """Show the detail of one choice (and one Ollama state for the local model).
 
         ``measure``: the longest variant of the texts, for _fix_detail_size.
+        ``local_model``: the local model the note speaks of, else the current one.
         """
         d = self._detail
         link = ""
         if ai in first_run.AI_CLOUD:
             d.note.configure(text=_cloud_note(ai))
             self._show_models(ai, measure)
+            for widget in d.key_widgets:
+                widget.grid()
             d.key_frame.grid()
             d.check_button.grid_remove()
             link = self._key_urls[ai]
         elif ai == first_run.AI_LOCAL:
-            d.note.configure(text=first_run._local_note(ollama, self._models[ai]))
-            d.key_frame.grid_remove()
+            model = local_model or self._current_models()[ai]
+            d.note.configure(text=first_run._local_note(ollama, model))
+            self._show_models(ai, measure)
+            for widget in d.key_widgets:
+                widget.grid_remove()
+            d.key_frame.grid()
             if ollama == "ready":
                 d.check_button.grid_remove()
             else:
@@ -240,16 +257,20 @@ class AIAPanelConfigPage(ConfigurationPage):
     def _fix_detail_size(self):
         """Size the detail area for its largest variant before the page is shown, so that
         changing the choice moves nothing below it."""
-        variants = [(ai, None) for ai in self._labels if ai != first_run.AI_LOCAL]
-        variants += [(first_run.AI_LOCAL, s) for s in ("missing", "stopped", "no_model", "ready")]
+        variants = [(ai, None, None) for ai in self._labels if ai != first_run.AI_LOCAL]
+        # the default local model's texts, and those of another model with a long name
+        for model in (self._models[first_run.AI_LOCAL], "x" * 40):
+            variants += [
+                (first_run.AI_LOCAL, s, model) for s in ("missing", "stopped", "no_model", "ready")
+            ]
         # the note is as wide as the page's widest line (the legend of the answer styles)
         self.update_idletasks()
         wraplength = max(self._legend.winfo_reqwidth(), self._ai_combo.winfo_reqwidth())
         self._detail.note.configure(wraplength=wraplength)
         self._detail.model_note.configure(wraplength=wraplength)
         width = height = 0
-        for ai, ollama in variants:
-            self._fill(ai, ollama, measure=True)
+        for ai, ollama, local_model in variants:
+            self._fill(ai, ollama, measure=True, local_model=local_model)
             self._detail.frame.update_idletasks()
             width = max(width, self._detail.frame.winfo_reqwidth())
             height = max(height, self._detail.frame.winfo_reqheight())
@@ -257,8 +278,10 @@ class AIAPanelConfigPage(ConfigurationPage):
         self._detail.frame.grid_propagate(False)
 
     def _show(self, ai):
-        if ai == first_run.AI_LOCAL and self._ollama is None:
-            self._ollama = first_run.ollama_state(self._models[ai])
+        if ai == first_run.AI_LOCAL:
+            if self._ollama is None:
+                self._ollama = first_run.ollama_state(self._current_models()[ai])
+            self._ask_models(ai)
         if ai in first_run.AI_CLOUD:
             if ai not in self._keys:
                 self._keys[ai] = self._core._get_stored_api_key(ai) or ""
@@ -274,8 +297,13 @@ class AIAPanelConfigPage(ConfigurationPage):
         self._show(self._ai)
 
     def _on_check_ollama(self):
-        self._ollama = first_run.ollama_state(self._models[first_run.AI_LOCAL])
-        self._fill(first_run.AI_LOCAL, self._ollama)
+        local = first_run.AI_LOCAL
+        self._ollama = first_run.ollama_state(self._current_models()[local])
+        # ask for the models again: Ollama may have started or got another model since
+        self._listed.pop(local, None)
+        self._failed.pop(local, None)
+        self._ask_models(local)
+        self._fill(local, self._ollama)
 
     def _on_style_changed(self, event=None):
         shown = self._style_display_var.get()
@@ -298,7 +326,7 @@ class AIAPanelConfigPage(ConfigurationPage):
         wb.set_option("aia.model", "")  # a model chosen in earlier versions no longer applies
         return True
 
-    # --- Model (providers with an API key) ---
+    # --- Model (providers with an API key, and the local model) ---
 
     def _current_models(self):
         """Provider id -> the model it answers with (the chosen one or the default)."""
@@ -310,7 +338,7 @@ class AIAPanelConfigPage(ConfigurationPage):
         """Model ids offered: those listed for the key on the page, else the usual ones."""
         default = self._models[provider]
         listed = self._listed.get(provider)
-        if listed and listed[0] == self._key_var.get().strip():
+        if listed and listed[0] == self._token(provider):
             models = list(listed[1])
         else:
             registered = self._core.providers.get(provider)
@@ -325,7 +353,17 @@ class AIAPanelConfigPage(ConfigurationPage):
     def _model_label(self, provider, model):
         return tr("%s (default)") % model if model == self._models[provider] else model
 
-    def _model_notes(self):
+    def _token(self, provider):
+        """What the listing depends on: the key on the page; the local model needs none."""
+        return "local" if provider == first_run.AI_LOCAL else self._key_var.get().strip()
+
+    def _model_notes(self, provider):
+        if provider == first_run.AI_LOCAL:
+            return {
+                "asking": tr("Asking Ollama for the models on this computer..."),
+                "listed": tr("The models Ollama has on this computer."),
+                "failed": tr("Ollama did not answer, so the models on this computer are unknown."),
+            }
         return {
             "no_key": tr("Enter the API key to see the models it can use."),
             "asking": tr("Asking the provider for the models of this key..."),
@@ -336,7 +374,7 @@ class AIAPanelConfigPage(ConfigurationPage):
         }
 
     def _model_note(self, provider):
-        key = self._key_var.get().strip()
+        key = self._token(provider)
         listed = self._listed.get(provider)
         if not key:
             state = "no_key"
@@ -348,7 +386,7 @@ class AIAPanelConfigPage(ConfigurationPage):
             state = "failed"
         else:
             return ""
-        return self._model_notes()[state]
+        return self._model_notes(provider)[state]
 
     def _show_models(self, provider, measure=False):
         d = self._detail
@@ -357,7 +395,7 @@ class AIAPanelConfigPage(ConfigurationPage):
         current = self._chosen.get(provider) or self._models[provider]
         self._model_var.set(self._model_label(provider, current))
         if measure:
-            note = max(self._model_notes().values(), key=len)
+            note = max(self._model_notes(provider).values(), key=len)
         else:
             note = self._model_note(provider)
         d.model_note.configure(text=note)
@@ -369,6 +407,9 @@ class AIAPanelConfigPage(ConfigurationPage):
         self._labels = first_run._ai_labels(self._current_models())
         self._ai_combo.configure(values=list(self._labels.values()))
         self._ai_var.set(self._labels[self._ai])
+        if self._ai == first_run.AI_LOCAL:  # the note says whether this model is downloaded
+            self._ollama = first_run.ollama_state(self._current_models()[self._ai])
+            self._fill(self._ai, self._ollama)
 
     def _on_key_changed(self, *_args):
         if self._ai not in first_run.AI_CLOUD:
@@ -385,8 +426,9 @@ class AIAPanelConfigPage(ConfigurationPage):
             self._show_models(self._ai)
 
     def _ask_models(self, provider):
-        """Ask the provider which models the key on the page can use, in a worker thread."""
-        key = self._key_var.get().strip()
+        """Ask the provider which models the key on the page can use (Ollama: which models
+        it has), in a worker thread."""
+        key = self._token(provider)
         registered = self._core.providers.get(provider)
         listed = self._listed.get(provider)
         if (
@@ -397,7 +439,8 @@ class AIAPanelConfigPage(ConfigurationPage):
         ):
             return
         asking = copy.copy(registered.frozen())  # settings read here, on the UI thread
-        asking._get_api_key = lambda: key  # the key on the page, maybe not saved yet
+        if provider in first_run.AI_CLOUD:
+            asking._get_api_key = lambda: key  # the key on the page, maybe not saved yet
         self._listing_key[provider] = key
 
         def work():

@@ -189,8 +189,12 @@ def test_model_is_chosen_per_provider(fake_thonny, monkeypatch):
     fake_thonny.options["aia.anthropic_model"] = "claude-opus-5-5"
     assert core.get_current_model(anthropic) == "claude-opus-5-5"
     assert core.get_current_model(gemini) == "gemini-3.5-flash-lite"  # its own choice
-    fake_thonny.options["aia.ollama_model"] = "gemma3"  # the local model is not chosen
+    # the local model too (Jakub 2026-10-16, #80); "" = gpt-oss:20b, also before any choice
     assert core.get_current_model(core.providers["ollama"]) == "gpt-oss:20b"
+    fake_thonny.options["aia.ollama_model"] = ""
+    assert core.get_current_model(core.providers["ollama"]) == "gpt-oss:20b"
+    fake_thonny.options["aia.ollama_model"] = "qwen3:14b"
+    assert core.get_current_model(core.providers["ollama"]) == "qwen3:14b"
 
 
 def test_anthropic_lists_the_models_of_the_key(fake_thonny, monkeypatch):
@@ -469,3 +473,55 @@ def test_provider_display_name(fake_thonny):
     assert provider_display_name("openai") == "OpenAI"  # not "Openai" from str.title()
     assert provider_display_name("ollama") == "Ollama"
     assert provider_display_name("custom") == "custom"
+
+
+def test_ollama_lists_its_local_chat_models(fake_thonny, monkeypatch):
+    """Tools > Options offers the models Ollama has (#80): no cloud and no embedding models."""
+    calls = []
+
+    class FakeClient:
+        def __init__(self, host=None, timeout=None, **kwargs):
+            calls.append({"host": host, "timeout": timeout, "client_kwargs": kwargs})
+
+        def list(self):
+            return {"models": [
+                {"model": "qwen3:14b", "size": 9_300_000_000},
+                {"model": "nomic-embed-text:latest", "size": 274_000_000},
+                {"model": "gpt-oss:120b-cloud", "size": 384},
+                {"model": "glm-4.6:cloud", "size": 400},
+                {"model": "gpt-oss:20b", "size": 13_793_441_566},
+                {"model": "Gemma3:4b", "size": 3_300_000_000},
+                {"model": "old-ollama:7b", "size": 4_000_000_000},
+            ]}
+
+        def show(self, model):
+            if model.startswith("old-ollama"):
+                return {}  # an older Ollama gives no capabilities
+            if model.startswith("nomic-embed"):
+                return {"capabilities": ["embedding"]}
+            return {"capabilities": ["completion", "tools"]}
+
+    monkeypatch.setitem(sys.modules, "ollama", types.SimpleNamespace(Client=FakeClient))
+    from thonny.plugins.aia.providers.ollama_provider import OllamaProvider
+
+    provider = OllamaProvider(get_host=lambda: "http://127.0.0.1:11435")
+    assert provider.list_models() == ["gpt-oss:20b", "Gemma3:4b", "old-ollama:7b", "qwen3:14b"]
+    assert calls[0]["host"] == "http://127.0.0.1:11435"
+    assert calls[0]["client_kwargs"] == {"trust_env": False}  # no school proxy for localhost
+
+    # without the default model nothing is added: the page offers it as the default
+    FakeClient.list = lambda self: {"models": [{"model": "qwen3:14b", "size": 9_300_000_000}]}
+    assert provider.list_models() == ["qwen3:14b"]
+    # the Options page offers no list without asking Ollama (no request on the UI thread)
+    assert provider.get_available_models() == ["gpt-oss:20b"]
+
+
+def test_ollama_cloud_models_are_recognized(fake_thonny):
+    from thonny.plugins.aia.providers.ollama_provider import is_cloud_model
+
+    for name in ("gpt-oss:120b-cloud", "glm-4.6:cloud", "qwen3-coder:480b-cloud"):
+        assert is_cloud_model(name), name
+    assert is_cloud_model("some-remote:latest", size=384)
+    for name in ("gpt-oss:20b", "gemma3", "cloudy:7b", "qwen3:14b"):
+        assert not is_cloud_model(name, size=5_000_000_000), name
+    assert not is_cloud_model("gpt-oss:20b")  # size unknown

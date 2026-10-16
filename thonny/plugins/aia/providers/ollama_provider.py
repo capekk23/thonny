@@ -39,6 +39,19 @@ def _full_name(model: str) -> str:
     return model if ":" in model else model + ":latest"
 
 
+def is_cloud_model(name: str, size: Optional[int] = None) -> bool:
+    """A model that Ollama runs on ollama.com ("gpt-oss:120b-cloud", "glm-4.6:cloud").
+
+    The Python client drops the remote_host field of /api/tags, so: the tag ends with
+    "cloud", or the model has no weights on disk (a cloud model is a stub of a few hundred
+    bytes, the smallest local chat models have hundreds of MB).
+    """
+    tag = name.rpartition(":")[2] if ":" in name else ""
+    if tag == "cloud" or tag.endswith("-cloud"):
+        return True
+    return size is not None and size < 1_000_000
+
+
 def think_setting(model: str) -> Union[bool, str]:
     """Least thinking the model allows, because the student sees nothing while it thinks.
 
@@ -127,13 +140,28 @@ class OllamaProvider(LLMProvider):
         # and Nemotron 3 Nano 4B were faster but wrong in a third of the answers.
         return "gpt-oss:20b"
 
-    def get_available_models(self) -> List[str]:
-        """Installed models, or the default when the server is unreachable."""
-        try:
-            response = self._client(LIST_TIMEOUT).list()
-            models = [m.get("name", m.get("model", "")) for m in response.get("models", [])]
-            models = [m for m in models if m]
-            return models if models else [self.get_default_model()]
-        except Exception:
-            logger.debug("Could not list Ollama models", exc_info=True)
-            return [self.get_default_model()]
+    def list_models(self, timeout: float = LIST_TIMEOUT) -> List[str]:
+        """Chat models Ollama has on this computer (/api/tags), default first if present.
+
+        Blocks - worker thread only. Raises when Ollama cannot be asked. Left out are cloud
+        models (Ollama lists them next to the local ones, but they answer from ollama.com and
+        AIA promises that the local model sends nothing out) and models that cannot chat
+        (embedding models: no "completion" in /api/show).
+        """
+        client = self._client(timeout)
+        models = []
+        for m in client.list().get("models", []):
+            name = m.get("model") or m.get("name") or ""
+            if not name or is_cloud_model(name, m.get("size")):
+                continue
+            try:
+                capabilities = client.show(name).get("capabilities")
+            except Exception:
+                logger.debug("Could not show Ollama model %s", name, exc_info=True)
+                capabilities = None
+            if capabilities and "completion" not in capabilities:
+                continue  # an older Ollama gives no capabilities: keep the model
+            models.append(name)
+        default = self.get_default_model()
+        models.sort(key=str.lower)
+        return [default] + [m for m in models if m != default] if default in models else models

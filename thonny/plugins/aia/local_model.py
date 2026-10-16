@@ -56,8 +56,9 @@ class LocalModelKeeper:
         global _keeper
         _keeper = self
         try:
-            self._wb.get_variable("aia.provider").trace_add("write", self._on_settings_changed)
-            self._wb.get_variable("aia.enabled").trace_add("write", self._on_settings_changed)
+            # the model chosen in Tools > Options too: the keeper loads that one instead
+            for option in ("aia.provider", "aia.enabled", "aia.ollama_model"):
+                self._wb.get_variable(option).trace_add("write", self._on_settings_changed)
         except Exception:
             logger.debug("Could not trace AIA options", exc_info=True)
         self._wb.bind("WorkbenchClose", self._on_close, True)
