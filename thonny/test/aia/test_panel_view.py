@@ -18,6 +18,7 @@ def make_view(module):
     view._conversation = []
     view._events = queue.Queue()
     view._request_id = 0
+    view._request_provider_id = None
     view._cancel_event = None
     view._partial = []
     view._polling = False
@@ -29,9 +30,10 @@ def make_view(module):
     return view
 
 
-def start_request(view):
+def start_request(view, provider_id=None):
     """The state _request_llm_response() leaves behind, without a provider."""
     view._request_id += 1
+    view._request_provider_id = provider_id
     view._cancel_event = threading.Event()
     view._partial = []
     view._set_busy(True)
@@ -581,3 +583,22 @@ def test_a_load_starting_after_the_panel_shows_is_noticed(panel_view, monkeypatc
     view._insert("You: hi")
     view.scheduled.pop()()  # the conversation started: no more checks
     assert view.scheduled == []
+
+
+def test_an_answer_of_the_local_model_tells_the_keeper(panel_view, monkeypatch):
+    """A keeper that gave up on the load (model too big, not pulled) loads again (#80)."""
+    answered = []
+    monkeypatch.setattr(panel_view, "model_answered", lambda: answered.append(True))
+    view = make_view(panel_view)
+    view._messages_text = _FakeText()
+    for provider_id in ("anthropic", "ollama"):
+        request_id, _ = start_request(view, provider_id)
+        view._events.put((request_id, "chunk", "Ahoj"))
+        view._events.put((request_id, "done", ""))
+        view._poll_events()
+    assert answered == [True]
+
+    request_id, _ = start_request(view, "ollama")
+    view._events.put((request_id, "error", "The model x does not fit"))
+    view._poll_events()
+    assert answered == [True]

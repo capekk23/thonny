@@ -32,7 +32,7 @@ from thonny.plugins.aia._common import (
     prepare_messages,
     snapshot_editor_context,
 )
-from thonny.plugins.aia.local_model import is_loading
+from thonny.plugins.aia.local_model import is_loading, model_answered
 from thonny.plugins.aia.prompts import build_system_prompt
 
 logger = logging.getLogger(__name__)
@@ -169,6 +169,7 @@ class AIAView(ttk.Frame):
 
         self._events: "queue.Queue" = queue.Queue()
         self._request_id = 0  # id of the request whose events are shown
+        self._request_provider_id = None  # provider of that request
         self._cancel_event: Optional[threading.Event] = None
         self._partial: List[str] = []
         self._polling = False
@@ -515,6 +516,7 @@ class AIAView(ttk.Frame):
         api_messages = prepare_messages(self._conversation)
 
         self._request_id += 1
+        self._request_provider_id = provider_id
         self._cancel_event = threading.Event()
         self._partial = []
         self._set_busy(True)
@@ -613,6 +615,8 @@ class AIAView(ttk.Frame):
                     self._insert(payload)
                 elif kind == "done":
                     self._finish(payload)
+                    if self._request_provider_id == "ollama":
+                        model_answered()  # the keeper may have given up on the load
                 elif kind == "error":
                     self._hide_loading()
                     self._insert(f"\n{payload}", "error_text")

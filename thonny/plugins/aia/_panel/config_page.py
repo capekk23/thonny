@@ -35,6 +35,10 @@ KEY_SETTLE_MS = 1000  # after the last change of the key, ask for its models
 POLL_MS = 100
 
 
+# space between a label and its drop-down
+COMBO_PAD = 8
+
+
 def style_names():
     """Answer style id -> name in the current language."""
     return {"socratic": tr("Socratic"), "explanatory": tr("Explanatory"), "direct": tr("Direct")}
@@ -91,7 +95,8 @@ class AIAPanelConfigPage(ConfigurationPage):
         ).grid(row=row, column=0, columnspan=2, sticky="w", pady=(0, 10))
         row += 1
 
-        ttk.Label(self, text=tr("AI assistant:")).grid(row=row, column=0, sticky="w", pady=2)
+        self._choice_labels = [ttk.Label(self, text=tr("AI assistant:"))]
+        self._choice_labels[-1].grid(row=row, column=0, sticky="w", pady=2)
         self._ai_var = tk.StringVar(value=self._labels[self._ai])
         self._ai_combo = ttk.Combobox(
             self,
@@ -101,7 +106,7 @@ class AIAPanelConfigPage(ConfigurationPage):
             exportselection=False,
             width=36,
         )
-        self._ai_combo.grid(row=row, column=1, sticky="w", padx=(5, 0), pady=2)
+        self._ai_combo.grid(row=row, column=1, sticky="w", padx=(COMBO_PAD, 0), pady=2)
         self._ai_combo.bind("<<ComboboxSelected>>", self._on_ai_changed)
         row += 1
 
@@ -110,7 +115,8 @@ class AIAPanelConfigPage(ConfigurationPage):
         row += 1
 
         # --- Answer style ---
-        ttk.Label(self, text=tr("Answer style:")).grid(row=row, column=0, sticky="w", pady=2)
+        self._choice_labels.append(ttk.Label(self, text=tr("Answer style:")))
+        self._choice_labels[-1].grid(row=row, column=0, sticky="w", pady=2)
         self._mentoring_var = wb.get_variable("aia.mentoring_level")
         self._style_names = style_names()
         self._style_display_var = tk.StringVar(
@@ -123,7 +129,7 @@ class AIAPanelConfigPage(ConfigurationPage):
             state="readonly",
             width=18,
         )
-        style_combo.grid(row=row, column=1, sticky="w", padx=(5, 0), pady=2)
+        style_combo.grid(row=row, column=1, sticky="w", padx=(COMBO_PAD, 0), pady=2)
         style_combo.bind("<<ComboboxSelected>>", self._on_style_changed)
         row += 1
 
@@ -163,6 +169,7 @@ class AIAPanelConfigPage(ConfigurationPage):
         ).grid(row=row, column=0, columnspan=2, sticky="w")
         row += 1
 
+        self._align_combos()
         self._fix_detail_size()
         self._show(self._ai)
 
@@ -178,10 +185,11 @@ class AIAPanelConfigPage(ConfigurationPage):
         d.key_frame.grid(row=2, column=1, sticky="nw", pady=(7, 0))
         # the model rows below the key are shown for the local model too, without the key
         d.key_widgets = [ttk.Label(d.key_frame, text=tr("API key:"))]
+        self._choice_labels.append(d.key_widgets[-1])
         d.key_widgets[-1].grid(row=1, column=1, sticky="w")
         self._key_var = tk.StringVar()
         d.key_widgets.append(ttk.Entry(d.key_frame, textvariable=self._key_var, show="*", width=36))
-        d.key_widgets[-1].grid(row=1, column=2, sticky="w", padx=(10, 0))
+        d.key_widgets[-1].grid(row=1, column=2, sticky="w", padx=(COMBO_PAD, 0))
         # Thonny 5 has no secrets store (the API key dialog said so before, keep saying it)
         d.key_widgets.append(
             ttk.Label(
@@ -191,7 +199,8 @@ class AIAPanelConfigPage(ConfigurationPage):
             )
         )
         d.key_widgets[-1].grid(row=2, column=1, columnspan=2, sticky="w", pady=(2, 0))
-        ttk.Label(d.key_frame, text=tr("Model:")).grid(row=3, column=1, sticky="w", pady=(7, 0))
+        self._choice_labels.append(ttk.Label(d.key_frame, text=tr("Model:")))
+        self._choice_labels[-1].grid(row=3, column=1, sticky="w", pady=(7, 0))
         self._model_var = tk.StringVar()
         d.model_combo = ttk.Combobox(
             d.key_frame,
@@ -200,7 +209,7 @@ class AIAPanelConfigPage(ConfigurationPage):
             exportselection=False,
             width=34,
         )
-        d.model_combo.grid(row=3, column=2, sticky="w", padx=(10, 0), pady=(7, 0))
+        d.model_combo.grid(row=3, column=2, sticky="w", padx=(COMBO_PAD, 0), pady=(7, 0))
         d.model_combo.bind("<<ComboboxSelected>>", self._on_model_changed)
         d.model_note = ttk.Label(d.key_frame, foreground="#7f8c8d")
         d.model_note.grid(row=4, column=1, columnspan=2, sticky="w", pady=(2, 0))
@@ -253,6 +262,21 @@ class AIAPanelConfigPage(ConfigurationPage):
         else:
             d.link.grid_remove()
         self._link_url = link
+
+    def _align_combos(self):
+        """Put every drop-down (and the key) right after the longest of their labels.
+
+        Until beta 6 the drop-downs stood far to the right of their labels (Jakub 2026-10-17,
+        cortex-zamestnani#80): the label column had no width of its own and took a share
+        of the lines that span both columns (the legend of the answer styles).
+        """
+        self.update_idletasks()
+        width = max(label.winfo_reqwidth() for label in self._choice_labels)
+        self.columnconfigure(0, minsize=width)
+        self.columnconfigure(1, weight=1)  # the spanning lines widen this column, not the labels'
+        # the key and model rows are in the detail frame, whose column 0 starts at the page's
+        self._detail.key_frame.columnconfigure(1, minsize=width)
+        self._detail.key_frame.columnconfigure(2, weight=1)  # the notes below the key and model
 
     def _fix_detail_size(self):
         """Size the detail area for its largest variant before the page is shown, so that

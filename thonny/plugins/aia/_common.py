@@ -269,6 +269,26 @@ def prepare_messages(
     return merged
 
 
+# What Ollama says when a model does not fit (its llm/status.go and the scheduler, 2026-10):
+# "model requires more system memory (...) than is available (...)", "unable to load full
+# model on GPU", or the runner's own "out of memory", "failed to allocate ..." and the like
+OUT_OF_MEMORY_TEXTS = (
+    "memory",
+    "unable to load full model",
+    "cudamalloc failed",
+    "hipmalloc failed",
+    "failed to allocate",
+    "allocation failed",
+    "failed to reserve graph",
+)
+
+
+def is_out_of_memory(exc: BaseException) -> bool:
+    """Ollama could not load the model for lack of memory (its error text says so)."""
+    text = str(exc).lower()
+    return any(needle in text for needle in OUT_OF_MEMORY_TEXTS)
+
+
 def friendly_error(exc: BaseException, provider_id: str = "", model: str = "") -> str:
     """Turn an SDK exception into a short message a student can act on.
 
@@ -289,6 +309,11 @@ def friendly_error(exc: BaseException, provider_id: str = "", model: str = "") -
         return tr(
             "The model %s is not available. Choose another model in "
             "Tools > Options > AI Assistant."
+        ) % model
+    if provider_id == "ollama" and is_out_of_memory(exc):
+        return tr(
+            "The model %s does not fit into the computer's free memory. Close other programs, "
+            "or choose a smaller model in Tools > Options > AI Assistant."
         ) % model
     if status == 429 or "RateLimit" in name:
         return tr(

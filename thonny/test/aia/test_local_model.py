@@ -41,12 +41,13 @@ def keeper(fake_thonny, monkeypatch):
     fake_thonny.after_cancel = lambda timer: None
     # run the HTTP requests on the test thread
     def run(self, func, model, load=False):
-        self._failed = False if load else self._failed
+        if load:
+            self._failed = self._gave_up = False
         try:
             func(model)
-        except Exception:
+        except Exception as e:
             if load:
-                self._failed = True
+                self._load_failed(e)
 
     monkeypatch.setattr(local_model.LocalModelKeeper, "_run", run)
     fake_thonny.options.update({"aia.enabled": True, "aia.provider": "ollama", "aia.model": ""})
@@ -203,3 +204,76 @@ def test_is_loading_only_until_the_model_is_ready(keeper, monkeypatch):
     keeper._ready = False
     keeper._loading = False  # failed: Ollama not running
     assert not local_model.is_loading()
+
+
+class _ResponseError(Exception):
+    """Like ollama.ResponseError: Ollama answered with an error status."""
+
+    def __init__(self, text, status_code):
+        super().__init__(text)
+        self.status_code = status_code
+
+
+@pytest.mark.parametrize(
+    "error",
+    [
+        _ResponseError("model 'gpt-oss:20b' not found", 404),
+        _ResponseError("model requires more system memory (13.1 GiB) than is available", 500),
+    ],
+)
+def test_a_load_ollama_refused_is_not_retried(keeper, error):
+    """Not pulled or too big (Jakub 2026-10-17, cortex-zamestnani#80): every 15 s helps nothing."""
+    calls = []
+
+    def preload(model):
+        calls.append(model)
+        raise error
+
+    keeper.ollama.preload = preload
+    keeper._tick()
+    keeper._check()
+    assert len(calls) == 1 and keeper._timer is None
+    assert keeper._gave_up
+
+
+def test_another_choice_loads_again_after_giving_up(keeper, fake_thonny):
+    def preload(model):
+        raise _ResponseError("not found", 404)
+
+    keeper.ollama.preload = preload
+    keeper._tick()
+    keeper._check()
+    del keeper.ollama.preload  # the class method again: loads fine
+    fake_thonny.options["aia.ollama_model"] = "qwen3:0.6b"
+    keeper._on_settings_changed()
+    assert keeper._timer == ("timer", 1000)
+    keeper._tick()
+    assert keeper.ollama.requests[-1] == ("preload", "qwen3:0.6b") and not keeper._gave_up
+
+
+def test_an_answer_of_the_local_model_wakes_a_keeper_that_gave_up(keeper, monkeypatch):
+    """The student freed memory and asked again: the keeper keeps the model loaded again."""
+    from thonny.plugins.aia import local_model
+
+    monkeypatch.setattr(local_model, "_keeper", keeper)
+    local_model.model_answered()  # nothing given up: nothing to do
+    assert keeper.ollama.requests == []
+
+    def preload(model):
+        raise _ResponseError("model requires more system memory", 500)
+
+    keeper.ollama.preload = preload
+    keeper._tick()
+    keeper._check()
+    del keeper.ollama.preload
+    local_model.model_answered()
+    assert keeper.ollama.requests == [("preload", "gpt-oss:20b")] and not keeper._gave_up
+    assert keeper._timer == ("timer", 15 * 1000)
+
+
+def test_worth_retrying_only_without_an_answer_from_ollama():
+    from thonny.plugins.aia.local_model import worth_retrying
+
+    assert worth_retrying(ConnectionError("refused"))
+    assert worth_retrying(TimeoutError("timed out"))
+    assert not worth_retrying(_ResponseError("not found", 404))

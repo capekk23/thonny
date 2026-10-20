@@ -9,9 +9,13 @@ renewed periodically; every chat request renews it too (``KEEP_ALIVE`` in the
 provider). A refresh instead of ``keep_alive=-1`` means a crashed Thonny frees
 the memory (about 13 GB) within ``KEEP_ALIVE`` - a clean exit frees it at once.
 
-A failed load (Ollama not started yet - its tray app starts with Windows and may come
-up after Thonny - or the model not pulled) is retried after ``RETRY_MS``, not after
-``REFRESH_MS``: otherwise the first error of a lesson waited for the whole load anyway.
+A load that Ollama did not answer (not started yet - its tray app starts with Windows and
+may come up after Thonny) is retried after ``RETRY_MS``, not after ``REFRESH_MS``:
+otherwise the first error of a lesson waited for the whole load anyway. A load that Ollama
+refused (the model is not pulled - 404, it does not fit into memory - 500) is not retried
+(Jakub 2026-10-17, cortex-zamestnani#80): the next attempt comes with another choice in
+Tools > Options or after the local model answers a chat request (``model_answered``).
+Until then the chat request tells the student why it fails.
 
 Threading: the timer and option reads run on the UI thread, the HTTP requests in
 a daemon thread with a frozen provider.
@@ -41,6 +45,24 @@ def is_loading() -> bool:
     return _keeper is not None and _keeper._loading and not _keeper._ready
 
 
+def model_answered():
+    """The local model answered a chat request (UI thread): a keeper that gave up loads again.
+
+    The student may have freed memory or pulled the model since the keeper gave up.
+    """
+    if _keeper is not None and _keeper._gave_up and not _keeper._loading:
+        _keeper._tick()
+
+
+def worth_retrying(exc: BaseException) -> bool:
+    """Ollama did not answer at all (not running yet, timeout): its status code is unknown.
+
+    An error Ollama answered with (ollama.ResponseError: 404 model not pulled, 500 model does
+    not fit into memory) comes again on every attempt.
+    """
+    return getattr(exc, "status_code", None) is None
+
+
 class LocalModelKeeper:
     def __init__(self, wb, core):
         self._wb = wb
@@ -50,6 +72,7 @@ class LocalModelKeeper:
         # State of the last load, written by its worker thread, read by the timer
         self._loading = False
         self._failed = False
+        self._gave_up = False  # the last load failed in a way that retrying cannot fix
         self._ready = False  # the wanted model has been loaded (renewals do not reset it)
 
     def install(self):
@@ -104,6 +127,8 @@ class LocalModelKeeper:
         self._timer = None
         if self._loading:
             self._schedule(RETRY_MS, self._check)  # loading from disk takes ~30 s
+        elif self._gave_up:
+            pass  # wait for another choice or for model_answered()
         elif self._failed:
             self._tick()
         else:
@@ -113,6 +138,7 @@ class LocalModelKeeper:
         if load:
             self._loading = True
             self._failed = False
+            self._gave_up = False
 
         def work():
             try:
@@ -120,16 +146,21 @@ class LocalModelKeeper:
                 if load:
                     self._ready = True
                     self._after_load(func.__self__, model)
-            except Exception:
-                # Server not running or model not pulled - the chat request reports it
+            except Exception as e:
+                # Server not running, model not pulled or too big - the chat request reports it
                 logger.info("AIA: local model %s: %s failed", model, func.__name__, exc_info=True)
                 if load:
-                    self._failed = True
+                    self._load_failed(e)
             finally:
                 if load:
                     self._loading = False
 
         threading.Thread(target=work, daemon=True).start()
+
+    def _load_failed(self, exc):
+        """Worker thread: remember whether the next check retries the load."""
+        self._gave_up = not worth_retrying(exc)
+        self._failed = True
 
     def _after_load(self, provider, model):
         """Worker thread: unload a model that is no longer wanted once its load is done.

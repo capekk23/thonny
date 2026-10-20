@@ -525,3 +525,20 @@ def test_ollama_cloud_models_are_recognized(fake_thonny):
     for name in ("gpt-oss:20b", "gemma3", "cloudy:7b", "qwen3:14b"):
         assert not is_cloud_model(name, size=5_000_000_000), name
     assert not is_cloud_model("gpt-oss:20b")  # size unknown
+
+
+def test_friendly_error_when_the_local_model_does_not_fit(fake_thonny):
+    """Ollama's 500 for a model that does not fit (cortex-zamestnani#80): no raw English error."""
+    from thonny.plugins.aia._common import friendly_error
+
+    for text in (
+        "model requires more system memory (13.1 GiB) than is available (9.5 GiB)",
+        "llama runner process has terminated: cudaMalloc failed: out of memory",
+        "unable to load full model on GPU",
+    ):
+        msg = friendly_error(_StatusError(500, text), "ollama", "gpt-oss:20b")
+        assert "does not fit" in msg and "gpt-oss:20b" in msg and "GiB" not in msg
+    # a model that is not pulled stays a 404
+    assert "Choose another model" in friendly_error(_StatusError(404, "model not found"), "ollama", "x")
+    # other providers keep their texts
+    assert "does not fit" not in friendly_error(_StatusError(500, "memory"), "openai", "x")
