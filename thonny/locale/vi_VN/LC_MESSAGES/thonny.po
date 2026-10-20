@@ -2253,3 +2253,8 @@ msgstr "Các mô hình mà Ollama có trên máy tính này."
 #: thonny/plugins/aia
 msgid "Ollama did not answer, so the models on this computer are unknown."
 msgstr "Ollama không phản hồi, nên chưa biết trên máy tính này có những mô hình nào."
+
+#: thonny/plugins/aia/_common.py
+#, python-format
+msgid "The model %s does not fit into the computer's free memory. Close other programs, or choose a smaller model in Tools > Options > AI Assistant."
+msgstr "Mô hình %s không vừa với bộ nhớ trống của máy tính. Hãy đóng các chương trình khác hoặc chọn mô hình nhỏ hơn trong Công cụ > Thiết lập > Trợ lý AI."

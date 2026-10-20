@@ -2241,3 +2241,8 @@ msgstr "النماذج الموجودة لدى Ollama على هذا الحاسو
 #: thonny/plugins/aia
 msgid "Ollama did not answer, so the models on this computer are unknown."
 msgstr "لم يُجب Ollama، لذا فالنماذج الموجودة على هذا الحاسوب غير معروفة."
+
+#: thonny/plugins/aia/_common.py
+#, python-format
+msgid "The model %s does not fit into the computer's free memory. Close other programs, or choose a smaller model in Tools > Options > AI Assistant."
+msgstr "النموذج %s لا يتسع في الذاكرة المتاحة للحاسوب. يُرجى إغلاق البرامج الأخرى أو اختيار نموذج أصغر في أدوات > الخيارات > مساعد الذكاء الاصطناعي."

@@ -2232,3 +2232,8 @@ msgstr "Mallit, jotka Ollamalla on tässä tietokoneessa."
 #: thonny/plugins/aia
 msgid "Ollama did not answer, so the models on this computer are unknown."
 msgstr "Ollama ei vastannut, joten tämän tietokoneen malleja ei tiedetä."
+
+#: thonny/plugins/aia/_common.py
+#, python-format
+msgid "The model %s does not fit into the computer's free memory. Close other programs, or choose a smaller model in Tools > Options > AI Assistant."
+msgstr "Malli %s ei mahdu tietokoneen vapaaseen muistiin. Sulje muita ohjelmia tai valitse pienempi malli kohdassa Työkalut > Asetukset > Tekoälyavustaja."

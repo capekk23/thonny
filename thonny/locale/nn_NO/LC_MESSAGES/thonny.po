@@ -2246,3 +2246,8 @@ msgstr "Modellane Ollama har på denne datamaskina."
 #: thonny/plugins/aia
 msgid "Ollama did not answer, so the models on this computer are unknown."
 msgstr "Ollama svarte ikkje, så modellane på denne datamaskina er ukjende."
+
+#: thonny/plugins/aia/_common.py
+#, python-format
+msgid "The model %s does not fit into the computer's free memory. Close other programs, or choose a smaller model in Tools > Options > AI Assistant."
+msgstr "Modellen %s får ikkje plass i det ledige minnet på datamaskina. Lukk andre program, eller vel ein mindre modell under Verktøy > Alternativ > KI-assistent."

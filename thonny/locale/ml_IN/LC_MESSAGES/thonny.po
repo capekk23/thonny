@@ -2204,3 +2204,8 @@ msgstr "ഈ കമ്പ്യൂട്ടറിൽ Ollama-യ്ക്കുള
 #: thonny/plugins/aia
 msgid "Ollama did not answer, so the models on this computer are unknown."
 msgstr "Ollama മറുപടി നൽകിയില്ല, അതിനാൽ ഈ കമ്പ്യൂട്ടറിലെ മോഡലുകൾ അറിയില്ല."
+
+#: thonny/plugins/aia/_common.py
+#, python-format
+msgid "The model %s does not fit into the computer's free memory. Close other programs, or choose a smaller model in Tools > Options > AI Assistant."
+msgstr "മോഡൽ %s കമ്പ്യൂട്ടറിന്റെ ഒഴിവുള്ള മെമ്മറിയിൽ ഉൾക്കൊള്ളുന്നില്ല. മറ്റ് പ്രോഗ്രാമുകൾ അടയ്ക്കൂ, അല്ലെങ്കിൽ ഉപകരണങ്ങൾ > ഐച്ഛികങ്ങൾ > AI സഹായി എന്നതിൽ ചെറിയൊരു മോഡൽ തിരഞ്ഞെടുക്കൂ."

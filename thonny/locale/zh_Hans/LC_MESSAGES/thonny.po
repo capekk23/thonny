@@ -2237,3 +2237,8 @@ msgstr "Ollama 在此电脑上的模型。"
 #: thonny/plugins/aia
 msgid "Ollama did not answer, so the models on this computer are unknown."
 msgstr "Ollama 没有响应，因此不知道此电脑上有哪些模型。"
+
+#: thonny/plugins/aia/_common.py
+#, python-format
+msgid "The model %s does not fit into the computer's free memory. Close other programs, or choose a smaller model in Tools > Options > AI Assistant."
+msgstr "模型 %s 超出了电脑的可用内存。请关闭其他程序，或在“工具 > 选项 > AI 助手”中选择更小的模型。"

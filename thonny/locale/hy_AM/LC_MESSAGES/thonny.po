@@ -2245,3 +2245,8 @@ msgstr "Մոդելները, որոնք Ollama֊ն ունի այս համակար
 #: thonny/plugins/aia
 msgid "Ollama did not answer, so the models on this computer are unknown."
 msgstr "Ollama֊ն չպատասխանեց, ուստի այս համակարգչի մոդելները հայտնի չեն։"
+
+#: thonny/plugins/aia/_common.py
+#, python-format
+msgid "The model %s does not fit into the computer's free memory. Close other programs, or choose a smaller model in Tools > Options > AI Assistant."
+msgstr "%s մոդելը չի տեղավորվում համակարգչի ազատ հիշողության մեջ։ Փակիր այլ ծրագրեր կամ ընտրիր ավելի փոքր մոդել Գործիքներ > Ընտրանքներ > ԱԲ օգնական բաժնում։"
