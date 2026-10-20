@@ -6,6 +6,13 @@ Thonny AIA
 ==========
 Thonny AIA is an unofficial fork of Thonny 5.0.0 with the AI assistant AIA (https://github.com/senkyr/thonny-aia). It is not published or supported by the Thonny project. Its versions are below, Thonny's own history follows after them.
 
+5.5.0b7 (2026-10-20)
+--------------------
+* Choice of the local model in Tools > Options > AI Assistant: "Model:" lists the chat models Ollama has on this computer (without Ollama's cloud models and embedding models), gpt-oss:20b first as the default. The first switch to the local model gives gpt-oss:20b. The chosen model is used for the answers, loaded at startup and kept loaded, and named in the AI choice.
+* A local model that does not fit into the free memory gets a clear message (close other programs, or choose a smaller model) instead of Ollama's English error.
+* A local model that Ollama refused to load (missing, or does not fit) is tried once, not every 15 s while Thonny AIA runs. It is loaded again after another choice in the options or after the local model answers.
+* The drop-downs in Tools > Options > AI Assistant start right after their labels, and the "Check again" button is no longer cut off.
+
 5.5.0b6 (2026-10-15)
 --------------------
 * Default layout in quadrants for a new installation: the editor and AIA's answers above, the Shell and AIA's input below, the halves 1:1 and the bottom row a quarter of the height (at least the height of AIA's input). The proportions hold when the window changes size until a border is moved. AIA's panel has a movable border between the answers and the input. Layouts saved by an earlier version stay.
